@@ -1,0 +1,7 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/bg-signup.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
