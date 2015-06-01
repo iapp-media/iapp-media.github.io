@@ -203,10 +203,10 @@ body {
 .img9 {
     width: auto;
     height: auto;
-    top: 20%;
-    margin-left: -750px;
+    top: 10%;
+    margin-left: -380px;
     text-align: center;
-    z-index: 0;
+    z-index: -1;
 }
 
 .title1 {
