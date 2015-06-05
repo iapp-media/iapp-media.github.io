@@ -7,12 +7,12 @@ Partial Class _Default
     Dim str As String = ""
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If Not Page.IsPostBack Then
-            If Not IsNothing(Session("User_Name")) Then
-                Label1.Text = Session("User_Name")
-            End If
-            MySub()
-        End If
+        'If Not Page.IsPostBack Then
+        '    If Not IsNothing(Session("User_Name")) Then
+        '        Label1.Text = Session("User_Name")
+        '    End If
+        '    MySub()
+        'End If
     End Sub
 
     Sub myImageButton(ImgButton As Object, muti As Integer)
