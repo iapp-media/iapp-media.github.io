@@ -47,9 +47,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Facebook">
-      <HintPath>..\..\AppWeb\Bin\Facebook.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="JustyLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\JustyLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -437,12 +437,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="User_Pic\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\JustyLibrary\JustyLibrary\JustyLibrary.csproj">
-      <Project>{5159f6e7-621b-4cc4-85aa-d784a2a02019}</Project>
-      <Name>JustyLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
