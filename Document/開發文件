@@ -1,7 +1,10 @@
 開發文件
+
 1.後台加入病毒系數VC
-Custs(t)=Custs(0) *  K(t/ct +1) - 1 / K - 1
+Custs(t)=Custs(0) *  K(t/ct +1) - 1 /  - 1
 
 t=time
 ct=cycle time
 K病毒系數
+
+2.HTML5前端優化圖表
