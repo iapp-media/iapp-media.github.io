@@ -134,7 +134,7 @@ body {
 
 .logo {
     position: fixed;
-    top: 300px;
+    top: 270px;
     left: 800px;
     width: auto;
     height: 128px;
@@ -301,6 +301,7 @@ body {
     float: left;
     width: 180px;
     height: 100%;
+    overflow: scroll;
 }
 
 .left .page1{
@@ -343,3 +344,35 @@ body {
                 left: 0;
                 top: 0;
             }
+#final{
+     position: absolute;
+     top: 80px;left: 500px;
+     width: 620px;height: 500px;
+     border: 1px solid #CCCCCC;
+     border-radius: 20px 20px;
+}
+.top{
+    position: absolute;
+    top: 0%;left: 0%;
+    width: 100%;height: 10%;
+    background-color: orange;
+    border-top-right-radius: 20px 20px;
+}
+.middle{
+    position: absolute;
+    top: 10%;left: 0%;
+    width: 100%;height: 80%;
+}
+    .src{
+        position: absolute;
+        top: 280px;left: 100px;
+        width: 380px;height: 20px;
+        border: 2px solid #CCCCCC
+    }
+.bottom{
+    position: absolute;
+    top: 90%;left: 0%;
+    width: 100%;height: 10%;
+    background-color: orange;
+    border-bottom-right-radius: 20px 20px;
+}

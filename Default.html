@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
+﻿<!-- <%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %> -->
 <!DOCTYPE html>
 <html>
 
@@ -75,6 +75,8 @@
                     </div>
                     <!-- 分享/預覽 -->
                     <a href><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
+                    <!-- 返回修改-最後完成頁時出現 -->
+                    <div class="return hide"><a href><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></a></div>
                     <!-- 上一頁＆下一頁 -->
                     <a href="#" onclick="pagechange(-1)"><img class="up" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></a>
                     <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
@@ -140,12 +142,25 @@
                 <a class='iframe-info' href="profile.html"><img class="head" src="img/head.png" /></a>
                 <a class='iframe-info' href="list.html"><img class="list" src="img/button1.png" /></a>
                 <a class='iframe-info' href="setting.html"><img class="setting" src="img/setting.png" /></a>
+                <!-- 完成時候的結果頁面 -->
+                <div id="final hide">
+                    <div class="top hide"></div>
+                    <div class="middle hide">
+                        <img src="img/qrcode.jpg" style="position: absolute;top: 160px;left: 150px;">
+                        <img src="img/pic-22.png" style="position: absolute;top: 70px;left: 150px;">
+                        <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 310px;left: 100px;"></a>
+                        <a href="#"><img src="img/copylink.png" style="position: absolute;top: 277px;left: 490px;"></a>
+                        <div class="src">http://iapp-media.com/</div>
+                    </div>
+                    <div class="bottom hide"></div>
+                </div>
                 <!-- logo＆company tiltle -->
                 <img class="logo" src="img/logo2.png" />
                 <div style="position: fixed; top: 620px;right: 10px;">
                   <p style="color: #888888;">Digital+ 數碼數位股份有限公司</p>
                 </div>
             </div>
+
             <!-- 
             <div id="funcdiv">
                 <div id="btnMore">
