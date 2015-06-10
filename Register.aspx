@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Register.aspx.vb" Inherits="AppWeb1._4.Register" %>
-
+<script src="js/jquery-2.1.4.min.js"></script>
 <!DOCTYPE html>
 
 <html lang="en">

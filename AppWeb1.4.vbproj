@@ -91,7 +91,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="accomplish.html" />
     <Content Include="css\accomplish.css" />
     <Content Include="css\animated.css" />
     <Content Include="css\colorbox.css" />
@@ -100,6 +99,7 @@
     <Content Include="css\my.css" />
     <Content Include="css\signup.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Default.html" />
     <Content Include="images\1-3背景圖.jpg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\1c.jpg" />
@@ -132,7 +132,6 @@
     <Content Include="img\button.png" />
     <Content Include="img\button1.png" />
     <Content Include="img\controls.png" />
-    <Content Include="img\D+.jpg" />
     <Content Include="img\delete.png" />
     <Content Include="img\digital-qr.jpg" />
     <Content Include="img\digital.png" />
@@ -145,7 +144,6 @@
     <Content Include="img\html5.png" />
     <Content Include="img\iapplogo.jpg" />
     <Content Include="img\iapplogo.png" />
-    <Content Include="img\loading_background.png" />
     <Content Include="img\login-1.png" />
     <Content Include="img\login.png" />
     <Content Include="img\login2.png" />
@@ -253,7 +251,6 @@
     <Content Include="unprocess-image\p2-3-02.jpg" />
     <Content Include="unprocess-image\p2-3\pic-01.png" />
     <Content Include="unprocess-image\p2-3\pic-02.png" />
-    <Content Include="unprocess-image\p2-3\pic-03.png" />
     <Content Include="unprocess-image\p2-3\pic-04.png" />
     <Content Include="unprocess-image\p2-4.jpg" />
     <Content Include="unprocess-image\p2-5.jpg" />
@@ -463,7 +460,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>28243</DevelopmentServerPort>
+          <DevelopmentServerPort>13468</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -9,8 +9,6 @@
         Dim url As String = Main.Scalar(str)
         If url <> "" Then
             Image1.ImageUrl = "../" & url.Replace("\", "/")
-        Else
-            Image1.ImageUrl = "../images/ex1.jpg"
         End If
 
     End Sub

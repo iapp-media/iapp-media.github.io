@@ -44,14 +44,31 @@ Partial Class _Default
             Main.ParaAdd("@User_ID", Session("IDNo"), Data.SqlDbType.Int)
             Main.ParaAdd("@SessionID", "", System.Data.SqlDbType.VarChar)
         End If
-
-
+        sort = sort + 1
         Main.ParaAdd("@Page_ID", ImgButton.CommandArgument.ToString(), Data.SqlDbType.Int)
-        Main.ParaAdd("@Sort", sort + 1, Data.SqlDbType.Int)
+        Main.ParaAdd("@Sort", sort, Data.SqlDbType.Int)
         Main.ParaAdd("@MoreImgs", muti, Data.SqlDbType.Int)
         Dim sql As String = "Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)"
         Main.NonQuery(sql)
         MySub()
+
+        If sort = 1 Then
+            If IsNothing(Session("IDNo")) Then
+                If Not IsNothing(Request.Cookies("ThisPC")) Then
+                    TmpSession = Request.Cookies("ThisPC").Value
+                Else
+                    TmpSession = Session.SessionID
+                    comm.SaveCookie(Me, "ThisPC", Session.SessionID)
+                End If
+                str = "insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= '" & TmpSession & "'"
+                Main.NonQuery(str)
+            Else
+                str = "insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where User_ID= " & Session("IDNo")
+                Main.NonQuery(str)
+            End If
+
+        End If
+      
     End Sub
 
     Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
