@@ -51,19 +51,6 @@ body{
 	width: 86px;height: 126px;
 	z-index: 1;
 }
-.left .page1{
-	position: absolute;
-	top: 5%;
-	left: 1%;
-	width: 86px;height: 126px;
-}
-
-.left .page2{
-	position: absolute;
-	top: 30%;
-	left: 1%;
-	width: 86px;height: 126px;
-}
 .phone{
 	position: absolute;
 	top: 5%;
@@ -228,13 +215,13 @@ body{
 	height: 100%; width: 100%;"
 }
 .iframe-ed1{
-	height: 520px; width: 408px;
+	height: 450px; width: 408px;
     position: absolute;
     left: 11%;
     top: 2%;
 }
 .iframe-ed2{
-	height: 520px; width: 408px;
+	height: 450px; width: 408px;
     position: absolute;
     left: 11%;
     top: 2%;
@@ -251,6 +238,12 @@ body{
     right: -6%;
     top: 12%;
 }
+.finish{
+	height:auto; width:auto;
+	position: absolute;
+    right: 35%;
+    top: 90%;
+}
 #pageNav {
     background-color: #f19439;
     position: fixed;
@@ -259,12 +252,25 @@ body{
     height: 100%;
 }
 
+.left .page1{
+	position: absolute;
+	top: 5%;
+	left: 1%;
+	width: 86px;height: 126px;
+}
+
+.left .page2{
+	position: absolute;
+	top: 30%;
+	left: 1%;
+	width: 86px;height: 126px;
+}
 
     #pageNav ul {
         margin: 0;
         padding: 0;
         text-align: center;
-        list-style:none;
+        list-style: none;
     }
 
         #pageNav ul li {
