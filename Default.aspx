@@ -84,8 +84,12 @@
                         <img class="down" src="img/down.png" onmouseout="this.src='img/down.png'" onmouseover="this.src='img/down2.png'" /></a>
                 </div>
                 <!-- 增加 -->
+<<<<<<< HEAD
+                <a href="#" id="pageShow"><img class="add" src="img/add.png" height="57" width="40" onMouseOut="this.src='img/add.png'" onMouseOver="this.src='img/add02.png'" /></a>
+=======
                 <a href="#" id="showButton">
                     <img class="add" src="img/add.png" height="57" width="40" onmouseout="this.src='img/add.png'" onmouseover="this.src='img/add02.png'" /></a>
+>>>>>>> origin/master
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select">
                     <div class="pic1">
@@ -127,15 +131,36 @@
                 </div>
                 <!-- iframe編輯區域 -->
                 <div class="edit hide">
+<<<<<<< HEAD
+                  <a href="#" id="btpic"><img class="button-pic" src="img/button-pic.png">
+                  <a href="#" id="btword"><img class="button-wod" src="img/button-word.png"></a>
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
+                  <!-- 圖片編輯iframe -->
+                    <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
+                    </iframe>
+                  <!-- 文字編輯iframe -->
+                  <div class="edit2 hide">
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
+                    <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
+                    </iframe>
+                  </div>
+=======
                     <img class="button-pic" src="img/button-pic.png">
                     <a href="">
                         <img class="button-wod" src="img/button-word.png"></a>
                     <!-- 圖片編輯iframe -->
                     <iframe id="iframe-ed1" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
                     <!-- 文字編輯iframe -->
+<<<<<<< HEAD
                    <%-- <div class="edit2 hide">
                         <iframe id="iframe-ed2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
                     </div>--%>
+=======
+                    <div class="edit2 hide">
+                        <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
+                    </div>
+>>>>>>> origin/master
+>>>>>>> ca919aa9e2046596e8240d1e50fad7732e05381d
                 </div>
 
                 <!-- 設定＆個人資料＆列表 -->
@@ -279,6 +304,15 @@
     }
 
 
+<<<<<<< HEAD
+$(document).ready(function() {
+    $("#pageShow").click(function() {
+        $(".select").animate({
+            width: 'toggle'
+        }, 350);
+        $(".edit").hide();
+    });
+=======
     //$(document).ready(function() {
     //    $("#pageShow").click(function() {
     //        $("#rightdv").animate({
@@ -286,6 +320,7 @@
     //        }, 350);
     //        $(".edit").hide();
     //    });
+>>>>>>> origin/master
 
     //});
 
@@ -303,10 +338,25 @@
     //$(function () {
     //    $("#list").dragsort({ dragSelector: "a" });
     //});
+<<<<<<< HEAD
+$(document).ready(function() {
+    $("#MIDHIDE").click(function() {
+        $("#rightdv").hide();
+        $(".edit").show();
+        $(".edit2").hide();
+    });
+    $("#btword").click(function() {
+        $(".edit2").show();
+    });
+    $("#btpic").click(function() {
+        $(".edit2").hide();
+        $(".edit1").show();
+=======
     $(document).ready(function () {
         $("#MIDHIDE").click(function () {
             $(".edit").show();
         });
+>>>>>>> origin/master
     });
 </script>
 
