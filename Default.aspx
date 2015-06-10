@@ -131,11 +131,11 @@
                     <a href="">
                         <img class="button-wod" src="img/button-word.png"></a>
                     <!-- 圖片編輯iframe -->
-                    <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
+                    <iframe id="iframe-ed1" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
                     <!-- 文字編輯iframe -->
-                    <div class="edit2 hide">
-                        <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
-                    </div>
+                   <%-- <div class="edit2 hide">
+                        <iframe id="iframe-ed2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
+                    </div>--%>
                 </div>
 
                 <!-- 設定＆個人資料＆列表 -->
@@ -236,6 +236,23 @@
     var c = 0;
     var page_id = 0;
 
+    function pagechange(a) {
+        page_id = ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+        c = c + a;
+        if (c < 0) {
+            alert(c + "No Page");
+            c = 0;
+
+        } else if (c >= $("#list").sortable('toArray').length) {
+            alert(c + "Page Over");
+            c = c - 1;
+        } else {
+            alert(page_id);
+            document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+            //document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+        }
+    }
+
     function show(str, id) {
         page_id = id;
         document.getElementById("midiframe").src = str;
@@ -257,7 +274,8 @@
 
     function editmid() {
         str = "Pages/seeEdit.aspx?ID=" + page_id;
-        document.getElementById("Iframe").src = str;
+        alert(str);
+        document.getElementById("iframe-ed1").src = str;
     }
 
 
@@ -271,21 +289,7 @@
 
     //});
 
-    function pagechange(a) {
-        c = c + a;
-        if (c < 0) {
-            alert(c + "No Page");
-            c = 0;
-
-        } else if (c >= $("#list").sortable('toArray').length) {
-            alert(c + "Page Over");
-            c = c - 1;
-        } else {
-            document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
-            //document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
-
-        }
-    }
+   
 
     function putin(a) {
         document.getElementById("AA").value = a;
