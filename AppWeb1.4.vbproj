@@ -115,6 +115,8 @@
     <Content Include="images\miki.jpg" />
     <Content Include="images\plastic_texture1356.jpg" />
     <Content Include="img\-bg2.jpg" />
+    <Content Include="img\add.png" />
+    <Content Include="img\add02.png" />
     <Content Include="img\bg-log.png" />
     <Content Include="img\bg-signup.png" />
     <Content Include="img\bg1-1.jpg" />
@@ -129,21 +131,26 @@
     <Content Include="img\border-small2.png" />
     <Content Include="img\border.png" />
     <Content Include="img\button-2.png" />
+    <Content Include="img\button-pic.png" />
+    <Content Include="img\button-word.png" />
     <Content Include="img\button.png" />
     <Content Include="img\button1.png" />
     <Content Include="img\controls.png" />
+    <Content Include="img\D+.jpg" />
     <Content Include="img\delete.png" />
     <Content Include="img\digital-qr.jpg" />
     <Content Include="img\digital.png" />
     <Content Include="img\dlogo.png" />
     <Content Include="img\down.png" />
     <Content Include="img\down2.png" />
+    <Content Include="img\finish.png" />
     <Content Include="img\head.png" />
     <Content Include="img\html5-qr.jpg" />
     <Content Include="img\html5.jpg" />
     <Content Include="img\html5.png" />
     <Content Include="img\iapplogo.jpg" />
     <Content Include="img\iapplogo.png" />
+    <Content Include="img\loading_background.png" />
     <Content Include="img\login-1.png" />
     <Content Include="img\login.png" />
     <Content Include="img\login2.png" />
@@ -160,6 +167,9 @@
     <Content Include="img\mommy-qr.jpg" />
     <Content Include="img\mommy.jpg" />
     <Content Include="img\mommy.png" />
+    <Content Include="img\panel-1.png" />
+    <Content Include="img\panel-2.png" />
+    <Content Include="img\panel.png" />
     <Content Include="img\phone.png" />
     <Content Include="img\phone1.png" />
     <Content Include="img\phone2.png" />
@@ -176,6 +186,7 @@
     <Content Include="img\register2.png" />
     <Content Include="img\sdw.png" />
     <Content Include="img\select1.png" />
+    <Content Include="img\setting.png" />
     <Content Include="img\show.png" />
     <Content Include="img\social1.png" />
     <Content Include="img\social10.png" />
@@ -219,7 +230,25 @@
     <Content Include="Pages\see.aspx" />
     <Content Include="Pages\seeEdit.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="unprocess-image\i-app web-哈雷-01.jpg" />
+    <Content Include="unprocess-image\p1-4-01.jpg" />
     <Content Include="unprocess-image\p1-5.jpg" />
+    <Content Include="unprocess-image\p1-5\down.png" />
+    <Content Include="unprocess-image\p1-5\down2.png" />
+    <Content Include="unprocess-image\p1-5\head.png" />
+    <Content Include="unprocess-image\p1-5\item.png" />
+    <Content Include="unprocess-image\p1-5\logo-digital.png" />
+    <Content Include="unprocess-image\p1-5\phone2.png" />
+    <Content Include="unprocess-image\p1-5\pic-02-1.png" />
+    <Content Include="unprocess-image\p1-5\pic-02-2.png" />
+    <Content Include="unprocess-image\p1-5\pic-03-1.png" />
+    <Content Include="unprocess-image\p1-5\pic-03-2.png" />
+    <Content Include="unprocess-image\p1-5\pic-04-1.png" />
+    <Content Include="unprocess-image\p1-5\pic-04-2.png" />
+    <Content Include="unprocess-image\p1-5\pic-05.png" />
+    <Content Include="unprocess-image\p1-5\pic-06.png" />
+    <Content Include="unprocess-image\p1-5\pic-07.png" />
+    <Content Include="unprocess-image\p1-5\pic-08.png" />
     <Content Include="unprocess-image\p1-5\pic-09.png" />
     <Content Include="unprocess-image\p1-5\pic-10.png" />
     <Content Include="unprocess-image\p1-5\pic-11.png" />
@@ -227,6 +256,9 @@
     <Content Include="unprocess-image\p1-5\pic-13.png" />
     <Content Include="unprocess-image\p1-5\pic-14.png" />
     <Content Include="unprocess-image\p1-5\pic-15.png" />
+    <Content Include="unprocess-image\p1-5\setting.png" />
+    <Content Include="unprocess-image\p1-5\up.png" />
+    <Content Include="unprocess-image\p1-5\up2.png" />
     <Content Include="unprocess-image\p1-6.jpg" />
     <Content Include="unprocess-image\p1-6\bg-signup.png" />
     <Content Include="unprocess-image\p1-6\pic-02.png" />
@@ -236,6 +268,11 @@
     <Content Include="unprocess-image\p2-1\pic-03.png" />
     <Content Include="unprocess-image\p2-1\pic-04.png" />
     <Content Include="unprocess-image\p2-2.jpg" />
+    <Content Include="unprocess-image\p2-2\down.png" />
+    <Content Include="unprocess-image\p2-2\down2.png" />
+    <Content Include="unprocess-image\p2-2\head.png" />
+    <Content Include="unprocess-image\p2-2\item.png" />
+    <Content Include="unprocess-image\p2-2\logo-digital.png" />
     <Content Include="unprocess-image\p2-2\phone2.png" />
     <Content Include="unprocess-image\p2-2\pic-02-1.png" />
     <Content Include="unprocess-image\p2-2\pic-02-2.png" />
@@ -247,13 +284,26 @@
     <Content Include="unprocess-image\p2-2\pic-06.png" />
     <Content Include="unprocess-image\p2-2\pic-07.png" />
     <Content Include="unprocess-image\p2-2\pic-08.png" />
+    <Content Include="unprocess-image\p2-2\setting.png" />
+    <Content Include="unprocess-image\p2-2\up.png" />
+    <Content Include="unprocess-image\p2-2\up2.png" />
     <Content Include="unprocess-image\p2-3-01.jpg" />
     <Content Include="unprocess-image\p2-3-02.jpg" />
+    <Content Include="unprocess-image\p2-3\button-pic.png" />
+    <Content Include="unprocess-image\p2-3\button-word.png" />
+    <Content Include="unprocess-image\p2-3\down.png" />
+    <Content Include="unprocess-image\p2-3\finish.png" />
+    <Content Include="unprocess-image\p2-3\Panel-1.png" />
+    <Content Include="unprocess-image\p2-3\Panel-2.png" />
     <Content Include="unprocess-image\p2-3\pic-01.png" />
     <Content Include="unprocess-image\p2-3\pic-02.png" />
     <Content Include="unprocess-image\p2-3\pic-04.png" />
     <Content Include="unprocess-image\p2-4.jpg" />
     <Content Include="unprocess-image\p2-5.jpg" />
+    <Content Include="unprocess-image\p2-6-01.jpg" />
+    <Content Include="unprocess-image\p2-6-02.jpg" />
+    <Content Include="unprocess-image\p2-6-03.jpg" />
+    <Content Include="unprocess-image\p2-7.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -425,6 +475,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="unprocess-image\i-app web.ai" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -8,6 +8,7 @@
             str = "Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=" & Request.QueryString("ID")
             Dim url As String = Main.Scalar(str)
             url = url.Replace(".aspx", "_Edit.aspx")
+            Response.Write("<script>alert(" & url & ")</script>")
             If url <> "" Then
                 Response.Redirect(url & "?ID=" & Request.QueryString("ID"))
             End If

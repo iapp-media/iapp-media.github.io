@@ -119,11 +119,11 @@ Partial Class _Default
         If (dr.Rows.Count > 0) Then
             For i = 0 To dr.Rows.Count - 1
                 ss.Append("<li id=""s" & dr.Rows(i).Item("PID") & """>" & vbCrLf)
-                ss.Append("     <img class=""border"" src=""img/border-small1.png""/>" & vbCrLf)
-                ss.Append("     <a href=""#"" onclick=""putDELE('" & dr.Rows(i).Item("PID") & "');__doPostBack('DELE1','')"">" & vbCrLf)
-                ss.Append("     <img class=""delete"" src=""img/delete.png""/></a>" & vbCrLf)
-                ss.Append("     <a href=""#"" onclick=""show('Pages/see.aspx?ID=" & dr.Rows(i).Item("PID") & "'," & dr.Rows(i).Item("PID") & ")"">" & vbCrLf)
-                ss.Append("     <img class=""picture"" src=""images/" & dr.Rows(i).Item("Img01") & """/></a>" & vbCrLf)
+                ss.Append(" <a href=""#"" onclick=""show('Pages/see.aspx?ID=" & dr.Rows(i).Item("PID") & "'," & dr.Rows(i).Item("PID") & ")"">" & vbCrLf)
+                ss.Append(" <img class=""border"" src=""img/border-small1.png""/></a>" & vbCrLf)
+                ss.Append(" <a href=""#"" onclick=""putDELE('" & dr.Rows(i).Item("PID") & "');__doPostBack('DELE1','')"">" & vbCrLf)
+                ss.Append(" <img  class=""delete"" src=""img/delete.png""/></a>" & vbCrLf)
+                ss.Append(" <img class=""pic"" src=""img/" & dr.Rows(i).Item("Img01") & """/>" & vbCrLf)
                 ss.Append("</li>" & vbCrLf)
             Next
         End If
