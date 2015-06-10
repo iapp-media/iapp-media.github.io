@@ -1,4 +1,4 @@
-﻿<!--  <%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %> -->
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
 <!DOCTYPE html>
 <html>
 
@@ -80,7 +80,7 @@
                     <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
                 </div>
                 <!-- 增加 -->
-                <a href=""><img class="add" src="img/add.png" height="57" width="40" onMouseOut="this.src='img/add.png'" onMouseOver="this.src='img/add02.png'" /></a>
+                <a href="#" id="pageShow"><img class="add" src="img/add.png" height="57" width="40" onMouseOut="this.src='img/add.png'" onMouseOver="this.src='img/add02.png'" /></a>
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select hide">
                     <div class="pic1">
@@ -122,13 +122,15 @@
                 </div>
                 <!-- iframe編輯區域 -->
                 <div class="edit hide">
-                  <img class="button-pic" src="img/button-pic.png">
-                  <a href=""><img class="button-wod" src="img/button-word.png"></a>
+                  <a href="#" id="btpic"><img class="button-pic" src="img/button-pic.png">
+                  <a href="#" id="btword"><img class="button-wod" src="img/button-word.png"></a>
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
                   <!-- 圖片編輯iframe -->
                     <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
                     </iframe>
                   <!-- 文字編輯iframe -->
                   <div class="edit2 hide">
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
                     <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
                     </iframe>
                   </div>
@@ -249,7 +251,7 @@ function editmid() {
 
 $(document).ready(function() {
     $("#pageShow").click(function() {
-        $("#rightdv").animate({
+        $(".select").animate({
             width: 'toggle'
         }, 350);
         $(".edit").hide();
@@ -289,6 +291,14 @@ $(document).ready(function() {
     $("#MIDHIDE").click(function() {
         $("#rightdv").hide();
         $(".edit").show();
+        $(".edit2").hide();
+    });
+    $("#btword").click(function() {
+        $(".edit2").show();
+    });
+    $("#btpic").click(function() {
+        $(".edit2").hide();
+        $(".edit1").show();
     });
 });
 </script>

@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
 }
-/*.hide{ display:none;}*/
+
+.hide {
+    display: none;
+}
 
 .all {
     width: 100%;
@@ -23,18 +26,18 @@ body {
     top: 2%;
     left: 88%;
     width: 8px;
-    height: auto;
+    height: 8px;
     z-index: 3;
 }
 
-.border {
-    position: absolute;
+/*.border {
+    /*position: absolute;
     top: 0%;
     left: 0%;
     width: 86px;
     height: auto;
-    z-index: 2;
-}
+    z-index: 2;*/
+}*/
 
 .p-text {
     position: absolute;
@@ -59,22 +62,6 @@ body {
     width: 86px;
     height: 126px;
     z-index: 1;
-}
-
-.left .page1 {
-    position: absolute;
-    top: 5%;
-    left: 1%;
-    width: 86px;
-    height: 126px;
-}
-
-.left .page2 {
-    position: absolute;
-    top: 30%;
-    left: 1%;
-    width: 86px;
-    height: 126px;
 }
 
 .phone {
@@ -142,6 +129,23 @@ body {
     width: 89px;
     height: 33px;
 }
+
+.left .page1 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+.left .page2 {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
 
 .select {
     position: absolute;
@@ -280,11 +284,10 @@ body {
     left: 0px;
     height: 100%;
     width: 100%;
-    ";
 }
 
 .iframe-ed1 {
-    height: 520px;
+    height: 450px;
     width: 408px;
     position: absolute;
     left: 11%;
@@ -292,7 +295,7 @@ body {
 }
 
 .iframe-ed2 {
-    height: 520px;
+    height: 450px;
     width: 408px;
     position: absolute;
     left: 11%;
@@ -315,38 +318,93 @@ body {
     top: 12%;
 }
 
+.finish {
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 35%;
+    top: 90%;
+}
+
+
+.left .page1 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+.left .page2 {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
 #pageNav {
     background-color: #f19439;
     position: fixed;
     float: left;
     width: 180px;
     height: 100%;
+    overflow: scroll;
 }
 
+#pageNav ul {
+    margin: 10px 0px 0px 30px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    width: 85px;
+    height: 125px;
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: #000000;*/
+}
 
-    #pageNav ul {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        list-style: none;
+    #pageNav ul li {
+        display: inline-block;
+        width: 90%;
+         height: 125px;
+       /*border: solid 1px #999;*/
+        margin: 20px 0px 0px 0px;
+        background-color: #fff;
+        position: relative;
     }
 
-        #pageNav ul li {
-            display: inline-block;
-            width: 90%;
-            border: solid 1px #999;
-            margin: 5px 0 5px 0;
-            background-color: #fff;
-            position: relative;
+        #pageNav ul li img.pic {
+            /*width: 95%;
+            margin: 5px 0 5px 0;*/
+            width: 85px;
+            height: 125px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #000000;
         }
 
-            #pageNav ul li img {
-                width: 95%;
-                margin: 5px 0 5px 0;
-            }
+        
+        #pageNav ul li img.delete {
+            position:absolute;
+            width: 8px;
+            height:8px;
+            left:99%;
+            top:2%;
+            z-index:1;
+        }
 
-            #pageNav ul li div {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
+        #pageNav ul li img.border {
+           position:absolute;
+           width: 85px;
+           height:125px;
+           left:0%;
+           top:0%;
+           z-index:0;
+        }
+
+        #pageNav ul li div {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
