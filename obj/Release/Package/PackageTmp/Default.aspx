@@ -1,4 +1,5 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
+﻿
+﻿<%@ Page Language="vb" debug="true" AutoEventWireup="false"  CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
 
 <!DOCTYPE html>
 <html>
@@ -8,10 +9,11 @@
     <title>default</title>
     <link rel="stylesheet" href="css/accomplish.css" />
     <link rel="stylesheet" href="css/colorbox.css" />
-    <!-- <link href="css/my.css" rel="stylesheet" /> -->
+<!-- <link href="css/my.css" rel="stylesheet" /> -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script>
-        function init() {
+
+        function init() {               //調用jquery sorttable 做左邊選單
             $("#list").sortable({
                 update: function () {
                     dragSelector: "li",
@@ -19,6 +21,7 @@
                 }
             });
         }
+
     </script>
 </head>
 
@@ -26,9 +29,9 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="Scriptmanager1" runat="server"></asp:ScriptManager>
         <script>
-            //// 透過PageRequestManager的物件，我們可以在add_pageLoaded的事件後重新註冊jQuery的方法內容
-            var prm = Sys.WebForms.PageRequestManager.getInstance();
-            prm.add_pageLoaded(init);
+        //// 透過PageRequestManager的物件，我們可以在add_pageLoaded的事件後重新註冊jQuery的方法內容
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_pageLoaded(init);
         </script>
         <div class="all">
             <!-- 
@@ -65,88 +68,79 @@
                     <div class="show">
                         <!-- 標題 -->
                         <div class="smallbar">
-                            <p style="color: #F19439; text-align: center;">您的iApp</p>
+                            <p style="color: #F19439;text-align: center;">您的iApp</p>
                         </div>
                         <!-- iframe顯示區域 -->
-                        <div class="iframe">
-                            <iframe src="Pages/p01.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border: 0px"></iframe>
+
+                        <div class="iframe" style="padding:0px;margin:0px;width: 261px;height: 466px;">
+                            <iframe src="" scrolling="no"  id="midiframe" style="margin:0;padding:0; position: absolute;top: 0px; left: 0px; width: 100%;height: 464px; border: 0px"></iframe>
                             <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
                             </div>
+
                         </div>
                     </div>
                     <!-- 分享/預覽 -->
-                    <a href="#">
-                        <img class="preview" src="img/preview.png" height="33" width="89" onmouseout="this.src='img/preview.png'" onmouseover="this.src='img/preview2.png'" /></a>
+                    <a href><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
+                    <!-- 返回修改-最後完成頁時出現 -->
+                    <div class="return hide"><a href><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></a></div>
                     <!-- 上一頁＆下一頁 -->
-                    <a href="#" onclick="pagechange(-1)">
-                        <img class="up" src="img/up.png" onmouseout="this.src='img/up.png'" onmouseover="this.src='img/up2.png'" /></a>
-                    <a href="#" onclick="pagechange(1)">
-                        <img class="down" src="img/down.png" onmouseout="this.src='img/down.png'" onmouseover="this.src='img/down2.png'" /></a>
+                    <a href="#" onclick="pagechange(-1)"><img class="up" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></a>
+                    <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
                 </div>
                 <!-- 增加 -->
-                <a href="#" id="pageShow">
-                    <img class="add" src="img/add.png" height="57" width="40" onmouseout="this.src='img/add.png'" onmouseover="this.src='img/add02.png'" /></a>
+                <a href="#" id="pageShow"><img class="add" src="img/add.png" height="57" width="40" onMouseOut="this.src='img/add.png'" onMouseOver="this.src='img/add02.png'" /></a>
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select hide">
                     <div class="pic1">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton1" CssClass="picture" runat="server" ImageUrl="img/picture1.jpg" CommandArgument="1" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">單圖</p>
+                        <p style="font-size: 5px;text-align: center;">單圖</p>
                     </div>
                     <div class="pic2">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton2" CssClass="picture" runat="server" ImageUrl="img/picture2.jpg" CommandArgument="2" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">單圖下文字</p>
+                        <p style="font-size: 5px;text-align: center;">單圖下文字</p>
                     </div>
                     <div class="pic3">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton3" CssClass="picture" runat="server" ImageUrl="img/picture3.jpg" CommandArgument="3" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">三格</p>
+                        <p style="font-size: 5px;text-align: center;">三格</p>
                     </div>
                     <div class="pic4">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton4" CssClass="picture" runat="server" ImageUrl="img/picture4.jpg" CommandArgument="4" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">三張連圖</p>
+                        <p style="font-size: 5px;text-align: center;">三張連圖</p>
                     </div>
                     <div class="pic5">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton5" CssClass="picture" runat="server" ImageUrl="img/picture5.jpg" CommandArgument="5" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">封面文字</p>
+                        <p style="font-size: 5px;text-align: center;">封面文字</p>
                     </div>
                     <div class="pic6">
-                        <div style="width: 85px; height: 125px; border-style: solid; border-width: 1px; border-color: #000000; }">
+                        <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton6" CssClass="picture" runat="server" ImageUrl="img/picture6.jpg" CommandArgument="6" />
                         </div>
-                        <p style="font-size: 5px; text-align: center;">中間文字</p>
+                        <p style="font-size: 5px;text-align: center;">中間文字</p>
                     </div>
                 </div>
                 <!-- iframe編輯區域 -->
-                <div class="edit hide">
+
+                <div id="edit" class="edit hide">
                     <a href="#" id="btpic">
                         <img class="button-pic" src="img/button-pic.png">
                         <a href="#" id="btword">
-                            <img class="button-wod" src="img/button-word.png"></a>
-                        <a href="#" id="fin">
-                            <img class="finish" src="img/finish.png"></a>
+                            <img class="button-wod" src="img/button-word.png"></a>&nbsp;
+              
                         <!-- 圖片編輯iframe -->
-                        <%--     <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
-                    </iframe>
-                  <!-- 文字編輯iframe -->
-                  <div class="edit2 hide">
-                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
-                    <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
-                    </iframe>
-                  </div>--%>
-                        <%--<img class="button-pic" src="img/button-pic.png">
-                        <a href="#">
-                            <img class="button-wod" src="img/button-word.png"></a>--%>
-                        <!-- 圖片編輯iframe -->
-                        <iframe id="iframe-ed1" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
+                        <div style="height:auto;absolute;left:100px;top:30px">
+                            <iframe id="iframe-ed1"  scrolling="no" class="iframe-ed1" style="border:0; " src="Pages/seeEdit.aspx"></iframe>
+                        </div>
+                        
                         <!-- 文字編輯iframe -->
                          <div class="edit2 hide">
                         <iframe id="iframe-ed2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
@@ -154,18 +148,28 @@
                 </div>
 
                 <!-- 設定＆個人資料＆列表 -->
-                <a class='iframe-info' href="profile.html">
-                    <img class="head" src="img/head.png" /></a>
-                <a class='iframe-info' href="list.html">
-                    <img class="list" src="img/button1.png" /></a>
-                <a class='iframe-info' href="setting.html">
-                    <img class="setting" src="img/setting.png" /></a>
+                <a class='iframe-info' href="profile.html"><img class="head" src="img/head.png" /></a>
+                <a class='iframe-info' href="list.html"><img class="list" src="img/button1.png" /></a>
+                <a class='iframe-info' href="setting.html"><img class="setting" src="img/setting.png" /></a>
+                <!-- 完成時候的結果頁面 -->
+                <div id="final hide">
+                    <div class="top hide"></div>
+                    <div class="middle hide">
+                        <img src="img/qrcode.jpg" style="position: absolute;top: 160px;left: 150px;">
+                        <img src="img/pic-22.png" style="position: absolute;top: 70px;left: 150px;">
+                        <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 310px;left: 100px;"></a>
+                        <a href="#"><img src="img/copylink.png" style="position: absolute;top: 277px;left: 490px;"></a>
+                        <div class="src">http://iapp-media.com/</div>
+                    </div>
+                    <div class="bottom hide"></div>
+                </div>
                 <!-- logo＆company tiltle -->
                 <img class="logo" src="img/logo2.png" />
-                <div style="position: fixed; top: 620px; right: 10px;">
-                    <p style="color: #888888;">Digital+ 數碼數位股份有限公司</p>
+                <div style="position: fixed; top: 620px;right: 10px;">
+                  <p style="color: #888888;">Digital+ 數碼數位股份有限公司</p>
                 </div>
             </div>
+
             <!-- 
             <div id="funcdiv">
                 <div id="btnMore">
@@ -198,12 +202,12 @@
                 </div>
             </div>
              //-->
-        </div>
+<%--        </div>--%>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <asp:Label ID="La" runat="server" Text="Label" CssClass="nosee"></asp:Label>
-                <asp:TextBox ID="AA" runat="server" CssClass="nosee"></asp:TextBox>
-                <asp:TextBox ID="DELEID" runat="server" CssClass="nosee"></asp:TextBox>
+                <asp:Label ID="La" runat="server" Text="Label" CssClass="hide"></asp:Label> 
+                <asp:TextBox ID="AA" runat="server" CssClass="hide"></asp:TextBox> <%--抓使用者拖拉後順序--%>
+                <asp:TextBox ID="DELEID" runat="server" CssClass="hide"></asp:TextBox><%--抓取刪除ID--%>
                 <asp:LinkButton ID="DELE1" runat="server"></asp:LinkButton>
             </ContentTemplate>
             <Triggers>
@@ -214,115 +218,110 @@
     </form>
 
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <!-- 有min版本的話換掉 -->
+    <script src="js/jquery-ui.js"></script> <!-- 有min版本的話換掉 -->
     <script src="js/jquery.colorbox-min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            //Examples of how to assign the Colorbox event to elements
-            $(".iframe-info").colorbox({
-                iframe: true,
-                width: "55%",
-                height: "85%"
-            });
-            $(".callbacks").colorbox({
-                onOpen: function () {
-                    alert('onOpen: colorbox is about to open');
-                },
-                onLoad: function () {
-                    alert('onLoad: colorbox has started to load the targeted content');
-                },
-                onComplete: function () {
-                    alert('onComplete: colorbox has displayed the loaded content');
-                },
-                onCleanup: function () {
-                    alert('onCleanup: colorbox has begun the close process');
-                },
-                onClosed: function () {
-                    alert('onClosed: colorbox has completely closed');
-                }
-            });
+    $(document).ready(function() {
+        //Examples of how to assign the Colorbox event to elements
+        $(".iframe-info").colorbox({
+            iframe: true,
+            width: "55%",
+            height: "85%"
         });
-    </script>
+        $(".callbacks").colorbox({
+            onOpen: function() {
+                alert('onOpen: colorbox is about to open');
+            },
+            onLoad: function() {
+                alert('onLoad: colorbox has started to load the targeted content');
+            },
+            onComplete: function() {
+                alert('onComplete: colorbox has displayed the loaded content');
+            },
+            onCleanup: function() {
+                alert('onCleanup: colorbox has begun the close process');
+            },
+            onClosed: function() {
+                alert('onClosed: colorbox has completely closed');
+            }
+        });
+    });
+</script>
 
 </body>
 <script>
-    var c = 0;
-    var page_id = 0;
+var c = 0;
+var page_id = 0;
 
-    function pagechange(a) {
-        page_id = ($("#list").sortable('toArray')[c]).toString().replace("s", "");
-        c = c + a;
-        if (c < 0) {
-            alert(c + "No Page");
-            c = 0;
-
-        } else if (c >= $("#list").sortable('toArray').length) {
-            alert(c + "Page Over");
-            c = c - 1;
-        } else {
-            //alert(page_id);
-            document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
-            //document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+function show(str, id) {
+    page_id = id;
+    document.getElementById("midiframe").src = str;
+    $(".edit").hide();
+    for (var i = 0; i <= $("#list").sortable('toArray').length; i++) //判斷使用者目前點到哪一頁
+    {
+        if (($("#list").sortable('toArray')[i]).toString().replace("s", "") == id) {
+            c = i; //當前頁數上下頁功能使用
         }
     }
 
-    function show(str, id) {
-        page_id = id;
-        document.getElementById("midiframe").src = str;
+}
+
+function editmid() {
+    str = "Pages/seeEdit.aspx?ID=" + page_id;
+    document.getElementById("iframe-ed1").src = str;
+}
+
+
+$(document).ready(function() {
+    $("#pageShow").click(function() {
+        $(".select").animate({
+            width: 'toggle'
+        }, 350);
         $(".edit").hide();
-        for (var i = 0; i <= $("#list").sortable('toArray').length; i++) //判斷使用者目前點到哪一頁
-        {
-            if (($("#list").sortable('toArray')[i]).toString().replace("s", "") == id) {
-                c = i; //當前頁數上下頁功能使用
-            }
-        }
-    }
-    function editmid() {
-        str = "Pages/seeEdit.aspx?ID=" + page_id;
-        //alert(str);
-        document.getElementById("iframe-ed1").src = str;
-    }
-
-
-    $(document).ready(function () {
-        $("#pageShow").click(function () {
-            $(".select").animate({
-                width: 'toggle'
-            }, 350);
-            $(".edit").hide();
-        });
-
     });
 
+});
 
-    function putin(a) {
-        document.getElementById("AA").value = a;
-
-        //alert(document.getElementById("AA").value);
+function pagechange(a) {
+    c = c + a;
+    if (c < 0) {
+        alert(c + "No Page");
+        c = 0;
+    } else if (c >= $("#list").sortable('toArray').length) {
+        alert(c + "Page Over");
+        c = c - 1;
+    } else {
+        document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+        //document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
     }
+}
 
-    function putDELE(a) {
+function putin(a) {
+    document.getElementById("AA").value = a; //抓取順序傳到後
+    //alert(document.getElementById("AA").value);
+}
+
+function putDELE(a) {
         document.getElementById("DELEID").value = a;
     }
     //$(function () {
     //    $("#list").dragsort({ dragSelector: "a" });
     //});
-    $(document).ready(function () {
-        $("#MIDHIDE").click(function () {
-            $("#rightdv").hide();
-            $(".edit").show();
-            $(".edit2").hide();
-        });
-        $("#btword").click(function () {
-            $(".edit2").show();
-        });
-        $("#btpic").click(function () {
-            $(".edit2").hide();
-            $(".edit1").show();
-        });
+$(document).ready(function() {
+    $("#MIDHIDE").click(function() {
+        $("#rightdv").hide();
+        $(".edit").show();
+        $(".edit2").hide();
     });
+    $("#btword").click(function() {
+        $(".edit2").show();
+    });
+    $("#btpic").click(function() {
+        $(".edit2").hide();
+        $(".edit1").show();
+    });
+});
 </script>
 
 </html>

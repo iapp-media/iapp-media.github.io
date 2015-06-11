@@ -4,16 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 </head>
-<body>
+<body style="margin:0; background-color:white;">
     <form id="form1" runat="server">
-    <div style="width: 290px">
-        <asp:Image Style="width:290px; height:450px" ID="Image1" runat="server" />
-    </div>
+        <div id="p01" style="width: 100%; height:100%; margin:0;padding:inherit">
+            <asp:Image Style="width: auto; height: auto" ID="Image1" runat="server" />
+        </div>
     </form>
 </body>
 </html>

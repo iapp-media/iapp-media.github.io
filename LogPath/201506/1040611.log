@@ -62,3 +62,138 @@ Declare @MoreImgs  int = '0'
 Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
 [上午 10:38:59]
 [上午 10:39:00]
+[上午 10:49:49]
+Declare @U_P_ID  int = '1642'
+Declare @Img  VarChar = 'User_Pic1.jpg.jpg'
+Insert into Img_Url(User_Page_ID,Image) Values (@U_P_ID,@Img)
+[上午 10:49:49]
+Declare @U_P_ID  int = '1642'
+Declare @Img  VarChar = 'User_Pic1-3背景圖.jpg.jpg'
+Insert into Img_Url(User_Page_ID,Image) Values (@U_P_ID,@Img)
+[上午 10:49:49]
+Declare @U_P_ID  int = '1642'
+Declare @Img  VarChar = 'User_Pic1c.jpg.jpg'
+Insert into Img_Url(User_Page_ID,Image) Values (@U_P_ID,@Img)
+[上午 10:49:49]
+Declare @U_P_ID  int = '1642'
+Declare @Img  VarChar = 'User_Pic2.jpg.jpg'
+Insert into Img_Url(User_Page_ID,Image) Values (@U_P_ID,@Img)
+[上午 11:15:45]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '7'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:15:58]
+[上午 11:16:11]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '8'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:17]
+[上午 11:16:21]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '9'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:26]
+[上午 11:16:39]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '10'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 11:16:54]
+[上午 11:16:54]
+[上午 11:16:54]
+[上午 11:16:54]
+[上午 11:16:55]
+[上午 11:16:55]
+[上午 11:16:55]
+[上午 11:16:56]
+[上午 11:17:02]
+[下午 12:01:05]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:01:08]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:01:12]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:01:17]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '6'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:03:52]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1648 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 12:10:22]
+[下午 12:10:22]
+[下午 12:10:22]
+[下午 12:10:22]
+[下午 12:10:23]
+[下午 12:10:25]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '1'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:10:25]
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= 'negkt0cq3pnr5reuqckopk2k'
+[下午 12:10:42]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '2'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:25:01]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1657 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 12:25:14]
+[下午 12:25:14]

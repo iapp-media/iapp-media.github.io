@@ -11,7 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class p02_Edit
+Partial Public Class p02_Edit1
+
+    '''<summary>
+    '''Head1 控制項。
+    '''</summary>
+    '''<remarks>
+    '''自動產生的欄位。
+    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
 
     '''<summary>
     '''form1 控制項。
@@ -23,31 +32,22 @@ Partial Public Class p02_Edit
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Label1 控制項。
+    '''FU 控制項。
     '''</summary>
     '''<remarks>
     '''自動產生的欄位。
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents FU As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''FU1 控制項。
+    '''Msg 控制項。
     '''</summary>
     '''<remarks>
     '''自動產生的欄位。
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
-    Protected WithEvents FU1 As Global.System.Web.UI.WebControls.FileUpload
-
-    '''<summary>
-    '''Button1 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Msg As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Image1 控制項。
@@ -59,38 +59,11 @@ Partial Public Class p02_Edit
     Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''Label2 控制項。
+    '''finish 控制項。
     '''</summary>
     '''<remarks>
     '''自動產生的欄位。
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''FU2 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents FU2 As Global.System.Web.UI.WebControls.FileUpload
-
-    '''<summary>
-    '''Button2 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Image2 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents finish As Global.System.Web.UI.WebControls.ImageButton
 End Class

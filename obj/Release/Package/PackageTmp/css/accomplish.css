@@ -31,13 +31,18 @@ body {
 }
 
 /*.border {
-    /*position: absolute;
+    position: absolute;
     top: 0%;
     left: 0%;
     width: 86px;
     height: auto;
-    z-index: 2;*/
+    z-index: 2;
 }*/
+
+.midiframe {
+    padding: 0;
+    margin: 0;
+}
 
 .p-text {
     position: absolute;
@@ -67,6 +72,7 @@ body {
 .phone {
     position: absolute;
     top: 5%;
+    padding: 0px;
     left: 260px;
     width: 300px;
     height: 606px;
@@ -78,6 +84,8 @@ body {
     .phone .show {
         position: absolute;
         top: 11.5%;
+        padding: 0px;
+        margin: 0px;
         left: 6%;
         width: 261px;
         height: 464px;
@@ -287,7 +295,7 @@ body {
 }
 
 .iframe-ed1 {
-    height: 450px;
+    height: 500px;
     width: 408px;
     position: absolute;
     left: 11%;
@@ -352,59 +360,59 @@ body {
     overflow: scroll;
 }
 
-#pageNav ul {
-    margin: 10px 0px 0px 30px;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-    width: 85px;
-    height: 125px;
-    /*border-style: solid;
+    #pageNav ul {
+        margin: 10px 0px 0px 30px;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        width: 85px;
+        height: 125px;
+        /*border-style: solid;
     border-width: 1px;
     border-color: #000000;*/
-}
-
-    #pageNav ul li {
-        display: inline-block;
-        width: 90%;
-         height: 125px;
-       /*border: solid 1px #999;*/
-        margin: 20px 0px 0px 0px;
-        background-color: #fff;
-        position: relative;
     }
 
-        #pageNav ul li img.pic {
-            /*width: 95%;
-            margin: 5px 0 5px 0;*/
-            width: 85px;
+        #pageNav ul li {
+            display: inline-block;
+            width: 90%;
             height: 125px;
-            border-style: solid;
-            border-width: 1px;
-            border-color: #000000;
+            /*border: solid 1px #999;*/
+            margin: 20px 0px 0px 0px;
+            background-color: #fff;
+            position: relative;
         }
 
-        
-        #pageNav ul li img.delete {
-            position:absolute;
-            width: 8px;
-            height:8px;
-            left:99%;
-            top:2%;
-            z-index:1;
-        }
+            #pageNav ul li img.pic {
+                /*width: 95%;
+            margin: 5px 0 5px 0;*/
+                width: 85px;
+                height: 125px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #000000;
+            }
 
-        #pageNav ul li img.border {
-           position:absolute;
-           width: 85px;
-           height:125px;
-           left:0%;
-           top:0%;
-           z-index:0;
-        }
 
-        #pageNav ul li div {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+            #pageNav ul li img.delete {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                left: 99%;
+                top: 2%;
+                z-index: 1;
+            }
+
+            #pageNav ul li img.border {
+                position: absolute;
+                width: 85px;
+                height: 125px;
+                left: 0%;
+                top: 0%;
+                z-index: 0;
+            }
+
+            #pageNav ul li div {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
