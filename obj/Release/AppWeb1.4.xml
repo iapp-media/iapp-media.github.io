@@ -6,7 +6,71 @@ AppWeb1.4
 </name>
 </assembly>
 <members>
-<member name="F:AppWeb1._4.p01_Edit.form1">
+<member name="F:AppWeb1._4.p05_Edit.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.FU">
+	<summary>
+FU 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.Msg">
+	<summary>
+Msg 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.Image1">
+	<summary>
+Image1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.AA">
+	<summary>
+AA 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05_Edit.finish">
+	<summary>
+finish 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p01_Edit.form1">
 	<summary>
 form1 控制項。
 </summary>
@@ -183,49 +247,17 @@ form1 控制項。
  自動產生的欄位。
 若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.form1">
+</member><member name="F:AppWeb1._4.p05.Image1">
 	<summary>
-form1 控制項。
+Image1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.TextBox1">
+</member><member name="F:AppWeb1._4.p05.Label1">
 	<summary>
-TextBox1 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.TextBox2">
-	<summary>
-TextBox2 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.TextBox3">
-	<summary>
-TextBox3 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.FileUpload1">
-	<summary>
-FileUpload1 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p05_Edit.ImageButton1">
-	<summary>
-ImageButton1 控制項。
+Label1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
@@ -407,6 +439,30 @@ Timer1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
+</member><member name="F:AppWeb1._4.p04.Image1">
+	<summary>
+Image1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04.Image2">
+	<summary>
+Image2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04.Image3">
+	<summary>
+Image3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
 </member><member name="P:AppWeb1._4.My.Resources.Resources.ResourceManager">
 	<summary>
   傳回這個類別使用的快取的 ResourceManager 執行個體。
@@ -452,7 +508,15 @@ Image3 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.form1">
+</member><member name="F:AppWeb1._4.p02_Edit1.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p02_Edit1.form1">
 	<summary>
 form1 控制項。
 </summary>
@@ -460,31 +524,23 @@ form1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Label1">
+</member><member name="F:AppWeb1._4.p02_Edit1.FU">
 	<summary>
-Label1 控制項。
+FU 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.FU1">
+</member><member name="F:AppWeb1._4.p02_Edit1.Msg">
 	<summary>
-FU1 控制項。
+Msg 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Button1">
-	<summary>
-Button1 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Image1">
+</member><member name="F:AppWeb1._4.p02_Edit1.Image1">
 	<summary>
 Image1 控制項。
 </summary>
@@ -492,33 +548,25 @@ Image1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Label2">
+</member><member name="F:AppWeb1._4.p02_Edit1.AA">
 	<summary>
-Label2 控制項。
+AA 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.FU2">
+</member><member name="F:AppWeb1._4.p02_Edit1.TextBox1">
 	<summary>
-FU2 控制項。
+TextBox1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Button2">
+</member><member name="F:AppWeb1._4.p02_Edit1.finish">
 	<summary>
-Button2 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.p02_Edit.Image2">
-	<summary>
-Image2 控制項。
+finish 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
@@ -572,6 +620,14 @@ form1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
 </member><member name="F:AppWeb1._4.p04_Edit.form1">
 	<summary>
 form1 控制項。
@@ -580,17 +636,17 @@ form1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p04_Edit.L">
+</member><member name="F:AppWeb1._4.p04_Edit.Label1">
 	<summary>
-L 控制項。
+Label1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p04_Edit.FileUpload1">
+</member><member name="F:AppWeb1._4.p04_Edit.FU1">
 	<summary>
-FileUpload1 控制項。
+FU1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
@@ -599,6 +655,78 @@ FileUpload1 控制項。
 </member><member name="F:AppWeb1._4.p04_Edit.Button1">
 	<summary>
 Button1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Image1">
+	<summary>
+Image1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Label2">
+	<summary>
+Label2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.FU2">
+	<summary>
+FU2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Button2">
+	<summary>
+Button2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Image2">
+	<summary>
+Image2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Label3">
+	<summary>
+Label3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.FU3">
+	<summary>
+FU3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Button3">
+	<summary>
+Button3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04_Edit.Image3">
+	<summary>
+Image3 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。
@@ -620,7 +748,15 @@ form1 控制項。
  自動產生的欄位。
 若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02.form1">
+</member><member name="F:AppWeb1._4.p021.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p021.form1">
 	<summary>
 form1 控制項。
 </summary>
@@ -628,7 +764,7 @@ form1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02.Image1">
+</member><member name="F:AppWeb1._4.p021.Image1">
 	<summary>
 Image1 控制項。
 </summary>
@@ -636,9 +772,9 @@ Image1 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.p02.Image2">
+</member><member name="F:AppWeb1._4.p021.Label1">
 	<summary>
-Image2 控制項。
+Label1 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。

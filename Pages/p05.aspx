@@ -4,19 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
+     <style>
+       #text {
+           position:absolute;
+           bottom:100px;
+           left:75px;
+       }
+   </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
-    <div style="width:300px;height:488px;left:0;top:0;z-index:-2;">
-        <p  contenteditable="true"; style="margin-left:50px;margin-top:90px;">這是測試用的文字</p>
-        <p  contenteditable="true"; style="margin-left:70px;margin-top:30px;">測試用的文字</p>
-        <p  contenteditable="true"; style="margin-left:90px;margin-top:30px;">測試文字</p>
-        <img style="position:absolute;left:0;top:0;z-index:-1;" src="../images/1-3背景圖.jpg" />
-    </div>
+<body style="margin:0;padding:0;">
+   <div id="p01" style="width: 261px; height:464px; margin:0;padding:inherit">
+            <asp:Image Style="width: 261px; height:464px" ID="Image1" ImageUrl="~/img/picture5.jpg" runat="server" />
+        </div>
+    <div id="text">
+            <asp:Label ID="Label1" runat="server" Text="請點選輸入文字"></asp:Label>
+         </div>
     </body>
-    <scrpit>
-
-    </scrpit>
 </html>

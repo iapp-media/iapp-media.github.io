@@ -80,9 +80,9 @@
                         </div>
                     </div>
                     <!-- 分享/預覽 -->
-                    <a href><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
+                    <a href="#"><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
                     <!-- 返回修改-最後完成頁時出現 -->
-                    <div class="return hide"><a href><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></a></div>
+                    <div class="return hide"><a href="#"><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></a></div>
                     <!-- 上一頁＆下一頁 -->
                     <a href="#" onclick="pagechange(-1)"><img class="up" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></a>
                     <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
@@ -299,7 +299,7 @@ function pagechange(a) {
 
 function putin(a) {
     document.getElementById("AA").value = a; //抓取順序傳到後
-    //alert(document.getElementById("AA").value);
+
 }
 
 function putDELE(a) {

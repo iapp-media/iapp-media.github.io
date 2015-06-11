@@ -175,6 +175,9 @@
     <Content Include="img\phone2.png" />
     <Content Include="img\picture1.jpg" />
     <Content Include="img\picture2.jpg" />
+    <Content Include="img\picture3-1.png" />
+    <Content Include="img\picture3-2.png" />
+    <Content Include="img\picture3-3.png" />
     <Content Include="img\picture3.jpg" />
     <Content Include="img\picture4.jpg" />
     <Content Include="img\picture5.jpg" />

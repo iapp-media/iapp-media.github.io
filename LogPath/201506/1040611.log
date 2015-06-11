@@ -197,3 +197,606 @@ Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
 Update User_Page set Img01 = @Img01 Where IDNo=1657 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
 [下午 12:25:14]
 [下午 12:25:14]
+[下午 12:45:31]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '1'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:45:31]
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= 'negkt0cq3pnr5reuqckopk2k'
+[下午 12:56:08]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '2'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:56:13]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1659 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 12:56:34]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 12:56:37]
+[下午 12:56:37]
+[下午 12:56:37]
+[下午 12:56:38]
+[下午 12:56:38]
+[下午 12:56:38]
+[下午 12:56:58]
+Declare @Img01  VarChar = 'User_Pic/picture1.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1660 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:06:29]
+Declare @Img01  VarChar = 'User_Pic/bgphone-4.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:12:42][Main.GetDataSet.Error]:接近 '=' 之處的語法不正確。select Img01,h1 from User_Page where IDNo=
+[下午 02:18:41]
+Declare @h1  nvarchar(500) = 'TYYYYYYYYY'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:22:50]
+Declare @h1  nvarchar(500) = 'wegwegweg'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:23:07]
+Declare @h1  nvarchar(500) = 'awaeafefefe'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:23:13]
+Declare @h1  nvarchar(500) = 'VVVVVVVVVVVVV'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:23:19]
+Declare @h1  nvarchar(500) = 'CCCCCCCCCCC'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:23:31]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 02:23:45]
+Declare @Img01  VarChar = 'User_Pic/iapplogo.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1661 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:29:30]
+Declare @h1  nvarchar(500) = 'ascasc'
+Update User_Page set h1=@h1 Where IDNo=1661 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:29:39]
+Declare @h1  nvarchar(500) = 'TYYYYYYYY'
+Update User_Page set h1=@h1 Where IDNo=1661 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:30:56]
+Declare @Img01  VarChar = 'User_Pic/picture1.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:33:07]
+Declare @h1  nvarchar(500) = 'asvasv文字'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:33:13]
+Declare @h1  nvarchar(500) = 'asHAHA'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:34:58]
+Declare @h1  nvarchar(500) = 'Good'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:35:12]
+Declare @h1  nvarchar(500) = 'FKyou'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:35:37]
+Declare @h1  nvarchar(500) = '我恨你'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:35:54]
+Declare @Img01  VarChar = 'User_Pic/iapplogo.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:38:36]
+Declare @h1  nvarchar(500) = 'bbdfbdfb'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:39:00]
+Declare @Img01  VarChar = 'User_Pic/social2.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:39:06]
+Declare @h1  nvarchar(500) = 'wegweg'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:39:29]
+Declare @h1  nvarchar(500) = 'zsvsdvzsdvzsdvzsv'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:39:29]
+Declare @Img01  VarChar = 'User_Pic/border-small2.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:41:04]
+Declare @h1  nvarchar(500) = '請egegeg'
+Update User_Page set h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:41:13]
+Declare @Img01  VarChar = 'User_Pic/html5.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1658 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:43:27]
+[下午 02:43:28]
+[下午 02:43:30]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 02:43:36]
+Declare @h1  nvarchar(500) = '點123123'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:43:50]
+Declare @Img01  VarChar = 'User_Pic/social6.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:44:09]
+Declare @h1  nvarchar(500) = '點我修改文字'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:44:09]
+Declare @Img01  VarChar = 'User_Pic/D+.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:44:14]
+Declare @h1  nvarchar(500) = '點12313'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:44:35]
+Declare @h1  nvarchar(500) = 'GGman'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:44:35]
+Declare @Img01  VarChar = 'User_Pic/bgphone-4.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:45:59]
+Declare @h1  nvarchar(500) = '點tgtgtg'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:47:36]
+Declare @h1  nvarchar(500) = '點我修改文字'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:48:43]
+Declare @h1  nvarchar(500) = 'GGGGGGGGGG'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:48:43]
+Declare @Img01  VarChar = 'User_Pic/-bg2.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:48:48]
+Declare @h1  nvarchar(500) = 'GGGGGGGGG'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:49:01]
+Declare @h1  nvarchar(500) = 'HHHHHHHH'
+Update User_Page set h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:49:01]
+Declare @Img01  VarChar = 'User_Pic/phone.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:50:24]
+Declare @Img01  VarChar = 'User_Pic/bgphone-3.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:50:35]
+Declare @Img01  VarChar = 'User_Pic/-bg2.jpg.jpg'
+Declare @h1  nvarchar(500) = 'fvfvfv'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:50:44]
+Declare @Img01  VarChar = 'User_Pic/bg1-2.jpg.jpg'
+Declare @h1  nvarchar(500) = '點我eeveve'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 02:59:38]
+Declare @Img01  VarChar = 'User_Pic/memory.jpg.jpg'
+Declare @h1  nvarchar(500) = 'TYYYYYYY'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:00:14]
+Declare @Img01  VarChar = 'User_Pic/picture1.jpg.jpg'
+Declare @h1  nvarchar(500) = '這只是測試請不要懷疑'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1662 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:00:49]
+Declare @Img01  VarChar = 'User_Pic/picture6.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1660 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:01:08]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:01:42]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:01:47]
+[下午 03:01:58]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '5'
+Declare @Sort  int = '6'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:06:56]
+[下午 03:06:57]
+[下午 03:06:58]
+[下午 03:07:12]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:07:14]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:07:16]
+[下午 03:07:16]
+[下午 03:07:16]
+[下午 03:07:16]
+[下午 03:07:34]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '6'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:07:38]
+[下午 03:07:38]
+[下午 03:07:38]
+[下午 03:07:38]
+[下午 03:07:38]
+[下午 03:07:44]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '5'
+Declare @Sort  int = '6'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:07:51]
+[下午 03:07:51]
+[下午 03:07:51]
+[下午 03:07:51]
+[下午 03:07:51]
+[下午 03:07:51]
+[下午 03:08:03]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '7'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:08:06]
+[下午 03:08:37]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '8'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:08:42]
+[下午 03:08:44]
+[下午 03:09:52]
+[下午 03:09:52]
+[下午 03:09:53]
+[下午 03:09:53]
+[下午 03:09:53]
+[下午 03:09:54]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '1'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:09:54]
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:09:55]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '2'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:09:56]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:09:57]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:34:13]
+Declare @Img01  VarChar = 'User_Pic\\social6.png.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1674 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:34:21]
+Declare @Img01  VarChar = 'User_Pic\\-bg2.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:34:30]
+Declare @Img02  VarChar = 'User_Pic\\bg-signup.png.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:34:42]
+Declare @Img02  VarChar = 'User_Pic\\bg-log.png.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:36:11]
+Declare @Img03  VarChar = 'User_Pic\\bg1-3.jpg.jpg'
+Update User_Page set Img03 = @Img03 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:39:33]
+Declare @Img02  VarChar = 'User_Pic\\bg-signup.png.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1674 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:39:41]
+Declare @Img03  VarChar = 'User_Pic\\-bg2.jpg.jpg'
+Update User_Page set Img03 = @Img03 Where IDNo=1674 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:39:51]
+Declare @Img02  VarChar = 'User_Pic\\bg-log.png.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:39:58]
+Declare @Img03  VarChar = 'User_Pic\\-bg2.jpg.jpg'
+Update User_Page set Img03 = @Img03 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:41:27][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 03:41:27][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img02 from User_Page where IDNo=
+[下午 03:41:27][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img03 from User_Page where IDNo=
+[下午 03:41:59][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 03:41:59][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img02 from User_Page where IDNo=
+[下午 03:41:59][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img03 from User_Page where IDNo=
+[下午 03:42:17][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 03:42:17][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img02 from User_Page where IDNo=
+[下午 03:42:17][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img03 from User_Page where IDNo=
+[下午 03:43:29]
+Declare @Img01  VarChar = 'User_Pic\\bgphone-1.png.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:43:41]
+Declare @Img01  VarChar = 'User_Pic\\bg1-1.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:43:53]
+Declare @Img01  VarChar = 'User_Pic\\bg-signup.png.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:44:01]
+Declare @Img03  VarChar = 'User_Pic\\bg1-1.jpg.jpg'
+Update User_Page set Img03 = @Img03 Where IDNo=1675 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:45:05]
+[下午 03:45:08]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:45:55]
+Declare @Img01  VarChar = 'User_Pic/-bg2.jpg.jpg'
+Declare @h1  nvarchar(500) = '測試測試'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1673 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 03:46:00]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '5'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 03:51:39][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 04:10:23]
+Declare @Img01  VarChar = 'User_Pic/-bg2.jpg.jpg'
+Declare @h1  nvarchar(500) = '測試測試測試測試'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:12:21]
+Declare @Img01  VarChar = 'User_Pic/html5.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:12:35]
+Declare @Img01  VarChar = 'User_Pic/picture5.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:18:41]
+Declare @Img01  VarChar = 'User_Pic\\picture3-1.png.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1676 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:19:02]
+Declare @Img02  VarChar = 'User_Pic\\picture3-2.png.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1676 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:19:19]
+Declare @Img03  VarChar = 'User_Pic\\picture3-3.png.jpg'
+Update User_Page set Img03 = @Img03 Where IDNo=1676 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:19:33]
+Declare @Img01  VarChar = 'User_Pic/bg1.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1673 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:19:39]
+Declare @Img01  VarChar = 'User_Pic/bgphone-2.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1673 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:20:03]
+Declare @Img01  VarChar = 'User_Pic/-bg2.jpg.jpg'
+Declare @h1  nvarchar(500) = '點asvasvasvasv'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:20:39]
+Declare @Img01  VarChar = 'User_Pic/bgphone-2.png.jpg'
+Declare @h1  nvarchar(500) = '點g4g4g'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:21:08]
+Declare @Img01  VarChar = 'User_Pic\\bg-log.png.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1674 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:23:45]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:23:50]
+Declare @h1  nvarchar(500) = '點VAV'
+Update User_Page set h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:23:54]
+Declare @Img01  VarChar = 'User_Pic/down.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:23:59]
+Declare @h1  nvarchar(500) = '點我VSDVDV'
+Update User_Page set h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:24:07]
+Declare @Img01  VarChar = 'User_Pic/delete.png.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:24:15]
+Declare @Img01  VarChar = 'User_Pic/m1.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:24:23]
+Declare @h1  nvarchar(500) = 'SBDSBDBS'
+Update User_Page set h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:28:41]
+Declare @h1  nvarchar(500) = 'Svvvvvvvvv'
+Update User_Page set h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:29:13]
+Declare @Img01  VarChar = 'User_Pic/picture5.jpg.jpg'
+Declare @h1  nvarchar(500) = ''
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1677 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:29:41]
+[下午 04:29:41]
+[下午 04:29:41]
+[下午 04:29:41]
+[下午 04:29:42]
+[下午 04:29:43][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=1673
+[下午 04:29:49]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '1'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:29:49]
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:29:58]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '2'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:36:34]
+Declare @h1  nvarchar(500) = '點svsvsvsv'
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:36:41]
+Declare @Img01  VarChar = 'User_Pic/digital.png.jpg'
+Declare @h1  nvarchar(500) = '點svsvsvsv'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:36:44]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:36:46]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:36:48]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:36:53]
+Declare @h1  nvarchar(500) = 'sbsbssbsb'
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:38:08]
+Declare @h1  nvarchar(500) = 'sbsbssbsb'
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:38:10]
+Declare @h1  nvarchar(500) = 'sbsbssbsb'
+Update User_Page set h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:38:20]
+Declare @Img01  VarChar = 'User_Pic/mommy.jpg.jpg'
+Declare @h1  nvarchar(500) = 'sbsbssbsb'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1679 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:38:26]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:38:32]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:38:39]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '5'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:39:55]
+Declare @h1  nvarchar(500) = '點我asvasvasvasvasvasvasvasv'
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:40:14]
+Declare @Img01  VarChar = 'User_Pic/picture5.jpg.jpg'
+Declare @h1  nvarchar(500) = '點我asvasvasvasvasvasvasvasv'
+Update User_Page set Img01=@Img01,h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:40:59]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:41:02]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:41:06]
+Declare @h1  nvarchar(500) = '點我修ikikiki'
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:41:13]
+Declare @h1  nvarchar(500) = ''
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:41:49]
+Declare @h1  nvarchar(500) = '點我asvasvasvasav'
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:41:54]
+Declare @h1  nvarchar(500) = '點我asvasvasvasav'
+Update User_Page set h1=@h1 Where IDNo=1682 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:44:25]
+[下午 04:44:26]
+[下午 04:44:26]
+[下午 04:44:27]
+[下午 04:44:28]
+[下午 04:44:29]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '1'
+Declare @Sort  int = '1'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:44:29]
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+insert into User_App(User_ID,App_Type,App_Name,SessionID) Select User_ID,0,1,SessionID from User_Page where SessionID= 'negkt0cq3pnr5reuqckopk2k'
+[下午 04:44:31]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '2'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:44:34]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '3'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:44:37]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '4'
+Declare @Sort  int = '4'
+Declare @MoreImgs  int = '1'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:49:46]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '5'
+Declare @Sort  int = '5'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[下午 04:49:54]
+Declare @h1  nvarchar(500) = 'wegwegwegww'
+Update User_Page set h1=@h1 Where IDNo=1687 And SessionID = 'negkt0cq3pnr5reuqckopk2k'

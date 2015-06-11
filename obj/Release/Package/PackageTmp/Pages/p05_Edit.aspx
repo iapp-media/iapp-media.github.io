@@ -3,29 +3,45 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<script src="../js/jquery-2.1.4.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head id="Head1" runat="server">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <style>
+        #finish {
+            height: auto;
+            width: auto;
+            position: relative;
+            color:pink;
+            left:0;
+            top: 0;
+        }
+        #lab {
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script src="js/jquery-2.1.4.min.js"></script>
 </head>
-<body>
+<body style="margin:0;padding:0;">
     <form id="form1" runat="server">
-      <div style="width:300px;height:488px;left:0;top:0;z-index:-2;">
-         <p id="p1"  contenteditable="true"; style="margin-left:50px;margin-top:90px;">這是測試用的文字</p>
-        <p  id="p2" contenteditable="true"; style="margin-left:70px;margin-top:30px;">測試用的文字</p>
-        <p  id="p3" contenteditable="true"; style="margin-left:90px;margin-top:30px;">測試文字</p>
-          <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-          <asp:TextBox Visible="false" ID="TextBox2" runat="server"></asp:TextBox>
-          <asp:TextBox Visible="false" ID="TextBox3" runat="server"></asp:TextBox>
-        <img style="position:absolute;left:15px;top:15px;z-index:-1; right: 680px;" src="../images/1-3背景圖.jpg"/>
-    </div>
-        <div>
-         <asp:FileUpload ID="FileUpload1" runat="server" Height="27px" Width="71px" />
-            <asp:ImageButton ImageUrl="~/img/finish.png" ID="ImageButton1" runat="server" />
+        <div style="width:100%;text-align:center;">
+            <asp:FileUpload ID="FU" runat="server" Height="23px" Width="161px" />
+            <asp:Label ID="Msg" runat="server"></asp:Label>
+            <div>
+            <asp:Image ID="Image1" runat="server" Height="400px" Width="300px" />
+                <div id="lab">
+                    <asp:Label contenteditable="true" ID="AA"  runat="server" Text="點我修改文字" BackColor="#FFFFCC"></asp:Label>
+                    <asp:TextBox style="display:none;" ID="TextBox1" runat="server"></asp:TextBox>
+                </div>
+             </div>
+            <div>
+                <asp:ImageButton ID="finish" ImageUrl="~/img/finish.png" runat="server" />
             </div>
-    </form >
+        </div>
+    </form>
     <script>
-        
+        $("#AA").focusout(function () {
+            document.getElementById("TextBox1").value = $("#AA").text();
+        });
     </script>
 </body>
 </html>
