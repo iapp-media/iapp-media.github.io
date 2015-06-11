@@ -41,15 +41,6 @@ Partial Public Class Login
     Protected WithEvents pwBox As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''LinkButton1 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
-
-    '''<summary>
     '''LoginBtn1 控制項。
     '''</summary>
     '''<remarks>

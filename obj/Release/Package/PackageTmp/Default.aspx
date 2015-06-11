@@ -142,9 +142,9 @@
                     <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
                     </iframe>
                   </div>--%>
-                        <img class="button-pic" src="img/button-pic.png">
+                        <%--<img class="button-pic" src="img/button-pic.png">
                         <a href="#">
-                            <img class="button-wod" src="img/button-word.png"></a>
+                            <img class="button-wod" src="img/button-word.png"></a>--%>
                         <!-- 圖片編輯iframe -->
                         <iframe id="iframe-ed1" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
                         <!-- 文字編輯iframe -->

@@ -17,7 +17,7 @@ Partial Class Login
             Session("User_Name") = dr.Rows(0).Item("User_Name")
             Session("OK") = "OK"
             ' Response.Redirect("Default.aspx")
-            Response.Write("<Script>window.open('Default.aspx')</Script>")
+            Response.Write("<Script>window.open('Default.aspx','_top')</Script>")
         Else
 
             Response.Write("<script>alert('帳號密碼錯誤')</script>")

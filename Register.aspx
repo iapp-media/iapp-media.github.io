@@ -23,9 +23,9 @@
                     <div style="margin-left: auto; margin-right: auto; width: 391px">
                     <table>
                         <tr><td>註冊</td></tr>
-                        <tr><td>帳號:</td><td><asp:TextBox ID="Email" runat="server"></asp:TextBox></td><td> <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator></td></tr>
-                        <tr><td>密碼:</td><td><asp:TextBox ID="Pw" runat="server" TextMode="Password"></asp:TextBox></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator></td></tr>
-                        <tr><td>姓名:</td><td><asp:TextBox ID="User_Name" runat="server"></asp:TextBox></td><td> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="User_Name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td>帳號:</td><td><asp:TextBox CssClass="tb5" ID="Email" runat="server"></asp:TextBox></td><td> <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator></td></tr>
+                        <tr><td>密碼:</td><td><asp:TextBox CssClass="tb5" ID="Pw" runat="server" TextMode="Password"></asp:TextBox></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td>姓名:</td><td><asp:TextBox CssClass="tb5" ID="User_Name" runat="server"></asp:TextBox></td><td> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="User_Name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator></td></tr>
                     </table>
                         </div>
                 </div>

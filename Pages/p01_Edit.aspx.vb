@@ -17,7 +17,11 @@ Public Class p01_Edit
         End If
     End Sub
 
-    Protected Sub BTFU_Click(sender As Object, e As EventArgs) Handles BTFU.Click
+    Sub flashMid()
+        Response.Write("<Script>window.parent.show('Pages/see.aspx?ID=" & Request.QueryString("ID") & "'," & Request.QueryString("ID") & ");</Script>")
+    End Sub
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles finish.Click
         If (comm.ChkType(FU.PostedFile, "image") = False) Then
             Msg.Text = "格式不正確!!"
             Return
@@ -55,8 +59,5 @@ Public Class p01_Edit
             End If
         End If
         flashMid()
-    End Sub
-    Sub flashMid()
-        Response.Write("<Script>window.parent.show('Pages/see.aspx?ID=" & Request.QueryString("ID") & "'," & Request.QueryString("ID") & ");</Script>")
     End Sub
 End Class

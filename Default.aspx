@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
+﻿<%@ Page Language="vb" debug="true" AutoEventWireup="false"  CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
 
 <!DOCTYPE html>
 <html>
@@ -11,7 +11,7 @@
     <!-- <link href="css/my.css" rel="stylesheet" /> -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script>
-        function init() {
+        function init() {               //調用jquery sorttable 做左邊選單
             $("#list").sortable({
                 update: function () {
                     dragSelector: "li",
@@ -68,8 +68,8 @@
                             <p style="color: #F19439; text-align: center;">您的iApp</p>
                         </div>
                         <!-- iframe顯示區域 -->
-                        <div class="iframe">
-                            <iframe src="Pages/p01.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border: 0px"></iframe>
+                        <div class="iframe" style="padding:0px;margin:0px;width: 261px;height: 466px;">
+                            <iframe src="" scrolling="no"  id="midiframe" style="margin:0;padding:0; position: absolute;top: 0px; left: 0px; width: 100%;height: 464px; border: 0px"></iframe>
                             <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
                             </div>
                         </div>
@@ -126,27 +126,17 @@
                     </div>
                 </div>
                 <!-- iframe編輯區域 -->
-                <div class="edit hide">
+                <div id="edit" class="edit hide">
                     <a href="#" id="btpic">
                         <img class="button-pic" src="img/button-pic.png">
                         <a href="#" id="btword">
-                            <img class="button-wod" src="img/button-word.png"></a>
-                        <a href="#" id="fin">
-                            <img class="finish" src="img/finish.png"></a>
+                            <img class="button-wod" src="img/button-word.png"></a>&nbsp;
+              
                         <!-- 圖片編輯iframe -->
-                        <%--     <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
-                    </iframe>
-                  <!-- 文字編輯iframe -->
-                  <div class="edit2 hide">
-                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
-                    <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
-                    </iframe>
-                  </div>--%>
-                        <img class="button-pic" src="img/button-pic.png">
-                        <a href="#">
-                            <img class="button-wod" src="img/button-word.png"></a>
-                        <!-- 圖片編輯iframe -->
-                        <iframe id="iframe-ed1" class="iframe-ed1" src="Pages/seeEdit.aspx"></iframe>
+                        <div style="height:auto;absolute;left:100px;top:30px">
+                            <iframe id="iframe-ed1"  scrolling="no" class="iframe-ed1" style="border:0; " src="Pages/seeEdit.aspx"></iframe>
+                        </div>
+                        
                         <!-- 文字編輯iframe -->
                          <div class="edit2 hide">
                         <iframe id="iframe-ed2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
@@ -198,12 +188,12 @@
                 </div>
             </div>
              //-->
-        </div>
+<%--        </div>--%>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <asp:Label ID="La" runat="server" Text="Label" CssClass="nosee"></asp:Label>
-                <asp:TextBox ID="AA" runat="server" CssClass="nosee"></asp:TextBox>
-                <asp:TextBox ID="DELEID" runat="server" CssClass="nosee"></asp:TextBox>
+                <asp:Label ID="La" runat="server" Text="Label" CssClass="hide"></asp:Label> 
+                <asp:TextBox ID="AA" runat="server" CssClass="hide"></asp:TextBox> <%--抓使用者拖拉後順序--%>
+                <asp:TextBox ID="DELEID" runat="server" CssClass="hide"></asp:TextBox><%--抓取刪除ID--%>
                 <asp:LinkButton ID="DELE1" runat="server"></asp:LinkButton>
             </ContentTemplate>
             <Triggers>
@@ -298,7 +288,7 @@
 
 
     function putin(a) {
-        document.getElementById("AA").value = a;
+        document.getElementById("AA").value = a; //抓取順序傳到後端
 
         //alert(document.getElementById("AA").value);
     }

@@ -10,7 +10,6 @@
         If url <> "" Then
             Image1.ImageUrl = "../" & url.Replace("\", "/")
         End If
-
     End Sub
 
 End Class

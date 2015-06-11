@@ -45,7 +45,7 @@ body{
 	position: absolute;
 	top: 20%;left: 5%;
 	width: 40%;height: 30%;
-	background-color: #CCCCCC;
+	background-color:white;
 	opacity: 0.8;
 }
 .input-fb{
@@ -85,4 +85,10 @@ body{
 	background-image: url(../img/logo-digital.png);
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+.tb5 {
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 180px;
 }

@@ -215,6 +215,7 @@
     <Content Include="js\skrollr.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Pages\Allupload.aspx" />
     <Content Include="Pages\p01.aspx" />
     <Content Include="Pages\p01_Edit.aspx" />
     <Content Include="Pages\p02.aspx" />
@@ -349,6 +350,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Pages\Allupload.aspx.designer.vb">
+      <DependentUpon>Allupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Allupload.aspx.vb">
+      <DependentUpon>Allupload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Pages\p01.aspx.designer.vb">
       <DependentUpon>p01.aspx</DependentUpon>
     </Compile>
@@ -361,7 +369,7 @@
     </Compile>
     <Compile Include="Pages\p01_Edit.aspx.vb">
       <DependentUpon>p01_Edit.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\p02.aspx.designer.vb">
       <DependentUpon>p02.aspx</DependentUpon>

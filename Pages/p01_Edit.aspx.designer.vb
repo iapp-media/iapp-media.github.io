@@ -32,15 +32,6 @@ Partial Public Class p01_Edit
     Protected WithEvents FU As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''BTFU 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents BTFU As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Msg 控制項。
     '''</summary>
     '''<remarks>
@@ -57,4 +48,13 @@ Partial Public Class p01_Edit
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
     Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''finish 控制項。
+    '''</summary>
+    '''<remarks>
+    '''自動產生的欄位。
+    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+    '''</remarks>
+    Protected WithEvents finish As Global.System.Web.UI.WebControls.ImageButton
 End Class

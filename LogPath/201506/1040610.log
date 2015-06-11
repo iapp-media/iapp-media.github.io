@@ -1,0 +1,16 @@
+[下午 05:39:57][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。select Img01 from User_Page where IDNo=null
+[下午 05:41:17][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。select Img01 from User_Page where IDNo=null
+[下午 05:49:54][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 05:49:58][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 05:49:58]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo= And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 05:49:58][Main.NonQuery.Error]:接近關鍵字 'And' 之處的語法不正確。Update User_Page set Img01 = @Img01 Where IDNo= And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 05:56:39][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 05:56:43][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[下午 05:56:43]
+Declare @Img01  VarChar = 'User_Pic/1c.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo= And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 05:56:43][Main.NonQuery.Error]:接近關鍵字 'And' 之處的語法不正確。Update User_Page set Img01 = @Img01 Where IDNo= And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[下午 06:00:23][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。select Img01 from User_Page where IDNo=null
+[下午 06:00:34][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。select Img01 from User_Page where IDNo=null

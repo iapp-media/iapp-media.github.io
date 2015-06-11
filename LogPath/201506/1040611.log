@@ -1,0 +1,64 @@
+[上午 09:09:37]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1645 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 09:09:52]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1645 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 09:10:47]
+Declare @Img01  VarChar = 'User_Pic\\5.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1641 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 09:10:57]
+Declare @Img02  VarChar = 'User_Pic\\2.jpg.jpg'
+Update User_Page set Img02 = @Img02 Where IDNo=1641 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 09:47:09][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=0
+[上午 10:00:20]
+Declare @Img01  VarChar = 'User_Pic/ex1.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1645 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 10:06:14][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=0
+[上午 10:12:41][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[上午 10:13:07][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[上午 10:13:26][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[上午 10:13:39][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[上午 10:13:54][Main.Scalar.Error]:接近 '=' 之處的語法不正確。select Img01 from User_Page where IDNo=
+[上午 10:16:25]
+[上午 10:16:25]
+[上午 10:16:25]
+[上午 10:16:25]
+[上午 10:16:25]
+[上午 10:16:25]
+[上午 10:16:26]
+[上午 10:16:26]
+[上午 10:16:26]
+[上午 10:16:26]
+[上午 10:16:26]
+[上午 10:16:26]
+[上午 10:16:37]
+Declare @Img01  VarChar = 'User_Pic/1-3背景圖.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1645 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 10:27:01]
+[上午 10:27:01]
+[上午 10:27:01]
+[上午 10:27:02][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=0
+[上午 10:27:04]
+[上午 10:27:04]
+[上午 10:27:04]
+[上午 10:27:05][Main.Scalar.Error]:並未將物件參考設定為物件的執行個體。Select a.URL from Pages a inner join User_Page b ON a.IDNo=b.Page_ID where b.IDNo=0
+[上午 10:36:01]
+Declare @Img01  VarChar = 'User_Pic/ex1.jpg.jpg'
+Update User_Page set Img01 = @Img01 Where IDNo=1645 And SessionID = 'negkt0cq3pnr5reuqckopk2k'
+[上午 10:38:54]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '2'
+Declare @Sort  int = '7'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 10:38:55]
+Declare @User_ID  int = '0'
+Declare @SessionID  VarChar = 'negkt0cq3pnr5reuqckopk2k'
+Declare @Page_ID  int = '3'
+Declare @Sort  int = '8'
+Declare @MoreImgs  int = '0'
+Insert into User_Page(User_ID,Page_ID,Sort,SessionID,MoreImgs) Values(@User_ID,@Page_ID,@Sort,@SessionID,@MoreImgs)
+[上午 10:38:59]
+[上午 10:39:00]

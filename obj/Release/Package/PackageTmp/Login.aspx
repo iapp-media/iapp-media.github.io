@@ -21,13 +21,13 @@
             <div class="input">
                 <div style="margin:10px;">
                 <span style="text-align:right;margin-left:15px;margin-top:0px;margin-right:15px;">帳號:</span>
-                <asp:TextBox ID="accBox" runat="server" CssClass="aaa"></asp:TextBox>
+                <asp:TextBox ID="accBox" runat="server" CssClass="tb5"></asp:TextBox>
                     <br/>
                 <span style="color:red;margin:20px">請輸入您註冊的Email</span>
                </div>
                 <div style="margin-top:15px;margin-left:10px ">
                 <span style=" text-align:right; margin-left:15px;margin-top:0px;margin-right:15px;">密碼:</span>
-                <asp:TextBox ID="pwBox" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="pwBox" runat="server" CssClass="tb5" TextMode="Password"></asp:TextBox>
                 </div>
             </div>
 
