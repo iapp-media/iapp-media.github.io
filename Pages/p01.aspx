@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="p01.aspx.vb" Inherits="AppWeb1._4.p01" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="p01.aspx.vb" Inherits="AppWeb1._4.p01" %> 
 
 <!DOCTYPE html>
 
@@ -14,6 +14,7 @@
         <div id="p01" style="width: 261px; height:464px; margin:0;padding:inherit">
             <asp:Image Style="width: 261px; height:464px" ID="Image1" ImageUrl="~/img/picture1.jpg" runat="server" />
         </div>
+        <div style="background-color: red;">test</div>
     </form>
 </body>
 </html>
