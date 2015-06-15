@@ -12,7 +12,7 @@
 <body style="margin:0; background-color:white;">
     <form id="form1" runat="server">
         <div id="p01" style="width: 261px; height:464px; margin:0;padding:inherit">
-            <asp:Image Style="width: 261px; height:464px" ID="Image1" ImageUrl="~/img/picture1.jpg" runat="server" />
+            <asp:Image Style="width: 261px; height:464px" ID="Image1" ImageUrl="~/img/basic/p01-0b.jpg" runat="server" />
         </div>
     </form>
 </body>

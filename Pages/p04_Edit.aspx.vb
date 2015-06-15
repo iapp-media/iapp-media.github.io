@@ -38,7 +38,7 @@ Public Class p04_Edit
 
     Function uploadSub(FU As FileUpload, w As Integer, h As Integer) As String
         Dim FileName As String = FU.FileName.Replace(",", "")
-        Dim FilePath As String = "User_Pic\" & FU.FileName.ToString() & ".jpg"
+        Dim FilePath As String = "User_Pic/" & FU.FileName.ToString()
         If System.IO.Directory.Exists(MainPath & "User_Pic") = False Then
             System.IO.Directory.CreateDirectory(MainPath & "User_Pic")
         End If
@@ -58,60 +58,22 @@ Public Class p04_Edit
         str = "select " & Dbimg & " from User_Page where IDNo=" & Request.QueryString("ID")
         url = Main.Scalar(str)
         If url <> "" Then
-            img.ImageUrl = "../" & url.Replace("\\", "/")
+            img.ImageUrl = "../" & url.Replace("\", "/")
         Else
             If (Dbimg = "Img01") Then
-                img.ImageUrl = "../images/1c.jpg"
+                img.ImageUrl = "../img/basic/p04-1b.jpg"
             ElseIf (Dbimg = "Img02") Then
-                img.ImageUrl = "../images/2c.png"
+                img.ImageUrl = "../img/basic/p04-2b.jpg"
             ElseIf (Dbimg = "Img03") Then
-                img.ImageUrl = "../images/3c.png"
+                img.ImageUrl = "../img/basic/p04-3b.jpg"
             End If
         End If
     End Sub
+    Protected Sub finish_Click(sender As Object, e As ImageClickEventArgs) Handles finish.Click
+        SqlSub(uploadSub(FU1, w, h), "Img01")
+        SqlSub(uploadSub(FU2, w, h), "Img02")
+        SqlSub(uploadSub(FU3, w, h), "Img03")
 
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If (comm.ChkType(FU1.PostedFile, "image") = False) Then
-            'Msg.Text = "格式不正確!!"
-            Response.Write("<Script>alert('格式不正確!!')</Script>")
-            Return
-        End If
-        If (FU1.HasFile = True) Then
-            uploadSub(FU1, w, h)
-            SqlSub(uploadSub(FU1, w, h), "Img01")
-        Else
-            Response.Write("<Script>alert('沒有檔案')</Script>")
-        End If
-        flashMid()
-    End Sub
-
-    Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If (comm.ChkType(FU2.PostedFile, "image") = False) Then
-            'Msg.Text = "格式不正確!!"
-            Response.Write("<Script>alert('格式不正確!!')</Script>")
-            Return
-        End If
-        If (FU2.HasFile = True) Then
-            uploadSub(FU2, w, h)
-            SqlSub(uploadSub(FU2, w, h), "Img02")
-        Else
-            Response.Write("<Script>alert('上傳兩個檔案')</Script>")
-        End If
-        flashMid()
-    End Sub
-
-    Protected Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If (comm.ChkType(FU3.PostedFile, "image") = False) Then
-            'Msg.Text = "格式不正確!!"
-            Response.Write("<Script>alert('格式不正確!!')</Script>")
-            Return
-        End If
-        If (FU3.HasFile = True) Then
-            uploadSub(FU3, w, h)
-            SqlSub(uploadSub(FU3, w, h), "Img03")
-        Else
-            Response.Write("<Script>alert('上傳兩個檔案')</Script>")
-        End If
         flashMid()
     End Sub
     Sub flashMid()
