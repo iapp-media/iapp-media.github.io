@@ -4,6 +4,7 @@ body{
 	width: auto;height: auto;
 }
 .hide{ display:none;}
+.show{ display:block;}
 
 .top{
 	position: fixed;

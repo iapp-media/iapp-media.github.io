@@ -1,5 +1,4 @@
-﻿﻿<%@ Page Language="vb" debug="true" AutoEventWireup="false"  CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
-
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>
 <!DOCTYPE html>
 <html>
 
@@ -11,16 +10,14 @@
 <!-- <link href="css/my.css" rel="stylesheet" /> -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script>
-
-        function init() {               //調用jquery sorttable 做左邊選單
-            $("#list").sortable({
-                update: function () {
-                    dragSelector: "li",
-                    putin($(this).sortable('toArray'));
-                }
-            });
-        }
-
+    function init() {
+        $("#list").sortable({
+            update: function() {
+                dragSelector: "li",
+                putin($(this).sortable('toArray'));
+            }
+        });
+    }
     </script>
 </head>
 
@@ -70,18 +67,16 @@
                             <p style="color: #F19439;text-align: center;">您的iApp</p>
                         </div>
                         <!-- iframe顯示區域 -->
-
-                        <div class="iframe" style="padding:0px;margin:0px;width: 261px;height: 466px;">
-                            <iframe src="" scrolling="no"  id="midiframe" style="margin:0;padding:0; position: absolute;top: 0px; left: 0px; width: 100%;height: 464px; border: 0px"></iframe>
-                            <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
-                            </div>
-
+                        <div class="iframe">
+                        <iframe src="Pages/p01.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border:0px"></iframe>
+                          <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
+                          </div>
                         </div>
                     </div>
                     <!-- 分享/預覽 -->
-                    <a href="#"><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
+                    <a href="#" id="preview"><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
                     <!-- 返回修改-最後完成頁時出現 -->
-                    <div class="return hide"><a href="#"><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></a></div>
+                    <a href="#" id="return"><div class="return hide"><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></div></a>
                     <!-- 上一頁＆下一頁 -->
                     <a href="#" onclick="pagechange(-1)"><img class="up" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></a>
                     <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
@@ -128,22 +123,19 @@
                     </div>
                 </div>
                 <!-- iframe編輯區域 -->
-
-                <div id="edit" class="edit hide">
-                    <a href="#" id="btpic">
-                        <img class="button-pic" src="img/button-pic.png">
-                        <a href="#" id="btword">
-                            <img class="button-wod" src="img/button-word.png"></a>&nbsp;
-              
-                        <!-- 圖片編輯iframe -->
-                        <div style="height:auto;absolute;left:100px;top:30px">
-                            <iframe id="iframe-ed1"  scrolling="no" class="iframe-ed1" style="border:0; " src="Pages/seeEdit.aspx"></iframe>
-                        </div>
-                        
-                        <!-- 文字編輯iframe -->
-                         <div class="edit2 hide">
-                        <iframe id="iframe-ed2" class="iframe-ed2" src="Pages/seeEdit.aspx"></iframe>
-                    </div>
+                <div class="edit hide">
+                  <a href="#" id="btpic"><img class="button-pic" src="img/button-pic.png">
+                  <a href="#" id="btword"><img class="button-wod" src="img/button-word.png"></a>
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
+                  <!-- 圖片編輯iframe -->
+                    <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
+                    </iframe>
+                  <!-- 文字編輯iframe -->
+                  <div class="edit2 hide">
+                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
+                    <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
+                    </iframe>
+                  </div>
                 </div>
 
                 <!-- 設定＆個人資料＆列表 -->
@@ -151,19 +143,20 @@
                 <a class='iframe-info' href="list.html"><img class="list" src="img/button1.png" /></a>
                 <a class='iframe-info' href="setting.html"><img class="setting" src="img/setting.png" /></a>
                 <!-- 完成時候的結果頁面 -->
-                <div id="final hide">
-                    <div class="top hide"></div>
-                    <div class="middle hide">
-                        <img src="img/qrcode.jpg" style="position: absolute;top: 160px;left: 150px;">
-                        <img src="img/pic-22.png" style="position: absolute;top: 70px;left: 150px;">
-                        <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 310px;left: 100px;"></a>
-                        <a href="#"><img src="img/copylink.png" style="position: absolute;top: 277px;left: 490px;"></a>
+                <div class="final hide">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <img class="logo" src="img/logo2.png" />
+                        <img src="img/qrcode.jpg" style="position: absolute;top: 170px;left: 150px;">
+                        <img src="img/pic-22.png" style="position: absolute;top: 80px;left: 150px;">
+                        <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 320px;left: 125px;"></a>
+                        <a href="#"><img src="img/copylink.png" style="position: absolute;top: 285px;left: 490px;"></a>
                         <div class="src">http://iapp-media.com/</div>
                     </div>
-                    <div class="bottom hide"></div>
+                    <div class="bottom"></div>
                 </div>
                 <!-- logo＆company tiltle -->
-                <img class="logo" src="img/logo2.png" />
+                <!-- <img class="logo" src="img/logo2.png" /> -->
                 <div style="position: fixed; top: 620px;right: 10px;">
                   <img src="img/logo-digital.png" border="0">
                 </div>
@@ -201,12 +194,12 @@
                 </div>
             </div>
              //-->
-<%--        </div>--%>
+        </div>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <asp:Label ID="La" runat="server" Text="Label" CssClass="hide"></asp:Label> 
-                <asp:TextBox ID="AA" runat="server" CssClass="hide"></asp:TextBox> <%--抓使用者拖拉後順序--%>
-                <asp:TextBox ID="DELEID" runat="server" CssClass="hide"></asp:TextBox><%--抓取刪除ID--%>
+                <asp:Label ID="La" runat="server" Text="Label" CssClass="nosee"></asp:Label>
+                <asp:TextBox ID="AA" runat="server" CssClass="nosee"></asp:TextBox>
+                <asp:TextBox ID="DELEID" runat="server" CssClass="nosee"></asp:TextBox>
                 <asp:LinkButton ID="DELE1" runat="server"></asp:LinkButton>
             </ContentTemplate>
             <Triggers>
@@ -268,7 +261,7 @@ function show(str, id) {
 
 function editmid() {
     str = "Pages/seeEdit.aspx?ID=" + page_id;
-    document.getElementById("iframe-ed1").src = str;
+    document.getElementById("Iframe").src = str;
 }
 
 
@@ -279,6 +272,26 @@ $(document).ready(function() {
         }, 350);
         $(".edit").hide();
     });
+    $("#preview").click(function() {
+        $(".final").animate({
+            width: 'toggle'
+        }, 350);
+        $(".edit").hide();
+        $(".select").hide();
+        $("#pageNav").hide();
+        $(".return").show();
+        $(".final").show();
+    });
+    $("#return").click(function() {
+        $(".final").animate({
+            width: 'toggle'
+        }, 350);
+        $(".edit").hide();
+        $(".select").show();
+        $("#pageNav").show();
+        $(".return").hide();
+        $(".final").hide();
+    });
 
 });
 
@@ -287,18 +300,21 @@ function pagechange(a) {
     if (c < 0) {
         alert(c + "No Page");
         c = 0;
+
     } else if (c >= $("#list").sortable('toArray').length) {
         alert(c + "Page Over");
         c = c - 1;
     } else {
         document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
         //document.getElementById("midiframe").src = "Pages/see.aspx?ID=" + ($("#list").sortable('toArray')[c]).toString().replace("s", "");
+
     }
 }
 
 function putin(a) {
-    document.getElementById("AA").value = a; //抓取順序傳到後
+    document.getElementById("AA").value = a;
 
+    //alert(document.getElementById("AA").value);
 }
 
 function putDELE(a) {
@@ -320,6 +336,11 @@ $(document).ready(function() {
         $(".edit2").hide();
         $(".edit1").show();
     });
+    // $("#preview").click(function() {
+    //     $(".edit2").hide();
+    //     $(".edit1").hide();
+    //     $(".final").show();
+    // });
 });
 </script>
 
