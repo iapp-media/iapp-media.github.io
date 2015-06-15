@@ -165,7 +165,7 @@
                 <!-- logo＆company tiltle -->
                 <img class="logo" src="img/logo2.png" />
                 <div style="position: fixed; top: 620px;right: 10px;">
-                  <p style="color: #888888;">Digital+ 數碼數位股份有限公司</p>
+                  <img src="img/logo-digital.png" border="0">
                 </div>
             </div>
 
