@@ -13,7 +13,7 @@ Public Class p01_Edit
         If url <> "" Then
             Image1.ImageUrl = "../" & url.Replace("\", "/")
         Else
-            Image1.ImageUrl = ""
+            Image1.ImageUrl = "../img/basic/p01-0b.jpg"
         End If
     End Sub
 
@@ -28,7 +28,7 @@ Public Class p01_Edit
         End If
         If (FU.HasFile = True) Then
             Dim FileName As String = FU.FileName.Replace(",", "")
-            Dim FilePath As String = "User_Pic/" & FU.FileName.ToString() & ".jpg"
+            Dim FilePath As String = "User_Pic/" & FU.FileName.ToString()
             If System.IO.Directory.Exists(MainPath & "User_Pic") = False Then
                 System.IO.Directory.CreateDirectory(MainPath & "User_Pic")
             End If

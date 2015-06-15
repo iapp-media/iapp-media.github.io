@@ -4,10 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+      <style>
+        #finish {
+            height: auto;
+            width: auto;
+            position: relative;
+            color:pink;
+            left:0;
+            top: 0;
+        }
+    </style>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 </head>
-<body>
+<body style="width:100%;text-align:center;">
     <form id="form1" runat="server">
         <a href="#" onclick="pic1()">圖1</a>
          <a href="#" onclick="pic2()">圖2</a>
@@ -15,27 +25,28 @@
         <br />
 
 
-        <div></div>
+        <div style="margin: 0px auto">
         <div style="height: 400px; width: 300px">
             <div id="pic1" style="height: 200px; width: 300px">
                 <asp:Label ID="Label1" runat="server" Text="圖片1"></asp:Label>
-                <asp:FileUpload ID="FU1" runat="server" Width="72px" />
-                <asp:Button ID="Button1" runat="server" Text="上傳" />
+                <asp:FileUpload ID="FU1" runat="server" Width="177px" />
                 <asp:Image ID="Image1" runat="server" />
             </div>
-            <div id="pic2" style="height: 200px; width: 300px; display:none">
+            <div id="pic2" style="height: 200px; width: 300px; display:none;">
                 <asp:Label ID="Label2" runat="server" Text="圖片2"></asp:Label>
-                <asp:FileUpload ID="FU2" runat="server" Width="72px" />
-                <asp:Button ID="Button2" runat="server" Text="上傳" />
+                <asp:FileUpload ID="FU2" runat="server" Width="177px" />
                 <asp:Image ID="Image2" runat="server" />
             </div>
-            <div id="pic3" style="height: 200px; width: 300px;display:none">
+            <div id="pic3" style="height: 200px; width: 300px; display:none;">
                 <asp:Label ID="Label3" runat="server" Text="圖片3"></asp:Label>
-                <asp:FileUpload ID="FU3" runat="server" Width="72px" />
-                <asp:Button ID="Button3" runat="server" Text="上傳" />
+                <asp:FileUpload ID="FU3" runat="server" Width="177px" />
                 <asp:Image ID="Image3" runat="server" />
             </div>
+             <div>
+                <asp:ImageButton ID="finish" ImageUrl="~/img/finish.png" runat="server" />
+            </div>
         </div>
+            </div>
     </form>
     <script>
         function pic1() {

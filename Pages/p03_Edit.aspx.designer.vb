@@ -41,15 +41,6 @@ Partial Public Class p03_Edit
     Protected WithEvents FU1 As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Button1 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Image1 控制項。
     '''</summary>
     '''<remarks>
@@ -75,15 +66,6 @@ Partial Public Class p03_Edit
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
     Protected WithEvents FU2 As Global.System.Web.UI.WebControls.FileUpload
-
-    '''<summary>
-    '''Button2 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Image2 控制項。
@@ -113,15 +95,6 @@ Partial Public Class p03_Edit
     Protected WithEvents FU3 As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Button3 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents Button3 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Image3 控制項。
     '''</summary>
     '''<remarks>
@@ -129,4 +102,13 @@ Partial Public Class p03_Edit
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
     Protected WithEvents Image3 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''finish 控制項。
+    '''</summary>
+    '''<remarks>
+    '''自動產生的欄位。
+    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+    '''</remarks>
+    Protected WithEvents finish As Global.System.Web.UI.WebControls.ImageButton
 End Class

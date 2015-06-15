@@ -15,6 +15,8 @@ Public Class p05_Edit
             Dim h1 As String = dr.Rows(0).Item("h1").ToString()
             If url <> "" Then
                 Image1.ImageUrl = "../" & url.Replace("\", "/")
+            Else
+                Image1.ImageUrl = "../img/basic/p05-0b.jpg"
             End If
             If h1 <> "" Then
                 AA.Text = h1
@@ -29,8 +31,8 @@ Public Class p05_Edit
             Return
         End If
         If (FU.HasFile = True) Then
-            Dim FileName As String = FU.FileName.Replace(",", "")
-            Dim FilePath As String = "User_Pic/" & FU.FileName.ToString() & ".jpg"
+          Dim FileName As String = FU.FileName.Replace(",", "")
+            Dim FilePath As String = "User_Pic/" & FU.FileName.ToString()
             If System.IO.Directory.Exists(MainPath & "User_Pic") = False Then
                 System.IO.Directory.CreateDirectory(MainPath & "User_Pic")
             End If

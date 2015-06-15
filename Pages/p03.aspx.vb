@@ -15,15 +15,8 @@
         str = "select " & Dbimg & " from User_Page where IDNo=" & Request.QueryString("ID")
         url = Main.Scalar(str)
         If url <> "" Then
-            img.ImageUrl = "../" & url.Replace("\\", "/")
+            img.ImageUrl = "../" & url.Replace("\", "/")
         Else
-            If (Dbimg = "Img01") Then
-                img.ImageUrl = "../images/1c.jpg"
-            ElseIf (Dbimg = "Img02") Then
-                img.ImageUrl = "../images/2c.png"
-            ElseIf (Dbimg = "Img03") Then
-                img.ImageUrl = "../images/3c.png"
-            End If
         End If
     End Sub
 End Class
