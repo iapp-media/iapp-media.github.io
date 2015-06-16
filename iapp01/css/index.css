@@ -46,10 +46,10 @@ body{
 	margin-left:-10px;
 }
 .qr{
-	height:auto;width:40%;
+	height:auto;width:140px;
 	position:absolute;
 	left:50%;
-	top:57%;
+	top:53%;
 	margin-left:-70px;
 }
 .lastpg{
@@ -67,10 +67,10 @@ body{
 	margin-left:-80px;
 }
 .logo2{
-	height:auto;width:80%;
+	height:auto;width:300px;
 	position:absolute;
 	left:50%;
-	top:8%;
+	top:9%;
 	margin-left:-150px;
 }
 .border{
@@ -158,19 +158,19 @@ body{
 	transform: rotate(-5deg);
 	z-index: 2;
 }
-.share{
-	height:auto;width:20%;
+.create{
+	height:auto;width:70px;
 	position:absolute;
 	left:50%;
-	top:70%;
+	top:53%;
 	margin-left:85px;
 	z-index: 3;
 }
-.create{
-	height:auto;width:20%;
+.share{
+	height:auto;width:70px;
 	position:absolute;
 	left:50%;
-	top:55%;
+	top:65%;
 	margin-left:85px;
 	z-index: 3;
 }
