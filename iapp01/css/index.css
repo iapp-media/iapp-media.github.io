@@ -56,7 +56,7 @@ body{
 	height:auto;width:50%;
 	position:absolute;
 	left:50%;
-	top:88%;
+	top:87%;
 	margin-left:-100px;
 }
 .logo{
@@ -71,7 +71,7 @@ body{
 	position:absolute;
 	left:50%;
 	top:10%;
-	margin-left:-217px;
+	margin-left:-150px;
 }
 .border{
 	border-style: solid;
@@ -159,19 +159,19 @@ body{
 	z-index: 2;
 }
 .share{
-	height:auto;width:18%;
+	height:auto;width:20%;
 	position:absolute;
 	left:50%;
 	top:70%;
-	margin-left:85px;
+	margin-left:80px;
 	z-index: 3;
 }
 .create{
-	height:auto;width:18%;
+	height:auto;width:20%;
 	position:absolute;
 	left:50%;
 	top:55%;
-	margin-left:85px;
+	margin-left:80px;
 	z-index: 3;
 }
 .text1{
