@@ -25,7 +25,7 @@ body{
 .page-5-1{ background-color:#ffffff;}
 .page-6-1{ background-color:#ffffff;}
 .page-7-1{ background-color:#ffffff;}
-
+.page-8-1{ background-color:#ffd5af;}
 
 .page-current{
 	z-index:1;
@@ -46,11 +46,18 @@ body{
 	margin-left:-10px;
 }
 .qr{
-	height:auto;width:45%;
+	height:auto;width:40%;
 	position:absolute;
 	left:50%;
-	top:30%;
-	margin-left:-75px;
+	top:55%;
+	margin-left:-80px;
+}
+.lastpg{
+	height:auto;width:50%;
+	position:absolute;
+	left:50%;
+	top:88%;
+	margin-left:-100px;
 }
 .logo{
 	height:auto;width:50%;
@@ -60,11 +67,11 @@ body{
 	margin-left:-80px;
 }
 .logo2{
-	height:auto;width:30%;
+	height:auto;width:80%;
 	position:absolute;
 	left:50%;
 	top:10%;
-	margin-left:-50px;
+	margin-left:-172px;
 }
 .border{
 	border-style: solid;
@@ -152,19 +159,19 @@ body{
 	z-index: 2;
 }
 .share{
-	height:auto;width:25%;
+	height:auto;width:16%;
 	position:absolute;
 	left:50%;
 	top:70%;
-	margin-left:-40px;
+	margin-left:100px;
 	z-index: 3;
 }
 .create{
-	height:auto;width:25%;
+	height:auto;width:16%;
 	position:absolute;
 	left:50%;
-	top:80%;
-	margin-left:-40px;
+	top:55%;
+	margin-left:100px;
 	z-index: 3;
 }
 .text1{
