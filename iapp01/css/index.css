@@ -113,12 +113,12 @@ body{
 	width:49%;height: 49%;
 }
 .bar1{
-	height:110px;width:100%;
+	height:100px;width:100%;
 	position:absolute;
 	left:0%;
-	top:83%;
+	top:85%;
 	/*margin-left:-80px;*/
-	opacity:0%;	
+	/*opacity:0%;*/	
 	background-color: #ffffff;
 
 }
@@ -126,7 +126,7 @@ body{
 	height:90px;width:100%;
 	position:absolute;
 	left:0%;
-	top:65%;
+	top:63%;
 	/*margin-left:-80px;*/
 	background-color: #ffffff;
 
