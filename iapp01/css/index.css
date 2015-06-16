@@ -53,11 +53,11 @@ body{
 	margin-left:-70px;
 }
 .lastpg{
-	height:auto;width:70%;
+	height:auto;width:250px;
 	position:absolute;
 	left:50%;
-	top:88%;
-	margin-left:-120px;
+	top:90%;
+	margin-left:-125px;
 }
 .logo{
 	height:auto;width:50%;
@@ -67,11 +67,11 @@ body{
 	margin-left:-80px;
 }
 .logo2{
-	height:auto;width:300px;
+	height:auto;width:260px;
 	position:absolute;
 	left:50%;
 	top:9%;
-	margin-left:-150px;
+	margin-left:-130px;
 }
 .border{
 	border-style: solid;
@@ -163,15 +163,15 @@ body{
 	position:absolute;
 	left:50%;
 	top:53%;
-	margin-left:85px;
+	margin-left:83px;
 	z-index: 3;
 }
 .share{
 	height:auto;width:70px;
 	position:absolute;
 	left:50%;
-	top:65%;
-	margin-left:85px;
+	top:68%;
+	margin-left:83px;
 	z-index: 3;
 }
 .text1{
