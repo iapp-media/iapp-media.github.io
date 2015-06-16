@@ -94,7 +94,7 @@
 */
 
 #cboxOverlay {
-    background: #000;
+    background: #666;
     opacity: 0.9;
     filter: alpha(opacity=90);
 }
