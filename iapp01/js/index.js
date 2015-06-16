@@ -36,7 +36,7 @@ if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
 	if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	//判斷最後一頁跳至第一頁
+	//判斷keyboard最後一頁跳至第一頁	
 	if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
 })
 
@@ -59,6 +59,8 @@ $(document).swipeDown(function(){
 	last.row = now.row;
 	last.col = now.col;
 	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
+	//判斷第一頁跳至最後一頁
+	if (last.row == 1) { now.row = maxPage; now.col = 1; pageMove(towards.up);}	
 })
 
 // $(document).mouseDown(function(){
