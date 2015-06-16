@@ -71,7 +71,7 @@ body{
 	position:absolute;
 	left:50%;
 	top:10%;
-	margin-left:-172px;
+	margin-left:-217px;
 }
 .border{
 	border-style: solid;
@@ -159,19 +159,19 @@ body{
 	z-index: 2;
 }
 .share{
-	height:auto;width:16%;
+	height:auto;width:18%;
 	position:absolute;
 	left:50%;
 	top:70%;
-	margin-left:100px;
+	margin-left:85px;
 	z-index: 3;
 }
 .create{
-	height:auto;width:16%;
+	height:auto;width:18%;
 	position:absolute;
 	left:50%;
 	top:55%;
-	margin-left:100px;
+	margin-left:85px;
 	z-index: 3;
 }
 .text1{
