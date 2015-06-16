@@ -124,7 +124,7 @@ body{
 	height:18%;width:100%;
 	position:absolute;
 	left:0%;
-	top:80%;
+	top:65%;
 	/*margin-left:-80px;*/
 	background-color: #ffffff;
 }
@@ -132,7 +132,7 @@ body{
 	height:8%;width:42%;
 	position:absolute;
 	right:0%;
-	top:80%;
+	top:75%;
 	background-color: #000000;
 	z-index: 3;
 }
@@ -173,10 +173,12 @@ body{
 	color: #000000;
 	font-size: 18px;
 	text-align: center;
+	line-height:110px;
 }
 .text3{
 	color: #000000;
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
+	line-height:50px;
 }
