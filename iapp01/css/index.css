@@ -124,7 +124,7 @@ body{
 	height:18%;width:100%;
 	position:absolute;
 	left:0%;
-	top:65%;
+	top:80%;
 	/*margin-left:-80px;*/
 	background-color: #ffffff;
 }
@@ -132,7 +132,7 @@ body{
 	height:8%;width:42%;
 	position:absolute;
 	right:0%;
-	top:75%;
+	top:80%;
 	background-color: #000000;
 	z-index: 3;
 }
@@ -166,17 +166,17 @@ body{
 }
 .text1{
 	color: #000000;
-	font-size: 22px;
+	font-size: 18px;
 	text-align: left;
 }
 .text2{
 	color: #000000;
-	font-size: 22px;
+	font-size: 18px;
 	text-align: center;
 }
 .text3{
 	color: #000000;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: bold;
-	text-align: right;
+	text-align: center;
 }
