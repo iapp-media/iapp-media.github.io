@@ -68,7 +68,7 @@
                         </div>
                         <!-- iframe顯示區域 -->
                         <div class="iframe">
-                        <iframe src="Pages/p01.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border:0px"></iframe>
+                        <iframe src="Pages/p00.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border:0px"></iframe>
                           <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
                           </div>
                         </div>
@@ -87,39 +87,39 @@
                 <div class="select hide">
                     <div class="pic1">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton1" CssClass="picture" runat="server" ImageUrl="img/picture1.jpg" CommandArgument="1" />
+                            <asp:ImageButton ID="ImageButton1" CssClass="picture" runat="server" ImageUrl="~/img/basic/p01-0s.jpg" CommandArgument="1" />
                         </div>
                         <p style="font-size: 5px;text-align: center;">單圖</p>
                     </div>
                     <div class="pic2">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton2" CssClass="picture" runat="server" ImageUrl="img/picture2.jpg" CommandArgument="2" />
+                            <asp:ImageButton ID="ImageButton2" CssClass="picture" runat="server" ImageUrl="~/img/basic/p02-0s.jpg" CommandArgument="2" />
                         </div>
                         <p style="font-size: 5px;text-align: center;">單圖下文字</p>
                     </div>
                     <div class="pic3">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton3" CssClass="picture" runat="server" ImageUrl="img/picture3.jpg" CommandArgument="3" />
+                            <asp:ImageButton ID="ImageButton3" CssClass="picture" runat="server" ImageUrl="~/img/basic/p03-0s.jpg" CommandArgument="3" />
                         </div>
                         <p style="font-size: 5px;text-align: center;">三格</p>
                     </div>
                     <div class="pic4">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton4" CssClass="picture" runat="server" ImageUrl="img/picture4.jpg" CommandArgument="4" />
+                            <asp:ImageButton ID="ImageButton4" CssClass="picture" runat="server" ImageUrl="~/img/basic/p04-0s.jpg" CommandArgument="4" />
                         </div>
-                        <p style="font-size: 5px;text-align: center;">三張連圖</p>
+                        <p style="font-size: 5px;text-align: center;">置中文字</p>
                     </div>
                     <div class="pic5">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton5" CssClass="picture" runat="server" ImageUrl="img/picture5.jpg" CommandArgument="5" />
+                            <asp:ImageButton ID="ImageButton5" CssClass="picture" runat="server" ImageUrl="~/img/basic/p05-0s.jpg" CommandArgument="5" />
                         </div>
-                        <p style="font-size: 5px;text-align: center;">封面文字</p>
+                        <p style="font-size: 5px;text-align: center;">三圖分割</p>
                     </div>
                     <div class="pic6">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
-                            <asp:ImageButton ID="ImageButton6" CssClass="picture" runat="server" ImageUrl="img/picture6.jpg" CommandArgument="6" />
+                            <asp:ImageButton ID="ImageButton6" CssClass="picture" runat="server" ImageUrl="~/img/basic/p06-0s.jpg" CommandArgument="6" />
                         </div>
-                        <p style="font-size: 5px;text-align: center;">中間文字</p>
+                        <p style="font-size: 5px;text-align: center;">右下文字</p>
                     </div>
                 </div>
                 <!-- iframe編輯區域 -->
@@ -146,7 +146,7 @@
                 <div class="final hide">
                     <div class="top"></div>
                     <div class="middle">
-                        <img class="logo" src="img/logo2.png" />
+                        <img class="logo2" src="img/logo2.png" />
                         <img src="img/qrcode.jpg" style="position: absolute;top: 170px;left: 150px;">
                         <img src="img/pic-22.png" style="position: absolute;top: 80px;left: 150px;">
                         <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 320px;left: 125px;"></a>
@@ -278,6 +278,7 @@ $(document).ready(function() {
         }, 350);
         $(".edit").hide();
         $(".select").hide();
+        $(".logo").hide();
         $("#pageNav").hide();
         $(".return").show();
         $(".final").show();
@@ -289,6 +290,7 @@ $(document).ready(function() {
         $(".edit").hide();
         $(".select").show();
         $("#pageNav").show();
+        $(".logo").show();
         $(".return").hide();
         $(".final").hide();
     });
