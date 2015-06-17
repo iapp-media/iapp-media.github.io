@@ -1,4 +1,4 @@
-﻿<!--  <%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>  --> 
+﻿<!--<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="AppWeb1._4._Default" %>-->
 <!DOCTYPE html>
 <html>
 
@@ -68,7 +68,7 @@
                         </div>
                         <!-- iframe顯示區域 -->
                         <div class="iframe">
-                        <iframe src="Pages/p01.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border:0px"></iframe>
+                        <iframe src="Pages/p00.aspx" scrolling="no" id="midiframe" style="height: 100%; width: 100%; border:0px"></iframe>
                           <div id="MIDHIDE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" onclick="editmid()">
                           </div>
                         </div>
@@ -146,7 +146,7 @@
                 <div class="final hide">
                     <div class="top"></div>
                     <div class="middle">
-                        <img class="logo" src="img/logo2.png" />
+                        <img class="logo2" src="img/logo2.png" />
                         <img src="img/qrcode.jpg" style="position: absolute;top: 170px;left: 150px;">
                         <img src="img/pic-22.png" style="position: absolute;top: 80px;left: 150px;">
                         <a href="#"><img src="img/fbicon.png" style="position: absolute;top: 320px;left: 125px;"></a>
@@ -156,9 +156,9 @@
                     <div class="bottom"></div>
                 </div>
                 <!-- logo＆company tiltle -->
-                <!-- <img class="logo" src="img/logo2.png" /> -->
+                 <img class="logo" src="img/bgimg.png" />
                 <div style="position: fixed; top: 620px;right: 10px;">
-                  <p style="color: #888888;">Digital+ 數碼數位股份有限公司</p>
+                  <img src="img/logo-digital.png" border="0">
                 </div>
             </div>
 
@@ -278,6 +278,7 @@ $(document).ready(function() {
         }, 350);
         $(".edit").hide();
         $(".select").hide();
+        $(".logo").hide();
         $("#pageNav").hide();
         $(".return").show();
         $(".final").show();
@@ -289,6 +290,7 @@ $(document).ready(function() {
         $(".edit").hide();
         $(".select").show();
         $("#pageNav").show();
+        $(".logo").show();
         $(".return").hide();
         $(".final").hide();
     });

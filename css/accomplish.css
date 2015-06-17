@@ -174,7 +174,13 @@ body {
     height: 220px;
     z-index: 0;
 }
-
+.logo2 {
+    position: fixed;
+    top: 300px;
+    left: 800px;
+    width: auto;
+    height: 120px;
+}
 .pic1 {
     position: absolute;
     top: 10%;
