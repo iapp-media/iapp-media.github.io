@@ -46,18 +46,18 @@ body{
 	margin-left:-10px;
 }
 .qr{
-	height:auto;width:40%;
+	height:auto;width:140px;
 	position:absolute;
 	left:50%;
-	top:55%;
-	margin-left:-80px;
+	top:53%;
+	margin-left:-70px;
 }
 .lastpg{
-	height:auto;width:50%;
+	height:auto;width:250px;
 	position:absolute;
 	left:50%;
-	top:88%;
-	margin-left:-100px;
+	top:90%;
+	margin-left:-125px;
 }
 .logo{
 	height:auto;width:50%;
@@ -67,11 +67,11 @@ body{
 	margin-left:-80px;
 }
 .logo2{
-	height:auto;width:80%;
+	height:auto;width:260px;
 	position:absolute;
 	left:50%;
-	top:10%;
-	margin-left:-172px;
+	top:9%;
+	margin-left:-130px;
 }
 .border{
 	border-style: solid;
@@ -158,20 +158,20 @@ body{
 	transform: rotate(-5deg);
 	z-index: 2;
 }
-.share{
-	height:auto;width:16%;
+.create{
+	height:auto;width:70px;
 	position:absolute;
 	left:50%;
-	top:70%;
-	margin-left:100px;
+	top:53%;
+	margin-left:83px;
 	z-index: 3;
 }
-.create{
-	height:auto;width:16%;
+.share{
+	height:auto;width:70px;
 	position:absolute;
 	left:50%;
-	top:55%;
-	margin-left:100px;
+	top:68%;
+	margin-left:83px;
 	z-index: 3;
 }
 .text1{
