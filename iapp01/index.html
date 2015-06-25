@@ -40,9 +40,11 @@
 
 	<body>
 		<div>
+		<div class="share-button share-button-bottom"></div>
 			<div class="page page-1-1 page-current">
 			   <img class="logo animated bounceInDownrubberBand" src="img/logo.png" />
 			   <img class="up moveIconUp" src="img/icon_up.png" />
+			   
 			</div>
 			
 		</div>
@@ -112,6 +114,21 @@
 		<script src="js/touch.js"></script>
 		<script src="js/index.js"></script>
 
+		<script src="js/share.js"></script>
+		
+		<script>
+		    var share_button_right = new Share(".share-button-bottom", {
+		        ui: {
+		            flyout: "bottom left",
+		            button_text: ""
+		        },
+		        networks: {
+		            facebook: {
+		                app_id: "12345",
+		            }
+		        }
+		    });
+   		</script>
 <!-- Google Analytics 分析 -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

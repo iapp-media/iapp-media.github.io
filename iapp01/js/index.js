@@ -60,7 +60,7 @@ $(document).swipeDown(function(){
 	last.col = now.col;
 	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
 	//判斷第一頁跳至最後一頁
-	if (last.row == 1) { now.row = maxPage; now.col = 1; pageMove(towards.up);}	
+	if (last.row == 1) { now.row = maxPage; now.col = 1; pageMove(towards.down);}	
 })
 
 // $(document).mouseDown(function(){

@@ -3,6 +3,8 @@ body {
     color: #000;
     word-wrap: break-word;
 }
+.hide{display: none;}
+.show{display: inline;}
 
 .slideShow {
     width: 215px;

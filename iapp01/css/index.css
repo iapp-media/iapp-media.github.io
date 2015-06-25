@@ -52,6 +52,15 @@ body{
 	top:53%;
 	margin-left:-70px;
 }
+.share-button{
+	height:auto;width:auto;
+	position:absolute;
+	left:50%;
+	top:2%;
+	margin-left:-150px;
+	z-index: 100;
+}
+
 .lastpg{
 	height:auto;width:250px;
 	position:absolute;
@@ -70,8 +79,8 @@ body{
 	height:auto;width:260px;
 	position:absolute;
 	left:50%;
-	top:9%;
-	margin-left:-130px;
+	top:5%;
+	margin-left:-140px;
 }
 .border{
 	border-style: solid;
