@@ -547,8 +547,8 @@ a:hover {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: 1%;
+  /*margin-right: auto;
+  margin-left: auto;*/
   *zoom: 1;
 }
 
