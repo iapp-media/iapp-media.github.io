@@ -2,12 +2,12 @@
 		{
 			padding: 0;
 			min-height: 450px;
-			margin: 0 auto;
+			margin: 0 ;
 		}
 		#masonry .thumbnail
 		{
-			width: 330px;
-			margin: 20px;
+			width: 30%;
+			margin: 3%;
 			padding: 0;
 			border-width: 1px;
 			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -15,7 +15,7 @@
 		}
 		#masonry .thumbnail .imgs
 		{
-			padding: 10px;
+			padding: 0px;
 		}
 		#masonry .thumbnail .imgs img
 		{
