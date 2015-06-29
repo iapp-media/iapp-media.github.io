@@ -25,17 +25,17 @@
 		{
 			background-color: #fff;
 			padding-top: 0;
-			font-size: 1%;
+			font-size: 13px;
 		}
 		#masonry .thumbnail .caption .title
 		{
-			font-size: 1%;
+			font-size: 13px;
 			font-weight: bold;
 			margin: 5px 0;
 			text-align: left;
 		}
 		#masonry .thumbnail .caption .author
 		{
-			font-size: 1%;
+			font-size: 11px;
 			text-align: right;
 		}
