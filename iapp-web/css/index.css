@@ -1,0 +1,232 @@
+.navbar{
+	min-height: 80px;
+	background-color: white;
+	box-shadow: gray 0px 2px 15px 0px;
+}
+
+.iapplogo{
+	width: 90px;
+	height: auto;
+}
+.navbar-brand {
+    float: left;
+    height: 60px;
+    padding: 10px 0px;
+	}
+.search {
+    position: relative;
+    top:20px;
+}
+.search-sm{
+	display: none;
+}
+.login-sm{
+	display: none;
+}
+.input-group .form-control {
+	border: #ff9933 2px solid;
+}
+.glyphicon-align-justify{
+	color: #fff;
+}
+.glyphicon-align-justify:hover{
+	color: #ff9933;
+}
+.select{
+	border: #ff9933 1px solid;
+	background-color: #ff9933;
+}
+.select:hover{
+	border: #ff9933 1px solid;
+	background-color: #ffbb66;
+}
+.dropdown-menu-right{
+	border: #ff9933 1px solid;
+}
+
+.navbar-btn1 {
+    margin-top: 10px;
+    border: none;
+}
+.navbar-btn2 {
+    margin-top: 8px;
+    border: none;
+}
+.navbar-btn1:hover {
+    color: #fff;
+    background-color: #ffbb66;	
+}
+.navbar-btn2:hover {
+    color: #fff;
+    background-color: #ffbb66;	
+}
+.title{
+	font-weight: bold;
+	color: #ff9933;
+}
+.title:hover{
+	font-weight: bold;
+	color: #fff;
+}
+.se{
+	width: 5%;
+}
+.separate {
+    background-color: gray;
+    opacity: 0.5;
+    width: 2px;
+    height: 40px;
+    position: relative;
+    top: 15px;
+    left: 100%;
+}
+
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+   
+	.navbar{
+	min-height: 80px;
+	background-color: white;
+	box-shadow: gray 0px 2px 15px 0px;
+	}
+	.iapplogo{
+	width: 70px;
+	height: auto;
+	}
+	.search {
+	    /*position: relative;
+	    top:20px;*/
+	    width: 50%;
+	}
+	.search-sm{
+		display: none;
+	}
+	.login-sm{
+		display: none;
+	}
+	.input-group .form-control {
+		border: #ff9933 2px solid;
+	}
+	.glyphicon-align-justify{
+		color: #fff;
+	}
+	.glyphicon-align-justify:hover{
+		color: #ff9933;
+	}
+	.select{
+		border: #ff9933 1px solid;
+		background-color: #ff9933;
+	}
+	.select:hover{
+		border: #ff9933 1px solid;
+		background-color: #ffbb66;
+	}
+	.dropdown-menu-right{
+		border: #ff9933 1px solid;
+	}
+
+	.navbar-btn1 {
+	    margin-top: 10px;
+	    border: none;
+	}
+	.navbar-btn2 {
+	    margin-top: 8px;
+	    border: none;
+	}
+	.navbar-btn1:hover {
+	    color: #fff;
+	    background-color: #ffbb66;	
+	}
+	.navbar-btn2:hover {
+	    color: #fff;
+	    background-color: #ffbb66;	
+	}
+	.title{
+		font-weight: bold;
+		color: #ff9933;
+	}
+	.title:hover{
+		font-weight: bold;
+		color: #fff;
+	}
+	.se{
+		width: 5%;
+	}
+	.separate {
+		display: none;
+	    /*background-color: gray;
+	    opacity: 0.5;
+	    width: 2px;
+	    height: 40px;
+	    position: relative;
+	    top: 15px;
+	    left: 100%;*/
+	}
+}
+
+@media only screen and (max-width:480px) {
+  
+	.navbar{
+	min-height: 50px;
+	background-color: white;
+	box-shadow: gray 0px 2px 15px 0px;
+	}
+	.navbar-brand {
+    float: left;
+    height: 60px;
+    padding: 5px 15px;
+	}
+	.iapplogo{
+		width: 67px;
+		height: auto;
+	}
+	.search {
+	    position: relative;
+	    top:12px;
+	    right: 5px;
+	}
+	.search-sm{
+		display: inline;
+	}
+	.glyphicon-search{
+		margin-top: 15px;
+		left: 100%;
+		color: #ff9933;
+		font-size: 35px;
+	}
+	.glyphicon-user{
+		margin-top: 15px;
+		left: 50%;
+		color: #ff9933;
+		font-size: 35px;
+	}
+	.login-sm{
+		display: inline;
+	}
+	.glyphicon-align-justify{
+		font-size: 20px;
+	}
+	.select{
+		border: #ff9933 1px solid;
+		background-color: #ff9933;
+	}
+	.select:hover{
+		border: #ff9933 1px solid;
+		background-color: #ffbb66;
+	}
+	.dropdown-menu-right{
+		border: #ff9933 1px solid;
+	}
+	.input-group .form-control {
+		display: none;
+	}
+	.navbar-btn1 {
+	    display: none;
+	}
+	.navbar-btn2 {
+	    display: none;
+	}
+	.se{
+		display: none;
+	}
+}
