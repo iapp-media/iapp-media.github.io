@@ -39,3 +39,41 @@
 			font-size: 1.1em;
 			text-align: right;
 		}
+
+@media only screen and (max-width:480px) {
+	#masonry .thumbnail
+		{
+			width: 30%;
+			margin: 2px;
+			padding: 0;
+			border-width: 1px;
+			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+					box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		}
+	#masonry .thumbnail .imgs
+		{
+			padding: 0px;
+		}
+		#masonry .thumbnail .imgs img
+		{
+			margin-bottom: 5px;
+		}
+		#masonry .thumbnail .caption
+		{
+			background-color: #fff;
+			padding-top: 0;
+			font-size: 1em;
+		}
+		#masonry .thumbnail .caption .title
+		{
+			font-size: 1em;
+			font-weight: bold;
+			margin: 5px 0;
+			text-align: left;
+		}
+		#masonry .thumbnail .caption .author
+		{
+			font-size: 1em;
+			text-align: right;
+		}
+}
