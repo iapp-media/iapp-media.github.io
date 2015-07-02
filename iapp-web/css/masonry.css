@@ -44,7 +44,8 @@
 	#masonry .thumbnail
 		{
 			width: 30%;
-			margin: 2px;
+			margin: 5px;
+			margin-left: 1px;
 			padding: 0;
 			border-width: 1px;
 			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
