@@ -3574,7 +3574,7 @@ textarea.input-lg {
         vertical-align: middle
     }
     .form-inline .input-group .form-control,
-    .form-inline .input-group .input-group-addon,
+    .form-.ainline .input-group .input-group-addon,
     .form-inline .input-group .input-group-btn {
         width: auto
     }
@@ -3717,7 +3717,7 @@ fieldset[disabled] a.btn {
 .btn-default {
     color: #333;
     background-color: #fff;
-    border-color: #ccc
+    border-color: #ccc;
 }
 
 .btn-default.focus,
