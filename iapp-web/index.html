@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <div class="col-xs-4 col-sm-2 col-md-1 navbar-header">
                     <a class="navbar-brand" href="#">
-                        <img class="iapplogo" src="images/iapplogo.png">
+                        <img class="iapplogo" src="img/iapplogo.png">
                     </a>
                 </div>
                 <!-- <div class="col-xs-4 search-sm">
@@ -248,7 +248,7 @@
 
                 var imgNames = imgsNode.find('input[type=hidden]').val().split(',');
                 $.each(imgNames, function(index, item) {
-                    imgsNode.append('<a href=><img src="images/' + item + '" /></a>');
+                    imgsNode.append('<a href=><img src="img/' + item + '" /></a>');
                 });
             });
         }

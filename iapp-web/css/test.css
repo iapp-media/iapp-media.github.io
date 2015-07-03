@@ -1,12 +1,16 @@
     .item {
-        background: none repeat scroll 0 0 #D8D5D2;
-        border-radius: 5px 5px 5px 5px;
+/*        background: none repeat scroll 0 0 #D8D5D2;
+*/        border-radius: 5px 5px 5px 5px;
         width: 240px;
         float: left;
-        padding: 5px;
+        padding: 0px;
+        border: 1px solid black;
         margin: 5px;
     }
-    
+    .item-pic{
+        max-width: 200px;
+        max-height: 320px;
+    }
     .imgcenter {
         text-align: center;
     }

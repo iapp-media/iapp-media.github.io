@@ -3,6 +3,12 @@
 	background-color: white;
 	box-shadow: gray 0px 2px 15px 0px;
 }
+.back-top{
+	width: auto;height: auto;
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+}
 .tem{
   		display: none;
   	}
@@ -63,6 +69,20 @@
 .navbar-btn2:hover {
     color: #fff;
     background-color: #ffbb66;	
+}
+.icon-box{
+	background-color: #ff9933;
+	margin-top: 20px;
+	width: 130px;
+	height: 35px;
+	border:1px gray solid;
+	border-radius:8px;
+}
+.usericon{
+	width: auto;height: 35px;
+	position: absolute;
+	top: 0%;
+	left: 0%;
 }
 .title{
 	font-weight: bold;
