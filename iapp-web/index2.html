@@ -1,265 +1,127 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)http://sample.diary.tw/flickrsearch/?q=rainbow -->
 <html lang="zh-tw">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>flickr infinite masonry test</title>
-    <script type="text/javascript" async="" src="./flickr infinite masonry test_files/ga.js"></script>
-    <script type="text/javascript" src="./flickr infinite masonry test_files/jquery.min.js"></script>
-    <script type="text/javascript" src="./flickr infinite masonry test_files/jquery.masonry.min.js">
-    </script>
-    <script type="text/javascript" src="./flickr infinite masonry test_files/jquery.infinitescroll.min.js"></script>
-    <script>
-    $(function() {
-
-        var $container = $('#container');
-
-        $container.imagesLoaded(function() {
-            $container.masonry({
-                itemSelector: '.item',
-                columnWidth: 20,
-                isAnimated: true,
-                isFitWidth: true
-            });
-        });
-
-        $container.infinitescroll({
-                navSelector: 'div.nav', // selector for the paged navigation 
-                nextSelector: 'div.nav a', // selector for the NEXT link (to page 2)
-                itemSelector: '.item', // selector for all items you'll retrieve
-                loading: {
-                    img: '6RMhx.gif',
-                    msgText: 'loading....',
-                    finishedMsg: 'no more...'
-                }
-
-            },
-            // trigger Masonry as a callback
-            function(newElements) {
-                // hide new items while they are loading
-                var $newElems = $(newElements).css({
-                    opacity: 0
-                });
-                // ensure that images load before adding to masonry layout
-                $newElems.imagesLoaded(function() {
-                    // show elems now they're ready
-                    $newElems.animate({
-                        opacity: 1
-                    });
-                    $container.masonry('appended', $newElems, true);
-                });
-            }
-        );
-
-    });
-    </script>
-    <style>
-    .item {
-        background: none repeat scroll 0 0 #D8D5D2;
-        border-radius: 5px 5px 5px 5px;
-        width: 240px;
-        float: left;
-        padding: 5px;
-        margin: 5px;
-    }
-    
-    .imgcenter {
-        text-align: center;
-    }
-    
-    .clearbox {
-        clear: both;
-    }
-    
-    #container {
-        margin: 0 auto;
-        border-radius: 5px;
-        clear: both;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
-    
-    #infscr-loading {
-        text-align: center;
-        z-index: 100;
-        position: fixed;
-        margin-left: 40%;
-        bottom: 40px;
-        width: 200px;
-        padding: 10px;
-        background: #000;
-        opacity: 0.8;
-        color: #FFF;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    
-    .title {
-        font-size: 9pt;
-    }
-    
-    .owner {
-        font-size: 9pt;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/test.css">
 </head>
 
 <body>
-    <div id="container" class="masonry" style="position: relative; height: 5725px; width: 1040px;">
-        <div class="item masonry-brick" style="position: absolute; top: 0px; left: 0px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19258210006_d23abc284f_m.jpg">
-                <p class="title">Rainbow</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/74946454@N04/" target="_blank">74946454@N04</a></p>
+    <div id='container'>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/400/19363229652_80b3ffd73b_m.jpg' />
+                <p class='title'>journal0001</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/129618159@N04/' target='_blank'>129618159@N04</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 0px; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19278067012_0f6cdb6035_m.jpg">
-                <p class="title">hope and change</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/74104660@N00/" target="_blank">74104660@N00</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/309/19363192802_008a135acc_m.jpg' />
+                <p class='title'>#marieweimer #marieweimerart #denverartist #texture #dipndots #ice #icecream #rainbow #rainbowsherbert #repetition #collage #melting #instagramisforfood #visualartist</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/131843724@N06/' target='_blank'>131843724@N06</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 0px; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18663503183_6d80f37f65_m.jpg">
-                <p class="title">rainbow house</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/74104660@N00/" target="_blank">74104660@N00</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/362/19181577090_536c5aca5b_m.jpg' />
+                <p class='title'>Feeding time on the ranch</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/130562900@N07/' target='_blank'>130562900@N07</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 0px; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19096480638_d2de059689_m.jpg">
-                <p class="title">party time!</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/74104660@N00/" target="_blank">74104660@N00</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/327/18748410363_67114d2b72_m.jpg' />
+                <p class='title'>Rainbow</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/130270437@N08/' target='_blank'>130270437@N08</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 242px; left: 0px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19258065196_80cf9721d3_m.jpg">
-                <p class="title">DJI Inspire 1 Rainbow Flight 6/29/2015 #lasvegas #702 #sincity #djiinspire #djiinspire1 #dji #dronevideos #quadcopter #djiglobal #gopro #becauseican #cityoflights #djicreator #videooftheday #picoftheday #followme #follow #likes #bestoftheday #photooftheda</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/130143241@N07/" target="_blank">130143241@N07</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/356/19181509198_2f66f17feb_m.jpg' />
+                <p class='title'>Somewhere Under the Rainbow...</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/39210310@N02/' target='_blank'>39210310@N02</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 242px; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18663475503_13dabb4d27_m.jpg">
-                <p class="title">GT50 Confetti Rainbow Zoom Quad Roller Derby Speed Skates</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/129209423@N03/" target="_blank">129209423@N03</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/546/19181364470_698d024ef1_m.jpg' />
+                <p class='title'>Another Colorado storm - if you look close you can see two rainbows. #Godspromiseisforever #backontheroad #headinghometoBrush #whereitallbegan</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/21242739@N08/' target='_blank'>21242739@N08</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 242px; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18661196254_c5284dcaae_m.jpg">
-                <p class="title">Mosaic for the #lovewinsminiswap I love saturated, bright colors. Wonky, whimsical designs, cute novelty fabrics, bold graphic designs. There's more on my rainbow quilts Pinterest board.</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/54428943@N00/" target="_blank">54428943@N00</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/317/19362798492_8d7600b433_m.jpg' />
+                <p class='title'>Rainbow with Stroud</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/124277213@N08/' target='_blank'>124277213@N08</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 246px; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18661080194_da72dcc54d_m.jpg">
-                <p class="title">🌈🌈🌈 #kittysonfleek #hamptatlantavegas #worldtour</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/72346081@N05/" target="_blank">72346081@N05</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/298/19342829196_e181e3b6ae_m.jpg' />
+                <p class='title'>Rainbow with Alex!</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/124277213@N08/' target='_blank'>124277213@N08</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 576px; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19095929348_71663efd54_m.jpg">
-                <p class="title">#lasvegas #thunderstorm #rain #clouds #rainbow</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/94146776@N07/" target="_blank">94146776@N07</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/490/19362781812_10601e4e51_m.jpg' />
+                <p class='title'>After the Storm</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/37372968@N06/' target='_blank'>37372968@N06</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 588px; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19095901618_205b406001_m.jpg">
-                <p class="title">Dee I Love Le Bun</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/67728736@N03/" target="_blank">67728736@N03</a></p>
+        <div class='item'>
+            <div class='imgcenter'><img src='http://farm1.static.flickr.com/389/18746300344_3a58821382_m.jpg' />
+                <p class='title'>rainbowSwirlSpots_3iter</p>
+                <p class='owner'>owner: <a href='http://www.flickr.com/photos/77071923@N00/' target='_blank'>77071923@N00</a></p>
             </div>
         </div>
-        <div class="item masonry-brick" style="position: absolute; top: 612px; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18662889803_0a7942de0e_m.jpg">
-                <p class="title">Rainbow Trout</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/93800336@N03/" target="_blank">93800336@N03</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 648px; left: 0px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19287357541_d5881bb225_m.jpg">
-                <p class="title">Rainbow Trout</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/93800336@N03/" target="_blank">93800336@N03</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 874px; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19097368529_1888ff094b_m.jpg">
-                <p class="title">The U.S. side of Niagara Falls is illuminated with the rainbow! 🌈😄 #niagarafalls #happymonday #lovewins</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/34113563@N00/" target="_blank">34113563@N00</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 910px; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19287055451_9bf849e043_m.jpg">
-                <p class="title">Landmanalaugar rainbow</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/22023231@N05/" target="_blank">22023231@N05</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 910px; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18660779514_dbb3a2116c_m.jpg">
-                <p class="title">Waiting out the hail storm</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/12150532@N04/" target="_blank">12150532@N04</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 1150px; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19095513030_41596ba957_m.jpg">
-                <p class="title">😁😁👬👭👨‍👨‍👦👨‍👨‍👧👨‍❤️‍👨🌈🌈 #equal</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/72346081@N05/" target="_blank">72346081@N05</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 1152px; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18660297964_7fec8dc384_m.jpg">
-                <p class="title">Landmanalugar rainbow</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/22023231@N05/" target="_blank">22023231@N05</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 1228px; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19095764670_e9aea1cf8b_m.jpg">
-                <p class="title">Rainbow Reflection</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/9650853@N05/" target="_blank">9650853@N05</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="position: absolute; top: 1308px; left: 0px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19095737928_0a14577c73_m.jpg">
-                <p class="title">Rainbow over the Stein (June 28, 2015)</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/109630725@N07/" target="_blank">109630725@N07</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="opacity: 1; top: 1394px; position: absolute; left: 260px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19257031576_65dac74a70_m.jpg">
-                <p class="title">On Bikes</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/20605599@N00/" target="_blank">20605599@N00</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="opacity: 1; top: 1470px; position: absolute; left: 780px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/18660461474_1d9263e01e_m.jpg">
-                <p class="title">Balling up my first Cosmic Rainbow skein for a Quaker Stretcher Shawl. We are going camping tomorrow and this will be one of my designated projects. #ontheround #handspun #yarn #cosmicrainbow #knitting #igknitters #igspinners #rainbowalong #quakerstretche</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/128809415@N06/" target="_blank">128809415@N06</a></p>
-            </div>
-        </div>
-        <div class="item masonry-brick" style="opacity: 1; top: 1480px; position: absolute; left: 520px;">
-            <div class="imgcenter"><img src="./flickr infinite masonry test_files/19286839861_ffb48c35cd_m.jpg">
-                <p class="title">CitiBike Gay Pride</p>
-                <p class="owner">owner: <a href="http://www.flickr.com/photos/75741777@N08/" target="_blank">75741777@N08</a></p>
-            </div>
-        </div>
-        
     </div>
-    <div class="nav clearbox" style="display: none;">
-        <a href="http://sample.diary.tw/flickrsearch/index.php?p=2&q=rainbow">.</a>
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-438841-7']);
-        _gaq.push(['_trackPageview']);
+    
+    <div class='nav clearbox'>
+        <a href='/flickrsearch/index.php?p=2&q=rainbow'>.</a>
+        </nav>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+        <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
+        <script>
+        $(function() {
 
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+            var $container = $('#container');
+
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    itemSelector: '.item',
+                    columnWidth: 20,
+                    isAnimated: true,
+                    isFitWidth: true
+                });
+            });
+
+            $container.infinitescroll({
+                    navSelector: 'div.nav', // selector for the paged navigation 
+                    nextSelector: 'div.nav a', // selector for the NEXT link (to page 2)
+                    itemSelector: '.item', // selector for all items you'll retrieve
+                    loading: {
+                        img: '6RMhx.gif',
+                        msgText: 'loading....',
+                        finishedMsg: 'no more...'
+                    }
+
+                },
+                // trigger Masonry as a callback
+                function(newElements) {
+                    // hide new items while they are loading
+                    var $newElems = $(newElements).css({
+                        opacity: 0
+                    });
+                    // ensure that images load before adding to masonry layout
+                    $newElems.imagesLoaded(function() {
+                        // show elems now they're ready
+                        $newElems.animate({
+                            opacity: 1
+                        });
+                        $container.masonry('appended', $newElems, true);
+                    });
+                }
+            );
+
+        });
         </script>
-    </div>
 </body>
 
 </html>
