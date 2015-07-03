@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <link rel="stylesheet" type="text/css" href="css/masonry.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -58,7 +58,9 @@
                 </div> -->
                 <div class="col-xs-1 col-sm-5 col-md-8">
                     <div class="input-group search">
+                        <!-- 搜尋框 -->
                         <input type="text" class="form-control " placeholder="Search iApp...">
+                        <!-- 下拉按鈕 -->
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
@@ -75,17 +77,21 @@
                     </div>
                     <!-- /input-group -->
                 </div>
-                <div class="col-sm-2 col-md-1 hide">
+                <!-- 登入／註冊 -->
+                <div class="col-sm-2 col-md-1 ">
                     <a href="http://www.iapp-media.com/basic/Login.aspx"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
                     </button></a>
                 </div>
-                <div class="col-sm-2 col-md-1 icon-box">
-                    <a href=""><img class="usericon" src="img/photoicon.png"><p>Digital+</p>
+                <!-- 會員登入後 -->
+                <div class="col-sm-2 col-md-1 icon-box hide">
+                    <a href=""><img class="usericon" src="img/photoicon.png">
+                    <div class="username-icon"><h4 style="color: #fff">Digital+</h4></div>
                     </a>
                 </div>
                 <div class="col-sm-2 col-md-1 se">
                     <div class="separate"></div>
                 </div>
+                <!-- 微創作 -->
                 <div class="col-sm-1 col-md-1">
                     <a href="http://www.iapp-media.com/basic/Default.aspx"><button type="button" class="btn btn-default navbar-btn2" ><h4 class="title">微創作
                     <span class="glyphicon glyphicon glyphicon glyphicon-hand-right" aria-hidden="true"></span>
@@ -103,81 +109,84 @@
         </div>
     </div> -->
     <a href="#"><img class="back-top" src="img/top.png"></img></a>
+    <!-- 瀑布流 -->
     <div id='container'>
+        <div class="item style">
+        </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/digital.png' height="350" width="210"/>
                 <p class='iapp-name'>Digital+</p>
-                <p class='owner'>describe<a href='http://www.iapp-media.net/digitalplus/' target='_blank'>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/digitalplus/' target='_blank'>
                 <br/>jeff</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/mommy.png' height="350" width="210"/>
                 <p class='iapp-name'>Mommy</p>
-                <p class='owner'>describe<a href='http://www.iapp-media.net/mommy/' target='_blank'>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/mommy/' target='_blank'>
                 <br/>Digital+</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/memory.png' height="350" width="210"/>
                 <p class='iapp-name'>Memory</p>
-                <p class='owner'>describe<a href='http://www.iapp-media.net/memory/' target='_blank'>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/memory/' target='_blank'>
                 <br/>TK</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/html5.png' height="350" width="210"/>
                 <p class='iapp-name'>Html5</p>
-                <p class='owner'>describe<a href='http://www.iapp-media.net/html5/' target='_blank'>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/html5/' target='_blank'>
                 <br/>Digital+</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/miniApp.jpg' height="960" width="640"/>
                 <p class='iapp-name'>iApp</p>
-                <p class='owner'>describe<a href='http://www.iapp-media.net/miniApp/' target='_blank'>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/miniApp/' target='_blank'>
                 <br/>Digital+</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture1.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture2.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture3.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture4.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture5.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>
         <div class='item'>
             <div class='imgcenter'><img class="item-pic" src='img/picture6.jpg'/>
                 <p class='iapp-name'>iapp name</p>
-                <p class='owner'>describe<a href='index.html' target='_blank'>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
                 <br/>author name</a></p>
             </div>
         </div>

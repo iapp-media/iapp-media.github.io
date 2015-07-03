@@ -8,6 +8,7 @@
 	position: fixed;
 	bottom: 2%;
 	right: 2%;
+	z-index: 999;
 }
 .tem{
   		display: none;
@@ -78,11 +79,21 @@
 	border:1px gray solid;
 	border-radius:8px;
 }
+.icon-box:hover{
+	background-color: #ffbb66;
+}
 .usericon{
 	width: auto;height: 35px;
 	position: absolute;
-	top: 0%;
+	top: -2%;
 	left: 0%;
+	border:1px gray solid;
+	border-radius:8px;
+}
+.username-icon{
+	position: absolute;
+	top: -5%;
+	left: 35%;
 }
 .title{
 	font-weight: bold;
