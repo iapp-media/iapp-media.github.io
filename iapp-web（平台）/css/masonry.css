@@ -22,21 +22,21 @@
     }
     .item {
         background: #ff9933;
-      border-radius: 5px;
-        width: 203px;
+/*        border-radius: 5px;
+*/        width: 203px;
         float: left;
         padding: 0px;
 /*        border: 1px solid gray;
-*/        margin: 5px;
+*/      margin: 5px;
     }
     .item-pic{
         position: relative;
         top: 1px;
         max-width: 200px;
-        max-height: 320px;
+        max-height: 350px;
         background-color: #fff;
-        border-radius: 5px;
-/*        border: 1px solid gray;
+/*        border-radius: 5px;
+*//*        border: 1px solid gray;
 */    }
     #container {
         margin-top: 8%;
@@ -59,19 +59,43 @@
         width: 200px;
         height: 50px;
     }
-    @media only screen and (max-width:480px){
+    @media only screen and (min-width:481px) and (max-width:768px) {
         #container {
-        margin-top: 20%;
+        margin-top: 10%;
         margin-left: 3%;
         }
         .item {
-        width: 163px;
+        width: 203px;
         float: left;
         padding: 0px;
+        margin: 1%;
         }
         .item-pic{
-        max-width: 160px;
-        max-height: 256px;
+        max-width: 200px;
+        max-height: 336px;
+        position: relative;
+        }
+        .iapp-name{
+        }
+        .describe {
+            font-size: 9pt;
+        }
+    }
+    @media only screen and (max-width:480px){
+        #container {
+        margin-top: 25%;
+        margin-left: 6%;
+        }
+        .item {
+        width: 133px;
+        float: left;
+        padding: 0px;
+        margin: 1%;
+        }
+        .item-pic{
+        max-width: 130px;
+        max-height: 236px;
+        position: relative;
         }
         .iapp-name{
         }
