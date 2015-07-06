@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>iApp Platform</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/masonry.css">
+    <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
+    <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-xs-4 col-sm-2 col-md-1 navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img class="iapplogo" src="img/iapplogo.png">
+                    </a>
+                </div>
+                <!-- <div class="col-xs-4 search-sm">
+                        <button type="button" class="btn btn-default dropdown-toggle col-xs-12 search2" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true">
+                        </button>
+                </div> -->
+                <div class="col-xs-3 tem"></div>
+                
+                <div class="col-xs-1 search-sm">
+                    <div class="input-group">
+                        <div class="input-group-btn ">
+                            <button type="button" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 login-sm">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xs-3 login-sm">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </div> -->
+                <div class="col-xs-1 col-sm-5 col-md-8">
+                    <div class="input-group search">
+                        <!-- 搜尋框 -->
+                        <input type="text" class="form-control " placeholder="Search iApp...">
+                        <!-- 下拉按鈕 -->
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">basic</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">旅遊風</a></li>
+                                <li><a href="#">生活風</a></li>
+                                <li><a href="#">節慶風</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <!-- 登入／註冊 -->
+                <div class="col-sm-2 col-md-1 ">
+                    <a href="http://www.iapp-media.com/basic/Login.aspx"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
+                    </button></a>
+                </div>
+                <!-- 會員登入後 -->
+                <div class="col-sm-2 col-md-1 icon-box hide">
+                    <a href=""><img class="usericon" src="img/photoicon.png">
+                    <div class="username-icon"><h4 style="color: #fff">Digital+</h4></div>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-1 se">
+                    <div class="separate"></div>
+                </div>
+                <!-- 微創作 -->
+                <div class="col-sm-1 col-md-1">
+                    <a href="http://www.iapp-media.com/basic/Default.aspx"><button type="button" class="btn btn-default navbar-btn2" ><h4 class="title">微創作
+                    <span class="glyphicon glyphicon glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                    </button></a>
+                </div>
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+    </nav>
+    <!-- <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div> -->
+    <a href="#"><img class="back-top" src="img/top.png"></img></a>
+    <!-- 瀑布流 -->
+    <div id='container'>
+        <div class="item style">
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/digital.png' height="350" width="210"/>
+                <p class='iapp-name'>Digital+</p>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/digitalplus/' target='_blank'>
+                <br/>jeff</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/mommy.png' height="350" width="210"/>
+                <p class='iapp-name'>Mommy</p>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/mommy/' target='_blank'>
+                <br/>Digital+</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/memory.png' height="350" width="210"/>
+                <p class='iapp-name'>Memory</p>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/memory/' target='_blank'>
+                <br/>TK</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/html5.png' height="350" width="210"/>
+                <p class='iapp-name'>Html5</p>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/html5/' target='_blank'>
+                <br/>Digital+</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/miniApp.jpg' height="960" width="640"/>
+                <p class='iapp-name'>iApp</p>
+                <p class='describe'>describe<a href='http://www.iapp-media.net/miniApp/' target='_blank'>
+                <br/>Digital+</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture1.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture2.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture3.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture4.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture5.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'><img class="item-pic" src='img/picture6.jpg'/>
+                <p class='iapp-name'>iapp name</p>
+                <p class='describe'>describe<a href='index.html' target='_blank'>
+                <br/>author name</a></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class='nav clearbox'>
+        <a href='http://iapp-media.github.io/iapp-web%EF%BC%88%E5%B9%B3%E5%8F%B0%EF%BC%89/portal-test.html'></a>
+        
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script> -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
+    
+    <script>
+        $(function() {
+
+            var $container = $('#container');
+
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    itemSelector: '.item',
+                    columnWidth: 20,
+                    isAnimated: true,
+                    isFitWidth: true
+                });
+            });
+            // 在背景取出下一頁的內容, 並將指定的 selector 資料 append 到目前的網頁上
+            $container.infinitescroll({
+                    navSelector: 'div.nav', // selector for the paged navigation 
+                    nextSelector: 'div.nav a', // selector for the NEXT link (to page 2)
+                    itemSelector: '.item', // selector for all items you'll retrieve
+                    loading: {
+                        img: 'img/6RMhx.gif',
+                        msgText: 'loading....',
+                        finishedMsg: 'no more...'
+                    }
+
+                },
+                // trigger Masonry as a callback
+                function(newElements) {
+                    // hide new items while they are loading
+                    var $newElems = $(newElements).css({
+                        opacity: 0
+                    });
+                    // ensure that images load before adding to masonry layout
+                    $newElems.imagesLoaded(function() {
+                        // show elems now they're ready
+                        $newElems.animate({
+                            opacity: 1
+                        });
+                        $container.masonry('appended', $newElems, true);
+                    });
+                }
+            );
+
+        });
+        </script>
+        
+</body>
+
+</html>

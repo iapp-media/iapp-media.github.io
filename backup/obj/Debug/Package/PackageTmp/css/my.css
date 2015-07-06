@@ -1,0 +1,91 @@
+﻿body {
+    font-family: Verdana,微軟正黑體;
+    margin: 0;
+    min-height: 100%;
+    _height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+html {
+    min-height: 100%;
+    _height: 100%;
+}
+
+#UserInfo {
+    position: absolute;
+    left: 0;
+    width: 95%;
+    text-align: right;
+    padding: 10px;
+}
+
+#tab ul {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    list-style:none;
+}
+
+#tab li {
+    float: left;
+    margin: 5px;
+    border: solid 1px #ddd;
+    padding: 2px 2px 50px 2px;
+}
+
+
+#Leftdv {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+#Middv {
+    width: 300px;
+    height: 488px;
+    background-color: green;
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+#rightdv {
+    width: 480px;
+    height: 550px;
+    background-color: blue;
+    float: left;
+    margin-left: 10px;
+    margin-top: 40px;
+    padding: 10px;
+    /*display:none;*/
+}
+
+#funcdiv {
+    width: 50px;
+    height: 550px;
+    float: left;
+    margin-top: 40px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#btnMore {
+    border: solid 1px #999;
+    margin: 0 0 300px 0;
+}
+
+#btnLast {
+    border: solid 1px #999;
+    margin: 0 0 10px 0;
+}
+
+#btnNext {
+    border: solid 1px #999;
+}
+
+.nosee {
+    display: none;
+    visibility: hidden;
+}
+
