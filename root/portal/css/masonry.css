@@ -13,6 +13,11 @@
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
+    .style{
+        background-color: #fff;
+        width: 210px;
+        height: 50px;
+    }
     .imgcenter {
         text-align: center;
     }
@@ -21,25 +26,25 @@
         clear: both;
     }
     .item {
-        background: #ff9933;
-/*        border-radius: 5px;
-*/        width: 203px;
+        background: #fff;
+        border-radius: 5px;
+        width: 210px;
         float: left;
-        padding: 0px;
-/*        border: 1px solid gray;
-*/      margin: 5px;
+        padding-bottom: 5px;
+        border: 1px solid #ddd;
+        margin: 5px;
     }
     .item-pic{
         position: relative;
-        top: 1px;
-        max-width: 200px;
-        max-height: 350px;
+        width: 208px;
+        height: auto;
+        border-bottom: 1px solid #ddd;
         background-color: #fff;
-/*        border-radius: 5px;
-*//*        border: 1px solid gray;
-*/    }
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+    }
     #container {
-        margin-top: 8%;
+        margin-top: 10%;
         margin-left: 8%;
         border-radius: 5px;
         clear: both;
@@ -47,21 +52,36 @@
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
-    .iapp-name{
-/*        border: 1px solid gray;
-*/    }
     .describe {
-        font-size: 9pt;
-/*        border: 1px solid gray;
-*/    }
-    .style{
-        background-color: #ddd;
-        width: 200px;
-        height: 50px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        padding-left:10px; 
+        padding-bottom: 10px; 
     }
+    .circle{
+        position: relative;
+        left: -2%;
+        width:35px;height:35px;
+        border-radius:99em;
+        border: 1px solid #ddd;
+    }
+    .iapp-name{
+        display: inline;
+        padding-left:0px;
+        font-size: 15px;
+        color: #323232;
+    }
+    .author{
+        display: inline;
+        text-align: left;
+        padding-left:10px;
+        color: #aaa;
+
+    }
+    
     @media only screen and (min-width:481px) and (max-width:768px) {
         #container {
-        margin-top: 10%;
+        margin-top: 15%;
         margin-left: 3%;
         }
         .item {

@@ -18,8 +18,8 @@ body {
     width: 100%;
     height: 680px;
     float: left;
-    background-color: #FFFFFF;
-}
+/*    background-color: #FFFFFF;
+*/}
 
 .delete {
     position: absolute;
@@ -232,15 +232,6 @@ body {
 .list {
     position: absolute;
     top: 15%;
-    right: 0%;
-    width: 51px;
-    height: 59px;
-    z-index: 3;
-}
-
-.setting {
-    position: absolute;
-    top: 25%;
     right: 0%;
     width: 51px;
     height: 59px;

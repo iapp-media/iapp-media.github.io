@@ -1,3 +1,7 @@
+body{
+	background-color: #f5f5f5;
+	font-size: small;
+}
 .navbar{
 	min-height: 80px;
 	background-color: white;
@@ -14,7 +18,7 @@
   		display: none;
   	}
 .iapplogo{
-	width: 90px;
+	width: 92px;
 	height: auto;
 }
 .navbar-brand {
@@ -52,6 +56,13 @@
 	background-color: #ffbb66;
 }
 .dropdown-menu-right{
+	display: none;
+}
+.input-group-btn:hover .dropdown-menu-right{
+	display: block;
+}
+.dropdown-menu-right{
+
 	border: #ff9933 1px solid;
 }
 
@@ -115,8 +126,87 @@
     top: 18px;
     left: 100%;
 }
+.jumbotron {
+    padding-top: 90px;
+    background-color: #ff9933;
+    height: 280px;
+}
+.jumbotron p{
+	color: #fff;
+	margin-bottom: 0px;
+    font-size: 1.3em;
+    font-weight: 200;
+}
 
-
+.user-icon{
+	position: absolute;
+    margin-top: 30px;
+    left: 45%;
+}
+.glyphicon-cog{
+	color: #fff;
+	font-size: 25px;
+	position: relative;
+    top: 100%;
+    left: 96%;
+}
+.option-user{
+	/*background-color: black;
+	opacity: 0.3;
+*/	width: 40%;
+	position: absolute;
+    margin-top: 130px;
+    left: 29%;
+}
+.separate-user1 {
+    background-color: #fff;
+    width: 2px;
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    left: 33%;
+}
+.separate-user2 {
+     background-color: #fff;
+    width: 2px;
+    height: 50px;
+    position: relative;
+    top: 0%;
+    left: 66%;
+}
+.my-iapp{
+	position: absolute;
+    top: 30%;
+    left: 12%;
+}
+.my-iapp:hover{
+	border-bottom: 2px #fff solid;
+}
+.like-iapp{
+	position: absolute;
+    top: 30%;
+    left:41%;
+}
+.like-iapp:hover{
+	border-bottom: 2px #fff solid;
+}
+.collect-iapp{
+	position: absolute;
+    top: 30%;
+    left: 74%;
+}
+.collect-iapp:hover{
+	border-bottom: 2px #fff solid;
+}
+.circle-login{
+        display: none;
+        position: relative;
+        margin-top: 7px;
+        left: 30%;
+        width:40px;height:40px;
+        border-radius:99em;
+        border: 3px solid #ff9933;
+    }
 @media only screen and (min-width:481px) and (max-width:768px) {
    
 	.tem{
@@ -150,6 +240,9 @@
 	}
 	.search-sm{
 		display: inline;
+	}
+	.icon-box{
+		display: none;
 	}
 	.glyphicon-search{
 		margin-top: 8px;
@@ -241,6 +334,9 @@
 	.search-sm{
 		display: inline;
 	}
+	.icon-box{
+		display: none;
+	}
 	.glyphicon-search{
 		margin-top: 8px;
 		color: #ff9933;
@@ -283,6 +379,9 @@
 	.dropdown-menu-right{
 		border: #ff9933 1px solid;
 		right: 20px;
+	}
+	.input-group-btn:hover .dropdown-menu-right{
+	display: block;
 	}
 	.input-group .form-control {
 		display: none;
