@@ -6,17 +6,7 @@ body{
 .hide{ display:none;}
 .show{ display:block;}
 
-.top{
-	position: fixed;
-	top: 0%;left: 0%;
-	width: 100%;height: 10%;
-	background: -webkit-linear-gradient(#ff9933, #f7c92b);
-	background: -o-linear-gradient(#ff9933, #f7c92b);
-	background: linear-gradient(#ff9933, #f7c92b);
-	/*border-top-right-radius: 20px 20px;
-	border-top-left-radius: 20px 20px;*/
-	box-shadow: gray 0px 5px 15px 0px;	
-}
+
 .content{
 	position: fixed;
 	top: 10%;left: 0%;
@@ -27,17 +17,7 @@ body{
 	top: 10%;left: 0%;
 	width: 100%;height: 80%;
 }
-.bottom{
-	position: fixed;
-	top: 90%;left: 0%;
-	width: 100%;height: 10%;
-	background: -webkit-linear-gradient(#f7c92b, #ff9933);
-	background: -o-linear-gradient(#f7c92b, #ff9933);
-	background: linear-gradient(#f7c92b, #ff9933);
-	/*border-bottom-right-radius: 20px 20px;
-	border-bottom-left-radius: 20px 20px;*/
-	box-shadow: gray 0px -2px 15px 0px;	
-}
+
 .content .middle-bar{
 	position: absolute;
 	top: 5%;left: 50%;
@@ -48,9 +28,8 @@ body{
 .bar{
 	position: absolute;
 	top: 100%;left: 0%;
-	width: 100%;height: 3px;
-	background-color: #7C7C7C;
-	opacity: 0.6;
+	width: 100%;height: 2px;
+	background-color: #ffbb66;
 }
 .bar2{
 	position: absolute;
