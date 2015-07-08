@@ -17,7 +17,7 @@
 		}
 		.store{
 		    position: absolute;
-		    top: 72%;left: 37%;
+		    top: 88%;left: 37%;
 		    width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
@@ -27,7 +27,7 @@
 		}
 		.cancel{
 		    position: absolute;
-		    top: 72%;left: 52%;
+		    top: 88%;left: 52%;
 		    width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
@@ -37,7 +37,7 @@
 		}
 		.file{
 		    display: block;
-		    width: 80px;height: 26px;
+		    width: 85px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
 		}
@@ -45,6 +45,14 @@
 		    background: #ffbb66;
 		}
 		a {text-decoration:none; color:blue;}  
+		
+		.input{
+			display: inline;
+		}
+		.logo-file{
+			position: absolute;
+			top: 0%;left: 10%;
+		}
 	</style>
 </head>
 <body>
@@ -54,11 +62,22 @@
 			<div class="bar3"></div>
 		</div>
 		<!-- 基本資料區域 -->
-		<div class="profile" style="background-color: gray;position: absolute; top: 20%; left: 10%; width: 80%; height: 50%;opacity: 1;">
-		<div><img style="padding-bottom: 5px" src="img/headimg.png">
-		<a href="#"><div class="file"><p style="color: #ff9933;font-size: 16px;position:relative;top: -40%;left: 10%;">選擇檔案</p></div></a>
+		<div class="profile" style="position: absolute; top: 20%; left: 10%; width: 80%; height: 65%;">
+			<p style="display: inline;margin-left: 250px;">姓名</p><input style="input" type="text"><br/>
+			<p style="display: inline;margin-left: 250px;">電話</p><input type="text"><br/>
+			<p style="display: inline;margin-left: 250px;">E-mail</p><input type="text"><br/>
+			<p style="display: inline;margin-left: 250px;">所在地</p><input type="text"><br/>
+
+			<div class="bar3"></div>
+
+			<div class="logo-file"><img style="padding-bottom: 5px" src="img/headimg.png">
+			<a href="#"><div class="file"><p style="color: #ff9933;font-size: 16px;position:relative;top: -40%;left: 10%;">選擇檔案</p></div></a>
+
+			<!-- 更改新密碼
+			再次確認 -->
+			
 		</div>
-			<p>基本資料區域</p>
+
 		</div>
 		<a href="#"><div class="store"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">儲存</p></div></a>
         <a href="#"><div class="cancel"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">取消</p></div></a>
