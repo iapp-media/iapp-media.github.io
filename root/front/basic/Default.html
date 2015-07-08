@@ -37,7 +37,7 @@
                 <a href="logout.aspx">登出</a>
             </div>
              -->
-
+             <a href="#"><img style="position:fixed;top: 10px;left: 50px;background: none;z-index: 99;" src="img/iapplogo.png"></a>
             <!-- 左側區塊 -->
             <div id='pageNav'>
                 <asp:UpdatePanel ID="up2" runat="server" UpdateMode="Conditional">
@@ -74,17 +74,19 @@
                         </div>
                     </div>
                     <!-- 分享/預覽 -->
-                    <a href="#" id="preview"><img class="preview" src="img/preview.png" height="33" width="89" onMouseOut="this.src='img/preview.png'" onMouseOver="this.src='img/preview2.png'" /></a>
+                    <a href="#" id="preview"><div class="preview"><img class="preview1" src="img/preview.png"/>
+                    <img class="preview2" src="img/preview2.png"/></div></a>
                     <!-- 返回修改-最後完成頁時出現 -->
-                    <a href="#" id="return"><div class="return hide"><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></div></a>
+                    <!-- <a href="#" id="return"><div class="return hide"><img class="preview" src="img/return-01.png" height="43" width="118" onMouseOut="this.src='img/return-01.png'" onMouseOver="this.src='img/return-02.png'" /></div></a> -->
                     <!-- 上一頁＆下一頁 -->
-                    <a href="#" onclick="pagechange(-1)"><img class="up" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></a>
+                    <a href="#" onclick="pagechange(-1)"><div class="up"><img class="up-img" src="img/up.png" onMouseOut="this.src='img/up.png'" onMouseOver="this.src='img/up2.png'" /></div></a>
                     <a href="#" onclick="pagechange(1)"><img class="down" src="img/down.png" onMouseOut="this.src='img/down.png'" onMouseOver="this.src='img/down2.png'" /></a>              
                 </div>
                 <!-- 增加 -->
                 <a href="#" id="pageShow"><img class="add" src="img/add.png" height="57" width="40" onMouseOut="this.src='img/add.png'" onMouseOver="this.src='img/add02.png'" /></a>
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select hide">
+                <a href="#" id="close-select" ><img style="position:absolute;bottom:20px;right: 10px;width:20px;z-index: 3;" src="img/cancel.png"></a>
                     <div class="pic1">
                         <div style="width: 85px;height: 125px;border-style: solid; border-width: 1px; border-color: #000000;}">
                             <asp:ImageButton ID="ImageButton1" CssClass="picture" runat="server" ImageUrl="~/img/basic/p01-0s.jpg" CommandArgument="1" />
@@ -124,11 +126,12 @@
                 </div>
                 <!-- iframe編輯區域 -->
                 <div class="edit hide">
+                   <a href="#" id="close" ><img style="position:absolute;bottom:20px;right: 10px;width:20px;z-index: 3;" src="img/cancel.png"></a>
                   <a href="#" id="btpic"><img class="button-pic" src="img/button-pic.png">
                   <a href="#" id="btword"><img class="button-wod" src="img/button-word.png"></a>
                   <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
                   <!-- 圖片編輯iframe -->
-                    <iframe id="iframe" class="iframe-ed1" src="Pages/seeEdit.aspx">
+                    <iframe id="iframe " class="iframe-ed1" src="Pages/seeEdit.aspx">
                     </iframe>
                   <!-- 文字編輯iframe -->
                   <div class="edit2 hide">
@@ -153,7 +156,7 @@
                         <a href="#"><div class="create"><p style="color: #ff9933;font-size: 22px;position:absolute;top: -50%;left: 20%;">微創作</p></div></a>
                         <a href="#"><div class="share"><p style="color: #ff9933;font-size: 22px;position:absolute;top: -50%;left: 20%;">熱分享</p></div></a>
                     </div>
-                    <div class="bottom"><a href="#"><img class="cancel" src="img/cancel.png"></a></div>
+                    <div class="bottom"><a href="#" id="return"><img class="cancel" src="img/cancel.png"></a></div>
                 </div>
                 <!-- logo＆company tiltle -->
                  <img class="logo" src="img/bgimg.png" />
@@ -218,8 +221,8 @@
         //Examples of how to assign the Colorbox event to elements
         $(".iframe-info").colorbox({
             iframe: true,
-            width: "55%",
-            height: "85%"
+            width: "700px",
+            height: "600px"
         });
         $(".callbacks").colorbox({
             onOpen: function() {
@@ -239,7 +242,7 @@
             }
         });
     });
-</script>
+    </script>
 
 </body>
 <script>
@@ -279,6 +282,7 @@ $(document).ready(function() {
         $(".edit").hide();
         $(".select").hide();
         $(".logo").hide();
+        $(".preview").hide();
         $("#pageNav").hide();
         $(".return").show();
         $(".final").show();
@@ -293,8 +297,18 @@ $(document).ready(function() {
         $(".logo").show();
         $(".return").hide();
         $(".final").hide();
+        $(".preview").show();
     });
-
+    $("#close").click(function() {
+        $(".edit").hide();
+        $(".select").hide();
+        $(".logo").hide();
+        $(".return").hide();
+        $(".final").hide();
+    });
+    $("#close-select").click(function() {
+        $(".select").hide();
+    });
 });
 
 function pagechange(a) {
@@ -336,7 +350,7 @@ $(document).ready(function() {
     });
     $("#btpic").click(function() {
         $(".edit2").hide();
-        $(".edit1").show();
+        $(".edit").show();
     });
     // $("#preview").click(function() {
     //     $(".edit2").hide();

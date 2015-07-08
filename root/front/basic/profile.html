@@ -17,7 +17,7 @@
 		}
 		.store{
 		    position: absolute;
-		    top: 72%;left: 25%;
+		    top: 72%;left: 37%;
 		    width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
@@ -27,7 +27,7 @@
 		}
 		.cancel{
 		    position: absolute;
-		    top: 72%;left: 55%;
+		    top: 72%;left: 52%;
 		    width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
@@ -35,6 +35,16 @@
 		.cancel:hover{
 		    background: #ffbb66;
 		}
+		.file{
+		    display: block;
+		    width: 80px;height: 26px;
+		    border: 1px #ff9933 solid; 
+		    border-radius: 5px;
+		}
+		.file:hover{
+		    background: #ffbb66;
+		}
+		a {text-decoration:none; color:blue;}  
 	</style>
 </head>
 <body>
@@ -44,7 +54,10 @@
 			<div class="bar3"></div>
 		</div>
 		<!-- 基本資料區域 -->
-		<div class="profile" style="background-color: gray;position: absolute; top: 20%; left: 10%; width: 80%; height: 50%;opacity: 0.5;">
+		<div class="profile" style="background-color: gray;position: absolute; top: 20%; left: 10%; width: 80%; height: 50%;opacity: 1;">
+		<div><img style="padding-bottom: 5px" src="img/headimg.png">
+		<a href="#"><div class="file"><p style="color: #ff9933;font-size: 16px;position:relative;top: -40%;left: 10%;">選擇檔案</p></div></a>
+		</div>
 			<p>基本資料區域</p>
 		</div>
 		<a href="#"><div class="store"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">儲存</p></div></a>

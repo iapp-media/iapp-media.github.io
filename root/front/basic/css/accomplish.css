@@ -95,13 +95,16 @@ body {
     opacity: 0.8;
     z-index: 3;
 }
-
-.up {
+.up .up-img{
+    display: 
+}
+.up-img {
     position: absolute;
     top: 50%;
     left: -12.5%;
     width: 40px;
     height: 100px;
+    background-image: url(img/up.png);
 }
 
 .down {
@@ -120,8 +123,26 @@ body {
     height: 57px;
     z-index: 1;
 }
-
-.preview {
+.preview .preview1{
+    display:inline; 
+}
+.preview:hover .preview1{
+    display:none; 
+}
+.preview .preview2{
+    display:none; 
+}
+.preview:hover .preview2{
+    display:inline; 
+}
+.preview1 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    width: 89px;
+    height: 33px;
+}
+.preview2 {
     position: absolute;
     top: 100%;
     left: 35%;
@@ -149,7 +170,7 @@ body {
 .select {
     position: absolute;
     left: 555px;
-    top: 8%;
+    top: 9%;
     width: 480px;
     height: 550px;
     background-image: url(../img/panel.png);
@@ -245,12 +266,11 @@ body {
     background-image: url(../img/panel-1.png);
     background-size: cover;
     left: 555px;
-    top: 9.5%;
+    top: 9%;
     z-index: 2;
-    /*display: none;*/
 }
 
-.edit1 {
+/*.edit1 {
     width: 480px;
     height: 550px;
     background-image: url(../img/panel-1.png);
@@ -259,7 +279,7 @@ body {
     left: 0%;
     top: 0%;
     z-index: 2;
-}
+}*/
 
 .edit2 {
     width: 480px;
@@ -283,19 +303,19 @@ body {
 }
 
 .iframe-ed1 {
-    height: 500px;
-    width: 408px;
+    width: 400px;
+    height: 450px;
     position: absolute;
-    left: 11%;
-    top: 2%;
+    left: 12%;
+    top: 5%;
 }
 
 .iframe-ed2 {
+    width: 400px;
     height: 450px;
-    width: 408px;
     position: absolute;
-    left: 11%;
-    top: 2%;
+    left: 12%;
+    top: 5%;
 }
 
 .button-pic {
@@ -303,7 +323,7 @@ body {
     width: 29px;
     position: absolute;
     right: -6%;
-    top: 1.7%;
+    top: 2.2%;
 }
 
 .button-wod {

@@ -21,9 +21,14 @@ body{
 .content .middle-bar{
 	position: absolute;
 	top: 5%;left: 50%;
-	width: 2px;height: 90%;
+	width: 3px;height: 100%;
 	background-color: #CCCCCC;
-	opacity: 0.8;
+	background: -webkit-radial-gradient(center,ellipse farthest-side,#CCCCCC,#ffffff);
+	background: -o-radial-gradient(center,ellipse farthest-side,#CCCCCC, #ffffff);
+	background: radial-gradient(center,ellipse farthest-side,#CCCCCC, #ffffff);
+	background: -webkit-linear-opacity(1,0);
+	background: linear-opacity(1,0);
+	opacity: 1;
 }
 .bar{
 	position: absolute;
@@ -67,7 +72,7 @@ body{
 	background-color: #CCCCCC;
 	opacity: 0.8;
 }
-.login{
+/*.login{
 	position: absolute;
 	top: 0%;left: 1%;
 	width: 20%;height: 80%;
@@ -79,10 +84,10 @@ body{
 	background-image: url(../img/register.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-}
+}*/
 .logo{
 	position: absolute;
-	top: 80%;left: 3%;
+	top: 90%;left: 3%;
 	width: 13%;height: 66%;
 	z-index: 3;
 	background-image: url(../img/logo2.png);
@@ -98,6 +103,26 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+		.login{
+		    position: absolute;
+		    top: 72%;left: 10%;
+		    width: 60px;height: 26px;
+		    border: 1px #ff9933 solid; 
+		    border-radius: 5px;
+		}
+		.login:hover{
+		    background: #ffbb66;
+		}
+		.register{
+		    position: absolute;
+		    top: 72%;left: 40%;
+		    width: 60px;height: 26px;
+		    border: 1px #ff9933 solid; 
+		    border-radius: 5px;
+		}
+		.register:hover{
+		    background: #ffbb66;
+		}
 <<<<<<< HEAD
 .tb5 {
 	border:2px solid #456879;

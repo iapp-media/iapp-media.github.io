@@ -9,12 +9,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="top"></div>
         <div class="content">
             <div class="middle-bar"></div>
             <div class="logo"></div>
             <div style="position: absolute; top: 5%; left: 5%; width: 40%; height: 10%;">
-                <p style="text-align: end; font-size: large; font-weight: bold;">登入／註冊</p>
+                <p style="text-align: end; font-size: large; font-weight: bold;color: #ff9933;">登入／註冊</p>
                 <div class="bar"></div>
             </div>
             <!-- 登入input位置 -->
@@ -32,7 +31,7 @@
             </div>
 
             <div style="position: absolute; top: 5%; left: 55%; width: 40%; height: 10%;">
-                <p style="text-align: end; font-size: large; font-weight: bold;">Facebook登入</p>
+                <p style="text-align: end; font-size: large; font-weight: bold;color: #ff9933;">Facebook登入</p>
                 <div class="bar"></div>
             </div>
             <!-- facebook登入input位置 -->
@@ -42,10 +41,12 @@
 
 
                 <asp:ImageButton ID="LoginBtn1" ImageUrl="img/login.png" runat="server" Style="height: 100%; width: auto;" />
-
-                <%--<img src="img/login.png" height="100%" width="auto" onMouseOut="this.src='img/login.png'" onMouseOver="this.src='img/login-1.png'">--%>
+                
+                <a href="#"><div class="login"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">登入</p></div></a>
+                <a href="#"><div class="register"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">註冊</p></div></a>
+                <!-- <img src="img/login.png" height="100%" width="auto" onMouseOut="this.src='img/login.png'" onMouseOver="this.src='img/login-1.png'">
                 <a href="Register.aspx">
-                    <img src="img/register.png" height="100%" width="auto" onmouseout="this.src='img/register.png'" onmouseover="this.src='img/register-1.png'"></a>
+                    <img src="img/register.png" height="100%" width="auto" onmouseout="this.src='img/register.png'" onmouseover="this.src='img/register-1.png'"></a> -->
 
                 <!-- <div class="login" src="img/button.png" onMouseOut="this.src='img/button.png'" onMouseOver="this.src='img/button-2.png'"></div> -->
                 <!-- <a href="signup.html"><div class="register"></div></a> -->
@@ -53,9 +54,8 @@
         </div>
         <div class="content2 hide">
         </div>
-        <div class="bottom"></div>
     </form>
-	</body>
+    </body>
 
 </html>
 
