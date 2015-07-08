@@ -6,6 +6,7 @@ body{
 .hide{ display:none;}
 .show{ display:block;}
 
+a {text-decoration:none; color:#ff9933;}
 
 .content{
 	position: fixed;
@@ -69,8 +70,6 @@ body{
 	position: absolute;
 	top: 20%;left: 55%;
 	width: 40%;height: 30%;
-	background-color: #CCCCCC;
-	opacity: 0.8;
 }
 /*.login{
 	position: absolute;
@@ -103,6 +102,18 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+		.login p{
+			color: #ff9933;
+			font-size: 18px;
+			position:relative;
+			top: -50%;left: 20%;
+		}
+		.register p{
+			color: #ff9933;
+			font-size: 18px;
+			position:relative;
+			top: -50%;left: 20%;
+		}
 		.login{
 		    position: absolute;
 		    top: 72%;left: 10%;
