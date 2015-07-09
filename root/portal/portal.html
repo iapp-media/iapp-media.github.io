@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/masonry.css">
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -84,7 +85,7 @@
                 </div>
                 <!-- 登入／註冊 -->
                 <div class="col-sm-2 col-md-1">
-                    <a href="http://www.iapp-media.com/basic/Login.aspx"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
+                    <a class='iframe-info' href="http://www.iapp-media.com/basic/Login.aspx"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
                     </button></a>
                 </div>
                 <!-- 會員登入後 -->
@@ -239,7 +240,36 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
     <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     
+    <script>
+    $(document).ready(function() {
+        //Examples of how to assign the Colorbox event to elements
+        $(".iframe-info").colorbox({
+            iframe: true,
+            width: "700px",
+            height: "600px"
+        });
+        $(".callbacks").colorbox({
+            onOpen: function() {
+                alert('onOpen: colorbox is about to open');
+            },
+            onLoad: function() {
+                alert('onLoad: colorbox has started to load the targeted content');
+            },
+            onComplete: function() {
+                alert('onComplete: colorbox has displayed the loaded content');
+            },
+            onCleanup: function() {
+                alert('onCleanup: colorbox has begun the close process');
+            },
+            onClosed: function() {
+                alert('onClosed: colorbox has completely closed');
+            }
+        });
+    });
+    </script>
+
     <script>
         $(function() {
 
