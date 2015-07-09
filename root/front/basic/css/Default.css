@@ -397,19 +397,21 @@ a {text-decoration:none; color:#ff9933;}
 }
 
 .iframe-ed1 {
-    width: 400px;
-    height: 450px;
+    width: 410px;
+    height: 520px;
     position: absolute;
     left: 12%;
-    top: 5%;
+    top: 3%;
+    border: none;
 }
 
 .iframe-ed2 {
-    width: 400px;
-    height: 450px;
+    width: 410px;
+    height: 520px;
     position: absolute;
     left: 12%;
-    top: 5%;
+    top: 3%;
+    border: none;
 }
 
 .button-pic {
@@ -465,7 +467,7 @@ a {text-decoration:none; color:#ff9933;}
 }
 
     #pageNav ul {
-        margin: 10px 0px 0px 20px;
+        margin: 70px 0px 0px 30px;
         padding: 0;
         text-align: center;
         list-style: none;
