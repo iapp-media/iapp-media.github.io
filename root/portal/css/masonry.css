@@ -34,14 +34,20 @@
         border: 1px solid #ddd;
         margin: 5px;
     }
+    .item-bar{
+        position: relative;
+        top: 0%;left: 0%;
+        z-index: 3;
+    }
     .item-pic{
         position: relative;
         width: 208px;
-        height: auto;
+        height: 315px;
         border-bottom: 1px solid #ddd;
-        background-color: #fff;
         border-top-left-radius:5px;
         border-top-right-radius:5px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     #container {
         margin-top: 10%;

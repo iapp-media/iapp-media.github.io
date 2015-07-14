@@ -104,41 +104,60 @@
                     </button></a>
                 </div>
             </div>
-            <!-- /.col-lg-6 -->
         </div>
     </nav>
-
+    <!-- 會員資料 -->
     <div class="jumbotron hide">
         <img class="user-icon" src="img/photoicon.png">
         <div class="option-user">
             <a href="#"><div class="my-iapp"><p>我的App</p></div></a>
-            <div class="separate-user1"></div>
-            <a href="#"><div class="like-iapp"><p>喜歡的App</p></div></a>
-            <div class="separate-user2"></div>
+            <!-- <div class="separate-user"></div> -->
             <a href="#"><div class="collect-iapp"><p>收藏的App</p></div></a>
         </div>
+        <div class="logout-user">
         <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
+                <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
+                <li><a href="#">logout</a></li>
+            </ul>
+        </div>
     </div>
     
     <a href="#"><img class="back-top" src="img/top.png"></img></a>
     <!-- 瀑布流 -->
     <div id="container">
         <div class="item style">
-            <hr>
+            <p>invite friends >></p>
         </div>
         <div class='item'>
-            <div class='imgcenter'><img class="item-pic" src='img/digital.jpg'/>
+            <div class='imgcenter'>
+                <div class="item-pic" style="background-image: url('img/digital.jpg');">
+                <!-- <img class="item-pic" src='img/digital.jpg'/> -->
+                    <div class="item-bar">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+                            </span>
+                        </button>
+                    </div>
+                </div>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/d+.png">
-                <p class='iapp-name'>Digital+微官網
+                <p class='iapp-name'>Digital+微官網<br/>
                 <p class="author">by <a href='http://www.iapp-media.net/digitalplus/' target='_blank'>Digital+</a></p>
             </div>
         </div>
         <div class='item'>
-            <div class='imgcenter'><img class="item-pic" src='img/mommy.jpg' height="350" width="210"/>
+            <div class='imgcenter'>
+            <div class="item-bar" style="z-index: 99;">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+                            </span>
+                        </button>
+                    </div>
+            <div><img class="item-pic" src='img/mommy.jpg' height="350" width="210"/></div>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>Mommy</p>
+                <p class='iapp-name'>Mommy</p><br/>
                 <p class='author'>by<a href='http://www.iapp-media.net/mommy/' target='_blank'>
                 jeff</a></p>
             </div>
@@ -147,7 +166,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/memory.jpg' height="350" width="210"/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>Memory</p>
+                <p class='iapp-name'>Memory</p><br/>
                 <p class='author'>by<a href='http://www.iapp-media.net/memory/' target='_blank'>
                 TK</a></p>
             </div>
@@ -156,7 +175,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/html5.jpg' height="350" width="210"/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/d+.png" >
-                <p class='iapp-name'>Html5</p>
+                <p class='iapp-name'>Html5</p><br/>
                 <p class='author'>by<a href='http://www.iapp-media.net/html5/' target='_blank'>
                 Digital+</a></p>
             </div>
@@ -165,7 +184,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/miniApp.jpg' height="960" width="640"/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/d+.png" >
-                <p class='iapp-name'>iApp</p>
+                <p class='iapp-name'>iApp</p><br/>
                 <p class='author'>by<a href='http://www.iapp-media.net/miniApp/' target='_blank'>
                 Digital+</a></p>
             </div>
@@ -174,7 +193,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture1.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>
@@ -183,7 +202,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture2.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>
@@ -192,7 +211,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture3.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>
@@ -201,7 +220,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture4.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>
@@ -210,7 +229,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture5.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>
@@ -219,7 +238,7 @@
             <div class='imgcenter'><img class="item-pic" src='img/picture6.jpg'/>
                 <p class='describe'>...</p>
                 <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>iapp name</p>
+                <p class='iapp-name'>iapp name</p><br/>
                 <p class='author'>by<a href='index.html' target='_blank'>
                 author name</a></p>
             </div>

@@ -61,11 +61,15 @@ body{
 .input-group-btn:hover .dropdown-menu-right{
 	display: block;
 }
-.dropdown-menu-right{
-
+.dropdown-menu-right {
 	border: #ff9933 1px solid;
+	min-width: 80px;
 }
-
+.dropdown-menu>li>a:hover {
+    color: #000;
+    text-decoration: none;
+    background-color: #ff9933;
+}
 .navbar-btn1 {
     margin-top: 12px;
     border: none;
@@ -147,53 +151,59 @@ body{
 	color: #fff;
 	font-size: 25px;
 	position: relative;
-    top: 100%;
-    left: 96%;
+    top: 0%;
+    left: 0%;
+}
+.glyphicon-cog:hover{
+	color: #aa5b26;
+}
+
+.logout-user{
+	position: relative;
+    top: 100%;left: 97%;
+    width: 2%;
+}
+.logout{
+	display: none;
+	min-width: 100px;
+}
+.logout p{
+	color: #ff9933;
+}
+.logout-user:hover .logout{
+	display: block;
 }
 .option-user{
-	/*background-color: black;
-	opacity: 0.3;
-*/	width: 40%;
+	width: 40%;
 	position: absolute;
     margin-top: 130px;
     left: 29%;
 }
-.separate-user1 {
-    background-color: #fff;
-    width: 2px;
-    height: 50px;
-    position: absolute;
-    top: 0%;
-    left: 33%;
+.option-user p{
+	font-size: 22px;
 }
-.separate-user2 {
-     background-color: #fff;
+/*.separate-user {
+    background-color: #fff;
     width: 2px;
     height: 50px;
     position: relative;
     top: 0%;
-    left: 66%;
-}
+    left: 50%;
+}*/
+
 .my-iapp{
 	position: absolute;
-    top: 30%;
-    left: 12%;
+    top: 0%;
+    left: 22%;
 }
 .my-iapp:hover{
 	border-bottom: 2px #fff solid;
 }
-.like-iapp{
-	position: absolute;
-    top: 30%;
-    left:41%;
-}
-.like-iapp:hover{
-	border-bottom: 2px #fff solid;
-}
+
 .collect-iapp{
 	position: absolute;
-    top: 30%;
-    left: 74%;
+    top: 0%;
+    left: 60%;
 }
 .collect-iapp:hover{
 	border-bottom: 2px #fff solid;
@@ -206,7 +216,7 @@ body{
         width:40px;height:40px;
         border-radius:99em;
         border: 3px solid #ff9933;
-    }
+}
 @media only screen and (min-width:481px) and (max-width:768px) {
    
 	.tem{

@@ -720,3 +720,12 @@ a {text-decoration:none; color:#ff9933;}
     font-size: 5px;
     text-align: center;
 }
+
+#iframe-set
+{
+    border: none;
+    overflow: hidden;
+    width: 95%;
+    height: 410px;
+    margin: 0 0 0 2%;
+}
