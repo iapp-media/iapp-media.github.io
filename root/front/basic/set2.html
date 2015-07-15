@@ -1,107 +1,112 @@
-<!DOCTYPE html>
-<html>
 
+
+
+<!DOCTYPE html>
+<html> 
 <head>
     <meta charset="UTF-8">
-    <title>set2</title>
-    <link rel="stylesheet" type="text/css" href="css/set2.css">
+    <title>set</title>
+    <link rel="stylesheet" type="text/css" href="css/set2.css"> 
     <style>
-    #FU1 {
-        display: none;
-    }
-    
-    body {
-        margin: 0;
-        width: 99%;
-        height: 99%;
-    }
-    
-    .container {
-        width: 99%;
-        height: 99%;
-    }
+        #FU1
+        {
+            display:none;
+        }
+        body
+        {
+            margin:0;
+            width:99%;
+            height:99%;
+        }
+        .container
+        {
+            width:99%;
+            height:99%;
+        }
     </style>
 </head>
-
 <body>
     <form method="post" action="Setting2.aspx" id="form1" enctype="multipart/form-data">
-        <div class="aspNetHidden">
-            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjAwMDgyNTQxNw9kFgICAQ8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWRkg6Ms0yD26nD879AymEGMzVsgw/HY4TGme03GXJTpfVE=" />
-        </div>
-        <script type="text/javascript">
-        //<![CDATA[
-        var theForm = document.forms['form1'];
-        if (!theForm) {
-            theForm = document.form1;
-        }
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjAwMDgyNTQxNw9kFgICAQ8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWRkg6Ms0yD26nD879AymEGMzVsgw/HY4TGme03GXJTpfVE=" />
+</div>
 
-        function __doPostBack(eventTarget, eventArgument) {
-                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                    theForm.__EVENTTARGET.value = eventTarget;
-                    theForm.__EVENTARGUMENT.value = eventArgument;
-                    theForm.submit();
-                }
-            }
-            //]]>
-        </script>
-        <div class="aspNetHidden">
-            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3186BC91" />
-            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAASWMKz3CH/BTB3b+4Mq7BSRfYx+x6tEmwWK4KFW+O0h6UNxMwrla4FcMxfDpmCuw2lMirLtENmb6ez0f81TBHEScWy9En7XttZnm1rQx16jX/dGCDDTvF4IWPPHJIf6gRQ=" />
-        </div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3186BC91" />
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAASWMKz3CH/BTB3b+4Mq7BSRfYx+x6tEmwWK4KFW+O0h6UNxMwrla4FcMxfDpmCuw2lMirLtENmb6ez0f81TBHEScWy9En7XttZnm1rQx16jX/dGCDDTvF4IWPPHJIf6gRQ=" />
+</div>
         <div class="container">
             <div class="top"></div>
             <div class="set">
-                <div class="icon">
-                    <p>
-                        <label for="FU1">
-                            <img id="p1" src="img/uploadicon.png" />
-                            <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" />
-                        </label>
-                    </p>
-                </div>
-                <table>
-                    <tr>
-                        <td>
-                            <p>iApp名稱</p>
-                        </td>
-                        <td>
-                            <input name="TAppName" type="text" maxlength="6" id="TAppName" class="name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>iApp 描述</p>
-                        </td>
-                        <th>
-                            <textarea name="TAppMemo" rows="2" cols="20" id="TAppMemo" class="describe">
-                            </textarea>
-                    </tr>
-                </table>
-                <div class="send">
-                    <p>
-                        <a id="send" href="javascript:__doPostBack(&#39;send&#39;,&#39;&#39;)">完成</a>
-                    </p>
-                </div>
+            <div class="icon">
+                <p>
+                    <img id="p1" src="img/114.png" />
+                    <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" />
+                </p>
+                <label for="FU1">
+                    更換圖片
+                </label>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <p>iApp名稱</p>
+                    </td>
+                    <td>
+                        <input name="TAppName" type="text" maxlength="6" id="TAppName" class="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>iApp 描述</p>
+                    </td>
+                    <th>
+                        <textarea name="TAppMemo" rows="2" cols="20" id="TAppMemo" class="describe">
+</textarea>
+                </tr>
+            </table>
+            <div class="send">
+                <p>
+                    <a id="send" href="javascript:__doPostBack(&#39;send&#39;,&#39;&#39;)">完成</a>
+                </p>
             </div>
         </div>
+    </div>
     </form>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/JIC.js"></script>
     <script>
-    function previewImage(n) {
-        //read uploading file
-        var reader = new FileReader();
-        var file = document.getElementById('FU' + n).files[0];
-        reader.readAsDataURL(file);
-        reader.onload = function(oFREvent) {
-            document.getElementById('p' + n).src = oFREvent.target.result;
-            var output_format = "jpg";
-            document.getElementById('p' + n).src = jic.compress(document.getElementById('p' + n), 114, output_format).src;
-        };
-    }
+        function previewImage(n) {
+            //read uploading file
+            var reader = new FileReader();
+            var file = document.getElementById('FU' + n).files[0];
+            reader.readAsDataURL(file);
+            reader.onload = function (oFREvent) {
+                document.getElementById('p' + n).src = oFREvent.target.result;
+                var output_format = "jpg";
+                document.getElementById('p' + n).src = jic.compress(document.getElementById('p' + n), 114, output_format).src;
+            };
+        }
     </script>
 </body>
-
 </html>

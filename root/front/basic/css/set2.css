@@ -37,7 +37,7 @@
         .set .icon{
             position: absolute;
             top: 10px;left: 220px;
-            width: 100px;height: 100px;
+            width: 120px;height: 100px;
             opacity: 0.5;
         }
         .set .icon p{

@@ -54,6 +54,7 @@
     }
     .imgcenter:hover .item-bar{
         visibility: visible;
+        background-color: #
     }
     .item-bar .good{
         display: inline;
