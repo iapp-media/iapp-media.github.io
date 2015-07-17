@@ -20,6 +20,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="row">
             <div class="container-fluid">
@@ -28,34 +29,95 @@
                         <img class="iapplogo" src="img/iapplogo.png">
                     </a>
                 </div>
-                <!-- <div class="col-xs-4 search-sm">
-                        <button type="button" class="btn btn-default dropdown-toggle col-xs-12 search2" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true">
-                        </button>
-                </div> -->
+
                 <div class="col-xs-3 tem"></div>
                 
-                <div class="col-xs-1 search-sm">
+                <div class="col-xs-2 search-sm">
                     <div class="input-group">
-                        <div class="input-group-btn ">
-                            <button type="button" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                        <!-- mobile 搜尋 -->
+                        <div class="input-group-btn">
+                            <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
                 </div>
+                <!-- mobile 搜尋bar -->
+                <div class="search-bar">
+                    <input type="text" class="search" placeholder="Search iApp...">
+                    <p class="cancel">cancel</p>
+                </div>
 
-                <div class="col-xs-3 login-sm">
+                <div class="col-xs-2 login-sm">
                     <div class="input-group">
                         <div class="input-group-btn">
                             <!-- mobile登入／註冊 -->
-                            <button type="button" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                             </button>
                             <!-- mobile會員登入後 -->
-                            <button type="button" class="btn btn-default search2 hide" data-toggle="dropdown" aria-expanded="false">
+                            <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <img class="circle-login" src="img/photoicon.png" >
                             </button>
+                            <!-- mobile會員登入畫面 -->
+                            <div class="login-mobile">
+                                <div class="navbar">
+                                    <img class="iapplogo" src="img/iapplogo.png">
+                                </div>
+                                <div class="content">
+                                    <div class="fb">
+                                        <p>FaceBook登入</p>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <a href=""><img class="fb-img"src="img/fb.png"></a>
+                                    <div class="login">
+                                        <p>會員帳號登入</p>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <form method="post" action="">
+                                        <input type="text" id="form" placeholder="帳號" class="admin">
+                                        <input type="password" id="form" placeholder="密碼"class="password">
+                                    </form>
+                                    <div class="send">
+                                       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="login-back">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <p>還不是會員嗎？>></p>
+                                    <div class="join">
+                                        <p>
+                                            <a class="" href="">加入我們</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- mobile會員註冊畫面 -->
+                            <div class="register-mobile">
+                                <div class="navbar">
+                                    <img class="iapplogo" src="img/iapplogo.png">
+                                </div>
+                                <div class="content">
+                                    <div class="login">
+                                        <p>註冊會員</p>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <form method="post" action="">
+                                        <input type="text" id="form" placeholder="名字" class="name">
+                                        <input type="text" id="form" placeholder="email" class="admin">
+                                        <input type="password" id="form" placeholder="密碼"class="password">
+                                    </form>
+                                    <div class="send">
+                                       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="register-back">
+                                        <a href=""><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -84,16 +146,15 @@
                     <!-- /input-group -->
                 </div>
                 <!-- 登入／註冊 -->
-                <div class="col-sm-2 col-md-1 hide">
-                    <a class='iframe-info' href="http://www.iapp-media.com/basic/Login.aspx"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
+                <div class="col-sm-2 col-md-1 login-box">
+                    <a class='iframe-info' href="file:///Applications/XAMPP/xamppfiles/htdocs/company/iapp-media.github.io/root/front/basic/login.html"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
                     </button></a>
                 </div>
                 <!-- 會員登入後 -->
-                <a href="#" ><div id="icon-box" class="col-sm-2 col-md-1 icon-box ">
+                <div class="col-sm-2 col-md-1 icon-box">
                     <img class="usericon" src="img/photoicon.png">
-                    <div class="username-icon"><h4 style="color: #fff">Digital+</h4></div>
-                    
-                </div></a>
+                    <div class="username-icon"><h4>Digital+</h4></div>
+                </div>
                 <div class="col-sm-2 col-md-1 se">
                     <div class="separate"></div>
                 </div>
@@ -107,7 +168,7 @@
         </div>
     </nav>
     <!-- 會員資料 -->
-    <div class="jumbotron hide">
+    <div class="jumbotron">
         <img class="user-icon" src="img/photoicon.png">
         <div class="option-user">
             <a href="#"><div class="my-iapp"><p>我的App</p></div></a>
@@ -132,16 +193,16 @@
         <div class='item'>
                 <div class='imgcenter'>
                 <div>
-                    <a class='apps-info' href="http://www.iapp-media.com/basic/132"><img class="item-pic" src='img/digital.jpg'/></a>
+                    <a class='apps-info' href="http://www.iapp-media.com/basic/128"><img class="item-pic" src='img/digital.jpg'/></a>
                     <div class="item-bar">
                         <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                            <p style="display: inline;">100+1</p>
+                            <p>100+1</p>
                         </button>
                         <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-heart" aria-hidden="true">
                                 </span>
-                            <p style="display: inline;">100</p>
+                            <p>100</p>
                         </button>
                         <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-star" aria-hidden="true">
@@ -158,17 +219,17 @@
         <div class='item'>
             <div class='imgcenter'>
                 <div>
-                    <a class='apps-info' href=""><img class="item-pic" src='img/mommy.jpg'/></a>
+                    <a class='' href="http://www.iapp-media.com/basic/142"><img class="item-pic" src='img/mommy.jpg'/></a>
                     <div class="item-bar">
                         <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
                                 </span>
-                            <p style="display: inline;">100</p>
+                            <p>100</p>
                         </button>
                         <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-heart" aria-hidden="true">
                                 </span>
-                            <p style="display: inline;">100</p>
+                            <p>100</p>
                         </button>
                         <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-star" aria-hidden="true">
@@ -183,91 +244,6 @@
                 jeff</a></p>
             </div>
         </div>
-        <div class='item'>
-            <div class='imgcenter'>
-                <div>
-                    <a class='apps-info' href=""><img class="item-pic" src='img/memory.jpg'/></a>                   
-                    <div class="item-bar">
-                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true">
-                                </span>
-                        </button>
-                    </div>
-                </div>
-                <p class='describe'>...</p>
-                <img class="circle" src="img/defaulthead.png" >
-                <p class='iapp-name'>Memory</p><br/>
-                <p class='author'>by<a href='http://www.iapp-media.net/memory/' target='_blank'>
-                TK</a></p>
-            </div>
-        </div>
-        <div class='item'>
-            <div class='imgcenter'>
-                <div>
-                    <a class='apps-info' href=""><img class="item-pic" src='img/html5.jpg'/></a>                  
-                    <div class="item-bar">
-                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true">
-                                </span>
-                        </button>
-                    </div>
-                </div>
-                <p class='describe'>...</p>
-                <img class="circle" src="img/d+.png" >
-                <p class='iapp-name'>Html5</p><br/>
-                <p class='author'>by<a href='http://www.iapp-media.net/html5/' target='_blank'>
-                Digital+</a></p>
-            </div>
-        </div>
-        <div class='item'>
-            <div class='imgcenter'>
-                <div>
-                    <a class='apps-info' href=""><img class="item-pic" src='img/miniApp.jpg'/></a>                    
-                    <div class="item-bar">
-                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
-                                </span>
-                            <p style="display: inline;">100</p>
-                        </button>
-                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true">
-                                </span>
-                        </button>
-                    </div>
-                </div>
-                <p class='describe'>...</p>
-                <img class="circle" src="img/d+.png" >
-                <p class='iapp-name'>iApp</p><br/>
-                <p class='author'>by<a href='http://www.iapp-media.net/miniApp/' target='_blank'>
-                Digital+</a></p>
-            </div>
-        </div>
-        
     </div>
     
     <div class='nav clearbox'>
@@ -278,6 +254,7 @@
     <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
@@ -288,21 +265,55 @@
     
     <script>
         $(document).ready(function() {
-            $("#pageShow").click(function() {
-                $(".select").animate({
-                    width: 'toggle'
-                }, 350);
-                $(".edit").hide();
-            });
+          $(".join").click(function() {
+            $('.register-mobile').slideToggle(300);
+            return false;
+          });
+          $(".register-back").click(function() {
+            $('.register-mobile').slideToggle(300);
+            return false;
+          });
+          $("#m-login").click(function() {
+            $('.login-mobile').slideToggle(300);
+            show();
+          });
+          $(".login-back").click(function() {
+            $('.login-mobile').slideToggle(300);
+            hide();
+          });
+          $("#op-search").click(function() {
+            $('.search-bar').slideToggle(300);
+            show();
+          });
+          $(".cancel").click(function() {
+            $('.search-bar').slideToggle(300);
+            hide();
+          });
+          $(".send").click(function() {
+            $('.login-mobile').hide();
+            $('.register-mobile').hide();
+            $('#m-login').hide();
+            $('.circle-login').show();
+          });
+          $(".login-box").click(function() {
+            $('.login-box').hide();
+            $('.icon-box').show();
+          });
+          $(".icon-box").click(function() {
+            $('.jumbotron').show();
+          });
         });
     </script>
+
     <script>
     $(document).ready(function() {
         //Examples of how to assign the Colorbox event to elements
         $(".apps-info").colorbox({
             iframe: true,
-            width: "1200px",
-            height: "690px"
+            // innerWidth: "100%",
+            // innerHeight: "100%",
+            width: "80%",
+            height: "100%"
         });
         $(".iframe-info").colorbox({
             iframe: true,

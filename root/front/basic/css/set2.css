@@ -36,20 +36,36 @@
         }
         .set .icon{
             position: absolute;
-            top: 10px;left: 220px;
+            top: 15px;left: 220px;
             width: 120px;height: 100px;
-            opacity: 0.5;
+            opacity: 1;
         }
         .set .icon p{
             text-align: center;
             font-size: 25px;
+        }
+        .icon .iconimg-1{
             border: 2px #7d7d7d solid;
+        }
+        .icon:hover .iconimg-1{
+            display: none;
+        }
+        .icon .iconimg-2{
+            display: none;
+            border: 2px #7d7d7d solid;
+        }
+        .icon:hover .iconimg-2{
+            display: inline;
         }
         .set table{
             position: absolute;
-            top: 150px;left: 70px;
+            top: 100px;left: 70px;
             color: #7d7d7d;
             padding: 10px;
+        }
+        .set .poster{
+            position: relative;
+            top: 0px;left: 30px;
         }
         .set .name{
             position: relative;

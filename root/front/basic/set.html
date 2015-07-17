@@ -15,27 +15,41 @@
         </div>
         <div class="set">
             <div class="icon">
-                <p>icon</p>
+                    <img class="iconimg-1" src="img/iconimg-1.png" height="89" width="89" />
+                    <img class="iconimg-2" src="img/iconimg-2.png" height="89" width="89" />
+                    <!-- <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" /> -->
+                <label for="FU1">
+                    
+                </label>
             </div>
             <div class="send">
-                <p><a href="#" id="send">完成</a></p>
+                <p>
+                    <a id="send" href="javascript:__doPostBack(&#39;send&#39;,&#39;&#39;)">完成</a>
+                </p>
             </div>
             <table>
                 <tr>
-                    <th>
-                        <p>iApp名稱</p>
-                    </th>
-                    <th>
-                        <input class="name" type="text">
-                    </th>
+                    <td>
+                        <p>封面圖片</p>
+                    </td>
+                    <td>
+                        <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" class="poster" />
+                    </td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
+                        <p>iApp名稱</p>
+                    </td>
+                    <td>
+                        <input name="TAppName" type="text" value="" maxlength="6" id="TAppName" class="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <p>iApp 描述</p>
-                    </th>
+                    </td>
                     <th>
-                        <input class="describe" type="text">
-                    </th>
+                        <textarea name="TAppMemo" rows="2" cols="20" id="TAppMemo" class="describe"></textarea>
                 </tr>
             </table>
         </div>

@@ -2,12 +2,17 @@ body{
 	background-color: #f5f5f5;
 	font-size: small;
 }
-
+/*.show {
+    display: inline!important;
+}*/
+a {text-decoration:none; color:#ff9933;}
+a:hover {text-decoration:none; color:#ffbb66;}
 .navbar{
 	min-height: 80px;
 	background-color: white;
-	box-shadow: gray 0px 2px 15px 0px;
+	/*box-shadow: gray 0px 2px 8px 0px;*/
 }
+
 .btn-default{
 	background-color: #ff9933;
 }
@@ -22,19 +27,26 @@ body{
   		display: none;
   	}
 .iapplogo{
-	width: 92px;
+	width: 100px;
 	height: auto;
 }
 .navbar-brand {
     float: left;
     height: 60px;
-    padding: 10px 0px;
+    padding: 5px 0px;
 	}
 .search {
     position: relative;
     top:20px;
     left: 8%;
     width: 90%;
+}
+.search2 {
+	background:none;
+	border-style: none;
+}
+.search2:hover {
+	background: none;
 }
 .search-sm{
 	display: none;
@@ -61,9 +73,9 @@ body{
 .dropdown-menu-right{
 	display: none;
 }
-.input-group-btn:hover .dropdown-menu-right{
-	display: block;
-}
+/*.search .input-group-btn:hover .dropdown-menu-right{
+		display: block;
+	}*/
 .dropdown-menu-right {
 	border: #ff9933 1px solid;
 	min-width: 80px;
@@ -92,6 +104,7 @@ body{
     background-color: #ffbb66;	
 }
 .icon-box{
+	display: none;
 	background-color: #ff9933;
 	margin-top: 20px;
 	width: 130px;
@@ -101,6 +114,9 @@ body{
 }
 .icon-box:hover{
 	background-color: #ffbb66;
+}
+.icon-box h4{
+	color: #fff;
 }
 .usericon{
 	width: auto;height: 35px;
@@ -136,6 +152,7 @@ body{
     left: 100%;
 }
 .jumbotron {
+	display: none;
     padding-top: 90px;
     background-color: #ff9933;
     height: 280px;
@@ -214,13 +231,246 @@ body{
 	border-bottom: 2px #fff solid;
 }
 .circle-login{
-        display: none;
-        position: relative;
-        margin-top: 7px;
-        left: 30%;
-        width:40px;height:40px;
-        border-radius:99em;
-        border: 3px solid #ff9933;
+	display: none;
+	position: relative;
+	margin-top: 4px;
+	left: -50%;
+	width:40px;height:40px;
+	border-radius:99em;
+	border: 3px solid #ff9933;
+}
+
+	.login-mobile{
+		display: none;
+		position: fixed;
+		top: 0px;left: 0px;
+		background-color: #ff9933;
+		width: 100%;height: 100%;
+		z-index: 99;
+	}
+	.login-mobile p{
+		font-size: 18px;
+		color: #ff9933;
+	}
+	.login-mobile .navbar{
+		background-color: #ff9933;
+	}
+	.login-mobile .content{
+		min-height: 75%;width: 100%;
+		background-color: #fff;
+		position: absolute;
+		top: 60px;left: 0px;
+	}
+	/*.login-sm .input-group-btn:hover .login-mobile{
+    	display: inline;
+	}*/
+	.login-mobile .fb{
+		position: absolute; 
+		top: 4%; left: 5%; 
+		width: 100%; height: 10%;
+	}
+	.login-mobile .fb p{
+		text-align: left; 
+		font-size: 18px;
+		color: #ff9933;
+	}
+	.login-mobile .fb-img{
+		position: absolute; 
+		top: 20%; left: 10%;
+		width: 80%; height: auto;
+	}
+	.login-mobile .login{
+		position: absolute; 
+		top: 40%; left: 5%; 
+		width: 100%; height: 10%;
+	}
+	.login-mobile .login p{
+		text-align: left; 
+		font-size: 18px;
+		color: #ff9933;
+	}
+	.login-mobile .admin{
+		position: absolute; 
+		top: 53%; left: 8%;
+		font-size: 15px;width: 80%;
+		border-color:#7b7b7b;
+		border-radius: 2px;
+		opacity:0.5;
+	}
+	.login-mobile .password{
+		position: absolute; 
+		top: 67%; left: 8%;
+		font-size: 15px;width: 80%;
+		border-color:#7b7b7b;
+		border-radius: 2px;
+		opacity:0.5;
+	}
+	.bar{
+            position: absolute;
+            top: 80%;left: 0%;
+            width: 90%;height: 2px;
+            background-color: #ff9933;
+        }
+    .login-mobile .send{
+    	position: absolute;
+        top: 80%;left: 30%;
+    	width: 50px;height: 50px;
+    	border-radius: 99px;
+        border: 2px solid #ff9933;
+    }
+    .glyphicon-ok{
+    	position: relative;
+        top: 12%;left: 12%;
+    	font-size: 35px;
+		color: #ff9933;
+    }
+    .login-mobile .login-back{
+    	position: absolute;
+	    top: 80%;left: 55%;
+    	width: 50px;height: 50px;
+	    border-radius: 99px;
+        border: 2px solid #ff9933;
+    }
+	.glyphicon-remove{
+	    position: absolute;
+	    top: 12%;left: 12%;
+	    font-size: 35px;
+		color: #ff9933;
+    }
+    .glyphicon-arrow-left{
+    	position: absolute;
+	    top: 12%;left: 12%;
+	    font-size: 35px;
+		color: #ff9933;
+    }
+    .footer{
+    	position: absolute;
+		top: 90%;left: 0%;
+		width: 100%;height: 10%;
+    }
+    .footer p{
+    	display: inline;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding-left: 25%;
+    }
+    	.join{
+            position: relative;
+            top: -45%;left: 65%;
+            width: 100px;height: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .join:hover{
+            background: #000;
+        }
+        .join p{
+            color: #ff9933;
+            font-size: 18px;
+            font-weight: bold;
+            position:absolute;
+            top: 10%;left: 15%;
+            padding-left: 0%;
+        }
+    .register-mobile{
+		display: none;
+		position: fixed;
+		top: 0px;left: 0px;
+		background-color: #ff9933;
+		width: 100%;height: 100%;
+		z-index: 99;
+	}
+	.register-mobile p{
+		font-size: 18px;
+		color: #ff9933;
+	}
+	.register-mobile .navbar{
+		background-color: #ff9933;
+	}
+	.register-mobile .content{
+		min-height: 75%;width: 100%;
+		background-color: #fff;
+		position: absolute;
+		top: 60px;left: 0px;
+	}
+	/*.login-sm .input-group-btn .join a:hover .register-mobile{
+    	display: inline;
+	}*/
+	.register-mobile .login{
+		position: absolute; 
+		top: 5%; left: 5%; 
+		width: 100%; height: 10%;
+	}
+	.register-mobile .login p{
+		text-align: left; 
+		font-size: 18px;
+		color: #ff9933;
+	}
+	.register-mobile .name{
+		position: absolute; 
+		top: 20%; left: 8%;
+		font-size: 15px;width: 80%;
+		border-color:#7b7b7b;
+		border-radius: 2px;
+		opacity:0.5;
+	}
+	.register-mobile .admin{
+		position: absolute; 
+		top: 32%; left: 8%;
+		font-size: 15px;width: 80%;
+		border-color:#7b7b7b;
+		border-radius: 2px;
+		opacity:0.5;
+	}
+	.register-mobile .password{
+		position: absolute; 
+		top: 44%; left: 8%;
+		font-size: 15px;width: 80%;
+		border-color:#7b7b7b;
+		border-radius: 2px;
+		opacity:0.5;
+	}
+	.register-mobile .send{
+    	position: absolute;
+        top: 65%;left: 30%;
+    	width: 50px;height: 50px;
+    	border-radius: 99px;
+        border: 2px solid #ff9933;
+    }
+	.register-mobile .register-back{
+    	position: absolute;
+	    top: 65%;left: 55%;
+    	width: 50px;height: 50px;
+	    border-radius: 99px;
+        border: 2px solid #ff9933;
+    }
+.search-bar{
+	background-color: #ff9933;
+	position: absolute;
+	top: 0%;left:0%;
+	width: 100%;height: 60px;
+	z-index: 3;
+	display:none;
+}
+.search-bar .search{
+	width: 65%;height: 40px;
+	float: left;
+	opacity: 0.8;
+	border-radius: 45px;
+	border: 0px;
+	padding-left: 15px;
+}
+.search-bar .search:hover{
+	opacity: 1;
+}
+.search-bar .cancel{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	color:#fff;
+	padding-top: 15px;
+	padding-left: 35px;
 }
 @media only screen and (min-width:481px) and (max-width:768px) {
    
@@ -228,10 +478,8 @@ body{
   		display: inline;
   	}
 	.navbar{
-		min-height: 50px;
-		background-color: white;
-		box-shadow: gray 0px 2px 15px 0px;
-	}
+		/*min-height: 50px;
+*/	}
 	.navbar-brand {
 	    float: left;
 	    height: 60px;
@@ -245,13 +493,6 @@ body{
 	    position: relative;
 	    top: 8px;
 	    right: 5px;
-	}
-	.search2 {
-		background:none;
-		border-style: none;
-	}
-	.search2:hover {
-    background: none;
 	}
 	.search-sm{
 		display: inline;
@@ -321,30 +562,21 @@ body{
   		display: inline;
   	}
 	.navbar{
-		min-height: 50px;
-		background-color: white;
-		box-shadow: gray 0px 2px 15px 0px;
+		min-height: 60px;
 	}
 	.navbar-brand {
 	    float: left;
 	    height: 60px;
-	    padding: 5px 15px;
+	    padding: 0px 0px;
 	}
 	.iapplogo{
-		width: 67px;
+		width: 80px;
 		height: auto;
 	}
 	.search {
 	    position: relative;
 	    top: 8px;
 	    right: 5px;
-	}
-	.search2 {
-		background:none;
-		border-style: none;
-	}
-	.search2:hover {
-    background: none;
 	}
 	.search-sm{
 		display: inline;
@@ -353,18 +585,18 @@ body{
 		display: none;
 	}
 	.glyphicon-search{
-		margin-top: 8px;
+		margin-top: 7px;
 		color: #ff9933;
 		font-size: 35px;
-		margin-left: -5px;
+		left: -50%;
 	}
 	.glyphicon-search:hover{
 		color: #ffbb66;
 	}
 
 	.glyphicon-user{
-		margin-top: 8px;
-		left: 50%;
+		margin-top: 7px;
+		left: -50%;
 		color: #ff9933;
 		font-size: 35px;
 	}
@@ -375,6 +607,7 @@ body{
 		display: inline;
 	}
 	.glyphicon-align-justify{
+		margin-top: -2px;
 		font-size: 35px;
 		color: #ff9933;
 	}
@@ -394,9 +627,6 @@ body{
 	.dropdown-menu-right{
 		border: #ff9933 1px solid;
 		right: 20px;
-	}
-	.input-group-btn:hover .dropdown-menu-right{
-	display: block;
 	}
 	.input-group .form-control {
 		display: none;

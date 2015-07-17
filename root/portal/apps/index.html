@@ -40,6 +40,14 @@
 
 	<body>
 
+	<div class="apps-bar">
+		<a href="http://192.168.31.123/company/iapp-media.github.io/root/portal/portal-test.html"><img class="back" src="img/back-1.png"></a>
+		<a href=""><img class="like" src="img/like-1.png"></a><br/>
+		<a href=""><img class="collect" src="img/collect-1.png"></a><br/>
+		<a href=""><img class="good" src="img/good-1.png"></a>
+		<img class="qr animated bounceInDownrubberBand" src="img/qr.jpg">
+	</div>
+
     <div id="loading">iApp 載入中</div>
 		<div>
 
@@ -121,6 +129,8 @@
 		<script src="js/index.js"></script>
 
 		<script src="js/share.js"></script>
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+		<script src="js/jquery-1.8.0.min.js"></script>
 
 		<!--<script>
 		    var share_button_right = new Share(".share-button-bottom", {
@@ -135,6 +145,19 @@
 		        }
 		    });
    		</script>-->
+   	<script>
+		$(document).ready(function() {
+		 // hides the slickbox as soon as the DOM is ready
+		 // (a little sooner than page load)
+		  $('.apps-bar').hide();
+
+		  // toggles the slickbox on clicking the noted link 
+		  $(".page").click(function() {
+		    $('.apps-bar').slideToggle(100);
+		    return false;
+		  });
+		});
+	</script>
 <!-- Google Analytics 分析 -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

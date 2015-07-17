@@ -59,15 +59,22 @@ function __doPostBack(eventTarget, eventArgument) {
             <div class="top"></div>
             <div class="set">
             <div class="icon">
-                <p>
-                    <img id="p1" src="img/114.png" />
-                    <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" />
-                </p>
+                <img class="iconimg-1" src="img/iconimg-1.png" height="89" width="89" />
+                <img class="iconimg-2" src="img/iconimg-2.png" height="89" width="89" />
+                    <!-- <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" /> -->
                 <label for="FU1">
-                    更換圖片
+                    
                 </label>
             </div>
             <table>
+                <tr>
+                    <td>
+                        <p>封面圖片</p>
+                    </td>
+                    <td>
+                        <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" class="poster" />
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <p>iApp名稱</p>
