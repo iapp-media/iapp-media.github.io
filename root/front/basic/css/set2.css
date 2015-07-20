@@ -4,6 +4,13 @@
             width: auto;height: auto;
         }
         a{text-decoration:none; color:#ff9933;}
+        #FU1
+        {
+            display:none;
+        }
+        #FU2{
+            padding-left: 30px;
+        }
         .top{
             position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
         }
@@ -48,18 +55,11 @@
             border: 2px #7d7d7d solid;
         }
         .icon:hover .iconimg-1{
-            display: none;
-        }
-        .icon .iconimg-2{
-            display: none;
-            border: 2px #7d7d7d solid;
-        }
-        .icon:hover .iconimg-2{
-            display: inline;
+            opacity: 0.5;
         }
         .set table{
             position: absolute;
-            top: 100px;left: 70px;
+            top: 120px;left: 70px;
             color: #7d7d7d;
             padding: 10px;
         }
@@ -84,7 +84,7 @@
         }
         .set .send{
             position: absolute;
-            top: 115%;left: 50%;
+            top: 360px;left: 50%;
             width: 70px;height: 30px;
             border:2px #ff9933 solid;
             border-radius: 8px;

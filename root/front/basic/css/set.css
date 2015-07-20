@@ -3,6 +3,10 @@
             padding: 0;
             width: auto;height: auto;
         }
+        #FU1
+        {
+            display:none;
+        }
         a{text-decoration:none; color:#ff9933;}
         .top{
             position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
@@ -48,15 +52,9 @@
             border: 2px #7d7d7d solid;
         }
         .icon:hover .iconimg-1{
-            display: none;
+            opacity: 0.5;
         }
-        .icon .iconimg-2{
-            display: none;
-            border: 2px #7d7d7d solid;
-        }
-        .icon:hover .iconimg-2{
-            display: inline;
-        }
+        
         .set table{
             position: absolute;
             top: 100px;left: 70px;

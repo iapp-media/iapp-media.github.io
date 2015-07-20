@@ -23,6 +23,11 @@
             width:99%;
             height:99%;
         }
+
+        .hide
+        {
+            display:none;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +35,7 @@
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjAwMDgyNTQxNw9kFgICAQ8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWRkg6Ms0yD26nD879AymEGMzVsgw/HY4TGme03GXJTpfVE=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NTgxOTgzNTQPZBYCAgEPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGFkZOP3Vg2yAFBujnVhNF+2lClddlgHXikbzteYqKZlLKHp" />
 </div>
 
 <script type="text/javascript">
@@ -53,18 +58,22 @@ function __doPostBack(eventTarget, eventArgument) {
 <div class="aspNetHidden">
 
     <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3186BC91" />
-    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAASWMKz3CH/BTB3b+4Mq7BSRfYx+x6tEmwWK4KFW+O0h6UNxMwrla4FcMxfDpmCuw2lMirLtENmb6ez0f81TBHEScWy9En7XttZnm1rQx16jX/dGCDDTvF4IWPPHJIf6gRQ=" />
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAbmo2Sd6LW0aL15Y2E1kveKtTfNpOz0CH4vKngBfzxDIX2MfserRJsFiuChVvjtIelDcTMK5WuBXDMXw6ZgrsNpTIqy7RDZm+ns9H/NUwRxEodiTbwRdk693gPPT5wQaTszMIE2/eRhFJV2osy70evXtXTrdN+BJeK93yOCp3BEAw==" />
 </div>
         <div class="container">
-            <div class="top"></div>
-            <div class="set">
+        <div class="top"> 
+        </div>
+        <div class="set">
             <div class="icon">
-                <img class="iconimg-1" src="img/iconimg-1.png" height="89" width="89" />
-                <img class="iconimg-2" src="img/iconimg-2.png" height="89" width="89" />
-                    <!-- <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" /> -->
                 <label for="FU1">
-                    
-                </label>
+                    <img id="p1" class="iconimg-1" src="img/default-icon.png" />
+                    <input type="file" name="FU1" id="FU1" onchange="previewImage(&#39;FU1&#39;,&#39;p1&#39;,89)" accept="image/*" />
+                </label> 
+            </div> 
+            <div class="send">
+                <p>
+                    <a id="LinkButton1" href="javascript:__doPostBack(&#39;LinkButton1&#39;,&#39;&#39;)">完成</a>
+                </p>
             </div>
             <table>
                 <tr>
@@ -72,7 +81,7 @@ function __doPostBack(eventTarget, eventArgument) {
                         <p>封面圖片</p>
                     </td>
                     <td>
-                        <input type="file" name="FU1" id="FU1" onchange="previewImage(1)" accept="image/*" class="poster" />
+                        <input type="file" name="FU2" id="FU2" />
                     </td>
                 </tr>
                 <tr>
@@ -99,21 +108,24 @@ function __doPostBack(eventTarget, eventArgument) {
             </div>
         </div>
     </div>
+                    <input name="TS" type="text" id="TS" class="hide" style="width:0px;" />
     </form>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/JIC.js"></script>
     <script>
-        function previewImage(n) {
+        function previewImage(fileInput, imgcanvas, size) {
             //read uploading file
             var reader = new FileReader();
-            var file = document.getElementById('FU' + n).files[0];
+            var file = document.getElementById(fileInput).files[0];
             reader.readAsDataURL(file);
             reader.onload = function (oFREvent) {
-                document.getElementById('p' + n).src = oFREvent.target.result;
+                document.getElementById(imgcanvas).src = oFREvent.target.result;
                 var output_format = "jpg";
-                document.getElementById('p' + n).src = jic.compress(document.getElementById('p' + n), 114, output_format).src;
+                document.getElementById(imgcanvas).src = jic.compress(document.getElementById(imgcanvas), size, output_format).src;
             };
         }
+
+
     </script>
 </body>
 </html>

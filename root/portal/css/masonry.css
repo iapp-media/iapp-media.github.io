@@ -88,7 +88,8 @@
         border-bottom: 1px solid #ddd;
         text-align: left;
         padding-left:10px; 
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
+        font-size: 9pt; 
     }
     .circle{
         position: relative;
@@ -126,13 +127,34 @@
         max-height: 336px;
         position: relative;
         }
-        .iapp-name{
-        }
-        .describe {
-            font-size: 9pt;
-        }
         .imgcenter:hover .item-bar{
         visibility: hidden;
+        }
+        .item-bar p{
+        display: inline;
+        }
+        .item-bar{
+            visibility: visible;
+        }
+        .item-bar .good{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .heart{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .star{
+            position: absolute;
+            top: 1%;
+            left: 82%;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
         }
     }
     @media only screen and (max-width:480px){
@@ -151,11 +173,6 @@
         max-height: 236px;
         position: relative;
         }
-        .iapp-name{
-        }
-        .describe {
-            font-size: 9pt;
-        }
         .circle{
         position: relative;
         left: -2%;
@@ -173,28 +190,28 @@
         }
         .item-bar p{
         display: inline;
-    }
-    .item-bar{
-        visibility: visible;
-    }
-    .item-bar .good{
-        display: inline;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    .item-bar .heart{
-        display: inline;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    .item-bar .star{
-        position: absolute;
-        top: 1%;
-        left: 82%;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    
+        }
+        .item-bar{
+            visibility: visible;
+        }
+        .item-bar .good{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .heart{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .star{
+            position: absolute;
+            top: 1%;
+            left: 82%;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        

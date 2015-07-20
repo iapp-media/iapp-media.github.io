@@ -586,7 +586,19 @@ a {text-decoration:none; color:#ff9933;}
                 left: 0;
                 top: 0;
             }
-
+            #pageNav ul li .num
+            {
+                display: inline-block;
+                width: 81px;
+                height: 13px; 
+                padding:2px;
+                background-color: #969696;
+                opacity: 0.7;
+                position:absolute;
+                top:108px;
+                font-size:11px;
+                text-align:center;
+            }
 .publish-btn1 {
     position: absolute;
     top: 21%;

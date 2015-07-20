@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <title>iApp Platform</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/masonry.css">
     <link rel="stylesheet" type="text/css" href="css/colorbox.css">
@@ -20,7 +19,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
-    
+    <!-- 導覽列（共用） -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="row">
             <div class="container-fluid">
@@ -29,7 +28,33 @@
                         <img class="iapplogo" src="img/iapplogo.png">
                     </a>
                 </div>
+                <!-- 主題下拉選單（共用） -->
+                <div>
+                    <ul class="dropdown-menu dropdown-menu-right theme" role="menu">
+                        <li><a href="#">最新</a></li>
+                        <li><a href="#">最熱門</a></li>
+                        <li><a href="#">哈雷風</a></li>
+                        <li><a href="#">旅遊風</a></li>
+                        <li><a href="#">生活風</a></li>
+                        <li><a href="#">節慶風</a></li>
+                           <!-- <li class="divider"></li> -->
+                    </ul>
+                </div>
 
+                <!--  搜尋bar提示框（共用）-->
+                <div>
+                    <ul class="dropdown-menu dropdown-menu-right finder" role="menu">
+                        <li><a href="#">最新</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">最熱門</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><img class="finder-app" src="img/photoicon.png"
+                        > iApp</a></li>
+                    </ul>
+                </div>
+
+<!-- Mobile --><!-- Mobile --><!-- Mobile --><!-- Mobile --><!-- Mobile --><!-- Mobile --><!-- Mobile -->
+                
                 <div class="col-xs-3 tem"></div>
                 
                 <div class="col-xs-2 search-sm">
@@ -44,8 +69,8 @@
                 </div>
                 <!-- mobile 搜尋bar -->
                 <div class="search-bar">
-                    <input type="text" class="search" placeholder="Search iApp...">
-                    <p class="cancel">cancel</p>
+                    <input type="text" class="search bar-text" placeholder="Search iApp...">
+                    <span class="glyphicon glyphicon-remove cancel" aria-hidden="true">
                 </div>
 
                 <div class="col-xs-2 login-sm">
@@ -117,34 +142,38 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-xs-3 login-sm">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                </div> -->
+                <!-- mobile會員選單 -->
+                <div>
+                    <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
+                        <li><a href="#">我的iApp</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">收藏的iApp</a></li>
+                        <li class="divider"></li>
+                        <li class="m-logout"><p><a href="#">登出</a></p></li>
+                    </ul>
+                </div>
+
+<!-- Web --><!-- Web --><!-- Web --><!-- Web --><!-- Web --><!-- Web --><!-- Web --><!-- Web --><!-- Web -->
+                
+                <!-- Web 搜尋bar -->
                 <div class="col-xs-1 col-sm-5 col-md-8">
                     <div class="input-group search">
                         <!-- 搜尋框 -->
-                        <input type="text" class="form-control " placeholder="Search iApp...">
+                        <input type="text" class="form-control bar-text" placeholder="Search iApp...">
                         <!-- 下拉按鈕 -->
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a href="#">basic</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">旅遊風</a></li>
-                                <li><a href="#">生活風</a></li>
-                                <li><a href="#">節慶風</a></li>
-                            </ul>
                         </div>
                         <!-- /btn-group -->
                     </div>
                     <!-- /input-group -->
                 </div>
+                
                 <!-- 登入／註冊 -->
                 <div class="col-sm-2 col-md-1 login-box">
                     <a class='iframe-info' href="file:///Applications/XAMPP/xamppfiles/htdocs/company/iapp-media.github.io/root/front/basic/login.html"><button type="button" class="btn btn-default navbar-btn1"><h4 class="title">登入／註冊
@@ -167,28 +196,59 @@
             </div>
         </div>
     </nav>
-    <!-- 會員資料 -->
-    <div class="jumbotron">
-        <img class="user-icon" src="img/photoicon.png">
-        <div class="option-user">
-            <a href="#"><div class="my-iapp"><p>我的App</p></div></a>
-            <!-- <div class="separate-user"></div> -->
-            <a href="#"><div class="collect-iapp"><p>收藏的App</p></div></a>
-        </div>
-        <div class="logout-user">
-        <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-            <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
-                <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
-                <li><a href="#">logout</a></li>
-            </ul>
-        </div>
-    </div>
+            <!-- 會員資料 -->
+            <div class="jumbotron">
+                <img class="user-icon" src="img/photoicon.png">
+                <div class="option-user">
+                    <a href="#"><div class="my-iapp"><p>我的App</p></div></a>
+                    <!-- <div class="separate-user"></div> -->
+                    <a href="#"><div class="collect-iapp"><p>收藏的App</p></div></a>
+                </div>
+                <div class="logout-user">
+                <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
+                        <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
+                        <li class="divider"></li>
+                        <li id="logout"><a href="#">登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 回到頂部 -->
+            <a href="#"><img class="back-top" src="img/top.png"></img></a>
     
-    <a href="#"><img class="back-top" src="img/top.png"></img></a>
-    <!-- 瀑布流 -->
+<!-- 瀑布流 --><!-- 瀑布流 --><!-- 瀑布流 --><!-- 瀑布流 --><!-- 瀑布流 --><!-- 瀑布流 --><!-- 瀑布流 -->   
+    
     <div id="container">
+        <!-- 排版用 -->
         <div class="item style">
             <p>invite friends >></p>
+        </div>
+        <!-- Web版 -->
+        <div class='item'>
+                <div class='imgcenter'>
+                <div>
+                    <a class='apps-info' href="http://www.iapp-media.com/basic/128"><img class="item-pic" src='img/digital.jpg'/></a>
+                    <div class="item-bar">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                            <p>100+1</p>
+                        </button>
+                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true">
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                <p class='describe'>...</p>
+                <img class="circle" src="img/d+.png">
+                <p class='iapp-name'>Digital+微官網<br/>
+                <p class="author">by <a href='http://www.iapp-media.net/digitalplus/' target='_blank'>Digital+</a></p>
+            </div>
         </div>
         <div class='item'>
                 <div class='imgcenter'>
@@ -217,9 +277,92 @@
             </div>
         </div>
         <div class='item'>
+                <div class='imgcenter'>
+                <div>
+                    <a class='apps-info' href="http://www.iapp-media.com/basic/128"><img class="item-pic" src='img/digital.jpg'/></a>
+                    <div class="item-bar">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                            <p>100+1</p>
+                        </button>
+                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true">
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                <p class='describe'>...</p>
+                <img class="circle" src="img/d+.png">
+                <p class='iapp-name'>Digital+微官網<br/>
+                <p class="author">by <a href='http://www.iapp-media.net/digitalplus/' target='_blank'>Digital+</a></p>
+            </div>
+        </div>
+        <!-- Mobile版 -->
+        <div class='item'>
             <div class='imgcenter'>
                 <div>
-                    <a class='' href="http://www.iapp-media.com/basic/142"><img class="item-pic" src='img/mommy.jpg'/></a>
+                    <a class='＃' href="Apps/index.html"><img class="item-pic" src='img/mommy.jpg'/></a>
+                    <div class="item-bar">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true">
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                <p class='describe'>...</p>
+                <img class="circle" src="img/defaulthead.png" >
+                <p class='iapp-name'>Mommy</p><br/>
+                <p class='author'>by<a href='http://www.iapp-media.net/mommy/' target='_blank'>
+                jeff</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'>
+                <div>
+                    <a class='＃' href="Apps/index.html"><img class="item-pic" src='img/mommy.jpg'/></a>
+                    <div class="item-bar">
+                        <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default heart" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true">
+                                </span>
+                            <p>100</p>
+                        </button>
+                        <button type="button" class="btn btn-default star" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true">
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                <p class='describe'>...</p>
+                <img class="circle" src="img/defaulthead.png" >
+                <p class='iapp-name'>Mommy</p><br/>
+                <p class='author'>by<a href='http://www.iapp-media.net/mommy/' target='_blank'>
+                jeff</a></p>
+            </div>
+        </div>
+        <div class='item'>
+            <div class='imgcenter'>
+                <div>
+                    <a class='＃' href="Apps/index.html"><img class="item-pic" src='img/mommy.jpg'/></a>
                     <div class="item-bar">
                         <button type="button" class="btn btn-default good" data-toggle="dropdown" aria-expanded="false">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
@@ -245,7 +388,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- 呼叫更多 -->
     <div class='nav clearbox'>
         <a href='http://sample.diary.tw/flickrsearch/index.php?p=2&q=rainbow'>.</a>
     </nav>
@@ -263,6 +406,7 @@
     <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     
+    <!-- 觸發 -->
     <script>
         $(document).ready(function() {
           $(".join").click(function() {
@@ -274,18 +418,41 @@
             return false;
           });
           $("#m-login").click(function() {
-            $('.login-mobile').slideToggle(300);
-            show();
+            $(".login-mobile").animate({
+                  height: 'toggle'
+              }, 300);
+              $(".theme").hide();
+          });
+          $("#user-login").click(function() {
+            $(".m-profile").animate({
+                  height: 'toggle'
+              }, 300);
+              $(".theme").hide();
           });
           $(".login-back").click(function() {
             $('.login-mobile').slideToggle(300);
             hide();
           });
           $("#op-search").click(function() {
-            $('.search-bar').slideToggle(300);
-            show();
+              $(".search-bar").animate({
+                  height: 'toggle'
+              }, 300);
+              $(".theme").hide();
+              $(".m-profile").hide();
+          });
+          $(".bar-text").click(function() {
+            $('.finder').show();
+            $(".theme").hide();
+          });
+          $(".select").click(function() {
+              $(".theme").animate({
+                  height: 'toggle'
+              }, 300);
+              $(".m-profile").hide();
+              $('.finder').hide();
           });
           $(".cancel").click(function() {
+            $('.finder').hide();
             $('.search-bar').slideToggle(300);
             hide();
           });
@@ -302,16 +469,25 @@
           $(".icon-box").click(function() {
             $('.jumbotron').show();
           });
+          $("#logout").click(function() {
+            $('.jumbotron').hide();
+            $('.icon-box').hide();
+            $('.login-box').show();
+          });
+          $(".m-logout").click(function() {
+            $('.circle-login').hide();
+            $('.m-profile').hide();
+            $('#m-login').show();
+          });
         });
     </script>
 
+    <!-- 光箱 -->
     <script>
     $(document).ready(function() {
         //Examples of how to assign the Colorbox event to elements
         $(".apps-info").colorbox({
             iframe: true,
-            // innerWidth: "100%",
-            // innerHeight: "100%",
             width: "80%",
             height: "100%"
         });
@@ -323,6 +499,7 @@
     });
     </script>
 
+    <!-- 瀑布流 -->
     <script>
         $(function() {
 
@@ -335,12 +512,6 @@
                     isAnimated: true,
                     isFitWidth: true
                 });
-                // $container.masonry({
-                //     itemSelector: '.item-m',
-                //     columnWidth: 20,
-                //     isAnimated: true,
-                //     isFitWidth: true
-                // });
             });
             // 在背景取出下一頁的內容, 並將指定的 selector 資料 append 到目前的網頁上
             $container.infinitescroll({

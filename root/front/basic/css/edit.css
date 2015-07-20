@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #7d7d7d;
+}
+.hide {
+    display: none;
+}
+.iframe-info{
+
+}
+.iframe-info>img{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 2;
+    opacity: 0.8;
+}
+.iframe-info>img:hover{
+    opacity: 1;
+}
+.show{
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    opacity: 0.5;
+    z-index: 1;
+}
+.show2{
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 3;
+}

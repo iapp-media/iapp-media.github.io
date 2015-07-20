@@ -32,7 +32,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 }
 .navbar-brand {
     float: left;
-    height: 60px;
+    height: 80px;
     padding: 5px 0px;
 	}
 .search {
@@ -51,6 +51,24 @@ a:hover {text-decoration:none; color:#ffbb66;}
 .search-sm{
 	display: none;
 }
+	.glyphicon-search{
+		margin-top: 7px;
+		color: #ff9933;
+		font-size: 35px;
+		left: -50%;
+	}
+	.glyphicon-search:hover{
+		color: #ffbb66;
+	}
+	.glyphicon-user{
+		margin-top: 7px;
+		left: -50%;
+		color: #ff9933;
+		font-size: 35px;
+	}
+	.glyphicon-user:hover{
+		color: #ffbb66;
+	}
 .login-sm{
 	display: none;
 }
@@ -77,13 +95,31 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		display: block;
 	}*/
 .dropdown-menu-right {
-	border: #ff9933 1px solid;
-	min-width: 80px;
+	position: absolute;
+	top: 80px;right: 5px;
+	width: 95%;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 0px;
+	border-top: #ff9933 5px solid;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
 }
-.dropdown-menu>li>a:hover {
-    color: #000;
+.dropdown-menu-right .divider{
+	background-color: #ff9933;
+}
+.theme>li>a{
+    color: #ff9933;
+    border-bottom: #ff9933 1px solid;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.theme>li>a:hover {
+    color: #fff;
     text-decoration: none;
-    background-color: #ff9933;
+    background-color: #ffbb66;
 }
 .navbar-btn1 {
     margin-top: 12px;
@@ -163,7 +199,30 @@ a:hover {text-decoration:none; color:#ffbb66;}
     font-size: 1.3em;
     font-weight: 200;
 }
-
+.jumbotron .logout {
+	position: absolute;
+	top: 30px;right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-radius: 0px;
+}
+.jumbotron .logout a{
+	font-size: 15px;
+	text-align: center;
+	border-bottom: 0px;
+}
+.logout>li>a{
+    color: #ff9933;
+    border-bottom: #ff9933 1px solid;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.logout>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffbb66;
+}
 .user-icon{
 	position: absolute;
     margin-top: 30px;
@@ -179,7 +238,31 @@ a:hover {text-decoration:none; color:#ffbb66;}
 .glyphicon-cog:hover{
 	color: #aa5b26;
 }
-
+.m-profile>li>a{
+    color: #ff9933;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.m-profile>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffbb66;
+}
+.m-logout {
+	background-color: #ff9933;
+}
+.m-logout:hover{
+	background-color: #ffbb66;
+}
+.m-logout>p{
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+.m-logout>p>a{
+	color: #fff;
+}
 .logout-user{
 	position: relative;
     top: 100%;left: 97%;
@@ -239,7 +322,9 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	border-radius:99em;
 	border: 3px solid #ff9933;
 }
-
+.circle-login:hover{
+	border: 3px solid #ffbb66;
+}
 	.login-mobile{
 		display: none;
 		position: fixed;
@@ -306,14 +391,14 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		opacity:0.5;
 	}
 	.bar{
-            position: absolute;
-            top: 80%;left: 0%;
-            width: 90%;height: 2px;
-            background-color: #ff9933;
-        }
+        position: absolute;
+        top: 80%;left: 0%;
+        width: 90%;height: 2px;
+        background-color: #ff9933;
+    }
     .login-mobile .send{
     	position: absolute;
-        top: 80%;left: 30%;
+        top: 80%;left: 55%;
     	width: 50px;height: 50px;
     	border-radius: 99px;
         border: 2px solid #ff9933;
@@ -326,7 +411,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
     }
     .login-mobile .login-back{
     	position: absolute;
-	    top: 80%;left: 55%;
+	    top: 80%;left: 30%;
     	width: 50px;height: 50px;
 	    border-radius: 99px;
         border: 2px solid #ff9933;
@@ -363,7 +448,10 @@ a:hover {text-decoration:none; color:#ffbb66;}
             border-radius: 5px;
         }
         .join:hover{
-            background: #000;
+            background: #ffbb66;
+        }
+        .join:hover a{
+            color: #fff;
         }
         .join p{
             color: #ff9933;
@@ -433,14 +521,14 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	}
 	.register-mobile .send{
     	position: absolute;
-        top: 65%;left: 30%;
+        top: 65%;left: 55%;
     	width: 50px;height: 50px;
     	border-radius: 99px;
         border: 2px solid #ff9933;
     }
 	.register-mobile .register-back{
     	position: absolute;
-	    top: 65%;left: 55%;
+	    top: 65%;left: 30%;
     	width: 50px;height: 50px;
 	    border-radius: 99px;
         border: 2px solid #ff9933;
@@ -454,7 +542,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	display:none;
 }
 .search-bar .search{
-	width: 65%;height: 40px;
+	width: 70%;height: 40px;
 	float: left;
 	opacity: 0.8;
 	border-radius: 45px;
@@ -465,12 +553,31 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	opacity: 1;
 }
 .search-bar .cancel{
-	float: left;
-	font-size: 18px;
+	position: relative;
+	right: 1px;
+	padding-top: 6px;
+	font-size: 30px;
 	font-weight: bold;
 	color:#fff;
-	padding-top: 15px;
-	padding-left: 35px;
+}
+.finder .finder-app{
+/*	position: relative;
+*//*	margin-top: 4px;
+*//*	left: -50%;
+*/	width:40px;height:40px;
+	border-radius:99em;
+	border: 3px solid #ff9933;
+}
+.finder>li>a{
+    color: #ff9933;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.finder>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffbb66;
 }
 @media only screen and (min-width:481px) and (max-width:768px) {
    
@@ -478,15 +585,15 @@ a:hover {text-decoration:none; color:#ffbb66;}
   		display: inline;
   	}
 	.navbar{
-		/*min-height: 50px;
-*/	}
+		min-height: 60px;
+	}
 	.navbar-brand {
 	    float: left;
 	    height: 60px;
-	    padding: 5px 15px;
+	    padding: 0px 0px;
 	}
 	.iapplogo{
-		width: 67px;
+		width: 80px;
 		height: auto;
 	}
 	.search {
@@ -497,32 +604,12 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	.search-sm{
 		display: inline;
 	}
-	.icon-box{
-		display: none;
-	}
-	.glyphicon-search{
-		margin-top: 8px;
-		color: #ff9933;
-		font-size: 35px;
-		margin-left: -5px;
-	}
-	.glyphicon-search:hover{
-		color: #ffbb66;
-	}
 
-	.glyphicon-user{
-		margin-top: 8px;
-		left: 50%;
-		color: #ff9933;
-		font-size: 35px;
-	}
-	.glyphicon-user:hover{
-		color: #ffbb66;
-	}
 	.login-sm{
 		display: inline;
 	}
 	.glyphicon-align-justify{
+		margin-top: -2px;
 		font-size: 35px;
 		color: #ff9933;
 	}
@@ -539,9 +626,10 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		background-color: #fff;
 		border-radius-left: 20px;
 	}
-	.dropdown-menu-right{
-		border: #ff9933 1px solid;
-		right: 20px;
+	.dropdown-menu-right {
+		position: absolute;
+		top: 60px;right: 5px;
+		width: 95%;
 	}
 	.input-group .form-control {
 		display: none;
@@ -581,28 +669,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	.search-sm{
 		display: inline;
 	}
-	.icon-box{
-		display: none;
-	}
-	.glyphicon-search{
-		margin-top: 7px;
-		color: #ff9933;
-		font-size: 35px;
-		left: -50%;
-	}
-	.glyphicon-search:hover{
-		color: #ffbb66;
-	}
 
-	.glyphicon-user{
-		margin-top: 7px;
-		left: -50%;
-		color: #ff9933;
-		font-size: 35px;
-	}
-	.glyphicon-user:hover{
-		color: #ffbb66;
-	}
 	.login-sm{
 		display: inline;
 	}
@@ -624,9 +691,10 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		background-color: #fff;
 		border-radius-left: 20px;
 	}
-	.dropdown-menu-right{
-		border: #ff9933 1px solid;
-		right: 20px;
+	.dropdown-menu-right {
+		position: absolute;
+		top: 60px;right: 5px;
+		width: 95%;
 	}
 	.input-group .form-control {
 		display: none;

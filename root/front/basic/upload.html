@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="css/cropper.css">
+	<link rel="stylesheet" type="text/css" href="css/cropperPage.css">
+
+</head>
+<body>
+	
+	<br/>
+		
+		<label for="inputImage">
+			<img class="select" src="">選擇照片
+		</label>
+		
+		<input type="file" accept="image/*" id="inputImage" style="display:none;" >
+		<!-- <button type="button" onclick="">取消</button> -->
+		<button data-method="getCroppedCanvas" type="button" class="send">確認</button>
+		<img id="preview" src="picture.jpg" class="preview" style="display:none; width:100%; max-height:466px;">
+		<div class="img-container" >
+			<img src="" alt="">
+		</div>
+		<label id="base64" style=" word-wrap: break-word; word-break: normal; display:none;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/JIC.js"></script>
+	<script type="text/javascript" src="js/cropper.js"></script>
+	<script type="text/javascript" src="js/cropperPage.js"></script>
+	<script>
+		$('docoment').ready(function(){
+			document.getElementById('inputImage').click();
+		});		
+	</script>
+</body>
+</html>
