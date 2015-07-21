@@ -31,7 +31,7 @@ $(function () {
           autoCropArea: 0.8,
           dragCrop: false,
           movable: false,
-          resizable: false,
+          // resizable: false,
           // rotatable: false,
           // zoomable: false,
           // touchDragZoom: false,

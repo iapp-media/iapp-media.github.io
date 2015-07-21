@@ -10,6 +10,7 @@
   min-height: 200px;
   max-height: 466px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
@@ -19,8 +20,29 @@
 }
 
 .select{
+	width: 80px;height: 30px;
+	background-color: #ff9933;
+	position: absolute;
+	top: 10px;left: 10px;
+}
+.select p{
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 5px;
+}
+.word{
+	text-align: right;
+	padding: 10px;
 
 }
 .send{
-	
+	margin-left: 10px;
+	border: 2px solid #ff9933; 
+	background-color: #fff;
+	width: 80px;height: 30px;
+}
+.send p{
+	color: #ff9933;
+	font-size: 15px;
 }
