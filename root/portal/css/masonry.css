@@ -110,7 +110,6 @@
         padding-left:10px;
         color: #aaa;
     }
-    
     @media only screen and (min-width:481px) and (max-width:768px) {
         #container {
         margin-top: 15%;

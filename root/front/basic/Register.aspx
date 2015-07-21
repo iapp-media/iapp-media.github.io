@@ -1,90 +1,143 @@
-﻿<!-- <%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Register.aspx.vb" Inherits="AppWeb1._4.Register" %> -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!DOCTYPE html>
-    <html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en">
 
-    <head id="Head1" runat="server">
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/signup.css" />
-    </head>
+<head id="Head1">
+    <meta charset="UTF-8" />
+    <title>
+        Document
+    </title>
+    <link rel="stylesheet" href="css/signup.css" />
+</head>
 
-    <body>
-        <form id="form2" runat="server">
-            <div class="content">
-                <!-- title -->
-                <div class="title">
-                    <p>註冊</p>
-                    <div class="bar"></div>
-                </div>
-                <!-- 註冊input位置 -->
-                <div class="input">
-                    <div>
-                        <table>
-                                <tr>
-                                    <td>姓名</td><br/>
-                                    <td>
-                                        <asp:TextBox CssClass="tb5" ID="User_Name" runat="server"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="User_Name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input style="text" type="text"><br/></td>
-                                </tr>
-                                <tr>
-                                    <td>帳號</td><br/>
-                                    <td>
-                                        <asp:TextBox CssClass="tb5" ID="Email" runat="server"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input style="text" type="text"><br/></td>
-                                </tr>
-                                <tr>
-                                    <td>密碼</td><br/>
-                                    <td>
-                                        <asp:TextBox CssClass="tb5" ID="Pw" runat="server" TextMode="Password"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input style="text" type="text"><br/></td>
-                                </tr>
-                            </table>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 72%; left: 30%; width: 40%; height: 8%;">
-                    <a href="Login.aspx" target="_parent">
-                        <asp:ImageButton ID="regBtn1" ImageUrl="~/img/register.png" Style="height: 100%; width: auto; position: absolute; top: 0%; left: 37%;" runat="server" />
-                    </a>
-                </div>
-                <a href="#">
-                    <div class="confirm">
-                        <p><a href="#">確認</a></p>
-                    </div>
-                </a>
-            </div>
-        </form>
-    </body>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script>
-    function EvImageOverChange(name, action) {
-        switch (action) {
-            case 'in':
-                name.src = "/img/register.png";
-                break;
-            case 'out':
-                name.src = "/img/register-1.png";
-                break;
+<body>
+    <form method="post" action="Register.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form2">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NzU4NTIzM2RkW+0Ti1mo8LKHaYZOKhF1pHORgHDq/PRchq7UaXh4pIE=" />
+        </div>
+        <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form2'];
+        if (!theForm) {
+            theForm = document.form2;
         }
-    }
-    </script>
 
-    </html>
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+        </script>
+        <script src="/WebResource.axd?d=peoV_kitpvhhU2EgCSEmnRLBp-db3S7skAKol82NZk9Oz2xBnXUdc6ZA_xCGZ77t30-xOLFbD-X4yaUVfm2KqFHb_w-mQyDXrLSIkKuxrTk1&amp;t=635589723571259667" type="text/javascript"></script>
+        <script src="/WebResource.axd?d=beVG2KYUQA-uxOplFL-YcVR4sDRq5DEs3AS-KiA7EQfuKrYHTkk8PsSqkSdmT6kIdbclokvMNdQDQY04mbnrw7TfGVF6Fzqhy3bWUUsPKfQ1&amp;t=635589723571259667" type="text/javascript"></script>
+        <script type="text/javascript">
+        //<![CDATA[
+        function WebForm_OnSubmit() {
+            if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+            return true;
+        }
+        //]]>
+        </script>
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E648DF70" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAWdYdZPKvQgjw6DrunDir+Pr9JMVpoaaGknLdcbi+SUcaiIOPEWNJ0JB9sbRJZ25cWWCcKIeDCWjNidfoV9HjAZgf5pZQRhFESd4Co97DgKHYgzWgf05K5Ieh6+bLDEkqlQKzasRIAa6hOi6QF63H8L" />
+        </div>
+        <div class="content">
+            <!-- title -->
+            <div class="title">
+                <p>註冊</p>
+                <div class="bar"></div>
+            </div>
+            <!-- 註冊input位置 -->
+            <div class="input">
+                <div>
+                    <table>
+                        <tr>
+                            <td>姓名:</td>
+                            <td>
+                                <input name="User_Name" type="text" id="User_Name" />
+                            </td>
+                            <td>
+                                <span id="RequiredFieldValidator2" style="color:Red;visibility:hidden;">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>帳號</td>
+                            <td>
+                                <input name="Email" type="text" id="Email" />
+                            </td>
+                            <td>
+                                <span id="RegularExpressionValidator1" style="color:Red;visibility:hidden;">請輸入Email格式</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>密碼</td>
+                            <td>
+                                <input name="Pw" type="password" id="Pw" />
+                            </td>
+                            <td>
+                                <span id="RequiredFieldValidator1" style="color:Red;visibility:hidden;">*</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <a href="#">
+                <div class="confirm">
+                    <p>
+                        <a id="regBtn1" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;regBtn1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">確認</a></p>
+                </div>
+            </a>
+        </div>
+        <script type="text/javascript">
+        //<![CDATA[
+        var Page_Validators = new Array(document.getElementById("RequiredFieldValidator2"), document.getElementById("RegularExpressionValidator1"), document.getElementById("RequiredFieldValidator1"));
+        //]]>
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+        var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+        RequiredFieldValidator2.controltovalidate = "User_Name";
+        RequiredFieldValidator2.errormessage = "*";
+        RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        RequiredFieldValidator2.initialvalue = "";
+        var RegularExpressionValidator1 = document.all ? document.all["RegularExpressionValidator1"] : document.getElementById("RegularExpressionValidator1");
+        RegularExpressionValidator1.controltovalidate = "Email";
+        RegularExpressionValidator1.errormessage = "請輸入Email格式";
+        RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+        RegularExpressionValidator1.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+        var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+        RequiredFieldValidator1.controltovalidate = "Pw";
+        RequiredFieldValidator1.errormessage = "*";
+        RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        RequiredFieldValidator1.initialvalue = "";
+        //]]>
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+
+        var Page_ValidationActive = false;
+        if (typeof(ValidatorOnLoad) == "function") {
+            ValidatorOnLoad();
+        }
+
+        function ValidatorOnSubmit() {
+            if (Page_ValidationActive) {
+                return ValidatorCommonOnSubmit();
+            } else {
+                return true;
+            }
+        }
+        //]]>
+        </script>
+    </form>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+</script>
+
+</html>

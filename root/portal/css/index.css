@@ -11,6 +11,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	min-height: 80px;
 	background-color: white;
 	/*box-shadow: gray 0px 2px 8px 0px;*/
+	z-index: 99;
 }
 
 .btn-default{
@@ -21,7 +22,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	position: fixed;
 	bottom: 2%;
 	right: 2%;
-	z-index: 999;
+	z-index: 90;
 }
 .tem{
   		display: none;
