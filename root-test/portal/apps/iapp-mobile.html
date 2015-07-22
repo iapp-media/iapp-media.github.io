@@ -76,7 +76,7 @@
 
 <body>
     <div class="apps-bar">
-        <a href="portal.html"><img class="back" src="img/back-1.png"></a>
+        <a href="https://iapp-media.github.io/root-test/portal/portal.html"><img class="back" src="img/back-1.png"></a>
         <a href=""><img class="like" src="img/like-1.png"></a>
         <br/>
         <a href=""><img class="collect" src="img/collect.png"></a>
@@ -84,29 +84,24 @@
         <a href=""><img class="good" src="img/good-1.png"></a>
         <!-- <img class="qr animated bounceInDownrubberBand" src="img/qr.jpg"> -->
     </div>
-    <ul class="list-side">
-        <li><a target="apps/index.html"><p style="position: fixed;top: 0px;left: 50%;;z-index: 999;">about</p></a></li>
-    </ul>
     <div id="iframe">
         <!--jquery 插入html 位址-->
     </div>
+    <script src="js/zepto.min.js"></script>
+        <script src="js/touch.js"></script>
+        <script src="js/index.js"></script>
+
+        <script src="js/share.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $.get("apps/index.html", function(data) { //初始將a.html include div#iframe
+        $.get("index.html", function(data) { //初始將a.html include div#iframe
             $("#iframe").html(data);
         });
-        $(function() {
-            $('.list-side li').click(function() {
-                // 找出 li 中的超鏈接 href(#id)
-                var $this = $(this),
-                    _clickTab = $this.find('a').attr('target'); // 找到超鏈接a中的targer標簽值
-                $.get(_clickTab, function(data) {
-                    $("#iframe").html(data);
-                });
-            })
-        })
     });
+    </script>
+    <script>
+        document.write('<style>#loading{display:none}</style>');
     </script>
 </body>
 
