@@ -7,8 +7,10 @@
 </head>
 
 <body>
-    <div id="content" style="border: 1px solid red;width: 210px"></div>
-    <button onclick="turnPage('http://www.iapp-media.com/basic/Apps/01/146')">微信</button>
+    <object data="apps/index.html" width=100% height=100% type=text/x-scriptlet>
+</object>
+<!--     <div id="content" style="border: 1px solid red;width: 210px"></div>
+ -->    <!-- <button onclick="turnPage('http://www.iapp-media.com/basic/Apps/01/146')">微信</button>
     <button onclick=" turnPage('apps/index.html')">通訊錄</button>
     <button onclick="turnPage('zhaopengyou.html')">找朋友</button>
     <button onclick="turnPage('wo.html') ">我</button>
@@ -18,12 +20,13 @@
         $.ajax({
             type: "post",
             url: url,
+            dataType:'html',
             success: function(html) {
                 $("#content").html(html);
             }
         })
     }
-    </script>
+    </script> -->
 </body>
 
 </html>
