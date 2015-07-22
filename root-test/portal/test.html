@@ -7,38 +7,22 @@
 </head>
 
 <body>
-    <ul class="list-side">
-    
-        <li><a href="http://ucmic.blogspot.com/">about</a></li>
-    
-        <li><a target="http://ucmic.blogspot.com/">news</a></li>
-    
-        <li><a target="c.html">product</a></li>
-    
-        <li><a href="http://ucmic.blogspot.com/" target="_blank">contact</a></li>
-    </ul>
-    <div id="iframe" style="width: 500px;height: 500px;border: 2px solid #000;">
-    
-        <!-​​-jquery 插入html 位址-->
-    </div>
-    <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+    <div id="content" style="border: 1px solid red;width: 210px"></div>
+    <button onclick="turnPage('http://www.iapp-media.com/basic/Apps/01/146')">微信</button>
+    <button onclick=" turnPage('tongxunlu.html')">通訊錄</button>
+    <button onclick="turnPage('zhaopengyou.html')">找朋友</button>
+    <button onclick="turnPage('wo.html') ">我</button>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {　　
-                $.get("http://ucmic.blogspot.com/", function(data) { //初始將a.html include div#iframe
-                    　　　　
-                    $("#iframe").html(data);　　
-                });
-                $(function() {　　
-                    $('.list-side li').click(function() {　　 // 找出li 中的超鏈接href(#id)
-                        　　　　
-                        var $this = $(this),
-                            　　　　_clickTab = $this.find('a').attr('target'); // 找到鏈接a中的targer的值
-                        　　　　
-                        $.get(_clickTab, function(data) {　　　　　　
-                            $("#iframe").html(data);　　　　
-                        });　　
-                    });
-                });
+    function turnPage(url) {
+        $.ajax({
+            type: "post",
+            url: url,
+            success: function(html) {
+                $("#content").html(html);
+            }
+        })
+    }
     </script>
 </body>
 
