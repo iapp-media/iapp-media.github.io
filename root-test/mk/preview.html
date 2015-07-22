@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>iApp Mobile Maker</title>
+	<!-- about SEO -->
+	<meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+	<meta name="keywords" content="iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO"/>
+
+    <!-- for apple (PS:iphone5 去除width=device-width)
+         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+         2-3.將Web Page儲存為home screen icon時的圖示
+         4.設定載入頁面時 loading 圖片
+         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+         6.更改 status bar 樣式    
+     -->
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+     <link rel="apple-touch-icon-precomposed" href="img/icon.png"/>  
+     <link rel="apple-touch-icon" href="img/114.png"/> 
+     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+     <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+     <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+
+     <meta name="apple-mobile-web-app-capable" content="yes" /> 
+     <meta name="apple-mobile-web-app-status-bar-style" content="black" />   
+     <!-- End for apple -->  
+
+     <!-- Add to Home Screen -->
+    <!--
+	<link rel="stylesheet" href="css/add2home.css">
+	<script type="application/javascript" src="js/add2home.js" charset="utf-8"></script>    
+	<!-- End Add to Home Screen -->    
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/slide.css?v3"/> 
+	<link rel="stylesheet" type="text/css" href="css/action.css"/>   
+<!-- 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+-->
+
+</head>
+
+<body>
+	<div id="loading">iApp 載入中</div>
+
+	<div>
+
+		<!--<div class="share-button share-button-bottom"></div>-->
+
+		<div class="page page-1-1 page-current">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+			<img class="logo animated bounceInDownrubberBand" src="img/logo.png" />
+		</div>
+
+		<div class="page page-2-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+
+			<div id="takeimage1">
+				<label for="file-input1">
+					<img src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input1" type="file" value="" onchange="previewImage(1)" accept="image/*"/>
+			</div> 
+
+			<!--<div id="takeimage1"><input type="file" id="take-picture" accept="image/*" src="img/uploadicon.png"></div>-->
+			<div id="p1" class="bg animated zoomIn changestyle" style="background-image: url(img/p1.jpg);"></div>
+		</div>
+
+		<div class="page page-3-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+
+			<div id="takeimage2">
+				<label for="file-input2">
+					<img src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input2" type="file" value="" onchange="previewImage(2)" accept="image/*"/>
+			</div> 
+
+			<div id="p2" class="bg animated zoomInDown changestyle" style="background-image: url(img/p2.jpg);"></div>
+			<div class="bar1 animated fadeIn1"><p class="text1 animated fadeInLeft1"><input type="text" value="開始寫下" name="p2-text1" id="p2-text1"><br><input type="text" value="與你的每一頁篇章" name="p2-text2" id="p2-text2"></p></div>
+		</div>
+
+		<div class="page page-4-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+
+			<div id="takeimage3-1">
+				<label for="file-input3-1">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input3-1" type="file" value="" onchange="previewImage('3-1')" accept="image/*"/>
+			</div> 
+			<div class="border bg1">
+				<img id="p3-1" class="bg animated slideInLeft1 changestyle" src="img/p3-1.jpg" />
+			</div>
+
+			<div id="takeimage3-2">
+				<label for="file-input3-2">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input3-2" type="file" value="" onchange="previewImage('3-2')" accept="image/*"/>
+			</div>                 
+			<div class="border bg2">
+				<img id="p3-2" class="bg animated slideInRight1 changestyle" src="img/p3-2.jpg" />
+			</div>
+
+			<div id="takeimage3-3">
+				<label for="file-input3-3">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input3-3" type="file" value="" onchange="previewImage('3-3')" accept="image/*"/>
+			</div> 
+			<div class="border bg3">
+				<img id="p3-3" class="bg animated slideInLeft2 changestyle" src="img/p3-3.jpg" />
+			</div>
+		</div>
+
+		<div class="page page-5-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+
+			<div id="takeimage4-1">
+				<label for="file-input4-1">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input4-1" type="file" value="" onchange="previewImage('4-1')" accept="image/*"/>
+			</div>
+			<div class="border bg4">
+				<img id="p4-1" class="bg animated slideInDown1 changestyle" src="img/p4-1.jpg" />
+			</div>
+
+			<div id="takeimage4-2">
+				<label for="file-input4-2">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input4-2" type="file" value="" onchange="previewImage('4-2')" accept="image/*"/>
+			</div>                
+			<div class="border bg5">
+				<img id="p4-2" class="bg animated slideInLeft1 changestyle" src="img/p4-2.jpg" />
+			</div>
+
+			<div id="takeimage4-3">
+				<label for="file-input4-3">
+					<img class="uploadicon-s" src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input4-3" type="file" value="" onchange="previewImage('4-3')"  accept="image/*"/>
+			</div>                
+			<div class="border bg6">
+				<img id="p4-3" class="bg animated slideInRight1 changestyle" src="img/p4-3.jpg" />
+			</div>
+		</div>
+
+		<div class="page page-6-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+
+			<div id="takeimage5">
+				<label for="file-input5">
+					<img src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input5" type="file" value="" onchange="previewImage('5')"  accept="image/*"/>
+			</div> 
+			<div id="p5" class="bg changestyle" style="background-image: url(img/p5.jpg);"></div>
+			<div class="bar2 animated fadeIn1"><p class="text2 animated fadeInUp1"><input type="text" value="時間靜止&nbsp;而思緒正在飛" size="24" name="p6-text1" id="p6-text1"></p></div>
+		</div>
+
+		<div class="page page-7-1 hide">
+			<img class="up moveIconUp" src="img/icon_up.png" />
+			<div id="takeimage6">
+				<label for="file-input6">
+					<img src="img/uploadicon.png"/>
+				</label>
+				<input id="file-input6" type="file" value="" onchange="previewImage('6')"  accept="image/*"/>
+			</div> 
+			<div id="p6" class="bg changestyle" style="background-image: url(img/p6.jpg);"></div>
+			<div>
+				<div class="textbox"><p class="text3 animated swing1" style="color: white"><input type="text" value="活的與眾不同" size="12" name="p7-text1" id="p7-text1"></p></div>
+				<div class="shadow"></div>
+			</div>
+		</div>
+
+		<div class="page page-8-1 hide">
+			<div class="bg"></div>
+			<img class="logo2 animated bounce" src="img/logo2.png" />
+			<!--<img class="qr animated fadeIn" src="img/qr.jpg" />-->
+			<div class="lasttextbox">
+				<p class="text4 animated fadeIn" style="color: white">[發佈公告]</p>
+				<p class="text5 animated fadeIn" style="color: white">為尊重圖像版權，敬請全面更換圖片！
+					為您的iApp填加色彩，有利於完善發佈。
+				</p>
+			</div>
+			<input type="image" onclick="preview()" class="share animated pulse" src="img/preview-1.png"/><!--img class="share animated pulse" src="img/preview-1.png" /-->
+			<input type="image" onclick="send()" class="create animated pulse" src="img/send-1.png" />
+			<p class="text6 animated fadeIn">iApp 由 Digital+ 數碼數位 支持創作
+			</p>
+			<!--<img class="lastpg animated fadeIn" src="img/lastpg-word.png" />-->
+		</div>
+
+	</div>	
+	<script src="js/zepto.min.js"></script>
+	<script src="js/touch.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/share.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+	<script src="js/preview.js"></script>
+
+	<!--<script>
+		var share_button_right = new Share(".share-button-bottom", {
+			ui: {
+				flyout: "bottom left",
+				button_text: ""
+			},
+			networks: {
+				facebook: {
+					app_id: "12345",
+				}
+			}
+		});
+	</script>-->
+
+
+	<!-- Google Analytics 分析 -->
+	// <script>
+	// 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	// 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	// 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	// 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	// 	ga('create', 'UA-62535634-4', 'auto');
+	// 	ga('send', 'pageview');
+
+	// </script>
+	<script>document.write('<style>#loading{display:none}</style>');</script>
+</body>
+</html>
