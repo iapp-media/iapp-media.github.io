@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>宝贝全计划</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fullPage.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData = {
+            "imgUrl": "http://img.bbpapp.com/event/mobile/css/img/logo-icon.png",
+            "timeLineLink": "http://img.bbpapp.com/event/mobile/index.html",
+            "sendFriendLink": "http://img.bbpapp.com/event/mobile/index.html",
+            "weiboLink": "http://img.bbpapp.com/event/mobile/index.html",
+            "tTitle": "中国0-3岁儿童能力发展报告",
+            "tContent": "爱测评的宝宝发展更好你造吗？",
+            "fTitle": "中国0-3岁儿童能力发展报告",
+            "fContent": "爱测评的宝宝发展更好你造吗？",
+            "wContent": "爱测评的宝宝发展更好你造吗？"
+        };
+
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function(res) {
+                if ('send_app_msg:cancel' != res.err_msg) {
+                    shareReport();
+                }
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(res) {
+                if ('share_timeline:cancel' != res.err_msg) {
+                    shareReport();
+                }
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink
+            }, function(res) {
+                if ('share_weibo:cancel' != res.err_msg) {
+                    shareReport();
+                }
+                _report('weibo', res.err_msg);
+            });
+        });
+    }, false)
+
+    function shareReport() {
+        var pid = '363570';
+        var id = '22094';
+        var wechatid = 'fromUsername';
+        var url = webdomain + '/tg_ms.php';
+        $.post(url, {
+            pid: pid,
+            id: id,
+            wechatid: wechatid,
+            type: 'share'
+        }, function(data) {
+            if ('done' == data) {
+                finishDump($.parseJSON('{"redirect":"http:\/\/mp.weixin.qq.com\/s?__biz=MzAwOTEyMjgyOA==&mid=202743066&idx=1&sn=fce1dc8e70a7656bafa39c024d1e734d&scene=4#wechat_redirect"}'));
+            }
+        });
+    }
+
+    function FavoriteReport() {
+        var pid = '363570';
+        var id = '22094';
+        var wechatid = 'fromUsername';
+        var url = webdomain + '/magazine/magazine/ShareBack';
+        $.post(url, {
+            pid: pid,
+            id: id,
+            wechatid: wechatid
+        }, function(data) {
+            if (data.status == 0) {
+                // success
+                // alert(data.message);
+                finishDump(data.data);
+            } else {
+                // failed
+                // alert(data.message);
+            }
+        }, 'json');
+    }
+
+    function finishDump(data) {
+        if (data) {
+            if (data.redirect) {
+                window.location = data.redirect;
+            } else if (data.tel) {
+                var tel_obj = $('<a href="tel:' + data.tel + '"></a>');
+                $(tel_obj).trigger('click');
+            }
+        }
+    }
+    // shareReport();
+    // FavoriteReport();
+    </script>
+    <script>
+    var imgUrl = "http://img.bbpapp.com/event/mobile/css/img/logo-icon.png";
+    var lineLink = "http://img.bbpapp.com/event/mobile/index.html";
+    var descContent = '爱测评的宝宝发展更好你造吗？';
+    var shareTitle = '中国0-3岁儿童能力发展报告';
+    var appid = '';
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('send_msg', res.err_msg);
+        })
+    }
+
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('timeline', res.err_msg);
+        });
+    }
+
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": descContent,
+            "url": lineLink,
+        }, function(res) {
+            //_report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv) {
+            shareWeibo();
+        });
+    }, false);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-inner">
+            <section class="page page0">
+                <div class="cont">
+                    <div class="div1"></div>
+                    <div class="div2"></div>
+                    <div class="div3">
+                        <div class="tip"></div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page1">
+                <header>
+                    <h1></h1>
+                    <h2>有效测评份数</h2>
+                    <div class="num-wp clearfix">
+                        <div class="num num1">0</div>
+                        <div class="num num2">0</div>
+                        <div class="num num3">0</div>
+                        <div class="num num4">0</div>
+                        <div class="num num5">0</div>
+                        <div class="num num6">0</div>
+                        <div class="num num7">0</div>
+                    </div>
+                </header>
+                <div class="cont">
+                    <div class="wp">
+                        <div class="y"></div>
+                        <div class="y-top"></div>
+                        <div class="x"></div>
+                        <div class="w200">200w</div>
+                        <div class="w160">160w</div>
+                        <div class="w120">120w</div>
+                        <div class="w80">80w</div>
+                        <div class="w40">40w</div>
+                        <div class="y2012-4">2012.4</div>
+                        <div class="y2012-8">2012.8</div>
+                        <div class="y2013-1">2013.1</div>
+                        <div class="y2014-3">2014.3</div>
+                        <div class="y2014-11">2014.11</div>
+                        <div class="tip-1w">1W</div>
+                        <div class="tip-10w">10W</div>
+                        <div class="tip-100w">100W</div>
+                        <div class="tip-170w">170W</div>
+                        <div class="chart">
+                            <div class="che1"></div>
+                            <div class="che2"></div>
+                            <div class="che3"></div>
+                        </div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page2">
+                <header>
+                    <h1>02</h1>
+                    <div class="div1">中国城市</div>
+                    <div class="div2">女宝也很拼</div>
+                    <div class="div3">亚历山大</div>
+                </header>
+                <div class="cont ">
+                    <div class="wp">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+                            <circle r="110" cy="110" cx="110" fill="#F94351" />
+                            <circle r="70" cy="110" cx="110" fill="#664333" />
+                            <path class="path2" d="M110 0 A110 110 0 1 1 81.52990503872272 216.2518408917975 L91.88266684282354 177.6148078402348 A70 70 0 1 0 110 40 L110 0" fill="#298FE3" />
+                            <path class="path1" d="M110 0 A110 110 0 1 1 55.00000000000001 205.26279441628827 L75 170.62177826491072 A70 70 0 1 0 110 40 L110 0" fill="#298FE3" />
+                        </svg>
+                        <div class="nv"></div>
+                        <div class="nan"></div>
+                        <div class="text-wp2">
+                            <div class="text1">测评</div>
+                            <div class="text2">（儿童发展测评）</div>
+                            <div class="text3">男女比</div>
+                        </div>
+                        <div class="text-wp1">
+                            <div class="text1">普查</div>
+                            <div class="text2">（中国人口普查）</div>
+                            <div class="text3">男女比</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <dl>
+                            <dt>男女性别比例为</dt>
+                            <dd><span>测评：</span>104:100</dd>
+                            <dd><span>普查：</span>118:100</dd>
+                        </dl>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page3">
+                <header>
+                    <h1>03</h1>
+                    <div class="div1">三高父母</div>
+                    <div class="div2">爱测评</div>
+                    <ul class="list clearfix">
+                        <li class="li1"><span></span>高学历</li>
+                        <li class="li2"><span></span>高收入</li>
+                        <li class="li3"><span></span>高自我意识</li>
+                    </ul>
+                </header>
+                <div class="cont">
+                    <div class="title">测试人均比例前六名地区</div>
+                    <div class="wp">
+                        <div class="y">
+                            <ul>
+                                <li>0.1</li>
+                                <li>0.09</li>
+                                <li>0.08</li>
+                                <li>0.07</li>
+                                <li>0.06</li>
+                                <li>0.05</li>
+                                <li>0.04</li>
+                                <li>0.03</li>
+                                <li>0.02</li>
+                                <li>0.01</li>
+                            </ul>
+                        </div>
+                        <div class="grid">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                        <div class="line line4"></div>
+                        <div class="line line5"></div>
+                        <div class="line line6"></div>
+                        <div class="line line7"></div>
+                        <div class="line line8"></div>
+                        <div class="line line9"></div>
+                        <div class="line line10"></div>
+                        <div class="line line11"></div>
+                        <div class="line line12"></div>
+                        <div class="x">
+                            <ul>
+                                <li>北京</li>
+                                <li>上海</li>
+                                <li>浙江</li>
+                                <li>福建</li>
+                                <li>江苏</li>
+                                <li>天津</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="item"><span class="tag1"></span>分配比例</div>
+                        <div class="item"><span class="tag2"></span>普查资料</div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page4">
+                <header>
+                    <h1>04</h1>
+                    <div class="div1">妈妈分离</div>
+                    <div class="div2">焦虑爆发点</div>
+                </header>
+                <div class="cont">
+                    <div class="wp">
+                        <div class="grid">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="y">
+                            <ul>
+                                <li>0.07</li>
+                                <li>0.06</li>
+                                <li>0.05</li>
+                                <li>0.04</li>
+                                <li>0.03</li>
+                                <li>0.02</li>
+                                <li>0.01</li>
+                            </ul>
+                        </div>
+                        <div class="x">
+                            <ul class="clearfix">
+                                <li>(月龄)</li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                                <li>13</li>
+                                <li>14</li>
+                                <li>15</li>
+                                <li>16</li>
+                                <li>17</li>
+                                <li>18</li>
+                                <li>19</li>
+                                <li>20</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>23</li>
+                                <li>24</li>
+                                <li>25</li>
+                                <li>26</li>
+                                <li>27</li>
+                                <li>28</li>
+                                <li>29</li>
+                                <li>30</li>
+                                <li>31</li>
+                                <li>32</li>
+                                <li>33</li>
+                                <li>34</li>
+                                <li>35</li>
+                                <li>36</li>
+                            </ul>
+                        </div>
+                        <div class="chart">
+                            <div class="tip"></div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <ul class="clearfix">
+                            <li><span></span>总比例</li>
+                            <li><span></span>男</li>
+                            <li><span></span>女</li>
+                        </ul>
+                        <b>宝宝测评年龄分布</b>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page5">
+                <div class="wp1">
+                    <div class="top">
+                        <h1>05</h1>
+                        <div class="text">
+                            女宝妈
+                            <br> 偷着乐
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="text">
+                            男宝妈
+                            <br> 请HOLD住
+                        </div>
+                    </div>
+                    <div class="tip"></div>
+                </div>
+                <div class="wp2">
+                    <div class="title">男女能力发展差异</div>
+                    <div class="x">
+                        <ul class="clearfix">
+                            <li>98</li>
+                            <li>99</li>
+                            <li>100</li>
+                            <li>101</li>
+                            <li>102</li>
+                            <li>103</li>
+                            <li>104</li>
+                            <li>105</li>
+                        </ul>
+                    </div>
+                    <div class="y">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="grid">
+                        <ul class="clearfix">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                    <div class="line line4"></div>
+                    <div class="line line5"></div>
+                    <div class="line line6"></div>
+                    <div class="line line7"></div>
+                    <div class="line line8"></div>
+                    <div class="line line9"></div>
+                    <div class="line line10"></div>
+                    <div class="tag-wp tag-wp1">
+                        <div class="tag"></div>
+                        <div class="text">总分</div>
+                    </div>
+                    <div class="tag-wp tag-wp2">
+                        <div class="tag"></div>
+                        <div class="text">运动</div>
+                    </div>
+                    <div class="tag-wp tag-wp3">
+                        <div class="tag"></div>
+                        <div class="text">情绪</div>
+                    </div>
+                    <div class="tag-wp tag-wp4">
+                        <div class="tag"></div>
+                        <div class="text">认知</div>
+                    </div>
+                    <div class="tag-wp tag-wp5">
+                        <div class="tag"></div>
+                        <div class="text">语言</div>
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li><span class="nan"></span>女生比值</li>
+                            <li><span class="nv"></span>男生比值</li>
+                        </ul>
+                        <div class="text">
+                            女性从小
+                            <strong>就伶牙俐齿</strong>
+                        </div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page6">
+                <header>
+                    <h1>06</h1>
+                    <div class="div1">有钱就是</div>
+                    <div class="div2">这么任性</div>
+                    <div class="div3">苹果宝宝更聪明</div>
+                </header>
+                <div class="cont">
+                    <div class="wp">
+                        <div class="x">
+                            <ul class="clearfix">
+                                <li>起点</li>
+                                <li>2岁</li>
+                            </ul>
+                        </div>
+                        <div class="grid">
+                            <div class="grid1"></div>
+                            <div class="grid2"></div>
+                            <div class="grid3"></div>
+                            <div class="grid4"></div>
+                        </div>
+                        <div class="line1"><span></span><b>苹果先天优势</b></div>
+                        <div class="line2"><span></span><b>安卓后发制人</b></div>
+                        <div class="footer">
+                            有钱不是万能的
+                            <br> 育儿不拼钱
+                        </div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page7 page7-1">
+                <header>
+                    <h1>07</h1>
+                    <div class="div1">20%智商+80%情商</div>
+                    <div class="div2">=成就</div>
+                </header>
+                <div class="cont">
+                    <div class="wp1">
+                        <div class="text">
+                            <p>答对率运动最高</p>
+                            协助宝宝运动发展
+                            <br> 相对比较得心应手
+                        </div>
+                        <div id="page7-1" class="chart0"></div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page7 page7-2">
+                <header>
+                    <h1>07</h1>
+                    <div class="div1">20%智商+80%情商</div>
+                    <div class="div2">=成就</div>
+                </header>
+                <div class="cont">
+                    <div class="wp2">
+                        <div class="text">
+                            <p>答错率情绪最高</p>
+                            情绪和认知训练则
+                            <br> 父母觉得比较困扰
+                        </div>
+                        <div id="page7-2" class="chart0"></div>
+                    </div>
+                    <div class="wp3">
+                        <div class="div31">
+                            <span class="text1">20%智商</span>
+                            <span class="text2">智商</span>
+                            <span class="plus"></span>
+                        </div>
+                        <div class="div32">
+                            <span class="text1">80%智商</span>
+                            <span class="text2">智商</span>
+                        </div>
+                        <div class="div33"></div>
+                        <div class="div34"></div>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page8">
+                <header>
+                    <h1>08</h1>
+                    <div class="div1">父母爱测评</div>
+                    <div class="div2">宝宝发展更好</div>
+                </header>
+                <div class="cont">
+                    <div class="wp">
+                        <div class="x"></div>
+                        <div class="y">
+                            <div class="y-tip">
+                                测评分数
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="grid1"></div>
+                        </div>
+                        <div class="tag1">100</div>
+                        <div class="tag2">113.6</div>
+                        <div class="line1">
+                            <div class="bottom"><span>1</span>次</div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="line2">
+                            <div class="bottom">&#62;<span>3</span>次</div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <span>测评次数</span>
+                    </div>
+                </div>
+                <span class="start"><b></b></span>
+            </section>
+            <section class="page page9">
+                <h1></h1>
+                <div class="logo"></div>
+                <div class="footer">
+                    <span><a class="log1" href="#">宝贝全计划</a>提供数据支持</span>
+                    <span><a class="log2" href="#">power</a>独家媒体支持</span>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fullPage.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
