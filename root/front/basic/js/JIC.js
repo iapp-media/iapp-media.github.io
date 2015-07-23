@@ -43,8 +43,8 @@
            }
            // console.log(cvs);
            var ctx = cvs.getContext("2d");
-           ctx.fillStyle = "rgba(255,255,255,1)";
-           ctx.fillRect(0,0,cvs.width,cvs.height);
+           // ctx.fillStyle = "rgba(255,255,255,1)";
+           // ctx.fillRect(0,0,cvs.width,cvs.height);
            ctx.drawImage(source_img_obj, 0, 0,cvs.width,cvs.height);
            var newImageData = cvs.toDataURL(mime_type, 0.6);
            var result_image_obj = new Image();

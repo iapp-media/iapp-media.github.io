@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>iApp Platform</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/cropper.css">
+    <link rel="stylesheet" type="text/css" href="css/cropperPage.css">
+</head>
+
+<body>
+    <div id="show">
+        <a id="show-upload" >
+            <img class="upload" src="img/uploadicon.png" />
+        </a>
+        <img id="show-img" class="show" src="img/picture1.jpg" />
+        <div class="confirm">
+        <p>
+            <a id="confirm" href="">完成</a>
+        </p>
+    </div>
+    </div>
+    <div id="upload-img">
+        <img id="preview" src="" style="display:none; height:400px; ">
+        <div class="img-container">
+            <img src="" alt="拖曳進行照片裁切">
+        </div>
+        <p class="word">(支持圖片上傳格式JPG,PNG)</p>
+        <label for="inputImage">
+            <div class="select">
+                <p>上傳照片</p>
+            </div>
+        </label>
+        <input type="file" accept="image/*" capture="camera" id="inputImage" style="display:none;">
+        <button data-method="getCroppedCanvas" type="button" class="cut">
+            <p>截圖</p>
+        </button>
+        <button onclick="compress()" type="button" class="send" id="send" >
+            <p>確認</p>
+        </button>
+        <label id="base64" style=" word-wrap: break-word; word-break: normal; display:none;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script type="text/javascript" src="js/JIC.js"></script>
+    <script type="text/javascript" src="js/cropper.js"></script>
+    <script type="text/javascript" src="js/cropperPage.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#show-upload").click(function() {
+            $('#preview').hide();
+            $('.img-container').show();
+            $("#upload-img").show();
+            $("#show").hide();
+            $('.send').hide();
+            $('.cut').show();
+        });
+        $(".cut").click(function() {
+            $(".cut").hide();
+            $(".send").show();
+            
+        });
+        $("#send").click(function() {
+            $("#upload-img").hide();
+            $("#show").show();
+            
+        });
+        $('#inputImage').change(function() {
+            $('#preview').hide();
+            $('.img-container').show();
+            $('.send').hide();
+            $('.cut').show();
+        });
+    });
+    </script>
+    
+</body>
+
+</html>

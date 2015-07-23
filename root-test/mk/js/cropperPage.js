@@ -126,7 +126,7 @@ $(function () {
           document.getElementById('base64').innerText = document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, "");
           document.getElementById('p'+current).setAttribute('src',document.getElementById('preview').src);
           // document.getElementById('p'+current+'b').style.backgroundImage = 'url('+document.getElementById('preview').src+')';
-          // $('.edit').hide();
+          $('.edit').hide();
           // console.log($('this'));
           // $('#preview').show();
         }

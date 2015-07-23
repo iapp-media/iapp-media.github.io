@@ -51,10 +51,10 @@
 
     if ('MSGesture' in window) {
       gesture = new MSGesture()
-      gesture.target = document.body
+      gesture.target = document.body.getElementById('test')
     }
 
-    $(document)
+    $('#test')
       .bind('MSGestureEnd', function(e){
         var swipeDirectionFromVelocity =
           e.velocityX > 1 ? 'Right' : e.velocityX < -1 ? 'Left' : e.velocityY > 1 ? 'Down' : e.velocityY < -1 ? 'Up' : null;
