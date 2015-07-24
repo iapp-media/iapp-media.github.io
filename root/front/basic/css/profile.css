@@ -23,7 +23,7 @@
             width: 100%;height: 3px;
             background-color: #ff9933;
         }
-        .store p{color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;}
+        .store p{color: #ff9933;font-size: 18px;position:relative;top: 20%;left: 20%;}
         .store{
             position: absolute;
             top: 80%;left: 37%;
@@ -34,7 +34,7 @@
         .store:hover{
             background: #ffbb66;
         }
-        .cancel p{color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;}
+        .cancel p{color: #ff9933;font-size: 18px;position:relative;top: 20%;left: 20%;}
         .cancel{
             position: absolute;
             top: 80%;left: 52%;
@@ -74,5 +74,5 @@
             top: 5%;left: 20%;
         }
         .logo-file p{
-            color: #ff9933;font-size: 16px;position:relative;top: -40%;left: 10%;
+            color: #ff9933;font-size: 16px;position:relative;top: 20%;left: 10%;
         }

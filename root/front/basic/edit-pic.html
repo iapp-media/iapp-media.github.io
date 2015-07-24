@@ -17,7 +17,8 @@
         <a id="show-upload" >
             <img class="upload" src="img/uploadicon.png" />
         </a>
-        <img id="show-img" class="show" src="img/picture1.jpg" />
+        <img id="show-img" class="show2" src="" />
+        <img id="img" class="show" src="img/picture1.jpg" />
         <div class="confirm">
         <p>
             <a id="confirm" href="">完成</a>
@@ -25,7 +26,7 @@
     </div>
     </div>
     <div id="upload-img">
-        <img id="preview" src="" style="display:none; height:400px; ">
+        <img id="preview" src="">
         <div class="img-container">
             <img src="" alt="拖曳進行照片裁切">
         </div>
@@ -35,14 +36,14 @@
                 <p>上傳照片</p>
             </div>
         </label>
-        <input type="file" accept="image/*" capture="camera" id="inputImage" style="display:none;">
+        <input type="file" accept="image/*" capture="camera" id="inputImage">
         <button data-method="getCroppedCanvas" type="button" class="cut">
             <p>截圖</p>
         </button>
         <button onclick="compress()" type="button" class="send" id="send" >
             <p>確認</p>
         </button>
-        <label id="base64" style=" word-wrap: break-word; word-break: normal; display:none;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label>
+        <label id="base64">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label>
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->

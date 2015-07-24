@@ -5,6 +5,7 @@
 <head id="Head1" runat="server">
     <meta charset="utf-8">
     <title>default</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/colorbox.css" />
 <!-- <link href="css/my.css" rel="stylesheet" /> -->
@@ -22,6 +23,13 @@
 </head>
 
 <body>
+    <!-- 導覽教學頁 -->
+    <div class="demonstrate">
+        <img src="img/demonstrate.jpg" style="width:100%;height: 100%; position:absolute;top:0px;left: 0px;z-index: 999;">
+        <!-- <div id="start" class="animated pulse infinite"><p><a href="#">GO >></a></p>
+        </div> -->
+    </div>
+
     <form id="form1" runat="server">
         <asp:ScriptManager ID="Scriptmanager1" runat="server"></asp:ScriptManager>
         <script>
@@ -143,14 +151,12 @@
                    <a href="#" id="close" ><img style="position:absolute;bottom:20px;right: 10px;width:20px;z-index: 3;" src="img/cancel.png"></a>
                   <a href="#" id="btpic"><img class="button-pic" src="img/button-pic.png">
                   <a href="#" id="btword"><img class="button-wod" src="img/button-word.png"></a>
-                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
                   <!-- 圖片編輯iframe -->
-                    <iframe id="iframe " class="iframe-ed1" src="Pages/seeEdit.aspx">
+                    <iframe id="iframe " class="iframe-ed1" src="edit-pic.html">
                     </iframe>
                   <!-- 文字編輯iframe -->
                   <div class="edit2 hide">
-                  <a href="#" id="fin"><img class="finish" src="img/finish.png"></a>
-                    <iframe id="iframe2" class="iframe-ed2" src="Pages/seeEdit.aspx">
+                    <iframe id="iframe2" class="iframe-ed2" src="edit-text.html">
                     </iframe>
                   </div>
                 </div>
@@ -163,7 +169,8 @@
                 <div class="publish hide">
                     <div class="top"></div>
                     <div class="middle">
-                        <div class="icon"><p>icon</p></div>
+                        <iframe id="iframe-set" class="iframe-set" src="set2.html" scrolling="no"></iframe>
+                        <!-- <div class="icon"><p>icon</p></div>
                         <div class="send"><p><a href="#" id="send">完成</a></p></div>
                         <table>
                             <tr>
@@ -174,7 +181,7 @@
                                 <th><p>iApp 描述</p></th>
                                 <th><input class="describe" type="text"></th>
                             </tr>
-                        </table>
+                        </table> -->
                     </div>
                     <div class="bottom"><a href="#" id="close-publish"><img class="cancel" src="img/cancel.png"></a></div>
                 </div>
@@ -261,23 +268,7 @@
             width: "700px",
             height: "600px"
         });
-        $(".callbacks").colorbox({
-            onOpen: function() {
-                alert('onOpen: colorbox is about to open');
-            },
-            onLoad: function() {
-                alert('onLoad: colorbox has started to load the targeted content');
-            },
-            onComplete: function() {
-                alert('onComplete: colorbox has displayed the loaded content');
-            },
-            onCleanup: function() {
-                alert('onCleanup: colorbox has begun the close process');
-            },
-            onClosed: function() {
-                alert('onClosed: colorbox has completely closed');
-            }
-        });
+        
     });
     </script>
 
@@ -306,6 +297,12 @@ function editmid() {
 
 
 $(document).ready(function() {
+    // $("#start").click(function() {
+    //     $(".demonstrate").hide();
+    // });
+    $(".demonstrate").click(function() {
+        $(".demonstrate").hide();
+    });
     $("#pageShow").click(function() {
         $(".select").animate({
             width: 'toggle'

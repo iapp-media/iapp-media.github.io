@@ -107,13 +107,13 @@ a {text-decoration:none; color:#ff9933;}
 			color: #ff9933;
 			font-size: 18px;
 			position:relative;
-			top: -50%;left: 20%;
+			top: 10%;left: 20%;
 		}
 		.register p{
 			color: #ff9933;
 			font-size: 18px;
 			position:relative;
-			top: -50%;left: 20%;
+			top: 10%;left: 20%;
 		}
 		.login{
 		    position: absolute;

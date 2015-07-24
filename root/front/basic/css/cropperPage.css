@@ -52,7 +52,7 @@ a:hover{text-decoration:none; color:#ff9933;}
     position: absolute;
     top: 150px;
     left: 150px;
-    z-index: 2;
+    z-index: 4;
     opacity: 0.8;
 }
 .upload:hover{
@@ -60,9 +60,9 @@ a:hover{text-decoration:none; color:#ff9933;}
 }
 #upload-img{
     display: none;
-    background-color: #fff;
     z-index: 999;
 }
+
 .img-container {
   background-color: #f7f7f7;
   overflow: hidden;
@@ -72,24 +72,29 @@ a:hover{text-decoration:none; color:#ff9933;}
 
 .img-container {
   min-height: 200px;
-  max-height: 466px;
-  margin-bottom: 20px;
+  height: 400px;
   margin-top: 30px;
 }
-
-
-
 .img-container > img {
   max-width: 50%;
   padding-top: 20px;
 }
-
+#preview{
+  display:none;
+  height:400px; 
+  margin-top: 30px;
+  margin-left: 90px;
+}
 .select{
 	width: 80px;height: 30px;
 	background-color: #ff9933;
 	position: absolute;
 	top: 10px;left: 10px;
 	border: 2px solid #fff;
+  border-radius: 8px;
+}
+.select:hover{
+  background-color: #ffbb66;
 }
 .select p{
 	color: #fff;
@@ -104,7 +109,8 @@ a:hover{text-decoration:none; color:#ff9933;}
 }
 .send{
 	margin-left: 10px;
-	border: 2px solid #ff9933; 
+	border: 2px solid #ff9933;
+  border-radius: 8px; 
 	background-color: #fff;
 	width: 80px;height: 30px;
 }
@@ -112,15 +118,22 @@ a:hover{text-decoration:none; color:#ff9933;}
 	color: #ff9933;
 	font-size: 15px;
 }
+.send:hover{
+    background: #ffbb66;
+}
 .cut{
   margin-left: 10px;
-  border: 2px solid #ff9933; 
+  border: 2px solid #ff9933;
+  border-radius: 8px; 
   background-color: #fff;
   width: 80px;height: 30px;
 }
 .cut p{
   color: #ff9933;
   font-size: 15px;
+}
+.cut:hover{
+    background: #ffbb66;
 }
 .confirm{
     position: absolute;
@@ -143,4 +156,12 @@ a:hover{text-decoration:none; color:#ff9933;}
     font-size: 22px;
     position:absolute;
     top: 12%;left: 25%;
+}
+#base64{
+  word-wrap: break-word; 
+  word-break: normal; 
+  display:none;
+}
+#inputImage{
+  display: none;
 }

@@ -536,8 +536,8 @@ a {text-decoration:none; color:#ff9933;}
 }
 .final .describe{
     position: absolute;
-    top: 110px;
-    left: 200px;
+    top: 140px;
+    left: 270px;
 }
 .final .create{
     position: absolute;
@@ -553,7 +553,7 @@ a {text-decoration:none; color:#ff9933;}
     color: #ff9933;
     font-size: 22px;
     position:absolute;
-    top: -50%;left: 20%;
+    top: 10%;left: 20%;
 }
 .final .share{
     position: absolute;
@@ -569,7 +569,7 @@ a {text-decoration:none; color:#ff9933;}
     color: #ff9933;
     font-size: 22px;
     position:absolute;
-    top: -50%;left: 20%;
+    top: 10%;left: 20%;
 }
 .final .src{
     position: absolute;

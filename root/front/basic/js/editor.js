@@ -999,7 +999,7 @@ You should have received a copy of the GNU General Public License along with thi
 				'status_bar':false,
 				'font_size':fontsizes,
 				'color':colors,
-				'splchars':specialchars,
+				'splchars':false,
 				'insert_table':false,
 				'select_all':false,
 				'togglescreen':false

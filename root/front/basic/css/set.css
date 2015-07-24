@@ -3,11 +3,14 @@
             padding: 0;
             width: auto;height: auto;
         }
+        a{text-decoration:none; color:#ff9933;}
         #FU1
         {
             display:none;
         }
-        a{text-decoration:none; color:#ff9933;}
+        #FU2{
+            padding-left: 30px;
+        }
         .top{
             position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
         }
@@ -30,7 +33,7 @@
         .set{
             position: absolute;
             left: 10%;
-            top: 20%;
+            top: 10%;
             width: 80%;
             height: 300px;
             z-index: 2;
@@ -40,13 +43,13 @@
         }
         .set .icon{
             position: absolute;
-            top: 0px;left: 220px;
+            top: 15px;left: 220px;
+            width: 120px;height: 100px;
             opacity: 1;
         }
         .set .icon p{
             text-align: center;
             font-size: 25px;
-            opacity: 1;
         }
         .icon .iconimg-1{
             border: 2px #7d7d7d solid;
@@ -54,10 +57,9 @@
         .icon:hover .iconimg-1{
             opacity: 0.5;
         }
-        
         .set table{
             position: absolute;
-            top: 100px;left: 70px;
+            top: 140px;left: 70px;
             color: #7d7d7d;
             padding: 10px;
         }
@@ -66,8 +68,8 @@
             top: 0px;left: 30px;
         }
         .set .name{
-            position: relative;
-            top: 0px;left: 30px;
+            margin-top: 25px;
+            margin-left: 30px;
             width: 300px; 
             border: 2px #969696 solid;
             border-left: none;
@@ -75,14 +77,15 @@
             border-top: none;
         }
         .set .describe{
-            position: relative;
-            top: 28px;left: 30px;
+            margin-top: 25px;
+            margin-left: 30px;
             width: 300px;height: 80px; 
             border: 2px #969696 solid;
         }
+
         .set .send{
             position: absolute;
-            top: 120%;left: 44%;
+            top: 350px;left: 40%;
             width: 70px;height: 30px;
             border:2px #ff9933 solid;
             border-radius: 8px;
@@ -94,6 +97,5 @@
             color: #ff9933;
             font-size: 20px;
             position:absolute;
-            top: -50%;left: 20%;
+            top: 20%;left: 20%;
         }
-        
