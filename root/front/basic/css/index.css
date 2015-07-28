@@ -2,6 +2,9 @@ body {
     background: #fff;
     color: #000;
     word-wrap: break-word;
+    height: 7000px;
+    background-image: url(img/intro-bg-1.png); 
+    background-size: 100%;
 }
 .hide{display: none;}
 .show{display: inline;}
@@ -18,10 +21,23 @@ body {
 .slide {
     position: relative;
     top: 0%;
-    left: -4.5%;
+    left: 0%;
     z-index: 3;
 }
-
+.slideShow .s .s1-1{
+    width: 220px;height: 405px;
+    display: inline;
+}
+.slideShow .s .s1-2{
+    width: 220px;height: 405px;
+    display: none;
+}
+.slideShow .s:hover .s1-1{
+    display: none;
+}
+.slideShow .s:hover .s1-2{
+    display: inline;
+}
 .loading {
     width: 150px;
     position: fixed;
@@ -165,7 +181,21 @@ body {
     text-align: center;
     z-index: 4;
 }
-
+.img4-1{
+    width: 200px;
+    height: auto;
+    top: 70%;
+    margin-left: 60px;
+    text-align: center;
+    z-index: 4;
+    display: none;
+}
+.iframe:hover .img4{
+    display: none;
+}
+.iframe:hover .img4-1{
+    display: inline;
+}
 .img5 {
     width: 50px;
     height: auto;

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/colorbox.css" />
 
 	</head>
-	<body style="height: 7000px;background-image: url(img/intro-bg-1.png); background-size: 100%;">
+	<body onLoad="checkCookie()">
 		<div class="container" style="display: block;background-image: url(img/intro-bg-1.png);background-size: 100%;">
 			<!--skip-->
 			<div data-00="opacity:1;" 
@@ -67,10 +67,10 @@
          			data-1150="top:60%;opacity:0;transform:scale(0.5);margin-left: -50px;filter:alpha(opacity=0);"src="img/intro-social4.png"/>
         			
         			<img class="social5 skrollable skrollable-before hide" style="z-index: 3;"
-        				data-650="display: inline;top:25%;opacity:0;transform:scale(1);margin-left: -100px;filter:alpha(opacity=0)"
+        			data-650="display: inline;top:25%;opacity:0;transform:scale(1);margin-left: -100px;filter:alpha(opacity=0)"
          			data-700="top:25%;opacity:1;transform:scale(1.5);margin-left: -100px;filter:alpha(opacity=0)"
          			data-1000="top:50%;opacity:1;transform:scale(0.8);margin-left: -100px;filter:alpha(opacity=100)"
-        				data-1220="top:60%;opacity:0;transform:scale(0.5);margin-left: -50px;filter:alpha(opacity=0);"src="img/intro-social5.png"/>
+        			data-1220="top:60%;opacity:0;transform:scale(0.5);margin-left: -50px;filter:alpha(opacity=0);"src="img/intro-social5.png"/>
          		
          		<img class="social6 skrollable skrollable-before hide" style="z-index: 3;"
          			data-650="display: inline;top:65%;opacity:0;transform:scale(1);margin-left: -250px;filter:alpha(opacity=0)"
@@ -159,10 +159,22 @@
 	            		data-5500="opacity:0.5;filter:alpha(opacity=50);"
 	            		data-6000="opacity:1;filter:alpha(opacity=100);">
 					    <ul class="slides">
-					        <li class="slide"><img src="img/intro-digital.png" onMouseOut="this.src='img/intro-digital.png'" onMouseOver="this.src='img/intro-digital-qr.jpg'" width="220" height="405" /></a></li>
-					        <li class="slide"><img src="img/intro-html5.jpg" onMouseOut="this.src='img/intro-html5.jpg'" onMouseOver="this.src='img/intro-html5-qr.jpg'"width="220" height="405" /></a></li>
-					        <li class="slide"><img src="img/intro-memory.jpg" onMouseOut="this.src='img/intro-memory.jpg'" onMouseOver="this.src='img/intro-memory-qr.jpg'" width="220" height="405" /></a></li>
-					        <li class="slide"><img src="img/intro-mommy.jpg" onMouseOut="this.src='img/intro-mommy.jpg'" onMouseOver="this.src='img/intro-mommy-qr.jpg'" width="220" height="405" /></a></li>
+					        <li class="slide s">
+					        	<img class="s1-1" src="img/intro-digital.png"/>
+					        	<img class="s1-2" src="img/intro-digital-qr.jpg">
+					        </li>
+					        <li class="slide s">
+					        	<img class="s1-1" src="img/intro-html5.jpg"/>
+					        	<img class="s1-2" src="img/intro-html5-qr.jpg">
+					        </li>
+					        <li class="slide s">
+					        	<img class="s1-1" src="img/intro-memory.jpg"/>
+					        	<img class="s1-2" src="img/intro-memory-qr.jpg">
+					        </li>
+					        <li class="slide s">
+					        	<img class="s1-1" src="img/intro-mommy.jpg"/>
+					        	<img class="s1-2" src="img/intro-mommy-qr.jpg">
+					        </li>
 					    </ul>
 					</div>
 
@@ -181,7 +193,13 @@
 	            		data-5500="opacity:0;filter:alpha(opacity=0);"
 	            		data-6000="opacity:0.5;filter:alpha(opacity=50);"
 	            		data-6500="opacity:1;filter:alpha(opacity=100);"
-	            		src="img/intro-button.png" onMouseOut="this.src='img/intro-button.png'" onMouseOver="this.src='img/intro-button-2.png'"/></a>
+	            		src="img/intro-button.png"/>
+					<img class="img4-1 marg skrollable" 
+	            		data-5500="opacity:0;filter:alpha(opacity=0);"
+	            		data-6000="opacity:0.5;filter:alpha(opacity=50);"
+	            		data-6500="opacity:1;filter:alpha(opacity=100);"
+	            		src="img/intro-button-2.png">
+	            		</a>
 				
 				<img class="img5 marg skrollable" 
 					data-5200="opacity:0;filter:alpha(opacity=0);transform:translate3d(0, -3000px, 0);"
@@ -261,6 +279,33 @@
 	        });
 	    });
 	</script>
-    
+    <script>
+    	function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=")
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1) c_end = document.cookie.length
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+
+    function setCookie(c_name, value, expiredays) {
+        var exdate = new Date()
+        exdate.setDate(exdate.getDate() + expiredays)
+        document.cookie = c_name + "=" + escape(value) +
+            ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+    }
+    function checkCookie() {
+        username = getCookie('username')
+        if (username != null && username != "") {
+            // window.location.href = 'Default.html';
+        } setCookie('username', 'logged', 30)
+    }
+    </script>
+	
 	</body>
 </html>
