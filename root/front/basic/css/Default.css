@@ -9,7 +9,9 @@ a {text-decoration:none; color:#ff9933;}
 .hide {
     display: none;
 }
-
+.show{
+    
+}
 /*demonstrate*/
 
         #start p{color: #ff9933;font-weight:bold;font-size: 32px;position:relative;top: -15%;left: 15%;}
