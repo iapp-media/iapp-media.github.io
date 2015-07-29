@@ -54,6 +54,7 @@ a:hover{text-decoration:none; color:#ff9933;}
     left: 150px;
     z-index: 4;
     opacity: 0.8;
+    cursor: pointer;
 }
 .upload:hover{
     opacity: 1;
