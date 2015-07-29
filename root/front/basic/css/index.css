@@ -24,18 +24,18 @@ body {
     left: 0%;
     z-index: 3;
 }
-.slideShow .s .s1-1{
+.slideShow .slide .s1-1{
     width: 220px;height: 405px;
     display: inline;
 }
-.slideShow .s .s1-2{
+.slideShow .slide .s1-2{
     width: 220px;height: 405px;
     display: none;
 }
-.slideShow .s:hover .s1-1{
+.slideShow .slide:hover .s1-1{
     display: none;
 }
-.slideShow .s:hover .s1-2{
+.slideShow .slide:hover .s1-2{
     display: inline;
 }
 .loading {
@@ -118,7 +118,41 @@ body {
     opacity: 0;
     cursor: pointer;
 }
-
+.triangle{
+    width: 50px;height: 50px;
+    position: absolute;
+    bottom: 40px;
+    right: 48%;
+}
+.hint{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background-color: #000;
+    width: 100%;height: 100%;
+    opacity: 0.5;
+    display: none;
+}
+.next{
+    cursor: pointer;
+}
+.next p{
+    position: absolute;
+    bottom: 120px;
+    left: 45%;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 1;
+    z-index: 2;
+    display: none;
+}
+.next:hover .hint{
+    display: inline;
+}
+.next:hover p{
+    display: inline;
+}
 .container {
     position: fixed;
     width: 100%;
