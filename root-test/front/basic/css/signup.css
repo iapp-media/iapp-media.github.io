@@ -3,6 +3,7 @@ body{
 	padding: 0;
 	width: auto;height: auto;
 }
+a{text-decoration:none; color:#ff9933;}
 .top{
 	position: fixed;
 	top: 0%;left: 0%;
@@ -20,28 +21,42 @@ body{
 	width: 100%;height: 10%;
 	background-color: orange;
 }
+.title{
+	position: absolute; 
+	top: 5%; left: 15%; 
+	width:70%; height: 10%;
+}
+.title p{
+	text-align: center; 
+	font-size: 22px; 
+	font-weight: bold;
+	color: #ff9933;
+}
 .bar{
 	position: absolute;
-	top: 100%;left: 0%;
-	width: 100%;height: 3px;
+	top: 110%;left: 0%;
+	width: 100%;height: 2px;
 	background-color: #ff9933;
 	opacity: 0.6;
 }
 .input{
 	position: absolute;
 	top: 20%;left: 30%;
-	width: 40%;height: 50%;
-	background-color: white;
+	width: 100%;height: 50%;
 	opacity: 0.8;
 }
-.register{
+.input table{
+	color: #7d7d7d;
 	position: absolute;
-	top: 0%;left: 40%;
-	width: 20%;height: 80%;
-	background-image: url(../img/register.png);
-	background-size: contain;
-	background-repeat: no-repeat;
+	top: 5%;
+	left: 0%;
+	width: 100%;
 }
+.input table input{
+	width: 250px;
+	padding-bottom: 10px;
+}
+
 .tb5 {
 	border:2px solid #456879;
 	border-radius:10px;
@@ -50,7 +65,7 @@ body{
 }
 		.confirm{
 		    position: absolute;
-		    top: 72%;left: 37%;
+		    top: 72%;left: 46%;
 		    width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
@@ -58,4 +73,9 @@ body{
 		.confirm:hover{
 		    background: #ffbb66;
 		}
-
+		.confirm p{
+			color: #ff9933;
+			font-size: 18px;
+			position:relative;
+			top: 20%;left: 20%;
+		}

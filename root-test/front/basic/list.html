@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style type="text/css">
-		body{
-			margin: 0;
-			padding: 0;
-			width: auto;height: auto;
-		}
-		.hide{ display:none;}
-		.show{ display:block;}
-		.bar2{
-			position: absolute;
-			top: 110%;left: 0%;
-			width: 100%;height: 2px;
-			background: #ff9933;
-		}
-		.add{
-		    position: absolute;
-		    top: 8%;left: 80%;
-		    width: 78px;height: 25px;
-		    border: 2px #ff9933 solid; 
-		    border-radius: 8px;
-		    z-index: 3;
-		}
-		.add:hover{
-			background: #ffbb66;
-		}
-		ul{
-			list-style: none;
-		}
-		#box{
-			position: absolute;
-			top: 18%; left: 5%;
-			height: auto;
-			width: 80%;
-		}
-		#box ul li{
-			width: 80%; height: 5%;
-			margin: 1%;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/list.css">
 </head>
+
 <body>
-	<div class="content">
-		<a href="#"><div class="add"><p style="color: #ff9933;font-size: 15px;position:absolute;top: -40%;left: 10%;">增加App</p></div></a>
-		<div style="position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;">
-			<p style="font-size: 24px;font-weight: bold;color: orange;text-align: center">我的iApp</p>
-			<div class="bar2"></div>
-		</div>
-		<div id="box">
-			<ul>
-				<li>
-					<p style="font-size: 20px;font-weight: bold;color: gray;text-align: left">我的iApp</p>
-					<div style="position: absolute;top:22%;left: 8%;width: 100%;height: 1px;background-color: #7C7C7C;opacity: 0.5;"></div>
-					<a href="#"><img style="position: absolute;top: 9%;left: 73%;width: auto%;height: 12%;" src="img/share-01.png" onMouseOut="this.src='img/share-01.png'" onMouseOver="this.src='img/share-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 9%;left: 82%;width: auto%;height: 12%;" src="img/edit-01.png" onMouseOut="this.src='img/edit-01.png'" onMouseOver="this.src='img/edit-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 9%;left: 91%;width: auto%;height: 12%;" src="img/delete-01.png" onMouseOut="this.src='img/delete-01.png'" onMouseOver="this.src='img/delete-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 9%;left: 100%;width: auto%;height: 12%;" src="img/copy-01.png" onMouseOut="this.src='img/copy-01.png'" onMouseOver="this.src='img/copy-02.png'"></a>
-				</li>
-				<li>
-					<p style="font-size: 20px;font-weight: bold;color: gray;text-align: left">我的iApp</p>
-					<div style="position: absolute;top: 52%;left: 8%;width: 100%;height: 1px;background-color: #7C7C7C;opacity: 0.5;"></div>
-					<a href="#"><img style="position: absolute;top: 39%;left: 73%;width: auto%;height: 12%;" src="img/share-01.png" onMouseOut="this.src='img/share-01.png'" onMouseOver="this.src='img/share-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 39%;left: 82%;width: auto%;height: 12%;" src="img/edit-01.png" onMouseOut="this.src='img/edit-01.png'" onMouseOver="this.src='img/edit-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 39%;left: 91%;width: auto%;height: 12%;" src="img/delete-01.png" onMouseOut="this.src='img/delete-01.png'" onMouseOver="this.src='img/delete-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 39%;left: 100%;width: auto%;height: 12%;" src="img/copy-01.png" onMouseOut="this.src='img/copy-01.png'" onMouseOver="this.src='img/copy-02.png'"></a>
-				</li>
-				<li>
-					<p style="font-size: 20px;font-weight: bold;color: gray;text-align: left">我的iApp</p>
-					<div style="position: absolute;top: 82%;left: 8%;width: 100%;height: 1px;background-color: #7C7C7C;opacity: 0.5;"></div>
-					<a href="#"><img style="position: absolute;top: 69%;left: 73%;width: auto%;height: 12%;" src="img/share-01.png" onMouseOut="this.src='img/share-01.png'" onMouseOver="this.src='img/share-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 69%;left: 82%;width: auto%;height: 12%;" src="img/edit-01.png" onMouseOut="this.src='img/edit-01.png'" onMouseOver="this.src='img/edit-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 69%;left: 91%;width: auto%;height: 12%;" src="img/delete-01.png" onMouseOut="this.src='img/delete-01.png'" onMouseOver="this.src='img/delete-02.png'"></a>
-					<a href="#"><img style="position: absolute;top: 69%;left: 100%;width: auto%;height: 12%;" src="img/copy-01.png" onMouseOut="this.src='img/copy-01.png'" onMouseOver="this.src='img/copy-02.png'"></a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <div class="content">
+        <div class="add">
+            <p><a href="#">增加App</a></p>
+        </div>
+        <div class="title">
+            <p>我的iApp</p>
+            <div class="bar1"></div>
+        </div>
+        <div id="box">
+            <div class="op">
+                <ul>
+                    <li>
+                        <p class="app-name">我的iApp</p>
+                        <div class="edit">
+                            <p><a href="#" class="btn-edit">編輯</a></p>
+                        </div>
+                        <div class="delete">
+                            <p><a href="#" class="btn-del">刪除</a></p>
+                        </div>
+                        <div class="set">
+                            <p><a href="set.html" target="_self" ="btn-set">設定</a></p>
+                        </div>
+                        <div class="share">
+                            <p><a href="#" class="btn-share">分享</a></p>
+                        </div>
+                        <div class="bar2"></div>
+                    </li>
+                    <li>
+                        <p class="app-name">我的iApp</p>
+                        <div class="edit">
+                            <p><a href="#" class="btn-edit">編輯</a></p>
+                        </div>
+                        <div class="delete">
+                            <p><a href="#" class="btn-del">刪除</a></p>
+                        </div>
+                        <div class="set">
+                            <p><a href="set.html" class="btn-set">設定</a></p>
+                        </div>
+                        <div class="share">
+                            <p><a href="#" class="btn-share">分享</a></p>
+                        </div>
+                        <div class="bar2"></div>
+                    </li>
+                    <li>
+                        <p class="app-name">我的iApp</p>
+                        <div class="edit">
+                            <p><a href="#" class="btn-edit">編輯</a></p>
+                        </div>
+                        <div class="delete">
+                            <p><a href="#" class="btn-del">刪除</a></p>
+                        </div>
+                        <div class="set">
+                            <p><a href="set.html" class="btn-set">設定</a></p>
+                        </div>
+                        <div class="share">
+                            <p><a href="#" class="btn-share">分享</a></p>
+                        </div>
+                        <div class="bar2"></div>
+                    </li>
+                    <li>
+                        <p class="app-name">我的iApp</p>
+                        <div class="edit">
+                            <p><a href="#" class="btn-edit">編輯</a></p>
+                        </div>
+                        <div class="delete">
+                            <p><a href="#" class="btn-del">刪除</a></p>
+                        </div>
+                        <div class="set">
+                            <p><a href="set.html" class="btn-set">設定</a></p>
+                        </div>
+                        <div class="share">
+                            <p><a href="#" class="btn-share">分享</a></p>
+                        </div>
+                        <div class="bar2"></div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

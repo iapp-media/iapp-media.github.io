@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
+a {text-decoration:none; color:#ff9933;}
 
 .hide {
     display: none;
@@ -421,29 +422,126 @@ body {
                 left: 0;
                 top: 0;
             }
-.final{
+
+.publish-btn {
     position: absolute;
-    left: 500px;
+    top: 21%;
+    left: 555px;
+    width: 40px;
+    height: 57px;
+    z-index: 1;
+}
+.top{
+    position: absolute;
+    top: 0%;left: 0%;
+    width: 100%;height: 10%;
+    background: #ff9933;
+    border-top-right-radius: 20px 20px;
+}
+.middle{
+    position: absolute;
+    background-color: #fff;
+    top: 10%;left: 0%;
+    width: 100%;height: 80%;
+}
+.bottom{
+    position: absolute;
+    top: 90%;left: 0%;
+    width: 100%;height: 10%;
+    background: #ff9933;
+    border-bottom-right-radius: 20px 20px;
+}
+.publish{
+    position: absolute;
+    left: 550px;
     top: 14%;
-    width: 620px;
+    width: 600px;
     height: 500px;
     border-style: solid;
     border-width: 1px;
     border-color: gray;
     border-top-right-radius: 20px 20px;
-    border-top-left-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px;
-    border-bottom-left-radius: 20px 20px;
+    z-index: 2;
+}
+.publish a{
+    color: #fff;
+}
+.publish .icon{
+    position: absolute;
+    top: 40px;left: 220px;
+    width: 100px;height: 100px;
+    border: 2px #7d7d7d solid;
+    opacity: 0.5;
+}
+.publish .icon p{
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.5;
+}
+.publish table{
+    position: absolute;
+    top: 150px;left: 70px;
+    color: #7d7d7d;
+    padding: 10px;
+}
+.publish .name{
+    position: relative;
+    top: 0px;left: 30px;
+    width: 300px; 
+    border: 2px #969696 solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.publish .describe{
+    position: relative;
+    top: 28px;left: 30px;
+    width: 300px;height: 80px; 
+    border: 2px #969696 solid;
+}
+.publish .send{
+    position: absolute;
+    top: 88%;left: 40%;
+    width: 70px;height: 30px;
+    background-color: #ff9933;
+    border-radius: 8px;
+}
+.publish .send:hover{
+    background: #ffbb66;
+}
+.publish .send p{
+    color: #fff;
+    font-size: 20px;
+    position:absolute;
+    top: -50%;left: 20%;
+}
+.publish .cancel{
+    position: absolute;
+    top: 30%;right: 2%;
+    width: auto;height: 25px;
+}
+.final{
+    position: absolute;
+    left: 550px;
+    top: 14%;
+    width: 600px;
+    height: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-top-right-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
     z-index: 2;
 }
 .final .describe{
     position: absolute;
-    top: 30%;
-    left: 45%;
+    top: 140px;
+    left: 270px;
 }
 .final .create{
     position: absolute;
-    top: 72%;left: 25%;
+    top: 290px;left: 80px;
     width: 120px;height: 35px;
     border: 2px #ff9933 solid; 
     border-radius: 8px;
@@ -451,9 +549,15 @@ body {
 .final .create:hover{
     background: #ffbb66;
 }
+.final .create p{
+    color: #ff9933;
+    font-size: 22px;
+    position:absolute;
+    top: 10%;left: 20%;
+}
 .final .share{
     position: absolute;
-    top: 72%;left: 50%;
+    top: 290px;left: 250px;
     width: 120px;height: 35px;
     border: 2px #ff9933 solid; 
     border-radius: 8px;
@@ -461,23 +565,15 @@ body {
 .final .share:hover{
     background: #ffbb66;
 }
-.final .top{
-    position: absolute;
-    top: 0%;left: 0%;
-    width: 100%;height: 10%;
-    background: #ff9933;
-    border-top-right-radius: 20px 20px;
-    border-top-left-radius: 20px 20px;
-}
-.final .middle{
-    position: absolute;
-    background-color: #fff;
-    top: 10%;left: 0%;
-    width: 100%;height: 80%;
+.final .share p{
+    color: #ff9933;
+    font-size: 22px;
+    position:absolute;
+    top: 10%;left: 20%;
 }
 .final .src{
     position: absolute;
-    top: 62%;left: 20%;
+    top: 245px;left: 80px;
     width: 56%;height: 5%;
     border-style: solid;
     border-width: 2px;
@@ -487,12 +583,4 @@ body {
     position: absolute;
     top: 30%;right: 2%;
     width: auto;height: 25px;
-}
-.final .bottom{
-    position: absolute;
-    top: 90%;left: 0%;
-    width: 100%;height: 10%;
-    background: #ff9933;
-    border-bottom-right-radius: 20px 20px;
-    border-bottom-left-radius: 20px 20px;
 }

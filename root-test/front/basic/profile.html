@@ -3,84 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
- 	<style type="text/css">
-		body{
-			margin: 0;
-			padding: 0;
-			width: auto;height: auto;
-		}
-		.bar3{
-			position: absolute;
-			top: 110%;left: 0%;
-			width: 100%;height: 3px;
-			background-color: #ff9933;
-		}
-		.store{
-		    position: absolute;
-		    top: 88%;left: 37%;
-		    width: 60px;height: 26px;
-		    border: 1px #ff9933 solid; 
-		    border-radius: 5px;
-		}
-		.store:hover{
-		    background: #ffbb66;
-		}
-		.cancel{
-		    position: absolute;
-		    top: 88%;left: 52%;
-		    width: 60px;height: 26px;
-		    border: 1px #ff9933 solid; 
-		    border-radius: 5px;
-		}
-		.cancel:hover{
-		    background: #ffbb66;
-		}
-		.file{
-		    display: block;
-		    width: 85px;height: 26px;
-		    border: 1px #ff9933 solid; 
-		    border-radius: 5px;
-		}
-		.file:hover{
-		    background: #ffbb66;
-		}
-		a {text-decoration:none; color:blue;}  
-		
-		.input{
-			display: inline;
-		}
-		.logo-file{
-			position: absolute;
-			top: 0%;left: 10%;
-		}
-	</style>
+    <link rel="stylesheet" href="css/reset.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
 	<div class="content">
-		<div style="position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;">
-			<p style="font-size: 24px;font-weight: bold;color: orange;text-align: center">會員資料</p>
+		<div class="top">
+			<p>會員資料</p>
 			<div class="bar3"></div>
 		</div>
 		<!-- 基本資料區域 -->
-		<div class="profile" style="position: absolute; top: 20%; left: 10%; width: 80%; height: 65%;">
-			<p style="display: inline;margin-left: 250px;">姓名</p><input style="input" type="text"><br/>
-			<p style="display: inline;margin-left: 250px;">電話</p><input type="text"><br/>
-			<p style="display: inline;margin-left: 250px;">E-mail</p><input type="text"><br/>
-			<p style="display: inline;margin-left: 250px;">所在地</p><input type="text"><br/>
+		<div class="profile">
 
-			<div class="bar3"></div>
-
-			<div class="logo-file"><img style="padding-bottom: 5px" src="img/headimg.png">
-			<a href="#"><div class="file"><p style="color: #ff9933;font-size: 16px;position:relative;top: -40%;left: 10%;">選擇檔案</p></div></a>
-
-			<!-- 更改新密碼
-			再次確認 -->
+			<div class="logo-file">
+			<img style="padding-bottom: 5px" src="img/headimg.png">
+			<div class="file"><p><a href="#">選擇檔案</a></p></div>
+			</div>
 			
+			<table class="t1">	
+				<tr> 
+				    <th>姓名</th> 
+				    <th><input style="text" type="text"><br/></th> 
+				</tr> 
+				<tr> 
+				    <th>電話</th> 
+				    <th><input style="text" type="text"><br/></th> 
+				</tr> 
+				<tr> 
+				    <th>E-mail</th> 
+				    <th><input style="text" type="text"><br/></th> 
+				</tr> 
+			</table>
+
+			<div class="bar"></div>
+			
+			<table class="t2">
+				<tr> 
+				    <th>更改新密碼</th> 
+				    <th><input style="text" type="text"><br/></th> 
+				</tr> 
+				<tr> 
+				    <th>再次確認</th> 
+				    <th><input style="text" type="text"><br/></th> 
+				</tr> 
+			</table>
 		</div>
 
-		</div>
-		<a href="#"><div class="store"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">儲存</p></div></a>
-        <a href="#"><div class="cancel"><p style="color: #ff9933;font-size: 18px;position:relative;top: -50%;left: 20%;">取消</p></div></a>
+		<div class="store"><p><a href="#">儲存</a></p></div>
+        <div class="cancel"><p><a href="#">取消</a></p></div>
+        
 	</div>
 </body>
 </html>

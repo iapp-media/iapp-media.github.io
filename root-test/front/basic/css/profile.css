@@ -1,0 +1,78 @@
+        body{
+            margin: 0;
+            padding: 0;
+            width: auto;height: auto;
+        }
+        a{text-decoration:none; color:#ff9933;}
+        .top{
+            position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
+        }
+        .top p{
+            font-size: 24px;font-weight: bold;color: orange;text-align: center;
+        }
+        .bar{
+            position: absolute;
+            top: 50%;left: 10%;
+            width: 80%;height: 2px;
+            background-color: #7d7d7d;
+            opacity: 0.5;
+        }
+        .bar3{
+            position: absolute;
+            top: 110%;left: 0%;
+            width: 100%;height: 3px;
+            background-color: #ff9933;
+        }
+        .store p{color: #ff9933;font-size: 18px;position:relative;top: 20%;left: 20%;}
+        .store{
+            position: absolute;
+            top: 80%;left: 37%;
+            width: 60px;height: 26px;
+            border: 1px #ff9933 solid; 
+            border-radius: 5px;
+        }
+        .store:hover{
+            background: #ffbb66;
+        }
+        .cancel p{color: #ff9933;font-size: 18px;position:relative;top: 20%;left: 20%;}
+        .cancel{
+            position: absolute;
+            top: 80%;left: 52%;
+            width: 60px;height: 26px;
+            border: 1px #ff9933 solid; 
+            border-radius: 5px;
+        }
+        .cancel:hover{
+            background: #ffbb66;
+        }
+        .file{
+            display: block;
+            width: 85px;height: 26px;
+            border: 1px #ff9933 solid; 
+            border-radius: 5px;
+        }
+        .file:hover{
+            background: #ffbb66;
+        }
+        .profile{
+            position: absolute; top: 20%; left: 10%; width: 80%; height: 65%;
+        }
+        .profile .t1{
+            position: absolute;
+            top: 5%;left: 40%;
+        }
+        .profile .t2{
+            position: absolute;
+            top: 60%;left: 25%;
+        }
+        .profile th{
+            color: #7d7d7d;
+            padding: 5px;
+        }
+        .logo-file{
+            position: absolute;
+            top: 5%;left: 20%;
+        }
+        .logo-file p{
+            color: #ff9933;font-size: 16px;position:relative;top: 20%;left: 10%;
+        }

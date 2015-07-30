@@ -39,26 +39,31 @@
 	</head>
 
 	<body>
+
     <div id="loading">iApp 載入中</div>
 		<div>
 
 		<!--<div class="share-button share-button-bottom"></div>-->
 			<div class="page page-1-1 page-current">
-			   <img class="logo animated bounceInDownrubberBand" src="img/logo.png" />
+			   <a id="logo" href="#"><img class="logo animated bounceInDownrubberBand" src="img/logo.png" /></a>
 			   <img class="up moveIconUp" src="img/icon_up.png" />
-			   
 			</div>
 			
 		</div>
 			<div class="page page-2-1 hide">
-				<div class="bg animated fadeIn1" style="background-image: url(img/p1.jpg);"></div>
+				<!-- <div class="bg animated fadeIn1" style="background-image: url(img/p1.jpg);"></div> -->
+				<img class="bg animated fadeIn1" src="img/p1.jpg" />
 				<img class="up moveIconUp" src="img/icon_up.png" />
 			</div>
 
 			<div class="page page-3-1 hide">
 				<img class="up moveIconUp" src="img/icon_up.png" />
-				<div class="bg animated zoomInDown" style="background-image: url(img/p2.jpg);"></div>
-				<div class="bar1 animated fadeIn1"><p class="text1 animated fadeInLeft1">開始寫下<br>與你的每一頁篇章</p></div>
+				<img class="bg animated zoomInDown" src="img/p2.jpg" />
+				<!-- <div class="bg animated zoomInDown" style="background-image: url(img/p2.jpg);"></div> -->
+				<div class="bar1 animated fadeIn1">
+				<p class="text1 animated fadeInLeft1">開始寫下</p>
+				<p class="text1-1 animated fadeInLeft1">與你的每一頁篇章</p>
+				</div>
 			</div>
 			
 			<div class="page page-4-1 hide">
@@ -89,14 +94,16 @@
 			
 			<div class="page page-6-1 hide">
 				<img class="up moveIconUp" src="img/icon_up.png" />
-				<div class="bg" style="background-image: url(img/p5.jpg);"></div>
+				<img class="bg" src="img/p5.jpg" />
+				<!-- <div class="bg" style="background-image: url(img/p5.jpg);"></div> -->
 				<div class="bar2 animated fadeIn1"><p class="text2 animated fadeInUp1">時間靜止&nbsp;而思緒正在飛</p></div>
 			</div>
 			
 			<div class="page page-7-1 hide">
 				<img class="up moveIconUp" src="img/icon_up.png" />
-				<div class="bg" style="background-image: url(img/p6.jpg);"></div>
-				<div>
+				<img class="bg" src="img/p6.jpg" />
+				<!-- <div class="bg" style="background-image: url(img/p6.jpg);"></div>
+				<div> -->
 				<div class="textbox"><p class="text3 animated swing1" style="color: white">活的與眾不同</p></div>
 				<div class="shadow"></div>
 				</div>
@@ -116,8 +123,8 @@
 		<script src="js/touch.js"></script>
 		<script src="js/index.js"></script>
 
-		<script src="js/share.js"></script>
-		
+		<!-- <script src="js/share.js"></script> -->
+
 		<!--<script>
 		    var share_button_right = new Share(".share-button-bottom", {
 		        ui: {

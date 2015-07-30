@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #7d7d7d;
+}
+a:hover{text-decoration:none; color:#ff9933;}
+
+.hide {
+    display: none;
+}
+.show{
+    display: inline;
+}
+/*.iframe-info{
+
+}
+.iframe-info>img{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 2;
+    opacity: 0.8;
+}
+.iframe-info>img:hover{
+    opacity: 1;
+}*/
+.show{
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    opacity: 0.5;
+    z-index: 1;
+}
+.show2{
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 3;
+}
+.upload{
+	width: auto;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 4;
+    opacity: 0.8;
+}
+.upload:hover{
+    opacity: 1;
+}
+#upload-img{
+    display: none;
+    z-index: 999;
+}
+
+.img-container {
+  background-color: #f7f7f7;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.img-container {
+  min-height: 200px;
+  height: 400px;
+  margin-top: 30px;
+}
+.img-container > img {
+  max-width: 50%;
+  padding-top: 20px;
+}
+#preview{
+  display:none;
+  height:400px; 
+  margin-top: 30px;
+  margin-left: 90px;
+}
+.select{
+	width: 80px;height: 30px;
+	background-color: #ff9933;
+	position: absolute;
+	top: 10px;left: 10px;
+	border: 2px solid #fff;
+  border-radius: 8px;
+}
+.select:hover{
+  background-color: #ffbb66;
+}
+.select p{
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 5px;
+}
+.word{
+	text-align: right;
+	padding: 10px;
+
+}
+.send{
+	margin-left: 10px;
+	border: 2px solid #ff9933;
+  border-radius: 8px; 
+	background-color: #fff;
+	width: 80px;height: 30px;
+}
+.send p{
+	color: #ff9933;
+	font-size: 15px;
+}
+.send:hover{
+    background: #ffbb66;
+}
+.cut{
+  margin-left: 10px;
+  border: 2px solid #ff9933;
+  border-radius: 8px; 
+  background-color: #fff;
+  width: 80px;height: 30px;
+}
+.cut p{
+  color: #ff9933;
+  font-size: 15px;
+}
+.cut:hover{
+    background: #ffbb66;
+}
+.confirm{
+    position: absolute;
+    top: 430px;left: 40%;
+    width: 90px;height: 30px;
+    border:2px #ff9933 solid;
+    border-radius: 8px;
+    background: #fff;
+}
+.confirm:hover{
+    background: #ffbb66;
+}
+.confirm a{
+  text-decoration:none; 
+  color:#ff9933;
+}
+
+.confirm p{
+    color: #ff9933;
+    font-size: 22px;
+    position:absolute;
+    top: 12%;left: 25%;
+}
+#base64{
+  word-wrap: break-word; 
+  word-break: normal; 
+  display:none;
+}
+#inputImage{
+  display: none;
+}

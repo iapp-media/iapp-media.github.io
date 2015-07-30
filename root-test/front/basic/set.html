@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>set</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/set.css"> 
+    <style>
+        #FU1
+        {
+            display:none;
+        }
+        body
+        {
+            margin:0;
+            width:99%;
+            height:99%;
+        }
+        .container
+        {
+            width:99%;
+            height:99%;
+        }
+
+        .hide
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="Setting2.aspx" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NTgxOTgzNTQPZBYCAgEPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWAgIBDw8WAh4ISW1hZ2VVcmwFF0FwcHMvMDEvcGljL2ljb18xNDIuanBnZGRkkicr7WaNEnjopiKdX7rD6SqWUhzNBxeckg+5mAlsPi0=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3186BC91" />
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZND0MqlsfpEJsEn0oHUOSktTfNpOz0CH4vKngBfzxDIX2MfserRJsFiuChVvjtIelDcTMK5WuBXDMXw6ZgrsNpTIqy7RDZm+ns9H/NUwRxEodiTbwRdk693gPPT5wQaTtztmdY0jLwXpieS7nVPKUpy/cNoTp95ZHx2QeCM5bx9A==" />
+</div>
+        <div class="container">
+        <div class="top"> 
+        </div>
+        <div class="set">
+            <div class="icon">
+                <label for="FU1">
+                    <img id="p1" class="iconimg-1" src="Apps/01/pic/ico_142.jpg" />
+                    <input type="file" name="FU1" id="FU1" onchange="previewImage(&#39;FU1&#39;,&#39;p1&#39;,89)" accept="image/*" />
+                </label> 
+            </div> 
+            <div class="send">
+                <p>
+                    <a id="LinkButton1" href="javascript:__doPostBack(&#39;LinkButton1&#39;,&#39;&#39;)">完成</a>
+                </p>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <p>封面圖片</p>
+                    </td>
+                    <td>
+                        <input type="file" name="FU2" id="FU2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>iApp名稱</p>
+                    </td>
+                    <td>
+                        <input name="TAppName" type="text" value="jefff" maxlength="6" id="TAppName" class="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>iApp 描述</p>
+                    </td>
+                    <th>
+                        <textarea name="TAppMemo" rows="2" cols="20" id="TAppMemo" class="describe">
+fneff</textarea>
+                </tr>
+            </table>
+            <div class="send">
+                <p>
+                    <a id="send" href="javascript:__doPostBack(&#39;send&#39;,&#39;&#39;)">完成</a>
+                </p>
+            </div>
+        </div>
+    </div>
+                    <input name="TS" type="text" id="TS" class="hide" style="width:0px;" />
+    </form>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/JIC.js"></script>
+    <script>
+        function previewImage(fileInput, imgcanvas, size) {
+            //read uploading file
+            var reader = new FileReader();
+            var file = document.getElementById(fileInput).files[0];
+            reader.readAsDataURL(file);
+            reader.onload = function (oFREvent) {
+                document.getElementById(imgcanvas).src = oFREvent.target.result;
+                var output_format = "jpg";
+                document.getElementById(imgcanvas).src = jic.compress(document.getElementById(imgcanvas), size, output_format).src;
+            };
+        }
+
+
+    </script>
+</body>
+</html>
