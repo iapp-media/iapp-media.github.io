@@ -326,6 +326,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 .circle-login:hover{
 	border: 3px solid #ffbb66;
 }
+
 	.login-mobile{
 		display: none;
 		position: fixed;
@@ -362,8 +363,8 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	}
 	.login-mobile .fb-img{
 		position: absolute; 
-		top: 20%; left: 10%;
-		width: 80%; height: auto;
+		top: 20%; left: 5%;
+		width: 90%; height: auto;
 	}
 	.login-mobile .login{
 		position: absolute; 
@@ -375,21 +376,34 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		font-size: 18px;
 		color: #ff9933;
 	}
-	.login-mobile .admin{
+	.login-mobile .login-input{
 		position: absolute; 
-		top: 53%; left: 8%;
-		font-size: 15px;width: 80%;
-		border-color:#7b7b7b;
-		border-radius: 2px;
+		top: 53%; left: 5%;
+		font-size: 15px;width: 90%;
 		opacity:0.5;
+
+	}
+	.login-mobile .admin{
+		display: block;
+		font-size: 1.2em;width: 100%;
+		border: 1px solid #7b7b7b;
+		border-style: #7b7b7b;
+		border-radius: 0px;
+		border-bottom: 0px;
+		border-top-left-radius:  2px;
+		border-top-right-radius:  2px;
+		padding: 8px;
+
 	}
 	.login-mobile .password{
-		position: absolute; 
-		top: 67%; left: 8%;
-		font-size: 15px;width: 80%;
-		border-color:#7b7b7b;
-		border-radius: 2px;
-		opacity:0.5;
+		display: block;
+		font-size: 1.2em;width: 100%;
+		border: 1px solid #7b7b7b;
+		border-style: #7b7b7b;
+		border-radius: 0px;
+		border-bottom-left-radius:  2px;
+		border-bottom-right-radius:  2px;
+		padding: 8px;
 	}
 	.bar{
         position: absolute;
@@ -486,6 +500,12 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	/*.login-sm .input-group-btn .join a:hover .register-mobile{
     	display: inline;
 	}*/
+	.register-mobile .register-input{
+		position: absolute; 
+		top: 20%; left: 5%;
+		font-size: 15px;width: 90%;
+		opacity:0.5;
+	}
 	.register-mobile .login{
 		position: absolute; 
 		top: 5%; left: 5%; 
@@ -497,39 +517,45 @@ a:hover {text-decoration:none; color:#ffbb66;}
 		color: #ff9933;
 	}
 	.register-mobile .name{
-		position: absolute; 
-		top: 20%; left: 8%;
-		font-size: 15px;width: 80%;
-		border-color:#7b7b7b;
-		border-radius: 2px;
-		opacity:0.5;
+		display: block;
+		font-size: 1.2em;width: 100%;
+		border: 1px solid #7b7b7b;
+		border-style: #7b7b7b;
+		border-radius: 0px;
+		border-bottom: 0px;
+		border-top-left-radius:  2px;
+		border-top-right-radius:  2px;
+		padding: 8px;
 	}
 	.register-mobile .admin{
-		position: absolute; 
-		top: 32%; left: 8%;
-		font-size: 15px;width: 80%;
-		border-color:#7b7b7b;
-		border-radius: 2px;
-		opacity:0.5;
+		display: block;
+		font-size: 1.2em;width: 100%;
+		border: 1px solid #7b7b7b;
+		border-style: #7b7b7b;
+		border-radius: 0px;
+		border-bottom: 0px;
+		padding: 8px;
 	}
 	.register-mobile .password{
-		position: absolute; 
-		top: 44%; left: 8%;
-		font-size: 15px;width: 80%;
-		border-color:#7b7b7b;
-		border-radius: 2px;
-		opacity:0.5;
+		display: block;
+		font-size: 1.2em;width: 100%;
+		border: 1px solid #7b7b7b;
+		border-style: #7b7b7b;
+		border-radius: 0px;
+		border-bottom-left-radius:  2px;
+		border-bottom-right-radius:  2px;
+		padding: 8px;
 	}
 	.register-mobile .send{
     	position: absolute;
-        top: 65%;left: 55%;
+        top: 80%;left: 55%;
     	width: 50px;height: 50px;
     	border-radius: 99px;
         border: 2px solid #ff9933;
     }
 	.register-mobile .register-back{
     	position: absolute;
-	    top: 65%;left: 30%;
+	    top: 80%;left: 30%;
     	width: 50px;height: 50px;
 	    border-radius: 99px;
         border: 2px solid #ff9933;

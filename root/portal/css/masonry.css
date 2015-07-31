@@ -53,6 +53,9 @@
         padding-left: 5px;
         font-size: 14px;
     }
+    .imgcenter:hover .item-bar{
+        visibility: visible;
+    }
     .item-bar p{
         display: inline;
     }

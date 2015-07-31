@@ -79,70 +79,12 @@
                         <div class="input-group-btn">
                             <!-- mobile登入／註冊 -->
                             <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <a href="m-login.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                             </button>
                             <!-- mobile會員登入後 -->
                             <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <img class="circle-login" src="img/photoicon.png" >
                             </button>
-                            <!-- mobile會員登入畫面 -->
-                            <div class="login-mobile">
-                                <div class="navbar">
-                                    <img class="iapplogo" src="img/iapplogo.png">
-                                </div>
-                                <div class="content">
-                                    <div class="fb">
-                                        <p>FaceBook登入</p>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <a href=""><img class="fb-img"src="img/fb.png"></a>
-                                    <div class="login">
-                                        <p>會員帳號登入</p>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <form method="post" action="">
-                                        <input type="text" id="form" placeholder="帳號" class="admin">
-                                        <input type="password" id="form" placeholder="密碼"class="password">
-                                    </form>
-                                    <div class="send">
-                                       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    </div>
-                                    <div class="login-back">
-                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <p>還不是會員嗎？>></p>
-                                    <div class="join">
-                                        <p>
-                                            <a class="" href="">加入我們</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- mobile會員註冊畫面 -->
-                            <div class="register-mobile">
-                                <div class="navbar">
-                                    <img class="iapplogo" src="img/iapplogo.png">
-                                </div>
-                                <div class="content">
-                                    <div class="login">
-                                        <p>註冊會員</p>
-                                        <div class="bar"></div>
-                                    </div>
-                                    <form method="post" action="">
-                                        <input type="text" id="form" placeholder="名字" class="name">
-                                        <input type="text" id="form" placeholder="email" class="admin">
-                                        <input type="password" id="form" placeholder="密碼"class="password">
-                                    </form>
-                                    <div class="send">
-                                       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    </div>
-                                    <div class="register-back">
-                                        <a href=""><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,29 +352,35 @@
     <!-- 觸發 -->
     <script>
         $(document).ready(function() {
-          $(".join").click(function() {
-            $('.register-mobile').slideToggle(300);
-            return false;
-          });
-          $(".register-back").click(function() {
-            $('.register-mobile').slideToggle(300);
-            return false;
-          });
-          $("#m-login").click(function() {
-            $(".login-mobile").animate({
-                  height: 'toggle'
-              }, 300);
-              $(".theme").hide();
-          });
+          // $(".join").click(function() {
+          //   $('.register-mobile').slideToggle(300);
+          //   return false;
+          // });
+          // $(".register-back").click(function() {
+          //   $('.register-mobile').slideToggle(300);
+          //   return false;
+          // });
+          // $("#m-login").click(function() {
+          //   $(".login-mobile").animate({
+          //         height: 'toggle'
+          //     }, 300);
+          //     $(".theme").hide();
+          // });
+          // $(".login-back").click(function() {
+          //   $('.login-mobile').slideToggle(300);
+          //   hide();
+          // });
+          // $(".send").click(function() {
+          //   $('.login-mobile').hide();
+          //   $('.register-mobile').hide();
+          //   $('#m-login').hide();
+          //   $('.circle-login').show();
+          // });
           $("#user-login").click(function() {
             $(".m-profile").animate({
                   height: 'toggle'
               }, 300);
               $(".theme").hide();
-          });
-          $(".login-back").click(function() {
-            $('.login-mobile').slideToggle(300);
-            hide();
           });
           $("#op-search").click(function() {
               $(".search-bar").animate({
@@ -456,12 +404,6 @@
             $('.finder').hide();
             $('.search-bar').slideToggle(300);
             hide();
-          });
-          $(".send").click(function() {
-            $('.login-mobile').hide();
-            $('.register-mobile').hide();
-            $('#m-login').hide();
-            $('.circle-login').show();
           });
           $(".login-box").click(function() {
             $('.login-box').hide();
