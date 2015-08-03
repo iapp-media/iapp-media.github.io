@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">    
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <title>mobile-login</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/m-login.css">
 </head>
 
@@ -27,11 +27,12 @@
                 <p>會員帳號登入</p>
                 <div class="bar"></div>
             </div>
-            <form method="post" action="" class="login-input">
-                <input type="text" id="form" placeholder="電子郵件或帳號" class="admin">
-                <input type="password" id="form" placeholder="密碼" class="password">
+            <form method="post" action="" class="login-input" onsubmit="return checkLogin();">
+                <input type="email" id="email" placeholder="電子郵件" class="admin" autocomplete="on">
+                <input type="password" id="password" placeholder="密碼" class="password">
+                <input type="submit" id="login-submit" style="display: none;">
             </form>
-            <div class="send">
+            <div class="send" id="login">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </div>
             <div class="login-back">
@@ -57,12 +58,13 @@
                 <p>註冊會員</p>
                 <div class="bar"></div>
             </div>
-            <form method="post" action="" class="register-input">
-                <input type="text" id="form" placeholder="名字" class="name">
-                <input type="text" id="form" placeholder="email" class="admin">
-                <input type="password" id="form" placeholder="密碼" class="password">
+            <form method="post" action="" class="register-input" onsubmit="return checkRegister();">
+                <input type="text" id="name" placeholder="名字" class="name">
+                <input type="email" id="register-email" placeholder="email" class="admin">
+                <input type="password" id="register-password" placeholder="密碼" class="password">
+                <input type="submit" id="register-submit" style="display: none;">
             </form>
-            <div class="send">
+            <div class="send" id="register">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </div>
             <div class="register-back">
@@ -70,40 +72,10 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-          $(".join").click(function() {
-            $('.register-mobile').slideToggle(300);
-            return false;
-          });
-          $(".register-back").click(function() {
-            $('.register-mobile').slideToggle(300);
-            return false;
-          });
-          $("#m-login").click(function() {
-            $(".login-mobile").animate({
-                  height: 'toggle'
-              }, 300);
-              $(".theme").hide();
-          });
-          $(".login-back").click(function() {
-            $('.login-mobile').slideToggle(300);
-            hide();
-          });
-          $(".send").click(function() {
-            $('.login-mobile').hide();
-            $('.register-mobile').hide();
-            $('#m-login').hide();
-            $('.circle-login').show();
-          });
-        });
-    </script>
+    <script src="js/m-login.js"></script>
 </body>
 
 </html>
