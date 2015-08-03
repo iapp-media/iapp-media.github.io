@@ -8,13 +8,16 @@ body {
     color: #969696;
     margin: 0;
     text-align: center;
-    height: 99%;
+    height: 100%;
+    /*font-size: 24px;*/
 }
 
 .container {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 5px;
+    /*font-size: 1.5em;*/
+    
 }
 
 label {
@@ -58,9 +61,22 @@ button {
     line-height: 36px;
 }
 
-button:active {
+button:active{
     background-color: #ff9933;
     color: #FFFFFF;
+}
+/*button:focus{
+    background-color: #ff9933;
+    color: #FFFFFF;
+}*/
+
+.top {
+    height: 40px;
+    background-color: #ff9933;
+}
+
+.toplogo{
+    height: 100%;
 }
 
 .hide {
@@ -69,35 +85,29 @@ button:active {
 
 .upload-img {
     height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5px;
+    
 }
 
 .img-container {
     margin-top: 8px;
-    height: calc(100% - 176px);
+    height: 280px;
     background-color: #f7f7f7;
     overflow: hidden;
     text-align: center;
 }
-
-.word {
+.word{
     font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-.preview-container {
+.preview-container{
     margin-top: 8px;
-    height: calc(100% - 176px);
+    height: 280px;
 }
-
-#preview {
+#preview{
     max-width: 100%;
     max-height: 100%;
 }
-
 .select {
     width: calc(50% - 8px);
     font-size: 24px;
@@ -116,14 +126,17 @@ button:active {
 .select:hover {
     background: #ffbb66;
 }
-
-.rotate {
-    display: inline-block;
+.rotate{
     width: calc(50% - 5px);
-    
-}
-
-.rotate-btn {
     padding-top: 2px;
     padding-bottom: 3px;
+}
+.cancel{
+    height: 28px;
+    margin-top: 6px;
+    margin-right: 6px;
+}
+.editFrame {
+    width: 100%;
+    height: calc(100% - 60px);
 }

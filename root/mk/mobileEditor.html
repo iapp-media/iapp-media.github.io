@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>iApp Mobile Maker</title>
+    <!-- about SEO -->
+    <meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+    <meta name="keywords" content="iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
+    <!-- for apple (PS:iphone5 去除width=device-width)
+         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+         2-3.將Web Page儲存為home screen icon時的圖示
+         4.設定載入頁面時 loading 圖片
+         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+         6.更改 status bar 樣式    
+     -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+    <link rel="apple-touch-icon" href="img/114.png" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- End for apple -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/cropper.css">
+    <link rel="stylesheet" type="text/css" href="css/mobileEditor.css">
+</head>
+
+<body>
+    <div class="upload-img">
+        <label for="inputImage">
+            <div class="select">
+                選擇照片
+            </div>
+        </label>
+        <div class="rotate">
+            <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
+        </div>
+        <div class="preview-container hide">
+            <img id="preview" src="">
+        </div>
+        <!--         <label for="inputImage" onclick="setCurrent('1',114,114)"> -->
+        <div class="img-container">
+            <img src="" alt="支持圖片上傳格式JPG,PNG" for="inputImage">
+        </div>
+        <!-- </label> -->
+        <p class="word">(移動及縮放進行照片裁切)</p>
+        <!-- <label for="inputImage">
+            <div class="select">
+                <p>上傳照片</p>
+            </div>
+        </label>
+        <input type="file" accept="image/*" capture="camera" id="inputImage" class="hide"> -->
+        <input type="file" accept="image/*" id="inputImage" class="hide">
+        <button id="cut" data-method="getCroppedCanvas" type="button" class="cut" disabled="true">
+            截圖
+        </button>
+        <button onclick="compress()" type="button" class="send hide" id="sended">
+            確認
+        </button>
+        <input id="CurrentId" value="" class="hide">
+        <input id="Tbase64" value="" style="display:none;">
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/JIC.js" type="text/javascript"></script>
+    <script src="js/cropper.js"></script>
+    <script src="js/mobileEditor.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".cut").click(function() {
+            $(".cut").hide();
+            $(".send").show();
+            $('.rotate-btn').hide();
+        });
+        $("#sended").click(function() {
+
+        });
+        $('#inputImage').change(function() {
+            $('.preview-container').hide();
+            $('.img-container').show();
+            $('.send').hide();
+            $('.cut').show();
+            $('.rotate-btn').show();
+        });
+    });
+    </script>
+</body>
+
+</html>

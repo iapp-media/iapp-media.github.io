@@ -1,19 +1,13 @@
-var DEGBUG = 1;
-
 var current = 0,
-  width,
-  height;
+  width = 0,
+  height = 0;
 
-// function setCurrent(number, w, h) {
 (function() {
-  // current = number;
-  // document.getElementById('CurrentId').setAttribute('value', number);
-  // width = w;
-  // height = h;
-  // console.log(number);
-  // $().cropper("setAspectRatio", 1 / 1)
+  current = getValue('c'),
+    width = getValue('w'),
+    height = getValue('h');
+  document.getElementById('CurrentId').setAttribute('value', current);
 
-  // $(function() {
   'use strict';
   // Demo
   // -------------------------------------------------------------------------
@@ -115,18 +109,18 @@ var current = 0,
           }
         }
 
+        if (data.method === 'rotate') {
+          $image.cropper('rotate', 90);
+        };
         //
         result = $image.cropper(data.method, data.option);
         // $('.img-container').hide();
 
-        if (data.method === 'rotate') {
-          $image.cropper('rotate', 90);
-        };
         // console.log(result);
         if (data.method === 'getCroppedCanvas') {
           document.getElementById('preview').src = result.toDataURL("image/jpeg", 0.6);
           $('.img-container').hide();
-          $('#preview').show();
+          $('.preview-container').show();
         }
 
         if ($.isPlainObject(result) && $target) {
@@ -182,8 +176,9 @@ var current = 0,
             blobURL = URL.createObjectURL(file);
             $image.one('built.cropper', function() {
               URL.revokeObjectURL(blobURL); // Revoke when load complete
-            }).cropper('reset', true).cropper('replace', blobURL).cropper("setAspectRatio", width / height);
+            }).cropper('reset', true).cropper('replace', blobURL);
             $inputImage.val('');
+            $('#cut').attr("disabled", false);
           } else {
             showMessage('Please choose an image file.');
           }
@@ -201,19 +196,31 @@ var current = 0,
 function compress() {
   document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, "jpg").src;
   document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ""));
-  document.getElementById('p' + current).src = document.getElementById('preview').src;
-  document.getElementById('Tbase64-' + current).setAttribute('value', document.getElementById('Tbase64').value);
-  document.getElementById('p' + current).className = document.getElementById('p' + current).className.replace(/(?:^|\s)changestyle(?!\S)/g, '')
   $('.cropper-container').remove();
 
   // sendImageToParse(current.replace(/-/, ""), document.getElementById('Tbase64').value)
 
 }
 
-function setCurrent(number, w, h) {
-  current = number;
-  width = w;
-  height = h;
-  document.getElementById('CurrentId').setAttribute('value', current);
-  // $image.cropper("setAspectRatio", width / height);
+
+
+function getValue(varname) {
+  var url = window.location.href;
+  var qparts = url.split("?");
+  if (qparts.length == 0) {
+    return "";
+  }
+  var query = qparts[1];
+  var vars = query.split("&");
+  var value = "";
+  for (i = 0; i < vars.length; i++) {
+    var parts = vars[i].split("=");
+    if (parts[0] == varname) {
+      value = parts[1];
+      break;
+    }
+  }
+  value = unescape(value);
+  value.replace(/\+/g, " ");
+  return value;
 }
