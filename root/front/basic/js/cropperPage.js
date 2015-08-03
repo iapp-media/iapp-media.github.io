@@ -1,16 +1,12 @@
-var DEGBUG = 1;
+
 var width = getValue('w');
 var height = getValue('h');
-if (DEGBUG) {
-  width = 640;
-  height = 960;
-}
+
 $(function() {
   // 'use strict';
   // Demo
   // -------------------------------------------------------------------------
 
-  console.log(width, height);
   (function() {
     var $image = $('.img-container > img'),
       $dataX = $('#dataX'),
@@ -110,16 +106,20 @@ $(function() {
           }
         }
 
+        if (data.method === 'rotate') {
+          $image.cropper('rotate', 90);
+        };
         //
         result = $image.cropper(data.method, data.option);
         // $('.img-container').hide();
 
 
-        console.log(result);
+        // console.log(result);
         if (data.method === 'getCroppedCanvas') {
           document.getElementById('preview').src = result.toDataURL("image/jpeg", 0.6);
           $('.img-container').hide();
           $('#preview').show();
+          $('.rotate').hide();
         }
 
         if ($.isPlainObject(result) && $target) {
@@ -178,6 +178,8 @@ $(function() {
               URL.revokeObjectURL(blobURL); // Revoke when load complete
             }).cropper('reset', true).cropper('replace', blobURL);
             $inputImage.val('');
+            $('#rotate-btn').show();
+            $('#cut').attr("disabled", false);
           } else {
             showMessage('Please choose an image file.');
           }
@@ -220,5 +222,5 @@ function compress() {
   document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, "jpg").src;
   document.getElementById('base64').innerText = document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, "");
   document.getElementById('show-img').src = document.getElementById('preview').src;
-  
+
 }
