@@ -18,25 +18,25 @@
             <img class="iapplogo" src="img/iapplogo.png">
         </div>
         <div class="content">
-            <div class="fb">
-                <p>FaceBook登入</p>
-                <div class="bar"></div>
-            </div>
-            <a href=""><img class="fb-img" src="img/fb.png"></a>
             <div class="login">
                 <p>會員帳號登入</p>
                 <div class="bar"></div>
+                <form method="post" action="" class="login-input" onsubmit="return checkLogin();">
+                    <input type="email" id="email" placeholder="電子郵件" class="admin" autocomplete="on">
+                    <input type="password" id="password" placeholder="密碼" class="password">
+                    <input type="submit" id="login-submit" style="display: none;">
+                </form>
             </div>
-            <form method="post" action="" class="login-input" onsubmit="return checkLogin();">
-                <input type="email" id="email" placeholder="電子郵件" class="admin" autocomplete="on">
-                <input type="password" id="password" placeholder="密碼" class="password">
-                <input type="submit" id="login-submit" style="display: none;">
-            </form>
-            <div class="send" id="login">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <div class="fb">
+                <p>FaceBook登入</p>
+                <div class="bar"></div>
+                <a href=""><img class="fb-img" src="img/fb.png"></a>
             </div>
             <div class="login-back">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </div>
+            <div class="send" id="login">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </div>
         </div>
         <div class="footer">
@@ -64,12 +64,14 @@
                 <input type="password" id="register-password" placeholder="密碼" class="password">
                 <input type="submit" id="register-submit" style="display: none;">
             </form>
-            <div class="send" id="register">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-            </div>
             <div class="register-back">
                 <a href=""><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
             </div>
+            <div class="send" id="register">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="footer">
         </div>
     </div>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>

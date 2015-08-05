@@ -1,6 +1,11 @@
+html{
+    height: 100%;
+}
 body {
-    background-color: #f5f5f5;
-    font-size: small;
+    /*background-color: #f5f5f5;*/
+    /*font-size: small;*/
+    height: 100%;
+    /*min-height: 435px;*/
 }
 
 
@@ -16,9 +21,7 @@ a:hover {
 
 .login-mobile {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: #ff9933;
+    /*background-color: #ff9933;*/
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -34,31 +37,33 @@ a:hover {
     color: #ff9933;
 }
 
-.login-mobile .navbar {
+.navbar {
     background-color: #ff9933;
+    margin-bottom: 0px;
 }
 
-.login-mobile .content {
-    height: 75%;
-    min-height: 310px;
-    width: 100%;
+.content {
+    height: calc(100% - 113px);
+    min-height: 300px;
+    padding: 5% 5% 0 5%;
+    /*width: 100%;*/
+
     background-color: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0px;
+    /*position: absolute;*/
+    
 }
-
+.content .login{
+    margin: 5px 0 5px 0;
+}
 
 /*.login-sm .input-group-btn:hover .login-mobile{
     	display: inline;
 	}*/
 
 .login-mobile .fb {
-    position: absolute;
-    top: 4%;
-    left: 5%;
-    width: 100%;
-    height: 10%;
+    /*position: absolute;*/
+    margin-top: 5%;
+    /*height: 10%;*/
 }
 
 .login-mobile .fb p {
@@ -68,20 +73,18 @@ a:hover {
 }
 
 .login-mobile .fb-img {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 90%;
-    max-height: 72px;
+    /*position: absolute;*/
+    
+    width: 100%;
 }
 
-.login-mobile .login {
-    position: absolute;
+/*.login-mobile {
+    
     top: 40%;
     left: 5%;
     width: 100%;
     height: 10%;
-}
+}*/
 
 .login-mobile .login p {
     text-align: left;
@@ -90,11 +93,10 @@ a:hover {
 }
 
 .login-mobile .login-input {
-    position: absolute;
-    top: 53%;
-    left: 5%;
+    /*position: absolute;*/
+    
     font-size: 15px;
-    width: 90%;
+    /*width: 90%;*/
     opacity: 0.5;
 }
 
@@ -124,18 +126,19 @@ a:hover {
 }
 
 .bar {
-    position: absolute;
-    top: 80%;
-    left: 0%;
-    width: 90%;
+    /*position: absolute;*/
+    /*width: 90%;*/
+    width: 100%;
     height: 2px;
     background-color: #ff9933;
+    margin-bottom: 10px;
 }
 
 .login-mobile .send {
-    position: absolute;
-    top: 80%;
-    left: 55%;
+    /*position: absolute;*/
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 10%;
     width: 50px;
     height: 50px;
     border-radius: 99px;
@@ -151,9 +154,9 @@ a:hover {
 }
 
 .login-mobile .login-back {
-    position: absolute;
-    top: 80%;
-    left: 30%;
+    /*position: absolute;*/
+    display: inline-block;
+    margin-left: calc(45% - 50px);
     width: 50px;
     height: 50px;
     border-radius: 99px;
@@ -161,7 +164,7 @@ a:hover {
 }
 
 .glyphicon-remove {
-    position: absolute;
+    /*position: absolute;*/
     top: 12%;
     left: 12%;
     font-size: 35px;
@@ -169,7 +172,7 @@ a:hover {
 }
 
 .glyphicon-arrow-left {
-    position: absolute;
+    /*position: absolute;*/
     top: 12%;
     left: 12%;
     font-size: 35px;
@@ -179,26 +182,31 @@ a:hover {
     color: #ffbb66;
 }
 .footer {
-    position: absolute;
-    top: 90%;
-    left: 0%;
+    /*position: absolute;*/
+    /*top: 90%;*/
+    /*left: 0%;*/
     width: 100%;
-    height: 10%;
-    min-height: 40px;
+    height: 50px;
+    padding-top: 10px;
+    padding-right: 5%;
+    background-color: #ff9933;
+    text-align: right;
 }
 
-.footer p {
+.footer p{
     display: inline;
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    padding-left: 25%;
+    /*padding-left: 40%;*/
+    padding-top: 5px;
 }
 
 .join {
     position: relative;
-    top: -45%;
-    left: 65%;
+    /*top: -60%;*/
+    padding: 5px 10px 5px 10px;
+    display: inline;
     width: 100px;
     height: 30px;
     background-color: #fff;
@@ -217,7 +225,7 @@ a:hover {
     color: #ff9933;
     font-size: 18px;
     font-weight: bold;
-    position: absolute;
+    /*position: absolute;*/
     top: 10%;
     left: 15%;
     padding-left: 0%;
@@ -228,7 +236,7 @@ a:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #ff9933;
+    /*background-color: #ff9933;*/
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -245,9 +253,9 @@ a:hover {
 
 .register-mobile .content {
     min-height: 75%;
-    width: 100%;
+    /*width: 100%;*/
     background-color: #fff;
-    position: absolute;
+    /*position: absolute;*/
     top: 60px;
     left: 0px;
 }
@@ -258,20 +266,17 @@ a:hover {
 	}*/
 
 .register-mobile .register-input {
-    position: absolute;
+    /*position: absolute;*/
     top: 20%;
     left: 5%;
     font-size: 15px;
-    width: 90%;
+    width: 100%;
     opacity: 0.5;
 }
 
 .register-mobile .login {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 100%;
-    height: 10%;
+    /*position: absolute;*/
+    
 }
 
 .register-mobile .login p {
@@ -317,9 +322,10 @@ a:hover {
 }
 
 .register-mobile .send {
-    position: absolute;
-    top: 80%;
-    left: 55%;
+/*    position: absolute;*/
+    /*top: 80%;*/
+    display: inline-block;
+    margin-left: calc( 50% - 100px);
     width: 50px;
     height: 50px;
     border-radius: 99px;
@@ -327,9 +333,9 @@ a:hover {
 }
 
 .register-mobile .register-back {
-    position: absolute;
-    top: 80%;
-    left: 30%;
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 25%;
     width: 50px;
     height: 50px;
     border-radius: 99px;
