@@ -2,7 +2,11 @@ body {
     margin: 0;
     padding: 0;
 }
-a {text-decoration:none; color:#ff9933;}
+
+a {
+    text-decoration: none;
+    color: #ff9933;
+}
 
 .hide {
     display: none;
@@ -19,8 +23,9 @@ a {text-decoration:none; color:#ff9933;}
     width: 100%;
     height: 680px;
     float: left;
-/*    background-color: #FFFFFF;
-*/}
+    /*    background-color: #FFFFFF;
+*/
+}
 
 .delete {
     position: absolute;
@@ -73,17 +78,17 @@ a {text-decoration:none; color:#ff9933;}
     z-index: 3;
 }
 
-    .phone .show {
-        position: absolute;
-        top: 11.5%;
-        padding: 0px;
-        margin: 0px;
-        left: 6%;
-        width: 261px;
-        height: 464px;
-        background-image: url(../img/picture1.jpg);
-        background-size: cover;
-    }
+.phone .show {
+    position: absolute;
+    top: 11.5%;
+    padding: 0px;
+    margin: 0px;
+    left: 6%;
+    width: 261px;
+    height: 464px;
+    background-image: url(../img/picture1.jpg);
+    background-size: cover;
+}
 
 .smallbar {
     position: absolute;
@@ -96,9 +101,11 @@ a {text-decoration:none; color:#ff9933;}
     opacity: 0.8;
     z-index: 3;
 }
-.up .up-img{
-    display: 
+
+.up .up-img {
+    display:
 }
+
 .up-img {
     position: absolute;
     top: 50%;
@@ -124,18 +131,23 @@ a {text-decoration:none; color:#ff9933;}
     height: 57px;
     z-index: 1;
 }
-.preview .preview1{
-    display:inline; 
+
+.preview .preview1 {
+    display: inline;
 }
-.preview:hover .preview1{
-    display:none; 
+
+.preview:hover .preview1 {
+    display: none;
 }
-.preview .preview2{
-    display:none; 
+
+.preview .preview2 {
+    display: none;
 }
-.preview:hover .preview2{
-    display:inline; 
+
+.preview:hover .preview2 {
+    display: inline;
 }
+
 .preview1 {
     position: absolute;
     top: 100%;
@@ -143,6 +155,7 @@ a {text-decoration:none; color:#ff9933;}
     width: 89px;
     height: 33px;
 }
+
 .preview2 {
     position: absolute;
     top: 100%;
@@ -167,7 +180,6 @@ a {text-decoration:none; color:#ff9933;}
     height: 126px;
 }
 
-
 .select {
     position: absolute;
     left: 555px;
@@ -187,6 +199,7 @@ a {text-decoration:none; color:#ff9933;}
     height: 220px;
     z-index: 0;
 }
+
 .logo2 {
     position: fixed;
     top: 300px;
@@ -194,6 +207,7 @@ a {text-decoration:none; color:#ff9933;}
     width: auto;
     height: 120px;
 }
+
 .pic1 {
     position: absolute;
     top: 10%;
@@ -271,6 +285,7 @@ a {text-decoration:none; color:#ff9933;}
     z-index: 2;
 }
 
+
 /*.edit1 {
     width: 480px;
     height: 550px;
@@ -343,7 +358,6 @@ a {text-decoration:none; color:#ff9933;}
     top: 90%;
 }
 
-
 .left .page1 {
     position: absolute;
     top: 5%;
@@ -369,59 +383,58 @@ a {text-decoration:none; color:#ff9933;}
     overflow: scroll;
 }
 
-    #pageNav ul {
-        margin: 10px 0px 0px 30px;
-        padding: 0;
-        text-align: center;
-        list-style: none;
-        width: 85px;
-        height: 125px;
-    }
+#pageNav ul {
+    margin: 10px 0px 0px 30px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    width: 85px;
+    height: 125px;
+}
 
-        #pageNav ul li {
-            display: inline-block;
-            width: 90%;
-            height: 125px;
-            /*border: solid 1px #999;*/
-            margin: 20px 0px 0px 0px;
-            background-color: #fff;
-            position: relative;
-        }
+#pageNav ul li {
+    display: inline-block;
+    width: 90%;
+    height: 125px;
+    /*border: solid 1px #999;*/
+    margin: 20px 0px 0px 0px;
+    background-color: #fff;
+    position: relative;
+}
 
-            #pageNav ul li img.pic {
-                /*width: 95%;
+#pageNav ul li img.pic {
+    /*width: 95%;
             margin: 5px 0 5px 0;*/
-                width: 85px;
-                height: 125px;
-                border-style: solid;
-                border-width: 1px;
-                border-color: #000000;
-            }
+    width: 85px;
+    height: 125px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
 
+#pageNav ul li img.delete {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 99%;
+    top: 2%;
+    z-index: 1;
+}
 
-            #pageNav ul li img.delete {
-                position: absolute;
-                width: 8px;
-                height: 8px;
-                left: 99%;
-                top: 2%;
-                z-index: 1;
-            }
+#pageNav ul li img.border {
+    position: absolute;
+    width: 85px;
+    height: 125px;
+    left: 0%;
+    top: 0%;
+    z-index: 0;
+}
 
-            #pageNav ul li img.border {
-                position: absolute;
-                width: 85px;
-                height: 125px;
-                left: 0%;
-                top: 0%;
-                z-index: 0;
-            }
-
-            #pageNav ul li div {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
+#pageNav ul li div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 .publish-btn {
     position: absolute;
@@ -431,30 +444,37 @@ a {text-decoration:none; color:#ff9933;}
     height: 57px;
     z-index: 1;
 }
-.top{
+
+.top {
     position: absolute;
-    top: 0%;left: 0%;
-    width: 100%;height: 10%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
     background: #ff9933;
     border-top-right-radius: 20px 20px;
 }
-.middle{
+
+.middle {
     position: absolute;
     background-color: #fff;
-    top: 10%;left: 0%;
-    width: 100%;height: 80%;
-
-
-
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
 }
-.bottom{
+
+.bottom {
     position: absolute;
-    top: 90%;left: 0%;
-    width: 100%;height: 10%;
+    top: 90%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
     background: #ff9933;
     border-bottom-right-radius: 20px 20px;
 }
-.publish{
+
+.publish {
     position: absolute;
     left: 550px;
     top: 14%;
@@ -467,64 +487,86 @@ a {text-decoration:none; color:#ff9933;}
     border-bottom-right-radius: 20px 20px;
     z-index: 2;
 }
-.publish a{
+
+.publish a {
     color: #fff;
 }
-.publish .icon{
+
+.publish .icon {
     position: absolute;
-    top: 40px;left: 220px;
-    width: 100px;height: 100px;
+    top: 40px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
     border: 2px #7d7d7d solid;
     opacity: 0.5;
 }
-.publish .icon p{
+
+.publish .icon p {
     text-align: center;
     font-size: 25px;
     opacity: 0.5;
 }
-.publish table{
+
+.publish table {
     position: absolute;
-    top: 150px;left: 70px;
+    top: 150px;
+    left: 70px;
     color: #7d7d7d;
     padding: 10px;
 }
-.publish .name{
+
+.publish .name {
     position: relative;
-    top: 0px;left: 30px;
-    width: 300px; 
+    top: 0px;
+    left: 30px;
+    width: 300px;
     border: 2px #969696 solid;
     border-left: none;
     border-right: none;
     border-top: none;
 }
-.publish .describe{
+
+.publish .describe {
     position: relative;
-    top: 28px;left: 30px;
-    width: 300px;height: 80px; 
+    top: 28px;
+    left: 30px;
+    width: 300px;
+    height: 80px;
     border: 2px #969696 solid;
 }
-.publish .send{
+
+.publish .send {
     position: absolute;
-    top: 88%;left: 40%;
-    width: 70px;height: 30px;
+    top: 88%;
+    left: 40%;
+    width: 70px;
+    height: 30px;
     background-color: #ff9933;
     border-radius: 8px;
 }
-.publish .send:hover{
+
+.publish .send:hover {
     background: #ffbb66;
 }
-.publish .send p{
+
+.publish .send p {
     color: #fff;
     font-size: 20px;
-    position:absolute;
-    top: -50%;left: 20%;
-}
-.publish .cancel{
     position: absolute;
-    top: 30%;right: 2%;
-    width: auto;height: 25px;
+    top: -50%;
+    left: 20%;
 }
-.final{
+
+.publish .cancel {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: auto;
+    height: 25px;
+}
+
+.final {
     position: absolute;
     left: 550px;
     top: 14%;
@@ -537,55 +579,73 @@ a {text-decoration:none; color:#ff9933;}
     border-bottom-right-radius: 20px 20px;
     z-index: 2;
 }
-.final .describe{
+
+.final .describe {
     position: absolute;
     top: 140px;
     left: 270px;
 }
-.final .create{
+
+.final .create {
     position: absolute;
-    top: 290px;left: 80px;
-    width: 120px;height: 35px;
-    border: 2px #ff9933 solid; 
+    top: 290px;
+    left: 80px;
+    width: 120px;
+    height: 35px;
+    border: 2px #ff9933 solid;
     border-radius: 8px;
 }
-.final .create:hover{
+
+.final .create:hover {
     background: #ffbb66;
 }
-.final .create p{  /*加上558,559行*/
+
+.final .create p {
+    /*加上558,559行*/
     color: #ff9933;
     font-size: 22px;
     text-align: center;
     line-height: 35px;
-
 }
-.final .share{  /*加上568行*/
+
+.final .share {
+    /*加上568行*/
     position: absolute;
-    top: 290px;left: 250px;
-    width: 120px;height: 35px;
-    border: 2px #ff9933 solid; 
+    top: 290px;
+    left: 250px;
+    width: 120px;
+    height: 35px;
+    border: 2px #ff9933 solid;
     border-radius: 8px;
     text-align: center;
 }
-.final .share:hover{
+
+.final .share:hover {
     background: #ffbb66;
 }
-.final .share p{  /*加上576行*/
+
+.final .share p {
+    /*加上576行*/
     color: #ff9933;
     font-size: 22px;
     line-height: 35px;
-
 }
-.final .src{
+
+.final .src {
     position: absolute;
-    top: 245px;left: 80px;
-    width: 56%;height: 5%;
+    top: 245px;
+    left: 80px;
+    width: 56%;
+    height: 5%;
     border-style: solid;
     border-width: 2px;
     border-color: gray;
 }
-.final .cancel{
+
+.final .cancel {
     position: absolute;
-    top: 30%;right: 2%;
-    width: auto;height: 25px;
+    top: 30%;
+    right: 2%;
+    width: auto;
+    height: 25px;
 }
