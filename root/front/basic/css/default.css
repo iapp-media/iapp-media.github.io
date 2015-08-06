@@ -1,8 +1,9 @@
-body {
+body {  /*　加上第６行 */
     margin: 0;
     padding: 0;
     background-image:url(../img/bg.jpg);
     background-size:contain;
+    font-family: 'Myriad Pro','Microsoft JhengHei','sans-serif';
 }
 a {text-decoration:none; color:#ff9933;}
 
@@ -171,6 +172,7 @@ a {text-decoration:none; color:#ff9933;}
     background-size: cover;
     opacity: 0.8;
     z-index: 3;
+    
 }
 
 .up-img1 {
@@ -340,15 +342,16 @@ a {text-decoration:none; color:#ff9933;}
 .pic1 {
     position: absolute;
     top: 10%;
-    left: 17%;
+    left: 20%;
     width: 86px;
     height: 146px;
+
 }
 
 .pic2 {
     position: absolute;
     top: 10%;
-    left: 42%;
+    left: 45%;
     width: 86px;
     height: 146px;
 }
@@ -356,7 +359,7 @@ a {text-decoration:none; color:#ff9933;}
 .pic3 {
     position: absolute;
     top: 10%;
-    left: 67%;
+    left: 70%;
     width: 86px;
     height: 146px;
 }
@@ -364,7 +367,7 @@ a {text-decoration:none; color:#ff9933;}
 .pic4 {
     position: absolute;
     top: 45%;
-    left: 17%;
+    left: 20%;
     width: 86px;
     height: 146px;
 }
@@ -372,7 +375,7 @@ a {text-decoration:none; color:#ff9933;}
 .pic5 {
     position: absolute;
     top: 45%;
-    left: 42%;
+    left: 45%;
     width: 86px;
     height: 146px;
 }
@@ -380,7 +383,7 @@ a {text-decoration:none; color:#ff9933;}
 .pic6 {
     position: absolute;
     top: 45%;
-    left: 67%;
+    left: 70%;
     width: 86px;
     height: 146px;
 }
@@ -388,7 +391,7 @@ a {text-decoration:none; color:#ff9933;}
 .pic7 {
     position: absolute;
     top: 80%;
-    left: 17%;
+    left: 20%;
     width: 86px;
     height: 146px;
 }
@@ -466,7 +469,7 @@ a {text-decoration:none; color:#ff9933;}
 
 .iframe-ed1 {
     width: 410px;
-    height: 520px;
+    height: 450px;
     position: absolute;
     left: 12%;
     top: 3%;
@@ -524,7 +527,7 @@ a {text-decoration:none; color:#ff9933;}
 }
 
 #pageNav {
-    background-color: #f19439;
+    background-color: #ff9933;
     background-image:url(../img/leftbg.jpg);
     background-size:contain;
     position: fixed;

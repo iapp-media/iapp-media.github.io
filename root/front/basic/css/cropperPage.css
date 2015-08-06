@@ -2,26 +2,18 @@ body {
     margin: 0;
     padding: 0;
 }
-
 a {
     text-decoration: none;
     color: #7d7d7d;
 }
-
-a:hover {
-    text-decoration: none;
-    color: #ff9933;
-}
+a:hover{text-decoration:none; color:#ff9933;}
 
 .hide {
     display: none;
 }
-
-.show {
+.show{
     display: inline;
 }
-
-
 /*.iframe-info{
 
 }
@@ -38,7 +30,7 @@ a:hover {
     opacity: 1;
 }*/
 
-.show {
+.show{
     width: 260px;
     height: auto;
     position: absolute;
@@ -47,8 +39,7 @@ a:hover {
     opacity: 0.5;
     z-index: 1;
 }
-
-.show2 {
+.show2{
     width: 260px;
     height: auto;
     position: absolute;
@@ -57,184 +48,133 @@ a:hover {
     z-index: 3;
 }
 
-.upload {
-    width: auto;
+.upload{ /* left改成160px 在56行的部分 */
+	  width: auto;
     height: auto;
     position: absolute;
     top: 150px;
-    left: 150px;
+    left: 160px;
     z-index: 4;
     opacity: 0.8;
     cursor: pointer;
 }
-
-.upload:hover {
+.upload:hover{
     opacity: 1;
 }
-
-#upload-img {
+#upload-img{
     display: none;
     z-index: 999;
 }
 
 .img-container {
-    background-color: #f7f7f7;
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
 }
 
 .img-container {
-    min-height: 200px;
-    height: 400px;
-    margin-top: 30px;
+  min-height: 200px;
+  height: 400px;
+  margin-top: 30px;
 }
-
 .img-container > img {
-    max-width: 50%;
-    padding-top: 20px;
+  max-width: 50%;
+  padding-top: 20px;
 }
-
-#preview {
-    display: none;
-    height: 400px;
-    margin-top: 30px;
-    margin-left: 90px;
+#preview{
+  display:none;
+  height:400px; 
+  margin-top: 30px;
+  margin-left: 90px;
 }
-
-.select {
-    width: 80px;
-    height: 30px;
-    background-color: #ff9933;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border: 2px solid #fff;
-    border-radius: 8px;
+.select{
+	width: 80px;height: 30px;
+	background-color: #ff9933;
+	position: absolute;
+	top: 10px;left: 10px;
+	border: 2px solid #fff;
+  border-radius: 8px;
 }
-
-.select:hover {
-    background-color: #ffbb66;
+.select:hover{
+  background-color: #ffbb66;
 }
-
-.select p {
-    color: #fff;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 5px;
+.select p{
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 5px;
 }
+.word{
+	text-align: right;
+	padding: 10px;
 
-.word {
-    text-align: right;
-    padding: 10px;
 }
-
-.send {
-    margin-left: 10px;
-    border: 2px solid #ff9933;
-    border-radius: 8px;
-    background-color: #fff;
-    width: 80px;
-    height: 30px;
+.send{
+	margin-left: 10px;
+	border: 2px solid #ff9933;
+  border-radius: 8px; 
+	background-color: #fff;
+	width: 80px;height: 30px;
 }
-
-.send p {
-    color: #ff9933;
-    font-size: 15px;
+.send p{
+	color: #ff9933;
+	font-size: 15px;
 }
-
-.send:hover {
+.send:hover{
     background: #ffbb66;
 }
-
-.cut {
-    margin-left: 10px;
-    border: 2px solid #ff9933;
-    border-radius: 8px;
-    background-color: #fff;
-    width: 80px;
-    height: 30px;
+.cut{
+  margin-left: 10px;
+  border: 2px solid #ff9933;
+  border-radius: 8px; 
+  background-color: #fff;
+  width: 80px;height: 30px;
 }
-
-.cut p {
-    color: #ff9933;
-    font-size: 15px;
+.cut p{
+  color: #ff9933;
+  font-size: 15px;
 }
-
-.cut:hover {
+.cut:hover{
     background: #ffbb66;
 }
-
-.confirm {
+.confirm{ /* top拿掉改成bottom: 0; left改成40% */ 
     position: absolute;
-    top: 430px;
-    left: 40%;
-    width: 90px;
-    height: 30px;
-    border: 2px #ff9933 solid;
+    bottom: 0;left: 41%;
+    width: 70px;height: 30px;
+    border:2px #ff9933 solid;
     border-radius: 8px;
     background: #fff;
-}
 
-.confirm:hover {
+}
+.confirm:hover{
     background: #ffbb66;
 }
-
-.confirm a {
-    text-decoration: none;
-    color: #ff9933;
+.confirm a{ /*加了153行 相對定位*/
+  text-decoration:none; 
+  color:#ff9933;
+  position: relative;
+  
 }
 
-.confirm p {
+.confirm p{ /*加了160到167行 絕對定位高度和寬度*/
     color: #ff9933;
     font-size: 22px;
     position: absolute;
-    top: 12%;
-    left: 25%;
-}
-
-#base64 {
-    word-wrap: break-word;
-    word-break: normal;
-    display: none;
-}
-
-#inputImage {
-    display: none;
-}
-
-.rotate {
-    display: inline-block;
-    margin-left: 100px;
-margin-top: 12px;
-    /*width: calc(50% - 5px);*/
-}
-
-.rotate-btn {
-    width: 80px;
-    /*padding-top: 2px;*/
-    /*padding-bottom: 3px;*/
-    background-color: transparent;
-    border: 2px #ff9933 solid;
-    border-radius: 8px;
-    color: #ff9933;
-    height: 30px;
-    font-size: 15px;
-}
-
-.rotate-btn:hover {
-    background: #ffbb66;
-}
-
-
-/*button {
-    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 44px;
+    height: 25px;
     
-    font-size: 24px;
-    line-height: 36px;
-}*/
-/*button:active {
-    background-color: #ff9933;
-    color: #FFFFFF;
 }
-*/
+#base64{
+  word-wrap: break-word; 
+  word-break: normal; 
+  display:none;
+}
+#inputImage{
+  display: none;
+}

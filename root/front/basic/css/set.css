@@ -93,9 +93,9 @@
         .set .send:hover{
             background: #ffbb66;
         }
-        .set .send p{
+        .set .send p{ /* 加上99,100行然後把 position:absolute; top: 20%; left: 20%;拿掉 */
             color: #ff9933;
             font-size: 20px;
-            position:absolute;
-            top: 20%;left: 20%;
+            text-align: center;
+            line-height: 30px;
         }

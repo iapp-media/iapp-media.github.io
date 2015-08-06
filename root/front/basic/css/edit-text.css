@@ -1,6 +1,6 @@
 body {
         background-color: none;
-    }
+}
     
     a {
         text-decoration: none;
@@ -14,8 +14,8 @@ body {
     
     .send {
         position: absolute;
-        top: 430px;left: 28%;
-        width: 90px;height: 30px;
+        top: 416px;left: 29%;
+        width: 70px;height: 30px;
         border:2px #ff9933 solid;
         border-radius: 8px;
         background: #fff;
@@ -28,9 +28,8 @@ body {
     .send p {
         color: #ff9933;
         font-size: 22px;
-        position: absolute;
-        top: 12%;
-        left: 25%;
+        line-height: 30px;
+        text-align: center;
     }
     
     form {

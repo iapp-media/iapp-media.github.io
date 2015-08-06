@@ -443,6 +443,9 @@ a {text-decoration:none; color:#ff9933;}
     background-color: #fff;
     top: 10%;left: 0%;
     width: 100%;height: 80%;
+
+
+
 }
 .bottom{
     position: absolute;
@@ -549,27 +552,29 @@ a {text-decoration:none; color:#ff9933;}
 .final .create:hover{
     background: #ffbb66;
 }
-.final .create p{
+.final .create p{  /*加上558,559行*/
     color: #ff9933;
     font-size: 22px;
-    position:absolute;
-    top: 10%;left: 20%;
+    text-align: center;
+    line-height: 35px;
+
 }
-.final .share{
+.final .share{  /*加上568行*/
     position: absolute;
     top: 290px;left: 250px;
     width: 120px;height: 35px;
     border: 2px #ff9933 solid; 
     border-radius: 8px;
+    text-align: center;
 }
 .final .share:hover{
     background: #ffbb66;
 }
-.final .share p{
+.final .share p{  /*加上576行*/
     color: #ff9933;
     font-size: 22px;
-    position:absolute;
-    top: 10%;left: 20%;
+    line-height: 35px;
+
 }
 .final .src{
     position: absolute;

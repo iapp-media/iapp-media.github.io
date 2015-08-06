@@ -49,6 +49,8 @@
     
     .add a {
         color: #ff9933;
+        line-height: 25px;
+        text-align: center;
     }
     
     .add:hover {
@@ -58,9 +60,7 @@
     .add p {
         color: #ff9933;
         font-size: 15px;
-        position: absolute;
-        top: 20%;
-        left: 10%;
+        text-align: center;
     }
     
     ul {

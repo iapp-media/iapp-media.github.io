@@ -139,13 +139,17 @@ body {
 .next p{
     position: absolute;
     bottom: 120px;
-    left: 45%;
+    margin: auto;
+    left: 0;
+    right: 0;
     font-size: 28px;
     font-weight: bold;
     color: #fff;
     opacity: 1;
     z-index: 2;
     display: none;
+    width: 125px;
+    /*outline: 1px solid #f00;*/
 }
 .next:hover .hint{
     display: inline;
@@ -325,35 +329,35 @@ body {
 
 .social1 {
     position: absolute;
-    width: 80px;
+    width: 40px;
     height: auto;
     left: 50%;
 }
 
 .social2 {
     position: absolute;
-    width: 80px;
+    width: 50px;
     height: auto;
     left: 50%;
 }
 
 .social3 {
     position: absolute;
-    width: 95px;
+    width: 70px;
     height: auto;
     left: 50%;
 }
 
 .social4 {
     position: absolute;
-    width: 130px;
+    width: 40px;
     height: auto;
     left: 50%;
 }
 
 .social5 {
     position: absolute;
-    width: 70px;
+    width: 50px;
     height: auto;
     left: 50%;
 }
@@ -367,56 +371,56 @@ body {
 
 .social7 {
     position: absolute;
-    width: 75px;
+    width: 50px;
     height: auto;
     left: 50%;
 }
 
 .social8 {
     position: absolute;
-    width: 105px;
+    width: 60px;
     height: auto;
     left: 50%;
 }
 
 .social9 {
     position: absolute;
-    width: 85px;
+    width: 50px;
     height: auto;
     left: 50%;
 }
 
 .social10 {
     position: absolute;
-    width: 115px;
+    width: 140px;
     height: auto;
     left: 50%;
 }
 
 .social11 {
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: auto;
     left: 50%;
 }
 
 .social12 {
     position: absolute;
-    width: 95px;
+    width: 60px;
     height: auto;
     left: 50%;
 }
 
 .social13 {
     position: absolute;
-    width: 100px;
+    width: 50px;
     height: auto;
     left: 50%;
 }
 
 .social14 {
     position: absolute;
-    width: 65px;
+    width: 40px;
     height: auto;
     left: 50%;
 }
