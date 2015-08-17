@@ -198,7 +198,6 @@
         .set .send p {
             color: #ff9933;
             font-size: 20px;
-            position: absolute;
-            top: 20%;
-            left: 20%;
+            text-align: center;
+            line-height: 34px;
         }
