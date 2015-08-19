@@ -1,101 +1,217 @@
-        body{
+        body {
             margin: 0;
             padding: 0;
-            width: auto;height: auto;
+            width: auto;
+            height: auto;
         }
-        a{text-decoration:none; color:#ff9933;}
-        #FU1
-        {
-            display:none;
+        
+        a {
+            text-decoration: none;
+            color: #ff9933;
         }
-        #FU2{
+        
+        .container {
+            position: relative;
+            width: 80%;
+        }
+        
+        #FU1 {
+            display: none;
+        }
+        
+        #FU2 {
             padding-left: 30px;
         }
-        .top{
-            position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
+        
+        .top {
+            width: 100%;
+            /*outline: 1px solid #f00;*/
         }
-        .top p{
-            font-size: 24px;font-weight: bold;color: orange;text-align: center;
+        
+        .top p {
+            font-size: 24px;
+            height: 30%;
+            font-weight: bold;
+            color: orange;
+            text-align: center;
         }
-        .bar{
+        
+        .bar {
             position: absolute;
-            top: 50%;left: 10%;
-            width: 80%;height: 2px;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 2px;
             background-color: #7d7d7d;
             opacity: 0.5;
         }
-        .bar3{
+        
+        .bar3 {
             position: absolute;
-            top: 110%;left: 0%;
-            width: 100%;height: 3px;
+            top: 110%;
+            left: 0%;
+            width: 100%;
+            height: 3px;
             background-color: #ff9933;
         }
-        .set{
-            position: absolute;
-            left: 0%;
-            top: 0%;
-            width: 80%;
+        
+        .top h1 {
+            width: 100%;
+            /*outline: 1px solid #f00;*/
+            height: 50px;
+            text-align: center;
+            color: #ff9933;
+            font-size: 24px;
+            line-height: 60px;
+            border-bottom: 2px solid #ff9933;
+        }
+        
+        .left {
+            width: 50%;
             height: 300px;
+        }
+        
+        .left h2 {
+            text-align: center;
+            color: #7d7d7d;
+            padding: 5px;
+            font-weight: normal;
+        }
+        
+        .left .show {
+            width: 169px;
+            height: 300px;
+            border: 1px solid #aaa;
+            margin: 0 auto;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .show img {
+            max-height: 300px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        
+        .left .show .upload {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            /*outline: 1px solid #f00;*/
+        }
+        
+        .set {
+            position: absolute;
+            right: 0%;
+            top: 10px;
+            width: 50%;
+            height: 400px;
             z-index: 2;
         }
-        .set a{
+        
+        .set a {
             color: #ff9933;
         }
-        .set .icon{
-            position: absolute;
-            top: 15px;left: 220px;
-            width: 120px;height: 100px;
+        
+        .set .icon {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
             opacity: 1;
+            border: 1px solid #7d7d7d;
+            border-radius: 3px;
         }
-        .set .icon p{
+        
+        .set .icon p {
             text-align: center;
             font-size: 25px;
         }
-        .icon .iconimg-1{
+        
+        .icon .iconimg-1 {
             border: 2px #7d7d7d solid;
+            border-radius: 5px;
         }
-        .icon:hover .iconimg-1{
+        
+        .icon:hover .iconimg-1 {
             opacity: 0.5;
         }
-        .set table{
-            position: absolute;
-            top: 150px;left: 70px;
+        
+        .set table {
             color: #7d7d7d;
             padding: 10px;
         }
-        .set .poster{
+        
+        .set .poster {
             position: relative;
-            top: 0px;left: 30px;
+            top: 0px;
+            left: 30px;
         }
-        .set .name{
-            margin-top: 25px;
-            margin-left: 30px;
-            width: 300px; 
-            border: 2px #969696 solid;
-            border-left: none;
-            border-right: none;
-            border-top: none;
-        }
-        .set .describe{
-            margin-top: 25px;
-            margin-left: 30px;
-            width: 300px;height: 80px; 
+        
+        .set .name {
+            width: 100%;
             border: 2px #969696 solid;
         }
-
-        .set .send{
+        
+        .text1title {
+            font-size: 18px;
+            text-align: left;
+            padding: 5px 0;
+        }
+        
+        .text1title input {
+            /*outline: 1px solid #f00;*/
+            width: 100%;
+            margin-top: 5px;
+        }
+        
+        .text1title span {
+            text-align: left;
+        }
+        
+        .text1title textarea[name="TAppMemo"] {
+            text-align: left;
+            height: 80px;
+        }
+        
+        .set .describe {
+            width: 100%;
+            padding-bottom: 30px;
+            border: 2px #969696 solid;
+            margin-top: 5px;
+            text-align: left;
+            float: left;
+        }
+        
+        .set .send {
             position: absolute;
-            top: 350px;left: 55%;
-            width: 70px;height: 30px;
-            border:2px #ff9933 solid;
+            bottom: 17px;
+            left: 0;
+            width: 70px;
+            height: 30px;
+            border: 2px #ff9933 solid;
             border-radius: 8px;
+            background-color: #ff9933
         }
-        .set .send:hover{
+        
+        .set .send:hover {
             background: #ffbb66;
         }
-        .set .send p{
+        
+        .set .send p {
             color: #ff9933;
             font-size: 20px;
-            position:absolute;
-            top: 20%;left: 20%;
+            text-align: center;
+            line-height: 33px;
+        }
+        
+        .set .send p a {
+            color: #fff;
         }
