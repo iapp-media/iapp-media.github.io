@@ -1,3 +1,4 @@
+'use strict';
 var DEGBUG = 1;
 var width = getValue('w');
 var height = getValue('h');
@@ -109,7 +110,9 @@ $(function() {
             }
           }
         }
-
+        if (data.method === 'rotate') {
+          $image.cropper('rotate', 90);
+        }
         //
         result = $image.cropper(data.method, data.option);
         // $('.img-container').hide();
@@ -117,9 +120,9 @@ $(function() {
 
         console.log(result);
         if (data.method === 'getCroppedCanvas') {
-          document.getElementById('preview').src = result.toDataURL("image/jpeg", 0.6);
+          document.getElementById('preview').src = result.toDataURL('image/jpeg', 0.6);
           $('.img-container').hide();
-          $('#preview').show();
+          $('.preview-container').show();
         }
 
         if ($.isPlainObject(result) && $target) {
@@ -194,31 +197,31 @@ $(function() {
 function getValue(varname) {
   var url = window.location.href;
   try {
-    var qparts = url.split("?");
-    if (qparts.length == 0) {
-      return "";
+    var qparts = url.split('?');
+    if (qparts.length === 0) {
+      return '';
     }
     var query = qparts[1];
-    var vars = query.split("&");
-    var value = "";
-    for (i = 0; i < vars.length; i++) {
-      var parts = vars[i].split("=");
+    var vars = query.split('&');
+    var value = '';
+    for (var i = 0; i < vars.length; i++) {
+      var parts = vars[i].split('=');
       if (parts[0] == varname) {
         value = parts[1];
         break;
       }
     }
     value = unescape(value);
-    value.replace(/\+/g, " ");
+    value.replace(/\+/g, ' ');
     return value;
   } catch (err) {
-    return "";
+    return '';
   }
 }
 
 function compress() {
-  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, "jpg").src;
-  document.getElementById('base64').innerText = document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, "");
-  document.getElementById('show-img').src = document.getElementById('preview').src;
-  
+  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, 'jpg').src;
+  document.getElementById('base64').setAttribute('value',document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ''));
+  document.getElementById('showImg').src = document.getElementById('preview').src;
+  document.getElementById('showImg').classList.remove('opacity');
 }
