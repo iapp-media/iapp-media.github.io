@@ -1,362 +1,392 @@
                                     #infscr-loading {
-                                    text-align: center;
-                                    z-index: 100;
-                                    position: fixed;
-                                    margin-left: 40%;
-                                    bottom: 40px;
-                                    width: 200px;
-                                    padding: 10px;
-                                    background: #000;
-                                    opacity: 0.8;
-                                    color: #FFF;
-                                    -webkit-border-radius: 10px;
-                                    -moz-border-radius: 10px;
-                                    border-radius: 10px;
-                                }
-                                
-                                .style {
-                                    background-color: #fff;
-                                    width: 210px;
-                                    height: 50px;
-                                }
-                                
-                                .imgcenter {
-                                    text-align: center;
-                                }
-                                
-                                .clearbox {
-                                    clear: both;
-                                }
-                                
-                                .item {
-                                    background: #fff;
-                                    border-radius: 5px;
-                                    width: 210px;
-                                    float: left;
-                                    padding-bottom: 5px;
-                                    border: 1px solid #ddd;
-                                    margin: 5px;
-                                }
-                                
-                                .item-pic {
-                                    position: relative;
-                                    width: 208px;
-                                    max-height: 330px;
-                                    border-bottom: 1px solid #ddd;
-                                    border-top-left-radius: 5px;
-                                    border-top-right-radius: 5px;
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
-                                }
-                                
-                                .item-bar {
-                                    visibility: hidden;
-                                    position: absolute;
-                                    top: 1%;
-                                    left: 0%;
-                                    width: 100%;
-                                    opacity: 0.8;
-                                    text-align: left;
-                                    /*padding-left: 5px;*/
-                                    font-size: 14px;
-                                }
-                                
-                                .imgcenter:hover .item-bar {
-                                    visibility: visible;
-                                }
-                                
-                                .item-bar p {
-                                    display: inline;
-                                }
-                                
-                                #container {
-                                    margin-top: 10%;
-                                    margin-left: 8%;
-                                    border-radius: 5px;
-                                    clear: both;
-                                    -webkit-border-radius: 5px;
-                                    -moz-border-radius: 5px;
-                                    border-radius: 5px;
-                                }
-                                
-                                .describe {
-                                    border-bottom: 1px solid #ddd;
-                                    text-align: left;
-                                    padding-left: 10px;
-                                    padding-bottom: 10px;
-                                    font-size: 9pt;
-                                }
-                                
-                                .circle {
-                                    position: relative;
-                                    left: -2%;
-                                    width: 35px;
-                                    height: 35px;
-                                    border-radius: 99em;
-                                    border: 1px solid #ddd;
-                                }
-                                
-                                .iapp-name {
-                                    display: inline;
-                                    padding-left: 0px;
-                                    font-size: 15px;
-                                    color: #323232;
-                                }
-                                
-                                .author {
-                                    display: inline;
-                                    text-align: left;
-                                    padding-left: 10px;
-                                    color: #aaa;
-                                }
-                                /* checkbox設定 */
-                                
-                                .list {
-                                    float: left;
-                                }
-                                
-                                .list li {
-                                    float: left;
-                                    background-color: #fff;
-                                    margin: 0 5px;
-                                    border-radius: 5px;
-                                    height: 30px;
-                                }
-                                
-                                .list li p {
-                                    color: #969696;
-                                }
-                                
-                                .list li:nth-child(2) {
-                                    /*outline: 1px solid #f00;*/
-                                    width: 55px;
-                                }
-                                
-                                .list li:nth-child(2) p {
-                                    margin-left: 5px;
-                                }
-                                
-                                .label--checkbox {
-                                    position: relative;
-                                    margin: .5em;
-                                    cursor: pointer;
-                                    border-top-style: none;
-                                    border-right-style: none;
-                                }
-                                
-                                .label--checkbox p {
-                                    margin-left: .2em;
-                                }
-                                
-                                .good,
-                                .like,
-                                .startoggle {
-                                    position: relative;
-                                    top: -0.375rem;
-                                    margin: 0 1rem 0 1rem;
-                                    cursor: pointer;
-                                }
-                                
-                                .startoggle:before {
-                                    -webkit-transition: all 0.3s ease-in-out;
-                                    -moz-transition: all 0.3s ease-in-out;
-                                    transition: all 0.3s ease-in-out;
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    z-index: 1;
-                                    width: 15px;
-                                    height: 15px;
-                                    background: url('../img/Collect-1.png');
-                                    background-size: 100%;
-                                    background-color: transparent;
-                                }
-                                
-                                .good:before {
-                                    -webkit-transition: all 0.3s ease-in-out;
-                                    -moz-transition: all 0.3s ease-in-out;
-                                    transition: all 0.3s ease-in-out;
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    z-index: 1;
-                                    width: 15px;
-                                    height: 15px;
-                                    background: url('../img/good-1.png');
-                                    background-size: 100%;
-                                    background-color: transparent;
-                                }
-                                
-                                .like:before {
-                                    -webkit-transition: all 0.3s ease-in-out;
-                                    -moz-transition: all 0.3s ease-in-out;
-                                    transition: all 0.3s ease-in-out;
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    z-index: 1;
-                                    width: 15px;
-                                    height: 15px;
-                                    background: url('../img/like-1.png');
-                                    background-size: 100%;
-                                    background-color: transparent;
-                                }
-                                
-                                .like:checked:before {
-                                    background: url('../img/like-2.png');
-                                    background-size: 100%;
-                                    border-top-style: none;
-                                    background-color: transparent;
-                                    border-right-style: none;
-                                }
-                                
-                                .good:checked:before {
-                                    background: url('../img/good-2.png');
-                                    background-size: 100%;
-                                    border-top-style: none;
-                                    background-color: transparent;
-                                    border-right-style: none;
-                                }
-                                
-                                .startoggle:checked:before {
-                                    background: url('../img/Collect-2.png');
-                                    background-size: 100%;
-                                    border-top-style: none;
-                                    background-color: transparent;
-                                    border-right-style: none;
-                                }
-                                
-                                .good:after,
-                                .startoggle:after {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    width: 1.1rem;
-                                    height: 1.1rem;
-                                    background: transparent;
-                                    cursor: pointer;
-                                    background-color: #fff;
-                                }
-                                
-                                .like:after {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    width: 1.1rem;
-                                    height: 1.1rem;
-                                    background: transparent;
-                                    cursor: pointer;
-                                    background-color: #fff;
-                                }
-                                
-                                .list li:last-child {
-                                    /*outline: 1px solid #f00;*/
-                                    float: right;
-                                    width: 30px;
-                                    height: 30px;
-                                    position: absolute;
-                                    right: 0;
-                                }
-                                
-                                @media only screen and (min-width:481px) and (max-width:768px) {
-                                    #container {
-                                        margin-top: 15%;
-                                        margin-left: 3%;
+                                        text-align: center;
+                                        z-index: 100;
+                                        position: fixed;
+                                        margin-left: 40%;
+                                        bottom: 40px;
+                                        width: 200px;
+                                        padding: 10px;
+                                        background: #000;
+                                        opacity: 0.8;
+                                        color: #FFF;
+                                        -webkit-border-radius: 10px;
+                                        -moz-border-radius: 10px;
+                                        border-radius: 10px;
                                     }
+                                    
+                                    .style {
+                                        background-color: #fff;
+                                        width: 210px;
+                                        height: 50px;
+                                    }
+                                    
+                                    .imgcenter {
+                                        text-align: center;
+                                    }
+                                    
+                                    .clearbox {
+                                        clear: both;
+                                    }
+                                    
                                     .item {
-                                        width: 203px;
+                                        background: #fff;
+                                        border-radius: 5px;
+                                        width: 210px;
                                         float: left;
-                                        padding: 0px;
-                                        margin: 1%;
+                                        padding-bottom: 5px;
+                                        border: 1px solid #ddd;
+                                        margin: 5px;
                                     }
+                                    
                                     .item-pic {
-                                        max-width: 200px;
-                                        max-height: 336px;
                                         position: relative;
+                                        width: 208px;
+                                        max-height: 330px;
+                                        border-bottom: 1px solid #ddd;
+                                        border-top-left-radius: 5px;
+                                        border-top-right-radius: 5px;
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
                                     }
+                                    
+                                    .item-bar {
+                                        visibility: hidden;
+                                        position: absolute;
+                                        top: 1%;
+                                        left: 0%;
+                                        width: 100%;
+                                        opacity: 0.8;
+                                        text-align: left;
+                                        /*padding-left: 5px;*/
+                                        font-size: 14px;
+                                    }
+                                    
+                                    .imgcenter:hover .item-bar {
+                                        visibility: visible;
+                                    }
+                                    
                                     .item-bar p {
                                         display: inline;
                                     }
-                                    .item-bar {
-                                        visibility: visible;
-                                    }
-                                    .item-bar .good {
-                                        display: inline;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
-                                    }
-                                    .item-bar .heart {
-                                        display: inline;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
-                                    }
-                                    .item-bar .star {
-                                        position: absolute;
-                                        top: 1%;
-                                        left: 82%;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
-                                    }
-                                }
-                                
-                                @media only screen and (max-width:480px) {
+                                    
                                     #container {
-                                        margin-top: 25%;
-                                        margin-left: 6%;
+                                        margin-top: 10%;
+                                        margin-left: 8%;
+                                        border-radius: 5px;
+                                        clear: both;
+                                        -webkit-border-radius: 5px;
+                                        -moz-border-radius: 5px;
+                                        border-radius: 5px;
                                     }
-                                    .item {
-                                        width: 133px;
-                                        float: left;
-                                        padding: 0px;
-                                        margin: 1%;
+                                    
+                                    .describe {
+                                        border-bottom: 1px solid #ddd;
+                                        text-align: left;
+                                        padding-left: 10px;
+                                        padding-bottom: 10px;
+                                        font-size: 9pt;
                                     }
-                                    .item-pic {
-                                        max-width: 130px;
-                                        max-height: 236px;
-                                        position: relative;
-                                    }
+                                    
                                     .circle {
                                         position: relative;
                                         left: -2%;
-                                        width: 28px;
-                                        height: 28px;
+                                        width: 35px;
+                                        height: 35px;
                                         border-radius: 99em;
                                         border: 1px solid #ddd;
                                     }
+                                    
                                     .iapp-name {
                                         display: inline;
                                         padding-left: 0px;
-                                        font-size: 13px;
+                                        font-size: 15px;
+                                        color: #323232;
                                     }
+                                    
                                     .author {
-                                        font-size: 10px;
-                                    }
-                                    .item-bar p {
                                         display: inline;
+                                        text-align: left;
+                                        padding-left: 10px;
+                                        color: #aaa;
                                     }
-                                    .item-bar {
-                                        visibility: visible;
+                                    /* checkbox設定 */
+                                    
+                                    .list {
+                                        float: left;
                                     }
-                                    .item-bar .good {
-                                        display: inline;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
+                                    
+                                    .list li {
+                                        float: left;
+                                        background-color: #fff;
+                                        margin: 0 5px;
+                                        border-radius: 5px;
+                                        height: 30px;
                                     }
-                                    .item-bar .heart {
-                                        display: inline;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
+                                    
+                                    .list li p {
+                                        color: #969696;
                                     }
-                                    .item-bar .star {
+                                    
+                                    .list li:nth-child(2) {
+                                        /*outline: 1px solid #f00;*/
+                                        width: 55px;
+                                    }
+                                    
+                                    .list li:nth-child(2) p {
+                                        margin-left: 5px;
+                                    }
+                                    
+                                    .label--checkbox {
+                                        position: relative;
+                                        margin: .5em;
+                                        cursor: pointer;
+                                        border-top-style: none;
+                                        border-right-style: none;
+                                    }
+                                    
+                                    .label--checkbox p {
+                                        margin-left: .2em;
+                                    }
+                                    
+                                    .good,
+                                    .like,
+                                    .startoggle {
+                                        position: relative;
+                                        top: -0.375rem;
+                                        margin: 0 1rem 0 1rem;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    .startoggle:before {
+                                        -webkit-transition: all 0.3s ease-in-out;
+                                        -moz-transition: all 0.3s ease-in-out;
+                                        transition: all 0.3s ease-in-out;
+                                        content: "";
                                         position: absolute;
-                                        top: 1%;
-                                        left: 82%;
-                                        padding: 2px 5px 2px 5px;
-                                        color: #fff;
-                                        font-size: 10px;
+                                        left: 0;
+                                        z-index: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        background: url('../img/Collect-1.png');
+                                        background-size: 100%;
+                                        background-color: transparent;
+                                    }
+                                    
+                                    .good:before {
+                                        -webkit-transition: all 0.3s ease-in-out;
+                                        -moz-transition: all 0.3s ease-in-out;
+                                        transition: all 0.3s ease-in-out;
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        z-index: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        background: url('../img/good-1.png');
+                                        background-size: 100%;
+                                        background-color: transparent;
+                                    }
+                                    
+                                    .like:before {
+                                        -webkit-transition: all 0.3s ease-in-out;
+                                        -moz-transition: all 0.3s ease-in-out;
+                                        transition: all 0.3s ease-in-out;
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        z-index: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        background: url('../img/like-1.png');
+                                        background-size: 100%;
+                                        background-color: transparent;
+                                    }
+                                    
+                                    .like:checked:before {
+                                        background: url('../img/like-2.png');
+                                        background-size: 100%;
+                                        border-top-style: none;
+                                        background-color: transparent;
+                                        border-right-style: none;
+                                    }
+                                    
+                                    .good:checked:before {
+                                        background: url('../img/good-2.png');
+                                        background-size: 100%;
+                                        border-top-style: none;
+                                        background-color: transparent;
+                                        border-right-style: none;
+                                    }
+                                    
+                                    .startoggle:checked:before {
+                                        background: url('../img/Collect-2.png');
+                                        background-size: 100%;
+                                        border-top-style: none;
+                                        background-color: transparent;
+                                        border-right-style: none;
+                                    }
+                                    
+                                    .good:after,
+                                    .startoggle:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        width: 1.1rem;
+                                        height: 1.1rem;
+                                        background: transparent;
+                                        cursor: pointer;
+                                        background-color: #fff;
+                                    }
+                                    
+                                    .like:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        width: 1.1rem;
+                                        height: 1.1rem;
+                                        background: transparent;
+                                        cursor: pointer;
+                                        background-color: #fff;
+                                    }
+                                    
+                                    .list li:last-child {
+                                        /*outline: 1px solid #f00;*/
+                                        float: right;
+                                        width: 30px;
+                                        height: 30px;
+                                        position: absolute;
+                                        right: 0;
+                                    }
+                                    .openlogin {
+                                        display: block;
+                                    }
+                                    
+                                    @media only screen and (min-width:481px) and (max-width:768px) {
+                                        #container {
+                                            margin-top: 15%;
+                                            margin-left: 3%;
+                                        }
+                                        .item {
+                                            width: 203px;
+                                            float: left;
+                                            padding: 0px;
+                                            margin: 1%;
+                                        }
+                                        .item-pic {
+                                            max-width: 200px;
+                                            max-height: 336px;
+                                            position: relative;
+                                        }
+                                        .item-bar p {
+                                            display: inline;
+                                        }
+                                        .item-bar {
+                                            visibility: visible;
+                                        }
+                                        .item-bar .good {
+                                            display: inline;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .item-bar .heart {
+                                            display: inline;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .item-bar .star {
+                                            position: absolute;
+                                            top: 1%;
+                                            left: 82%;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .username-icon {
+                                            display: none;
+                                        }
+                                        .icon-box {
+                                            outline: 1px solid #f00;
+                                            display: none;
+                                        }
+                                        .usericon {
+                                            display: none;
+                                        }
+                                        .username-icon {
+                                            display: none;
+                                        }
+                                    }
+                                    
+                                    @media only screen and (max-width:480px) {
+                                        #container {
+                                            margin-top: 25%;
+                                            margin-left: 6%;
+                                        }
+                                        .item {
+                                            width: 133px;
+                                            float: left;
+                                            padding: 0px;
+                                            margin: 1%;
+                                        }
+                                        .item-pic {
+                                            max-width: 130px;
+                                            max-height: 236px;
+                                            position: relative;
+                                        }
+                                        .circle {
+                                            position: relative;
+                                            left: -2%;
+                                            width: 28px;
+                                            height: 28px;
+                                            border-radius: 99em;
+                                            border: 1px solid #ddd;
+                                        }
+                                        .iapp-name {
+                                            display: inline;
+                                            padding-left: 0px;
+                                            font-size: 13px;
+                                        }
+                                        .author {
+                                            font-size: 10px;
+                                        }
+                                        .item-bar p {
+                                            display: inline;
+                                        }
+                                        .item-bar {
+                                            visibility: visible;
+                                        }
+                                        .item-bar .good {
+                                            display: inline;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .item-bar .heart {
+                                            display: inline;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .item-bar .star {
+                                            position: absolute;
+                                            top: 1%;
+                                            left: 82%;
+                                            padding: 2px 5px 2px 5px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                        }
+                                        .username-icon {
+                                            display: none;
+                                        }
+                                        .icon-box {
+                                            outline: 1px solid #f00;
+                                            display: none;
+                                        }
+                                        .usericon {
+                                            display: none;
+                                        }
+                                        .username-icon {
+                                            display: none;
+                                        }
                                     }

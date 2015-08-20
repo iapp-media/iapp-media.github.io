@@ -389,30 +389,7 @@
     <!-- 觸發 -->
     <script>
         $(document).ready(function() {
-          // $(".join").click(function() {
-          //   $('.register-mobile').slideToggle(300);
-          //   return false;
-          // });
-          // $(".register-back").click(function() {
-          //   $('.register-mobile').slideToggle(300);
-          //   return false;
-          // });
-          // $("#m-login").click(function() {
-          //   $(".login-mobile").animate({
-          //         height: 'toggle'
-          //     }, 300);
-          //     $(".theme").hide();
-          // });
-          // $(".login-back").click(function() {
-          //   $('.login-mobile').slideToggle(300);
-          //   hide();
-          // });
-          // $(".send").click(function() {
-          //   $('.login-mobile').hide();
-          //   $('.register-mobile').hide();
-          //   $('#m-login').hide();
-          //   $('.circle-login').show();
-          // });
+          
           $("#user-login").click(function() {
             $(".m-profile").animate({
                   height: 'toggle'
@@ -444,7 +421,7 @@
           });
           $(".login-box").click(function() {
             $('.login-box').hide();
-            $('.icon-box').show();
+            $('.icon-box').addClass('openlogin');
           });
           $(".icon-box").click(function() {
             $('.jumbotron').show();
