@@ -91,6 +91,8 @@ a:hover {text-decoration:none; color:#ffbb66;}
 }
 .dropdown-menu-right{
 	display: none;
+	/*outline: 1px solid #f00;*/
+	top: 0;
 }
 /*.search .input-group-btn:hover .dropdown-menu-right{
 		display: block;
@@ -202,7 +204,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 }
 .jumbotron .logout {
 	position: absolute;
-	top: 30px;right: 0px;
+	top: 20px;right: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
 	border-radius: 0px;
@@ -655,7 +657,7 @@ a:hover {text-decoration:none; color:#ffbb66;}
 	}
 	.dropdown-menu-right {
 		position: absolute;
-		top: 60px;right: 5px;
+		top: 50px;right: 5px;
 		width: 95%;
 	}
 	.input-group .form-control {
