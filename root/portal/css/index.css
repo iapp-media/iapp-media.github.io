@@ -290,6 +290,17 @@ a:hover {text-decoration:none; color:#ffbb66;}
 .option-user p{
 	font-size: 22px;
 }
+
+    .option-user a:link
+    {
+        color:#fff;
+        text-decoration:none;
+    }
+    .option-user a:visited
+    {
+        color:#fff;
+        text-decoration:none;
+    }
 /*.separate-user {
     background-color: #fff;
     width: 2px;
