@@ -318,7 +318,7 @@
                                     
                                     @media only screen and (max-width:480px) {
                                         #container {
-                                            margin: 10% auto;
+                                            margin: 60px auto;
                                         }
                                         .item {
                                             width: 133px;
