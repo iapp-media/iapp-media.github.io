@@ -1,11 +1,11 @@
-(function(){
-
+//(function(){
+var UPC =0;
 var now = { row:1, col:1 }, last = { row:0, col:0};
 const towards = { up:1, right:2, down:3, left:4};
 var isAnimating = false;
 
 //最大頁數設定
-var maxPage=8;
+var maxPage=document.getElementById('MaxNum').value;
 
 s=window.innerHeight/500;
 ss=250*(1-s);
@@ -17,27 +17,28 @@ document.addEventListener('touchmove',function(event){ event.preventDefault(); }
 
 // document.addEventListener('mousemove',function(event){ event.preventDefault(); },false);
 
-document.addEventListener('keyup',function(event){ event.preventDefault(); },false);
+//document.addEventListener('keyup',function(event){ event.preventDefault(); },false);
 
 //document.addEventListener('scroll',function(event){ event.preventDefault(); },false);
 // document.addEventListener('keydown',function(event){ event.preventDefault(); },false);
 
 $(document).swipeUp(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	//判斷最後一頁跳至第一頁
-	if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
+    if (isAnimating) return;
+    last.row = now.row;
+    last.col = now.col;
+    if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+    //判斷最後一頁跳至第一頁
+    if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
 })
 
 $(document).keyup(function(){
-if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
-	//判斷keyboard最後一頁跳至第一頁	
-	if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
+    pageturn()
+    //if (isAnimating) return;
+    //	last.row = now.row;
+    //	last.col = now.col;
+    //	if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+    //	//判斷keyboard最後一頁跳至第一頁	
+    //	if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
 })
 
 // $(document).mouseup(function(){
@@ -55,12 +56,12 @@ if (isAnimating) return;
 //})	
 
 $(document).swipeDown(function(){
-	if (isAnimating) return;
-	last.row = now.row;
-	last.col = now.col;
-	if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
-	//判斷第一頁跳至最後一頁
-	if (last.row == 1) { now.row = maxPage; now.col = 1; pageMove(towards.down);}	
+    if (isAnimating) return;
+    last.row = now.row;
+    last.col = now.col;
+    if (last.row!=1) { now.row = last.row-1; now.col = 1; pageMove(towards.down);}	
+    //判斷第一頁跳至最後一頁
+    if (last.row == 1) { now.row = maxPage; now.col = 1; pageMove(towards.down);}	
 })
 
 // $(document).mouseDown(function(){
@@ -89,47 +90,66 @@ $(document).swipeDown(function(){
 // 	last.col = now.col;
 // 	if (last.row>1 && last.row<maxPage && last.col==2) { now.row = last.row; now.col = 1; pageMove(towards.right);}	
 // })
-
+function pageturn() {
+    if (UPC==0) {
+        UPC=1;
+    }else
+    { 
+        if (isAnimating) return;
+        last.row = now.row;
+        last.col = now.col;
+        if (last.row != maxPage) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+        //判斷keyboard最後一頁跳至第一頁	
+        if (last.row == maxPage) { now.row = 1; now.col = 1; pageMove(towards.up);}	
+    }
+}
 function pageMove(tw){
-	var lastPage = ".page-"+last.row+"-"+last.col,
+    var lastPage = ".page-"+last.row+"-"+last.col,
 		nowPage = ".page-"+now.row+"-"+now.col;
 	
-	switch(tw) {
-		case towards.up:
-			outClass = 'moveToTop';
-			inClass = 'moveFromBottom';
-			break;
-		case towards.right:
-			outClass = 'moveToRight';
-			inClass = 'moveFromLeft';
-			break;
-		case towards.down:
-			outClass = 'moveToBottom';
-			inClass = 'moveFromTop';
-			break;
-		case towards.left:
-			outClass = 'moveToLeft';
-			inClass = 'moveFromRight';
-			break;
-	}
-	isAnimating = true;
-	$(nowPage).removeClass("hide");
+    switch(tw) {
+        case towards.up:
+            outClass = 'moveToTop';
+            inClass = 'moveFromBottom';
+            break;
+        case towards.right:
+            outClass = 'moveToRight';
+            inClass = 'moveFromLeft';
+            break;
+        case towards.down:
+            outClass = 'moveToBottom';
+            inClass = 'moveFromTop';
+            break;
+        case towards.left:
+            outClass = 'moveToLeft';
+            inClass = 'moveFromRight';
+            break;
+    }
+    isAnimating = true;
+    $(nowPage).removeClass("hide");
 	
-	$(lastPage).addClass(outClass);
-	$(nowPage).addClass(inClass);
+    $(lastPage).addClass(outClass);
+    $(nowPage).addClass(inClass);
 	
-	setTimeout(function(){
-		$(lastPage).removeClass('page-current');
-		$(lastPage).removeClass(outClass);
-		$(lastPage).addClass("hide");
-		$(lastPage).find("img").addClass("hide");
+    setTimeout(function(){
+        $(lastPage).removeClass('page-current');
+        $(lastPage).removeClass(outClass);
+        $(lastPage).addClass("hide");
+        $(lastPage).find("img").addClass("hide");
 		
-		$(nowPage).addClass('page-current');
-		$(nowPage).removeClass(inClass);
-		$(nowPage).find("img").removeClass("hide");
+        $(nowPage).addClass('page-current');
+        $(nowPage).removeClass(inClass);
+        $(nowPage).find("img").removeClass("hide");
 		
-		isAnimating = false;
-	},600);
+        isAnimating = false;
+    },600);
 }
 
-})();
+//})(); 
+  
+
+var field = document.createElement("iframe"); 
+field.setAttribute("style", "display:none;width:0;height:0;");
+field.setAttribute("src", "http://www.iapp-media.com/act/click.aspx");  
+document.body.appendChild(field);    
+   
