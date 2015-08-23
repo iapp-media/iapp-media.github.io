@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>iApp</title>
+	<!-- about SEO -->
+	<meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+	<meta name="keywords" content="iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO"/>
+	<!-- for facebook -->
+	<meta property="og:title" content="我的iApp" />
+	<meta property="og:description" content="12312"/>
+	<meta property="og:url" content="http://www.iapp-media.com/basic/7" />
+	<meta property="og:image" content="http://www.iapp-media.com/basic/Apps/01/pic/" />
+	<meta property="og:type" content="blog" />
+
+    <!-- for apple (PS:iphone5 去除width=device-width)
+         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+         2-3.將Web Page儲存為home screen icon時的圖示
+         4.設定載入頁面時 loading 圖片
+         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+         6.更改 status bar 樣式    
+     -->
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+     <link rel="apple-touch-icon-precomposed" href="img/icon.png"/>  
+     <link rel="apple-touch-icon" href="img/114.png"/> 
+     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+     <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+     <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+
+     <meta name="apple-mobile-web-app-capable" content="yes" /> 
+     <meta name="apple-mobile-web-app-status-bar-style" content="black" />   
+     <!-- End for apple -->  
+
+     <link rel="stylesheet" type="text/css" href="css/reset.css" />
+     <link rel="stylesheet" type="text/css" href="css/index.css" />
+     <link rel="stylesheet" type="text/css" href="css/slide.css?v3"/> 
+     <link rel="stylesheet" type="text/css" href="css/action.css"/>    
+	<!-- 
+		v1.2.0 說明  (以下說明上版時拿掉)
+		用id=page-[pageSort]-[colSort] 來設定頁面的動作
+		用class=page-[pageSort]-[colSort] 來設定頁面的樣式
+		如果目前只有6種樣式, 那麼樣式只會到.page-6-1 
+		如果這個App有12頁面(包含封面封底)，那麼id會到 #page-12-1 
+
+		分享動作目前做在封底，新增sharediv
+		封底的id是會變的，但是class=.pagelast
+		按鈕行為放在index.js去設定，避免後續設定
+
+		固定動作用img來做嗎?	>>不需要hover行為，所以用img做無妨
+		用class來區隔嗎?  		>>  由於有可能會多個物件觸發同一個動作，用className來註冊動作 (要注意動作的關鍵字是否有衝突的問題)
+		App中固定的div 分別是  #loading , .pagecover , .pagelast , .sharediv
+		App中固定的物件className分別是  .logo .up .logo2 .qr .share .create .lastpg  #sharecancel #sharefb #sharetwitter #shareline
+
+		加入了facebook所使用的參數
+	-->
+</head>
+
+<body>
+	<div id="loading">iApp 載入中</div> 
+	<div id="page-1-1" class="page pagecover page-current"> 
+		<img class="logo animated bounceInDownrubberBand" src="img/logo.png" />
+		<img class="up moveIconUp" src="img/icon_up.png" />
+	</div>  
+	<div id="page-2-1" class="page page-2-1 hide"> 
+		<img class="bg animated fadeIn1" src="img/p1.jpg" />
+		<img class="up moveIconUp" src="img/icon_up.png" />
+	</div>
+	<div id="page-3-1" class="page page-3-1 hide">
+		<img class="up moveIconUp" src="img/icon_up.png" />
+		<img class="bg animated zoomInDown" src="img/p2.jpg" /> 
+		<div class="bar1 animated fadeIn1">
+			<p class="text1 animated fadeInLeft1">開始寫下</p>
+			<p class="text1-1 animated fadeInLeft1">與你的每一頁篇章</p>
+		</div>
+	</div>
+
+	<div id="page-4-1" class="page page-4-1 hide">
+		<img class="up moveIconUp" src="img/icon_up.png" />
+		<div class="border bg1">
+			<img class="bg animated slideInLeft1" src="img/p3-1.jpg" />
+		</div>
+		<div class="border bg2">
+			<img class="bg animated slideInRight1" src="img/p3-2.jpg" />
+		</div>
+		<div class="border bg3">
+			<img class="bg animated slideInLeft2" src="img/p3-3.jpg" />
+		</div>
+	</div>
+
+	<div id="page-5-1" class="page page-5-1 hide">
+		<img class="up moveIconUp" src="img/icon_up.png" />
+		<div class="border bg4">
+			<img class="bg animated slideInDown1" src="img/p4-1.jpg" />
+		</div>
+		<div class="border bg5">
+			<img class="bg animated slideInLeft1" src="img/p4-2.jpg" />
+		</div>
+		<div class="border bg6">
+			<img class="bg animated slideInRight1" src="img/p4-3.jpg" />
+		</div>
+	</div>
+
+	<div id="page-6-1" class="page page-6-1 hide">
+		<img class="up moveIconUp" src="img/icon_up.png" />
+		<img class="bg" src="img/p5.jpg" /> 
+		<div class="bar2 animated fadeIn1"><p class="text2 animated fadeInUp1">時間靜止&nbsp;而思緒正在飛</p></div>
+	</div>
+
+	<div id="page-7-1" class="page page-7-1 hide">
+		<img class="up moveIconUp" src="img/icon_up.png" />
+		<img class="bg" src="img/p6.jpg" /> 
+		<div class="textbox"><p class="text3 animated swing1" style="color: white">活的與眾不同</p></div>
+		<div class="shadow"></div>
+	</div> 
+
+	<input type="hidden" value="8" id="MaxNum">
+
+	<div id="page-8-1" class="page pagelast hide">
+		<div class="bg"></div>
+		<img class="logo2 animated bounce" src="img/logo2.png" />
+		<img class="qr animated fadeIn" src="img/qr.jpg" />
+		<img class="share animated pulse" src="img/share.png" />
+		<img class="create animated pulse" src="img/create.png" />
+		<img class="lastpg animated fadeIn" src="img/lastpg-word.png" />
+	</div> 
+    <div class="sharediv hide">
+		<div class="bg"></div>
+        <ul class="phonesize">
+            <li class="top">
+                <div class="left"><img src="img/iapplogo.png" class="toplogo" align="left"></div>
+                <div class="right"><img id="sharecancel" src="img/cancel-01.png" class="cancel" align="right"></div>
+            </li>
+            <li>
+                <p>透過以下方式熱分享</p>
+            </li>
+            <li><img id="sharefb" src="img/sharefb.png" alt=""></li>
+            <li><img id="sharetwitter" src="img/sharetwitter.png" alt=""></li>
+            <li><img id="shareline" src="img/shareline.png" alt=""></li>
+        </ul>
+    </div>
+
+	<script src="js/zepto.min.js"></script>
+	<script src="js/touch.js"></script>
+	<script src="js/index.js"></script> 
+ 
+</body>
+</html>
