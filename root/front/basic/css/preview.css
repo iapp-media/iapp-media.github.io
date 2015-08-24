@@ -971,6 +971,7 @@ li.active {
 
 .buttonList {
     float: right;
+    margin-top: 15px;
 }
 
 .buttonList li {
