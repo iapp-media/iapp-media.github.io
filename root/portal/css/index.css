@@ -128,8 +128,8 @@ a:hover {
 
 
 /*.search .input-group-btn:hover .dropdown-menu-right{
-		display: block;
-	}*/
+        display: block;
+    }*/
 
 .dropdown-menu-right {
     position: absolute;
@@ -450,8 +450,8 @@ a:hover {
 
 
 /*.login-sm .input-group-btn:hover .login-mobile{
-    	display: inline;
-	}*/
+        display: inline;
+    }*/
 
 .login-mobile .fb {
     position: absolute;
@@ -651,8 +651,8 @@ a:hover {
 
 
 /*.login-sm .input-group-btn .join a:hover .register-mobile{
-    	display: inline;
-	}*/
+        display: inline;
+    }*/
 
 .register-mobile .register-input {
     position: absolute;
@@ -768,11 +768,11 @@ a:hover {
 }
 
 .finder .finder-app {
-    /*	position: relative;
+    /*  position: relative;
 */
-    /*	margin-top: 4px;
+    /*  margin-top: 4px;
 */
-    /*	left: -50%;
+    /*  left: -50%;
 */
     width: 40px;
     height: 40px;
@@ -794,9 +794,6 @@ a:hover {
 }
 
 .username-icon h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     margin-left: 28px;
     margin-top: 7px;
     font-size: 16px;
