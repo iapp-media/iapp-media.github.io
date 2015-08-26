@@ -1,10 +1,10 @@
 'use strict';
 var width = getValue('w'),
   height = getValue('h');
-  if (width===0) {
+  if (width=='') {
     width=640;
   }
-  if(height===0){
+  if(height==''){
     height=960;
   }
 (function() {
