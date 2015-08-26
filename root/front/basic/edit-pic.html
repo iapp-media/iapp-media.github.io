@@ -34,12 +34,12 @@
         <div class="img-container">
             <img src="" alt="支持圖片上傳格式JPG,PNG">
         </div>
-        <p class="word">(拖曳進行照片裁切)</p>
-        <input type="file" accept="image/*" capture="camera" class="hide" id="inputImage">
-        <button data-method="getCroppedCanvas" type="button" class="cut">
+        <p class="word">(拖曳及縮放進行照片裁切)</p>
+        <input type="file" accept="image/*"  class="hide" id="inputImage">
+        <button data-method="getCroppedCanvas" type="button" class="cut" disabled="true">
             截圖
         </button>
-        <button onclick="compress()" type="button" class="compress" >
+        <button onclick="compress()" type="button" class="compress">
             確認
         </button>
         <input id="base64" class="base64" value=""></input>
@@ -49,6 +49,8 @@
     <script type="text/javascript" src="js/JIC.js"></script>
     <script type="text/javascript" src="js/cropper.js"></script>
     <script type="text/javascript" src="js/cropperPage.js"></script>
+        <script src="js/exif.js"></script>
+
     <script>
     $(document).ready(function() {
         $('.upload').click(function() {
