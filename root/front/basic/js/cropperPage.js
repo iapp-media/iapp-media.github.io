@@ -1,12 +1,14 @@
 'use strict';
 var width = getValue('w'),
   height = getValue('h');
+
   if (width=='') {
     width=640;
   }
   if(height==''){
     height=960;
   }
+  console.log(width,height);
 (function() {
   var $image = $('.img-container > img'),
     $dataX = $('#dataX'),

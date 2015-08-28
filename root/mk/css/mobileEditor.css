@@ -1,96 +1,87 @@
-html {
-    width: 100%;
-    height: 100%;
-}
-
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #969696;
     margin: 0;
-    text-align: center;
-    height: 99%;
+    padding: 0;
 }
 
-.container {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 5px;
-}
-
-label {
-    line-height: 32px;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 24px;
-}
-
-textarea,
-input {
-    font-size: 24px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-    line-height: 36px;
-    border-radius: 8px;
-    border-width: 2px;
-    box-sizing: border-box;
-    border: rgb(238, 238, 238) solid;
-    resize: none;
-}
-
-.icon .iconimg-1 {
-    border: 2px #969696 solid;
-    border-radius: 8px;
-}
-
-.icon:active .iconimg-1 {
-    opacity: 0.5;
+a {
+    text-decoration: none;
+    color: #7d7d7d;
 }
 
 button {
     width: 100%;
-    background-color: transparent;
-    border: 2px #ff9933 solid;
-    border-radius: 8px;
-    color: #ff9933;
     font-size: 24px;
     line-height: 36px;
+    color: #ff9933;
+    border: 2px solid #ff9933;
+    border-radius: 8px;
+    background-color: transparent;
 }
 
-button:active {
-    background-color: #ff9933;
-    color: #FFFFFF;
+a:active {
+    text-decoration: none;
+    color: #ff9933;
 }
 
 .hide {
     display: none;
 }
 
-.upload-img {
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5px;
+.show {
+    display: inline;
 }
 
-.img-container {
-    margin-top: 8px;
-    height: calc(100% - 176px);
-    background-color: #f7f7f7;
-    overflow: hidden;
+.show {
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.show2 {
+    width: 260px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 3;
+}
+
+.upload {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 4;
+    opacity: 0.8;
+}
+
+.upload:hover {
+    opacity: 1;
+}
+
+.upload-img {
+    height: 100%;
+    display: none;
+    z-index: 999;
     text-align: center;
 }
 
-.word {
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+.img-container {
+    height: calc(100% - 208px);
+    background-color: #f7f7f7;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .preview-container {
-    margin-top: 8px;
-    height: calc(100% - 176px);
+    margin-top: 15px;
+    height: calc(100% - 208px);
 }
 
 #preview {
@@ -98,11 +89,21 @@ button:active {
     max-height: 100%;
 }
 
+
+/*#preview {
+    display:block;
+    max-height: 280px;
+    margin-top: 15px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}*/
+
 .select {
     width: calc(50% - 8px);
     font-size: 24px;
     line-height: 36px;
-    font-weight: normal;
     color: #ff9933;
     border: 2px solid #ff9933;
     border-radius: 8px;
@@ -113,17 +114,99 @@ button:active {
     padding-bottom: 3px;
 }
 
-.select:hover {
+.select:active {
     background: #ffbb66;
 }
 
 .rotate {
     display: inline-block;
     width: calc(50% - 5px);
-    
 }
 
 .rotate-btn {
     padding-top: 2px;
     padding-bottom: 3px;
+}
+
+.word {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button:active {
+    background: #ffbb66;
+}
+
+.confirm {
+    position: absolute;
+    top: 430px;
+    left: 40%;
+    width: 90px;
+    height: 30px;
+    border: 2px #ff9933 solid;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.confirm a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+.confirm p {
+    color: #ff9933;
+    font-size: 22px;
+    position: absolute;
+    top: 12%;
+    left: 25%;
+}
+
+#Tbase64 {
+    display: none;
+}
+
+#inputImage {
+    display: none;
+}
+
+
+/*.top {
+    height: 40px;
+    background-color: #ff9933;
+}
+
+.top img {
+    height: 100%;
+}*/
+
+.top {
+    height: 60px;
+    background-color: #ff9933;
+}
+
+.toplogo {
+    height: 100%;
+}
+
+.cancel {
+    height: 44px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.upload-page {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    height: 100%;
+    color: #969696;
+    /*font-size: 24px;
+    line-height: 36px;*/
+}
+
+.create {
+    left: calc(50% - 40px);
+    margin-left: 0;
 }

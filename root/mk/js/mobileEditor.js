@@ -1,18 +1,15 @@
+'use strict';
 var current = 0,
-  width = 0,
-  height = 0;
+  width,
+  height;
 
 (function() {
-  current = getValue('c'),
-    width = getValue('w'),
-    height = getValue('h');
-  document.getElementById('CurrentId').setAttribute('value', current);
 
-  'use strict';
+  // $(function() {
+
   // Demo
   // -------------------------------------------------------------------------
 
-  // console.log(width, height);
   (function() {
     var $image = $('.img-container > img'),
       $dataX = $('#dataX'),
@@ -31,7 +28,7 @@ var current = 0,
         // background: false,
 
         // autoCrop: false,
-        autoCropArea: 0.8,
+        autoCropArea: 0.9,
         dragCrop: false,
         movable: false,
         resizable: false,
@@ -71,6 +68,7 @@ var current = 0,
       },
       'built.cropper': function(e) {
         console.log(e.type);
+        $('#uploading').hide();
       },
       'dragstart.cropper': function(e) {
         console.log(e.type, e.dragType);
@@ -87,7 +85,7 @@ var current = 0,
       'zoomout.cropper': function(e) {
         console.log(e.type);
       }
-    }).cropper(options).cropper("setAspectRatio", width / height);
+    }).cropper(options).cropper('setAspectRatio', width / height);
 
     // Methods
     $(document.body).on('click', '[data-method]', function() {
@@ -109,18 +107,19 @@ var current = 0,
           }
         }
 
-        if (data.method === 'rotate') {
-          $image.cropper('rotate', 90);
-        };
         //
         result = $image.cropper(data.method, data.option);
         // $('.img-container').hide();
 
+        if (data.method === 'rotate') {
+          $image.cropper('rotate', 90);
+        }
         // console.log(result);
         if (data.method === 'getCroppedCanvas') {
-          document.getElementById('preview').src = result.toDataURL("image/jpeg", 0.6);
+          document.getElementById('preview').src = result.toDataURL('image/jpeg', 0.6);
           $('.img-container').hide();
           $('.preview-container').show();
+          $('.rotate-btn').hide();
         }
 
         if ($.isPlainObject(result) && $target) {
@@ -167,18 +166,88 @@ var current = 0,
 
     if (URL) {
       $inputImage.change(function() {
+        $('#uploading').show();
         var files = this.files,
           file;
-
         if (files && files.length) {
           file = files[0];
           if (/^image\/\w+$/.test(file.type)) {
-            blobURL = URL.createObjectURL(file);
-            $image.one('built.cropper', function() {
-              URL.revokeObjectURL(blobURL); // Revoke when load complete
-            }).cropper('reset', true).cropper('replace', blobURL);
-            $inputImage.val('');
-            $('#cut').attr("disabled", false);
+            var reader = new FileReader();
+            //rotate image according to orientation
+            var orientation;
+            EXIF.getData(file, function() {
+              orientation = EXIF.getTag(this, 'Orientation');
+            });
+            reader.readAsDataURL(file);
+            reader.onload = function(e) {
+              var aImg = document.createElement('img');
+              aImg.onload = function() {
+                // draw the aImg onto the canvas
+                var canvas = document.createElement('canvas');
+
+                // var canvas = document.getElementById('cvs');
+                var ctx = canvas.getContext('2d');
+                canvas.width = aImg.width;
+                canvas.height = aImg.height;
+
+                if (!orientation || orientation > 8) {
+                  canvas.width = aImg.width;
+                  canvas.height = aImg.height;
+                }
+                if (orientation > 4) {
+                  canvas.width = aImg.height;
+                  canvas.height = aImg.width;
+                }
+                switch (orientation) {
+                  case 2:
+                    // horizontal flip
+                    ctx.translate(aImg.width, 0);
+                    ctx.scale(-1, 1);
+                    break;
+                  case 3:
+                    // 180° rotate left
+                    ctx.translate(aImg.width, aImg.height);
+                    ctx.rotate(Math.PI);
+                    break;
+                  case 4:
+                    // vertical flip
+                    ctx.translate(0, aImg.height);
+                    ctx.scale(1, -1);
+                    break;
+                  case 5:
+                    // vertical flip + 90 rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.scale(1, -1);
+                    break;
+                  case 6:
+                    // 90° rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.translate(0, -aImg.height);
+                    break;
+                  case 7:
+                    // horizontal flip + 90 rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.translate(aImg.width, -aImg.height);
+                    ctx.scale(-1, 1);
+                    break;
+                  case 8:
+                    // 90° rotate left
+                    ctx.rotate(-0.5 * Math.PI);
+                    ctx.translate(-aImg.width, 0);
+                    break;
+                }
+                ctx.drawImage(aImg, 0, 0);
+                // make the jpeg image
+                blobURL = canvas.toDataURL('image/jpeg', 0.6);
+                $image.one('built.cropper', function() {
+                  URL.revokeObjectURL(blobURL); // Revoke when load complete
+                }).cropper('reset', true).cropper('replace', blobURL).cropper('setAspectRatio', width / height);
+                $inputImage.val('');
+                $('#cut').attr('disabled', false);
+              };
+              aImg.src = e.target.result;
+
+            };
           } else {
             showMessage('Please choose an image file.');
           }
@@ -187,40 +256,26 @@ var current = 0,
     } else {
       $inputImage.parent().remove();
     }
-
   }());
-
 })();
 
 
 function compress() {
-  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, "jpg").src;
-  document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ""));
+  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, 'jpg').src;
+  document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ''));
+  document.getElementById('p' + current).src = document.getElementById('preview').src;
+  // document.getElementById('Tbase64-' + current).setAttribute('value', document.getElementById('Tbase64').value);
+  document.getElementById('p' + current).className = document.getElementById('p' + current).className.replace(/(?:^|\s)changestyle(?!\S)/g, '');
   $('.cropper-container').remove();
 
-  // sendImageToParse(current.replace(/-/, ""), document.getElementById('Tbase64').value)
+  // sendImageToParse(current, document.getElementById('Tbase64').value);
 
 }
 
-
-
-function getValue(varname) {
-  var url = window.location.href;
-  var qparts = url.split("?");
-  if (qparts.length == 0) {
-    return "";
-  }
-  var query = qparts[1];
-  var vars = query.split("&");
-  var value = "";
-  for (i = 0; i < vars.length; i++) {
-    var parts = vars[i].split("=");
-    if (parts[0] == varname) {
-      value = parts[1];
-      break;
-    }
-  }
-  value = unescape(value);
-  value.replace(/\+/g, " ");
-  return value;
+function setCurrent(number, w, h) {
+  current = number;
+  width = w;
+  height = h;
+  document.getElementById('CurrentId').setAttribute('value', current);
+  // $image.cropper("setAspectRatio", width / height);
 }
