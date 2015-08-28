@@ -1,79 +1,158 @@
-        body{
+        body {
             margin: 0;
             padding: 0;
-            width: auto;height: auto;
+            width: auto;
+            height: auto;
         }
-        a{text-decoration:none; color:#ff9933;}
-        .top{
-            position: absolute; top: 2%; left: 10%; width: 80%; height: 12%;
+        
+        a {
+            text-decoration: none;
+            color: #ff9933;
         }
-        .top p{
-            font-size: 24px;font-weight: bold;color: orange;text-align: center;
-        }
-        .bar{
+        
+        .top {
             position: absolute;
-            top: 50%;left: 10%;
-            width: 80%;height: 2px;
+            top: 2%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 12%;
+        }
+        
+        .top p {
+            font-size: 24px;
+            font-weight: normal;
+            color: orange;
+            text-align: center;
+        }
+        
+        .bar {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 2px;
             background-color: #7d7d7d;
             opacity: 0.5;
         }
-        .bar3{
+        
+        .bar3 {
             position: absolute;
-            top: 110%;left: 0%;
-            width: 100%;height: 3px;
+            top: 110%;
+            left: 0%;
+            width: 100%;
+            height: 3px;
             background-color: #ff9933;
         }
-        .store p{color: #ff9933;font-size: 18px;line-height: 26px;
-            text-align: center;}
-        .store{
+        
+        .store {
             position: absolute;
-            top: 80%;left: 37%;
-            width: 60px;height: 26px;
-            border: 1px #ff9933 solid; 
+            top: 80%;
+            left: 50%;
+            margin-left: 10px;
+            width: 60px;
+            height: 26px;
+            border: 1px #ff9933 solid;
             border-radius: 5px;
+            text-align: center;
+            line-height: 26px;
         }
-        .store:hover{
+        
+        .store:hover {
             background: #ffbb66;
+            color: #fff;
         }
-        .cancel p{color: #ff9933;font-size: 18px;line-height: 26px;text-align: center;}
-        .cancel{
+        
+        .cancel {
             position: absolute;
-            top: 80%;left: 52%;
-            width: 60px;height: 26px;
-            border: 1px #ff9933 solid; 
+            top: 80%;
+            left: 50%;
+            margin-left: -70px;
+            width: 60px;
+            height: 26px;
+            border: 1px #ff9933 solid;
             border-radius: 5px;
+            line-height: 26px;
+            text-align: center;
         }
-        .cancel:hover{
+        
+        .cancel:hover {
             background: #ffbb66;
+            color: #fff;
         }
-        .file{
+        
+        .file {
             display: block;
-            width: 85px;height: 26px;
-            border: 1px #ff9933 solid; 
+            width: 100%;
+            height: 20px;
+            margin-top: 5px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 14px;
+            border: 1px #ff9933 solid;
             border-radius: 5px;
         }
-        .file:hover{
+        
+        .file:hover {
             background: #ffbb66;
+            color: #fff;
         }
-        .profile{
-            position: absolute; top: 20%; left: 10%; width: 80%; height: 65%;
-        }
-        .profile .t1{
+        
+        .profile {
             position: absolute;
-            top: 5%;left: 40%;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            height: 65%;
         }
-        .profile .t2{
+        
+        .profile .t1 {
             position: absolute;
-            top: 60%;left: 25%;
+            top: 0;
+            right: 0;
+            width: 86%;
         }
-        .profile th{
+        
+        .profile .t2 {
+            position: absolute;
+            top: 60%;
+            left: 25%;
+        }
+        
+        .profile th {
             color: #7d7d7d;
             padding: 5px;
         }
-        .logo-file{
-            position: absolute;
-            top: 5%;left: 20%;
+        
+        th input[type="text"] {
+            width: 100%;
         }
-        .logo-file p{
-            color: #ff9933;font-size: 16px;position:relative;top: 20%;left: 10%;
+        
+        .logo-file {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-left: -80px;
+            width: 100%;
+        }
+        
+        .logo-file img {
+            width: 100%;
+        }
+        
+        .logo-file p {
+            color: #ff9933;
+            font-size: 16px;
+            position: relative;
+            top: 20%;
+            left: 10%;
+        }
+        
+        .HeadMove {
+            width: 15%;
+            height: 124px;
+            position: relative;
         }
