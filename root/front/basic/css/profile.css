@@ -189,6 +189,11 @@
      border-radius: 5px;
  }
  
+ .logo-file p:hover {
+     color: #fff;
+     background-color: #ff9933;
+ }
+ 
  .HeadMove {
      width: 30%;
      height: 124px;
