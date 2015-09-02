@@ -173,7 +173,7 @@ a {
 
 .smallbar {
     position: absolute;
-    top: 0%;
+    top: 2%;
     left: 0%;
     width: 218px;
     height: 50px;
@@ -505,7 +505,7 @@ a {
     position: relative;
     margin: 0px;
     padding: 0px;
-    top: 0px;
+    top: 11px;
     left: 0px;
     height: 100%;
     width: 218px;
