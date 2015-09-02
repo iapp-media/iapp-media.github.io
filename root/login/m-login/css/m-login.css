@@ -1,13 +1,10 @@
-html{
+html {
     height: 100%;
-}
-body {
-    /*background-color: #f5f5f5;*/
-    /*font-size: small;*/
-    height: 100%;
-    /*min-height: 435px;*/
 }
 
+body {
+    height: 100%;
+}
 
 a {
     text-decoration: none;
@@ -20,11 +17,10 @@ a:hover {
 }
 
 .login-mobile {
-    position: fixed;
-    /*background-color: #ff9933;*/
     width: 100%;
     height: 100%;
     z-index: 99;
+    overflow: scroll;
 }
 
 .iapplogo {
@@ -45,25 +41,17 @@ a:hover {
 .content {
     height: calc(100% - 113px);
     min-height: 300px;
-    padding: 5% 5% 0 5%;
-    /*width: 100%;*/
-
+    overflow: auto;
+    padding: 5% 5% 5% 5%;
     background-color: #fff;
-    /*position: absolute;*/
-    
 }
-.content .login{
+
+.content .login {
     margin: 5px 0 5px 0;
 }
 
-/*.login-sm .input-group-btn:hover .login-mobile{
-    	display: inline;
-	}*/
-
 .login-mobile .fb {
-    /*position: absolute;*/
     margin-top: 5%;
-    /*height: 10%;*/
 }
 
 .login-mobile .fb p {
@@ -73,18 +61,8 @@ a:hover {
 }
 
 .login-mobile .fb-img {
-    /*position: absolute;*/
-    
     width: 100%;
 }
-
-/*.login-mobile {
-    
-    top: 40%;
-    left: 5%;
-    width: 100%;
-    height: 10%;
-}*/
 
 .login-mobile .login p {
     text-align: left;
@@ -93,10 +71,7 @@ a:hover {
 }
 
 .login-mobile .login-input {
-    /*position: absolute;*/
-    
     font-size: 15px;
-    /*width: 90%;*/
     opacity: 0.5;
 }
 
@@ -126,8 +101,6 @@ a:hover {
 }
 
 .bar {
-    /*position: absolute;*/
-    /*width: 90%;*/
     width: 100%;
     height: 2px;
     background-color: #ff9933;
@@ -135,7 +108,6 @@ a:hover {
 }
 
 .login-mobile .send {
-    /*position: absolute;*/
     display: inline-block;
     margin-top: 5%;
     margin-left: 10%;
@@ -154,7 +126,6 @@ a:hover {
 }
 
 .login-mobile .login-back {
-    /*position: absolute;*/
     display: inline-block;
     margin-left: calc(45% - 50px);
     width: 50px;
@@ -164,7 +135,6 @@ a:hover {
 }
 
 .glyphicon-remove {
-    /*position: absolute;*/
     top: 12%;
     left: 12%;
     font-size: 35px;
@@ -172,19 +142,17 @@ a:hover {
 }
 
 .glyphicon-arrow-left {
-    /*position: absolute;*/
     top: 12%;
     left: 12%;
     font-size: 35px;
     color: #ff9933;
 }
-.glyphicon:active{
+
+.glyphicon:active {
     color: #ffbb66;
 }
+
 .footer {
-    /*position: absolute;*/
-    /*top: 90%;*/
-    /*left: 0%;*/
     width: 100%;
     height: 50px;
     padding-top: 10px;
@@ -193,18 +161,16 @@ a:hover {
     text-align: right;
 }
 
-.footer p{
+.footer p {
     display: inline;
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    /*padding-left: 40%;*/
     padding-top: 5px;
 }
 
 .join {
     position: relative;
-    /*top: -60%;*/
     padding: 5px 10px 5px 10px;
     display: inline;
     width: 100px;
@@ -225,7 +191,6 @@ a:hover {
     color: #ff9933;
     font-size: 18px;
     font-weight: bold;
-    /*position: absolute;*/
     top: 10%;
     left: 15%;
     padding-left: 0%;
@@ -236,7 +201,6 @@ a:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    /*background-color: #ff9933;*/
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -253,20 +217,12 @@ a:hover {
 
 .register-mobile .content {
     min-height: 75%;
-    /*width: 100%;*/
     background-color: #fff;
-    /*position: absolute;*/
     top: 60px;
     left: 0px;
 }
 
-
-/*.login-sm .input-group-btn .join a:hover .register-mobile{
-    	display: inline;
-	}*/
-
 .register-mobile .register-input {
-    /*position: absolute;*/
     top: 20%;
     left: 5%;
     font-size: 15px;
@@ -274,10 +230,7 @@ a:hover {
     opacity: 0.5;
 }
 
-.register-mobile .login {
-    /*position: absolute;*/
-    
-}
+.register-mobile .login {}
 
 .register-mobile .login p {
     text-align: left;
@@ -322,8 +275,6 @@ a:hover {
 }
 
 .register-mobile .send {
-/*    position: absolute;*/
-    /*top: 80%;*/
     display: inline-block;
     margin-left: calc( 50% - 100px);
     width: 50px;
