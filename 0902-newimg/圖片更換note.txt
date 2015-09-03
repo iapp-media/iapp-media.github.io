@@ -1,0 +1,16 @@
+[front→basic→img]
+賈伯斯                            [head.png]               → [defaulthead.jpg]
+三條槓                            [button.png]            → [item-1]
+面板/發佈預覽叉叉      [cancel.png]             → [close-1.png]
+右下角LOGO                [logo-digital.png]   → [digitallogo.png]
+左列底圖                        [iappbg.png]            → [leftbg.jpg]
+手機右邊加號按鈕        [add.png                   → [add01.png]
+
+※完成時候的結果頁面 對話框旁邊的iApp LOGO沒有加[iapplogo2.png]
+
+//(光箱)會員資料 大頭照預設圖  [headimg.png]→[defaulthead.jpg]//
+
+
+[protal→img]
+※製作頁左上角iApp LOGO位置要和protal頁的大小位置一致
+
