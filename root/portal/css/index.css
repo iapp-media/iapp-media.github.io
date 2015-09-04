@@ -772,6 +772,10 @@ a:hover {
     font-size: 16px;
 }
 
+.theme .boxpos a {
+    border: none;
+}
+
 @media only screen and (min-width:481px) and (max-width:768px) {
     .tem {
         display: inline;
@@ -810,6 +814,7 @@ a:hover {
     .select {
         right: 15px;
         border: 0px;
+        top: -3px;
         background-color: #fff;
     }
     .select:hover {
@@ -834,6 +839,9 @@ a:hover {
     }
     .se {
         display: none;
+    }
+    .theme .boxpos a {
+        border: none;
     }
 }
 
@@ -874,7 +882,7 @@ a:hover {
         color: #57b9d1;
     }
     .select {
-        right: 5px;
+        right: 0px;
         border: 0px;
         width: 57px;
         /* outline: 1px solid; */
@@ -915,5 +923,8 @@ a:hover {
         border-left: 0px;
         border-bottom: 0px;
         border-right: 0px;
+    }
+    .theme .boxpos a {
+        border: none;
     }
 }
