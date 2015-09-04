@@ -856,7 +856,6 @@ a:hover {
     .search {
         position: relative;
         top: 11px;
-        /* right: 0px; */
     }
     .search-sm {
         display: inline;
@@ -875,11 +874,12 @@ a:hover {
         color: #57b9d1;
     }
     .select {
-        right: 15px;
+        right: 5px;
         border: 0px;
-        width: 84px;
+        width: 57px;
+        /* outline: 1px solid; */
         height: 44px;
-        top: -12px;
+        top: -15px;
     }
     .select:hover {
         border: 0px;
