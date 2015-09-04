@@ -20,10 +20,21 @@ body {
     border-radius: 10px;
 }
 
+.glyphicon-align-justify:before {
+    color: #fff;
+}
+
 .style {
     background-color: #fff;
     width: 210px;
-    height: 50px;
+}
+
+.style img {
+    width: 100%;
+}
+
+.style p {
+    text-align: center;
 }
 
 .imgcenter {
@@ -71,7 +82,6 @@ body {
     width: 100%;
     opacity: 0.8;
     text-align: left;
-    /*padding-left: 5px;*/
     font-size: 14px;
 }
 
@@ -328,6 +338,62 @@ input[type="checkbox"] {
     width: 0;
 }
 
+.select {
+    background-color: #57b9d1;
+}
+
+.select:visited,
+.select:hover {
+    background-color: #57b9d1;
+}
+
+.login-box {
+    padding-left: 5px;
+}
+
+.boxpos {
+    position: relative;
+    height: 169px;
+    padding-bottom: 1px;
+}
+
+.QRcode {
+    width: 101px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -62px;
+}
+
+.line {
+    width: 79px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 13px;
+    margin-top: -51px;
+}
+
+.digcallme {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: 40px;
+}
+
+.digcallme:hover,
+.digcallme:link,
+.digcallme:visited,
+.digcallme:active {
+    background-color: transparent;
+}
+
+.theme li:nth-child(7) a {
+    border: none;
+}
+
 @media only screen and (min-width:481px) and (max-width:768px) {
     #container {
         margin: 17% auto;
@@ -387,6 +453,22 @@ input[type="checkbox"] {
         top: 5px;
         display: block;
     }
+    .select {
+        background-color: transparent;
+    }
+    .select:hover,
+    .select:link,
+    .select:visited,
+    .select:active {
+        background-color: transparent;
+    }
+    .sandwich {
+        color: #57b9d1;
+        font-size: 33px;
+    }
+    .input-group {
+        top: 12px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -398,7 +480,6 @@ input[type="checkbox"] {
         padding: 0px;
         margin: 1%;
         width: 166px;
-        /*outline: 1px solid #f00;*/
     }
     .item-pic {
         position: relative;
@@ -464,5 +545,65 @@ input[type="checkbox"] {
     }
     .author {
         margin-left: 0;
+    }
+    .select {
+        background-color: transparent;
+    }
+    .sandwich {
+        color: #57b9d1;
+        font-size: 33px;
+    }
+    .select:hover,
+    .select:link,
+    .select:visited,
+    .select:active {
+        background-color: transparent;
+    }
+    .theme li:nth-child(7) a {
+        border: none;
+    }
+    .boxpos {
+        position: relative;
+        height: 169px;
+        padding-bottom: 1px;
+    }
+    .QRcode {
+        width: 101px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -110px;
+        margin-top: -62px;
+    }
+    .line {
+        width: 79px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 13px;
+        margin-top: -51px;
+    }
+    .digcallme {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -90px;
+        margin-top: 40px;
+    }
+    .digcallme:hover,
+    .digcallme:link,
+    .digcallme:visited,
+    .digcallme:active {
+        background-color: transparent;
+    }
+    .input-group-btn {
+        top: 12px;
+    }
+    .col-xs-2 {
+        width: 10.666667%;
+    }
+    .input-group-btn:last-child>.btn,
+    .input-group-btn:last-child>.btn-group {
+        margin-left: 32px;
     }
 }

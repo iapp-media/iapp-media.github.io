@@ -1,12 +1,8 @@
 body {
     background-color: #f5f5f5;
     font-size: small;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
 }
-
-
-/*.show {
-    display: inline!important;
-}*/
 
 a {
     text-decoration: none;
@@ -15,18 +11,17 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #ffbb66;
+    color: #57b9d1;
 }
 
 .navbar {
     min-height: 80px;
     background-color: white;
-    /*box-shadow: gray 0px 2px 8px 0px;*/
     z-index: 99;
 }
 
 .btn-default {
-    background-color: #ff9933;
+    background-color: #57b9d1;
 }
 
 .back-top {
@@ -63,6 +58,11 @@ a:hover {
 .search2 {
     background: none;
     border-style: none;
+    /* outline: 1px solid #000; */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 37px;
 }
 
 .search2:hover {
@@ -74,25 +74,25 @@ a:hover {
 }
 
 .glyphicon-search {
-    margin-top: 7px;
-    color: #ff9933;
+    /* margin-top: 7px; */
+    color: #57b9d1;
     font-size: 35px;
-    left: -50%;
+    /* left: -50%; */
 }
 
 .glyphicon-search:hover {
-    color: #ffbb66;
+    color: #57b9d1;
 }
 
 .glyphicon-user {
-    margin-top: 7px;
-    left: -50%;
-    color: #ff9933;
+    /* margin-top: 7px; */
+    /* left: -50%; */
+    color: #57b9d1;
     font-size: 35px;
 }
 
 .glyphicon-user:hover {
-    color: #ffbb66;
+    color: #57b9d1;
 }
 
 .login-sm {
@@ -100,7 +100,7 @@ a:hover {
 }
 
 .input-group .form-control {
-    border: #ff9933 2px solid;
+    border: #57b9d1 2px solid;
 }
 
 .glyphicon-align-justify {
@@ -112,46 +112,42 @@ a:hover {
 }
 
 .select {
-    border: #ff9933 1px solid;
+    border: #57b9d1 1px solid;
 }
 
 .select:hover {
-    border: #ff9933 1px solid;
-    background-color: #ffbb66;
+    border: #57b9d1 1px solid;
+    background-color: #57b9d1;
 }
 
 .dropdown-menu-right {
     display: none;
-    /*outline: 1px solid #f00;*/
     top: 0;
 }
 
-
-/*.search .input-group-btn:hover .dropdown-menu-right{
-        display: block;
-    }*/
-
 .dropdown-menu-right {
     position: absolute;
-    top: 80px;
-    right: 5px;
+    top: 81px;
+    right: 0;
+    left: 0;
+    margin: auto;
     width: 95%;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 0px;
-    border-top: #ff9933 5px solid;
+    border-top: #57b9d1 5px solid;
     border-left: 0px;
     border-bottom: 0px;
     border-right: 0px;
 }
 
 .dropdown-menu-right .divider {
-    background-color: #ff9933;
+    background-color: #57b9d1;
 }
 
 .theme>li>a {
-    color: #ff9933;
-    border-bottom: #ff9933 1px solid;
+    color: #57b9d1;
+    border-bottom: #57b9d1 1px solid;
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
@@ -160,43 +156,46 @@ a:hover {
 .theme>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .navbar-btn1 {
-    margin-top: 12px;
+    margin-top: 16px;
     border: none;
     background-color: #fff;
+    color: #57b9d1;
+    font-size: 21px;
 }
 
 .navbar-btn2 {
-    margin-top: 10px;
+    margin-top: 16px;
     border: none;
     background-color: #fff;
+    color: #57b9d1;
+    font-size: 21px;
 }
 
 .navbar-btn1:hover {
     color: #fff;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .navbar-btn2:hover {
     color: #fff;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .icon-box {
     display: none;
-    background-color: #ff9933;
+    background-color: #57b9d1;
     margin-top: 20px;
     width: 110px;
     height: 35px;
-    border: 1px gray solid;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .icon-box:hover {
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .icon-box h4 {
@@ -205,12 +204,11 @@ a:hover {
 
 .usericon {
     width: auto;
-    height: 35px;
+    height: 36px;
     position: absolute;
     top: -2%;
     left: 0%;
-    border: 1px gray solid;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .username-icon {
@@ -219,7 +217,7 @@ a:hover {
 
 .title {
     font-weight: bold;
-    color: #ff9933;
+    color: #57b9d1;
 }
 
 .title:hover {
@@ -244,7 +242,7 @@ a:hover {
 .jumbotron {
     display: none;
     padding-top: 90px;
-    background-color: #ff9933;
+    background-color: #57b9d1;
     height: 280px;
 }
 
@@ -281,7 +279,7 @@ a:hover {
 .logout>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .user-icon {
@@ -312,7 +310,7 @@ a:hover {
 .m-profile>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .m-logout {
@@ -320,7 +318,7 @@ a:hover {
 }
 
 .m-logout:hover {
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .m-logout>p {
@@ -374,16 +372,6 @@ a:hover {
     text-decoration: none;
 }
 
-
-/*.separate-user {
-    background-color: #fff;
-    width: 2px;
-    height: 50px;
-    position: relative;
-    top: 0%;
-    left: 50%;
-}*/
-
 .my-iapp {
     position: absolute;
     top: 0%;
@@ -416,7 +404,7 @@ a:hover {
 }
 
 .circle-login:hover {
-    border: 3px solid #ffbb66;
+    border: 3px solid #57b9d1;
 }
 
 .login-mobile {
@@ -447,11 +435,6 @@ a:hover {
     top: 60px;
     left: 0px;
 }
-
-
-/*.login-sm .input-group-btn:hover .login-mobile{
-        display: inline;
-    }*/
 
 .login-mobile .fb {
     position: absolute;
@@ -539,7 +522,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #ff9933;
+    border: 2px solid #57b9d1;
 }
 
 .glyphicon-ok {
@@ -547,7 +530,7 @@ a:hover {
     top: 12%;
     left: 12%;
     font-size: 35px;
-    color: #ff9933;
+    color: #57b9d1;
 }
 
 .login-mobile .login-back {
@@ -557,7 +540,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #ff9933;
+    border: 2px solid #57b9d1;
 }
 
 .glyphicon-remove {
@@ -573,7 +556,7 @@ a:hover {
     top: 12%;
     left: 12%;
     font-size: 35px;
-    color: #ff9933;
+    color: #57b9d1;
 }
 
 .footer {
@@ -603,7 +586,7 @@ a:hover {
 }
 
 .join:hover {
-    background: #ffbb66;
+    background: #57b9d1;
 }
 
 .join:hover a {
@@ -625,7 +608,7 @@ a:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #ff9933;
+    background-color: #57b9d1;
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -633,11 +616,11 @@ a:hover {
 
 .register-mobile p {
     font-size: 18px;
-    color: #ff9933;
+    color: #57b9d1;
 }
 
 .register-mobile .navbar {
-    background-color: #ff9933;
+    background-color: #57b9d1;
 }
 
 .register-mobile .content {
@@ -648,11 +631,6 @@ a:hover {
     top: 60px;
     left: 0px;
 }
-
-
-/*.login-sm .input-group-btn .join a:hover .register-mobile{
-        display: inline;
-    }*/
 
 .register-mobile .register-input {
     position: absolute;
@@ -674,15 +652,15 @@ a:hover {
 .register-mobile .login p {
     text-align: left;
     font-size: 18px;
-    color: #ff9933;
+    color: #57b9d1;
 }
 
 .register-mobile .name {
     display: block;
     font-size: 1.2em;
     width: 100%;
-    border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+    border: 1px solid #57b9d1;
+    border-style: #57b9d1;
     border-radius: 0px;
     border-bottom: 0px;
     border-top-left-radius: 2px;
@@ -694,8 +672,8 @@ a:hover {
     display: block;
     font-size: 1.2em;
     width: 100%;
-    border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+    border: 1px solid #57b9d1;
+    border-style: #57b9d1;
     border-radius: 0px;
     border-bottom: 0px;
     padding: 8px;
@@ -720,7 +698,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #ff9933;
+    border: 2px solid #57b9d1;
 }
 
 .register-mobile .register-back {
@@ -730,11 +708,11 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #ff9933;
+    border: 2px solid #57b9d1;
 }
 
 .search-bar {
-    background-color: #ff9933;
+    background-color: #57b9d1;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -761,27 +739,22 @@ a:hover {
 .search-bar .cancel {
     position: relative;
     right: 1px;
-    padding-top: 6px;
+    top: 7px;
+    padding-top: 10px;
     font-size: 30px;
     font-weight: bold;
     color: #fff;
 }
 
 .finder .finder-app {
-    /*  position: relative;
-*/
-    /*  margin-top: 4px;
-*/
-    /*  left: -50%;
-*/
     width: 40px;
     height: 40px;
     border-radius: 99em;
-    border: 3px solid #ff9933;
+    border: 3px solid #57b9d1;
 }
 
 .finder>li>a {
-    color: #ff9933;
+    color: #57b9d1;
     padding: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -790,7 +763,7 @@ a:hover {
 .finder>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #ffbb66;
+    background-color: #57b9d1;
 }
 
 .username-icon h4 {
@@ -829,10 +802,10 @@ a:hover {
     .glyphicon-align-justify {
         margin-top: -2px;
         font-size: 35px;
-        color: #ff9933;
+        color: #57b9d1;
     }
     .glyphicon-align-justify:hover {
-        color: #ffbb66;
+        color: #57b9d1;
     }
     .select {
         right: 15px;
@@ -846,7 +819,7 @@ a:hover {
     }
     .dropdown-menu-right {
         position: absolute;
-        top: 50px;
+        top: 60px;
         right: 5px;
         width: 95%;
     }
@@ -882,11 +855,13 @@ a:hover {
     }
     .search {
         position: relative;
-        top: 8px;
-        right: 5px;
+        top: 11px;
+        /* right: 0px; */
     }
     .search-sm {
         display: inline;
+        padding: 0;
+        margin: 0;
     }
     .login-sm {
         display: inline;
@@ -897,23 +872,19 @@ a:hover {
         color: #ff9933;
     }
     .glyphicon-align-justify:hover {
-        color: #ffbb66;
+        color: #57b9d1;
     }
     .select {
         right: 15px;
         border: 0px;
-        background-color: #fff;
+        width: 84px;
+        height: 44px;
+        top: -12px;
     }
     .select:hover {
         border: 0px;
         background-color: #fff;
         border-radius-left: 20px;
-    }
-    .dropdown-menu-right {
-        position: absolute;
-        top: 60px;
-        right: 5px;
-        width: 95%;
     }
     .input-group .form-control {
         display: none;
@@ -926,5 +897,23 @@ a:hover {
     }
     .se {
         display: none;
+    }
+    .glyphicon-remove:before {
+        margin-top: 9px;
+    }
+    .dropdown-menu-right {
+        position: absolute;
+        top: 61px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0px;
+        border-top: #57b9d1 5px solid;
+        border-left: 0px;
+        border-bottom: 0px;
+        border-right: 0px;
     }
 }
