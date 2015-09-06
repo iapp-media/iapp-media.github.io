@@ -11,7 +11,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .navbar {
@@ -21,7 +21,7 @@ a:hover {
 }
 
 .btn-default {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .back-top {
@@ -58,7 +58,6 @@ a:hover {
 .search2 {
     background: none;
     border-style: none;
-    /* outline: 1px solid #000; */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -74,25 +73,21 @@ a:hover {
 }
 
 .glyphicon-search {
-    /* margin-top: 7px; */
-    color: #57b9d1;
+    color: #ff9932;
     font-size: 35px;
-    /* left: -50%; */
 }
 
 .glyphicon-search:hover {
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .glyphicon-user {
-    /* margin-top: 7px; */
-    /* left: -50%; */
-    color: #57b9d1;
+    color: #ff9932;
     font-size: 35px;
 }
 
 .glyphicon-user:hover {
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .login-sm {
@@ -100,7 +95,7 @@ a:hover {
 }
 
 .input-group .form-control {
-    border: #57b9d1 2px solid;
+    border: #ff9932 2px solid;
 }
 
 .glyphicon-align-justify {
@@ -112,12 +107,12 @@ a:hover {
 }
 
 .select {
-    border: #57b9d1 1px solid;
+    border: #ff9932 1px solid;
 }
 
 .select:hover {
-    border: #57b9d1 1px solid;
-    background-color: #57b9d1;
+    border: #ff9932 1px solid;
+    background-color: #ff9932;
 }
 
 .dropdown-menu-right {
@@ -135,19 +130,19 @@ a:hover {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 0px;
-    border-top: #57b9d1 5px solid;
+    border-top: #ff9932 5px solid;
     border-left: 0px;
     border-bottom: 0px;
     border-right: 0px;
 }
 
 .dropdown-menu-right .divider {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .theme>li>a {
-    color: #57b9d1;
-    border-bottom: #57b9d1 1px solid;
+    color: #ff9932;
+    border-bottom: #ff9932 1px solid;
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
@@ -156,14 +151,14 @@ a:hover {
 .theme>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .navbar-btn1 {
     margin-top: 16px;
     border: none;
     background-color: #fff;
-    color: #57b9d1;
+    color: #ff9932;
     font-size: 21px;
 }
 
@@ -171,23 +166,23 @@ a:hover {
     margin-top: 16px;
     border: none;
     background-color: #fff;
-    color: #57b9d1;
+    color: #ff9932;
     font-size: 21px;
 }
 
 .navbar-btn1:hover {
     color: #fff;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .navbar-btn2:hover {
     color: #fff;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .icon-box {
     display: none;
-    background-color: #57b9d1;
+    background-color: #ff9932;
     margin-top: 20px;
     width: 110px;
     height: 35px;
@@ -195,7 +190,7 @@ a:hover {
 }
 
 .icon-box:hover {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .icon-box h4 {
@@ -217,7 +212,7 @@ a:hover {
 
 .title {
     font-weight: bold;
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .title:hover {
@@ -242,7 +237,7 @@ a:hover {
 .jumbotron {
     display: none;
     padding-top: 90px;
-    background-color: #57b9d1;
+    background-color: #ff9932;
     height: 280px;
 }
 
@@ -279,7 +274,7 @@ a:hover {
 .logout>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .user-icon {
@@ -310,7 +305,7 @@ a:hover {
 .m-profile>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .m-logout {
@@ -318,7 +313,7 @@ a:hover {
 }
 
 .m-logout:hover {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .m-logout>p {
@@ -404,7 +399,7 @@ a:hover {
 }
 
 .circle-login:hover {
-    border: 3px solid #57b9d1;
+    border: 3px solid #ff9932;
 }
 
 .login-mobile {
@@ -522,7 +517,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #57b9d1;
+    border: 2px solid #ff9932;
 }
 
 .glyphicon-ok {
@@ -540,7 +535,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #57b9d1;
+    border: 2px solid #ff9932;
 }
 
 .glyphicon-remove {
@@ -586,7 +581,7 @@ a:hover {
 }
 
 .join:hover {
-    background: #57b9d1;
+    background: #ff9932;
 }
 
 .join:hover a {
@@ -608,7 +603,7 @@ a:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #57b9d1;
+    background-color: #ff9932;
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -616,11 +611,11 @@ a:hover {
 
 .register-mobile p {
     font-size: 18px;
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .register-mobile .navbar {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .register-mobile .content {
@@ -652,7 +647,7 @@ a:hover {
 .register-mobile .login p {
     text-align: left;
     font-size: 18px;
-    color: #57b9d1;
+    color: #ff9932;
 }
 
 .register-mobile .name {
@@ -672,8 +667,7 @@ a:hover {
     display: block;
     font-size: 1.2em;
     width: 100%;
-    border: 1px solid #57b9d1;
-    border-style: #57b9d1;
+    border: 1px solid #ff9932;
     border-radius: 0px;
     border-bottom: 0px;
     padding: 8px;
@@ -698,7 +692,7 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #57b9d1;
+    border: 2px solid #ff9932;
 }
 
 .register-mobile .register-back {
@@ -708,11 +702,11 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 99px;
-    border: 2px solid #57b9d1;
+    border: 2px solid #ff9932;
 }
 
 .search-bar {
-    background-color: #57b9d1;
+    background-color: #ff9932;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -750,11 +744,11 @@ a:hover {
     width: 40px;
     height: 40px;
     border-radius: 99em;
-    border: 3px solid #57b9d1;
+    border: 3px solid #ff9932;
 }
 
 .finder>li>a {
-    color: #57b9d1;
+    color: #ff9932;
     padding: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -763,7 +757,7 @@ a:hover {
 .finder>li>a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .username-icon h4 {
@@ -809,7 +803,7 @@ a:hover {
         color: #57b9d1;
     }
     .glyphicon-align-justify:hover {
-        color: #57b9d1;
+        color: #ff9932;
     }
     .select {
         right: 15px;
@@ -879,13 +873,12 @@ a:hover {
         color: #ff9933;
     }
     .glyphicon-align-justify:hover {
-        color: #57b9d1;
+        color: #ff9932;
     }
     .select {
         right: 0px;
         border: 0px;
         width: 57px;
-        /* outline: 1px solid; */
         height: 44px;
         top: -15px;
     }
@@ -919,7 +912,7 @@ a:hover {
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 0px;
-        border-top: #57b9d1 5px solid;
+        border-top: #ff9932 5px solid;
         border-left: 0px;
         border-bottom: 0px;
         border-right: 0px;

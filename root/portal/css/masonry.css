@@ -146,7 +146,7 @@ body {
 }
 
 
-/* checkbox設定 */
+/* checkboxè¨­å®š */
 
 .list {
     float: left;
@@ -339,12 +339,12 @@ input[type="checkbox"] {
 }
 
 .select {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .select:visited,
 .select:hover {
-    background-color: #57b9d1;
+    background-color: #ff9932;
 }
 
 .login-box {
@@ -463,7 +463,7 @@ input[type="checkbox"] {
         background-color: transparent;
     }
     .sandwich {
-        color: #57b9d1;
+        color: #ff9932;
         font-size: 33px;
     }
     .input-group {
@@ -550,7 +550,7 @@ input[type="checkbox"] {
         background-color: transparent;
     }
     .sandwich {
-        color: #57b9d1;
+        color: #ff9932;
         font-size: 33px;
     }
     .select:hover,
