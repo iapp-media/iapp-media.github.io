@@ -24,6 +24,8 @@ a:hover {
     background-color: #ff9933;
 }
 
+
+
 .back-top {
     width: auto;
     height: auto;
@@ -62,7 +64,7 @@ a:hover {
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 37px;
+    width: 0;
 }
 
 .search2:hover {
@@ -74,10 +76,8 @@ a:hover {
 }
 
 .glyphicon-search {
-    /* margin-top: 7px; */
     color: #ff9932;
     font-size: 35px;
-    /* left: -50%; */
 }
 
 .glyphicon-search:hover {
@@ -107,15 +107,6 @@ a:hover {
 
 .glyphicon-align-justify:hover {
     color: #ff9933;
-}
-
-.select {
-    border: #ff9932 1px solid;
-}
-
-.select:hover {
-    border: #ff9933 1px solid;
-    background-color: #ff9932;
 }
 
 .dropdown-menu-right {
@@ -184,7 +175,7 @@ a:hover {
 }
 
 .icon-box {
-    display: none;
+    display: block;
     background-color: #ff9932;
     margin-top: 20px;
     width: 110px;
@@ -202,9 +193,9 @@ a:hover {
 
 .usericon {
     width: auto;
-    height: 36px;
+    height: 35px;
     position: absolute;
-    top: -2%;
+    /* top: -2%; */
     left: 0%;
     border-radius: 6px;
 }
@@ -391,9 +382,9 @@ a:hover {
 }
 
 .circle-login {
-    display: none;
+    display: block;
     position: relative;
-    margin-top: 4px;
+    /* margin-top: 0px; */
     left: -50%;
     width: 40px;
     height: 40px;
@@ -774,6 +765,11 @@ a:hover {
     border: none;
 }
 
+.select {
+    border: none;
+    padding: 7px 12px;
+}
+
 @media only screen and (min-width:481px) and (max-width:768px) {
     .tem {
         display: inline;
@@ -810,15 +806,15 @@ a:hover {
         color: #ff9932;
     }
     .select {
-        right: 15px;
         border: 0px;
-        top: -3px;
         background-color: #fff;
+        padding: 0;
+        margin-top: 1px;
     }
     .select:hover {
-        border: 0px;
+        padding: 0;
+        border: 0;
         background-color: #fff;
-        border-radius-left: 20px;
     }
     .dropdown-menu-right {
         position: absolute;
@@ -879,18 +875,6 @@ a:hover {
     .glyphicon-align-justify:hover {
         color: #ff9932;
     }
-    .select {
-        right: 0px;
-        border: 0px;
-        width: 57px;
-        height: 44px;
-        top: -15px;
-    }
-    .select:hover {
-        border: 0px;
-        background-color: #fff;
-        border-radius-left: 20px;
-    }
     .input-group .form-control {
         display: none;
     }
@@ -923,5 +907,8 @@ a:hover {
     }
     .theme .boxpos a {
         border: none;
+    }
+    .select {
+        margin-top: -16px;
     }
 }

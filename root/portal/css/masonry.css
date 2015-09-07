@@ -343,7 +343,8 @@ input[type="checkbox"] {
 }
 
 .select:visited,
-.select:hover {
+.select:hover,
+.select:focus {
     background-color: #ff9932;
 }
 
@@ -393,6 +394,9 @@ input[type="checkbox"] {
 .theme li:nth-child(7) a {
     border: none;
 }
+
+
+/* IPad media size */
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     #container {
@@ -459,8 +463,10 @@ input[type="checkbox"] {
     .select:hover,
     .select:link,
     .select:visited,
-    .select:active {
+    .select:active,
+    .select:focus {
         background-color: transparent;
+        color: #ff9933;
     }
     .sandwich {
         color: #ff9932;
@@ -471,14 +477,19 @@ input[type="checkbox"] {
     }
 }
 
-@media only screen and (max-width: 480px) {
+
+/* IPad media size end */
+
+
+/* Iphone 6 media size */
+
+@media only screen and (min-width: 355px) and (max-width: 480px) {
     #container {
         margin: 72px auto;
     }
     .item {
         float: left;
         padding: 0px;
-        margin: 1%;
         width: 166px;
     }
     .item-pic {
@@ -556,8 +567,10 @@ input[type="checkbox"] {
     .select:hover,
     .select:link,
     .select:visited,
-    .select:active {
+    .select:active,
+    .select:focus {
         background-color: transparent;
+        color: #ff9933;
     }
     .theme li:nth-child(7) a {
         border: none;
@@ -608,3 +621,45 @@ input[type="checkbox"] {
         margin-left: 32px;
     }
 }
+
+
+/* Iphone 6 media size end */
+
+
+/* Iphone 5 media size */
+
+@media only screen and (max-width: 355px) {
+    .item {
+        float: left;
+        padding: 0px;
+        width: 148px;
+    }
+    #container {
+        margin: 22% auto;
+    }
+    .icon-box {
+        display: none;
+    }
+    .select {
+        padding: 0;
+        margin-top: 3px;
+        font-size: 28px;
+        color: #ff9933;
+        background-color: transparent;
+    }
+    .select:hover,
+    .select:link,
+    .select:visited,
+    .select:active,
+    .select:focus {
+        background-color: transparent;
+        color: #ff9933;
+    }
+    .search2 {
+        width: 14px;
+        top: 12px;
+    }
+}
+
+
+/* Iphone 5 media size end*/
