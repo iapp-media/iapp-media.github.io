@@ -172,17 +172,86 @@ var current = 0,
         if (files && files.length) {
           file = files[0];
           if (/^image\/\w+$/.test(file.type)) {
-            blobURL = URL.createObjectURL(file);
-            $image.one('built.cropper', function() {
-              URL.revokeObjectURL(blobURL); // Revoke when load complete
-            }).cropper('reset', true).cropper('replace', blobURL).cropper('setAspectRatio', width / height);
-            $inputImage.val('');
-            $('#cut').attr('disabled', false);
+            var reader = new FileReader();
+            //rotate image according to orientation
+            var orientation;
+            EXIF.getData(file, function() {
+              orientation = EXIF.getTag(this, 'Orientation');
+            });
+            reader.readAsDataURL(file);
+            reader.onload = function(e) {
+              var aImg = document.createElement('img');
+              aImg.onload = function() {
+                // draw the aImg onto the canvas
+                var canvas = document.createElement('canvas');
+
+                // var canvas = document.getElementById('cvs');
+                var ctx = canvas.getContext('2d');
+                canvas.width = aImg.width;
+                canvas.height = aImg.height;
+
+                if (!orientation || orientation > 8) {
+                  canvas.width = aImg.width;
+                  canvas.height = aImg.height;
+                }
+                if (orientation > 4) {
+                  canvas.width = aImg.height;
+                  canvas.height = aImg.width;
+                }
+                switch (orientation) {
+                  case 2:
+                    // horizontal flip
+                    ctx.translate(aImg.width, 0);
+                    ctx.scale(-1, 1);
+                    break;
+                  case 3:
+                    // 180° rotate left
+                    ctx.translate(aImg.width, aImg.height);
+                    ctx.rotate(Math.PI);
+                    break;
+                  case 4:
+                    // vertical flip
+                    ctx.translate(0, aImg.height);
+                    ctx.scale(1, -1);
+                    break;
+                  case 5:
+                    // vertical flip + 90 rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.scale(1, -1);
+                    break;
+                  case 6:
+                    // 90° rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.translate(0, -aImg.height);
+                    break;
+                  case 7:
+                    // horizontal flip + 90 rotate right
+                    ctx.rotate(0.5 * Math.PI);
+                    ctx.translate(aImg.width, -aImg.height);
+                    ctx.scale(-1, 1);
+                    break;
+                  case 8:
+                    // 90° rotate left
+                    ctx.rotate(-0.5 * Math.PI);
+                    ctx.translate(-aImg.width, 0);
+                    break;
+                }
+                ctx.drawImage(aImg, 0, 0);
+                // make the jpeg image
+                blobURL = canvas.toDataURL('image/jpeg', 0.6);
+                $image.one('built.cropper', function() {
+                  URL.revokeObjectURL(blobURL); // Revoke when load complete
+                }).cropper('reset', true).cropper('replace', blobURL).cropper('setAspectRatio', width / height);
+                $inputImage.val('');
+                $('#cut').attr('disabled', false);
+              };
+              aImg.src = e.target.result;
+
+            };
           } else {
             showMessage('Please choose an image file.');
           }
         }
-
       });
     } else {
       $inputImage.parent().remove();
