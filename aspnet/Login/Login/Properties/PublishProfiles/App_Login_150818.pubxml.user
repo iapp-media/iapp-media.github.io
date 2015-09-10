@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Root\AppWeb\發行區\Login</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/JustyLibrary.dll">
+      <publishTime>08/21/2015 10:56:23</publishTime>
+    </File>
+    <File Include="bin/Login.dll">
+      <publishTime>08/22/2015 13:13:04</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>06/17/2015 14:29:27</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="css/login.css">
+      <publishTime>08/06/2015 14:17:33</publishTime>
+    </File>
+    <File Include="css/m-login.css">
+      <publishTime>08/17/2015 18:28:44</publishTime>
+    </File>
+    <File Include="css/profile.css">
+      <publishTime>08/18/2015 17:16:38</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>08/06/2015 14:17:39</publishTime>
+    </File>
+    <File Include="css/signup.css">
+      <publishTime>08/06/2015 14:17:39</publishTime>
+    </File>
+    <File Include="FBchk.aspx">
+      <publishTime>08/18/2015 17:42:05</publishTime>
+    </File>
+    <File Include="FBLogin.aspx">
+      <publishTime>08/18/2015 17:01:10</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="img/box-fblogin.png">
+      <publishTime>08/06/2015 14:17:49</publishTime>
+    </File>
+    <File Include="img/fb.png">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="img/headimg.png">
+      <publishTime>08/17/2015 18:35:21</publishTime>
+    </File>
+    <File Include="img/iapplogo.png">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="js/jquery-1.11.3.min.js">
+      <publishTime>08/06/2015 14:15:54</publishTime>
+    </File>
+    <File Include="js/m-login.js">
+      <publishTime>08/17/2015 17:15:29</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>08/22/2015 13:04:20</publishTime>
+    </File>
+    <File Include="m-login.aspx">
+      <publishTime>08/22/2015 13:12:55</publishTime>
+    </File>
+    <File Include="Profile.aspx">
+      <publishTime>08/17/2015 18:37:03</publishTime>
+    </File>
+    <File Include="Register.aspx">
+      <publishTime>08/17/2015 18:30:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/20/2015 15:40:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

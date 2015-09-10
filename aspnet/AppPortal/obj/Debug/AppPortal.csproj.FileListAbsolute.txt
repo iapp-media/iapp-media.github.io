@@ -1,0 +1,8 @@
+D:\Root\AppWeb\AppPortal\obj\Debug\AppPortal.csprojResolveAssemblyReference.cache
+D:\Root\AppWeb\AppPortal\bin\AppPortal.dll
+D:\Root\AppWeb\AppPortal\bin\AppPortal.pdb
+D:\Root\AppWeb\AppPortal\bin\JustyLibrary.dll
+D:\Root\AppWeb\AppPortal\bin\JustyLibrary.pdb
+D:\Root\AppWeb\AppPortal\obj\Debug\AppPortal.dll
+D:\Root\AppWeb\AppPortal\obj\Debug\AppPortal.pdb
+D:\Root\AppWeb\AppPortal\bin\ThoughtWorks.QRCode.dll

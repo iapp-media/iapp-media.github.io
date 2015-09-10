@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AppWeb1.4
+</name>
+</assembly>
+<members>
+<member name="F:AppWeb1._4.maker2.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.Literal1">
+	<summary>
+Literal1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.LPreview">
+	<summary>
+LPreview 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.IBSend">
+	<summary>
+IBSend 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.LSet">
+	<summary>
+LSet 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.MaxNum">
+	<summary>
+MaxNum 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.maker2.IIDs">
+	<summary>
+IIDs 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mPreview.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.TAppName">
+	<summary>
+TAppName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.TAppMemo">
+	<summary>
+TAppMemo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.Button1">
+	<summary>
+Button1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.CurrentId">
+	<summary>
+CurrentId 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mSet.Tbase64">
+	<summary>
+Tbase64 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.form2">
+	<summary>
+form2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.User_Name">
+	<summary>
+User_Name 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.RequiredFieldValidator2">
+	<summary>
+RequiredFieldValidator2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.Email">
+	<summary>
+Email 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.RegularExpressionValidator1">
+	<summary>
+RegularExpressionValidator1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.Pw">
+	<summary>
+Pw 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.SignUp.regBtn1">
+	<summary>
+regBtn1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Svim.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p03.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p03.Literal1">
+	<summary>
+Literal1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.p1">
+	<summary>
+p1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.Label1">
+	<summary>
+Label1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.TName">
+	<summary>
+TName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.pw1">
+	<summary>
+pw1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.pw2">
+	<summary>
+pw2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.BtnSend">
+	<summary>
+BtnSend 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.profile.BTCancel">
+	<summary>
+BTCancel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:AppWeb1._4.My.MyWebExtension.Computer">
+	<summary>
+ 傳回主機電腦的資訊。
+ </summary>
+</member><member name="P:AppWeb1._4.My.MyWebExtension.User">
+	<summary>
+ 傳回目前 Web 使用者的資訊。
+ </summary>
+</member><member name="P:AppWeb1._4.My.MyWebExtension.Request">
+	<summary>
+ 傳回要求物件。
+ </summary>
+</member><member name="P:AppWeb1._4.My.MyWebExtension.Response">
+	<summary>
+ 傳回回應物件。
+ </summary>
+</member><member name="P:AppWeb1._4.My.MyWebExtension.Log">
+	<summary>
+ 傳回 Asp 記錄物件。
+ </summary>
+</member><member name="T:AppWeb1._4.My.MyWebExtension">
+	<summary>
+ 用來定義可用於 Web 專案 My 命名空間中之屬性的模組。
+ </summary>
+	<remarks></remarks>
+</member><member name="F:AppWeb1._4.see.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.Lmeta">
+	<summary>
+Lmeta 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.Scriptmanager1">
+	<summary>
+Scriptmanager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.LaName">
+	<summary>
+LaName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.LID">
+	<summary>
+LID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.LFrame">
+	<summary>
+LFrame 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.Qrimg">
+	<summary>
+Qrimg 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.LUrl">
+	<summary>
+LUrl 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.NewApps">
+	<summary>
+NewApps 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Preview.FBShare">
+	<summary>
+FBShare 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p021.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p021.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p021.L2">
+	<summary>
+L2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.form2">
+	<summary>
+form2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.User_Name">
+	<summary>
+User_Name 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.RequiredFieldValidator2">
+	<summary>
+RequiredFieldValidator2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.Email">
+	<summary>
+Email 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.RegularExpressionValidator1">
+	<summary>
+RegularExpressionValidator1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.Pw">
+	<summary>
+Pw 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.regBtn1">
+	<summary>
+regBtn1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Register.close">
+	<summary>
+close 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mFBLogin.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.list.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.list.LBNew">
+	<summary>
+LBNew 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.list.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.list.RP1">
+	<summary>
+RP1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.list.SD1">
+	<summary>
+SD1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login.accBox">
+	<summary>
+accBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login.pwBox">
+	<summary>
+pwBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login.LoginBtn">
+	<summary>
+LoginBtn 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.backlist">
+	<summary>
+backlist 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.showImg">
+	<summary>
+showImg 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.BTN">
+	<summary>
+BTN 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.TS">
+	<summary>
+TS 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.AUL.PDialog">
+	<summary>
+PDialog 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p01.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p01.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.test.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.Literal1">
+	<summary>
+Literal1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.LPreview">
+	<summary>
+LPreview 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.IBSend">
+	<summary>
+IBSend 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.LSet">
+	<summary>
+LSet 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.MaxNum">
+	<summary>
+MaxNum 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Maker.IIDs">
+	<summary>
+IIDs 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p06.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p06.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:AppWeb1._4.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:AppWeb1._4.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member><member name="T:AppWeb1._4.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member><member name="F:AppWeb1._4.cApp.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.wordEdit.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.wordEdit.txtEditor">
+	<summary>
+txtEditor 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.wordEdit.send">
+	<summary>
+send 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.Img1">
+	<summary>
+Img1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.p1">
+	<summary>
+p1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.TAppName">
+	<summary>
+TAppName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.TAppMemo">
+	<summary>
+TAppMemo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting2.send">
+	<summary>
+send 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.accBox">
+	<summary>
+accBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.pwBox">
+	<summary>
+pwBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.LoginBtn">
+	<summary>
+LoginBtn 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.mLogin.CID">
+	<summary>
+CID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p05.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.Img_cover">
+	<summary>
+Img_cover 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.p1">
+	<summary>
+p1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.TAppName">
+	<summary>
+TAppName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.TAppMemo">
+	<summary>
+TAppMemo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Setting1.sendOK">
+	<summary>
+sendOK 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.Head1">
+	<summary>
+Head1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.Scriptmanager1">
+	<summary>
+Scriptmanager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.up2">
+	<summary>
+up2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.RP1">
+	<summary>
+RP1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.SD1">
+	<summary>
+SD1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.Lprofile">
+	<summary>
+Lprofile 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.LFrame2">
+	<summary>
+LFrame2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.NewApps">
+	<summary>
+NewApps 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.FBShare">
+	<summary>
+FBShare 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.La">
+	<summary>
+La 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.AA">
+	<summary>
+AA 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.DELEID">
+	<summary>
+DELEID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.DELE1">
+	<summary>
+DELE1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.SavSort">
+	<summary>
+SavSort 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.p04.L">
+	<summary>
+L 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.FBShare.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login1.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login1.accBox">
+	<summary>
+accBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login1.pwBox">
+	<summary>
+pwBox 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login1.LoginBtn">
+	<summary>
+LoginBtn 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4.Login1.CID">
+	<summary>
+CID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member>
+</members>
+</doc>

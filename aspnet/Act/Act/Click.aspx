@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Click.aspx.cs" Inherits="Act.Click" %> 

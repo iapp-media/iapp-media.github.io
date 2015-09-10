@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D11616BD-366B-42FD-AA12-E2CACE28936E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniStore</RootNamespace>
+    <AssemblyName>MiniStore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="111.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\114.png" />
+    <Content Include="images\colorbox\controls.png" />
+    <Content Include="images\detector\droid_402x.png" />
+    <Content Include="images\detector\ipad_402x.png" />
+    <Content Include="images\detector\iphone_402x.png" />
+    <Content Include="images\gallery\icon3.png" />
+    <Content Include="images\gallery\loader.gif" />
+    <Content Include="images\general-nature\001.jpg" />
+    <Content Include="images\general-nature\001s.jpg" />
+    <Content Include="images\general-nature\001s.png" />
+    <Content Include="images\general-nature\002.jpg" />
+    <Content Include="images\general-nature\002s.jpg" />
+    <Content Include="images\general-nature\003.jpg" />
+    <Content Include="images\general-nature\003s.jpg" />
+    <Content Include="images\general-nature\004s.jpg" />
+    <Content Include="images\general-nature\1.jpg" />
+    <Content Include="images\general-nature\1s.jpg" />
+    <Content Include="images\general-nature\2.jpg" />
+    <Content Include="images\general-nature\2s.jpg" />
+    <Content Include="images\general-nature\3.jpg" />
+    <Content Include="images\general-nature\3s.jpg" />
+    <Content Include="images\general-nature\4s.jpg" />
+    <Content Include="images\general-nature\5s.jpg" />
+    <Content Include="images\general-nature\6s.jpg" />
+    <Content Include="images\like-1.png" />
+    <Content Include="images\lists\address_48.png" />
+    <Content Include="images\lists\block_48.png" />
+    <Content Include="images\lists\blog_cat.png" />
+    <Content Include="images\lists\blog_more.png" />
+    <Content Include="images\lists\blog_time.png" />
+    <Content Include="images\lists\blog_user.png" />
+    <Content Include="images\lists\bookmark_48.png" />
+    <Content Include="images\lists\briefcase_48.png" />
+    <Content Include="images\lists\bubble_48.png" />
+    <Content Include="images\lists\buy-car.png" />
+    <Content Include="images\lists\buy_48.png" />
+    <Content Include="images\lists\calendar_48.png" />
+    <Content Include="images\lists\clipboard_48.png" />
+    <Content Include="images\lists\clock_48.png" />
+    <Content Include="images\lists\diagram_48.png" />
+    <Content Include="images\lists\document_48.png" />
+    <Content Include="images\lists\down_48.png" />
+    <Content Include="images\lists\flag_48.png" />
+    <Content Include="images\lists\folder_48.png" />
+    <Content Include="images\lists\gear_48.png" />
+    <Content Include="images\lists\globe_48.png" />
+    <Content Include="images\lists\heart_48.png" />
+    <Content Include="images\lists\help_48.png" />
+    <Content Include="images\lists\home_48.png" />
+    <Content Include="images\lists\info_48.png" />
+    <Content Include="images\lists\key_48.png" />
+    <Content Include="images\lists\label_48.png" />
+    <Content Include="images\lists\left_48.png" />
+    <Content Include="images\lists\letter_48.png" />
+    <Content Include="images\lists\monitor_48.png" />
+    <Content Include="images\lists\pencil_48.png" />
+    <Content Include="images\lists\plus_48.png" />
+    <Content Include="images\lists\present_48.png" />
+    <Content Include="images\lists\print_48.png" />
+    <Content Include="images\lists\right_48.png" />
+    <Content Include="images\lists\save_48.png" />
+    <Content Include="images\lists\search_48.png" />
+    <Content Include="images\lists\shield_48.png" />
+    <Content Include="images\lists\statistics_48.png" />
+    <Content Include="images\lists\stop_48.png" />
+    <Content Include="images\lists\tick_48.png" />
+    <Content Include="images\lists\trash_48.png" />
+    <Content Include="images\lists\up_48.png" />
+    <Content Include="images\lists\user_48.png" />
+    <Content Include="images\lists\wallet_48.png" />
+    <Content Include="images\lists\warning_48.png" />
+    <Content Include="images\misc\contact_facebook.png" />
+    <Content Include="images\misc\contact_mail.png" />
+    <Content Include="images\misc\contact_message.png" />
+    <Content Include="images\misc\contact_phone.png" />
+    <Content Include="images\misc\contact_twitter.png" />
+    <Content Include="images\misc\facebook-color.png" />
+    <Content Include="images\misc\facebook-white.png" />
+    <Content Include="images\misc\go-up.png" />
+    <Content Include="images\misc\header-mail.png" />
+    <Content Include="images\misc\header-nav.png" />
+    <Content Include="images\misc\iapplogo.png" />
+    <Content Include="images\misc\icons\applications.png" />
+    <Content Include="images\misc\icons\blockimages.png" />
+    <Content Include="images\misc\icons\cog2.png" />
+    <Content Include="images\misc\icons\coverflow.png" />
+    <Content Include="images\misc\icons\flag.png" />
+    <Content Include="images\misc\icons\graph.png" />
+    <Content Include="images\misc\icons\graph2.png" />
+    <Content Include="images\misc\icons\hd.png" />
+    <Content Include="images\misc\icons\ipad.png" />
+    <Content Include="images\misc\icons\leaf.png" />
+    <Content Include="images\misc\icons\listimage.png" />
+    <Content Include="images\misc\icons\listimage2.png" />
+    <Content Include="images\misc\icons\lists.png" />
+    <Content Include="images\misc\icons\mail.png" />
+    <Content Include="images\misc\icons\power.png" />
+    <Content Include="images\misc\icons\sd.png" />
+    <Content Include="images\misc\icons\settings.png" />
+    <Content Include="images\misc\icons\smallbrush.png" />
+    <Content Include="images\misc\icons\speechbubble2.png" />
+    <Content Include="images\misc\icons\tables.png" />
+    <Content Include="images\misc\icons\usercomment.png" />
+    <Content Include="images\misc\intro.png" />
+    <Content Include="images\misc\logo-dark.png" />
+    <Content Include="images\misc\logo-white.png" />
+    <Content Include="images\misc\nav-active.png" />
+    <Content Include="images\misc\nav-inactive.png" />
+    <Content Include="images\misc\nav-link.png" />
+    <Content Include="images\misc\sidebar-close.png" />
+    <Content Include="images\misc\sidebar-features.png" />
+    <Content Include="images\misc\sidebar-gallery.png" />
+    <Content Include="images\misc\sidebar-hide.png" />
+    <Content Include="images\misc\sidebar-home.png" />
+    <Content Include="images\misc\sidebar-info.png" />
+    <Content Include="images\misc\sidebar-mail.png" />
+    <Content Include="images\misc\sidebar-ok.png" />
+    <Content Include="images\misc\sidebar-question.png" />
+    <Content Include="images\misc\sidebar-warning.png" />
+    <Content Include="images\misc\submenu-active.png" />
+    <Content Include="images\misc\submenu-arrow.png" />
+    <Content Include="images\misc\submenu-inactive.png" />
+    <Content Include="images\misc\twitter-color.png" />
+    <Content Include="images\misc\twitter-white.png" />
+    <Content Include="images\misc\wide-link.png" />
+    <Content Include="images\misc\wide-plus.png" />
+    <Content Include="images\qr-minis-s.png" />
+    <Content Include="images\qrcode-ministore.png" />
+    <Content Include="images\status.gif" />
+    <Content Include="images\ui\arrow-down.png" />
+    <Content Include="images\ui\arrow-up.png" />
+    <Content Include="images\ui\checkbox1.png" />
+    <Content Include="images\ui\checkbox1c.png" />
+    <Content Include="images\ui\checkbox2.png" />
+    <Content Include="images\ui\checkbox2c.png" />
+    <Content Include="images\ui\checkbox3.png" />
+    <Content Include="images\ui\checkbox3c.png" />
+    <Content Include="images\ui\minus.png" />
+    <Content Include="images\ui\next.png" />
+    <Content Include="images\ui\next1.png" />
+    <Content Include="images\ui\plus.png" />
+    <Content Include="images\ui\prev.png" />
+    <Content Include="images\ui\prev1.png" />
+    <Content Include="images\ui\radio1.png" />
+    <Content Include="images\ui\radio1c.png" />
+    <Content Include="images\ui\radio2.png" />
+    <Content Include="images\ui\radio2c.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="Product_Detail.aspx" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\colorbox.js" />
+    <Content Include="scripts\contact.js" />
+    <Content Include="scripts\custom.js" />
+    <Content Include="scripts\framework.js" />
+    <Content Include="scripts\framework.launcher.js" />
+    <Content Include="scripts\jquery-1.11.3.min.js" />
+    <Content Include="scripts\jquery.infinitescroll.min.js" />
+    <Content Include="scripts\jquery.js" />
+    <Content Include="scripts\jquery.masonry.min.js" />
+    <Content Include="scripts\jquery.swipebox.js" />
+    <Content Include="scripts\jqueryui.js" />
+    <Content Include="scripts\owl.carousel.min.js" />
+    <Content Include="scripts\snap.js" />
+    <Content Include="shopcart.html" />
+    <Content Include="Shopping_Cart.aspx" />
+    <Content Include="styles\bootstrap.min.css" />
+    <Content Include="styles\colorbox.css" />
+    <Content Include="styles\framework.css" />
+    <Content Include="styles\masonry.css" />
+    <Content Include="styles\owl.carousel.css" />
+    <Content Include="styles\owl.theme.css" />
+    <Content Include="styles\style.css" />
+    <Content Include="styles\swipebox.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Detail.aspx.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Detail.aspx.designer.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shopping_Cart.aspx.cs">
+      <DependentUpon>Shopping_Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shopping_Cart.aspx.designer.cs">
+      <DependentUpon>Shopping_Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreFront.Master.cs">
+      <DependentUpon>StoreFront.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreFront.Master.designer.cs">
+      <DependentUpon>StoreFront.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\lists\buy-car.sketch" />
+    <Content Include="StoreFront.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JustyLibrary\JustyLibrary\JustyLibrary.csproj">
+      <Project>{5159f6e7-621b-4cc4-85aa-d784a2a02019}</Project>
+      <Name>JustyLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18429/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

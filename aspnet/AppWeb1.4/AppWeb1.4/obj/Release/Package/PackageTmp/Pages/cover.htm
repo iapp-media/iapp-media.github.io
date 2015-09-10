@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-tw" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>iApp</title>
+    <meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+    <meta name="keywords" content="iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" href="../Apps/img/icon.png" />
+    <link rel="apple-touch-icon" href="img/114.png" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" type="text/css" href="../Apps/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../Apps/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../Apps/css/slide.css?v3" />
+    <link rel="stylesheet" type="text/css" href="../Apps/css/action.css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <img class="logo animated bounceInDownrubberBand" src="../img/logo.png" />
+            <img class="up moveIconUp" src="../img/icon_up.png" />
+        </div>
+    </form>
+
+    <script src="../Apps/js/zepto.min.js"></script>
+    <script src="../Apps/js/touch.js"></script>
+    <script src="../Apps/js/index.js"></script>
+    <script src="../Apps/js/share.js"></script>
+
+    <script>
+        var share_button_right = new Share(".share-button-bottom", {
+            ui: {
+                flyout: "bottom left",
+                button_text: ""
+            },
+            networks: {
+                facebook: {
+                    app_id: "12345",
+                }
+            }
+        });
+    </script>
+    <!-- Google Analytics 分析 -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-62535634-4', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

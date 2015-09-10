@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+
+/* ²Î¤@¦â½X */
+
+.colorRed {
+    color: #c80f0f;
+}
+
+a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+.container {
+    position: relative;
+    width: 85%;
+    height: 400px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#FU1 {
+    display: none;
+}
+
+#FU2 {
+    padding-left: 30px;
+}
+
+.top {
+    width: 100%;
+    /*outline: 1px solid #f00;*/
+}
+
+.top p {
+    font-size: 24px;
+    height: 30%;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+}
+
+.bar {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: #7d7d7d;
+    opacity: 0.5;
+}
+
+.bar3 {
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    width: 100%;
+    height: 3px;
+    background-color: #ff9933;
+}
+
+.top h1 {
+    width: 100%;
+    /*outline: 1px solid #f00;*/
+    height: 50px;
+    text-align: center;
+    color: #ff9933;
+    font-size: 24px;
+    line-height: 60px;
+    border-bottom: 2px solid #ff9933;
+}
+
+.left {
+    width: 42%;
+    height: 300px;
+}
+
+.left h2 {
+    text-align: center;
+    color: #7d7d7d;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.left .show {
+    width: 169px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+.show img {
+    max-height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.left .show .upload {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /*outline: 1px solid #f00;*/
+}
+
+.set {
+    position: absolute;
+    right: 0%;
+    top: 10px;
+    height: 390px;
+}
+
+.set a {
+    color: #ff9933;
+}
+
+.set .icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    border-radius: 3px;
+}
+
+.set .icon img {
+    border: 1px solid #ddd;
+}
+
+.set .icon p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.icon .iconimg-1 {
+    border: 1px #aaa solid;
+    border-radius: 5px;
+}
+
+.icon:hover .iconimg-1 {
+    opacity: 0.5;
+}
+
+.set table {
+    color: #7d7d7d;
+    margin: 0 auto;
+}
+
+.set .poster {
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+
+.set .name {
+    width: 100%;
+    height: 24px;
+    border: 1px solid #ddd;
+}
+
+.text1title {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.text1title input {
+    width: 100%;
+}
+
+.text1title span {
+    text-align: left;
+    font-size: 16px;
+}
+
+.text1title textarea[name="TAppMemo"] {
+    text-align: left;
+    height: 80px;
+    font-size: 12px;
+}
+
+.text1title input[name="TAppName"] {
+    font-size: 12px;
+}
+
+.set .describe {
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: left;
+    float: left;
+    border: 1px solid #ddd;
+    padding-top: 3px;
+}
+
+.container .send {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 92px;
+    height: 29px;
+    margin: auto;
+    background: url('../img/button-sprite-1.png');
+    background-position: 92px 57px;
+}
+
+.container .send:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: 92px 57px;
+}
+
+.container .send p {
+    color: #ff9933;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.container .send p a {
+    color: #ff9933;
+}
+
+.container .send p a:hover {
+    color: #fff;
+}

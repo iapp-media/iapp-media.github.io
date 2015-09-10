@@ -1,0 +1,8 @@
+D:\Root\AppWeb\Login\Login\obj\Release\Login.csprojResolveAssemblyReference.cache
+D:\Root\AppWeb\Login\Login\bin\Login.dll
+D:\Root\AppWeb\Login\Login\bin\Login.pdb
+D:\Root\AppWeb\Login\Login\bin\JustyLibrary.dll
+D:\Root\AppWeb\Login\Login\bin\ThoughtWorks.QRCode.dll
+D:\Root\AppWeb\Login\Login\bin\JustyLibrary.pdb
+D:\Root\AppWeb\Login\Login\obj\Release\Login.dll
+D:\Root\AppWeb\Login\Login\obj\Release\Login.pdb

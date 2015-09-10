@@ -1,0 +1,191 @@
+body {
+    background-color: none;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff9933;
+}
+.send p {
+    color: #ff9933;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+  .send p a {
+    color: #ff9933;
+}
+
+ .send p a:hover {
+    color: #fff;
+}
+
+.send {
+    position: absolute;
+    top: 410px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 92px;
+    height: 30px;
+    background: url('../img/button-sprite-1.png');
+    background-position: 92px 57px;
+    cursor: pointer;
+}
+
+.send:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: 92px 57px;
+}
+
+form {
+    margin: 40px 0;
+}
+
+div {
+    clear: both;
+    margin: 0 50px;
+}
+
+label {
+    width: 80px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4
+}
+
+#txtEditor {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* hide input */
+
+input.radio:empty {
+    margin-left: -999px;
+}
+
+
+/* style label */
+
+input.radio:empty ~ label {
+    position: relative;
+    float: left;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 11px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+input.radio:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* toggle hover */
+
+input.radio:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-align: center;
+    color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+
+/* toggle on */
+
+input.radio:checked ~ label:before {
+    content: '\2714';
+    text-align: center;
+    color: #9CE2AE;
+    background-color: #4DCB6D;
+}
+
+input.radio:checked ~ label {
+    color: #777;
+}
+
+
+/* radio focus */
+
+input.radio:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.show-color:hover p {
+    color: #888;
+}
+
+.show-color {
+    position: absolute;
+    top: 230px;
+    width: 82px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    margin: 0;
+    left: 50%;
+    margin-left: -120px;
+    box-sizing: border-box;
+}
+
+.show-color p {
+    text-align: right;
+    line-height: 32px;
+    padding-right: 11px;
+}
+
+.colorPicker {
+    display: none;
+}
+
+.chkstyle1 {
+    position: absolute;
+    top: 230px;
+    margin: 0;
+    left: 50%;
+    margin-left: 30px;
+}
+
+.chkstyle2 {
+    margin: 0;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    margin-left: -120px;
+}
+
+.chkstyle3 {
+    position: absolute;
+    top: 320px;
+    margin: 0;
+    left: 50%;
+    margin-left: 30px;
+}

@@ -1,0 +1,8 @@
+D:\Root\AppWeb\Act\Act\bin\Act.dll
+D:\Root\AppWeb\Act\Act\bin\Act.pdb
+D:\Root\AppWeb\Act\Act\bin\JustyLibrary.dll
+D:\Root\AppWeb\Act\Act\bin\ThoughtWorks.QRCode.dll
+D:\Root\AppWeb\Act\Act\bin\JustyLibrary.pdb
+D:\Root\AppWeb\Act\Act\obj\Release\Act.csprojResolveAssemblyReference.cache
+D:\Root\AppWeb\Act\Act\obj\Release\Act.dll
+D:\Root\AppWeb\Act\Act\obj\Release\Act.pdb

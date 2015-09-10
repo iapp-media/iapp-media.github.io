@@ -1,0 +1,1154 @@
+body {
+    /*?€? ä?ç¬¬ï?è¡?*/
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/bg.jpg);
+    background-size: contain;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+.hide {
+    display: none;
+}
+
+
+/*demonstrate*/
+
+#start p {
+    color: #ff9933;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    top: -15%;
+    left: 15%;
+}
+
+#start {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 180px;
+    height: 78px;
+    border: 5px #ff9933 solid;
+    border-radius: 0px;
+    z-index: 999;
+}
+
+#start:hover {
+    background: #ffbb66;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    z-index: 999;
+}
+
+.all {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.content {
+    width: 850px;
+    height: 520px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.delete {
+    position: absolute;
+    top: 2%;
+    left: 88%;
+    width: 8px;
+    height: 8px;
+    z-index: 3;
+}
+
+.midiframe {
+    padding: 0;
+    margin: 0;
+}
+
+.p-text {
+    position: absolute;
+    top: -35%;
+    left: 30%;
+    color: #FFFFFF;
+    font-size: 1px;
+}
+
+.picture {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 86px;
+    height: 126px;
+}
+
+.picture2 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 86px;
+    height: 126px;
+    z-index: 1;
+}
+
+.phone {
+    position: absolute;
+    top: 0;
+    padding: 0px;
+    left: 0;
+    width: 250px;
+    height: 505px;
+    background-image: url(../img/phone.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.phone .show {
+    position: absolute;
+    top: 9.5%;
+    padding: 0px;
+    margin: 0px;
+    left: 6%;
+    width: 218px;
+    height: 432px;
+}
+
+.smallbar {
+    position: absolute;
+    top: 2%;
+    left: 0%;
+    width: 218px;
+    height: 50px;
+    background-color: #333333;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.up-img1 {
+    position: absolute;
+    top: 50%;
+    left: -12.5%;
+    width: 40px;
+    height: 100px;
+}
+
+.up-img2 {
+    position: absolute;
+    top: 50%;
+    left: -12.5%;
+    width: 40px;
+    height: 100px;
+}
+
+.up .up-img1 {
+    display: inline;
+}
+
+.up:hover .up-img1 {
+    display: none;
+}
+
+.up .up-img2 {
+    display: none;
+}
+
+.up:hover .up-img2 {
+    display: inline;
+}
+
+.down1 {
+    position: absolute;
+    top: 68%;
+    left: -12.5%;
+    width: 40px;
+    height: 100px;
+}
+
+.down2 {
+    position: absolute;
+    top: 68%;
+    left: -12.5%;
+    width: 40px;
+    height: 100px;
+}
+
+.down .down1 {
+    display: inline;
+}
+
+.down:hover .down1 {
+    display: none;
+}
+
+.down .down2 {
+    display: none;
+}
+
+.down:hover .down2 {
+    display: inline;
+}
+
+.add1 {
+    position: absolute;
+    top: 19%;
+    left: 555px;
+    width: 40px;
+    height: 57px;
+    z-index: 1;
+}
+
+.add2 {
+    position: absolute;
+    top: 19%;
+    left: 555px;
+    width: 40px;
+    height: 57px;
+    z-index: 1;
+}
+
+.add .add1 {
+    display: inline;
+}
+
+.add:hover .add1 {
+    display: none;
+}
+
+.add .add2 {
+    display: none;
+}
+
+.add:hover .add2 {
+    display: inline;
+}
+
+.return .preview1 {
+    display: inline;
+}
+
+.return:hover .preview1 {
+    display: none;
+}
+
+.return .preview2 {
+    display: none;
+}
+
+.return:hover .preview2 {
+    display: inline;
+}
+
+.preview .preview1 {
+    display: inline;
+}
+
+.preview:hover .preview1 {
+    display: none;
+}
+
+.preview .preview2 {
+    display: none;
+}
+
+.preview:hover .preview2 {
+    display: inline;
+}
+
+.preview1 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    width: 89px;
+    height: 33px;
+}
+
+.preview2 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    width: 89px;
+    height: 33px;
+}
+
+.left .page1 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+.left .page2 {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+.select {
+    position: absolute;
+    left: 555px;
+    top: 7%;
+    width: 480px;
+    height: 550px;
+    background-image: url(../img/panel.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+.logo {
+    position: fixed;
+    top: 50%;
+    /* bottom: 0; */
+    left: 50%;
+    /* margin-left: 1px; */
+    margin-top: -110px;
+    /* right: 0; */
+    /* margin: auto; */
+    height: 220px;
+    z-index: 0;
+    /*outline: 1px solid #f00;*/
+}
+
+.logo2 {
+    position: fixed;
+    top: 300px;
+    left: 800px;
+    width: auto;
+    height: 120px;
+}
+
+.pic1 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic2 {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic3 {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic4 {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic5 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic6 {
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.pic7 {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    width: 86px;
+    height: 146px;
+    font-size: 12px;
+}
+
+.head {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    width: 65px;
+    height: 65px;
+    z-index: 3;
+}
+
+.list {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    width: 51px;
+    height: 59px;
+    z-index: 3;
+}
+
+.setting {
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    width: 51px;
+    height: 59px;
+    z-index: 3;
+}
+
+.edit {
+    width: 480px;
+    height: 550px;
+    position: absolute;
+    background-image: url(../img/panel-1.png);
+    background-size: cover;
+    left: 555px;
+    top: 9%;
+    z-index: 2;
+}
+
+.edit1 {
+    width: 480px;
+    height: 550px;
+    background-image: url(../img/panel-1.png);
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 2;
+}
+
+.edit2 {
+    width: 480px;
+    height: 550px;
+    background-image: url(../img/panel-2.png);
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 2;
+}
+
+.iframe {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    top: 11px;
+    left: 0px;
+    height: 100%;
+    width: 218px;
+}
+
+.iframe-ed1 {
+    width: 410px;
+    height: 450px;
+    position: absolute;
+    left: 12%;
+    top: 3%;
+    border: none;
+}
+
+.iframe-ed2 {
+    width: 410px;
+    height: 520px;
+    position: absolute;
+    left: 12%;
+    top: 3%;
+    border: none;
+}
+
+.button-pic {
+    height: 52px;
+    width: 29px;
+    position: absolute;
+    right: -6%;
+    top: 2.2%;
+}
+
+.button-wod {
+    height: 52px;
+    width: 29px;
+    position: absolute;
+    right: -6%;
+    top: 12%;
+}
+
+.finish {
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 35%;
+    top: 90%;
+}
+
+.left .page1 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+.left .page2 {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    width: 86px;
+    height: 126px;
+}
+
+#pageNav {
+    background-color: #ff9933;
+    background-image: url(../img/leftbg.jpg);
+    background-size: contain;
+    position: fixed;
+    float: left;
+    width: 150px;
+    margin-top: 70px;
+    height: calc(100% - 70px);
+    overflow: scroll;
+}
+
+#pageNav ul {
+    margin: 70px 0px 0px 30px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    width: 85px;
+    height: 125px;
+}
+
+#pageNav ul li {
+    display: inline-block;
+    width: 90%;
+    height: 125px;
+    /*border: solid 1px #999;*/
+    margin: 20px 0px 0px 0px;
+    background-color: #fff;
+    position: relative;
+}
+
+#pageNav ul li img.pic {
+    /*width: 95%;
+        margin: 5px 0 5px 0;*/
+    width: 85px;
+    height: 125px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+#pageNav ul li img.delete {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 99%;
+    top: 2%;
+    z-index: 1;
+}
+
+#pageNav ul li img.border {
+    position: absolute;
+    width: 85px;
+    height: 125px;
+    left: 0%;
+    top: 0%;
+    z-index: 0;
+}
+
+li.active {
+    border: 2px solid #0099ff;
+}
+
+#pageNav ul li div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#pageNav ul li .num {
+    display: inline-block;
+    width: 81px;
+    height: 13px;
+    padding: 2px;
+    background-color: #969696;
+    opacity: 0.7;
+    position: absolute;
+    top: 108px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    line-height: 17px;
+}
+
+.publish-btn1 {
+    position: absolute;
+    top: 21%;
+    left: 555px;
+    width: 40px;
+    height: 57px;
+    z-index: 1;
+}
+
+.publish-btn2 {
+    position: absolute;
+    top: 21%;
+    left: 555px;
+    width: 40px;
+    height: 57px;
+    z-index: 1;
+}
+
+.publish-btn .publish-btn1 {
+    display: inline;
+}
+
+.publish-btn:hover .publish-btn1 {
+    display: none;
+}
+
+.publish-btn .publish-btn2 {
+    display: none;
+}
+
+.publish-btn:hover .publish-btn2 {
+    display: inline;
+}
+
+.top {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 5%;
+    background: #ff9933;
+    border-top-right-radius: 20px 20px;
+}
+
+.bottom {
+    position: absolute;
+    top: 95%;
+    left: 0%;
+    width: 100%;
+    height: 5%;
+    background: #ff9933;
+    border-bottom-right-radius: 20px 20px;
+}
+
+.publish {
+    position: absolute;
+    left: 550px;
+    top: 14%;
+    width: 600px;
+    height: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-top-right-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+    z-index: 2;
+}
+
+.publish a {
+    color: #fff;
+}
+
+.publish .icon {
+    position: absolute;
+    top: 40px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
+    border: 2px #7d7d7d solid;
+    opacity: 0.5;
+}
+
+.publish .icon p {
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.publish table {
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    color: #7d7d7d;
+    padding: 10px;
+}
+
+.publish .name {
+    position: relative;
+    top: 0px;
+    left: 30px;
+    width: 300px;
+    border: 2px #969696 solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.publish .describe {
+    position: relative;
+    top: 28px;
+    left: 30px;
+    width: 300px;
+    height: 80px;
+    border: 2px #969696 solid;
+}
+
+.publish .send {
+    position: absolute;
+    top: 88%;
+    left: 40%;
+    width: 70px;
+    height: 30px;
+    background-color: #ff9933;
+    border-radius: 8px;
+}
+
+.publish .send:hover {
+    background: #ffbb66;
+}
+
+.publish .send p {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: -50%;
+    left: 20%;
+}
+
+.publish .cancel {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: auto;
+    height: 25px;
+}
+
+.final {
+    position: absolute;
+    left: 248px;
+    top: 30px;
+    width: 600px;
+    height: 450px;
+    z-index: 2;
+}
+
+.final .describe {
+    position: absolute;
+    top: 110px;
+    left: 200px;
+}
+
+.final .create {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -140px;
+    width: 134px;
+    height: 42px;
+    background: url('../img/button-sprite-1.png');
+    background-position: -133px 0;
+}
+
+.final .create:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -133px 0;
+}
+
+.final .create p {
+    color: #ff9933;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0;
+}
+
+.final .share {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: 40px;
+    width: 134px;
+    height: 43px;
+    background: url('../img/button-sprite-1.png');
+    background-position: -133px -45px;
+}
+
+.final .share:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -133px -45px;
+}
+
+.final .share p {
+    color: #ff9933;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0;
+}
+
+.final .src {
+    position: absolute;
+    top: 235px;
+    left: 55px;
+    width: 80%;
+    height: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    padding: 6px;
+}
+
+.final .cancel {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: auto;
+    height: 25px;
+}
+
+#lefthead {
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.selecticon {
+    width: 85px;
+    height: 125px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.select p {
+    text-align: center;
+}
+
+#iframe-set {
+    border: none;
+    overflow: hidden;
+    width: 95%;
+    height: 410px;
+    margin: 0 0 0 2%;
+}
+
+.sharemore {
+    margin-top: 60px;
+    width: 170px;
+    height: 35px;
+    border: solid 1px solid;
+}
+
+.sharemore ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.sharemore ul li {
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+#sharefb,
+#sharetwitter,
+#sharecancel,
+#shareline {
+    cursor: pointer;
+}
+
+
+/*右邊final*/
+
+.middle {
+    position: absolute;
+    background-color: #fff;
+    top: 5%;
+    left: 0%;
+    width: 600px;
+    height: 410px;
+    border-right: 1px solid #aaa;
+    padding: 15px 55px;
+    box-sizing: border-box;
+}
+
+.botal {
+    list-style: none;
+}
+
+.topImg img {}
+
+.topImg1 {
+    width: 55%;
+    margin-top: 50px;
+}
+
+.topImg2 {
+    width: 30%;
+    float: right;
+}
+
+.buttonbar {
+    width: 100%;
+    height: 8%;
+    background-color: #f0f0f0;
+}
+
+
+/* checkbox */
+
+.buttonList {
+    float: right;
+    margin-top: 15px;
+}
+
+.buttonList li {
+    float: left;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0 10px;
+    list-style: none;
+}
+
+.buttonList li p {
+    color: #969696;
+}
+
+.buttonList li:nth-child(2) {
+    width: 55px;
+}
+
+.buttonList li:nth-child(2) p {
+    margin-left: 5px;
+}
+
+.label--checkbox {
+    position: relative;
+    margin: .5em;
+    cursor: pointer;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+.label--checkbox p {
+    margin-left: .2em;
+}
+
+.good,
+.like,
+.startoggle {
+    position: relative;
+    top: -0.375rem;
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
+}
+
+.startoggle:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    background: url('../img/Collect-1.png');
+    background-size: 100%;
+    background-color: transparent;
+}
+
+.good:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    background: url('../img/good-1.png');
+    background-size: 100%;
+    background-color: transparent;
+}
+
+.like:before {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    background: url('../img/like-1.png');
+    background-size: 100%;
+    background-color: transparent;
+}
+
+.like:checked:before {
+    background: url('../img/like-2.png');
+    background-size: 100%;
+    border-top-style: none;
+    background-color: transparent;
+    border-right-style: none;
+}
+
+.good:checked:before {
+    background: url('../img/good-2.png');
+    background-size: 100%;
+    border-top-style: none;
+    background-color: transparent;
+    border-right-style: none;
+}
+
+.startoggle:checked:before {
+    background: url('../img/Collect-2.png');
+    background-size: 100%;
+    border-top-style: none;
+    background-color: transparent;
+    border-right-style: none;
+}
+
+.good:after,
+.startoggle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: transparent;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.like:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: transparent;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.openlogin {
+    display: block;
+}
+
+
+/* 上下按鈕 */
+
+.netpre {
+    width: 30px;
+    height: 148px;
+    position: absolute;
+    bottom: 85px;
+    left: -28px;
+}
+
+.netpre li:nth-child(1) {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 74px;
+    background: url('../Img/up.png');
+    background-size: 100%;
+}
+
+.netpre li:nth-child(1):hover {
+    background: url('../Img/up2.png');
+}
+
+.netpre li:nth-child(2) {
+    position: absolute;
+    top: 80px;
+    width: 30px;
+    height: 74px;
+    background: url('../Img/down.png');
+    background-size: 100%;
+}
+
+.netpre li:nth-child(2):hover {
+    background: url('../Img/down2.png');
+}

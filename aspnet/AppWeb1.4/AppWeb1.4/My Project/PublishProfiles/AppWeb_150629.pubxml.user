@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Root\AppWeb\發行區\AppWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Apps/01/1.html">
+      <publishTime>07/13/2015 17:31:46</publishTime>
+    </File>
+    <File Include="Apps/js/detectmobilebrowser.js">
+      <publishTime>07/13/2015 16:38:30</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p01-0b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p01-0s.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p02-0b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p02-0s.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p02-1b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p03-0b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p03-0s.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p03-1b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p03-2b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p03-3b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p04-0b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p04-0s.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p04-1b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p04-2b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p04-3b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p05-0b.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p05-0s.jpg">
+      <publishTime>06/29/2015 14:56:17</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p05-1b.jpg">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p06-0b.jpg">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p06-0s.jpg">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="Apps/User_Pic/basic/p06-1b.jpg">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="bin/AppWeb1.4.dll">
+      <publishTime>07/17/2015 17:21:48</publishTime>
+    </File>
+    <File Include="bin/AppWeb1.4.xml">
+      <publishTime>07/17/2015 17:21:48</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>06/29/2015 14:42:46</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll.refresh">
+      <publishTime>06/29/2015 14:42:46</publishTime>
+    </File>
+    <File Include="bin/JustyLibrary.dll">
+      <publishTime>06/17/2015 14:32:50</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>06/17/2015 14:29:27</publishTime>
+    </File>
+    <File Include="css/accomplish.css">
+      <publishTime>07/09/2015 10:59:18</publishTime>
+    </File>
+    <File Include="css/action.css">
+      <publishTime>06/22/2015 15:09:30</publishTime>
+    </File>
+    <File Include="css/animate.css">
+      <publishTime>06/22/2015 15:09:30</publishTime>
+    </File>
+    <File Include="css/animated.css">
+      <publishTime>07/08/2015 15:48:33</publishTime>
+    </File>
+    <File Include="css/colorbox.css">
+      <publishTime>07/08/2015 17:07:05</publishTime>
+    </File>
+    <File Include="css/Default.css">
+      <publishTime>07/14/2015 09:30:57</publishTime>
+    </File>
+    <File Include="css/index-index.css">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="css/index.css">
+      <publishTime>07/08/2015 15:48:33</publishTime>
+    </File>
+    <File Include="css/list.css">
+      <publishTime>07/09/2015 17:32:28</publishTime>
+    </File>
+    <File Include="css/login.css">
+      <publishTime>07/08/2015 16:53:26</publishTime>
+    </File>
+    <File Include="css/my.css">
+      <publishTime>06/22/2015 15:09:30</publishTime>
+    </File>
+    <File Include="css/profile.css">
+      <publishTime>07/14/2015 10:52:37</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>06/22/2015 15:09:30</publishTime>
+    </File>
+    <File Include="css/set.css">
+      <publishTime>07/14/2015 08:45:24</publishTime>
+    </File>
+    <File Include="css/set2.css">
+      <publishTime>07/14/2015 16:55:39</publishTime>
+    </File>
+    <File Include="css/signup.css">
+      <publishTime>07/16/2015 09:55:31</publishTime>
+    </File>
+    <File Include="css/slide.css">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="css/uploadfile.min.css">
+      <publishTime>06/17/2015 14:29:27</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>07/17/2015 16:59:29</publishTime>
+    </File>
+    <File Include="FacebookChk.aspx">
+      <publishTime>06/29/2015 14:42:46</publishTime>
+    </File>
+    <File Include="img/-bg2.jpg">
+      <publishTime>06/05/2015 15:03:59</publishTime>
+    </File>
+    <File Include="img/114.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/add.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/add02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/basic/p01-0b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p01-0s.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p02-0b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p02-0s.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p02-1b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p03-0b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p03-0s.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p03-1b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p03-2b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p03-3b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p04-0b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p04-0s.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p04-1b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p04-2b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p04-3b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p05-0b.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/basic/p05-0s.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/basic/p05-1b.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/basic/p06-0b.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/basic/p06-0s.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/basic/p06-1b.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/bg-log.png">
+      <publishTime>06/05/2015 15:03:59</publishTime>
+    </File>
+    <File Include="img/bg-signup.png">
+      <publishTime>06/05/2015 15:03:59</publishTime>
+    </File>
+    <File Include="img/bg.jpg">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/bg1-1.jpg">
+      <publishTime>07/17/2015 13:44:15</publishTime>
+    </File>
+    <File Include="img/bg1-2.jpg">
+      <publishTime>06/05/2015 15:03:59</publishTime>
+    </File>
+    <File Include="img/bg1-3.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/bg1.jpg">
+      <publishTime>06/05/2015 15:03:59</publishTime>
+    </File>
+    <File Include="img/bgimg.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/bgphone-1.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/bgphone-2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/bgphone-3.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/bgphone-4.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/border-small1.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/border-small2.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/border.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/button-2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/button-pic.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/button-word.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/button.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/button1.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/cancel.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/controls.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/copy-01.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/copy-02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/copylink.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/create.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/D+.jpg">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/delete-01.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/delete-02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/delete.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/digital-qr.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/digital.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/dlogo.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/dot1.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/dot2.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/down.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/down2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/edit-01.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/edit-02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/facebook.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/fbicon.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/finish.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/head.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/headimg.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/html5-qr.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/html5.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/html5.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/iapplogo.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/iapplogo.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/icon_up.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/item-icon.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/lastpg-word.png">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/loading_background.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/login-1.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/login.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/login2.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/logo-digital.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/logo.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/logo2-2.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/logo2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/logo3.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/m1.jpg">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/m2.jpg">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/memory-qr.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/memory.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/memory.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/mommy-qr.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/mommy.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/mommy.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/p1.jpg">
+      <publishTime>06/22/2015 15:09:32</publishTime>
+    </File>
+    <File Include="img/p2.jpg">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/p3-1.jpg">
+      <publishTime>06/22/2015 15:09:31</publishTime>
+    </File>
+    <File Include="img/p3-2.jpg">
+      <publishTime>06/22/2015 15:09:32</publishTime>
+    </File>
+    <File Include="img/p3-3.jpg">
+      <publishTime>06/22/2015 15:09:32</publishTime>
+    </File>
+    <File Include="img/p4-1.jpg">
+      <publishTime>06/22/2015 15:09:33</publishTime>
+    </File>
+    <File Include="img/p4-2.jpg">
+      <publishTime>06/22/2015 15:09:32</publishTime>
+    </File>
+    <File Include="img/p4-3.jpg">
+      <publishTime>06/22/2015 15:09:32</publishTime>
+    </File>
+    <File Include="img/p5.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/p6.jpg">
+      <publishTime>06/22/2015 15:09:33</publishTime>
+    </File>
+    <File Include="img/panel-1.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/panel-2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/panel.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/phone.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/phone1.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/phone2.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/pic-22.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/picture1.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/picture2.jpg">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/picture3-1.png">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="img/picture3-2.png">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/picture3-3.png">
+      <publishTime>06/22/2015 15:09:33</publishTime>
+    </File>
+    <File Include="img/picture3.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/picture4.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/picture5.jpg">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/picture6.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/preview.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/preview2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/qr.jpg">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/qrcode.jpg">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/register-1.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/register.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/register2.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/return-01.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/return-02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/sdw.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/select1.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/setting.png">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/share-01.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/share-02.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/share.png">
+      <publishTime>06/22/2015 15:09:34</publishTime>
+    </File>
+    <File Include="img/show.png">
+      <publishTime>06/05/2015 15:04:00</publishTime>
+    </File>
+    <File Include="img/social1.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social10.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social11.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social12.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social13.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social14.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social3.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social4.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social5.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social6.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social7.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social8.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/social9.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/socialbg1.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/socialbg2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/up.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/up2.png">
+      <publishTime>07/08/2015 15:48:02</publishTime>
+    </File>
+    <File Include="img/upload.jpg">
+      <publishTime>06/29/2015 14:56:18</publishTime>
+    </File>
+    <File Include="img/uploadicon.png">
+      <publishTime>07/13/2015 17:33:09</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>07/08/2015 16:50:19</publishTime>
+    </File>
+    <File Include="js/detectmobilebrowser.js">
+      <publishTime>07/09/2015 18:14:56</publishTime>
+    </File>
+    <File Include="js/index.js">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="js/JIC.js">
+      <publishTime>07/16/2015 09:55:31</publishTime>
+    </File>
+    <File Include="js/jquery-1.8.0.min.js">
+      <publishTime>07/08/2015 15:47:59</publishTime>
+    </File>
+    <File Include="js/jquery-2.1.4.min.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/jquery.colorbox-min.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/jquery.colorbox.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/jquery.slideshow.min.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/jquery.uploadfile.min.js">
+      <publishTime>06/17/2015 14:29:27</publishTime>
+    </File>
+    <File Include="js/jquery.url.min.js">
+      <publishTime>06/17/2015 14:29:27</publishTime>
+    </File>
+    <File Include="js/skrollr.min.js">
+      <publishTime>07/08/2015 15:48:00</publishTime>
+    </File>
+    <File Include="js/touch.js">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="js/zepto.min.js">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="list.aspx">
+      <publishTime>07/14/2015 10:21:12</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>07/16/2015 09:55:57</publishTime>
+    </File>
+    <File Include="Logout.aspx">
+      <publishTime>05/31/2015 19:07:24</publishTime>
+    </File>
+    <File Include="makeHtml.aspx">
+      <publishTime>06/17/2015 14:29:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/29/2015 14:42:46</publishTime>
+    </File>
+    <File Include="Pages/1.html">
+      <publishTime>07/13/2015 17:43:37</publishTime>
+    </File>
+    <File Include="Pages/cover.htm">
+      <publishTime>07/08/2015 16:17:33</publishTime>
+    </File>
+    <File Include="Pages/p01.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p01_Edit.aspx">
+      <publishTime>07/09/2015 18:09:36</publishTime>
+    </File>
+    <File Include="Pages/p02.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p02_Edit.aspx">
+      <publishTime>07/05/2015 09:35:30</publishTime>
+    </File>
+    <File Include="Pages/p03.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p03_Edit.aspx">
+      <publishTime>07/05/2015 09:35:30</publishTime>
+    </File>
+    <File Include="Pages/p04.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p04_Edit.aspx">
+      <publishTime>07/05/2015 09:35:30</publishTime>
+    </File>
+    <File Include="Pages/p05.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p05_Edit.aspx">
+      <publishTime>07/05/2015 09:35:38</publishTime>
+    </File>
+    <File Include="Pages/p06.aspx">
+      <publishTime>07/03/2015 16:22:38</publishTime>
+    </File>
+    <File Include="Pages/p06_Edit.aspx">
+      <publishTime>07/05/2015 09:35:41</publishTime>
+    </File>
+    <File Include="Pages/see.aspx">
+      <publishTime>05/31/2015 19:07:24</publishTime>
+    </File>
+    <File Include="Pages/seeEdit.aspx">
+      <publishTime>06/22/2015 15:09:35</publishTime>
+    </File>
+    <File Include="Prev.aspx">
+      <publishTime>07/09/2015 10:20:53</publishTime>
+    </File>
+    <File Include="Preview.aspx">
+      <publishTime>07/15/2015 15:01:36</publishTime>
+    </File>
+    <File Include="profile.aspx">
+      <publishTime>07/16/2015 09:55:31</publishTime>
+    </File>
+    <File Include="QRcode.ashx">
+      <publishTime>07/07/2015 10:29:49</publishTime>
+    </File>
+    <File Include="QRweb/QRcode.ashx">
+      <publishTime>06/22/2015 14:27:36</publishTime>
+    </File>
+    <File Include="redirect.htm">
+      <publishTime>06/30/2015 17:47:26</publishTime>
+    </File>
+    <File Include="Register.aspx">
+      <publishTime>07/17/2015 13:44:15</publishTime>
+    </File>
+    <File Include="setting.aspx">
+      <publishTime>06/22/2015 14:27:36</publishTime>
+    </File>
+    <File Include="Setting1.aspx">
+      <publishTime>07/14/2015 17:17:26</publishTime>
+    </File>
+    <File Include="Setting2.aspx">
+      <publishTime>07/17/2015 17:23:03</publishTime>
+    </File>
+    <File Include="UserIcon.ashx">
+      <publishTime>07/15/2015 16:07:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/17/2015 16:59:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

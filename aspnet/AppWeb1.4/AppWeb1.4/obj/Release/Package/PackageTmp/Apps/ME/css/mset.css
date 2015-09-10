@@ -1,0 +1,144 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #969696;
+    margin: 0;
+    text-align: center;
+    /*font-size: 24px;*/
+}
+
+.container {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    /*font-size: 1.5em;*/
+    
+}
+
+label {
+    line-height: 32px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+textarea,
+input {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    line-height: 36px;
+    border-radius: 8px;
+    border-width: 2px;
+    box-sizing: border-box;
+    border: rgb(238, 238, 238) solid;
+    resize: none;
+}
+
+.icon .iconimg-1 {
+    border: 2px #969696 solid;
+    border-radius: 8px;
+}
+
+.icon:active .iconimg-1 {
+    opacity: 0.5;
+}
+
+button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px #ff9933 solid;
+    border-radius: 8px;
+    color: #ff9933;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+button:active{
+    background-color: #ff9933;
+    color: #FFFFFF;
+}
+/*button:focus{
+    background-color: #ff9933;
+    color: #FFFFFF;
+}*/
+
+.top {
+    height: 40px;
+    background-color: #ff9933;
+}
+
+.toplogo{
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.upload-img {
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.img-container {
+    margin-top: 8px;
+    height: 280px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    text-align: center;
+}
+.word{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.preview-container{
+    margin-top: 8px;
+    height: 280px;
+}
+#preview{
+    max-width: 100%;
+    max-height: 100%;
+}
+.select {
+    width: calc(50% - 8px);
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    color: #ff9933;
+    border: 2px solid #ff9933;
+    border-radius: 8px;
+    background-color: transparent;
+    text-align: center;
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.select:hover {
+    background: #ffbb66;
+}
+.rotate {
+    display: inline-block;
+    width: calc(50% - 5px);
+    
+}
+
+.rotate-btn {
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+.cancel{
+    height: 28px;
+    margin-top: 6px;
+    margin-right: 6px;
+}

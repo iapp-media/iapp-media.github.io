@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager.master.cs" Inherits="Manager" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/metisMenu.min.css" rel="stylesheet" />
+    <link href="css/Ys-template.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%--                <div>
+                    <h3>I-App 管理系統</h3>
+                </div>
+                <div class="menu">
+                     <asp:Button ID="Button9" runat="server" style="height: 27px" OnClick="Button9_Click" Text="主題管理" />
+                     <asp:Button ID="Button8" runat="server" style="height: 27px" Text="Page管理" OnClick="Button8_Click" />
+                    <asp:Button ID="Button5" runat="server" style="height: 27px" Text="使用者管理" OnClick="Button5_Click" />
+                    <asp:Button ID="Button6" runat="server" style="height: 27px" Text="iApp管理" OnClick="Button6_Click" />     
+                </div>--%>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascrip:void(0)">YS Admin v1.0</a>
+                </div>
+                <!-- /.navbar-header -->
+
+                <ul class="nav navbar-top-links navbar-right">  
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i>New Comment
+                       
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                       
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i>Message Sent
+                       
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i>New Task
+                       
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                       
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-alerts -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="Login.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="ThemeManager.aspx"><i class="fa fa-dashboard fa-fw"></i>主題管理</a>
+                            </li> 
+                                                       <li>
+                                <a href="User_App.aspx"><i class="fa fa-bar-chart-o fa-fw"></i>iApp管理</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-table fa-fw"></i>Page管理</a><%--PageManager.aspx--%>
+                            </li>
+                                                        <li>
+                                <a href="User_List.aspx"><i class="fa fa-edit fa-fw"></i>使用者管理</a>
+                            </li>
+                           <%-- <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>none<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="javascrip:void(0)">none</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascrip:void(0)">none</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                       <li>
+                                        <a href="javascrip:void(0)">none</a>
+                                    </li>
+ 
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                       <li>
+                                        <a href="javascrip:void(0)">none</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">none<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                               <li>
+                                        <a href="javascrip:void(0)">none</a>
+                                    </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>--%>
+                        
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <!-- /.row -->
+                <asp:ContentPlaceHolder ID="Main_content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script type="text/jscript" src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script type="text/jscript" src="js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script type="text/jscript" src="js/metisMenu.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script type="text/jscript" src="js/Ys-template.js"></script>
+    </form>
+</body>
+</html>

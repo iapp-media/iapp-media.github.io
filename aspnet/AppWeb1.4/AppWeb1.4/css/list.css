@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: #7d7d7d;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 12%;
+}
+
+.title p {
+    font-size: 24px;
+    font-weight: normal;
+    color: #ff9933;
+    text-align: center
+}
+
+.bar1 {
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: #ff9933;
+}
+
+.add {
+    position: absolute;
+    top: 7%;
+    left: 83%;
+    width: 80px;
+    height: 25px;
+    z-index: 3;
+    background: url('../img/button-sprite-1.png');
+    background-position: 0 25px;
+}
+
+.add:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: 0 25px;
+}
+
+.add p {
+    color: #ff9933;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    line-height: 27px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+}
+
+#box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 70%;
+    width: 80%;
+}
+
+#box ul li {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+#box .app-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+}
+
+.bar2 {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    height: 1px;
+    background-color: #7C7C7C;
+    opacity: 0.5;
+}
+
+.edit {
+    position: absolute;
+    bottom: 5px;
+    left: 53%;
+    width: 61px;
+    height: 30px;
+    z-index: 3;
+    background: url('../img/button-sprite-1.png');
+    background-position: 0 -58px;
+}
+
+.edit:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: 0 -58px;
+}
+
+.delete {
+    position: absolute;
+    bottom: 5px;
+    left: 65%;
+    width: 61px;
+    height: 30px;
+    z-index: 3;
+    background: url('../img/button-sprite-1.png');
+    background-position: -67px -58px;
+}
+
+.delete:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -67px -58px;
+}
+
+.set {
+    position: absolute;
+    bottom: 5px;
+    left: 77%;
+    width: 61px;
+    height: 30px;
+    background: url('../img/button-sprite-1.png');
+    z-index: 3;
+    background-position: 0 -90px;
+}
+
+.set:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: 0 -90px;
+}
+
+.share {
+    position: absolute;
+    bottom: 5px;
+    left: 89%;
+    width: 61px;
+    height: 30px;
+    z-index: 3;
+    background: url('../img/button-sprite-1.png');
+    background-position: -67px -90px;
+}
+
+.share:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -67px -90px;
+}
