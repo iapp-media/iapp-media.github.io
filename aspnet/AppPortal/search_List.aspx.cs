@@ -40,13 +40,13 @@ namespace AppPortal
             ss.Append("<ul class=\"dropdown-menu dropdown-menu-right finder\" role=\"menu\" >" + "\n\r");
             for (int i = 0; i < dr.Rows.Count; i++)
             {
-                string src = comm.URL + dr.Rows[i]["FoderName"] + "/Apps/" + dr.Rows[i]["App_Folder"] + "/" + dr.Rows[i]["App_Icon"];
-                if (dr.Rows[i]["App_Icon"].ToString() == "")
+                string src = "img/iapplogo.png";
+                if (dr.Rows[i]["App_Icon"].ToString() != "")
                 {
-                    src = comm.URL + dr.Rows[i]["FoderName"] + "/Apps/" + dr.Rows[i]["App_Folder"] + "/" + dr.Rows[i]["App_Icon"];
+                    src = comm.URL.Replace("portal/","") + dr.Rows[i]["FoderName"] + "/Apps/" + dr.Rows[i]["App_Folder"] + "/pic/" + dr.Rows[i]["App_Icon"];
                 }
                 ss.Append("<li><a href=\"portal.aspx?w=" + dr.Rows[i]["App_Name"].ToString() + "\">" +
-                          "<img class=\"finder-app\" src=\"img/iapplogo.png\">" + dr.Rows[i]["App_Name"] + "</a></li>" + "\n\r");
+                          "<img class=\"finder-app\" src=\"" + src + "\">" + dr.Rows[i]["App_Name"] + "</a></li>" + "\n\r");
             }
             ss.Append("</ul>" + "\n");
 
