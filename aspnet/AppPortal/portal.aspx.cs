@@ -101,7 +101,7 @@ namespace AppPortal
             }
             else
             {
-                MLogin.Text = "<button type=\"button\" onclick=\"window.open('portal.aspx?fn=my','_self');\" id=\"user-login\" class=\"btn btn-default search2\" data-toggle=\"dropdown\" aria-expanded=\"false\">" +
+                MLogin.Text = "<button type=\"button\" onclick=\"toggleMy();\" id=\"user-login\" class=\"btn btn-default search2\" data-toggle=\"dropdown\" aria-expanded=\"false\">" +
                               "<img class=\"circle-login\" src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" ></button>";
                 //MLogin.Text=" <div class=\"col-sm-2 col-md-1 loginHead\">" + 
                 //             "<img src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" alt=\"\"></div>";
@@ -298,6 +298,8 @@ namespace AppPortal
                         ss.Append(" </div>" + "\n");
                         ss.Append("</div>" + "\n");
                     }
+
+            
                 }
             }
             else

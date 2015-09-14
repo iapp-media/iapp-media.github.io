@@ -2,9 +2,12 @@
 $(document).ready(function () {
 
     //Examples of how to assign the Colorbox event to elements
+
+    var boxwidth = "80%";
+    if ($(window).width() <= 1000) { boxwidth = "95%"; }
     $(".apps-info").colorbox({
         iframe: true,
-        width: "80%",
+        width: boxwidth,
         height: "100%"
     });
     $(".iframe-info").colorbox({
@@ -48,7 +51,8 @@ $(document).ready(function () {
         //$('.icon-box').addClass('openlogin');
     });
     $(".icon-box").click(function () {
-        window.open('portal.aspx?fn=my', '_self');
+        toggleMy();
+        //window.open('portal.aspx?fn=my', '_self');
         //$('.jumbotron').show();
     });
     //$("#logout").click(function () {
@@ -98,6 +102,11 @@ $(document).ready(function () {
                     opacity: 1
                 });
                 $container.masonry('appended', $newElems, true);
+                $(".apps-info").colorbox({
+                    iframe: true,
+                    width: "80%",
+                    height: "100%"
+                });
             });
         }
     );
@@ -166,8 +175,6 @@ function ref() {
     location.reload();
 }
 
-
-
 function goodit(obj) {
     if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); return; }
     var fn = "";
@@ -223,4 +230,33 @@ function starit(obj) {
             alert("error!!");
         }
     });
+}
+
+function toggleMy() {
+    if (getValue("fn") == "my") { window.open("portal.aspx", "_self"); } else { window.open("portal.aspx?fn=my", "_self"); }
+}
+
+function getValue(varname) {
+    var url = window.location.href;
+    try {
+        var qparts = url.split('?');
+        if (qparts.length === 0) {
+            return '';
+        }
+        var query = qparts[1];
+        var vars = query.split('&');
+        var value = '';
+        for (var i = 0; i < vars.length; i++) {
+            var parts = vars[i].split('=');
+            if (parts[0] == varname) {
+                value = parts[1];
+                break;
+            }
+        }
+        value = unescape(value);
+        value.replace(/\+/g, ' ');
+        return value;
+    } catch (err) {
+        return '';
+    }
 }
