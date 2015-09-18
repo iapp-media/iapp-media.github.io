@@ -73,7 +73,8 @@
                 </div>
                 <!-- mobile 搜尋bar -->
                 <div class="search-bar">
-                    <input type="text" class="search bar-text" placeholder="Search iApp..." id="mSearch">
+                    <asp:TextBox ID="mSearch" CssClass="search bar-text" runat="server"></asp:TextBox>
+                     <!--<input type="text" class="search bar-text" placeholder="Search iApp..." id="mSearch"> -->
                     <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                 </div>
                 
@@ -83,26 +84,14 @@
                             <asp:Literal ID="MLogin" runat="server"></asp:Literal>
                         </div>
                     </div>
-                </div>
-                <!-- mobile會員選單 -->
-              <%--  <div>
-                    <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
-
-                        <li><asp:LinkButton ID="LBmym" runat="server" OnClick="LBmym_Click">我的iApp</asp:LinkButton></li>
-                        <li class="divider"></li>
-                        <li><asp:LinkButton ID="LBfvm" runat="server" OnClick="LBfvm_Click">收藏的iApp</asp:LinkButton></li>
-                        <li class="divider"></li>
-                        <li class="m-logout"><p><asp:LinkButton ID="LBLogout2" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></p></li>
-                    </ul>
-                </div>--%>
-
-  
+                </div> 
                 <!-- Web 搜尋bar -->
                 <div class="col-xs-1 col-sm-5 col-md-8">
                     <div class="input-group search">
                         <!-- 搜尋框 -->
                         <%-- <input type="text" class="form-control " placeholder="Search iApp...">--%>
-                        <input type="text" id="Search" class="form-control bar-text" placeholder="Search iApp..."> 
+                        <asp:TextBox ID="Search" CssClass="form-control bar-text" runat="server"></asp:TextBox>
+                        <%--<input type="text" id="Search" class="form-control bar-text" placeholder="Search iApp...">--%>
                         <!-- 下拉按鈕 -->
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">

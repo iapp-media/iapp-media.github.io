@@ -46,13 +46,19 @@ namespace AppPortal
         {
             JSS.Text = "";
             string loginUrl = "../Login/Login.aspx?done=" + HttpUtility.UrlEncode(Request.RawUrl) + "&open=_top";
-
+            string searchMessage = "Search iApps ....";
             string Tm = "basic";
             if (Comm.IsNumeric(Request.QueryString["t"]))
             {
                 Tm = Main.Scalar("Select foderName from Theme where IDNo=" + Request.QueryString["t"]);
                 DefaultAppId = Main.Scalar("select DefaultAppId from Theme where IDNo=" + Request.QueryString["t"]);
+                if (Comm.Cint2(Request.QueryString["t"]) != 2)
+                {
+                    searchMessage = Main.Scalar("Select Theme_Name from Theme where IDNo=" + Request.QueryString["t"]);
+                }
             }
+            mSearch.Attributes.Add("placeholder", searchMessage);
+            Search.Attributes.Add("placeholder", searchMessage);
 
             if (Comm.Cint2(Request.QueryString["p"]) < 1)
             {
@@ -164,7 +170,7 @@ namespace AppPortal
             //sql = "Select a.*,c.FoderName, b.User_Name from User_App a inner join Users b on a.User_ID=b.IDNo " +
             //      "   inner join Theme c on a.Theme_ID=c.IDNo where IsPosted=1 ";
 
-            string SortCols = "HotValue";
+            string SortCols = "IsTop desc, HotValue";
             if (Request.QueryString["so"] == "new") { SortCols = "Last_Update"; }
 
             sql = "";
