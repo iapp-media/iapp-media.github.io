@@ -1,0 +1,1137 @@
+#loading {
+    z-index: 100000;
+    margin-left: -80px;
+    padding: 5px 0 5px 9px;
+    background: #ff9933;
+    left: 50%;
+    top: 35%;
+    margin-left: -30px;
+    width: 80px;
+    color: #fff;
+    position: fixed;
+}
+
+
+/* 光箱外觀 */
+
+.page1colorbox {
+    height: 99%;
+}
+
+#cboxContent {
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid #d93d02;
+    border-radius: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.boxtop {
+    width: 100%;
+    height: 53px;
+    background-color: #d93d02;
+    text-align: center;
+    line-height: 53px;
+    font-size: 29px;
+    color: #fff;
+}
+
+.boxinside {
+    font-size: 20px;
+    width: 94%;
+    height: 100%;
+    position: absolute;
+    top: 129px;
+    left: 0;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+}
+
+.boxinside label {
+    width: 15%;
+    display: block;
+    float: left;
+    margin-bottom: 16px;
+    color: #d94c2f;
+}
+
+.boxinside div:nth-child(1) div {
+    width: 85%;
+    height: 30px;
+    float: left;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.boxinside div:nth-child(1) div input[type="text"] {
+    width: 48%;
+    float: left;
+}
+
+.page2colorbox .boxinside div:nth-child(1) div input[type="text"],
+.page3colorbox .boxinside div:nth-child(1) div input[type="text"] {
+    width: 98%;
+}
+
+.boxinside div {
+    padding-top: 17px;
+    height: 40px;
+}
+
+.boxinside input {
+    width: 83%;
+    background-color: #f5f5f7;
+    border: none;
+    float: right;
+    margin-bottom: 15px;
+    border: 1px solid #d9dada;
+    height: 29px;
+    border-radius: 4px;
+}
+
+.boxinside .adress input {
+    padding-bottom: 24px;
+}
+
+.caresend {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #d51e00;
+    height: 38px;
+    border-radius: 7px;
+    font-size: 21px;
+    margin: 4px auto;
+    color: #d51e00;
+}
+
+.page3colorbox .caresend {
+    margin: 82px auto;
+}
+
+.boxinside input[type="month"] {
+    width: 83%;
+}
+
+.page3colorbox textarea {
+    width: 100%;
+    background-color: #f5f5f7;
+    border: 1px solid #d9dada;
+    border-radius: 4px;
+}
+
+
+/* 光箱 end */
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../img/wedding-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.Page2index {
+    transform-style: preserve-3d;
+}
+
+.page .wrap {
+    width: 100%;
+    height: 353px;
+}
+
+.page-current {
+    z-index: 1;
+}
+
+.up {
+    height: auto;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin-left: -12px;
+    z-index: 3;
+}
+
+.uptext span {
+    color: #fff;
+    height: auto;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    margin-left: -70px;
+    z-index: 3;
+    font-size: 18px;
+}
+
+.dot {
+    height: auto;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    margin-left: -10px;
+}
+
+.share-button {
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    margin-left: -150px;
+    z-index: 100;
+}
+
+.logo {
+    width: 100%;
+}
+
+.border {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1%;
+}
+
+.bg {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg1 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 98%;
+    height: 32%;
+}
+
+.bg2 {
+    position: absolute;
+    left: 0%;
+    top: 33%;
+    width: 98%;
+    height: 33%;
+}
+
+.bg3 {
+    position: absolute;
+    left: 08;
+    top: 67%;
+    width: 98%;
+    height: 32%;
+}
+
+.bg4 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 98%;
+    height: 50%;
+}
+
+.bg5 {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 49%;
+    height: 49%;
+}
+
+.bg6 {
+    position: absolute;
+    left: 49%;
+    top: 50%;
+    width: 49%;
+    height: 49%;
+}
+
+.bar1 {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 85%;
+    background-color: #ffffff;
+}
+
+.bar2 {
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 63%;
+    background-color: #ffffff;
+}
+
+.textbox {
+    height: 50px;
+    width: 42%;
+    position: absolute;
+    right: 0%;
+    top: 75%;
+    background-color: #000000;
+    z-index: 3;
+}
+
+.shadow {
+    height: 50px;
+    width: 42%;
+    position: absolute;
+    right: 2%;
+    top: 75%;
+    background-color: #888888;
+    opacity: 0.5;
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+.text1 {
+    color: #000000;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.text1-1 {
+    color: #000000;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.text2 {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    line-height: 90px;
+}
+
+.text3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.logo2 {
+    height: auto;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    margin-left: -100px;
+}
+
+.qr {
+    height: auto;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    top: 194px;
+    margin-left: -60px;
+}
+
+.create {
+    height: auto;
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin-left: -100px;
+    z-index: 3;
+}
+
+.share {
+    height: auto;
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin-left: 20px;
+    z-index: 3;
+}
+
+.lastpg {
+    height: auto;
+    width: 240px;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    margin-left: -120px;
+}
+
+
+/*三明治外觀 */
+
+.allMove {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -80%;
+    z-index: 99;
+    transition: .35s;
+}
+
+.allMove.move {
+    left: 0;
+}
+
+.sandwich {
+    width: 30%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 999;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: url('../img/listbutton.png');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 84% 50%;
+    opacity: 0.8;
+}
+
+.Imgover {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pageBg {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.sandwich img {
+    width: 60px;
+    height: 60px;
+}
+
+.page5Bg {
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bgMove {
+    width: 90%;
+    height: auto;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 70%;
+    height: 4px;
+    z-index: 1;
+}
+
+.line:after {
+    content: "";
+    box-shadow: 0 -15px 0 0 #AEAEAE;
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.line:before {
+    content: "";
+    box-shadow: 0 11px 0 0 #AEAEAE;
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+
+/* 三明治 end 
+
+
+/*選單跑出*/
+
+.menu {
+    width: 80%;
+    height: 100%;
+    background-color: #fd3954;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.liColor {
+    color: #FEFEFE;
+    width: 100%;
+    display: block;
+}
+
+.menu li {
+    border-bottom: 2px groove #ca1d2e;
+    box-shadow: inset 1px 1px 1px #fa748c;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 21px;
+    line-height: 20px;
+}
+
+.menu li:nth-child(2) a,
+.menu li:nth-child(3) a {
+    color: #fff;
+}
+
+.menu li .QRcode {
+    width: 116px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -120px;
+    margin-top: -40px;
+    border: 3px solid #fff;
+}
+
+.menu li .line {
+    width: 107px;
+    height: auto;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin-left: 20px;
+    margin-top: -40px;
+}
+
+.menu li:first-child p {
+    line-height: 30px;
+}
+
+.menu li:last-child {
+    height: 27%;
+    position: relative;
+    border-bottom: 0;
+}
+
+.wordlogo {
+    height: auto;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+    z-index: 2;
+}
+
+.wordlogo img {
+    width: 100%;
+}
+
+.logocenter {
+    height: auto;
+    width: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -100px;
+    z-index: 2;
+    transition: 1s;
+}
+
+.logocenter img {
+    width: 100%;
+}
+
+.botmove {
+    height: auto;
+    width: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: 210px;
+    z-index: 2;
+}
+
+.botmove img {
+    width: 100%;
+}
+
+.PageinsiIMG {
+    overflow: hidden;
+}
+
+.PageinsiIMG li {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    height: auto;
+    width: 380px;
+    top: 50%;
+    left: 50%;
+    margin-left: -190px;
+    margin-top: -300px;
+}
+
+.PageinsiIMG img {
+    width: 100%;
+}
+
+.Page3insiIMG img {
+    width: 100%;
+}
+
+.Page4insiIMG li {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    height: auto;
+    width: 380px;
+    top: 50%;
+    left: 50%;
+    margin-left: -190px;
+    margin-top: -300px;
+}
+
+.Page4insiIMG img {
+    width: 100%;
+}
+
+.Page5insiIMG img {
+    width: 100%;
+}
+
+
+/* 選單 end */
+
+
+/* page1 */
+
+.time {
+    color: #ffe5bd;
+    width: 44%;
+    margin: 0 auto;
+    height: 41px;
+    font-size: 130%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.time p {
+    float: left;
+    margin-top: 16%;
+    margin-left: -7%;
+    margin-right: -7%;
+}
+
+.time p:nth-child(3) {
+    float: right;
+}
+
+.time p:nth-child(1) {
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+}
+
+.page1Title {
+    font-size: 248%;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    display: table;
+    line-height: 52px;
+}
+
+.page1Title div {
+    float: left;
+}
+
+.page1Title div:nth-child(2) {
+    width: 83px;
+    height: 79px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    background: url('../img/p1-heart1.png');
+    -webkit-animation: b 1.5s infinite;
+}
+
+.page1Title div:nth-child(3) {
+    float: right;
+}
+
+.Protagonist {
+    margin-top: 5%;
+}
+
+.Protagonist img {
+    width: 100%;
+}
+
+.inside {
+    color: #fce0b9;
+    width: 90%;
+    font-size: 18px;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.inside label {
+    float: left;
+}
+
+.inside input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fce0b9;
+}
+
+.carewed {
+    background-color: #fff;
+    width: 100%;
+    border: 2px solid #ec2f44;
+    outline: none;
+    border-radius: 7px;
+    height: 43px;
+    color: #fd3b56;
+    font-size: 28px;
+    letter-spacing: 6.2px;
+}
+
+.location {
+    position: absolute;
+    width: 11%;
+    top: 0;
+    right: 0;
+}
+
+.callphone {
+    position: absolute;
+    width: 11%;
+    right: 0;
+    top: 33%;
+}
+
+.menu li a {
+    color: #fff;
+}
+
+
+/* Page1 end */
+
+
+/* Page2 */
+
+.Page2index li:nth-child(1) {
+    width: 88%;
+    margin: 21% auto 0 auto;
+}
+
+.Page2index li:nth-child(1) input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #ffe4bc;
+    font-size: 18px;
+}
+
+.Page2index li input:nth-child(2) {
+    width: 87%;
+}
+
+.page2pic {
+    border: 9px solid #fff;
+    height: 369px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotate(7deg);
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    -webkit-animation: p 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    margin-top: 30px;
+    margin-left: -29%;
+}
+
+.page2pic2 {
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotate(-5deg);
+    position: absolute;
+    left: 50%;
+    margin-left: -42%;
+    margin-top: 30px;
+    z-index: 1;
+    -webkit-animation: p2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.page2pic img,
+.page2pic2 img {
+    height: 100%;
+}
+
+
+/* Page2 end*/
+
+
+/* Page3 */
+
+.Page3index li input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #ffe4bc;
+    font-size: 18px;
+}
+
+.Page3index li:nth-child(1) {
+    width: 88%;
+    margin: 21% auto 0 auto;
+}
+
+.Page2index li input:nth-child(2) {
+    width: 87%;
+}
+
+.Page3Insidepic {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Page3Insidepic img {
+    width: 100%;
+}
+
+.Page3Insidepic li:nth-child(1) {
+    width: 49%;
+    -webkit-animation: display 1s cubic-bezier(0.55, 0, 0.1, 1) both;
+    -o-animation: display 1s cubic-bezier(0.55, 0, 0.1, 1) both;
+    animation: display 1s cubic-bezier(0.55, 0, 0.1, 1) both;
+}
+
+.Page3Insidepic li:nth-child(2) {
+    width: 49%;
+    -webkit-animation: display .5s .6s cubic-bezier(0.55, 0, 0.1, 1) both;
+    -o-animation: display .5s .6s cubic-bezier(0.55, 0, 0.1, 1) both;
+    animation: display .5s .6s cubic-bezier(0.55, 0, 0.1, 1) both;
+}
+
+.Page3Insidepic li:nth-child(3) {
+    width: 49%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-animation: display .5s .5s cubic-bezier(0.55, 0, 0.1, 1) both;
+    -o-animation: display .5s .5s cubic-bezier(0.55, 0, 0.1, 1) both;
+    animation: display .5s .5s cubic-bezier(0.55, 0, 0.1, 1) both;
+}
+
+.Page3Insidepic li:nth-child(4) {
+    width: 49%;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    -webkit-animation: display .5s .8s cubic-bezier(0.55, 0, 0.1, 1) both;
+    -o-animation: display .5s .8s cubic-bezier(0.55, 0, 0.1, 1) both;
+    animation: display .5s .8s cubic-bezier(0.55, 0, 0.1, 1) both;
+}
+
+.Page3Insidepic li:nth-child(5) {
+    width: 49%;
+    position: absolute;
+    right: 0;
+    top: 70%;
+    -webkit-animation: display .5s .7s cubic-bezier(0.55, 0, 0.1, 1) both;
+    -o-animation: display .5s .7s cubic-bezier(0.55, 0, 0.1, 1) both;
+    animation: display .5s .7s cubic-bezier(0.55, 0, 0.1, 1) both;
+}
+
+.Page3indexBot li {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.Page3indexBot li input {
+    background: transparent;
+    border: none;
+    color: #ffe4bc;
+    font-size: 18px;
+    width: 226px;
+    float: right;
+    text-align: right;
+}
+
+
+/* Page3 end */
+
+
+/* Page4 */
+
+.Page4Top {
+    width: 88%;
+    margin: 14% auto 0 auto;
+}
+
+.Page4Top li {
+    font-size: 23px;
+}
+
+.Page4Top input {
+    background-color: transparent;
+    border: none;
+    color: #ffe4bc;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.page-4-1 div img {
+    width: 100%;
+}
+
+.Page4Bot input {
+    border: none;
+    background-color: transparent;
+    font-size: 23px;
+    color: #ffe4bc;
+    text-align: center;
+}
+
+.Page4Bot {
+    margin-top: 7%;
+}
+
+.weddinghand {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+}
+
+.weddinghand li {
+    width: 100%;
+}
+
+.weddinghand li:nth-child(1) {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    -webkit-animation: handanimate1 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.weddinghand li:nth-child(2) {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    top: 0;
+    -webkit-animation: handanimate2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
+}
+
+.weddinghand li:nth-child(3) {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+    -webkit-animation: handFadeIn .1s 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
+}
+
+.weddinghand img {
+    width: 100%;
+}
+
+
+/* Page4 end */
+
+
+/* Page6 Google Maps */
+
+.map {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    height: 317px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    width: auto;
+    height: 90px;
+    position: absolute;
+    top: 274px;
+    right: 18px;
+}
+
+textarea {
+    width: 90%;
+}
+
+.button2 {
+    padding: 5px 15px;
+    background: black;
+    color: white;
+}
+
+.blur1 {
+    background: rgb(0, 0, 0);
+    zoom: 1;
+    border-color: rgba(100%, 100%, 100%, 0.2);
+    color: rgba(0%, 0%, 0%, 1);
+    -webkit-filter: blur(5px);
+}
+
+.blur1:hover {
+    -webkit-filter: none;
+}
+
+.page-6-1 h1 {
+    font-size: 137%;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.page-6-1,
+.page-6-1 textarea {
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    word-break: break-all;
+}
+
+.page-6-1 textarea {
+    width: 79%;
+    float: left;
+}
+
+.page-6-1 label {
+    width: 11%;
+    margin-left: 5%;
+    float: left;
+}
+
+.Carmargin {
+    height: 12%;
+    margin-top: 12%;
+}
+
+
+/* Page6 Google Maps end */
+
+
+/* Page7 */
+
+.page7pic {
+    list-style: none;
+}
+
+.page7pic li:nth-child(1) {
+    width: 176px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -92px;
+    margin-top: -228px;
+    z-index: 1;
+}
+
+.page7pic li:nth-child(2) {
+    width: 149px;
+    height: 151px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.page7pic li:nth-child(3),
+.page7pic li:nth-child(4) {
+    width: 92px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+
+.page7pic li:nth-child(3) {
+    margin-left: -110px;
+    margin-top: 105px;
+}
+
+.page7pic li:nth-child(4) {
+    margin-left: 8px;
+    margin-top: 105px;
+}
+
+.page7pic img {
+    width: 100%;
+}
+
+
+/* Page7 end */
