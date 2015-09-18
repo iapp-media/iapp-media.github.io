@@ -1,3 +1,6 @@
 .DS_Store
 img/Thumbs.db
 root/front/basic/img/demonstrate.jpg
+*.log
+aspnet/AppPortal/obj/Release/AppPortal.dll
+aspnet/AppPortal/obj/Release/Package/PackageTmp/css/index.css
