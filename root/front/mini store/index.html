@@ -73,6 +73,17 @@
                     <li><a href="#">打造自己的微店</a></li>
                     <li><a href="#">加入行動分店</a></li>
                 </ul>
+                <ul class="menuAJAX col-xs-12">
+                    <li class="col-xs-12">
+                        <div>商品內容頁</div>
+                    </li>
+                    <li class="col-xs-12">
+                        <div>購買商品手續</div>
+                    </li>
+                    <li class="col-xs-12">
+                        <div>確認購物商品</div>
+                    </li>
+                </ul>
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
                 <div class="col-xs-2 search-sm">
@@ -162,13 +173,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 allClassification">
+        <div class="col-xs-12 overflowMenu">
             <div class="row">
-                <ul>
-                    <li class="col-xs-4">圖書文具</li>
-                    <li class="col-xs-4">享受美食</li>
-                    <li class="col-xs-4">品味生活</li>
-                </ul>
+                <div class="col-xs-12 allClassification">
+                    <div class="row">
+                        <ul>
+                            <li class="col-xs-4">圖書文具</li>
+                            <li class="col-xs-4">享受美食</li>
+                            <li class="col-xs-4">品味生活</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -201,6 +216,34 @@
     </a>
     <!-- 瀑布流 -->
     <ul class="buydivmove">
+        <li class="clickimg">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12 clickimgPic">
+                        <div class="row">
+                            <img src="img/2531170_203204624000_2.jpg" alt="">
+                        </div>
+                        <h1>烤雞</h1>
+                        <p class="col-xs-6">NT$50</p>
+                        <div class="col-xs-6 IMGheart">
+                            <input type="checkbox" id="c4" name="" />
+                            <label for="c4"></label>
+                        </div>
+                        <div class="col-xs-12 imgbuybor">
+                            <div class="row">
+                                <button type="button" class="btn btn-warning col-xs-12 imgbuy">購物</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 ProNarrative">
+                            <div class="row">
+                                <h1>產品介紹</h1>
+                                <textarea class="form-control" rows="3">我看起來超好吃的買我回家吧 ^_^</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
         <li class="product">
             <div id="container">
                 <!-- 排版用 -->
@@ -282,45 +325,112 @@
         <li class="productcare col-xs-12">
             <div class="col-xs-12 insidecare">
                 <div class="row">
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor productsinside">
                         <img src="img/2531170_203204624000_2.jpg" alt="" class="col-xs-6">
                         <h1 class="col-xs-6">烤雞</h1>
                         <p class="col-xs-6">Digital+</p>
                         <span class="col-xs-6">NT$50</span>
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor paynumber">
                         <label for="" class="col-xs-6">購買數量</label>
-                        <input type="nummber" class="col-xs-6">
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor status">
                         <label for="" class="col-xs-6">商品狀態</label>
-                        <input type="text" class="col-xs-6">
+                        <input type="text" class="col-xs-6" value="全新/現貨">
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor productNum">
                         <label for="" class="col-xs-6">商品售價</label>
-                        <input type="text" class="col-xs-6">
+                        <input type="text" class="col-xs-6" value="50元">
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor payNum">
                         <label for="" class="col-xs-6">付款金額</label>
-                        <input type="text" class="col-xs-6">
+                        <input type="text" class="col-xs-6" value="50元">
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor paytheway">
                         <label for="" class="col-xs-6">付款方式</label>
-                        <input type="text" class="col-xs-6">
+                        <select class="form-control">
+                            <option>面交</option>
+                            <option>7-11 ibon</option>
+                            <option>銀行轉帳</option>
+                        </select>
                     </div>
-                    <div class="col-xs-12 libor">
+                    <div class="col-xs-12 libor sendtheway">
                         <label for="" class="col-xs-6">寄送方式</label>
-                        <input type="text" class="col-xs-6">
+                        <select class="form-control">
+                            <option>面交自取</option>
+                            <option>7-11</option>
+                            <option>寄送到府</option>
+                        </select>
                     </div>
-                    <div class="col-xs-12 libor">
-                        <label for="" class="col-xs-6">收件人資訊</label>
-                        <input type="text" class="col-xs-6">
+                    <div class="col-xs-12 libor sendadress">
+                        <label for="" class="col-xs-5">收件人資訊</label>
+                        <div class="col-xs-7">
+                            <input type="text" class="col-xs-12" placeholder="電話">
+                            <input type="number" class="col-xs-12" placeholder="郵遞區號">
+                            <textarea class="form-control" rows="3" placeholder="地址"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button type="button" class="btn btn-warning col-xs-12 sendcareButtom">確認購物內容</button>
+        </li>
+        <li class="productcareEnd col-xs-12">
+            <div class="col-xs-12 insidecare">
+                <div class="row">
+                    <div class="col-xs-12 libor productsinside">
+                        <img src="img/2531170_203204624000_2.jpg" alt="" class="col-xs-6">
+                        <h1 class="col-xs-6">烤雞</h1>
+                        <p class="col-xs-6">Digital+</p>
+                        <span class="col-xs-6">NT$50</span>
+                    </div>
+                    <div class="col-xs-12 libor paynumber">
+                        <label for="" class="col-xs-6">購買數量</label>
+                        <input type="text" value="1">
+                    </div>
+                    <div class="col-xs-12 libor status">
+                        <label for="" class="col-xs-6">商品狀態</label>
+                        <input type="text" value="全新/現貨">
+                    </div>
+                    <div class="col-xs-12 libor productNum">
+                        <label for="" class="col-xs-6">商品售價</label>
+                        <input type="text" value="50元">
+                    </div>
+                    <div class="col-xs-12 libor payNum">
+                        <label for="" class="col-xs-6">付款金額</label>
+                        <input type="text" value="50元">
+                    </div>
+                    <div class="col-xs-12 libor paytheway">
+                        <label for="" class="col-xs-6">付款方式</label>
+                        <input type="text" value="面交">
+                    </div>
+                    <div class="col-xs-12 libor sendtheway">
+                        <label for="" class="col-xs-6">寄送方式</label>
+                        <input type="text" value="面交自取">
+                    </div>
+                    <div class="col-xs-12 libor sendadress">
+                        <label for="" class="col-xs-5">收件人資訊</label>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <input type="text" value="(02)2726-1680">
+                                <input type="number" value="11085">
+                                <textarea class="form-control" rows="3">台北市信義區松德路171號6樓</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning col-xs-12 sendcareButtomeEnd">確認送出</button>
         </li>
     </ul>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.9/jquery.touchSwipe.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.masonry.min.js"></script>

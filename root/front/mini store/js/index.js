@@ -29,7 +29,6 @@ $(document).ready(function() {
                 $('.scrollable-menu').css('overflowY', 'scroll');
             }
         });
-
         $(".m-profile").hide();
         $('.finder').hide();
     });
@@ -78,15 +77,50 @@ $(document).ready(function() {
 
 //頁面ajax
 $(function() {
+
+    // if click img
+    $('.item-pic').click(function() {
+        $('.product').addClass('movecss').fadeOut(function() {
+            $('.clickimg').fadeIn(function() {
+                $('.imgbuy').click(function() {
+                    $('.clickimg').addClass('movecss').fadeOut(function() {
+                        $('.productcare').fadeIn(function() {
+                            $('.sendcareButtom').click(function() {
+                                $('.productcare').addClass('movecss').fadeOut(function() {
+                                    $(window).scrollTop(0);
+                                    $('.productcareEnd').fadeIn(function() {
+                                        $('.sendcareButtomeEnd').click(function() {
+                                            alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+    // if click buyButton
     $('.buy').click(function() {
-        $('.buydivmove').addClass('movecss');
-        var window_w = $(window).width();
-        var allajax = $('.buydivmove').css('width', window_w * 2);
-        var alldivajax = allajax.width();
-        $('.product').css('width', alldivajax / 2);
-        $('.productcare').css('width', '50%').delay(1000).fadeIn();
-        console.log(ajax1_w, ajax2_w, alldivajax);
-    })
+        $('.product,.allClassification').addClass('movecss').fadeOut(function() {
+            $(window).scrollTop(0);
+            $('.productcare').fadeIn(function() {
+                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
+                $('.sendcareButtom').click(function() {
+                    $('.productcare').addClass('movecss').fadeOut(function() {
+                        $(window).scrollTop(0);
+                        $('.productcareEnd').fadeIn(function() {
+                            $('.sendcareButtomeEnd').click(function() {
+                                alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
 });
 //瀑布流
 
