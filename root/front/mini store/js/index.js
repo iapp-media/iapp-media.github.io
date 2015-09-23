@@ -58,34 +58,23 @@ $(document).ready(function() {
     });
 }); // 觸發 end
 
-
-//光箱
-
-$(document).ready(function() {
-    //Examples of how to assign the Colorbox event to elements
-    $(".apps-info").colorbox({
-        iframe: true,
-        width: "80%",
-        height: "100%"
-    });
-    $(".iframe-info").colorbox({
-        iframe: true,
-        width: "700px",
-        height: "600px"
-    });
-}); //光箱 end
-
 //頁面ajax
 $(function() {
 
     // if click img
     $('.item-pic').click(function() {
-        $('.product').addClass('movecss').fadeOut(function() {
+        $('.menuAJAX li:nth-child(1)').addClass('fadeInRight');
+        $('.product,.allClassification').addClass('movecss').fadeOut(function() {
+            $(window).scrollTop(0);
             $('.clickimg').fadeIn(function() {
                 $('.imgbuy').click(function() {
+                    $('.menuAJAX li:nth-child(1)').addClass('fadeInRight_Double');
+                    $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
                     $('.clickimg').addClass('movecss').fadeOut(function() {
                         $('.productcare').fadeIn(function() {
                             $('.sendcareButtom').click(function() {
+                                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
+                                $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
                                 $('.productcare').addClass('movecss').fadeOut(function() {
                                     $(window).scrollTop(0);
                                     $('.productcareEnd').fadeIn(function() {
@@ -104,11 +93,13 @@ $(function() {
 
     // if click buyButton
     $('.buy').click(function() {
+        $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
         $('.product,.allClassification').addClass('movecss').fadeOut(function() {
             $(window).scrollTop(0);
             $('.productcare').fadeIn(function() {
-                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
                 $('.sendcareButtom').click(function() {
+                    $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
+                    $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
                     $('.productcare').addClass('movecss').fadeOut(function() {
                         $(window).scrollTop(0);
                         $('.productcareEnd').fadeIn(function() {

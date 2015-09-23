@@ -64,26 +64,24 @@
                         <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
                     </li>
                     <li>微後台</li>
-                    <li><a href="#"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>訊息管理</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li>
+                    <li><a href="manager_1.html"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>
+                    <li><a href="manager_2.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
+                    <li><a href="manager_3.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>
+                    <li><a href="manager_4.html"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>訊息管理</a></li>
+                    <li><a href="manager_5.html"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li>
                     <li>開微店</li>
                     <li><a href="#">打造自己的微店</a></li>
                     <li><a href="#">加入行動分店</a></li>
                 </ul>
-                <ul class="menuAJAX col-xs-12">
-                    <li class="col-xs-12">
-                        <div>商品內容頁</div>
-                    </li>
-                    <li class="col-xs-12">
-                        <div>購買商品手續</div>
-                    </li>
-                    <li class="col-xs-12">
-                        <div>確認購物商品</div>
-                    </li>
-                </ul>
+                <div class="menuAJAX col-xs-12">
+                    <div class="row">
+                        <ul>
+                            <li>商品內容頁</li>
+                            <li>購買商品手續</li>
+                            <li>確認購物商品</li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
                 <div class="col-xs-2 search-sm">
@@ -392,35 +390,35 @@
                     </div>
                     <div class="col-xs-12 libor paynumber">
                         <label for="" class="col-xs-6">購買數量</label>
-                        <input type="text" value="1">
+                        <span class="valueNum">1</span>
                     </div>
                     <div class="col-xs-12 libor status">
                         <label for="" class="col-xs-6">商品狀態</label>
-                        <input type="text" value="全新/現貨">
+                        <span class="valueNum">全新/現貨</span>
                     </div>
                     <div class="col-xs-12 libor productNum">
                         <label for="" class="col-xs-6">商品售價</label>
-                        <input type="text" value="50元">
+                        <span class="valueNum">50元</span>
                     </div>
                     <div class="col-xs-12 libor payNum">
                         <label for="" class="col-xs-6">付款金額</label>
-                        <input type="text" value="50元">
+                        <span class="valueNum">50元</span>
                     </div>
                     <div class="col-xs-12 libor paytheway">
                         <label for="" class="col-xs-6">付款方式</label>
-                        <input type="text" value="面交">
+                        <span class="valueNum">面交</span>
                     </div>
                     <div class="col-xs-12 libor sendtheway">
                         <label for="" class="col-xs-6">寄送方式</label>
-                        <input type="text" value="面交自取">
+                        <span class="valueNum">面交自取</span>
                     </div>
                     <div class="col-xs-12 libor sendadress">
                         <label for="" class="col-xs-5">收件人資訊</label>
                         <div class="col-xs-7">
                             <div class="row">
-                                <input type="text" value="(02)2726-1680">
-                                <input type="number" value="11085">
-                                <textarea class="form-control" rows="3">台北市信義區松德路171號6樓</textarea>
+                                <span class="valueNum">(02)2726-1680</span>
+                                <span class="valueNum">11085</span>
+                                <span class="valueNum">台北市信義區松德路171號6樓</span>
                             </div>
                         </div>
                     </div>
@@ -430,7 +428,6 @@
         </li>
     </ul>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.9/jquery.touchSwipe.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.masonry.min.js"></script>

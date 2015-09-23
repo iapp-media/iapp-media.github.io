@@ -905,48 +905,24 @@ a:hover {
 .overflowMenu {
     /* outline: 1px solid #f00; */
     position: absolute;
-    top: 60px;
+    top: 74px;
     height: 51px;
 }
 
 .allClassification {
-    /*outline: 1px solid #f00;*/
+    /* outline: 1px solid #f00; */
     height: 50px;
     position: absolute;
-    /* top: 50%; */
-    left: 50%;
-    margin-left: -75%;
-    /* margin-top: 29px; */
-    /*display: none;*/
+    /* left: 50%; */
+    /* margin-left: -75%; */
+    overflow-x: hidden;
+    width: 100%;
+    transform: scale(1.5);
 }
 
 .allClassification ul {
-    /* height: 50px; */
-    width: calc(100% + 50%);
+    /* width: calc(100% + 21%); */
     background-color: #b4b4b4;
-}
-
-.menuAJAX {
-    height: 50px;
-    background-color: #b4b4b4;
-    margin-top: 29px;
-    position: absolute;
-    font-size: 150%;
-    text-align: center;
-    top: 50%;
-    /*opacity: 0;*/
-}
-
-.menuAJAX li {
-    position: absolute;
-    top: 0;
-    display: table;
-    line-height: 49px;
-    left: 0;
-    color: #fff;
-    opacity: 0;
-    /*-webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);*/
 }
 
 .allClassification li {
@@ -955,9 +931,9 @@ a:hover {
     height: 80%;
     border-right: 1px solid #a3a3a3;
     text-align: center;
-    font-size: 150%;
+    font-size: 122%;
     display: table;
-    line-height: 40px;
+    line-height: 36px;
     margin: 5px 0 0 0;
 }
 
@@ -1011,10 +987,15 @@ a:hover {
 
 /* first hide */
 
+
+/* AJAX bottom */
+
 .productcare,
 .productcareEnd,
-.clickimg {
+.clickimg,
+.manager {
     height: 100%;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 117px;
@@ -1138,25 +1119,23 @@ a:hover {
     line-height: 129px;
 }
 
-.productcareEnd input,
-.productcareEnd textarea {
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-    text-align: right;
+.productcareEnd .valueNum {
+    color: #747576;
     font-size: 155%;
-    width: 40%;
-    color: #6d6e70;
-    padding: 0 12px;
+    float: right;
+    padding-right: 15px;
     text-align: right;
+}
+
+.insidecare .payNum .valueNum {
+    color: #ff9933;
 }
 
 .productcareEnd textarea {
     text-align: left;
 }
 
-.sendadress input,
-.sendadress textarea {
+.sendadress .valueNum {
     width: 100%;
     text-align: left;
 }
@@ -1215,6 +1194,50 @@ a:hover {
     padding: 0;
 }
 
+.menuAJAX,
+.proAJAX {
+    height: 52px;
+    background-color: #b4b4b4;
+    margin-top: 29px;
+    position: absolute;
+    font-size: 180%;
+    text-align: center;
+    top: 50%;
+    /*opacity: 0;*/
+}
+
+.menuAJAX ul,
+.proAJAX ul {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+}
+
+.menuAJAX li,
+.proAJAX li {
+    position: absolute;
+    top: 0;
+    display: table;
+    line-height: 50px;
+    color: #fff;
+    transition: .5s;
+    text-align: center;
+    width: 100%;
+}
+
+.proAJAX ul {
+    left: 0;
+}
+
+
+/* Manager CSS */
+
+.promana {
+    outline: 1px solid #f00;
+    margin-top: 122px;
+    height: 500px;
+}
+
 
 /* keyframes */
 
@@ -1235,21 +1258,14 @@ a:hover {
 }
 
 .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
+    opacity: 1;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
 }
 
-@-webkit-keyframes fadeInRightBig {
-    from {
-        opacity: 0;
-        -webkit-transform: translate3d(2000px, 0, 0);
-        transform: translate3d(2000px, 0, 0);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
+.fadeInRight_Double {
+    -webkit-transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-200%, 0, 0);
 }
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
@@ -1265,6 +1281,14 @@ a:hover {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
+    .promana {
+    outline: 1px solid #f00;
+    margin-top: 112px;
+    height: 500px;
+}
+    .overflowMenu {
+        top: 65px;
+    }
     .col-sm-1.col-md-1.portalCreate .row:before {
         display: none;
     }
@@ -1401,6 +1425,14 @@ a:hover {
 }
 
 @media only screen and (max-width:480px) {
+    .promana {
+    outline: 1px solid #f00;
+    margin-top: 112px;
+    height: 500px;
+}
+    .overflowMenu {
+        top: 65px;
+    }
     .col-sm-1.col-md-1.portalCreate .row:before {
         display: none;
     }
