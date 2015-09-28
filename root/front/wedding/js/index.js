@@ -26,9 +26,9 @@
     $('.wrap').css('-webkit-transform', 'scale(' + s + ',' + s + ') translate(0px,-' + ss + 'px)');
 
     //手勢，滑鼠，滾輪，鍵盤
-    document.addEventListener('touchmove', function(event) {
-        event.preventDefault();
-    }, false);
+    // document.addEventListener('touchmove', function(event) {
+    //     event.preventDefault();
+    // }, false);
 
     // document.addEventListener('mousemove',function(event){ event.preventDefault(); },false);
 
@@ -36,7 +36,8 @@
         event.preventDefault();
     }, false);
 
-    //document.addEventListener('scroll',function(event){ event.preventDefault(); },false);
+    // scroll true & false
+    document.addEventListener('scroll',function(event){ event.preventDefault(); },false);
     // document.addEventListener('keydown',function(event){ event.preventDefault(); },false);
 
     $(document).swipeUp(function() {
@@ -59,7 +60,6 @@
                     $('.flipster').unbind('flipster');
                     var classes = $(".flipster,.flipster-active, .flipster-carousel").attr("style", "class");
                     $(".flipster").removeAttr("style", "class");
-
                 }
             })
             //判斷最後一頁跳至第一頁
@@ -67,7 +67,6 @@
             now.row = 1;
             now.col = 1;
             pageMove(towards.up);
-
         }
 
     });
@@ -179,9 +178,9 @@
     // })
 
 
-    document.getElementById('jump2').addEventListener('click', function() {
-        pageJump(2, 1);
-    });
+    // document.getElementById('jump2').addEventListener('click', function() {
+    //     pageJump(2, 1);
+    // });
 
     function pageJump(row, col) {
 

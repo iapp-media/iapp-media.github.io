@@ -1,6 +1,16 @@
 // 光箱
 
 (function() {
+    // WIP
+
+    /* To Do:
+    1. Selecting a new plan from the drop down menu will regenerate the data associated below.
+    2. On-click for description title to show specific description below; one description opens all.
+    3. Prices recalculate as you select different features.
+    */
+
+
+
     // $('.liColor').on('tap', function() {
     //     $.colorbox({
     //         html: '<div class="page1colorbox"><div class="boxtop">創建喜帖</div><div class="boxinside"><div><label for="">姓名</label><div><input type="text" placeholder="男方"><input type="text" placeholder="女方" style="float:right;"></div></div><div><label for="">手機</label><input type="number" placeholder="聯絡人電話"></div><div><label for="">日期</label><input type="month" placeholder="宴會日期"></div><div><label for="">時間</label><input type="time" placeholder="宴會時間"></div><div class="adress"><label for="">地址</label><input type="text" placeholder="宴會地點"></div><button class="caresend">提交</button></div>', //在燈箱中要顯示的html字段
@@ -48,16 +58,16 @@
         });
     });
     $('.carewed').on('tap', function() {
-            $.colorbox({
-                html: '<div class="page2colorbox"><div class="boxtop">我要赴宴</div><div class="boxinside"><div><label for="">姓名</label><div><input type="text"  style="float:right;"></div></div><div><label for="">手機</label><input type="number" ></div><div><label for="">人數</label><input type="number"></div><button class="caresend">提交</button></div>', //在燈箱中要顯示的html字段',
-                width: '90%', //燈箱中間區塊的寬度
-                height: '60%', //燈箱中間區塊的高度
-                onClosed: function() { //當燈箱關閉時的callback funtion
+        $.colorbox({
+            html: '<div class="page2colorbox"><div class="boxtop">我要赴宴</div><div class="boxinside"><div><label for="">姓名</label><div><input type="text"  style="float:right;"></div></div><div><label for="">手機</label><input type="number" ></div><div><label for="">人數</label><input type="number"></div><button class="caresend">提交</button></div>', //在燈箱中要顯示的html字段',
+            width: '90%', //燈箱中間區塊的寬度
+            height: '60%', //燈箱中間區塊的高度
+            onClosed: function() { //當燈箱關閉時的callback funtion
 
-                }
-            });
-        })
-        // 光箱 end
+            }
+        });
+    })
+
 
     // 三明治
 
@@ -68,23 +78,41 @@
         $('.allMove').stop(true, false).toggleClass('move');
     });
 
-    // 動畫
+    // list
 
-    // var block1 = document.querySelector('#heart');
-    // var player1 = block1.animate([{
-    //     transform: scale(0)
-    // }, {
-    //     transform: scale(1)
-    // }], {
-    //     duration: 10,
-    //     iterations: Infinity,
-    //     direction: 'alternate',
+    $('.colorboxlist1').on('tap', function() {
+        $('#mobile').animate({
+            top: 0
+        }, 600, 'easeOutBounce', function() {
+            $('.prev,.close').on('tap', function() {
+                $('#mobile').animate({
+                    top: '-100%'
+                })
+            })
+        })
+    });
+    $('.colorboxlist2').on('tap', function() {
 
-    // });
+        $('.friendtable').animate({
+            top: 0
+        }, 600, 'easeOutBounce', function() {
+            $('.prev,.close').on('tap', function() {
+                $('.friendtable').animate({
+                    top: '-100%'
+                }, function() {
+                    $('.friendtable textarea').fadeOut();
+                });
+            });
+            $('.Blessingyou').on('click', function() {
+                $('.friendtable textarea').fadeIn();
+            });
+        });
+    });
 
-    // 動畫 end
+    // WIP
 
-    // 三明治 end
+
+
 
     // Google Maps
 
