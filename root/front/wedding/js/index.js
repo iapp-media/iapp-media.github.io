@@ -25,19 +25,24 @@
 
     $('.wrap').css('-webkit-transform', 'scale(' + s + ',' + s + ') translate(0px,-' + ss + 'px)');
 
-    //手勢，滑鼠，滾輪，鍵盤
-    // document.addEventListener('touchmove', function(event) {
-    //     event.preventDefault();
-    // }, false);
 
-    // document.addEventListener('mousemove',function(event){ event.preventDefault(); },false);
+    //手勢，滑鼠，滾輪，鍵盤
+    document.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+    }, false);
+
+    document.addEventListener('mousemove', function(event) {
+        event.preventDefault();
+    }, false);
 
     document.addEventListener('keyup', function(event) {
         event.preventDefault();
     }, false);
 
     // scroll true & false
-    document.addEventListener('scroll',function(event){ event.preventDefault(); },false);
+    document.addEventListener('scroll', function(event) {
+        event.preventDefault();
+    }, false);
     // document.addEventListener('keydown',function(event){ event.preventDefault(); },false);
 
     $(document).swipeUp(function() {
@@ -93,6 +98,8 @@
                         var classes = $(".flipster,.flipster-active, .flipster-carousel").attr("style", "class");
                         Classflips.removeAttr("style", "class");
 
+                    } else if (now.row !== 1) {
+
                     }
                 })
             }
@@ -113,6 +120,7 @@
                 now.row = maxPage;
                 now.col = 1;
                 pageMove(towards.down);
+
             }
         }
     });
@@ -197,6 +205,7 @@
             now.row = row;
             now.col = col;
             pageMove(towards.down);
+
         } else {
             if (last.col < col) {
                 now.row = row;
@@ -235,19 +244,33 @@
         }
         isAnimating = true;
         $(nowPage).removeClass('hide');
-
         $(lastPage).addClass(outClass);
         $(nowPage).addClass(inClass);
 
         setTimeout(function() {
+
             $(lastPage).removeClass('page-current');
             $(lastPage).removeClass(outClass);
             $(lastPage).addClass('hide');
             $(lastPage).find('img').addClass('hide');
-
             $(nowPage).addClass('page-current');
             $(nowPage).removeClass(inClass);
             $(nowPage).find('img').removeClass('hide');
+            // if (now.row !== 1) {
+            //     $('.moveIndex').on('tap', function() {
+            //         $('.page-1-1').addClass('page-current');
+            //         $('.page-1-1').removeClass('hide');
+            //         $(nowPage).addClass('hide');
+            //         $('.page-1-1').find('img').removeClass('hide');
+            //         $(lastPage).addClass(inClass);
+            //         $(nowPage).addClass(outClass);
+
+            //     })
+            // }
+            $('.moveIndex').on('tap', function(){
+                nowPage = 1;
+                
+            })
 
             isAnimating = false;
         }, 600);

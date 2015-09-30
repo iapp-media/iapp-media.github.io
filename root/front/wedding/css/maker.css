@@ -142,6 +142,12 @@ body {
     background-position: center center;
 }
 
+.bg_img {
+    position: absolute;
+    z-index: 0;
+    -webkit-filter: blur(5px);
+}
+
 .hide {
     display: none;
 }
@@ -155,6 +161,10 @@ body {
     height: 100%;
     position: absolute;
     text-align: center;
+}
+
+.Carmargin {
+    margin-bottom: 37px;
 }
 
 .Page2index {
@@ -506,8 +516,12 @@ body {
 
 .liColor {
     color: #FEFEFE;
-    width: 100%;
+    width: 23%;
     display: block;
+}
+
+a.liColor img {
+    width: 100%;
 }
 
 .menu li {
@@ -655,31 +669,31 @@ body {
     color: #ffe5bd;
     width: 44%;
     margin: 0 auto;
-    height: 41px;
     font-size: 130%;
     margin: 20px auto;
     position: relative;
 }
 
-.time p {
+.time input {
     float: left;
+    width: 48%;
     margin-top: 16%;
     margin-left: -7%;
     margin-right: -7%;
 }
 
-.time p:nth-child(3) {
+.time input:nth-child(3) {
     float: right;
 }
 
-.time p:nth-child(1) {
-    text-align: center;
+.time input:nth-child(1) {
     position: absolute;
     margin: 0;
     left: 0;
     right: 0;
     top: 0;
     margin: auto;
+    width: 55%;
 }
 
 .page1Title {
@@ -691,8 +705,9 @@ body {
     line-height: 52px;
 }
 
-.page1Title div {
+.page1Title input {
     float: left;
+    width: 33%;
 }
 
 .page1Title div:nth-child(2) {
@@ -708,16 +723,18 @@ body {
     -webkit-animation: b 1.5s infinite;
 }
 
-.page1Title div:nth-child(3) {
+.page1Title input:nth-child(3) {
     float: right;
 }
 
 .Protagonist {
-    margin-top: 5%;
+    margin-top: 10%;
+    position: relative;
 }
 
 .Protagonist img {
     width: 100%;
+    -webkit-filter: grayscale(100%);
 }
 
 .inside {
@@ -733,14 +750,8 @@ body {
     float: left;
 }
 
-.inside input {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    color: #fce0b9;
-}
-
-.carewed {
+.carewed,
+.prev {
     background-color: #fff;
     width: 100%;
     border: 2px solid #ec2f44;
@@ -770,6 +781,17 @@ body {
     color: #fff;
 }
 
+.Uploadimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+
 
 /* Page1 end */
 
@@ -783,10 +805,6 @@ body {
 
 .Page2index li:nth-child(1) input {
     width: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #ffe4bc;
     font-size: 18px;
 }
 
@@ -804,7 +822,6 @@ body {
     left: 50%;
     -webkit-animation: p 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     margin-top: 30px;
-    margin-left: -29%;
 }
 
 .page2pic2 {
@@ -822,6 +839,7 @@ body {
 .page2pic img,
 .page2pic2 img {
     height: 100%;
+    -webkit-filter: grayscale(100%);
 }
 
 
@@ -832,10 +850,6 @@ body {
 
 .Page3index li input {
     width: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #ffe4bc;
     font-size: 18px;
 }
 
@@ -845,7 +859,7 @@ body {
 }
 
 .Page2index li input:nth-child(2) {
-    width: 87%;
+    width: 100%;
 }
 
 .Page3Insidepic {
@@ -856,6 +870,7 @@ body {
 
 .Page3Insidepic img {
     width: 100%;
+    -webkit-filter: grayscale(100%);
 }
 
 .Page3Insidepic li:nth-child(1) {
@@ -908,9 +923,6 @@ body {
 }
 
 .Page3indexBot li input {
-    background: transparent;
-    border: none;
-    color: #ffe4bc;
     font-size: 18px;
     width: 226px;
     float: right;
@@ -976,7 +988,7 @@ body {
     position: absolute;
     z-index: 1;
     top: 0;
-    -webkit-animation: handanimate1 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-animation: handanimate 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .weddinghand li:nth-child(2) {
@@ -984,7 +996,7 @@ body {
     z-index: 1;
     opacity: 1;
     top: 0;
-    -webkit-animation: handanimate2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
+    -webkit-animation: handanimate 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
 }
 
 .weddinghand li:nth-child(3) {
@@ -1001,6 +1013,13 @@ body {
 
 
 /* Page4 end */
+
+
+/* Page5 */
+
+.flipster-carousel .flip-items img {
+    -webkit-filter: grayscale(100%);
+}
 
 
 /* Page6 Google Maps */
@@ -1050,31 +1069,54 @@ textarea {
     text-align: left;
     margin: 0 auto;
     width: 90%;
+    color: #fff;
 }
 
 .page-6-1,
 .page-6-1 textarea {
-    color: #fff;
-    border: none;
-    outline: none;
-    background-color: transparent;
     word-break: break-all;
 }
 
 .page-6-1 textarea {
     width: 79%;
     float: left;
+    border: none;
+    margin-bottom: 6px;
 }
 
 .page-6-1 label {
     width: 11%;
     margin-left: 5%;
     float: left;
+    color: #fff;
 }
 
-.Carmargin {
-    height: 12%;
-    margin-top: 12%;
+.page-current .Carmargin:nth-child(1) {
+    outline: 1px solid;
+    padding: 0;
+}
+
+.page.page-6-1.page-current {
+    padding: 0;
+    outline: 1px solid;
+}
+
+.Carmargin:first-child {
+    padding: 0;
+}
+
+.Carmargin:first-child {
+    padding: 0;
+}
+
+.google_adress label {
+    width: 26%;
+    font-size: 137%;
+}
+
+.google_adress textarea {
+    width: 59%;
+    height: 20px;
 }
 
 
@@ -1111,16 +1153,17 @@ textarea {
 
 .page7pic li:nth-child(3),
 .page7pic li:nth-child(4) {
-    width: 92px;
     height: 80px;
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 1;
+    /* outline: 1px solid; */
+    width: 200px;
 }
 
 .page7pic li:nth-child(3) {
-    margin-left: -110px;
+    margin-left: -111px;
     margin-top: 105px;
 }
 
@@ -1135,3 +1178,311 @@ textarea {
 
 
 /* Page7 end */
+
+
+/* p1 list UI */
+
+#mobile {
+    position: absolute;
+    z-index: 2;
+    background-color: #bf274d;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    font-size: 100%;
+    top: -100%;
+    overflow: hidden;
+}
+
+.intro {
+    padding: 10px;
+}
+
+#mobile h1 {
+    color: #fff;
+    text-align: cen font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.button_select {
+    background: #eb278d;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.insidetable {
+    height: 100%;
+    max-height: 75%;
+    overflow: scroll;
+}
+
+table #plan tr {
+    background: #f6f5f5;
+}
+
+table .current {
+    background: rgba(238, 46, 146, 0.2);
+}
+
+table tr {
+    position: relative;
+    width: 100%;
+}
+
+table tr.feat {
+    background: #f6f5f5;
+}
+
+table .feat:hover {
+    cursor: pointer;
+}
+
+table th {
+    width: 32%;
+    color: #fff;
+    font-size: 111%;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+table th div {
+    height: 46px;
+    padding: 8px 0 0 0;
+}
+
+table th:first-child {
+    /* width: 36%; */
+    border-left: none;
+}
+
+table th:hover {
+    cursor: pointer;
+}
+
+table th .icons {
+    top: 0px;
+    left: 4px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+table th ul {
+    width: 100%;
+    background: #ce1576;
+    display: none;
+}
+
+table th ul li {
+    padding: 10px 0;
+}
+
+table th ul li:hover {
+    background: #eb278d;
+}
+
+table td {
+    padding: 12px 6px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+table td:first-child {
+    text-align: center;
+}
+
+table td.color {
+    background: rgba(150, 150, 150, 0.1);
+}
+
+.icons {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.prev {
+    display: block;
+    margin: 5px auto;
+}
+
+
+/* p1 list UI end */
+
+
+/* p2 list UI  */
+
+.friendtable {
+    position: absolute;
+    top: 0;
+}
+
+.friendtable caption {
+    font-size: 200%;
+    margin: 25px;
+    color: #fff;
+}
+
+.friendtable table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 625px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.friendtable td,
+.friendtable th {
+    padding: 16px;
+    width: 90px;
+    color: #fff;
+    line-height: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.friendtable thead {
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.friendtable th {
+    border-bottom: 0;
+    color: white;
+    width: 1%;
+    color: #444;
+    text-align: center;
+    font-weight: 700;
+}
+
+.friendtable tbody {
+    overflow: auto;
+    height: 100%;
+    max-height: 80%;
+    display: block;
+}
+
+.friendtable tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.friendtable tr td:first-child {
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    top: 17px;
+    right: 22px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close:hover::before,
+.close:hover::after {
+    background: #1ebcc5;
+}
+
+.close::before,
+.close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 83%;
+    top: 50%;
+    left: 2px;
+    margin-top: -1px;
+    background: #fff;
+}
+
+.close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.close.hairline::before,
+.close.hairline::after {
+    height: 1px;
+}
+
+.friendtable textarea {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    margin: auto;
+    background-color: #f5f5f7;
+    border: 1px solid #d9dada;
+    border-radius: 4px;
+    display: none;
+}
+
+.Uploadimg img {
+    width: 100%;
+    -webkit-filter: grayscale(0%) !important;
+}
+
+.applecolorbox {
+    width: 100%;
+    height: 100%;
+    outline: 1px solid #f00;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    z-index: 97;
+}
+
+.friendtable textarea {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    margin: auto;
+    background-color: #f5f5f7;
+    border: 1px solid #d9dada;
+    border-radius: 4px;
+    display: none;
+}
+
+
+/* p2 list UI end */

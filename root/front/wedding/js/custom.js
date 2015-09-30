@@ -1,14 +1,6 @@
 // 光箱
 
 (function() {
-    // WIP
-
-    /* To Do:
-    1. Selecting a new plan from the drop down menu will regenerate the data associated below.
-    2. On-click for description title to show specific description below; one description opens all.
-    3. Prices recalculate as you select different features.
-    */
-
 
 
     // $('.liColor').on('tap', function() {
@@ -87,9 +79,9 @@
             $('.prev,.close').on('tap', function() {
                 $('#mobile').animate({
                     top: '-100%'
-                })
-            })
-        })
+                });
+            });
+        });
     });
     $('.colorboxlist2').on('tap', function() {
 
@@ -104,8 +96,13 @@
                 });
             });
             $('.Blessingyou').on('click', function() {
-                $('.friendtable textarea').fadeIn();
+                $('.applecolorbox,.friendtable textarea').fadeIn(function() {
+                    $('.applecolorbox').on('tap', function() {
+                        $('.applecolorbox,.friendtable textarea').fadeOut();
+                    });
+                });
             });
+
         });
     });
 

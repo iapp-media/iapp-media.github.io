@@ -508,10 +508,9 @@ body {
     color: #FEFEFE;
     width: 23%;
     display: block;
-    /* margin: auto; */
 }
 
-a.liColor img {
+.liColor img {
     width: 100%;
 }
 
@@ -745,8 +744,7 @@ a.liColor img {
     color: #fce0b9;
 }
 
-.carewed,
-.prev {
+.carewed {
     background-color: #fff;
     width: 100%;
     border: 2px solid #ec2f44;
@@ -982,7 +980,7 @@ a.liColor img {
     position: absolute;
     z-index: 1;
     top: 0;
-    -webkit-animation: handanimate 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-animation: handanimate1 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .weddinghand li:nth-child(2) {
@@ -990,7 +988,7 @@ a.liColor img {
     z-index: 1;
     opacity: 1;
     top: 0;
-    -webkit-animation: handanimate 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
+    -webkit-animation: handanimate2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
 }
 
 .weddinghand li:nth-child(3) {
@@ -1007,6 +1005,16 @@ a.liColor img {
 
 
 /* Page4 end */
+
+
+/* Page5 */
+
+.flipster-carousel .flip-items img {
+    -webkit-filter: grayscale(0%);
+}
+
+
+/* Page5 end */
 
 
 /* Page6 Google Maps */
@@ -1115,28 +1123,35 @@ textarea {
     margin: auto;
 }
 
-.page7pic li:nth-child(3),
-.page7pic li:nth-child(4) {
-    width: 92px;
+.page7pic li:nth-child(3) {
     height: 80px;
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 1;
+    width: 200px;
 }
 
 .page7pic li:nth-child(3) {
-    margin-left: -110px;
-    margin-top: 105px;
-}
-
-.page7pic li:nth-child(4) {
-    margin-left: 8px;
+    margin-left: -92px;
     margin-top: 105px;
 }
 
 .page7pic img {
     width: 100%;
+}
+
+.p7_create,
+.p7_share {
+    width: 80px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.p7_share {
+    margin-left: 8px;
+    margin-top: 105px;
 }
 
 
@@ -1188,11 +1203,9 @@ table {
     width: 100%;
     text-align: center;
     position: relative;
-    /* margin: 0 0 40px 0; */
 }
 
 .insidetable {
-    /* outline: 1px solid #f00; */
     height: 100%;
     max-height: 75%;
     overflow: scroll;
@@ -1333,11 +1346,9 @@ table td.color {
     color: #444;
     text-align: center;
     font-weight: 700;
-    /* text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7); */
 }
 
 .friendtable tbody {
-    /* width: 100%; */
     overflow: auto;
     height: 100%;
     max-height: 80%;
@@ -1354,7 +1365,7 @@ table td.color {
 
 .close {
     position: absolute;
-    top: 22px;
+    top: 18px;
     right: 22px;
     display: inline-block;
     width: 25px;
@@ -1401,6 +1412,22 @@ table td.color {
 .close.hairline::before,
 .close.hairline::after {
     height: 1px;
+}
+
+.Uploadimg img {
+    width: 100%;
+    -webkit-filter: grayscale(0%) !important;
+}
+
+.applecolorbox {
+    width: 100%;
+    height: 100%;
+    outline: 1px solid #f00;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    z-index: 97;
 }
 
 .friendtable textarea {
