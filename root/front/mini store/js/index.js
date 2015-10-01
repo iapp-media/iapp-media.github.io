@@ -1,23 +1,61 @@
+//
+
+// var death_rate = [['阿魯',24.26],['阿米',17.48],['阿足',10.01],['小明',5.84]];
+// var root = d3.select(".D3").select("ul");
+// console.log(root);
+
+
+// var data = [11, 23, 34, 20, 100, 45];
+// var weekday = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+// var maxData = _.max(data);
+
+// var x = d3.scale.linear()
+//     .domain([0, d3.max(data)])
+//     .range([0, 400]);
+
+// d3.select('.D3').select('ul')
+//     .data(data)
+//     .enter()
+//     .append('li')
+//     .html(function(d, i) {
+//         var day = i > 7 ? Math.floor((i - 1) % 7) : i - 1;
+//         return '<a href="' + weekday[i] + '"> ' + weekday[day] + ': ' + d + '</a>';
+//     })
+//     .transition()
+//     .duration(2000)
+//     .delay(function(d, i) {
+//         return i * 10;
+//     })
+//     .style('width', function(d) {
+//         return x(d) + 'px';
+//     })
+//     .style('background-color', function(d) {
+//         return d > maxData * .5 ? 'red' : 'orange';
+//     })
+
+
+
+
 //手指觸碰
 
-var IMG_WIDTH = 500;
-var currentImg = 0;
-var maxImages = 3;
-var speed = 500;
+// var IMG_WIDTH = 500;
+// var currentImg = 0;
+// var maxImages = 3;
+// var speed = 500;
 
-var imgs;
+// var imgs;
 
-var swipeOptions = {
-    triggerOnTouchEnd: true,
-    swipeStatus: swipeStatus,
-    allowPageScroll: "vertical",
-    threshold: 75
-};
+// var swipeOptions = {
+//     triggerOnTouchEnd: true,
+//     swipeStatus: swipeStatus,
+//     allowPageScroll: "vertical",
+//     threshold: 75
+// };
 
-$(function() {
-    imgs = $("#imgs");
-    imgs.swipe(swipeOptions);
-});
+// $(function() {
+//     imgs = $("#imgs");
+//     imgs.swipe(swipeOptions);
+// });
 
 
 /**
@@ -26,48 +64,48 @@ $(function() {
  * cancel : we animate back to where we were
  * end : we animate to the next image
  */
-function swipeStatus(event, phase, direction, distance) {
-    //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
-    if (phase == "move" && (direction == "left" || direction == "right")) {
-        var duration = 0;
+// function swipeStatus(event, phase, direction, distance) {
+//     //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
+//     if (phase == "move" && (direction == "left" || direction == "right")) {
+//         var duration = 0;
 
-        if (direction == "left") {
-            scrollImages((IMG_WIDTH * currentImg) + distance, duration);
-        } else if (direction == "right") {
-            scrollImages((IMG_WIDTH * currentImg) - distance, duration);
-        }
+//         if (direction == "left") {
+//             scrollImages((IMG_WIDTH * currentImg) + distance, duration);
+//         } else if (direction == "right") {
+//             scrollImages((IMG_WIDTH * currentImg) - distance, duration);
+//         }
 
-    } else if (phase == "cancel") {
-        scrollImages(IMG_WIDTH * currentImg, speed);
-    } else if (phase == "end") {
-        if (direction == "right") {
-            previousImage();
-        } else if (direction == "left") {
-            nextImage();
-        }
-    }
-}
+//     } else if (phase == "cancel") {
+//         scrollImages(IMG_WIDTH * currentImg, speed);
+//     } else if (phase == "end") {
+//         if (direction == "right") {
+//             previousImage();
+//         } else if (direction == "left") {
+//             nextImage();
+//         }
+//     }
+// }
 
-function previousImage() {
-    currentImg = Math.max(currentImg - 1, 0);
-    scrollImages(IMG_WIDTH * currentImg, speed);
-}
+// function previousImage() {
+//     currentImg = Math.max(currentImg - 1, 0);
+//     scrollImages(IMG_WIDTH * currentImg, speed);
+// }
 
-function nextImage() {
-    currentImg = Math.min(currentImg + 1, maxImages - 1);
-    scrollImages(IMG_WIDTH * currentImg, speed);
-}
+// function nextImage() {
+//     currentImg = Math.min(currentImg + 1, maxImages - 1);
+//     scrollImages(IMG_WIDTH * currentImg, speed);
+// }
 
-/**
- * Manually update the position of the imgs on drag
- */
-function scrollImages(distance, duration) {
-    imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
+// /**
+//  * Manually update the position of the imgs on drag
+//  */
+// function scrollImages(distance, duration) {
+//     imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
 
-    //inverse the number we set in the css
-    var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
-    imgs.css("transform", "translate(" + value + "px,0)");
-}
+//     //inverse the number we set in the css
+//     var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+//     imgs.css("transform", "translate(" + value + "px,0)");
+// }
 
 //觸發
 
@@ -184,6 +222,15 @@ $(function() {
         });
     });
 });
+
+// 頁面AJAX
+$('.mobilemenumove li').click(function() {
+    var clickindex = $(this).index();
+    console.log(clickindex);
+    $('.allmodify').eq(clickindex).fadeIn().siblings().fadeOut();
+});
+
+
 //瀑布流
 
 $(function() {

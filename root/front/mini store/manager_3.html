@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/masonry.css">
     <link rel="stylesheet" href="css/colorbox.css">
-    <!-- <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script> -->
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -53,6 +52,7 @@
                         <a class="navbar-brand" href="index.html">
                             <img class="iapplogo" src="img/ministorelogo.png">
                         </a>
+                        <p class="col-xs-6">訂單管理</p>
                     </div>
                 </div>
                 <!-- 主題下拉選單（共用） -->
@@ -74,11 +74,6 @@
                     <li><a href="#">加入行動分店</a></li>
                 </ul>
                 <div class="proAJAX col-xs-12">
-                    <div class="row">
-                        <ul>
-                            <li>訂單管理</li>
-                        </ul>
-                    </div>
                 </div>
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
@@ -169,6 +164,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-xs-12 overflowMenu">
+            <div class="row">
+                <div class="col-xs-12 allClassification">
+                    <div class="row">
+                        <ul class="mobilemenumove">
+                            <li class="col-xs-3">出貨單</li>
+                            <li class="col-xs-3">訂單列表</li>
+                            <li class="col-xs-3">參數設定</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
     <!-- 會員資料 -->
     <div class="jumbotron">
@@ -199,7 +207,167 @@
     </a>
     <!-- 商品管理 -->
     <div class="col-xs-12 promana">
-        訂單管理放置空間
+        <div class="row">
+            <!-- 出貨單 -->
+            <div class="allmodify">
+                <ul class="buydivmove">
+                    <li class="modify col-xs-12">
+                        <div class="col-xs-12 insidecare">
+                            <div class="row">
+                                <div class="col-xs-12 libor paynumber D3page">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                                        </div>
+                                        <!-- /input-group -->
+                                    </div>
+                                    <!-- /.col-lg-6 -->
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>出貨編碼</th>
+                                                <th>商品名</th>
+                                                <th>數量</th>
+                                                <th>金額</th>
+                                                <th>出貨時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">001</th>
+                                                <td>雞腿</td>
+                                                <td>1</td>
+                                                <td>100</td>
+                                                <td>1天前</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">002</th>
+                                                <td>衣服</td>
+                                                <td>2</td>
+                                                <td>500</td>
+                                                <td>兩天前</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">003</th>
+                                                <td>拉麵</td>
+                                                <td>3</td>
+                                                <td>10000</td>
+                                                <td>今日2點</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 出貨單 end -->
+            <!-- 訂單管理 -->
+            <div class="allmodify">
+                <ul class="buydivmove">
+                    <li class="modify col-xs-12">
+                        <div class="col-xs-12 insidecare">
+                            <div class="row">
+                                <div class="col-xs-12 libor paynumber D3page">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                                        </div>
+                                        <!-- /input-group -->
+                                    </div>
+                                    <!-- /.col-lg-6 -->
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>訂單號碼</th>
+                                                <th>商品名稱</th>
+                                                <th>數量</th>
+                                                <th>金額</th>
+                                                <th>時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">001</th>
+                                                <td>雞腿</td>
+                                                <td>1</td>
+                                                <td>100</td>
+                                                <td>1天前</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">002</th>
+                                                <td>衣服</td>
+                                                <td>2</td>
+                                                <td>500</td>
+                                                <td>兩天前</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">003</th>
+                                                <td>拉麵</td>
+                                                <td>3</td>
+                                                <td>10000</td>
+                                                <td>今日2點</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 訂單管理 end -->
+            <!-- 參數設定 -->
+            <div class="allmodify">
+                <ul class="buydivmove">
+                    <li class="modify col-xs-12">
+                        <div class="col-xs-12 insidecare">
+                            <div class="row">
+                                <div class="col-xs-12 libor paynumber">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 搖一搖
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 libor paynumber">
+                                    <label for="" class="col-xs-6">商品類別</label>
+                                    <select class="form-control">
+                                        <option>圖書文具</option>
+                                        <option>享受美食</option>
+                                        <option>品味生活</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 libor paynumber">
+                                    <label for="" class="col-xs-6">商品狀態</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-xs-12 libor paynumber">
+                                    <label for="" class="col-xs-6">付款方式</label>
+                                    <select class="form-control">
+                                        <option>面交</option>
+                                        <option>7-11 ibon</option>
+                                        <option>銀行轉帳</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 libor paynumber">
+                                    <label for="" class="col-xs-6">寄送方式</label>
+                                    <select class="form-control">
+                                        <option>面交自取</option>
+                                        <option>7-11</option>
+                                        <option>寄送到府</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 參數設定 end -->
+        </div>
     </div>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.9/jquery.touchSwipe.min.js"></script>
