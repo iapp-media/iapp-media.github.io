@@ -1196,7 +1196,7 @@ a:hover {
 
 .menuAJAX,
 .proAJAX {
-    height: 52px;
+    height: 55px;
     background-color: #b4b4b4;
     margin-top: 29px;
     position: absolute;
@@ -1282,10 +1282,10 @@ a:hover {
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     .promana {
-    outline: 1px solid #f00;
-    margin-top: 112px;
-    height: 500px;
-}
+        outline: 1px solid #f00;
+        margin-top: 112px;
+        height: 500px;
+    }
     .overflowMenu {
         top: 65px;
     }
@@ -1426,10 +1426,10 @@ a:hover {
 
 @media only screen and (max-width:480px) {
     .promana {
-    outline: 1px solid #f00;
-    margin-top: 112px;
-    height: 500px;
-}
+        outline: 1px solid #f00;
+        margin-top: 112px;
+        height: 500px;
+    }
     .overflowMenu {
         top: 65px;
     }
@@ -1513,6 +1513,22 @@ a:hover {
     .container>.navbar-collapse,
     .container>.navbar-header {
         margin: 0;
+    }
+    .navbar-header {
+        width: 50%;
+        position: relative;
+    }
+    .navbar-header p {
+        font-size: 160%;
+        padding: 0;
+        height: 42%;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: #ff9933;
     }
     .Lgallbar {
         width: 0;
