@@ -9,3 +9,9 @@ D:\Root\AppWeb\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.pdb
 D:\Root\AppWeb\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.vbprojResolveAssemblyReference.cache
 D:\Root\AppWeb\AppWeb1.4\AppWeb1.4\bin\JustyLibrary.dll
 D:\Root\AppWeb\AppWeb1.4\AppWeb1.4\bin\JustyLibrary.pdb
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.vbprojResolveAssemblyReference.cache
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1._4.Resources.resources
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.vbproj.GenerateResource.Cache
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.dll
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.xml
+Y:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.pdb
