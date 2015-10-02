@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/cropper.css">
+	<link rel="stylesheet" type="text/css" href="../css/cropperPage.css">
+
+</head>
+<body>
+	
+		
+		<label for="inputImage">
+			<div class="select"><p>上傳照片</p></div>
+		</label>
+		<p class="word">(支持圖片上傳格式JPG,PNG)</p>
+		<input type="file" accept="image/*" id="inputImage" style="display:none;" >
+		<!-- <button type="button" onclick="">取消</button> -->
+		<div class="img-container" >
+			<img src="" alt="拖曳進行照片裁切">
+		</div>
+		<label id="base64" style=" word-wrap: break-word; word-break: normal; display:none;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label>
+
+		<button data-method="getCroppedCanvas" type="button" class="send"><p>保存</p></button>
+
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/JIC.js"></script>
+	<script type="text/javascript" src="../js/cropper.js"></script>
+	<script type="text/javascript" src="../js/cropperPage.js"></script>
+	<script>
+		$('docoment').ready(function(){
+			document.getElementById('inputImage').click();
+		});		
+	</script>
+</body>
+</html>

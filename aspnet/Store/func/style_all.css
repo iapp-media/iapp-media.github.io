@@ -1,0 +1,758 @@
+﻿h2{
+background-image:url(../images/cont_title.jpg);
+width:878px;
+height:77px;
+line-height:55px;
+text-indent:4em;
+position:relative;
+background-repeat:no-repeat;
+}
+
+
+body 
+{
+    font-family: '微軟正黑體','新細明體','Verdana';
+    margin:0;
+    font-size:12pt;
+}
+
+img  { border:0;}
+
+.frametb
+{ 
+    display:inline-table;
+    width:983px;
+    position:relative;
+    margin: 0px 0px 10px 0px;
+}
+
+.framedv
+{ 
+    margin: 18px 0 0 0px;
+    display:inline-table;
+    background-color:#E3D2B6;
+}
+
+.frametest
+{    
+    display:inline-table;
+    position:relative;
+    margin: 10px 950px 0px 0px;
+    background-color:#E3D2B6;
+}
+
+
+.accesskey 
+{
+    position:absolute;
+    margin:0px 0px 0px 8px;
+    }
+  
+.accesskey a:link { color:#fff; text-decoration:none;}    
+.accesskey a:visited { color:#fff;text-decoration:none;}     
+
+#main
+{ 
+    background-image:url(../imgs/main_bg.jpg);
+    position:relative; 
+    background-repeat:repeat-x;
+    text-align:center;
+    z-index:3;
+}    
+   
+ 
+/*=========================================================*/
+#foot 
+{
+    width:100%;
+    background-image:url(../imgs/foot_bg.jpg);
+    background-repeat:repeat-x;
+    background-color:#E3D2B6;
+    text-align:center;
+    padding:0 0 0 0 ;
+    height:500px;
+    }
+    
+    
+#footer 
+{
+
+    position:relative;
+
+    background-color:#CDB694;
+    font-size:14px;
+    width:100%;
+    text-align:left;
+
+    }
+.menu_color
+{
+    background-color:#cdddda;
+}
+#leftmenu_up
+{
+    position:relative;
+    z-index:98;
+    background-color:#cdddda;
+}
+#leftmenu_down
+{
+    position:relative;
+    z-index:99;
+    background-color:#cdddda;
+}
+/*kevin新增*/
+#bann_tb {  
+    background-color:#cdddda;
+}
+
+#left-menu {
+    position:absolute;
+    left:0px;
+    width:222px;
+    top:0px;
+    z-index:99;
+}
+    #left-menu ul {
+        margin:0;
+        padding:0;
+    }
+#right-menu {
+    position:relative;
+    background-color:#cdddda; 
+    height:245px; 
+   
+    z-index:98;
+    top: 20px;
+    left: 206px;
+}
+.default-li-style {
+    background-color:#e0b76f;
+    width:202px;
+    height:49px;
+    display:block;
+}
+
+.color3
+{
+    background-color: #cdddda;
+}
+.color-green
+{
+    background-color: #70C601;
+}
+.color-gray
+{
+    background-color:#868686;
+}
+.cloze
+{
+    line-height:0;
+}
+.rnlt
+{
+    background-image: url(../imgs/6x6-lt.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+}
+
+.rnrt
+{ 
+    background-image: url(../imgs/6x6-rt.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+}
+
+.rnlb
+{
+    background-image: url(../imgs/6x6-lb.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+}
+
+.rnrb
+{ 
+    background-image: url(../imgs/6x6-rb.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+}
+
+
+.votearea
+{
+    height:230px;
+}
+
+.default-li-style1  {
+    background-image: url("../imgs/btn3-1.png");
+    width:215px;
+    height:49px;
+    display:block;
+}
+.default-li-style1:hover {
+    background-image: url("../imgs/btn3-1ov.png");
+    width:215px;
+    height:49px;
+}
+
+.default-li-style2{
+    background-image: url("../imgs/btn3-2.png");
+    width:215px;
+    height:49px;
+    display:block;
+
+}
+.default-li-style2:hover{
+     background-image: url("../imgs/btn3-2ov.png");
+    width:215px;
+    height:49px;
+
+}
+.default-li-style3{
+    background-image: url("../imgs/btn3-3.png");
+    width:215px;
+    height:49px;
+    display:block;
+
+}
+.default-li-style3:hover{
+     background-image: url("../imgs/btn3-3ov.png");
+    width:215px;
+    height:49px;
+
+}
+.default-li-style4{
+    background-image: url("../imgs/btn3-4.png");
+    width:215px;
+    height:49px;
+    display:block;
+
+}
+.default-li-style4:hover{
+     background-image: url("../imgs/btn3-4ov.png");
+    width:215px;
+    height:49px;
+
+}
+.default-td-style1 {
+    color:#fff;
+    background-color:#4abbc9;
+}
+
+
+
+#default-linkA {
+    width:215px;
+    height:49px;
+}
+#default-linkB {
+    width:215px;
+    height:49px;
+}
+#default-linkC {
+    width:215px;
+    height:49px;
+}
+#default-linkD {
+    width:215px;
+    height:49px;
+}
+#down-all {
+   position:relative;
+background-color:#E3D2B6;
+width:100%;
+
+}
+.down-menu {
+   float: left;
+   width: 205px;
+   position:relative;
+   left:-30px;
+   top:-30px;
+}
+    .down-menu ul {
+        text-align:center;
+        height:300px;
+    }
+.down-menu li {
+    display:block;
+    width:180px;
+    text-align:left;
+    font-size:11pt;
+    overflow:hidden;
+}
+.down-menu li  a{
+    text-decoration: none;
+    color:black;
+    width:200px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow: hidden;
+}
+.down-menu li a:hover
+{ 
+    text-decoration:underline; 
+}
+.down-menu-title {
+    background-color:#cdb694;
+    float:left;
+    list-style:none;
+    width:200PX;
+    margin:0 10PX 0 0;
+}
+.down-menu-title a{
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+}
+.down-menu-title li{
+    position:relative;
+    text-align:left;
+    background-color:#e3d2b6;
+    list-style:none;
+    width:200PX;
+    left:-40px;
+    text-overflow:clip;
+
+}
+
+.callwe {
+    background-image:url(../imgs/main_27.jpg)
+}
+.cdiv {
+    width:120px;
+    height:80px;
+}
+#downimg {
+    position:relative;
+    left:40px;
+    top:-60px;
+}
+#votehead {
+    color:#fff;
+    position: relative;
+    margin: 0px 0px 20px 0px;
+    width: 90%;
+}
+#votebody {
+    color:#fff;
+}
+#vote_title {
+    color:#fff;
+}
+#ifLocation {
+    position:relative;
+    top:80px;
+    left:30px;
+}
+.righthead {
+        background-color:#ff7a23;
+}
+.rightcont {
+     background-color:#ff7a23;
+}
+.inside_main_title {
+     width:100%;
+    height:78px;
+    background-image:url(../images/cont_title.jpg);
+     background-repeat:no-repeat;
+     background-size:cover;
+}
+.inside_main_header {
+    width:100%;
+    height:20px;
+    background-image:url(../images/cont_head.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+.inside_main_body {
+    width:100%;
+    background-image:url(../images/cont_bg.png);
+    background-repeat:repeat-y;
+    padding:0px 0px 20px 0px ;
+    background-size:contain;
+
+
+}
+.inside_main_foot {
+    width:100%;
+    height:102px;
+    background-image:url(../images/cont_foot.png);
+     background-repeat:no-repeat;
+     background-size:cover;
+
+}
+.newstitle {
+    position:relative;
+    margin: 5px 0px -6px 0px;
+    padding: 5px 0px 0px 0px;
+    background-image: url('../imgs/news_01.jpg');
+    background-repeat:no-repeat;
+    width: 591px;
+    height: 45px;
+}
+.newsbody {
+    background-image: url('../imgs/news_01.jpg');
+    background-repeat:no-repeat;
+    width: 591px;
+    height: 45px;
+}
+.newsfoot {
+    background-image: url('../imgs/news_02.jpg');
+    background-repeat:no-repeat;
+    width: 591px;
+    height: 7px;
+}
+.news_row 
+{
+    font-size:14px;
+    border-bottom:dotted 1px #ccc;
+    line-height:20px;
+    height:20px;
+    }
+.news_row a:link
+{ 
+    text-decoration:none;
+    color:#333;
+    }
+.news_row a:visited
+{ 
+    text-decoration:none;
+    color:#333;
+    }
+.news_row a:hover
+{ 
+    text-decoration:underline; 
+    }
+.hoturlbg {
+    background-image: url('../imgs/hots.jpg');
+    width: 600px;
+    height: 291px
+
+}
+.hoturl {
+    width: 150px;
+    height: 135px;
+}
+.HotArea {
+            background-color: #FF9801;
+    padding: 0px 0px 0px 13px;
+
+}
+
+.HotArea_row {
+line-height: 20px;
+height: 20px;
+text-decoration:none;
+}
+.HotArea_row a:link
+{ 
+    
+    text-decoration:none;
+    color:White;
+    }
+.HotArea_row a:visited
+{ 
+    text-decoration:none;
+    color:White;
+    }
+.HotArea_row a:hover 
+{
+text-decoration:underline; 
+color:White;
+}
+.Newsfoot {
+    background-image: url('../imgs/news_02.jpg');
+    background-repeat: no-repeat;
+    width: 591px;
+    height: 7px;
+    line-height: 0px;
+    font-size: 13px;
+    text-decoration:none;
+}
+.Newsfoot a:link
+{ 
+    
+    text-decoration:none;
+    color:White;
+    }
+.Newsfoot a:visited
+{ 
+    text-decoration:none;
+    color:White;
+    }
+.Newsfoot a:hover 
+{
+    text-decoration:underline; 
+}
+.UpDatebg
+{
+    position:relative;
+    margin: 0;
+    width:488px;
+    height:18px;
+    background-image: url('../images/sv-end.png');
+    background-repeat: no-repeat;    
+}
+.UpDatefont
+{
+    position:relative;
+    top: -5px;
+    width:488px;
+    height:18px;
+}
+.Detail {
+    font-size: x-large;
+    position: relative;
+    margin: 0px 0px 20px 25px;
+    width: 90%;
+}
+
+.Detail_main {
+    text-indent: 2em;
+    line-height: 1.6em;
+    font-size: 120%;
+    position: relative;
+    margin: -5px 0px 50px 50px;
+    width: 85%;
+}
+.Detail_annex {
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: 120%;
+    position: relative;
+    margin: 0px 0px 20px 13px;
+    width: 90%;
+}
+.Detail_udbg {
+    position:relative;
+    top: -15px;
+    margin: 0px 0px 0px 435px;
+    width:488px;
+    height:18px;
+    background-image: url('../images/sv-end.png');
+    background-repeat: no-repeat;   
+}
+.Detail_udfont {
+    position:relative;
+    margin :8px 0px 0px 470px;
+}
+
+
+
+/*快速連結區*/
+.fasturlbg
+{
+    background-image: url('../imgs/tmvso_links.png');
+    width: 100%;
+    height: 285px;
+    position:relative;
+    }  
+ 
+.fasturlbg div 
+{
+    position:absolute;    
+    }
+    
+.fasturlbg a:link 
+{
+    display:block;
+    width:153px;
+    height:120px;
+    font-family:微軟正黑體;
+    text-align:center;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    }
+
+.fasturlbg a:visited 
+{
+    text-decoration:none;
+    color:#fff;
+    }
+
+.fasturlbg a:hover
+{ 
+    color:#336688;
+    }
+    
+.fastmain1
+{   
+    position:absolute;
+    top:0;
+    left:6px;
+    padding: 19px 0 0 0 ;
+}
+.fastmain2
+{
+    position:absolute;
+    top:0;
+    left:173px;
+    padding: 19px 0 0 0 ;
+}
+.fastmain3
+{
+    position:absolute;
+    top:0;
+    left:340px;
+    padding: 19px 0 0 0 ;
+}
+.fastmain4
+{
+    position:absolute;
+    top:128px;
+    left:87px;
+    padding: 40px 0 0 0 ;
+}
+.fastmain5
+{
+    position:absolute;
+    top:128px;
+    left:255px;
+    padding: 40px 0 0 0 ;
+}
+.fastmain6
+{
+    position:absolute;
+    top:128px;
+    left:422px;
+    padding: 40px 0 0 0 ;
+}
+/*最新消息頁簽*/
+ul.Newsul
+{    
+    width:590px;
+    list-style-type: none;
+    position:absolute;
+    text-align: center;
+    }
+    
+    
+    li.Newsli
+    { 
+        float:left;
+        position:relative;
+        top: -15px;
+        right: 20px;
+    }
+    
+    li.Newsli:hover > ul
+    { 
+        display: block;
+    }
+        .Newsli a:link
+        {     
+            display: block;
+            height:30px; 
+            line-height:30px;
+            text-align:center; 
+            text-decoration:none;  
+            width: 120px;
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+
+        }
+        
+        .Newsli a:visited
+        {
+            display: block;
+            height:30px; 
+            line-height:30px;
+            text-align:center; 
+            text-decoration:none;  
+            width: 120px;
+            border-right: solid 1px #BDDFE2;
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+
+        }
+
+        .Newsli a:hover
+        { 
+            
+                color:#B4E53E;
+                border-bottom: solid 3px #B4E53E;
+        }
+
+
+#l2css li{
+           /* 讓各個清單元素靠左對齊，由原本的垂直排列變成水平排列，形成水平清單 */
+   　　  float:left;
+
+        　/* 設定清單文字範圍的寬度 */
+    　　 width:178px;
+        
+        　/* 去除清單文字前面的小點*/
+　   　  list-style-type:none;
+        　        
+        　/* 讓清單文字居中對齊 */
+    　　 text-align:center;
+        　
+           /* 設定背景色，依個人喜好調整背景色，但要符合整設計風格 */
+           background-color:#6E6E6E;
+
+        　/* 設定字距為2px，非必要 */
+        　letter-spacing: 2px;
+        
+        　/* 設定左邊的白邊樣式，可依個人喜好調整 */
+        　border-left-width: 1px;
+        　border-left-style: solid;
+        　border-left-color: #FFF;
+        
+        　/* 右邊留白1像素 ，可依個人喜好調整*/
+           margin-right:1px;
+}
+#l2css li a{
+        　/* 連結範圍充滿整個區塊 */
+    　　 display: block;
+        
+        　/* 單個連結範圍的框度和高度*/
+        　width: 180px;
+        　height:20px;
+        
+           /* 設定連結範圍向上的內距，依狀況調整 */
+        　padding-top:2px;
+        
+        　/* 連結的文字設為白色以及無裝飾(無底線) ，依個人喜好調整背景色，但要符合整設計風格*/
+        　color: #FFF;
+        　text-decoration: none;
+}
+#l2css li a:hover{
+           /* 設定滑鼠移過時，清單改變的底色設定 */
+           background-color:#39919F;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -41,6 +41,15 @@ Partial Public Class _Default
     Protected WithEvents Scriptmanager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
+    '''HLogo 控制項。
+    '''</summary>
+    '''<remarks>
+    '''自動產生的欄位。
+    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+    '''</remarks>
+    Protected WithEvents HLogo As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
     '''up2 控制項。
     '''</summary>
     '''<remarks>

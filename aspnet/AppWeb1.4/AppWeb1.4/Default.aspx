@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/colorbox.css" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <link href="img/favicon.ico" rel="shortcut icon" />
     <script>
         function init() {
@@ -37,15 +38,7 @@
             prm.add_pageLoaded(init);
         </script>
         <div class="all">
-            <a href="http://www.iapp-media.com/portal/">
-                <div id="iappgb" style="background-color: #FF9933; width: 133px; height: 86px; position: fixed; top: 0px; left: 0px; z-index: 99;">
-                </div>
-                <%--                       <img id="iappgb" style="position: fixed; top: 0px; left: 0px; background: none; z-index: 99;" src="img/iappbg.PNG" >   --%>
-
-                <img style="position: fixed; background-color: none; z-index: 101; margin: 0; padding: 5px 15px; width: 100px; height: 76px;"
-                    src="img/iapplogo.png">
-            </a>
-
+            <asp:HyperLink ID="HLogo" CssClass="homelogo" runat="server" NavigateUrl="../portal/" ImageUrl="img/iapplogo.png"></asp:HyperLink> 
             <div class="pageNavall">
                 <!-- 左側區塊 -->
                 <div id='pageNav'>
@@ -166,14 +159,15 @@
                 <div class="final hide">
                     <div class="top"></div>
                     <div class="middle">
-                        <img src="img/pic-22.png" style="position: absolute; top: 40px; left: 80px;">
-                        <img id="Qrimg" src="#" style="position: absolute; top: 120px; left: 80px;">
-                        <div class="describe">
-                            <p style="color: #969696; font-size: 20px; line-height: 25px; margin: 10px 0 0 25px;">
+                        <div class="topImg">
+                            <img src="img/pic-22.png" class="topImg1">
+                            <img src="img/iapplogo2.png" alt="" class="topImg2">
+                        </div> 
+                        <img id="Qrimg" src="#">
+                        <div class="describe"> 
                                 Digital+數碼數位<br />
                                 專注在Digital的思考<br />
-                                建構行動自媒體的社群平台
-                            </p>
+                                建構行動自媒體的社群平台 
                         </div>
                         <div class="sharemore">
                             <ul>
@@ -225,4 +219,6 @@
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.url.min.js"></script>
     <script src="js/webedit.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+</body>
 </html>

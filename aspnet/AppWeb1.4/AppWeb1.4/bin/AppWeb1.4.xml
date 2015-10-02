@@ -6,61 +6,13 @@ AppWeb1.4
 </name>
 </assembly>
 <members>
-<member name="F:AppWeb1._4.maker2.form1">
+<member name="F:AppWeb1._4.test.form1">
 	<summary>
 form1 控制項。
 </summary>
 	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.Literal1">
-	<summary>
-Literal1 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.LPreview">
-	<summary>
-LPreview 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.IBSend">
-	<summary>
-IBSend 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.LSet">
-	<summary>
-LSet 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.MaxNum">
-	<summary>
-MaxNum 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.maker2.IIDs">
-	<summary>
-IIDs 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+ 自動產生的欄位。
+若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
 </remarks>
 </member><member name="F:AppWeb1._4.mPreview.form1">
 	<summary>
@@ -639,14 +591,6 @@ TS 控制項。
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
 </remarks>
-</member><member name="F:AppWeb1._4.AUL.PDialog">
-	<summary>
-PDialog 控制項。
-</summary>
-	<remarks>
-自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
 </member><member name="F:AppWeb1._4.p01.form1">
 	<summary>
 form1 控制項。
@@ -662,14 +606,6 @@ L 控制項。
 	<remarks>
 自動產生的欄位。
 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-</remarks>
-</member><member name="F:AppWeb1._4.test.form1">
-	<summary>
-form1 控制項。
-</summary>
-	<remarks>
- 自動產生的欄位。
-若要修改，請將欄位宣告從設計工具檔案移至程式碼後置檔案。
 </remarks>
 </member><member name="F:AppWeb1._4.Maker.Head1">
 	<summary>
@@ -975,6 +911,14 @@ form1 控制項。
 </member><member name="F:AppWeb1._4._Default.Scriptmanager1">
 	<summary>
 Scriptmanager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:AppWeb1._4._Default.HLogo">
+	<summary>
+HLogo 控制項。
 </summary>
 	<remarks>
 自動產生的欄位。

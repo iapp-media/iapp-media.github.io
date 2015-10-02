@@ -42,7 +42,7 @@ Public Class Setting2
             Dim APID As String = Request.QueryString("i")
 
             Dim tmp As String = ""
-            If TAppName.Text.Trim() = "必填(限10字)" Then
+            If TAppName.Text.Trim() = "" Then
                 Response.Write("<Script>alert('請輸入IApp名稱');</Script>")
                 Return
             End If

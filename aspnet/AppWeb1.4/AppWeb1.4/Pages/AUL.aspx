@@ -21,8 +21,16 @@
             position:absolute;
             height:100%;
             z-index:999;
+            background-color:#999;
+            opacity:0.8;
             display:none;
         }
+            .PDstyle img
+            {
+                position:absolute;  
+                top: 48%;
+                left: 48%;
+            }
     </style>
 </head>
 <body>
@@ -59,7 +67,9 @@
         </div>
         <label id="base64" style="word-wrap: break-word; word-break: normal; display: none;">Null</label>
         <asp:TextBox ID="TS" runat="server" CssClass="TShide"></asp:TextBox>
-        <asp:Image ID="PDialog" runat="server" CssClass="PDstyle" src="../img/6RMhx.gif" />
+        <div id="PDialog" class="PDstyle">
+            <img src="../img/ajax-loader.gif" />
+        </div> 
     </form>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

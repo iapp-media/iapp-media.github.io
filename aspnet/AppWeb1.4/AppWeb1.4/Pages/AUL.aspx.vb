@@ -10,7 +10,7 @@ Public Class AUL
     
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            ' imgShow()
+            imgShow()
             If main.IsNumeric(Request.QueryString("list")) Then backlist.Visible = True 
         End If
     End Sub
@@ -168,7 +168,7 @@ Public Class AUL
 
     Sub DoTimeOut()
         Threading.Thread.Sleep(1000)
-        PDialog.Visible = False
+        '  PDialog.Visible = False
 
     End Sub
 

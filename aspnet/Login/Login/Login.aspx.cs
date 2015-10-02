@@ -64,7 +64,7 @@ namespace Login
             }
 
 
-            string Target = "_self";
+            string Target = "_parent";
             if (Request.QueryString["open"] == "_top") { Target = "_top"; }
             string Tm = Main.Scalar("Select FoderName from Theme where IDNo=" + ThemeID);
             if (Request.QueryString["done"] != null)

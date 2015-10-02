@@ -2,7 +2,7 @@
 
 function goValue(Img) {
     //alert(Img);
-    var thisPageUrl = location.pathname.replace("/Pages/", "");
+    var thisPageUrl = location.pathname.replace("/basic/Pages/", "");
     $('#select', window.parent.document).hide();
     $('.edit', window.parent.document).show();
     //var ID = $.url.param("ID");

@@ -125,24 +125,15 @@
     <Content Include="js\mprev.js" />
     <Content Include="js\popover.js" />
     <Content Include="js\tooltip.js" />
-    <Content Include="Login.aspx" />
     <Content Include="mprev.aspx" />
     <Content Include="css\styles.css" />
     <Content Include="portal.aspx" />
     <Content Include="search_List.aspx" />
-    <Content Include="User_Detail.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="mprev.aspx.cs">
       <DependentUpon>mprev.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -167,13 +158,6 @@
     </Compile>
     <Compile Include="UserIcon.ashx.cs">
       <DependentUpon>UserIcon.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="User_Detail.aspx.cs">
-      <DependentUpon>User_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User_Detail.aspx.designer.cs">
-      <DependentUpon>User_Detail.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

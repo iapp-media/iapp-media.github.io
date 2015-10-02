@@ -36,6 +36,7 @@ namespace Login
             if (Main.IsNumeric(Request.QueryString["Profile"]))
             {
                 DoProfile();
+                 
                 Response.Redirect("Profile.aspx");
                 //Response.Write("<Script>window.parent.ref()</Script>");
             }

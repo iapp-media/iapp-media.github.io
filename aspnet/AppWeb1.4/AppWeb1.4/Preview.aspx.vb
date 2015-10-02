@@ -27,7 +27,7 @@ Public Class Preview
 
                     LaName.Text = dw("App_Name")
                     If LaName.Text.Length > 6 Then LaName.Text = LaName.Text.Substring(0, 6)
-                    LFrame.Text = "<iframe src=""Apps/" & dw("App_Folder") & "/" & dw("IDNo") & "?a=1"" scrolling=""no"" name=""midiframe"" id=""midiframe"" style=""height: 90%; width: 218px; border: 0px"" ></iframe>"
+                    LFrame.Text = "<iframe src=""" & dw("App_Url") & "?a=1"" scrolling=""no"" name=""midiframe"" id=""midiframe""></iframe>"
                     LUrl.Text = dw("App_Url").ToString().Replace(".html", "")
                     Qrimg.Text = "<img id=""Qrimg"" src=""QrCode.ashx?t=" & LUrl.Text & """>"
 

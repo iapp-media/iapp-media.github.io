@@ -446,6 +446,8 @@ a {
     width: 65px;
     height: 65px;
     z-index: 3;
+    box-shadow: 0px 2px 7px 1px hsla(0, 0%, 0%, .25);
+    border-radius: 10px;
 }
 
 .list {
@@ -576,9 +578,9 @@ a {
     position: absolute;
     z-index: 99;
     float: left;
-    width: 133px;
-    margin-top: 70px;
-    height: calc(100% + 70px);
+    width: 135px;
+    margin-top: 86px;
+    height: calc(100% - 100px);
     overflow: auto;
     padding-right: 50px;
 }
@@ -588,8 +590,7 @@ a {
     padding: 0;
     text-align: center;
     list-style: none;
-    width: 85px;
-    height: 125px;
+    width: 85px; 
 }
 
 #pageNav ul li {
@@ -821,24 +822,19 @@ li.active {
     z-index: 2;
 }
 
-.final .describe {
-    position: absolute;
-    top: 110px;
-    left: 200px;
-}
-
 .final .create {
     position: absolute;
     top: 370px;
     left: 150px;
-    width: 120px;
-    height: 35px;
-    border: 2px #ff9933 solid;
-    border-radius: 8px;
+    width: 134px;
+    height: 42px;
+    background: url('../img/button-sprite-1.png');
+    background-position: -133px 0;
 }
 
 .final .create:hover {
-    background: #ffbb66;
+    background: url('../img/button-sprite-2.png');
+    background-position: -133px 0;
 }
 
 .final .create p {
@@ -852,14 +848,15 @@ li.active {
     position: absolute;
     top: 370px;
     left: 320px;
-    width: 120px;
-    height: 35px;
-    border: 2px #ff9933 solid;
-    border-radius: 8px;
+    width: 134px;
+    height: 43px;
+    background: url('../img/button-sprite-1.png');
+    background-position: -133px -45px;
 }
 
 .final .share:hover {
-    background: #ffbb66;
+    background: url('../img/button-sprite-2.png');
+    background-position: -133px -45px;
 }
 
 .final .share p {
@@ -948,4 +945,58 @@ li.active {
     width: 133px;
     height: calc(100% + 32px);
     overflow: hidden;
+}
+
+a.homelogo
+{
+    display: block;
+    background-color: #FF9933;
+    width: 133px;
+    height: 86px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    text-decoration:none;
+}
+
+    a.homelogo img
+    {
+        width: 100px;
+        height: 76px;
+        margin: 2px auto 5px 13px ;
+    }
+	
+	
+ 
+.topImg img {}
+
+.topImg1 {
+    width: 45%;
+    margin: 70px 0 0 80px;
+}
+
+.topImg2 {
+    width: 23%;
+    position:absolute;
+	left:70%;
+	top:30px;
+}
+
+#Qrimg
+{ 
+    position:absolute;
+    left:80px;
+	top:120px;
+}
+
+
+.final .describe
+{
+    position: absolute;
+    top: 140px;
+    left: 220px;
+    color: #969696;
+    font-size: 20px;
+    line-height: 25px;
 }

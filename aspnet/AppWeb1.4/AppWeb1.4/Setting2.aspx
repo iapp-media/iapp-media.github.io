@@ -44,7 +44,7 @@
                         <td class="text1title">
                             <span>iApp 描述</span>
                           <%--  <input id="TAppMemo" runat="server" class="describe" placeholder="(限140字)" />--%>
-                           <asp:TextBox ID="TAppMemo" runat="server" CssClass="describe" placeholder="(限140字)"  ></asp:TextBox>
+                           <asp:TextBox ID="TAppMemo" runat="server" CssClass="describe" placeholder="(限140字)"   TextMode="MultiLine"></asp:TextBox>
 
                         </td>
                     </tr>

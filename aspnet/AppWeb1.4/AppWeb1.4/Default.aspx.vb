@@ -20,17 +20,26 @@ Partial Class _Default
         If Not IsPostBack Then
 
             If Not IsNumeric(Request.QueryString("i")) Then   '===首次進入
-                Response.Redirect("Default.aspx?i=" & Comm.MyLastApp())
+                Response.Redirect("Default.aspx?i=" & Comm.MyLastApp(Comm.Cint2(Comm.Theme_ID)))
             Else
                 If Comm.ThemeConflict(Request.QueryString("i")) Then Exit Sub '====檢查有沒有進錯主題
+
+                If Comm.Theme_ID <> 2 Then HLogo.NavigateUrl = "http://www.iapp-media.com/portal/portal.aspx?t=" & Comm.Theme_ID
+
                 Session("Ap_id") = Request.QueryString("i")
+
 
                 show()
                 LFrame2.Text = "<iframe id=""iframe-set"" class=""iframe-set"" src=""Setting2.aspx?i=" & Request.QueryString("i") & """ scrolling=""no""></iframe>"
                 Dim userid As String = Main.Scalar("select User_ID from User_App where IDNo=" & Request.QueryString("i") & "")
                 Dim userico As String = Main.Scalar("select 1 from users where  IDNo='" & userid & "' and User_Icon is not null ")
                 If userico = "1" Then userico = "UserIcon.ashx?i=" & userid & "" Else userico = "img/defaulthead.jpg"
-                 
+
+                If userid <> Comm.User_ID() Then
+                    Response.Redirect("Default.aspx?i=" & Comm.MyLastApp(Comm.Cint2(Comm.Theme_ID)))
+                    Exit Sub
+                End If
+
                 Lprofile.Text = "<a class='iframe-info' href=""http://www.iapp-media.com/Login/profile.aspx?i=" & userid & """>" & _
                    " <img class=""head"" src=""" & userico & """ /></a>"
 

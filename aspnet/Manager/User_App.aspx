@@ -19,7 +19,7 @@
                 <asp:BoundField DataField="Plike" HeaderText="like數" />
                 <asp:BoundField DataField="Pfavor" HeaderText="收藏數" />
                 <asp:BoundField DataField="Create_Date" HeaderText="創建時間"  HtmlEncode="false" DataFormatString="{0:d}"/>
-                <%-- <asp:ButtonField ButtonType="Button" CommandName="Update" Text="修改" />--%>
+                <asp:ButtonField ButtonType="Button" CommandName="CN" Text="修改" /> 
               <%--  <asp:ButtonField ButtonType="Button" CommandName="Del" Text="刪除" />--%>
             </Columns>
         </asp:GridView>

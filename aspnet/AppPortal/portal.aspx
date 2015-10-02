@@ -140,7 +140,8 @@
         <asp:Panel ID="Panel2" runat="server" CssClass="logout-user" Visible="false">
             <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
             <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
-                <li><a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx">會員資料</a></li>
+            <%--    <li><a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx">會員資料</a></li>--%>
+                    <li><a  href="http://www.iapp-media.com/Login/profile.aspx">會員資料</a></li>
                 <li class="divider"></li>
                 <li id="logout">
                     <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton>

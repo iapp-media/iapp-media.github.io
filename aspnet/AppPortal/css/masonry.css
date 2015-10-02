@@ -398,58 +398,84 @@ input[type="checkbox"] {
 
 /* IPad media size */
 
-@media only screen and (min-width:481px) and (max-width:768px) {
-    #container {
+@media only screen and (min-width:481px) and (max-width:768px)
+{
+    #container
+    {
         margin: 17% auto;
     }
-    .item {
+
+    .item
+    {
         float: left;
         padding: 0px;
         margin: 1%;
     }
-    .item-pic {
+
+    .item-pic
+    {
         position: relative;
     }
-    .item-bar p {
+
+    .item-bar p
+    {
         display: inline;
     }
-    .item-bar {
+
+    .item-bar
+    {
         visibility: visible;
     }
-    .item-bar .good {
-        display: inline;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    .item-bar .heart {
-        display: inline;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    .item-bar .star {
-        position: absolute;
-        top: 1%;
-        left: 82%;
-        padding: 2px 5px 2px 5px;
-        color: #fff;
-        font-size: 10px;
-    }
-    .username-icon {
+
+        .item-bar .good
+        {
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+
+        .item-bar .heart
+        {
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+
+        .item-bar .star
+        {
+            position: absolute;
+            top: 1%;
+            left: 82%;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+
+    .username-icon
+    {
         display: none;
     }
-    .icon-box {
+
+    .icon-box
+    {
         outline: 1px solid #f00;
         display: none;
     }
-    .usericon {
+
+    .usericon
+    {
         display: none;
     }
-    .username-icon {
+
+    .username-icon
+    {
         display: none;
     }
-    .loginHead {
+
+    .loginHead
+    {
         width: 79px;
         height: 50px;
         position: absolute;
@@ -457,22 +483,35 @@ input[type="checkbox"] {
         top: 5px;
         display: block;
     }
-    .select {
+
+    .select
+    {
         background-color: transparent;
     }
-    .select:hover,
-    .select:link,
-    .select:visited,
-    .select:active,
-    .select:focus {
-        background-color: transparent;
-        color: #ff9933;
+
+        .select:hover,
+        .select:link,
+        .select:visited,
+        .select:active,
+        .select:focus
+        {
+            background-color: transparent;
+            color: #ff9933;
+        }
+
+    .sandwich
+    {
+        color: #fff;
+        font-size: 150%;
+        padding: 2px 6px;
     }
-    .sandwich {
-        color: #ff9932;
-        font-size: 33px;
-    }
-    .input-group {
+    
+.glyphicon {
+    line-height: 0;
+}
+ 
+    .input-group
+    {
         top: 12px;
     }
 }
@@ -619,6 +658,7 @@ input[type="checkbox"] {
     .input-group-btn:last-child>.btn,
     .input-group-btn:last-child>.btn-group {
         margin-left: 32px;
+        padding:0;
     }
 }
 

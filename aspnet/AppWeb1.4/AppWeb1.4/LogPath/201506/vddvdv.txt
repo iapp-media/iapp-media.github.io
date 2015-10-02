@@ -1,0 +1,35 @@
+Public Sub ProcessRequest(context As HttpContext)
+	Dim str As String = ""
+	Dim accessToken = context.Request("accessToken")
+	context.Session("AccessToken") = accessToken
+
+	Dim client = New FacebookClient(accessToken)
+	Dim result As dynamic = client.[Get]("me", New With { _
+		Key .fields = "name,id,email" _
+	})
+	context.Session("fbId") = result.id
+	context.Session("User_Name") = result.name
+
+	Dim main As New JDB()
+	main.ParaAdd("@fbId", result.id, SqlDbType.NVarChar)
+	main.ParaAdd("@User_Name", result.name, SqlDbType.NVarChar)
+	main.ParaAdd("@email", "", SqlDbType.NVarChar)
+	main.ParaAdd("@User_Type", 2, SqlDbType.Int)
+	main.ParaAdd("@AccessToken", context.Session("AccessToken").ToString(), SqlDbType.NVarChar)
+
+	str = "Select IDNo from Users where fbId=@fbId"
+	main.Scalar(str)
+
+	If main.Scalar(str) = "" Then
+		str = "if not exists (select * from Users where fbId=@fbId) " + "Insert into Users (fbId,User_Name,Account,User_Type,AccessToken) values (@fbId,@User_Name,@email,@User_Type,@AccessToken)"
+		main.NonQuery(str)
+	Else
+		str = "Update Users set AccessToken=@AccessToken where fbId=@fbId"
+		main.NonQuery(str)
+	End If
+	str = "Select IDNo from  Users where fbId=@fbId"
+	context.Session("IDNo") = main.Scalar(str)
+
+
+	context.Response.Write("<script type=text/javascript> window.parent.location.href ='Default.aspx' </script>")
+End Sub

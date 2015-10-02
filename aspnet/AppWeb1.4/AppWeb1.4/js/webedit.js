@@ -34,6 +34,12 @@ $(document).ready(function () {
                 alert('onClosed: colorbox has completely closed');
             }
         });
+
+        $("#pageNav").mCustomScrollbar({
+            theme: "light-thick"
+        });
+
+
     });
 
  
@@ -60,7 +66,7 @@ $(document).ready(function () {
         for (var i = 0; i <= $("#list").sortable('toArray').length; i++) //判斷使用者目前點到哪一頁
         {
             $("#list>li:nth-child(" + (i + 1) + ")").removeClass("active");
-            if (($("#list").sortable('toArray')[i]).toString().replace("s", "") == id) { 
+            if ($("#list").sortable('toArray')[i].toString().replace("s", "") == id) { 
                 c = i; //當前頁數上下頁功能使用
                 $("#list>li:nth-child(" + (i + 1) + ")").addClass("active");
             }
@@ -79,21 +85,12 @@ $(document).ready(function () {
             case "p03.aspx":
                 HH = 378;
                 break;
-            case "/basicp03.aspx":
-                HH = 378;
-                break;
             case "p04.aspx":
                 HH = 568;
                 if (Img == 2 || Img == 3) {
                     WD = 320;
                 }
                 break;
-            case "/basicp04.aspx":
-                HH = 568;
-                if (Img == 2 || Img == 3) {
-                    WD = 320;
-                }
-                break; 
         }
        
         document.getElementById("iframe-ed1").src = "Pages/AUL.aspx?UPID=" + id + "&Page=" + thisPageUrl + "&Img=" + Img + "&w=" + WD + "&h=" + HH;
@@ -104,12 +101,18 @@ $(document).ready(function () {
         document.getElementById("iframe-ed1").src = "Pages/wordEdit.aspx?UPID=" + id + "&Page=" + thisPageUrl + "&text=" + text;
     }
 
-    function forcus() { 
+    function forcus() {
+        $("#pageNav").mCustomScrollbar({
+            theme: "light-thick"
+        });
         var $div = $('#pageNav');
         $div.scrollTop($div[0].scrollHeight)
     }
 
     function forcusTOP() {
+        $("#pageNav").mCustomScrollbar({
+            theme: "light-thick"
+        });
         //增加forcus() 刪掉forcusTOP() 手機畫面跳轉第一個
         document.getElementById("midiframe").src = "pages/cover.htm";
         c = 0;
@@ -136,8 +139,8 @@ $(document).ready(function () {
             $(".demonstrate").hide();
         });
         $("#preview").click(function () {
-                 document.getElementById("iframe-set").src = document.getElementById("iframe-set").src; 
-            $("#iappgb").hide();
+            document.getElementById("iframe-set").src = document.getElementById("iframe-set").src; 
+            $("#HLogo").hide();
             $(".edit").hide();
             $(".select").hide();
             $("#MIDHIDE").hide();
@@ -150,7 +153,7 @@ $(document).ready(function () {
             $(".logo").show();
         });
         $("#return").click(function () {
-            $("#iappgb").show();
+            $("#HLogo").show();
             $(".edit").hide();
             $(".select").show();
             $("#pageNav").show();
@@ -201,8 +204,9 @@ $(document).ready(function () {
         });
 
         $("#shareline").click(function () {
-            SendAjax('http://www.iapp-media.com/act/share.aspx?to=3&i=' + getQValue("i"));
-            window.open('http://line.naver.jp/R/msg/text/?' + $("#final").text(), '_blank', openOption);
+            alert("很抱歉，目前Line只在行動端支援！");
+            //SendAjax('http://www.iapp-media.com/act/share.aspx?to=3&i=' + getQValue("i"));
+            //window.open('http://line.naver.jp/R/msg/text/?' + $("#final").text(), '_blank', openOption);
         });
 
 

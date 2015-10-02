@@ -109,74 +109,6 @@
     <Content Include="Apps\img\sharetwitter.png" />
     <Content Include="Apps\js\detectmobilebrowser.js" />
     <Content Include="Apps\js\index.js" />
-    <Content Include="Apps\Me2\css\action.css" />
-    <Content Include="Apps\Me2\css\animate.css" />
-    <Content Include="Apps\Me2\css\cropper.css" />
-    <Content Include="Apps\Me2\css\index.css" />
-    <Content Include="Apps\Me2\css\m-set.css" />
-    <Content Include="Apps\Me2\css\m-setshare.css" />
-    <Content Include="Apps\Me2\css\maker.css" />
-    <Content Include="Apps\Me2\css\mobileEditor.css" />
-    <Content Include="Apps\Me2\css\processBar.css" />
-    <Content Include="Apps\Me2\css\reset.css" />
-    <Content Include="Apps\Me2\css\slide.css" />
-    <Content Include="Apps\Me2\img\114.png" />
-    <Content Include="Apps\Me2\img\ajax-loader.gif" />
-    <Content Include="Apps\Me2\img\bg.jpg" />
-    <Content Include="Apps\Me2\img\cancel-01.png" />
-    <Content Include="Apps\Me2\img\cancel-1.png" />
-    <Content Include="Apps\Me2\img\create.png" />
-    <Content Include="Apps\Me2\img\default-icon.png" />
-    <Content Include="Apps\Me2\img\dot1.png" />
-    <Content Include="Apps\Me2\img\dot2.png" />
-    <Content Include="Apps\Me2\img\fb.png" />
-    <Content Include="Apps\Me2\img\iapplogo.png" />
-    <Content Include="Apps\Me2\img\icon_up.png" />
-    <Content Include="Apps\Me2\img\lastpg-word.png" />
-    <Content Include="Apps\Me2\img\linebutton_30x30_zh-hant.png" />
-    <Content Include="Apps\Me2\img\logo.png" />
-    <Content Include="Apps\Me2\img\logo2.png" />
-    <Content Include="Apps\Me2\img\p1.jpg" />
-    <Content Include="Apps\Me2\img\p2.jpg" />
-    <Content Include="Apps\Me2\img\p3-1.jpg" />
-    <Content Include="Apps\Me2\img\p3-2.jpg" />
-    <Content Include="Apps\Me2\img\p3-3.jpg" />
-    <Content Include="Apps\Me2\img\p4-1.jpg" />
-    <Content Include="Apps\Me2\img\p4-2.jpg" />
-    <Content Include="Apps\Me2\img\p4-3.jpg" />
-    <Content Include="Apps\Me2\img\p5.jpg" />
-    <Content Include="Apps\Me2\img\p6.jpg" />
-    <Content Include="Apps\Me2\img\page3-4.jpg" />
-    <Content Include="Apps\Me2\img\preview-1.png" />
-    <Content Include="Apps\Me2\img\preview-2.png" />
-    <Content Include="Apps\Me2\img\qr.jpg" />
-    <Content Include="Apps\Me2\img\send-1.png" />
-    <Content Include="Apps\Me2\img\send-2.png" />
-    <Content Include="Apps\Me2\img\share.png" />
-    <Content Include="Apps\Me2\img\sharefb.png" />
-    <Content Include="Apps\Me2\img\shareline.png" />
-    <Content Include="Apps\Me2\img\sharetwitter.png" />
-    <Content Include="Apps\Me2\img\status.gif" />
-    <Content Include="Apps\Me2\img\upload.gif" />
-    <Content Include="Apps\Me2\img\uploadicon.png" />
-    <Content Include="Apps\Me2\js\analytics.js" />
-    <Content Include="Apps\Me2\js\base.js" />
-    <Content Include="Apps\Me2\js\cropper.js" />
-    <Content Include="Apps\Me2\js\exif.js" />
-    <Content Include="Apps\Me2\js\index.js" />
-    <Content Include="Apps\Me2\js\JIC.js" />
-    <Content Include="Apps\Me2\js\jquery-1.11.3.min.js" />
-    <Content Include="Apps\Me2\js\jquery.min.js" />
-    <Content Include="Apps\Me2\js\maker.js" />
-    <Content Include="Apps\Me2\js\mobileEditor.js" />
-    <Content Include="Apps\Me2\js\post.js" />
-    <Content Include="Apps\Me2\js\preview.js" />
-    <Content Include="Apps\Me2\js\share.js" />
-    <Content Include="Apps\Me2\js\toParse.js" />
-    <Content Include="Apps\Me2\js\touch.js" />
-    <Content Include="Apps\Me2\js\zepto.min.js" />
-    <Content Include="Apps\Me2\maker.html" />
-    <Content Include="Apps\Me2\maker2.aspx" />
     <Content Include="Apps\ME\cApp.aspx" />
     <Content Include="Apps\ME\css\action.css" />
     <Content Include="Apps\ME\css\animate.css" />
@@ -189,6 +121,7 @@
     <Content Include="Apps\ME\css\reset.css" />
     <Content Include="Apps\ME\css\set-m.css" />
     <Content Include="Apps\ME\css\slide.css" />
+    <Content Include="css\jquery.mCustomScrollbar.min.css" />
     <Content Include="css\preview.css" />
     <Content Include="delete\apps\FBShare.aspx" />
     <Content Include="Apps\ME\img\114.png" />
@@ -282,6 +215,7 @@
     <Content Include="css\uploadfile.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="img\114.png" />
+    <Content Include="img\ajax-loader.gif" />
     <Content Include="img\bgimg.png" />
     <Content Include="img\cancel.png" />
     <Content Include="img\Collect-1.png" />
@@ -442,6 +376,7 @@
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery.colorbox-min.js" />
     <Content Include="js\jquery.colorbox.js" />
+    <Content Include="js\jquery.mCustomScrollbar.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.slideshow.min.js" />
     <Content Include="js\jquery.uploadfile.min.js" />
@@ -463,8 +398,8 @@
     <Content Include="Pages\p05.aspx" />
     <Content Include="Pages\p06.aspx" />
     <Content Include="Pages\see.aspx" />
-    <Content Include="Pages\test.aspx" />
-    <Content Include="Pages\upload.html" />
+    <Content Include="delete\pages\test.aspx" />
+    <Content Include="delete\pages\upload.html" />
     <Content Include="js\webedit.js" />
     <Content Include="Pages\wordEdit.aspx" />
     <Content Include="Setting1.aspx" />
@@ -477,13 +412,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apps\Me2\maker2.aspx.designer.vb">
-      <DependentUpon>maker2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Apps\Me2\maker2.aspx.vb">
-      <DependentUpon>maker2.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Apps\ME\cApp.aspx.designer.vb">
       <DependentUpon>cApp.aspx</DependentUpon>
     </Compile>
@@ -664,10 +592,10 @@
       <DependentUpon>see.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Pages\test.aspx.designer.vb">
+    <Compile Include="delete\pages\test.aspx.designer.vb">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\test.aspx.vb">
+    <Compile Include="delete\pages\test.aspx.vb">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -728,7 +656,6 @@
   <ItemGroup>
     <Content Include="bin\Facebook.dll.refresh" />
     <Content Include="Apps\ME\img\Thumbs.db" />
-    <Content Include="Apps\Me2\img\Thumbs.db" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

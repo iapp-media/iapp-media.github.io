@@ -21,6 +21,7 @@ public partial class User_App : System.Web.UI.Page
             }
             Main.FillDDP(DL_User, "select * from users", "user_name", "idno");
 
+            select();
         }
         SD.ConnectionString = Main.ConnStr;
         SD.SelectCommand = L.Text;
@@ -34,6 +35,10 @@ public partial class User_App : System.Web.UI.Page
         if (e.CommandName == "Del")
         {
             Main.NonQuery("Delete from User_Page where IDNo=" + GV.DataKeys[i][0].ToString() + "");
+        } 
+        if (e.CommandName == "CN")
+        {
+            Response.Redirect("IApp_Add.aspx?entry=" + GV.DataKeys[i][0].ToString());
         }
     }
     protected void GV_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -64,6 +69,10 @@ public partial class User_App : System.Web.UI.Page
         if (DL_User.SelectedValue.ToString() != "")
         {
             L.Text += " and User_ID='" + DL_User.SelectedValue.ToString() + "'";
+        }
+        else {
+            L.Text += " and User_ID in (Select IDNo from Users where IsChannel=1)";
+        
         }
         SD.ConnectionString = Main.ConnStr;
         SD.SelectCommand = L.Text;

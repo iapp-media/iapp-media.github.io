@@ -53,7 +53,7 @@ namespace Login
             {
                 TID = Main.Scalar("Select Theme_ID from User_App where IDNo=" + Request.QueryString["c"]);
                 ThemeFolder = Main.Scalar("Select FoderName from Theme where IDNo=" + TID);
-                Response.Write("<Script>window.open('" + Comm.URL + ThemeFolder + "Apps/Me/capp.aspx?i=" + Request.QueryString["c"] + "','_self')</Script>");
+                Response.Write("<Script>window.open('" + Comm.URL + ThemeFolder + "/Apps/Me/capp.aspx?i=" + Request.QueryString["c"] + "','_self')</Script>");
             }
             else
             {

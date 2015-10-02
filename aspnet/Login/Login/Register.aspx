@@ -35,7 +35,7 @@
                         <tr>
                             <td>帳號</td>
                             <td>
-                                <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="Email" runat="server" placeholder="Email"></asp:TextBox>
                             </td>
                             <td>
                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>

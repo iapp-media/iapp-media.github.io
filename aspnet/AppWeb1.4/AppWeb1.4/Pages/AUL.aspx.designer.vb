@@ -66,13 +66,4 @@ Partial Public Class AUL
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
     Protected WithEvents TS As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''PDialog 控制項。
-    '''</summary>
-    '''<remarks>
-    '''自動產生的欄位。
-    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-    '''</remarks>
-    Protected WithEvents PDialog As Global.System.Web.UI.WebControls.Image
 End Class

@@ -1,0 +1,494 @@
+﻿@media screen and (min-width: 768px) and (max-width: 979px) {
+    /*.ifram_css {
+        width: 100%;
+        height: 510px;
+        margin: 10px 0 0 0;
+    }*/
+
+    h2 {
+        width: 100%;
+    }
+
+    .inside_Table {
+        width: 100%;
+    }
+
+    .borderWidth {
+        width: 100%;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    .d_left {
+        width: 100%;
+    }
+
+    .d_right {
+        width: 100%;
+    }
+
+    .downmenu_display {
+        display: none;
+    }
+
+    .Lmarq {
+        width: 100%;
+    }
+
+    .LDate {
+        display: none;
+    }
+
+    .H_option {
+        display: none;
+    }
+
+    .H_Search {
+        display: none;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .new_nav {
+        display: block;
+    }
+
+    .footerAll {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer_1 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        height:100%;
+    }
+
+    .footer_2 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .footer_3 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .d_left {
+        float: none;
+    }
+
+    .ENDBO {
+        width: 100%;
+        display: none;
+    }
+
+    .hotlink {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+        .r_top {
+        width:100%;
+    }
+    .r_td_Cdown {
+         width:90%;
+    }
+    .r_td_title {
+        width:90%;
+    }
+    .r_ltd {
+        margin: 0 0 0 0;
+        background-color:#000;
+    }
+    .r_table {
+        margin:0 0 15px 0;
+        padding:0 15px 0 15px;
+    }
+     .widnow_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+        margin-bottom:15px;
+    }
+
+    .time_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    .look_div {
+        float: none;
+        width: 100%;
+       padding: 0 0 0 0;
+       margin-bottom:15px;
+    }
+
+    .Calendar_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+        .op_ldiv {
+        padding-top: 34px;
+    }
+    .ifram_css {
+        width: 100%;
+        height: 300px;
+        margin: 10px 0 0 0;
+    }
+
+    .UpDatebg {
+        display: none;
+    }
+
+    h2 {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .inside_Table {
+        width: 100%;
+    }
+
+    .op_centerH {
+        height: 100%;
+    }
+
+    .newul li {
+        width: 20%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .borderWidth {
+        width: 100%;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    .d_left {
+        width: 100%;
+    }
+
+    .d_right {
+        width: 100%;
+    }
+
+    .downmenu_display {
+        display: none;
+    }
+
+    .ENDBO {
+        width: 100%;
+        display: none;
+    }
+
+    .hotlink {
+        display: block;
+    }
+
+    .footerAll {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .Lmarq {
+        width: 100%;
+margin:22px 0 0 0;
+    }
+
+    .LDate {
+        display: none;
+    }
+
+    .H_option {
+        display: none;
+    }
+
+    .H_Search {
+        display: none;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .new_nav {
+        display: block;
+    }
+
+    .footer_1 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        height:100%;
+    }
+
+    .footer_2 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .footer_3 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .sitpcss {
+        width: 100%;
+        z-index: 5;
+        margin: 20px 0 15px 15px;
+        text-align: left;
+        padding: 1px 1px 1px 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+    .op_ldiv {
+        padding-top: 34px;
+    }
+    .r_top {
+        width:100%;
+    }
+    .r_td_Cdown {
+         width:90%;
+    }
+    .r_td_title {
+        width:90%;
+    }
+    .r_ltd {
+        margin: 0 0 0 0;
+        background-color:#000;
+    }
+    .r_table {
+        margin:0 0 15px 0;
+        padding:0 15px 0 15px;
+    }
+        .ifram_css {
+        width: 100%;
+        height: 150px;
+        margin: 10px 0 0 0;
+    }
+
+    .UpDatebg {
+        display: none;
+    }
+
+    h2 {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .inside_Table {
+        width: 100%;
+    }
+
+    .op_centerH {
+        height: 100%;
+    }
+    /*.inside_main_header {
+        background-image:none;
+    }
+    .inside_main_body {
+        background-image:none;
+    }
+    .inside_main_foot {
+        background-image:none;
+    }*/
+    .imgul li {
+        width: 100%;
+    }
+
+    .widnow_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+        margin-bottom:15px;
+    }
+
+    .time_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    .look_div {
+        float: none;
+        width: 100%;
+       padding: 0 0 0 0;
+       margin-bottom:15px;
+    }
+
+    .Calendar_div {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+
+
+    /*.op_display {
+        display: none;
+    }*/
+
+    .newul li {
+        width: 25%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .borderWidth {
+        width: 100%;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    .d_left {
+        width: 100%;
+    }
+
+    .d_right {
+        width: 100%;
+    }
+
+    .downmenu_display {
+        display: none;
+    }
+
+    .ENDBO {
+        width: 100%;
+        display: none;
+    }
+
+    .hotlink {
+        display: block;
+    }
+
+    .footerAll {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .Lmarq {
+        width: 100%;
+margin:20px 0 0 0;
+    }
+
+    .LDate {
+        display: none;
+    }
+
+    .H_option {
+        display: none;
+    }
+
+    .H_Search {
+        display: none;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .new_nav {
+        display: block;
+    }
+
+    .footer_1 {
+
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        height:100%;
+        padding: 10PX 10PX 10PX 10PX;
+    }
+
+    .footer_2 {
+
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .footer_3 {
+        margin: 0 auto 15px auto;
+        float: none;
+        width: 60%;
+        padding: 10PX 10PX 10PX 10PX;
+        text-align: center;
+    }
+
+    .sitpcss {
+        width: 100%;
+        z-index: 5;
+        margin: 20px 0 15px 15px;
+        text-align: left;
+        padding: 1px 1px 1px 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .d_logo {
+        width:100%;
+        height:100%;
+    }
+    #lv3menu {
+        width:100%;
+       
+    }
+    #lv3menu ul
+{ 
+    list-style-type: none;  
+    overflow: hidden;
+    margin:15px 0 1em 5px;
+    padding:0;
+	overflow:hidden;
+	white-space: nowrap; 
+    
+}
+    #lv3menu ul li {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+    }
+}

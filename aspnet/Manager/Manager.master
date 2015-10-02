@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>iApp後台管理系統</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/metisMenu.min.css" rel="stylesheet" />
     <link href="css/Ys-template.css" rel="stylesheet" />
@@ -148,10 +148,13 @@
                                 <a href="User_App.aspx"><i class="fa fa-bar-chart-o fa-fw"></i>iApp管理</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-table fa-fw"></i>Page管理</a><%--PageManager.aspx--%>
+                                <a href="PageManager.aspx"><i class="fa fa-table fa-fw"></i>Page管理</a><%--PageManager.aspx--%>
                             </li>
                                                         <li>
                                 <a href="User_List.aspx"><i class="fa fa-edit fa-fw"></i>使用者管理</a>
+                            </li>
+                                        <li>
+                                <a href="IApp_Add.aspx"><i class="fa fa-plus fa-fw"></i>(channel)新增IAPP</a>
                             </li>
                            <%-- <li>
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>none<span class="fa arrow"></span></a>
