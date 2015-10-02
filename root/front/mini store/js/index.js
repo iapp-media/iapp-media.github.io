@@ -1,156 +1,3 @@
-//
-
-// var death_rate = [['阿魯',24.26],['阿米',17.48],['阿足',10.01],['小明',5.84]];
-// var root = d3.select(".D3").select("ul");
-// console.log(root);
-
-
-// var data = [11, 23, 34, 20, 100, 45];
-// var weekday = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-// var maxData = _.max(data);
-
-// var x = d3.scale.linear()
-//     .domain([0, d3.max(data)])
-//     .range([0, 400]);
-
-// d3.select('.D3').select('ul')
-//     .data(data)
-//     .enter()
-//     .append('li')
-//     .html(function(d, i) {
-//         var day = i > 7 ? Math.floor((i - 1) % 7) : i - 1;
-//         return '<a href="' + weekday[i] + '"> ' + weekday[day] + ': ' + d + '</a>';
-//     })
-//     .transition()
-//     .duration(2000)
-//     .delay(function(d, i) {
-//         return i * 10;
-//     })
-//     .style('width', function(d) {
-//         return x(d) + 'px';
-//     })
-//     .style('background-color', function(d) {
-//         return d > maxData * .5 ? 'red' : 'orange';
-//     })
-
-
-
-
-//手指觸碰
-
-// var IMG_WIDTH = 500;
-// var currentImg = 0;
-// var maxImages = 3;
-// var speed = 500;
-
-// var imgs;
-
-// var swipeOptions = {
-//     triggerOnTouchEnd: true,
-//     swipeStatus: swipeStatus,
-//     allowPageScroll: "vertical",
-//     threshold: 75
-// };
-
-// $(function() {
-//     imgs = $("#imgs");
-//     imgs.swipe(swipeOptions);
-// });
-
-
-/**
- * Catch each phase of the swipe.
- * move : we drag the div
- * cancel : we animate back to where we were
- * end : we animate to the next image
- */
-// function swipeStatus(event, phase, direction, distance) {
-//     //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
-//     if (phase == "move" && (direction == "left" || direction == "right")) {
-//         var duration = 0;
-
-//         if (direction == "left") {
-//             scrollImages((IMG_WIDTH * currentImg) + distance, duration);
-//         } else if (direction == "right") {
-//             scrollImages((IMG_WIDTH * currentImg) - distance, duration);
-//         }
-
-//     } else if (phase == "cancel") {
-//         scrollImages(IMG_WIDTH * currentImg, speed);
-//     } else if (phase == "end") {
-//         if (direction == "right") {
-//             previousImage();
-//         } else if (direction == "left") {
-//             nextImage();
-//         }
-//     }
-// }
-
-// function previousImage() {
-//     currentImg = Math.max(currentImg - 1, 0);
-//     scrollImages(IMG_WIDTH * currentImg, speed);
-// }
-
-// function nextImage() {
-//     currentImg = Math.min(currentImg + 1, maxImages - 1);
-//     scrollImages(IMG_WIDTH * currentImg, speed);
-// }
-
-// /**
-//  * Manually update the position of the imgs on drag
-//  */
-// function scrollImages(distance, duration) {
-//     imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
-
-//     //inverse the number we set in the css
-//     var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
-//     imgs.css("transform", "translate(" + value + "px,0)");
-// }
-
-$(document).ready(function() {
-    swipeScreen()
-});
-
-function swipeScreen() {
-
-    $('#swipe').on('mousedown touchstart', function(e) {
-
-        var touch = e.originalEvent.touches,
-            start = touch ? touch[0].pageX : e.pageX,
-            difference;
-
-        $(this).on('mousemove touchmove', function(e) {
-
-            var contact = e.originalEvent.touches,
-                end = contact ? contact[0].pageX : e.pageX;
-            difference = end - start;
-            if (difference == 0) {
-                $('#swipe').animate({
-                    left: 0
-                }, 1000);
-            }
-            if (difference < -30) {
-                $('#swipe').stop().animate({
-                    left: '-37%'
-                }, 1000);
-            }
-            if (difference > 30) {
-                $('#swipe').stop().animate({
-                    left: '37%'
-                }, 1000);
-            }
-        });
-
-        $(window).one('mouseup touchend', function(e) {
-            e.preventDefault();
-            $('#log').text(difference);
-            $('#swipe').off('mousemove touchmove');
-        });
-
-        e.preventDefault();
-    });
-}
-
 //觸發
 
 $(document).ready(function() {
@@ -209,12 +56,11 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
-}); // 觸發 end
 
-//頁面ajax
-$(function() {
+    //頁面ajax
 
     // if click img
+
     $('.item-pic').click(function() {
         $('.menuAJAX li:nth-child(1)').addClass('fadeInRight');
         $('.product,.allClassification').addClass('movecss').fadeOut(function() {
@@ -245,6 +91,7 @@ $(function() {
     });
 
     // if click buyButton
+    
     $('.buy').click(function() {
         $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
         $('.product,.allClassification').addClass('movecss').fadeOut(function() {
@@ -265,19 +112,37 @@ $(function() {
             });
         });
     });
-});
 
-// 頁面AJAX
-$('.mobilemenumove li').click(function() {
-    var clickindex = $(this).index();
-    console.log(clickindex);
-    $('.allmodify').eq(clickindex).fadeIn().siblings().fadeOut();
-});
+    // menu swipe
+
+    $(function() {
+        //Enable swiping...
+        $(".allClassification").swipe({
+            //Generic swipe handler for all directions
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                $('.swiper-wrapper li').each(function(e) {
+                    if ($(this).hasClass('swiper-slide-active')) {
+                        var swipeindex = $(this).index();
+                        $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
+                    }
+                })
+            },
+             threshold: 0
+        });
+    });
 
 
-//瀑布流
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 0,
+        grabCursor: true,
 
-$(function() {
+    });
+
+
+    //瀑布流
 
     var $container = $('#container');
 
@@ -317,4 +182,5 @@ $(function() {
             });
         }
     );
-}); //瀑布流 end
+
+});
