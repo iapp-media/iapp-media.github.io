@@ -107,6 +107,50 @@
 //     imgs.css("transform", "translate(" + value + "px,0)");
 // }
 
+$(document).ready(function() {
+    swipeScreen()
+});
+
+function swipeScreen() {
+
+    $('#swipe').on('mousedown touchstart', function(e) {
+
+        var touch = e.originalEvent.touches,
+            start = touch ? touch[0].pageX : e.pageX,
+            difference;
+
+        $(this).on('mousemove touchmove', function(e) {
+
+            var contact = e.originalEvent.touches,
+                end = contact ? contact[0].pageX : e.pageX;
+            difference = end - start;
+            if (difference == 0) {
+                $('#swipe').animate({
+                    left: 0
+                }, 1000);
+            }
+            if (difference < -30) {
+                $('#swipe').stop().animate({
+                    left: '-37%'
+                }, 1000);
+            }
+            if (difference > 30) {
+                $('#swipe').stop().animate({
+                    left: '37%'
+                }, 1000);
+            }
+        });
+
+        $(window).one('mouseup touchend', function(e) {
+            e.preventDefault();
+            $('#log').text(difference);
+            $('#swipe').off('mousemove touchmove');
+        });
+
+        e.preventDefault();
+    });
+}
+
 //觸發
 
 $(document).ready(function() {
