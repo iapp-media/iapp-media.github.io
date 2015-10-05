@@ -1,4 +1,4 @@
-.cancel-1 {
+.cancel-1-1 {
     width: 62px;
     height: 27px;
     background: url('../img/button-sprite-1.png');
@@ -8,12 +8,12 @@
     cursor: pointer;
 }
 
-.cancel-1:hover {
+.cancel-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 0 0;
 }
 
-.save-1 {
+.save-1-1 {
     width: 62px;
     height: 27px;
     background: url('../img/button-sprite-1.png');
@@ -23,12 +23,12 @@
     cursor: pointer;
 }
 
-.save-1:hover {
+.save-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -67px 0;
 }
 
-.register-1 {
+.register-1-1 {
     width: 62px;
     height: 27px;
     background: url('../img/button-sprite-1.png');
@@ -38,12 +38,12 @@
     cursor: pointer;
 }
 
-.register-1:hover {
+.register-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 1px -30px;
 }
 
-.login-1 {
+.login-1-1 {
     width: 62px;
     height: 27px;
     background: url('../img/button-sprite-1.png');
@@ -53,12 +53,12 @@
     cursor: pointer;
 }
 
-.login-1:hover {
+.login-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -66px -30px;
 }
 
-.edit-1 {
+.edit-1-1 {
     width: 62px;
     height: 29px;
     background: url('../img/button-sprite-1.png');
@@ -68,12 +68,12 @@
     cursor: pointer;
 }
 
-.edit-1:hover {
+.edit-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 0 -58px;
 }
 
-.delete-1 {
+.delete-1-1 {
     width: 62px;
     height: 29px;
     background: url('../img/button-sprite-1.png');
@@ -83,12 +83,12 @@
     cursor: pointer;
 }
 
-.delete-1:hover {
+.delete-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -69px -58px;
 }
 
-.setting-1 {
+.setting-1-1 {
     width: 62px;
     height: 29px;
     background: url('../img/button-sprite-1.png');
@@ -98,12 +98,12 @@
     cursor: pointer;
 }
 
-.setting-1:hover {
+.setting-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 0 -90px;
 }
 
-.share-1 {
+.share-1-1 {
     width: 62px;
     height: 29px;
     background: url('../img/button-sprite-1.png');
@@ -113,12 +113,12 @@
     cursor: pointer;
 }
 
-.share-1:hover {
+.share-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -69px -90px;
 }
 
-.create-1 {
+.create-1-1 {
     width: 135px;
     height: 44px;
     background: url('../img/button-sprite-1.png');
@@ -128,12 +128,12 @@
     cursor: pointer;
 }
 
-.create-1:hover {
+.create-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -133px 0;
 }
 
-.hotshare-1 {
+.hotshare-1-1 {
     width: 135px;
     height: 44px;
     background: url('../img/button-sprite-1.png');
@@ -143,12 +143,12 @@
     cursor: pointer;
 }
 
-.hotshare-1:hover {
+.hotshare-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -133px -45px;
 }
 
-.uploadimg-1 {
+.uploadimg-1-1 {
     width: 82px;
     height: 28px;
     background: url('../img/button-sprite-1.png');
@@ -158,7 +158,7 @@
     cursor: pointer;
 }
 
-.uploadimg-1:hover {
+.uploadimg-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -133px -92px;
 }
@@ -178,7 +178,7 @@
     background-position: -217px -92px;
 }
 
-.enter-1 {
+.enter-1-1 {
     width: 94px;
     height: 30px;
     background: url('../img/button-sprite-1.png');
@@ -188,12 +188,12 @@
     cursor: pointer;
 }
 
-.enter-1:hover {
+.enter-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 0 -121px;
 }
 
-.photocrop-1 {
+.photocrop-1-1 {
     width: 94px;
     height: 30px;
     background: url('../img/button-sprite-1.png');
@@ -203,12 +203,12 @@
     cursor: pointer;
 }
 
-.photocrop-1:hover {
+.photocrop-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -99px -121px;
 }
 
-.done-1 {
+.done-1-1 {
     width: 94px;
     height: 30px;
     background: url('../img/button-sprite-1.png');
@@ -218,12 +218,12 @@
     cursor: pointer;
 }
 
-.done-1:hover {
+.done-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -194px -121px;
 }
 
-.addapp-1 {
+.addapp-1-1 {
     width: 81px;
     height: 27px;
     background: url('../img/button-sprite-1.png');
@@ -233,12 +233,12 @@
     cursor: pointer;
 }
 
-.addapp-1:hover {
+.addapp-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: 0 -152px;
 }
 
-.select-1 {
+.select-1-1 {
     width: 98px;
     height: 23px;
     background: url('../img/button-sprite-1.png');
@@ -248,7 +248,121 @@
     cursor: pointer;
 }
 
-.select-1:hover {
+.select-1-1:hover {
     background: url('../img/button-sprite-2.png');
     background-position: -86px -152px;
+}
+
+
+/* button CSS */
+
+.cancel-1,
+.save-1,
+.register-1,
+.login-1,
+.edit-1,
+.delete-1,
+.setting-1,
+.share-1,
+.create-1,
+.hotshare-1,
+.uploadimg-1,
+.enter-1,
+.photocrop-1,
+.done-1,
+.addapp-1,
+.select-1 {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: normal;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 2px solid #FF9933;
+    padding: 3px 13px;
+    text-decoration: none;
+    color: #FF9933;
+    display: inline-block;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
+}
+
+
+/* small */
+
+.edit-1,
+.delete-1,
+.setting-1,
+.share-1 {
+    border: 2px solid #dbdbdb;
+    color: #9e9e9e;
+    padding: 3px 12px;
+}
+
+
+/* medium */
+
+.uploadimg-1 {
+    padding: 3px 12px;
+    background-color: #ff9933;
+    color: #fff;
+}
+
+.enter-1,
+.photocrop-1,
+.done-1 {
+    padding: 2px 28px;
+    font-size: 22px;
+}
+
+.done-1 {
+    border-color: #dbdbdb;
+    color: #9e9e9e;
+}
+
+
+/* big */
+
+.create-1,
+.hotshare-1 {
+    padding: 7px 28px;
+    font-size: 20px;
+}
+
+
+/* hoverGray */
+
+.edit-1:hover,
+.delete-1:hover,
+.setting-1:hover,
+.share-1:hover,
+.done-1:hover {
+    color: #fff;
+    background-color: #aaa;
+    border-color: #aaa;
+}
+
+
+/* Upload button */
+
+.uploadimg-1:hover {
+    background-color: #e57200;
+    color: #fff;
+    border-color: #e57200;
+}
+
+
+/* hoverOrange */
+
+.cancel-1:hover,
+.save-1:hover,
+.register-1:hover,
+.login-1:hover,
+.create-1:hover,
+.hotshare-1:hover,
+.photocrop-1:hover,
+.enter-1:hover,
+.addapp-1:hover,
+.select-1:hover {
+    background-color: #ff9933;
+    color: #fff;
 }
