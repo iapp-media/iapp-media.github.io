@@ -23,13 +23,13 @@ Partial Public Class wordEdit
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''txtEditor 控制項。
+    '''LTextED 控制項。
     '''</summary>
     '''<remarks>
     '''自動產生的欄位。
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
-    Protected WithEvents txtEditor As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents LTextED As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
     '''send 控制項。
@@ -39,4 +39,13 @@ Partial Public Class wordEdit
     '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
     '''</remarks>
     Protected WithEvents send As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''EDval 控制項。
+    '''</summary>
+    '''<remarks>
+    '''自動產生的欄位。
+    '''將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+    '''</remarks>
+    Protected WithEvents EDval As Global.System.Web.UI.WebControls.TextBox
 End Class
