@@ -43,6 +43,33 @@
 }
 
 
+/* BUTTON UI */
+
+.buy {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: normal;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 2px solid #FF9933;
+    padding: 8px 17px;
+    text-decoration: none;
+    color: #FF9933;
+    display: inline-block;
+}
+
+.buy:hover {
+    background-color: #ff9933;
+    color: #fff;
+}
+
+.buy:active {
+    position: relative;
+    top: 1px;
+}
+
+
 /* link CSS UI */
 
 .mart10 {
