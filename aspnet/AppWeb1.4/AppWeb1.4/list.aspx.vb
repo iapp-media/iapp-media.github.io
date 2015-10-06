@@ -104,8 +104,8 @@ Public Class list
             Dim LL3 As Literal = e.Item.FindControl("L3")
             str = "Select Theme_ID from User_App where IDNo=" & LK.Text
             Dim Theme_ID As String = Main.Scalar(str)
-            LL.Text = "<a href=""default.aspx?i=" & LK.Text & """ target=""_top"" class=""edit""></a>" '編輯
-            LL3.Text = "<a href=""setting1.aspx?i=" & LK.Text & """ class=""set""></a>" '設定
+            LL.Text = "<a href=""default.aspx?i=" & LK.Text & """ target=""_top"" class=""edit-1"">編輯</a>" '編輯
+            LL3.Text = "<a href=""setting1.aspx?i=" & LK.Text & """ class=""setting-1"">設定</a>" '設定
         End If
     End Sub
 

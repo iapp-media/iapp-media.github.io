@@ -13,7 +13,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="content"> 
-            <asp:LinkButton ID="LBNew" runat="server" CssClass="add"></asp:LinkButton> <%--增加App--%>
+            <asp:LinkButton ID="LBNew" runat="server" CssClass="addapp-1" Text="增加iApp"></asp:LinkButton> <%--增加App--%>
             <div class="title">
                 <p>我的iApp</p>
                 <div class="bar1"></div>
@@ -31,9 +31,9 @@
                                     <asp:Literal ID="LKey" runat="server" Visible="false" Text='<%# Bind("IDNo") %>'></asp:Literal>
 
                                     <asp:Literal ID="L2" runat="server"></asp:Literal>
-                                    <asp:LinkButton ID="LB2" runat="server" CommandName="CN2" CssClass="delete" Text=""></asp:LinkButton><%--刪除--%>
+                                    <asp:LinkButton ID="LB2" runat="server" CommandName="CN2" CssClass="delete-1" Text="刪除"></asp:LinkButton><%--刪除--%>
                                     <asp:Literal ID="L3" runat="server"></asp:Literal>
-                                    <asp:LinkButton ID="LB3" runat="server" CommandName="CN3" CssClass="share" Text=""></asp:LinkButton><%--分享--%>
+                                    <asp:LinkButton ID="LB3" runat="server" CommandName="CN3" CssClass="share-1" Text="分享"></asp:LinkButton><%--分享--%>
                                     <div class="bar2"></div>
                                 </li>
                             </ItemTemplate>
