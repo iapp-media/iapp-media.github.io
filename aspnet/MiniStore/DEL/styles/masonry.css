@@ -1,0 +1,209 @@
+    #infscr-loading {
+        text-align: center;
+        z-index: 100;
+        position: fixed;
+        margin-left: 40%;
+        bottom: 40px;
+        width: 200px;
+        padding: 10px;
+        background: #000;
+        opacity: 0.8;
+        color: #FFF;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .style{
+        background-color: #fff;
+        width: 210px;
+        height: 50px;
+    }
+    .imgcenter {
+        text-align: center;
+    }
+    .clearbox {
+        clear: both;
+    }
+    .item {
+        background: #fff;
+        border-radius: 5px;
+        width: 210px;
+        float: left;
+        padding-bottom: 5px;
+        border: 1px solid #ddd;
+        margin: 5px;
+    }
+    .item-pic{
+        position: relative;
+        width: 208px;
+        max-height: 330px;
+        border-bottom: 1px solid #ddd;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .item-bar{
+        visibility: hidden;
+        position: absolute;
+        top: 1%;left: 0%;
+        width: 100%;
+        opacity: 0.8;
+        text-align:left;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .imgcenter:hover .item-bar{
+        visibility: visible;
+    }
+    .item-bar p{
+        display: inline;
+    }
+
+    .item-bar .good{
+        display: inline;
+        padding: 2px 5px 2px 5px;
+        color: #fff;
+    }
+    .item-bar .heart{
+        display: inline;
+        padding: 2px 5px 2px 5px;
+        color: #fff;
+    }
+    .item-bar .star{
+        position: absolute;
+        left: 85%;
+        padding: 2px 5px 2px 5px;
+        color: #fff;
+    }
+    #container {
+        margin: 60px 10px 10px 10px;  
+        clear: both; 
+    }
+    .describe {
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        padding-left:10px; 
+        padding-bottom: 10px;
+        font-size: 9pt; 
+    }
+    .circle{
+        position: relative;
+        left: -2%;
+        width:35px;height:35px;
+        border-radius:99em;
+        border: 1px solid #ddd;
+    }
+    .iapp-name{
+        display: inline;
+        padding-left:0px;
+        font-size: 15px;
+        color: #323232;
+    }
+    .author{
+        display: inline;
+        text-align: left;
+        padding-left:10px;
+        color: #aaa;
+    }
+    @media only screen and (min-width:481px) and (max-width:768px) {
+        #container {
+        margin-top: 15%;
+        margin-left: 3%;
+        }
+        .item {
+        width: 203px;
+        float: left;
+        padding: 0px;
+        margin: 1%;
+        }
+        .item-pic{
+        max-width: 200px;
+        max-height: 336px;
+        position: relative;
+        }
+        .item-bar p{
+        display: inline;
+        }
+        .item-bar{
+            visibility: visible;
+        }
+        .item-bar .good{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .heart{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .star{
+            position: absolute;
+            top: 1%;
+            left: 82%;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+    }
+    @media only screen and (max-width:480px){
+        #container {
+        margin-top: 20%;
+        margin-left: 5%;
+        }
+        .item {
+        width: 133px;
+        float: left;
+        padding: 0px;
+        margin: 1%;
+        }
+        .item-pic{
+        max-width: 130px;
+        max-height: 236px;
+        position: relative;
+        }
+        .circle{
+        position: relative;
+        left: -2%;
+        width:28px;height:28px;
+        border-radius:99em;
+        border: 1px solid #ddd;
+        }
+        .iapp-name{
+        display: inline;
+        padding-left:0px;
+        font-size: 13px;
+        }
+        .author{
+            font-size: 10px;
+        }
+        .item-bar p{
+        display: inline;
+        }
+        .item-bar{
+            visibility: visible;
+        }
+        .item-bar .good{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .heart{
+            display: inline;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        .item-bar .star{
+            position: absolute;
+            top: 1%;
+            left: 82%;
+            padding: 2px 5px 2px 5px;
+            color: #fff;
+            font-size: 10px;
+        }
+        
