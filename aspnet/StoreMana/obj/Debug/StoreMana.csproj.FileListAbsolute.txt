@@ -1,0 +1,16 @@
+D:\DataYi\AppWeb\StoreMana\StoreMana\bin\StoreMana.dll
+D:\DataYi\AppWeb\StoreMana\StoreMana\bin\StoreMana.pdb
+D:\DataYi\AppWeb\StoreMana\StoreMana\bin\JustyLibrary.dll
+D:\DataYi\AppWeb\StoreMana\StoreMana\bin\ThoughtWorks.QRCode.dll
+D:\DataYi\AppWeb\StoreMana\StoreMana\bin\JustyLibrary.pdb
+D:\DataYi\AppWeb\StoreMana\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
+D:\DataYi\AppWeb\StoreMana\StoreMana\obj\Debug\StoreMana.dll
+D:\DataYi\AppWeb\StoreMana\StoreMana\obj\Debug\StoreMana.pdb
+D:\DataYi\AppWeb\StoreMana\bin\StoreMana.dll
+D:\DataYi\AppWeb\StoreMana\bin\StoreMana.pdb
+D:\DataYi\AppWeb\StoreMana\bin\JustyLibrary.dll
+D:\DataYi\AppWeb\StoreMana\bin\ThoughtWorks.QRCode.dll
+D:\DataYi\AppWeb\StoreMana\bin\JustyLibrary.pdb
+D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
+D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.dll
+D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.pdb

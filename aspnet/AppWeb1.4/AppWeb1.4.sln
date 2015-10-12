@@ -57,13 +57,17 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Store", "..\Store", "{B0A96
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login\Login.csproj", "{52428729-D249-4797-A36D-3DB74DA165D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore", "..\MiniStore\MiniStore\MiniStore.csproj", "{D11616BD-366B-42FD-AA12-E2CACE28936E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Act", "..\Act\Act\Act.csproj", "{06F20E11-9E03-4114-A856-C07E923AD272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wedding", "..\Wedding\Wedding.csproj", "{E532151F-21DD-4C1C-9FEE-E5EBBE734161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore", "..\MiniStore\MiniStore.csproj", "{D11616BD-366B-42FD-AA12-E2CACE28936E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreMana", "..\StoreMana\StoreMana.csproj", "{2D95383B-365F-4D18-A65E-AA467257C818}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 11
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://220.132.67.201:8080/tfs/ysi
 		SccLocalPath0 = .
@@ -89,12 +93,18 @@ Global
 		SccProjectUniqueName6 = ..\\Login\\Login\\Login.csproj
 		SccProjectName6 = ../Login/Login
 		SccLocalPath6 = ..\\Login\\Login
-		SccProjectUniqueName7 = ..\\MiniStore\\MiniStore\\MiniStore.csproj
-		SccProjectName7 = ../MiniStore/MiniStore
-		SccLocalPath7 = ..\\MiniStore\\MiniStore
-		SccProjectUniqueName8 = ..\\Act\\Act\\Act.csproj
-		SccProjectName8 = ../Act/Act
-		SccLocalPath8 = ..\\Act\\Act
+		SccProjectUniqueName7 = ..\\Act\\Act\\Act.csproj
+		SccProjectName7 = ../Act/Act
+		SccLocalPath7 = ..\\Act\\Act
+		SccProjectUniqueName8 = ..\\Wedding\\Wedding.csproj
+		SccProjectName8 = ../Wedding
+		SccLocalPath8 = ..\\Wedding
+		SccProjectUniqueName9 = ..\\MiniStore\\MiniStore.csproj
+		SccProjectName9 = ../MiniStore
+		SccLocalPath9 = ..\\MiniStore
+		SccProjectUniqueName10 = ..\\StoreMana\\StoreMana.csproj
+		SccProjectName10 = ../StoreMana
+		SccLocalPath10 = ..\\StoreMana
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,14 +135,22 @@ Global
 		{52428729-D249-4797-A36D-3DB74DA165D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52428729-D249-4797-A36D-3DB74DA165D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52428729-D249-4797-A36D-3DB74DA165D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06F20E11-9E03-4114-A856-C07E923AD272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06F20E11-9E03-4114-A856-C07E923AD272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06F20E11-9E03-4114-A856-C07E923AD272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06F20E11-9E03-4114-A856-C07E923AD272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E532151F-21DD-4C1C-9FEE-E5EBBE734161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E532151F-21DD-4C1C-9FEE-E5EBBE734161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E532151F-21DD-4C1C-9FEE-E5EBBE734161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E532151F-21DD-4C1C-9FEE-E5EBBE734161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11616BD-366B-42FD-AA12-E2CACE28936E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D95383B-365F-4D18-A65E-AA467257C818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D95383B-365F-4D18-A65E-AA467257C818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D95383B-365F-4D18-A65E-AA467257C818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D95383B-365F-4D18-A65E-AA467257C818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
