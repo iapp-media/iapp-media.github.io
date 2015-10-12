@@ -1,8 +1,0 @@
-D:\Root\AppWeb\MiniStore\MiniStore\bin\MiniStore.dll
-D:\Root\AppWeb\MiniStore\MiniStore\bin\MiniStore.pdb
-D:\Root\AppWeb\MiniStore\MiniStore\bin\JustyLibrary.dll
-D:\Root\AppWeb\MiniStore\MiniStore\bin\JustyLibrary.pdb
-D:\Root\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.csprojResolveAssemblyReference.cache
-D:\Root\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.dll
-D:\Root\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.pdb
-D:\Root\AppWeb\MiniStore\MiniStore\bin\ThoughtWorks.QRCode.dll

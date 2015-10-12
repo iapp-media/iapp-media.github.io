@@ -1,0 +1,16 @@
+D:\DataYi\AppWeb\MiniStore\MiniStore\bin\MiniStore.dll
+D:\DataYi\AppWeb\MiniStore\MiniStore\bin\MiniStore.pdb
+D:\DataYi\AppWeb\MiniStore\MiniStore\bin\JustyLibrary.dll
+D:\DataYi\AppWeb\MiniStore\MiniStore\bin\ThoughtWorks.QRCode.dll
+D:\DataYi\AppWeb\MiniStore\MiniStore\bin\JustyLibrary.pdb
+D:\DataYi\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.csprojResolveAssemblyReference.cache
+D:\DataYi\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.dll
+D:\DataYi\AppWeb\MiniStore\MiniStore\obj\Debug\MiniStore.pdb
+D:\DataYi\AppWeb\MiniStore\bin\MiniStore.dll
+D:\DataYi\AppWeb\MiniStore\bin\MiniStore.pdb
+D:\DataYi\AppWeb\MiniStore\bin\JustyLibrary.dll
+D:\DataYi\AppWeb\MiniStore\bin\ThoughtWorks.QRCode.dll
+D:\DataYi\AppWeb\MiniStore\bin\JustyLibrary.pdb
+D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.csprojResolveAssemblyReference.cache
+D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.dll
+D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.pdb
