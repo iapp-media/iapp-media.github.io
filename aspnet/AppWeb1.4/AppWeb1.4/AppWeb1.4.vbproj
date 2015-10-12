@@ -25,6 +25,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -214,6 +215,7 @@
     <Content Include="css\slide.css" />
     <Content Include="css\uploadfile.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="img\114.png" />
     <Content Include="img\ajax-loader.gif" />
     <Content Include="img\bgimg.png" />
