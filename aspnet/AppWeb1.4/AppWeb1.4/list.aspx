@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/list.css">
     <link href="img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
