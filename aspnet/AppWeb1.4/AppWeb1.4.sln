@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppWeb1.4", "AppWeb1.4\AppWeb1.4.vbproj", "{35E92EC5-E16A-478C-B4AA-DD4EBB0E836C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustyLibrary", "..\JustyLibrary\JustyLibrary\JustyLibrary.csproj", "{5159F6E7-621B-4CC4-85AA-D784A2A02019}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Manager", "..\Manager", "{2B78E06D-D552-4107-8612-B8181BFDA17E}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Manager", "..\Manager\", "{2B78E06D-D552-4107-8612-B8181BFDA17E}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "SAK"
 		SccAuxPath = "SAK"
@@ -27,11 +29,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Manager", "..\Manager", "{2
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "47997"
+		SlnRelativePath = "..\Manager\"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPortal", "..\AppPortal\AppPortal.csproj", "{D43FF927-78D4-45CE-A54C-2D7FFFA197FD}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Store", "..\Store", "{B0A96C68-87E8-4764-BEC2-A8EFAD29808D}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Store", "..\Store\", "{B0A96C68-87E8-4764-BEC2-A8EFAD29808D}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "SAK"
 		SccAuxPath = "SAK"
@@ -53,6 +56,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Store", "..\Store", "{B0A96
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "7048"
+		SlnRelativePath = "..\Store\"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login\Login.csproj", "{52428729-D249-4797-A36D-3DB74DA165D2}"
@@ -66,46 +70,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreMana", "..\StoreMana\StoreMana.csproj", "{2D95383B-365F-4D18-A65E-AA467257C818}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://220.132.67.201:8080/tfs/ysi
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AppWeb1.4\\AppWeb1.4.vbproj
-		SccProjectName1 = AppWeb1.4
-		SccLocalPath1 = AppWeb1.4
-		SccProjectUniqueName2 = ..\\JustyLibrary\\JustyLibrary\\JustyLibrary.csproj
-		SccProjectName2 = ../JustyLibrary/JustyLibrary
-		SccLocalPath2 = ..\\JustyLibrary\\JustyLibrary
-		SccWebProject3 = true
-		SccProjectUniqueName3 = ..\\Manager
-		SccProjectName3 = ../Manager
-		SccLocalPath3 = ..\\Manager
-		SccProjectEnlistmentChoice3 = 2
-		SccProjectUniqueName4 = ..\\AppPortal\\AppPortal.csproj
-		SccProjectName4 = ../AppPortal
-		SccLocalPath4 = ..\\AppPortal
-		SccWebProject5 = true
-		SccProjectUniqueName5 = ..\\Store
-		SccProjectName5 = ../Store
-		SccLocalPath5 = ..\\Store
-		SccProjectEnlistmentChoice5 = 2
-		SccProjectUniqueName6 = ..\\Login\\Login\\Login.csproj
-		SccProjectName6 = ../Login/Login
-		SccLocalPath6 = ..\\Login\\Login
-		SccProjectUniqueName7 = ..\\Act\\Act\\Act.csproj
-		SccProjectName7 = ../Act/Act
-		SccLocalPath7 = ..\\Act\\Act
-		SccProjectUniqueName8 = ..\\Wedding\\Wedding.csproj
-		SccProjectName8 = ../Wedding
-		SccLocalPath8 = ..\\Wedding
-		SccProjectUniqueName9 = ..\\MiniStore\\MiniStore.csproj
-		SccProjectName9 = ../MiniStore
-		SccLocalPath9 = ..\\MiniStore
-		SccProjectUniqueName10 = ..\\StoreMana\\StoreMana.csproj
-		SccProjectName10 = ../StoreMana
-		SccLocalPath10 = ..\\StoreMana
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
