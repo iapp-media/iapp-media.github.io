@@ -29,10 +29,12 @@ public class CommTool: System.Web.UI.Page
     public string AppPath = System.Configuration.ConfigurationManager.AppSettings.Get("AppPath");
     public string MainPath = System.Configuration.ConfigurationSettings.AppSettings.Get("MainPath");
     public string URL = System.Configuration.ConfigurationSettings.AppSettings.Get("URL");
-    public string Theme  = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme");
-    public string Theme_ID  = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme_ID");
+    public string Theme = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme");
+    public string Theme_ID = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme_ID");
+    public string MiStoreUrl = System.Configuration.ConfigurationSettings.AppSettings.Get("MiStoreUrl");
+    public string MiStorePath = System.Configuration.ConfigurationSettings.AppSettings.Get("MiStorePath");
 
-	public CommTool()
+    public CommTool()
 	{
 		//
 		// TODO: 在這裡新增建構函式邏輯
