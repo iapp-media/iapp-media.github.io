@@ -6,31 +6,8 @@
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/profile.css" />
-    <link rel="stylesheet" type="text/css" href="css/colorbox2.css"/>
-    <link rel="stylesheet" type="text/css" href="css/edit.css"/>
-    <link href="img/favicon.ico" rel="shortcut icon" />
-    <script>
-        function show() {
-            $("#changePw").show();
-        }
-
-    </script>
- 
-    <style>
-        #FU1 {
-            display: none;
-        }
-
-        #p1 {
-            margin-bottom: 5px;
-        }
-
-        .hide {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -42,75 +19,95 @@
             </div>
             <!-- 基本資料區域 -->
             <div class="profile">
-
-                <div class="logo-file">
-                    <a id="show-upload" class='#' href='Pages/AUL.aspx?Profile=1&w=100&h=100'>
-                        <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/headimg.png" />
-                        <p>選擇檔案</p>
-                    </a>
+                <div class="HeadMove">
+                    <div class="logo-file">
+                            <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/headimg.png" />
+                                <a id="show-upload" class='#' href='javascrip:void(0)' onclick="callAUL()">  
+                    <p>選擇檔案</p>
+                        </a>
+                    </div>
                 </div>
-
                 <table class="t1">
                     <tr>
-                        <td>帳號:</td>
-                        <td>
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></td>
+                        <th>姓 名</th>
+                        <th>
+                            <asp:TextBox ID="TName" runat="server"></asp:TextBox>
+                            <br />
+                        </th>
                     </tr>
                     <tr>
-                        <td>姓名</td>
-                        <td>
-                            <asp:TextBox ID="TName" runat="server" BorderStyle="None" ></asp:TextBox>
-                            <%--<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>--%>
-                        </td>
+                        <th>電 話</th>
+                        <th>
+                            <asp:TextBox ID="Tphone" runat="server"></asp:TextBox>
+                            <br />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>更改密碼</th>
+                        <th>
+                            <asp:TextBox ID="pw1" runat="server" TextMode="Password"></asp:TextBox>
+                            <br />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>再次確認</th>
+                        <th>
+                            <asp:TextBox ID="pw2" runat="server" TextMode="Password"></asp:TextBox>
+                            <br />
+                        </th>
                     </tr>
                 </table>
-
-                <div class="bar"></div>
-
-                <table class="t2">
-                    <tr>
-                        <td>更新密碼:</td>
-                        <td>
-                            <asp:TextBox ID="pw1" runat="server" TextMode="Password"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>再次輸入新密碼:</td>
-                        <td>
-                            <asp:TextBox ID="pw2" runat="server" TextMode="Password"></asp:TextBox></td>
-                    </tr>
-                </table>
-
-                <div class="store">
-                    <p>
-                        <asp:LinkButton ID="BtnSend" runat="server" OnClick="BtnSend_Click">儲存</asp:LinkButton>
-                    </p>
-                </div>
-                <div class="cancel">
-                    <p>
-                        <%--<a href="#">取消</a>--%>
-                         <asp:LinkButton ID="BTCancel" runat="server">取消</asp:LinkButton>
-                    </p>
-                </div>
             </div>
+            <asp:LinkButton ID="BtnSend" runat="server" OnClick="BtnSend_Click" ></asp:LinkButton>
+            <asp:LinkButton ID="BTCancel" runat="server" OnClientClick="window.parent.ref()"></asp:LinkButton>
         </div>
+       
     </form>
 
     <script src="js/edit.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/jquery.url.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
-       <script>
-           $(document).ready(function () {
-               //Examples of how to assign the Colorbox event to elements
-               $("#show-upload").colorbox({
-                   iframe: true,
-                   width: "100%",
-                   height: "400px"
-               });
-           });
-           function ref() {
-               location.reload();
-           }
+    <script> 
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        function callAUL() {
+            var YorN = getValue('i');
+            $("#show-upload").attr('href', 'AUL.aspx?Profile=' + readCookie('iapp_uid') + "&w=100&h=100");
+        }
+        function getValue(varname) {
+            var url = window.location.href;
+            try {
+                var qparts = url.split("?");
+                if (qparts.length == 0) {
+                    return "";
+                }
+                var query = qparts[1];
+                var vars = query.split("&");
+                var value = "";
+                for (i = 0; i < vars.length; i++) {
+                    var parts = vars[i].split("=");
+                    if (parts[0] == varname) {
+                        value = parts[1];
+                        break;
+                    }
+                }
+                value = unescape(value);
+                value.replace(/\+/g, " ");
+                return value;
+            } catch (err) {
+                return "";
+            }
+        }
+
     </script>
 </body>
 </html>

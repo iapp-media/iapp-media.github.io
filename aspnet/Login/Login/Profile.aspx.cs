@@ -16,7 +16,8 @@ namespace Login
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
-            { 
+            {
+                if (Comm.CheckMobile()) { Response.Redirect(Request.RawUrl.ToLower().Replace("profile.aspx", "me/m-profile.aspx")); }
                 str = "select Account,User_Name,Tel,case when User_Icon is not null then 1 else 0 end Uicon from Users where IDNo=" + Comm.User_ID();
                 DataTable dr = Main.GetDataSet(str);
                 if (dr.Rows.Count > 0)

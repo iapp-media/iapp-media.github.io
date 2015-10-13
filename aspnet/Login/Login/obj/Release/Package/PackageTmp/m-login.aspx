@@ -48,8 +48,8 @@
                 <div class="login">
                     <p>會員帳號登入</p>
                     <div class="bar"></div>
-                    <asp:TextBox ID="accBox" class="admin" autocomplete="on" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="pwBox" class="password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="accBox" class="admin" autocomplete="on" runat="server" placeholder="電子郵件"></asp:TextBox>
+                    <asp:TextBox ID="pwBox" class="password" runat="server" placeholder="密碼"></asp:TextBox>
                     <input type="submit" id="login-submit" style="display: none;" />
 
                 </div>

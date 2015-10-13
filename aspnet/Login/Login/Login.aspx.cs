@@ -26,8 +26,6 @@ namespace Login
                     Response.Redirect(Request.RawUrl.ToLower().Replace("login.aspx", "m-login.aspx")); 
                 } 
             }
-
-
         }
           
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -41,7 +39,7 @@ namespace Login
             {
                 Response.Write("<script>alert('帳號或密碼錯誤')</script>");
             }
-            Response.End();
+           // Response.End();
         }
 
         void AfterLogin()
@@ -74,6 +72,7 @@ namespace Login
             else
             {
                 Response.Write("<Script>window.open('" + Comm.URL + "portal/portal.aspx','" + Target + "')</Script>");
+               // Response.Write("<Script>window.open('" + Comm.URL + "','" + Target + "')</Script>");
             }
             Response.End();
         }
@@ -81,6 +80,11 @@ namespace Login
         protected void LB2_Click(object sender, EventArgs e)
         {
             AfterLogin();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
         }
     }
 }

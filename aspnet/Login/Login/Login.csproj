@@ -42,7 +42,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Microsoft.AspNet.SignalR.Core.1.0.0\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Microsoft.AspNet.SignalR.Owin.1.0.0\lib\net40\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.0\lib\net40\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Microsoft.Owin.Host.SystemWeb.1.0.0\lib\net40\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\AppWeb1.4\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -61,28 +89,88 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AUL.aspx" />
+    <Content Include="button.html" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\button.css" />
+    <Content Include="css\cropper.css" />
+    <Content Include="css\edit-pic.css" />
     <Content Include="css\login.css" />
     <Content Include="css\m-login.css" />
+    <Content Include="css\m-Profile.css" />
     <Content Include="css\profile.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\signup.css" />
     <Content Include="FBchk.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="img\box-fblogin.png" />
+    <Content Include="img\button-sprite-1.png" />
+    <Content Include="img\button-sprite-2.png" />
     <Content Include="img\fb.png" />
     <Content Include="img\headimg.png" />
     <Content Include="img\iapplogo.png" />
+    <Content Include="img\uploadicon.png" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\cropper.js" />
+    <Content Include="js\cropperPage.js" />
+    <Content Include="js\exif.js" />
+    <Content Include="js\JIC.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
     <Content Include="js\m-login.js" />
     <Content Include="Login.aspx" />
     <Content Include="m-login.aspx" />
+    <Content Include="ME\css\action.css" />
+    <Content Include="ME\css\cropper.css" />
+    <Content Include="ME\css\index.css" />
+    <Content Include="ME\css\mobileEditor.css" />
+    <Content Include="ME\css\processBar.css" />
+    <Content Include="ME\css\reset.css" />
+    <Content Include="ME\css\slide.css" />
+    <Content Include="ME\img\114.png" />
+    <Content Include="ME\img\ajax-loader.gif" />
+    <Content Include="ME\img\bg.jpg" />
+    <Content Include="ME\img\cancel-1.png" />
+    <Content Include="ME\img\cancel-2.png" />
+    <Content Include="ME\img\default-icon.png" />
+    <Content Include="ME\img\dot1.png" />
+    <Content Include="ME\img\dot2.png" />
+    <Content Include="ME\img\iapplogo.png" />
+    <Content Include="ME\img\lastpg-word.png" />
+    <Content Include="ME\img\logo.png" />
+    <Content Include="ME\img\status.gif" />
+    <Content Include="ME\img\upload.gif" />
+    <Content Include="ME\img\uploadicon.png" />
+    <Content Include="ME\js\base.js" />
+    <Content Include="ME\js\cropper.js" />
+    <Content Include="ME\js\index.js" />
+    <Content Include="ME\js\JIC.js" />
+    <Content Include="ME\js\jquery.min.js" />
+    <Content Include="ME\js\mobileEditor.js" />
+    <Content Include="ME\js\touch.js" />
+    <Content Include="ME\js\zepto.min.js" />
+    <Content Include="ME\m-Profile.aspx" />
+    <Content Include="ME\TEST.html" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="ME\img\Thumbs.db" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
+    <Content Include="TT.html" />
+    <Content Include="verify.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AUL.aspx.cs">
+      <DependentUpon>AUL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AUL.aspx.designer.cs">
+      <DependentUpon>AUL.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FBchk.aspx.cs">
       <DependentUpon>FBchk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,6 +192,13 @@
     <Compile Include="m-login.aspx.designer.cs">
       <DependentUpon>m-login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ME\m-Profile.aspx.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ME\m-Profile.aspx.designer.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +214,16 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserIcon.ashx.cs">
+      <DependentUpon>UserIcon.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="verify.aspx.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verify.aspx.designer.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -126,6 +231,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\App_Login_150818.pubxml" />
+    <Content Include="UserIcon.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -139,7 +245,9 @@
       <Name>JustyLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="css\apps\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

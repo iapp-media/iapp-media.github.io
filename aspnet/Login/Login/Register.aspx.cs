@@ -19,26 +19,25 @@ namespace Login
 
         protected void regBtn1_Click(object sender, EventArgs e)
         {
-
-            Main.ParaClear();
-            Main.ParaAdd("@Account", Email.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Pw", Pw.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@User_Name", User_Name.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@User_Type", 1, System.Data.SqlDbType.Int);
-            string sql = "Insert into Users(Account,Password,User_Name,User_Type) Values (@Account,@Pw,@User_Name,@User_Type)";
-            if (Main.NonQuery(sql) > 0)
+            if (Email.Text != "" && Pw.Text != "" && User_Name.Text != "")
             {
-                //Response.Write("<script>alert('註冊成功');</script>");
-                //accBox.Text = User_Name.Text;
-                //pwBox.Text = Pw.Text;
-               // DoLogin();
-                Response.Write("<script>alert('註冊成功');location.href='login.aspx'</script>");
-                Response.End();
+                Main.ParaClear();
+                Main.ParaAdd("@Account", Email.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@Pw", Pw.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@User_Name", User_Name.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@User_Type", 1, System.Data.SqlDbType.Int);
+                string sql = "Insert into Users(Account,Password,User_Name,User_Type) Values (@Account,@Pw,@User_Name,@User_Type)";
+                if (Main.NonQuery(sql) > 0)
+                {
+                    Response.Write("<script>alert('註冊成功');location.href='login.aspx'</script>");
+                    Response.End();
+                }
+                else
+                {
+                    Response.Write("<script>alert('寫入失敗')</script>");
+                }
             }
-            else
-            {
-                Response.Write("<script>alert('寫入失敗')</script>");
-            } 
+
         }
     }
 }

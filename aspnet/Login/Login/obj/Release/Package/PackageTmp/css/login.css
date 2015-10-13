@@ -103,7 +103,7 @@ a {text-decoration:none; color:#ff9933;}
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-		.login p{
+		/*.login p{
 			color: #ff9933;
 			font-size: 18px;
 			position:relative;
@@ -114,26 +114,27 @@ a {text-decoration:none; color:#ff9933;}
 			font-size: 18px;
 			position:relative;
 			top: 10%;left: 20%;
-		}
+		}*/
 		.login{
 		    position: absolute;
 		    top: 72%;left: 10%;
-		    width: 60px;height: 26px;
-		    border: 1px #ff9933 solid; 
-		    border-radius: 5px;
+		  /*  width: 60px;height: 26px;
+		   border: 1px #ff9933 solid; 
+		    border-radius: 5px;*/ 
 		}
+        /*
 		.login:hover{
 		    background: #ffbb66;
-		}
+		}*/
 		.register{
 		    position: absolute;
 		    top: 72%;left: 40%;
-		    width: 60px;height: 26px;
+		  /* width: 60px;height: 26px;
 		    border: 1px #ff9933 solid; 
 		    border-radius: 5px;
 		}
 		.register:hover{
-		    background: #ffbb66;
+		    background: #ffbb66;*/ 
 		}
 .tb5 {
 	border:2px solid #456879;

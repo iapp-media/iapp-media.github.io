@@ -7,6 +7,7 @@
     <title>iApp Mobile We-Media Platform</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <link href="css/button.css" rel="stylesheet" />
     <style>
         .tb5
         {
@@ -68,9 +69,15 @@
                 <div class="facebook"><a href="#" onclick="startup();"><img src="img/box-fblogin.png"></a></div>
             </div>
             <div style="position: absolute; top: 52%; left: 5%; width: 40%; height: 8%;"> 
-                <div class="login"><p>
-                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">登入</asp:LinkButton></p></div>
-                <div class="register"><p><a href="Register.aspx">註冊</a></p></div>
+                <div class="login">
+                   <%-- <p>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">登入</asp:LinkButton></p>--%>
+                    <asp:Button ID="Button1" runat="server" Text=" " CssClass="login-1" OnClick="LinkButton1_Click" />
+                </div>
+                <div class="register">
+                <%--    <p><a href="Register.aspx">註冊</a></p>--%>
+                    <asp:Button ID="Button2" runat="server" Text=" "  CssClass="register-1" OnClick="Button2_Click" /> 
+                </div>
                 
             </div>
         </div>
