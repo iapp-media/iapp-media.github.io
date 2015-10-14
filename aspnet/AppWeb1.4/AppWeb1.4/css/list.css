@@ -39,20 +39,11 @@ a {
     background: #ff9933;
 }
 
-.add {
+.addapp-1{
     position: absolute;
     top: 7%;
-    left: 83%;
-    width: 80px;
-    height: 25px;
+    right: 44px;
     z-index: 3;
-    background: url('../img/button-sprite-1.png');
-    background-position: 0 25px;
-}
-
-.add:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 0 25px;
 }
 
 .add p {
@@ -106,66 +97,30 @@ ul {
     opacity: 0.5;
 }
 
-.edit {
+.edit-1 {
     position: absolute;
     bottom: 5px;
-    left: 53%;
-    width: 61px;
-    height: 30px;
+    right: 207px;
     z-index: 3;
-    background: url('../img/button-sprite-1.png');
-    background-position: 0 -58px;
 }
 
-.edit:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 0 -58px;
-}
-
-.delete {
+.delete-1 {
     position: absolute;
     bottom: 5px;
-    left: 65%;
-    width: 61px;
-    height: 30px;
+    right: 137px;
     z-index: 3;
-    background: url('../img/button-sprite-1.png');
-    background-position: -67px -58px;
 }
 
-.delete:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: -67px -58px;
-}
-
-.set {
+.setting-1 {
     position: absolute;
     bottom: 5px;
-    left: 77%;
-    width: 61px;
-    height: 30px;
-    background: url('../img/button-sprite-1.png');
+    right: 68px;
     z-index: 3;
-    background-position: 0 -90px;
 }
 
-.set:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 0 -90px;
-}
-
-.share {
+.share-1 {
     position: absolute;
     bottom: 5px;
-    left: 89%;
-    width: 61px;
-    height: 30px;
+    right: 0;
     z-index: 3;
-    background: url('../img/button-sprite-1.png');
-    background-position: -67px -90px;
-}
-
-.share:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: -67px -90px;
 }
