@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/profile.css" />
+    <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
@@ -22,8 +23,8 @@
                 <div class="HeadMove">
                     <div class="logo-file">
                             <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/headimg.png" />
-                                <a id="show-upload" class='#' href='javascrip:void(0)' onclick="callAUL()">  
-                    <p>選擇檔案</p>
+                                <a id="show-upload" class='select-1' href='javascrip:void(0)' onclick="callAUL()">  
+                    選擇檔案
                         </a>
                     </div>
                 </div>
@@ -58,8 +59,8 @@
                     </tr>
                 </table>
             </div>
-            <asp:LinkButton ID="BtnSend" runat="server" OnClick="BtnSend_Click" ></asp:LinkButton>
-            <asp:LinkButton ID="BTCancel" runat="server" OnClientClick="window.parent.ref()"></asp:LinkButton>
+            <asp:LinkButton ID="BtnSend" CssClass="save-1" runat="server" OnClick="BtnSend_Click" Text="儲存"></asp:LinkButton>
+            <asp:LinkButton ID="BTCancel" CssClass="cancel-1" runat="server" OnClientClick="window.parent.ref()" Text="取消"></asp:LinkButton>
         </div>
        
     </form>
