@@ -24,8 +24,6 @@ a:hover {
     background-color: #ff9933;
 }
 
-
-
 .back-top {
     width: auto;
     height: auto;
@@ -73,6 +71,9 @@ a:hover {
 
 .search-sm {
     display: none;
+}
+.sandwich {
+    font-size: 17px;
 }
 
 .glyphicon-search {
@@ -181,7 +182,7 @@ a:hover {
     width: 110px;
     height: 35px;
     border-radius: 6px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .icon-box:hover {
@@ -276,7 +277,7 @@ a:hover {
     position: absolute;
     margin-top: 20px;
     left: calc(50% - 50px);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .glyphicon-cog {
@@ -348,7 +349,7 @@ a:hover {
     margin-top: 130px;
     left: calc(50% - 150px);
     font-size: 16px;
-} 
+}
 
 .option-user a:link {
     color: #fff;
@@ -360,11 +361,11 @@ a:hover {
     text-decoration: none;
 }
 
-.my-iapp {  
-	display:block;
-	text-align:right;
-	width:50%; 
-	padding-right:5%;
+.my-iapp {
+    display: block;
+    text-align: right;
+    width: 50%;
+    padding-right: 5%;
 }
 
 .my-iapp:hover {
@@ -374,9 +375,9 @@ a:hover {
 .collect-iapp {
     position: absolute;
     top: 0%;
-	width:50%;
+    width: 50%;
     left: 50%;
-	padding-left:5%;
+    padding-left: 5%;
 }
 
 .collect-iapp:hover {
@@ -742,7 +743,7 @@ a:hover {
     height: 40px;
     border-radius: 99em;
     border: 3px solid #ff9932;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 .finder>li>a {
@@ -770,7 +771,12 @@ a:hover {
 
 .select {
     border: none;
-    padding: 7px 12px;
+    /* padding: 8px 12px; */
+    height: 100%;
+    padding: 0;
+    width: 31px;
+    border-radius: 0 5px 5px 0;
+    /* font-size: 17px; */
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
@@ -916,9 +922,8 @@ a:hover {
     }
 }
 
-.tile1
-{
-    font-size:24px;
-    font-weight:bold;
-    margin:10px 0 0 0;
+.tile1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
 }
