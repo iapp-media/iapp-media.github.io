@@ -51,7 +51,7 @@
                     </tr>
                 </table>
             </div>
-            <asp:LinkButton ID="send" runat="server" CssClass="done-1" OnClientClick="GOSlideClear()" Text="完成"></asp:LinkButton><%--完成--%>
+            <asp:LinkButton ID="send" runat="server" CssClass="send done-1" OnClientClick="GOSlideClear()" Text="完成"></asp:LinkButton><%--完成--%>
         </div>
 
     </form>
