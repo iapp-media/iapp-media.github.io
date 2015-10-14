@@ -202,33 +202,17 @@
  /* 按鈕外觀 */
  
  #BtnSend {
-     width: 63px;
-     height: 25px;
      position: absolute;
-     background: url('../img/button-sprite-1.png');
-     background-position: -65px 0;
      top: 50%;
      left: 50%;
      margin-left: 28px;
      margin-top: 127px;
  }
  
- #BtnSend:hover {
-     background: url('../img/button-sprite-2.png');
-     background-position: -65px 0;
- }
- 
  #BTCancel {
-     width: 63px;
-     height: 25px;
      position: absolute;
-     background: url('../img/button-sprite-1.png');
      top: 50%;
      left: 50%;
      margin-left: -75px;
      margin-top: 127px;
- }
- 
- #BTCancel:hover {
-     background: url('../img/button-sprite-2.png');
  }
