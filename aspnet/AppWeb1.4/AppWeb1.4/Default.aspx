@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/colorbox.css" />
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <link href="img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/button.css" />
     <script>
         function init() {
             $("#list").sortable({
@@ -184,12 +185,12 @@
                         </a>--%>
                         <div class="src" id="final">http://iapp-media.com/</div>
 
-                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create"></asp:LinkButton>
+                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create-1"></asp:LinkButton>
 
                         <%--微創作--%>
 
 
-                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="share"></asp:LinkButton><%--熱分享--%>
+                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="hotshare-1"></asp:LinkButton><%--熱分享--%>
                     </div>
                     <div class="bottom"></div>
                 </div>

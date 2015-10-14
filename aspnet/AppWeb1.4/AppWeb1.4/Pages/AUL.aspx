@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
     <link rel="stylesheet" type="text/css" href="../css/edit-pic.css" />
+    <link rel="stylesheet" href="../css/button.css">
     <style>
         .TShide {
             display: none;
@@ -46,8 +47,8 @@
         <div class="upload-img">
             <div class="option">
                 <label for="inputImage">
-                    <div class="select">
-                        
+                    <div class="uploadimg-1">
+                        上傳照片
                     </div><%--上傳照片--%>
                 </label>
                 <button data-method="rotate" type="button" class="rotate-btn"></button><%--旋轉--%>
@@ -60,10 +61,10 @@
             </div>
             <p class="word">(拖曳進行照片裁切)</p>
             <input type="file" accept="image/*" capture="camera" class="hide" id="inputImage"   />
-            <button data-method="getCroppedCanvas" type="button" class="cut" >
+            <button data-method="getCroppedCanvas" type="button" class="cut done-1" >
                 
             </button><%--截圖--%>
-            <asp:Button ID="BTN" data-method="getCroppedCanvas" OnClientClick="compress(),PassBase64()" runat="server" Text="" CssClass="compress" /><%--確認--%>
+            <asp:Button ID="BTN" data-method="getCroppedCanvas" OnClientClick="compress(),PassBase64()" runat="server" Text="確認" CssClass="compress enter-1" /><%--確認--%>
         </div>
         <label id="base64" style="word-wrap: break-word; word-break: normal; display: none;">Null</label>
         <asp:TextBox ID="TS" runat="server" CssClass="TShide"></asp:TextBox>

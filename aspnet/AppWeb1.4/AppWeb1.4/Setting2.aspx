@@ -7,6 +7,7 @@
     <title>set2</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/set2.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -50,7 +51,7 @@
                     </tr>
                 </table>
             </div>
-            <asp:LinkButton ID="send" runat="server" CssClass="send" OnClientClick="GOSlideClear()"></asp:LinkButton><%--完成--%>
+            <asp:LinkButton ID="send" runat="server" CssClass="done-1" OnClientClick="GOSlideClear()"></asp:LinkButton Text="完成"><%--完成--%>
         </div>
 
     </form>
