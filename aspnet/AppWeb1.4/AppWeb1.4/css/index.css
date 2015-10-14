@@ -3,7 +3,7 @@ body {
     color: #000;
     word-wrap: break-word;
     height: 7000px;
-    background-image: url(img/intro-bg-1.png); 
+    background-image: url(img/intro-bg-1.png);
     background-size: 100%;
 }
 .hide{display: none;}
@@ -21,23 +21,10 @@ body {
 .slide {
     position: relative;
     top: 0%;
-    left: 0%;
+    left: -4.5%;
     z-index: 3;
 }
-.slideShow .slide .s1-1{
-    width: 220px;height: 405px;
-    display: inline;
-}
-.slideShow .slide .s1-2{
-    width: 220px;height: 405px;
-    display: none;
-}
-.slideShow .slide:hover .s1-1{
-    display: none;
-}
-.slideShow .slide:hover .s1-2{
-    display: inline;
-}
+
 .loading {
     width: 150px;
     position: fixed;
@@ -118,45 +105,7 @@ body {
     opacity: 0;
     cursor: pointer;
 }
-.triangle{
-    width: 50px;height: 50px;
-    position: absolute;
-    bottom: 40px;
-    right: 48%;
-}
-.hint{
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    background-color: #000;
-    width: 100%;height: 100%;
-    opacity: 0.5;
-    display: none;
-}
-.next{
-    cursor: pointer;
-}
-.next p{
-    position: absolute;
-    bottom: 120px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff;
-    opacity: 1;
-    z-index: 2;
-    display: none;
-    width: 125px;
-    /*outline: 1px solid #f00;*/
-}
-.next:hover .hint{
-    display: inline;
-}
-.next:hover p{
-    display: inline;
-}
+
 .container {
     position: fixed;
     width: 100%;
@@ -219,21 +168,7 @@ body {
     text-align: center;
     z-index: 4;
 }
-.img4-1{
-    width: 200px;
-    height: auto;
-    top: 70%;
-    margin-left: 60px;
-    text-align: center;
-    z-index: 4;
-    display: none;
-}
-.iframe:hover .img4{
-    display: none;
-}
-.iframe:hover .img4-1{
-    display: inline;
-}
+
 .img5 {
     width: 50px;
     height: auto;
@@ -241,6 +176,7 @@ body {
     margin-left: 170px;
     text-align: center;
     z-index: 4;
+    opacity: 0;
 }
 
 .img6 {
@@ -250,6 +186,7 @@ body {
     margin-left: 290px;
     text-align: center;
     z-index: 4;
+    opacity: 0;
 }
 
 .img7 {
@@ -259,6 +196,7 @@ body {
     margin-left: 0px;
     text-align: center;
     z-index: 4;
+    opacity: 0;
 }
 
 .img8 {
@@ -268,6 +206,7 @@ body {
     margin-left: 80px;
     text-align: center;
     z-index: 4;
+    opacity: 0;
 }
 
 .img9 {

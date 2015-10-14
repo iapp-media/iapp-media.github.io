@@ -2,7 +2,9 @@
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
 */
-
+body {
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
+}
 #colorbox,
 #cboxOverlay,
 #cboxWrapper {
@@ -11,6 +13,8 @@
     left: 0;
     z-index: 9999;
     overflow: hidden;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
+
 }
 
 #cboxWrapper {
@@ -76,6 +80,7 @@
     border: 0;
     padding: 0;
     margin: 0;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
 }
 
 #colorbox,
@@ -83,8 +88,8 @@
 #cboxLoadedContent {
     box-sizing: content-box;
     -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-
+    -webkit-box-sizing: content-box;    
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
 }
 /* 
     User Style:
