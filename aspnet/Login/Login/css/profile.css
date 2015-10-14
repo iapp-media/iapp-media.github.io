@@ -1,158 +1,234 @@
  body {
-            margin: 0;
-            padding: 0;
-            width: auto;
-            height: auto;
-        }
-        
-        a {
-            text-decoration: none;
-            color: #ff9933;
-        }
-        
-        .top {
-            position: absolute;
-            top: 2%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 100%;
-            height: 12%;
-        }
-        
-        .top p {
-            font-size: 24px;
-            font-weight: normal;
-            color: orange;
-            text-align: center;
-        }
-        
-        .bar {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            width: 80%;
-            height: 2px;
-            background-color: #7d7d7d;
-            opacity: 0.5;
-        }
-        
-        .bar3 {
-            position: absolute;
-            top: 110%;
-            left: 0%;
-            width: 100%;
-            height: 3px;
-            background-color: #ff9933;
-        }
-        
-        .store {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            margin-left: 10px;
-            width: 60px;
-            height: 26px;
-            border: 1px #ff9933 solid;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 26px;
-        }
-        
-        .store:hover {
-            background: #ffbb66;
-            color: #fff;
-        }
-        
-        .cancel {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            margin-left: -70px;
-            width: 60px;
-            height: 26px;
-            border: 1px #ff9933 solid;
-            border-radius: 5px;
-            line-height: 26px;
-            text-align: center;
-        }
-        
-        .cancel:hover {
-            background: #ffbb66;
-            color: #fff;
-        }
-        
-        .file {
-            display: block;
-            width: 100%;
-            height: 20px;
-            margin-top: 5px;
-            line-height: 20px;
-            text-align: center;
-            font-size: 14px;
-            border: 1px #ff9933 solid;
-            border-radius: 5px;
-        }
-        
-        .file:hover {
-            background: #ffbb66;
-            color: #fff;
-        }
-        
-        .profile {
-            position: absolute;
-            top: 20%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 80%;
-            height: 65%;
-        }
-        
-        .profile .t1 {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 86%;
-        }
-        
-        .profile .t2 {
-            position: absolute;
-            top: 60%;
-            left: 25%;
-        }
-        
-        .profile th {
-            color: #7d7d7d;
-            padding: 5px;
-        }
-        
-        th input[type="text"] {
-            width: 100%;
-        }
-        
-        .logo-file {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-left: -80px;
-            width: 100%;
-        }
-        
-        .logo-file img {
-            width: 100%;
-        }
-        
-        .logo-file p {
-            color: #ff9933;
-            font-size: 16px;
-            position: relative;
-            top: 20%;
-            left: 10%;
-        }
-        
-        .HeadMove {
-            width: 15%;
-            height: 124px;
-            position: relative;
-        }
+     margin: 0;
+     padding: 0;
+     width: auto;
+     height: auto;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: #ff9933;
+ }
+ 
+ #show-upload {
+     position: relative;
+     display: block;
+     height: 19px;
+     width: 100%;
+ }
+ 
+ .top {
+     position: absolute;
+     top: 5%;
+     left: 0;
+     right: 0;
+     margin: auto;
+     width: 90%;
+     height: 12%;
+ }
+ 
+ .top p {
+     font-size: 24px;
+     margin-top: 35px;
+     font-weight: normal;
+     color: orange;
+     text-align: center;
+ }
+ 
+ .bar {
+     position: absolute;
+     top: 50%;
+     left: 10%;
+     width: 80%;
+     height: 2px;
+     background-color: #7d7d7d;
+     opacity: 0.5;
+ }
+ 
+ .bar3 {
+     position: absolute;
+     top: 110%;
+     left: 0%;
+     width: 100%;
+     height: 3px;
+     background-color: #ff9933;
+ }
+ 
+ .store {
+     position: absolute;
+     top: 80%;
+     left: 50%;
+     margin-left: 10px;
+     width: 60px;
+     height: 26px;
+     border: 1px #ff9933 solid;
+     border-radius: 5px;
+     text-align: center;
+     line-height: 26px;
+ }
+ 
+ .store:hover {
+     background: #ffbb66;
+     color: #fff;
+ }
+ 
+ .cancel {
+     position: absolute;
+     top: 80%;
+     left: 50%;
+     margin-left: -70px;
+     width: 60px;
+     height: 26px;
+     border: 1px #ff9933 solid;
+     border-radius: 5px;
+     line-height: 26px;
+     text-align: center;
+ }
+ 
+ .cancel:hover {
+     background: #ffbb66;
+     color: #fff;
+ }
+ 
+ .file {
+     display: block;
+     width: 100%;
+     height: 20px;
+     margin-top: 5px;
+     line-height: 20px;
+     text-align: center;
+     font-size: 14px;
+     border: 1px #ff9933 solid;
+     border-radius: 5px;
+ }
+ 
+ .file:hover {
+     background: #ffbb66;
+     color: #fff;
+ }
+ 
+ .profile {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     width: 54%;
+     height: 35%;
+ }
+ 
+ .profile .t1 {
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 70%;
+ }
+ 
+ .t1 tbody {
+     width: 100%;
+ }
+ 
+ .t1 tr {
+     width: 100%;
+     /* outline: 1px solid; */
+ }
+ 
+ .profile .t2 {
+     position: absolute;
+     top: 60%;
+     left: 25%;
+ }
+ 
+ .profile th {
+     color: #7d7d7d;
+     text-align: right;
+     padding-right: 5px;
+     padding-bottom: 15px;
+     width: 100%;
+ }
+ 
+ th input[type="password"] {}
+ 
+ #pw1 {
+     width: 96%;
+ }
+ 
+ #pw2 {}
+ 
+ th input[type="text"] {
+     width: 96%;
+ }
+ 
+ .logo-file {
+     position: absolute;
+     top: 0;
+     right: 0;
+     margin-left: -80px;
+     width: 100%;
+ }
+ 
+ .logo-file img {
+     width: 100%;
+ }
+ 
+ .logo-file p {
+     color: #ff9933;
+     font-size: 16px;
+     position: absolute;
+     display: block;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     text-align: center;
+     margin: auto;
+     width: 98%;
+     border: 1px solid;
+     height: 17px;
+     border-radius: 5px;
+ }
+ 
+ .logo-file p:hover {
+     color: #fff;
+     background-color: #ff9933;
+ }
+ 
+ .HeadMove {
+     width: 30%;
+     height: 124px;
+     position: relative;
+ }
+ /* 按鈕外觀 */
+ 
+ #BtnSend {
+     width: 63px;
+     height: 25px;
+     position: absolute;
+     background: url('../img/button-sprite-1.png');
+     background-position: -65px 0;
+     top: 50%;
+     left: 50%;
+     margin-left: 28px;
+     margin-top: 127px;
+ }
+ 
+ #BtnSend:hover {
+     background: url('../img/button-sprite-2.png');
+     background-position: -65px 0;
+ }
+ 
+ #BTCancel {
+     width: 63px;
+     height: 25px;
+     position: absolute;
+     background: url('../img/button-sprite-1.png');
+     top: 50%;
+     left: 50%;
+     margin-left: -75px;
+     margin-top: 127px;
+ }
+ 
+ #BTCancel:hover {
+     background: url('../img/button-sprite-2.png');
+ }
