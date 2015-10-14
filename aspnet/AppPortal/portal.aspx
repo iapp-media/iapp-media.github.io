@@ -94,7 +94,7 @@
                         <%--<input type="text" id="Search" class="form-control bar-text" placeholder="Search iApp...">--%>
                         <!-- 下拉按鈕 -->
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
+                            <button type="button" class="dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-menu-hamburger sandwich" aria-hidden="true"></span>
                             </button>
                         </div>
