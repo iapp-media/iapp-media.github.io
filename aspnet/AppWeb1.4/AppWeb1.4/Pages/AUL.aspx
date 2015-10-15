@@ -62,7 +62,7 @@
             <p class="word">(拖曳進行照片裁切)</p>
             <input type="file" accept="image/*" capture="camera" class="hide" id="inputImage"   />
             <button data-method="getCroppedCanvas" type="button" class="cut done-1" >
-                
+                完成
             </button><%--截圖--%>
             <asp:Button ID="BTN" data-method="getCroppedCanvas" OnClientClick="compress(),PassBase64()" runat="server" Text="確認" CssClass="compress enter-1" /><%--確認--%>
         </div>

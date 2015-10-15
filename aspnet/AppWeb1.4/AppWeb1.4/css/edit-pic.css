@@ -148,21 +148,8 @@ a:hover {
 }
 
 .cut {
-    display: block;
     margin: 5px auto;
-    background: url('../img/button-sprite-1.png');
-    background-position: 94px 57px;
-    width: 94px;
-    height: 30px;
-    color: #ff9933;
-    border: none;
-    font-size: 16px;
     cursor: pointer;
-}
-
-.cut:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 94px 57px;
 }
 
 .base64 {
