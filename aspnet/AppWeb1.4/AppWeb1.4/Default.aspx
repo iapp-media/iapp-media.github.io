@@ -129,7 +129,7 @@
                 <!-- iframe編輯區域 -->
                 <div class="edit hide">
                     <a href="javascript: void(0)" id="close">
-                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/cancel.png">
+                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/close-1.png">
                     </a>
                     <%--                                      <a href="javascript: void(0)" id="btpic"><img class="button-pic" src="img/button-pic.png"></a>
                   <a href="javascript: void(0)" id="btword"><img class="button-wod" src="img/button-word.png"></a>--%>
