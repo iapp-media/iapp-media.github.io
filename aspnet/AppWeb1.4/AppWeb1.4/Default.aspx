@@ -152,7 +152,7 @@
                     </div>
                     <div class="bottom">
                         <a href="javascript: void(0)" id="close-publish">
-                            <img class="cancel" src="img/cancel.png"></a>
+                            <img class="cancel" src="img/close-1.png"></a>
                     </div>
                 </div>
 
@@ -198,7 +198,7 @@
                 <!-- logo＆company tiltle -->
                 <img class="logo" src="img/bgimg.png" />
                 <div style="position: fixed; bottom: 0; right: 10px;">
-                    <img src="img/logo-digital.png" border="0">
+                    <img src="img/digitallogo.png" border="0">
                 </div>
             </div>
 
