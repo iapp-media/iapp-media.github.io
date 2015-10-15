@@ -185,12 +185,12 @@
                         </a>--%>
                         <div class="src" id="final">http://iapp-media.com/</div>
 
-                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create-1" Text="微創作"></asp:LinkButton>
+                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create create-1" Text="微創作"></asp:LinkButton>
 
                         <%--微創作--%>
 
 
-                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="hotshare-1" Text="熱分享"></asp:LinkButton><%--熱分享--%>
+                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="share hotshare-1" Text="熱分享"></asp:LinkButton><%--熱分享--%>
                     </div>
                     <div class="bottom"></div>
                 </div>
