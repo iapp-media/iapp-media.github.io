@@ -120,7 +120,8 @@ a:hover {
     text-align: right;
     height: 20px;
     color: #000;
-    padding-right: 5%;
+    /* padding-right: 5%; */
+    margin: 2% 5%;
 }
 
 .transparent {
@@ -128,7 +129,6 @@ a:hover {
 }
 
 .compress {
-    
     margin: auto;
     cursor: pointer;
 }
@@ -162,4 +162,13 @@ a:hover {
 
 .option {
     padding: 5px 5% 5px 5%;
+}
+
+.done-1 {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 118px;
 }
