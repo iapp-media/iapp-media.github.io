@@ -97,7 +97,7 @@
                 <!-- 增加 -->
                 <div class="add">
                     <a href="javascript: void(0)" id="pageShow">
-                        <img class="add1" src="img/add.png" />
+                        <img class="add1" src="img/add01.png" />
                         <img class="add2" src="img/add02.png" /></a>
                 </div>
                 <!-- 發布 -->
@@ -140,7 +140,7 @@
                 <!-- 設定＆個人資料＆列表 -->
                 <asp:Literal ID="Lprofile" runat="server"></asp:Literal>
                 <%--<a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx?i="  >
-                    <img class="head" src="img/head.png" /></a>--%>
+                    <img class="head" src="img/defaulthead.jpg" /></a>--%>
                 <a class='iframe-info' href="list.aspx">
                     <img class="list" src="img/item-1.png" /></a>
 
