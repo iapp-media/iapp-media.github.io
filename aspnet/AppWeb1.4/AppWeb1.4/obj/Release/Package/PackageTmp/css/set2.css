@@ -6,7 +6,7 @@ body {
 }
 
 
-/* ²Î¤@¦â½X */
+/* çµ±ä¸€è‰²ç¢¼ */
 
 .colorRed {
     color: #c80f0f;
@@ -215,16 +215,8 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 92px;
-    height: 29px;
     margin: auto;
-    background: url('../img/button-sprite-1.png');
-    background-position: 92px 57px;
-}
-
-.container .send:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 92px 57px;
+    width: 44px;
 }
 
 .container .send p {

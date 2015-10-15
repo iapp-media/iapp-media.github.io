@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/colorbox.css" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <link href="img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/button.css">
     <script>
         function init() {
             $("#list").sortable({
@@ -37,15 +39,7 @@
             prm.add_pageLoaded(init);
         </script>
         <div class="all">
-            <a href="http://www.iapp-media.com/portal/">
-                <div id="iappgb" style="background-color: #FF9933; width: 133px; height: 86px; position: fixed; top: 0px; left: 0px; z-index: 99;">
-                </div>
-                <%--                       <img id="iappgb" style="position: fixed; top: 0px; left: 0px; background: none; z-index: 99;" src="img/iappbg.PNG" >   --%>
-
-                <img style="position: fixed; background-color: none; z-index: 101; margin: 0; padding: 5px 15px; width: 100px; height: 76px;"
-                    src="img/iapplogo.png">
-            </a>
-
+            <asp:HyperLink ID="HLogo" CssClass="homelogo" runat="server" NavigateUrl="../portal/" ImageUrl="img/iapplogo.png"></asp:HyperLink> 
             <div class="pageNavall">
                 <!-- 左側區塊 -->
                 <div id='pageNav'>
@@ -103,7 +97,7 @@
                 <!-- 增加 -->
                 <div class="add">
                     <a href="javascript: void(0)" id="pageShow">
-                        <img class="add1" src="img/add.png" />
+                        <img class="add1" src="img/add01.png" />
                         <img class="add2" src="img/add02.png" /></a>
                 </div>
                 <!-- 發布 -->
@@ -115,7 +109,7 @@
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select">
                     <a href="javascript: void(0)" id="close-select">
-                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/cancel.png">
+                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/close-1.png">
                     </a>
                     <asp:Repeater ID="RP1" runat="server">
                         <ItemTemplate>
@@ -135,7 +129,7 @@
                 <!-- iframe編輯區域 -->
                 <div class="edit hide">
                     <a href="javascript: void(0)" id="close">
-                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/cancel.png">
+                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/close-1.png">
                     </a>
                     <%--                                      <a href="javascript: void(0)" id="btpic"><img class="button-pic" src="img/button-pic.png"></a>
                   <a href="javascript: void(0)" id="btword"><img class="button-wod" src="img/button-word.png"></a>--%>
@@ -146,9 +140,9 @@
                 <!-- 設定＆個人資料＆列表 -->
                 <asp:Literal ID="Lprofile" runat="server"></asp:Literal>
                 <%--<a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx?i="  >
-                    <img class="head" src="img/head.png" /></a>--%>
+                    <img class="head" src="img/defaulthead.jpg" /></a>--%>
                 <a class='iframe-info' href="list.aspx">
-                    <img class="list" src="img/button1.png" /></a>
+                    <img class="list" src="img/item-1.png" /></a>
 
                 <!-- 發布頁面 -->
                 <div class="publish hide">
@@ -158,7 +152,7 @@
                     </div>
                     <div class="bottom">
                         <a href="javascript: void(0)" id="close-publish">
-                            <img class="cancel" src="img/cancel.png"></a>
+                            <img class="cancel" src="img/close-1.png"></a>
                     </div>
                 </div>
 
@@ -166,14 +160,15 @@
                 <div class="final hide">
                     <div class="top"></div>
                     <div class="middle">
-                        <img src="img/pic-22.png" style="position: absolute; top: 40px; left: 80px;">
-                        <img id="Qrimg" src="#" style="position: absolute; top: 120px; left: 80px;">
-                        <div class="describe">
-                            <p style="color: #969696; font-size: 20px; line-height: 25px; margin: 10px 0 0 25px;">
+                        <div class="topImg">
+                            <img src="img/pic-22.png" class="topImg1">
+                            <img src="img/iapplogo2.png" alt="" class="topImg2">
+                        </div> 
+                        <img id="Qrimg" src="#">
+                        <div class="describe"> 
                                 Digital+數碼數位<br />
                                 專注在Digital的思考<br />
-                                建構行動自媒體的社群平台
-                            </p>
+                                建構行動自媒體的社群平台 
                         </div>
                         <div class="sharemore">
                             <ul>
@@ -190,12 +185,12 @@
                         </a>--%>
                         <div class="src" id="final">http://iapp-media.com/</div>
 
-                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create"></asp:LinkButton>
+                        <asp:LinkButton ID="NewApps" runat="server" CssClass="create create-1" Text="微創作"></asp:LinkButton>
 
                         <%--微創作--%>
 
 
-                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="share"></asp:LinkButton><%--熱分享--%>
+                        <asp:LinkButton ID="FBShare" runat="server" OnClientClick="FBShareCK()" CssClass="share hotshare-1" Text="熱分享"></asp:LinkButton><%--熱分享--%>
                     </div>
                     <div class="bottom"></div>
                 </div>
@@ -203,7 +198,7 @@
                 <!-- logo＆company tiltle -->
                 <img class="logo" src="img/bgimg.png" />
                 <div style="position: fixed; bottom: 0; right: 10px;">
-                    <img src="img/logo-digital.png" border="0">
+                    <img src="img/digitallogo.png" border="0">
                 </div>
             </div>
 
@@ -225,4 +220,6 @@
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.url.min.js"></script>
     <script src="js/webedit.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+</body>
 </html>

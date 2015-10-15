@@ -7,6 +7,7 @@
     <title>set2</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/set2.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -44,13 +45,13 @@
                         <td class="text1title">
                             <span>iApp 描述</span>
                           <%--  <input id="TAppMemo" runat="server" class="describe" placeholder="(限140字)" />--%>
-                           <asp:TextBox ID="TAppMemo" runat="server" CssClass="describe" placeholder="(限140字)"  ></asp:TextBox>
+                           <asp:TextBox ID="TAppMemo" runat="server" CssClass="describe" placeholder="(限140字)"   TextMode="MultiLine"></asp:TextBox>
 
                         </td>
                     </tr>
                 </table>
             </div>
-            <asp:LinkButton ID="send" runat="server" CssClass="send" OnClientClick="GOSlideClear()"></asp:LinkButton><%--完成--%>
+            <asp:LinkButton ID="send" runat="server" CssClass="send done-1" OnClientClick="GOSlideClear()" Text="完成"></asp:LinkButton><%--完成--%>
         </div>
 
     </form>

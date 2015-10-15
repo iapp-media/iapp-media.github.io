@@ -1,24 +1,15 @@
-
-var DEGBUG = 1;
-
+'use strict';
 var current = 0,
   width,
   height;
 
-function setCurrent(number, w, h) {
-  current = number;
-  document.getElementById('CurrentId').setAttribute('value',number);
-  width = w;
-  height = h;
-  // console.log(number);
-  // $().cropper("setAspectRatio", 1 / 1)
+(function() {
 
   // $(function() {
-  'use strict';
+
   // Demo
   // -------------------------------------------------------------------------
 
-  // console.log(width, height);
   (function() {
     var $image = $('.img-container > img'),
       $dataX = $('#dataX'),
@@ -37,7 +28,7 @@ function setCurrent(number, w, h) {
         // background: false,
 
         // autoCrop: false,
-        autoCropArea: 0.8,
+        autoCropArea: 0.9,
         dragCrop: false,
         movable: false,
         resizable: false,
@@ -77,6 +68,7 @@ function setCurrent(number, w, h) {
       },
       'built.cropper': function(e) {
         console.log(e.type);
+        $('#uploading').hide();
       },
       'dragstart.cropper': function(e) {
         console.log(e.type, e.dragType);
@@ -93,7 +85,7 @@ function setCurrent(number, w, h) {
       'zoomout.cropper': function(e) {
         console.log(e.type);
       }
-    }).cropper(options).cropper("setAspectRatio",width / height);
+    }).cropper(options).cropper('setAspectRatio', width / height);
 
     // Methods
     $(document.body).on('click', '[data-method]', function() {
@@ -119,12 +111,15 @@ function setCurrent(number, w, h) {
         result = $image.cropper(data.method, data.option);
         // $('.img-container').hide();
 
-
+        if (data.method === 'rotate') {
+          $image.cropper('rotate', 90);
+        }
         // console.log(result);
         if (data.method === 'getCroppedCanvas') {
-          document.getElementById('preview').src = result.toDataURL("image/jpeg", 0.6);
+          document.getElementById('preview').src = result.toDataURL('image/jpeg', 0.6);
           $('.img-container').hide();
           $('.preview-container').show();
+          $('.rotate-btn').hide();
         }
 
         if ($.isPlainObject(result) && $target) {
@@ -171,41 +166,40 @@ function setCurrent(number, w, h) {
 
     if (URL) {
       $inputImage.change(function() {
+        $('#uploading').show();
         var files = this.files,
           file;
-
         if (files && files.length) {
           file = files[0];
           if (/^image\/\w+$/.test(file.type)) {
             blobURL = URL.createObjectURL(file);
             $image.one('built.cropper', function() {
               URL.revokeObjectURL(blobURL); // Revoke when load complete
-            }).cropper('reset', true).cropper('replace', blobURL);
+            }).cropper('reset', true).cropper('replace', blobURL).cropper('setAspectRatio', width / height);
             $inputImage.val('');
             $('#cut').attr('disabled', false);
           } else {
             showMessage('Please choose an image file.');
           }
         }
+
       });
     } else {
       $inputImage.parent().remove();
     }
-
   }());
-
-};
+})();
 
 
 function compress() {
-  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, "jpg").src;
-  document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ""));
+  document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, 'jpg').src;
+  document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ''));
   document.getElementById('p' + current).src = document.getElementById('preview').src;
   // document.getElementById('Tbase64-' + current).setAttribute('value', document.getElementById('Tbase64').value);
-  document.getElementById('p' + current).className = document.getElementById('p' + current).className.replace(/(?:^|\s)changestyle(?!\S)/g, '')
+  document.getElementById('p' + current).className = document.getElementById('p' + current).className.replace(/(?:^|\s)changestyle(?!\S)/g, '');
   $('.cropper-container').remove();
 
- // sendImageToParse(current.replace(/-/, ""),document.getElementById('Tbase64').value)
+    // sendImageToParse(current, document.getElementById('Tbase64').value);
 
   $.ajax({
       type: "POST",
@@ -222,4 +216,10 @@ function compress() {
 
 }
 
-
+function setCurrent(number, w, h) {
+  current = number;
+  width = w;
+  height = h;
+  document.getElementById('CurrentId').setAttribute('value', current);
+  // $image.cropper("setAspectRatio", width / height);
+}

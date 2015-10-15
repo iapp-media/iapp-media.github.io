@@ -216,6 +216,7 @@ function SendData() {
     $.ajax({
         type: "POST",
         url: "../../makehtml.aspx?i=" + getValue('i'),
+        cache: false,
         success: function (imgurl) {
             __doPostBack('LK1','');
         },

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
     <link rel="stylesheet" type="text/css" href="../css/edit-pic.css" />
+    <link rel="stylesheet" href="../css/button.css">
     <style>
         .TShide {
             display: none;
@@ -21,8 +22,16 @@
             position:absolute;
             height:100%;
             z-index:999;
+            background-color:#999;
+            opacity:0.8;
             display:none;
         }
+            .PDstyle img
+            {
+                position:absolute;  
+                top: 48%;
+                left: 48%;
+            }
     </style>
 </head>
 <body>
@@ -38,8 +47,8 @@
         <div class="upload-img">
             <div class="option">
                 <label for="inputImage">
-                    <div class="select">
-                        
+                    <div class="uploadimg-1">
+                        上傳照片
                     </div><%--上傳照片--%>
                 </label>
                 <button data-method="rotate" type="button" class="rotate-btn"></button><%--旋轉--%>
@@ -52,14 +61,16 @@
             </div>
             <p class="word">(拖曳進行照片裁切)</p>
             <input type="file" accept="image/*" capture="camera" class="hide" id="inputImage"   />
-            <button data-method="getCroppedCanvas" type="button" class="cut" >
-                
+            <button data-method="getCroppedCanvas" type="button" class="cut done-1" >
+                完成
             </button><%--截圖--%>
-            <asp:Button ID="BTN" data-method="getCroppedCanvas" OnClientClick="compress(),PassBase64()" runat="server" Text="" CssClass="compress" /><%--確認--%>
+            <asp:Button ID="BTN" data-method="getCroppedCanvas" OnClientClick="compress(),PassBase64()" runat="server" Text="確認" CssClass="compress enter-1" /><%--確認--%>
         </div>
         <label id="base64" style="word-wrap: break-word; word-break: normal; display: none;">Null</label>
         <asp:TextBox ID="TS" runat="server" CssClass="TShide"></asp:TextBox>
-        <asp:Image ID="PDialog" runat="server" CssClass="PDstyle" src="../img/6RMhx.gif" />
+        <div id="PDialog" class="PDstyle">
+            <img src="../img/ajax-loader.gif" />
+        </div> 
     </form>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

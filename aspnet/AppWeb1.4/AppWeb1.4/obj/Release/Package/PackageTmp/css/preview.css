@@ -1152,3 +1152,9 @@ li.active {
 .netpre li:nth-child(2):hover {
     background: url('../Img/down2.png');
 }
+
+
+#midiframe
+{
+    height: 386px; width: 218px; border: 0px;
+}

@@ -372,7 +372,7 @@ Head1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._form1">
@@ -381,7 +381,7 @@ form1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._Scriptmanager1">
@@ -390,7 +390,7 @@ Scriptmanager1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._HLogo">
@@ -399,7 +399,7 @@ HLogo 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._up2">
@@ -408,7 +408,7 @@ up2 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._L">
@@ -417,7 +417,7 @@ L 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._RP1">
@@ -426,7 +426,7 @@ RP1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._SD1">
@@ -435,7 +435,7 @@ SD1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._Lprofile">
@@ -444,7 +444,7 @@ Lprofile 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._LFrame2">
@@ -453,7 +453,7 @@ LFrame2 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._NewApps">
@@ -462,7 +462,7 @@ NewApps 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._FBShare">
@@ -471,7 +471,7 @@ FBShare 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._UpdatePanel2">
@@ -480,7 +480,7 @@ UpdatePanel2 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._La">
@@ -489,7 +489,7 @@ La 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._AA">
@@ -498,7 +498,7 @@ AA 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._DELEID">
@@ -507,7 +507,7 @@ DELEID 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._DELE1">
@@ -516,7 +516,7 @@ DELE1 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4._Default._SavSort">
@@ -525,7 +525,7 @@ SavSort 控制項。
 </summary>
 <remarks>
 自動產生的欄位。
-將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
 </remarks>
 </member>
 <member name="F:AppWeb1._4.list._form1">

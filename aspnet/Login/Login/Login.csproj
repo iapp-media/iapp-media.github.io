@@ -108,8 +108,8 @@
     <Content Include="img\box-fblogin.png" />
     <Content Include="img\button-sprite-1.png" />
     <Content Include="img\button-sprite-2.png" />
+    <Content Include="img\defaulthead.jpg" />
     <Content Include="img\fb.png" />
-    <Content Include="img\headimg.png" />
     <Content Include="img\iapplogo.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\bootstrap.min.js" />

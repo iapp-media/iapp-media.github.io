@@ -157,7 +157,7 @@ var width = getValue('w'),
         $inputImage.change(function () {
             var files = this.files,
               file;
-            $('.cut').show();
+ $('.cut').show();
             if (files && files.length) {
                 file = files[0];
 
@@ -278,7 +278,7 @@ function getValue(varname) {
 }
 
 function compress() {
-    $('#PDialog').show();
+ $('#PDialog').show();
     document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, 'jpg').src;
     //document.getElementById('base64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ''));
     document.getElementById('base64').innerText = document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, "");

@@ -1023,6 +1023,25 @@ public class CommTool: System.Web.UI.Page
         }
         return SS;
     }
+    public string GetOrdersNO(string IDNo, DateTime SDate)
+    {
+        JDB Main = new JDB();
+        Main.ParaClear();
+        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
+        Main.ParaAdd("@YY", (SDate.Year - 1911).ToString(), SqlDbType.VarChar);
+        string HeadNO = "A" + (SDate.Year - 1911).ToString() + "-";
+        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
+        string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Store_ID=@IDNo and Order_No like @HeadNO+'%'");
+        string Order_No = HeadNO + "00001";
+        if (tmpNO != "")
+        {
+            if (IsNumeric(tmpNO))
+            {
+                Order_No = Order_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 5));
+            }
+        }
+        return Order_No;
+    }
 
     public string SendMail(string FromMail, string ToMail, string Subj, string Bodystr)
     {

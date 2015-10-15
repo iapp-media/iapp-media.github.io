@@ -56,10 +56,10 @@
                 </div>
             </div> 
             <div class="confirm">
-                <asp:Button ID="Button1" runat="server" Text=" " OnClick="regBtn1_Click" CssClass="save-1" />
+                <asp:Button ID="Button1" runat="server" Text="儲存" OnClick="regBtn1_Click" CssClass="save-1" />
             </div>
             <div class="close"> 
-                <asp:Button ID="Button2" runat="server" Text=" " CssClass="cancel-1" OnClientClick="window.open('login.aspx', '_self', '');" />
+                <asp:Button ID="Button2" runat="server" Text="取消" CssClass="cancel-1" OnClientClick="window.open('login.aspx', '_self', '');" />
             </div>
         </div>
     </form>

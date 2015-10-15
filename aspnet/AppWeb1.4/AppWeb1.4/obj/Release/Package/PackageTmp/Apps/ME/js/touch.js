@@ -54,7 +54,7 @@
       gesture.target = document.getElementById('pages')
     }
 
-    $('#pages')
+    $('.pages')
       .bind('MSGestureEnd', function(e){
         var swipeDirectionFromVelocity =
           e.velocityX > 1 ? 'Right' : e.velocityX < -1 ? 'Left' : e.velocityY > 1 ? 'Down' : e.velocityY < -1 ? 'Up' : null;

@@ -12,20 +12,6 @@ a:hover {
     text-decoration: none;
     color: #ff9933;
 }
-.send p {
-    color: #ff9933;
-    font-size: 20px;
-    text-align: center;
-    line-height: 25px;
-}
-
-  .send p a {
-    color: #ff9933;
-}
-
- .send p a:hover {
-    color: #fff;
-}
 
 .send {
     position: absolute;

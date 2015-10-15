@@ -1,0 +1,179 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+form {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #7d7d7d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.showImg {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.upload {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 4;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.upload:hover {
+    opacity: 1;
+}
+
+.upload-img {
+    display: none;
+    z-index: 999;
+    height: 100%;
+}
+
+.img-container {
+    background-color: #f7f7f7;
+    /*width: 100%;*/
+    text-align: center;
+    margin: 0px 5% 0px 5%;
+    height: calc(100% - 110px);
+}
+
+.img-container > img {
+    padding-top: 49%;
+}
+
+.preview-container {
+    margin: 0px 5% 0px 5%;
+    height: calc(100% - 110px);
+}
+
+.preview {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.select {
+    width: 82px;
+    height: 30px;
+    display: inline-block;
+    margin: auto;
+    background: url('../img/button-sprite-1.png');
+    background-position: -132px 87px;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.select:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -132px 87px;
+}
+
+.word {
+    text-align: right;
+    height: 20px;
+    color: #000;
+    /* padding-right: 5%; */
+    margin: 2% 5%;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.compress {
+    margin: auto;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 118px;
+}
+
+.cut {
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.base64 {
+    word-wrap: break-word;
+    word-break: normal;
+    display: none;
+}
+
+.rotate-btn {
+    float: right;
+    border: none;
+    width: 27px;
+    height: 30px;
+    cursor: pointer;
+    background: url('../img/button-sprite-1.png');
+    background-position: -217px 88px;
+    cursor: pointer;
+}
+
+.rotate-btn:hover {
+    background: url('../img/button-sprite-2.png');
+    background-position: -217px 88px;
+}
+
+.option {
+    padding: 5px 5% 5px 5%;
+}
+
+.done-1 {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 118px;
+}

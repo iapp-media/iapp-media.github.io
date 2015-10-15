@@ -79,10 +79,6 @@ a:active {
     margin-top: 15px;
 }
 
-/*img {
-    image-orientation: 0deg !important;
-}*/
-
 .preview-container {
     margin-top: 15px;
     height: calc(100% - 208px);
@@ -210,9 +206,7 @@ button:active {
     line-height: 36px;*/
 }
 
-.publish{
-	position:absolute;
-	left:calc(50% - 40px); 
-	margin-left:0;
-	top:70%;
+.create {
+    left: calc(50% - 40px);
+    margin-left: 0;
 }
