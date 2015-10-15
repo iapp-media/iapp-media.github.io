@@ -355,10 +355,11 @@ a:hover {
 }
 
 #Panel1 a:nth-child(2) {
-    text-align: right;
+    float: right;
 }
 
-.option-user a:hover {
+#LBmyw:hover,
+#LBfvw:hover {
     text-decoration: underline;
 }
 
