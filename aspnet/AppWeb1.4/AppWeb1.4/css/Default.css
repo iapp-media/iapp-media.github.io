@@ -590,7 +590,7 @@ a {
     padding: 0;
     text-align: center;
     list-style: none;
-    width: 85px; 
+    width: 85px;
 }
 
 #pageNav ul li {
@@ -826,44 +826,12 @@ li.active {
     position: absolute;
     top: 370px;
     left: 150px;
-    width: 134px;
-    height: 42px;
-    background: url('../img/button-sprite-1.png');
-    background-position: -133px 0;
-}
-
-.final .create:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: -133px 0;
-}
-
-.final .create p {
-    color: #ff9933;
-    font-size: 22px;
-    line-height: 35px;
-    text-align: center;
 }
 
 .final .share {
     position: absolute;
     top: 370px;
     left: 320px;
-    width: 134px;
-    height: 43px;
-    background: url('../img/button-sprite-1.png');
-    background-position: -133px -45px;
-}
-
-.final .share:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: -133px -45px;
-}
-
-.final .share p {
-    color: #ff9933;
-    font-size: 22px;
-    line-height: 35px;
-    text-align: center;
 }
 
 .final .src {
@@ -947,8 +915,7 @@ li.active {
     overflow: hidden;
 }
 
-a.homelogo
-{
+a.homelogo {
     display: block;
     background-color: #FF9933;
     width: 133px;
@@ -957,18 +924,15 @@ a.homelogo
     top: 0px;
     left: 0px;
     z-index: 200;
-    text-decoration:none;
+    text-decoration: none;
 }
 
-    a.homelogo img
-    {
-        width: 100px;
-        height: 76px;
-        margin: 2px auto 5px 13px ;
-    }
-	
-	
- 
+a.homelogo img {
+    width: 100px;
+    height: 76px;
+    margin: 2px auto 5px 13px;
+}
+
 .topImg img {}
 
 .topImg1 {
@@ -978,21 +942,18 @@ a.homelogo
 
 .topImg2 {
     width: 23%;
-    position:absolute;
-	left:70%;
-	top:30px;
+    position: absolute;
+    left: 70%;
+    top: 30px;
 }
 
-#Qrimg
-{ 
-    position:absolute;
-    left:80px;
-	top:120px;
+#Qrimg {
+    position: absolute;
+    left: 80px;
+    top: 120px;
 }
 
-
-.final .describe
-{
+.final .describe {
     position: absolute;
     top: 140px;
     left: 220px;
