@@ -109,7 +109,7 @@
                 <!-- 按下增加，呼叫select選擇區域 -->
                 <div class="select">
                     <a href="javascript: void(0)" id="close-select">
-                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/cancel.png">
+                        <img style="position: absolute; bottom: 20px; right: 10px; width: 20px; z-index: 3;" src="img/close-1.png">
                     </a>
                     <asp:Repeater ID="RP1" runat="server">
                         <ItemTemplate>
