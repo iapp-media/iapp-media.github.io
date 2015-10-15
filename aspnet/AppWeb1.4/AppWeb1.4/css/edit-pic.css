@@ -128,23 +128,9 @@ a:hover {
 }
 
 .compress {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 92px;
-    height: 30px;
+    
     margin: auto;
-    color: #ff9933;
-    font-size: 16px;
-    border: none;
-    background: url('../img/button-sprite-1.png');
-    background-position: 0 59px;
     cursor: pointer;
-}
-
-.compress:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 0 59px;
 }
 
 .cut {
