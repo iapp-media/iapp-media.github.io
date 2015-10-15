@@ -1,0 +1,5 @@
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\bin\Release\JustyLibrary.dll
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\bin\Release\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\bin\Release\ThoughtWorks.QRCode.dll
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\obj\Release\JustyLibrary.dll
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\obj\Release\JustyLibrary.pdb
