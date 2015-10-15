@@ -131,6 +131,11 @@ a:hover {
 .compress {
     margin: auto;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100px;
 }
 
 .cut {
