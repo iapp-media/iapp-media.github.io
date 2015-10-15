@@ -142,7 +142,7 @@
                 <%--<a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx?i="  >
                     <img class="head" src="img/head.png" /></a>--%>
                 <a class='iframe-info' href="list.aspx">
-                    <img class="list" src="img/button1.png" /></a>
+                    <img class="list" src="img/item-1.png" /></a>
 
                 <!-- 發布頁面 -->
                 <div class="publish hide">
