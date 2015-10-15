@@ -72,6 +72,7 @@ a:hover {
 .search-sm {
     display: none;
 }
+
 .sandwich {
     font-size: 17px;
     line-height: 34px;
@@ -345,11 +346,20 @@ a:hover {
 }
 
 .option-user {
-    width: 300px;
+    width: 200px;
     position: absolute;
     margin-top: 130px;
-    left: calc(50% - 150px);
+    margin-left: -100px;
+    left: 50%;
     font-size: 16px;
+}
+
+#Panel1 a:nth-child(2) {
+    text-align: right;
+}
+
+.option-user a:hover {
+    text-decoration: underline;
 }
 
 .option-user a:link {
