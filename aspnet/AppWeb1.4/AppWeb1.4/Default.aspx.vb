@@ -40,8 +40,10 @@ Partial Class _Default
                     Exit Sub
                 End If
 
-                Lprofile.Text = "<a class='iframe-info' href=""http://www.iapp-media.com/Login/profile.aspx?i=" & userid & """>" & _
+                Lprofile.Text = "<a class='iframe-info' href=""http://220.132.67.201:88/Login/profile.aspx?i=" & userid & """>" &
                    " <img class=""head"" src=""" & userico & """ /></a>"
+                ' Lprofile.Text = "<a class='iframe-info' href=""http://www.iapp-media.com/Login/profile.aspx?i=" & userid & """>" & _
+                '    " <img class=""head"" src=""" & userico & """ /></a>"
 
                 Dim AppUrl As String = Main.Scalar("Select App_Url from User_App where IDNo=" & Request.QueryString("i"))
                 If IsNothing(Session("AccessToken")) Then
