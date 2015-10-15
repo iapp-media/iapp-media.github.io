@@ -127,14 +127,10 @@
         <!--<img class="user-icon" src="img/photoicon.png">-->
         <asp:Panel ID="Panel1" runat="server" CssClass="option-user" Visible="false">
             <asp:LinkButton ID="LBmyw" runat="server" OnClick="LBmym_Click">
-                <div class="my-iapp">
-                   <p>我的iApp</p>
-                </div>
+                我的iApp
             </asp:LinkButton>
-            <asp:LinkButton ID="LBfvw" runat="server" OnClick="LBfvm_Click">
-                <div class="collect-iapp">
-                    <p>收藏的iApp</p>
-                </div>
+            <asp:LinkButton ID="LBfvw" runat="server" OnClick="LBfvm_Click">     
+                收藏的iApp
             </asp:LinkButton>
         </asp:Panel>
         <asp:Panel ID="Panel2" runat="server" CssClass="logout-user" Visible="false">
