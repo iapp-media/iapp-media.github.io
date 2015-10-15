@@ -22,7 +22,7 @@
             <div class="profile">
                 <div class="HeadMove">
                     <div class="logo-file">
-                            <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/headimg.png" />
+                            <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/defaulthead.jpg" />
                                 <a id="show-upload" class='select-1' href='javascrip:void(0)' onclick="callAUL()">  
                     選擇檔案
                         </a>
