@@ -1537,6 +1537,7 @@ a {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
+   
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 112px;
@@ -1709,9 +1710,20 @@ a {
     .swiper-container {
         top: 71px;
     }
+    #slider ul li {
+        width:300px;
+        height:250px;
+        line-height:0;
+    }
+     
 }
 
 @media only screen and (max-width:480px) {
+    #slider ul li {
+        width:200px;
+        height:150px;
+        line-height:0;
+    }
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 115px;
