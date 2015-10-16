@@ -1502,7 +1502,7 @@ a {
     cursor: pointer;
 }
 
-   .control_prev:hover,
+    .control_prev:hover,
     .control_next:hover {
         opacity: 1;
         -webkit-transition: all 0.2s ease;
@@ -1528,9 +1528,6 @@ a {
     .Lgallbar {
         width: 85%;
     }
-    .input-group-btn {
-        display:none;
-    }
 }
 
 @media only screen and (min-width:768px) and (max-width:972px) {
@@ -1541,7 +1538,7 @@ a {
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     .promana {
-        outline: 1px solid #f00;
+        /*outline: 1px solid #f00;*/
         margin-top: 112px;
         height: 500px;
     }
@@ -1634,6 +1631,7 @@ a {
 
     .select {
         right: 0;
+        display: none;
     }
 
     .search-sm {
@@ -1658,6 +1656,8 @@ a {
         left: 0;
         margin: auto;
         display: block;
+        font-size: 29px;
+        color: #ff9933;
     }
 
     .login-sm {
@@ -1696,6 +1696,18 @@ a {
     .select:focus {
         background-color: transparent;
         border-color: transparent;
+    }
+
+    .menusandwich {
+        margin: 17px 39px;
+    }
+
+    .menuAJAX, .proAJAX {
+        margin-top: 29px;
+    }
+
+    .swiper-container {
+        top: 71px;
     }
 }
 
@@ -1753,6 +1765,7 @@ a {
         width: 57px;
         height: 44px;
         top: -15px;
+        display: none;
     }
 
         .select:hover {
@@ -1900,5 +1913,25 @@ a {
     .select:focus {
         background-color: transparent;
         border-color: transparent;
+    }
+
+    .menusandwich {
+        margin: 16px 20px;
+    }
+
+    .search2 {
+        font-size: 29px;
+        color: ff9933;
+    }
+
+    .menuAJAX, .proAJAX {
+        margin-top: 29px;
+    }
+
+    .swiper-container {
+        top: 72px;
+    }
+    .glyphicon-search {
+        color:#ff9933;
     }
 }
