@@ -31,15 +31,6 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.Literal L_Name;
         
         /// <summary>
-        /// L_Description 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Description;
-        
-        /// <summary>
         /// L_Price 控制項。
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DL_qty;
+        
+        /// <summary>
+        /// TB_Description 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Description;
         
         /// <summary>
         /// TB_Dimension 控制項。
@@ -85,58 +85,40 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.TextBox TB_Paysum;
         
         /// <summary>
-        /// DL_Payment 控制項。
+        /// L_view 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Payment;
+        protected global::System.Web.UI.WebControls.Literal L_view;
         
         /// <summary>
-        /// DL_Delivery 控制項。
+        /// BT_MSG 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Delivery;
+        protected global::System.Web.UI.WebControls.Button BT_MSG;
         
         /// <summary>
-        /// TB_Name 控制項。
+        /// BT_Like 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Name;
+        protected global::System.Web.UI.WebControls.Button BT_Like;
         
         /// <summary>
-        /// TB_Tel 控制項。
+        /// BT_SHARE 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Tel;
-        
-        /// <summary>
-        /// TB_MNO 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_MNO;
-        
-        /// <summary>
-        /// TB_Addr 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Addr;
+        protected global::System.Web.UI.WebControls.Button BT_SHARE;
         
         /// <summary>
         /// BT_Confirm 控制項。

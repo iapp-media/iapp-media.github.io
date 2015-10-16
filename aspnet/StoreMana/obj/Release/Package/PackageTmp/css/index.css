@@ -42,6 +42,13 @@
     margin: auto;
 }
 
+
+/* link CSS UI */
+
+.mart10 {
+    margin-top: 10px;
+}
+
 body {
     background-color: #f5f5f5;
     font-size: small;
@@ -914,7 +921,7 @@ a:hover {
     height: 50px;
     position: absolute;
     /* left: 50%; */
-    /* margin-left: -75%; */
+    /* margin-left: 19%; */
     overflow-x: hidden;
     width: 100%;
     transform: scale(1.5);
@@ -928,13 +935,13 @@ a:hover {
 .allClassification li {
     background-color: #b4b4b4;
     color: #fff;
-    height: 80%;
+    height: 48%;
     border-right: 1px solid #a3a3a3;
     text-align: center;
-    font-size: 122%;
+    font-size: 90%;
     display: table;
     line-height: 36px;
-    margin: 5px 0 0 0;
+    /* margin: 5px 0 0 0; */
 }
 
 .item button {
@@ -993,7 +1000,9 @@ a:hover {
 .productcare,
 .productcareEnd,
 .clickimg,
-.manager {
+.manager,
+.pageAJAX li:nth-child(2),
+.pageAJAX li:nth-child(3) {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1002,7 +1011,7 @@ a:hover {
     display: none;
 }
 
-.productcare .insidecare {
+.insidecare {
     border-radius: 2px;
 }
 
@@ -1048,17 +1057,6 @@ a:hover {
     -webkit-transform: translate3d(0, 0, 0);
     transition: all 600ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
     position: relative;
-}
-
-.paynumber .form-control,
-.paytheway .form-control,
-.sendtheway .form-control {
-    width: 40%;
-    float: right;
-    margin-right: 12px;
-    border: 1px solid #b3b4b5;
-    border-radius: 2px;
-    background-color: #fff;
 }
 
 .status input,
@@ -1196,7 +1194,7 @@ a:hover {
 
 .menuAJAX,
 .proAJAX {
-    height: 52px;
+    height: 55px;
     background-color: #b4b4b4;
     margin-top: 29px;
     position: absolute;
@@ -1233,9 +1231,10 @@ a:hover {
 /* Manager CSS */
 
 .promana {
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
     margin-top: 122px;
     height: 500px;
+    position: relative;
 }
 
 
@@ -1261,11 +1260,166 @@ a:hover {
     opacity: 1;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+    transition: .35s;
 }
 
 .fadeInRight_Double {
     -webkit-transform: translate3d(-200%, 0, 0);
     transform: translate3d(-200%, 0, 0);
+}
+
+
+/* modify CSS*/
+
+.modify {}
+
+.allmodify .input-group .form-control {
+    display: block;
+    width: 100%;
+}
+
+.allmodify .input-group-btn:last-child>.btn,
+.allmodify .input-group-btn:last-child>.btn-group {
+    margin-left: 0;
+}
+
+.allmodify .input-group-btn {
+    top: 0;
+}
+
+.allmodify .form-control,
+.allmodify .input-group .form-control,
+.allmodify .input-group .form-control {
+    margin-right: 0;
+}
+
+.allmodify .btn-default,
+.allmodify .btn-default {
+    background-color: #fff;
+}
+
+.allmodify .checkbox,
+.allmodify .radio {
+    padding: 0 15px;
+}
+
+.allmodify .status input {
+    font-size: 0;
+}
+
+.addman {
+    float: right;
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+
+/* D3 UI */
+
+.Clienth1 {
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+
+.Clientul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Clientul li {
+    list-style-type: none;
+    background-color: orange;
+    height: 20px;
+    margin-bottom: 2px;
+    padding: 10px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+.Clientulli a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* manager AJAX */
+
+.allmodify:nth-child(2),
+.allmodify:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+
+/* inclu CSS */
+
+.paynumber .magclose {
+    margin-right: 0 !important;
+}
+
+.paynumber .form-control,
+.paytheway .form-control,
+.sendtheway .form-control {
+    width: 40%;
+    float: right;
+    margin-right: 17px;
+    border: 1px solid #b3b4b5;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.fonts {
+    font-size: 150%;
+}
+
+.maneywi .input-group {
+    width: 49%;
+    float: right;
+}
+
+.maneywi .form-group {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+
+/* menu swipe UI CSS */
+
+.swiper-container {
+    width: 100%;
+    top: 72px;
+    /* height: 19px; */
+    margin: 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 22%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 22%;
 }
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
@@ -1282,10 +1436,10 @@ a:hover {
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     .promana {
-    outline: 1px solid #f00;
-    margin-top: 112px;
-    height: 500px;
-}
+        outline: 1px solid #f00;
+        margin-top: 112px;
+        height: 500px;
+    }
     .overflowMenu {
         top: 65px;
     }
@@ -1426,10 +1580,10 @@ a:hover {
 
 @media only screen and (max-width:480px) {
     .promana {
-    outline: 1px solid #f00;
-    margin-top: 112px;
-    height: 500px;
-}
+        /*outline: 1px solid #f00;*/
+        margin-top: 115px;
+        height: 500px;
+    }
     .overflowMenu {
         top: 65px;
     }
@@ -1513,6 +1667,22 @@ a:hover {
     .container>.navbar-collapse,
     .container>.navbar-header {
         margin: 0;
+    }
+    .navbar-header {
+        width: 50%;
+        position: relative;
+    }
+    .navbar-header p {
+        font-size: 180%;
+        padding: 0;
+        height: 42%;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: #ff9933;
     }
     .Lgallbar {
         width: 0;

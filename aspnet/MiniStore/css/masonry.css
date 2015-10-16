@@ -94,7 +94,7 @@ body {
 }
 
 #container {
-    margin: 158px auto;
+    margin: 10% auto;
     border-radius: 5px;
     clear: both;
     -webkit-border-radius: 5px;
@@ -146,7 +146,7 @@ body {
 }
 
 
-/* checkboxÃƒÂ¨Ã‚Â¨Ã‚Â­ÃƒÂ¥Ã‚Â®Ã…Â¡ */
+/* checkboxè¨­å®š */
 
 .list {
     float: left;
@@ -351,8 +351,9 @@ input[type="checkbox"] {
     padding: 0;
     height: 100%;
     /* width: 8%; */
+    width: 111px;
     position: absolute;
-    right: 0;
+    right: 100px;
 }
 
 .boxpos {
@@ -401,7 +402,7 @@ input[type="checkbox"] {
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     #container {
-        margin: 140px auto;
+        margin: 17% auto;
     }
     .item {
         float: left;

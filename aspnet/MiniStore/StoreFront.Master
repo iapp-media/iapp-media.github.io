@@ -71,7 +71,8 @@
                     <li><a href="javascript:void(0)"   id="GO_Mini" target="_self" onclick="GO_Mini()"   >打造自己的微店</a></li>
                     <li><a href="#">加入行動分店</a></li>
                     <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li> 
- 
+                    <li>我的拍賣</li>  
+                       <li><a href="Order_history.aspx">訂單記錄</a></li>
                 </ul>
                 <div class="menuAJAX col-xs-12">
                     <div class="row">
@@ -222,7 +223,7 @@
     <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script src="js/swiper.min.js"></script>
+   <%-- <script src="js/swiper.min.js"></script>--%>
     <script src="js/jquery.touchSwipe.min.js"></script>
     <!-- GA iAppPortal -->
     <script type="text/javascript" src="js/ga-iappportal.js"></script>

@@ -22,9 +22,9 @@ namespace StoreMana
                 if (Comm.IsNumeric(Request.QueryString["PID"]) & Comm.IsNumeric(Request.QueryString["Img"]))
                 {
                     string pimg = "";
-                    if ( Main.Scalar("select isnull(max(idno),'') from Product_Img where Product_ID='" + Request.QueryString["PID"].ToString() + "'  and Num='" + Request.QueryString["Img"] + "'")!="")
+                    if (Main.Scalar("select isnull(max(num),'') from Product_Img where Product_ID='" + Request.QueryString["PID"].ToString() + "'  and Num='" + Request.QueryString["Img"] + "'") == Request.QueryString["Img"])
                     {
-                             pimg = Main.Scalar("select FilePath from Product_Img where Product_ID='" + Request.QueryString["PID"].ToString() + "'  and Num='" + Request.QueryString["Img"] + "'"); 
+                        pimg = Main.Scalar("select FilePath from Product_Img where 1=1 and Product_ID='" + Request.QueryString["PID"].ToString() + "'  and Num='" + Request.QueryString["Img"] + "'");
                     }
 
                     if (pimg != "")
@@ -58,15 +58,14 @@ namespace StoreMana
 
                 string FileName = Comm.ImgSerial(Comm.Cint2(Request.QueryString["PID"]), Comm.Cint2(Request.QueryString["Img"])) + ".jpg";
 
-                if (Main.Scalar("select isnull(max(idno),'') from Product_Img where Product_ID=@idno and Num=@Num") != "")
+                if (Main.Scalar("select isnull(max(idno),'0') from Product_Img where Product_ID='" + Request.QueryString["PID"] + "' and Num='" + Request.QueryString["Img"] + "'") != "0")
                 {
                     FileFolder = Main.Scalar("select Folder from Product_Img where Product_ID=@idno and Num=@Num");
                 }
                  if (FileFolder == "")
                 {
                     FileFolder = Comm.CheckAppFolder();
-                    FilePath = "D:\\DataYi\\AppWeb\\MiniStore\\Itempic\\" + FileFolder + "\\";
-                    //  FilePath = "C:\\inetpub\\wwwroot\\MiniStore\\img\\";
+                    FilePath = Comm.MiStorePath + "\\Itempic\\" + FileFolder + "\\"; 
 
                     if (File.Exists(FilePath + FileName))
                     {
@@ -84,7 +83,7 @@ namespace StoreMana
                 }
                 else
                 {
-                    FilePath = "D:\\DataYi\\AppWeb\\MiniStore\\Itempic\\" + FileFolder + "\\";
+                   FilePath = Comm.MiStorePath + "\\Itempic\\" + FileFolder + "\\"; 
                     if (File.Exists(FilePath + FileName))
                     {
                         File.Delete(FilePath + FileName);

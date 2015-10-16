@@ -1043,9 +1043,9 @@ a:hover {
     margin: 0;
 }
 
-.insidecare input {
+/*.insidecare input {
     float: right;
-}
+}*/
 
 .insidecare label {
     color: #838485;
@@ -1301,6 +1301,7 @@ a:hover {
 .allmodify .checkbox,
 .allmodify .radio {
     padding: 0 15px;
+
 }
 
 .allmodify .status input {

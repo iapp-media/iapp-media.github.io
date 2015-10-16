@@ -211,9 +211,11 @@
     <!-- 回到頂部 -->
     <a href="#"><img class="back-top" src="img/top.png"/> 
     </a>
+                                
+
         <!-- WRAPPER -->
     <div class="col-xs-12 promana">
-        <div class="row">
+        <div class="row">      
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>

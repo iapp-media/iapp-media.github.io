@@ -76,22 +76,22 @@ namespace StoreMana.Mini {
         protected global::System.Web.UI.WebControls.TextBox TB_Dimension;
         
         /// <summary>
-        /// DL_Payment 控制項。
+        /// CB_Payment 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Payment;
+        protected global::System.Web.UI.WebControls.CheckBoxList CB_Payment;
         
         /// <summary>
-        /// DL_Delivery 控制項。
+        /// CB_Delivery 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Delivery;
+        protected global::System.Web.UI.WebControls.CheckBoxList CB_Delivery;
         
         /// <summary>
         /// TB_Memo 控制項。

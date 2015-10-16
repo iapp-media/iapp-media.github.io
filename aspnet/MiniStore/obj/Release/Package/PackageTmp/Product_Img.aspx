@@ -10,10 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-     
-                            <asp:Literal ID="L" runat="server"></asp:Literal>
-                      
-        
+         <asp:Literal ID="L" runat="server"></asp:Literal>  
     </form>
 </body>
 </html>

@@ -13,103 +13,31 @@ namespace StoreMana.Mini {
     public partial class Order_Detail {
         
         /// <summary>
-        /// L_ProductName 控制項。
+        /// RP1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_ProductName;
+        protected global::System.Web.UI.WebControls.Repeater RP1;
         
         /// <summary>
-        /// L_AMT 控制項。
+        /// L1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_AMT;
+        protected global::System.Web.UI.WebControls.Literal L1;
         
         /// <summary>
-        /// L_Total 控制項。
+        /// SD1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Total;
-        
-        /// <summary>
-        /// L_Payment 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Payment;
-        
-        /// <summary>
-        /// L_Delivery 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Delivery;
-        
-        /// <summary>
-        /// L_OrderNo 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_OrderNo;
-        
-        /// <summary>
-        /// DDL_Status 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDL_Status;
-        
-        /// <summary>
-        /// L_Contact_ID 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Contact_ID;
-        
-        /// <summary>
-        /// L_Email 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Email;
-        
-        /// <summary>
-        /// L_TEL 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_TEL;
-        
-        /// <summary>
-        /// L_Addr 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_Addr;
+        protected global::System.Web.UI.WebControls.SqlDataSource SD1;
         
         /// <summary>
         /// Bt_Leave 控制項。

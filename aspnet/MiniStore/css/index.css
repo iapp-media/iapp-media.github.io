@@ -5,10 +5,10 @@
 
 .Allsearch {
     /*outline: 1px solid #f00;*/
-    width: 90%;
+    width: 80%;
     height: 100%;
     position: absolute;
-    right: 111px;
+    right: 212px;
 }
 
 .container-fluid {
@@ -40,33 +40,6 @@
     bottom: 0;
     height: 73%;
     margin: auto;
-}
-
-
-/* BUTTON UI */
-
-.buy {
-    font-size: 16px;
-    font-family: Arial;
-    font-weight: normal;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
-    border: 2px solid #FF9933;
-    padding: 8px 17px;
-    text-decoration: none;
-    color: #FF9933;
-    display: inline-block;
-}
-
-.buy:hover {
-    background-color: #ff9933;
-    color: #fff;
-}
-
-.buy:active {
-    position: relative;
-    top: 1px;
 }
 
 
@@ -1024,7 +997,13 @@ a:hover {
 
 /* AJAX bottom */
 
-.productcare,
+.productcare {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 117px;
+}
 .productcareEnd,
 .clickimg,
 .manager,
@@ -1034,7 +1013,7 @@ a:hover {
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: 141px;
+    top: 117px;
     display: none;
 }
 
@@ -1227,7 +1206,7 @@ a:hover {
     position: absolute;
     font-size: 180%;
     text-align: center;
-    top: 65%;
+    top: 50%;
     /*opacity: 0;*/
 }
 
@@ -1259,7 +1238,7 @@ a:hover {
 
 .promana {
     /* outline: 1px solid #f00; */
-    margin-top: 147px;
+    margin-top: 122px;
     height: 500px;
     position: relative;
 }
@@ -1405,7 +1384,7 @@ a:hover {
 }
 
 .maneywi .input-group {
-    width: 100%;
+    width: 49%;
     float: right;
 }
 
@@ -1419,7 +1398,8 @@ a:hover {
 
 .swiper-container {
     width: 100%;
-    top: 93px;
+    top: 72px;
+    /* height: 19px; */
     margin: 0;
 }
 
@@ -1448,40 +1428,9 @@ a:hover {
     width: 22%;
 }
 
-.navbar-header p {
-    font-size: 180%;
-    padding: 0;
-    height: 42%;
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    color: #ff9933;
-}
-
-.form-inline .form-group {
-    float: right;
-}
-
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;
-    }
-    .swiper-container {
-        top: 93px;
-    }
-    #container {
-        margin: 21% auto;
-    }
-    .productcare,
-    .productcareEnd,
-    .clickimg,
-    .manager,
-    .pageAJAX li:nth-child(2),
-    .pageAJAX li:nth-child(3) {
-        top: 144px;
     }
 }
 
@@ -1489,24 +1438,11 @@ a:hover {
     .Lgallbar {
         width: 73%;
     }
-    .swiper-container {
-        top: 93px;
-    }
-    #container {
-        margin: 21% auto;
-    }
-    .productcare,
-    .productcareEnd,
-    .clickimg,
-    .manager,
-    .pageAJAX li:nth-child(2),
-    .pageAJAX li:nth-child(3) {
-        top: 144px;
-    }
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
     .promana {
+        outline: 1px solid #f00;
         margin-top: 112px;
         height: 500px;
     }
@@ -1646,31 +1582,6 @@ a:hover {
         background-color: transparent;
         border-color: transparent;
     }
-    .swiper-container {
-        top: 72px;
-    }
-    .menuAJAX,
-    .proAJAX {
-        top: 53%;
-    }
-    .navbar-header {
-        width: 194px;
-    }
-    .navbar-header p {
-        display: block;
-    }
-    .form-inline .form-group {
-        float: right;
-        width: 49%;
-    }
-    .productcare,
-    .productcareEnd,
-    .clickimg,
-    .manager,
-    .pageAJAX li:nth-child(2),
-    .pageAJAX li:nth-child(3) {
-        top: 123px;
-    }
 }
 
 @media only screen and (max-width:480px) {
@@ -1768,7 +1679,16 @@ a:hover {
         position: relative;
     }
     .navbar-header p {
+        font-size: 180%;
+        padding: 0;
+        height: 42%;
         display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: #ff9933;
     }
     .Lgallbar {
         width: 0;
@@ -1834,20 +1754,5 @@ a:hover {
     .select:focus {
         background-color: transparent;
         border-color: transparent;
-    }
-    .swiper-container {
-        top: 72px;
-    }
-    .menuAJAX,
-    .proAJAX {
-        top: 53%;
-    }
-    .productcare,
-    .productcareEnd,
-    .clickimg,
-    .manager,
-    .pageAJAX li:nth-child(2),
-    .pageAJAX li:nth-child(3) {
-        top: 124px;
     }
 }

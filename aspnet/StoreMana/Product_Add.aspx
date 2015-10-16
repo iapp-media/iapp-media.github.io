@@ -70,20 +70,16 @@
                             <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
                         </div>
                         <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">付款方式</label>
-                            <asp:DropDownList ID="DL_Payment" runat="server" CssClass="form-control">
-                                <asp:ListItem Text="面交" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="7-11 ibon" Value="2"></asp:ListItem>
-                                <asp:ListItem Text="銀行轉帳" Value="3"></asp:ListItem>
-                            </asp:DropDownList>
+                            <label class="col-xs-6">付款方式</label>
+                            <asp:CheckBoxList ID="CB_Payment" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
+                             
+                            </asp:CheckBoxList> 
                         </div>
                         <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">寄送方式</label>
-                            <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control">
-                                <asp:ListItem Text="面交自取" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="7-11" Value="2"></asp:ListItem>
-                                <asp:ListItem Text="寄送到府" Value="3"></asp:ListItem>
-                            </asp:DropDownList>
+                            <label  class="col-xs-6">寄送方式</label>
+                            <asp:CheckBoxList ID="CB_Delivery" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
+                         
+                            </asp:CheckBoxList>  
                         </div>
                         <div class="col-xs-12 libor paynumber">
                             <label for="" class="col-xs-6">備註</label>

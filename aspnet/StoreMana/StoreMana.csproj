@@ -100,6 +100,7 @@
     <Content Include="js\jquery.touchSwipe.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\swiper.min.js" />
+    <Content Include="Msg_Add.aspx" />
     <Content Include="Msg_Mana.aspx" />
     <Content Include="OrderMana.aspx" />
     <Content Include="Order_Detail.aspx" />
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="MiniMaster.Master.designer.cs">
       <DependentUpon>MiniMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Msg_Add.aspx.cs">
+      <DependentUpon>Msg_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Msg_Add.aspx.designer.cs">
+      <DependentUpon>Msg_Add.aspx</DependentUpon>
     </Compile>
     <Compile Include="Msg_Mana.aspx.cs">
       <DependentUpon>Msg_Mana.aspx</DependentUpon>
@@ -191,6 +199,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MiniMaster.Master" />
     <None Include="Properties\PublishProfiles\StoreMana.pubxml" />
+    <None Include="Properties\PublishProfiles\StoreMana2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

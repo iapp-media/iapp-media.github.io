@@ -49,22 +49,31 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.TextBox TB_Paysum;
         
         /// <summary>
-        /// TB_Payment 控制項。
+        /// RBL_Payment 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Payment;
+        protected global::System.Web.UI.WebControls.RadioButtonList RBL_Payment;
         
         /// <summary>
-        /// TB_Delivery 控制項。
+        /// RBL_Delivery 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Delivery;
+        protected global::System.Web.UI.WebControls.RadioButtonList RBL_Delivery;
+        
+        /// <summary>
+        /// TB_Name 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Name;
         
         /// <summary>
         /// TB_Tel 控制項。

@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-xs-12 libor payNum">
                         <label for="" class="col-xs-6">付款金額</label>
-                        <asp:TextBox ID="TB_Paysum" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6" >99</asp:TextBox>
                     </div>
                     <div class="col-xs-12 libor paytheway">
                         <label for="" class="col-xs-6">付款方式</label>
@@ -77,19 +77,32 @@
                     <div class="col-xs-12 libor sendadress">
                         <label for="" class="col-xs-5">收件人資訊</label>
                         <div class="col-xs-7">
-                            <asp:TextBox ID="TextBox1" runat="server" placeholder="電話" CssClass="col-xs-12" ></asp:TextBox>
-                            <asp:TextBox ID="TextBox2" runat="server" placeholder="郵遞區號" CssClass="col-xs-12" ></asp:TextBox>
-                            <asp:TextBox ID="TextBox3" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
+                        <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox> 
+                            <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12" ></asp:TextBox>
+                            <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12" ></asp:TextBox>
+                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
+                         </div>
+                    </div>
+                    <div class="col-xs-12 libor sendadress"> 
+                        <div class="col-xs-12">
+                            <asp:Button ID="BT_MSG" runat="server" Text="問與答"  CssClass="col-xs-4" OnClick="BT_MSG_Click" />
+                            <asp:Button ID="BT_Like" runat="server" Text="LIKE"  CssClass="col-xs-4"/>
+                            <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4" />
                          </div>
                     </div>
                 </div>
             </div>
-            <asp:Button ID="BT_Confirm" runat="server" Text="確認購物內容" CssClass="btn btn-warning col-xs-12 sendcareButtom" /> 
+            <asp:Button ID="BT_Confirm" runat="server" Text="確認購物內容" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" /> 
+            <asp:Button ID="BT_InCar" runat="server" Text="繼續購物" CssClass="btn btn-warning col-xs-12 sendcareButtom"  OnClick="BT_InCar_Click" />  
         </li>
         </ul>
     <script>
-        function myScriptFunctionName() {
-            alert('GGG');
+        function loadPriceScript() {
+          //alert('YY');
+            //var a1 = cint2($("#DL_qty").select.call..replace(/\,/g, ""));
+            //var a2 = cint2($("#TB_Price").val().replace(/\,/g, ""));
+            //$("#TB_Paysum").text(Math.round(a1 * a2));
+           
         }
     </script>
 </asp:Content>

@@ -10,25 +10,28 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/06/2015 11:56:22</publishTime>
+      <publishTime>10/13/2015 15:27:08</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>10/07/2015 09:17:01</publishTime>
+      <publishTime>10/13/2015 16:02:30</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>08/04/2015 09:59:36</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>10/06/2015 17:02:23</publishTime>
+      <publishTime>10/12/2015 08:55:10</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
-      <publishTime>10/07/2015 09:16:40</publishTime>
+      <publishTime>10/13/2015 16:01:13</publishTime>
     </File>
     <File Include="Buy_Car.aspx">
-      <publishTime>10/06/2015 16:46:09</publishTime>
+      <publishTime>10/12/2015 13:45:27</publishTime>
+    </File>
+    <File Include="Buy_Ctrl.aspx">
+      <publishTime>10/12/2015 13:51:25</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
-      <publishTime>10/06/2015 14:42:06</publishTime>
+      <publishTime>10/13/2015 14:53:25</publishTime>
     </File>
     <File Include="css/colorbox.css">
       <publishTime>10/06/2015 14:42:06</publishTime>
@@ -180,6 +183,9 @@
     <File Include="img/top.png">
       <publishTime>10/02/2015 08:49:38</publishTime>
     </File>
+    <File Include="img/uploadicon.png">
+      <publishTime>10/08/2015 14:59:18</publishTime>
+    </File>
     <File Include="Index.aspx">
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
@@ -193,7 +199,7 @@
       <publishTime>10/06/2015 14:42:28</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/12/2015 18:29:48</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
       <publishTime>10/06/2015 14:42:28</publishTime>
@@ -241,13 +247,16 @@
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
     <File Include="Product_Img.aspx">
-      <publishTime>10/06/2015 17:20:40</publishTime>
+      <publishTime>10/12/2015 14:01:25</publishTime>
+    </File>
+    <File Include="P_MSG.aspx">
+      <publishTime>10/13/2015 16:01:54</publishTime>
     </File>
     <File Include="Shopping_Cart.aspx">
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>10/06/2015 15:08:54</publishTime>
+      <publishTime>10/12/2015 18:28:10</publishTime>
     </File>
     <File Include="TT.aspx">
       <publishTime>10/02/2015 11:22:04</publishTime>

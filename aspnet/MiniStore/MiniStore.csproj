@@ -89,7 +89,6 @@
     <Content Include="img\qr-iappmedia.jpg" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
-    <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
     <Content Include="js\index.js" />
@@ -102,10 +101,6 @@
     <Content Include="js\jquery.touchSwipe.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\swiper.min.js" />
-    <Content Include="MiniStore_Add.aspx" />
-    <Content Include="Order.aspx" />
-    <Content Include="Orders_Mana.aspx" />
-    <Content Include="Order_Detail.aspx" />
     <Content Include="DEL\scripts\bootstrap.min.js" />
     <Content Include="DEL\scripts\colorbox.js" />
     <Content Include="DEL\scripts\contact.js" />
@@ -121,8 +116,11 @@
     <Content Include="DEL\scripts\owl.carousel.min.js" />
     <Content Include="DEL\scripts\snap.js" />
     <Content Include="DEL\shopcart.html" />
+    <Content Include="Order_history.aspx" />
+    <Content Include="Order_prn.aspx" />
+    <Content Include="Product_Detail.aspx" />
     <Content Include="Product_Img.aspx" />
-    <Content Include="Shopping_Cart.aspx" />
+    <Content Include="P_MSG.aspx" />
     <Content Include="DEL\styles\bootstrap.min.css" />
     <Content Include="DEL\styles\colorbox.css" />
     <Content Include="DEL\styles\framework.css" />
@@ -131,7 +129,6 @@
     <Content Include="DEL\styles\owl.theme.css" />
     <Content Include="DEL\styles\style.css" />
     <Content Include="DEL\styles\swipebox.css" />
-    <Content Include="TT.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -170,33 +167,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MiniStore_Add.aspx.cs">
-      <DependentUpon>MiniStore_Add.aspx</DependentUpon>
+    <Compile Include="Order_history.aspx.cs">
+      <DependentUpon>Order_history.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MiniStore_Add.aspx.designer.cs">
-      <DependentUpon>MiniStore_Add.aspx</DependentUpon>
+    <Compile Include="Order_history.aspx.designer.cs">
+      <DependentUpon>Order_history.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Order_prn.aspx.cs">
+      <DependentUpon>Order_prn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Order_prn.aspx.designer.cs">
+      <DependentUpon>Order_prn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Orders_Mana.aspx.cs">
-      <DependentUpon>Orders_Mana.aspx</DependentUpon>
+    <Compile Include="Product_Detail.aspx.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Orders_Mana.aspx.designer.cs">
-      <DependentUpon>Orders_Mana.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Detail.aspx.cs">
-      <DependentUpon>Order_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Order_Detail.aspx.designer.cs">
-      <DependentUpon>Order_Detail.aspx</DependentUpon>
+    <Compile Include="Product_Detail.aspx.designer.cs">
+      <DependentUpon>Product_Detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product_Img.aspx.cs">
       <DependentUpon>Product_Img.aspx</DependentUpon>
@@ -206,12 +196,12 @@
       <DependentUpon>Product_Img.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shopping_Cart.aspx.cs">
-      <DependentUpon>Shopping_Cart.aspx</DependentUpon>
+    <Compile Include="P_MSG.aspx.cs">
+      <DependentUpon>P_MSG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Shopping_Cart.aspx.designer.cs">
-      <DependentUpon>Shopping_Cart.aspx</DependentUpon>
+    <Compile Include="P_MSG.aspx.designer.cs">
+      <DependentUpon>P_MSG.aspx</DependentUpon>
     </Compile>
     <Compile Include="StoreFront.Master.cs">
       <DependentUpon>StoreFront.Master</DependentUpon>
@@ -219,13 +209,6 @@
     </Compile>
     <Compile Include="StoreFront.Master.designer.cs">
       <DependentUpon>StoreFront.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TT.aspx.cs">
-      <DependentUpon>TT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TT.aspx.designer.cs">
-      <DependentUpon>TT.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

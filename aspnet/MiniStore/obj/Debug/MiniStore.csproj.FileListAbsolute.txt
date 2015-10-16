@@ -14,6 +14,3 @@ D:\DataYi\AppWeb\MiniStore\bin\JustyLibrary.pdb
 D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.csprojResolveAssemblyReference.cache
 D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.dll
 D:\DataYi\AppWeb\MiniStore\obj\Debug\MiniStore.pdb
-C:\GitHub\iapp-media.github.io\aspnet\MiniStore\obj\Debug\MiniStore.csprojResolveAssemblyReference.cache
-C:\GitHub\iapp-media.github.io\aspnet\MiniStore\obj\Debug\MiniStore.dll
-C:\GitHub\iapp-media.github.io\aspnet\MiniStore\obj\Debug\MiniStore.pdb

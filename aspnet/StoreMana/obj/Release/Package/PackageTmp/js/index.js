@@ -56,12 +56,11 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
-}); // 觸發 end
 
-//頁面ajax
-$(function() {
+    //頁面ajax
 
     // if click img
+
     $('.item-pic').click(function() {
         $('.menuAJAX li:nth-child(1)').addClass('fadeInRight');
         $('.product,.allClassification').addClass('movecss').fadeOut(function() {
@@ -92,6 +91,7 @@ $(function() {
     });
 
     // if click buyButton
+    
     $('.buy').click(function() {
         $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
         $('.product,.allClassification').addClass('movecss').fadeOut(function() {
@@ -112,10 +112,37 @@ $(function() {
             });
         });
     });
-});
-//瀑布流
 
-$(function() {
+    // menu swipe
+
+    $(function() {
+        //Enable swiping...
+        $(".allClassification").swipe({
+            //Generic swipe handler for all directions
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                $('.swiper-wrapper li').each(function(e) {
+                    if ($(this).hasClass('swiper-slide-active')) {
+                        var swipeindex = $(this).index();
+                        $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
+                    }
+                })
+            },
+             threshold: 0
+        });
+    });
+
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 0,
+        grabCursor: true,
+
+    });
+
+
+    //瀑布流
 
     var $container = $('#container');
 
@@ -155,4 +182,5 @@ $(function() {
             });
         }
     );
-}); //瀑布流 end
+
+});

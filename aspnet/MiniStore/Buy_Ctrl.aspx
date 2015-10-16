@@ -42,15 +42,19 @@
                     </div>
                     <div class="col-xs-12 libor paytheway">
                         <label for="" class="col-xs-6">付款方式</label>
-                        <asp:TextBox ID="TB_Payment" runat="server" CssClass="col-xs-6"></asp:TextBox>
+               <asp:RadioButtonList ID="RBL_Payment" runat="server"  RepeatLayout="Flow" RepeatDirection="Horizontal"></asp:RadioButtonList>
+                         
                     </div>
                     <div class="col-xs-12 libor sendtheway">
-                        <label for="" class="col-xs-6">寄送方式</label>
-                        <asp:TextBox ID="TB_Delivery" runat="server" CssClass="col-xs-6"></asp:TextBox>
+                        <label for="" class="col-xs-6">運送方式</label>
+                        <asp:RadioButtonList ID="RBL_Delivery" runat="server"  RepeatLayout="Flow" RepeatDirection="Horizontal"></asp:RadioButtonList>
+ 
                     </div>
                     <div class="col-xs-12 libor sendadress">
                         <label for="" class="col-xs-5">收件人資訊</label>
                         <div class="col-xs-7">
+  <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox>
+
                             <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>

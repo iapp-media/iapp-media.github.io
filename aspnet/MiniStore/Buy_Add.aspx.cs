@@ -19,7 +19,33 @@ namespace MiniStore
             {
                 if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
                 CarouselPic();
-                this.DL_qty.Attributes.Add("onchange", "loadPriceScript();");
+
+                DataTable DT = Main.GetDataSetNoNull("select payment,delivery from Product where idno='" + Request.QueryString["entry"] + "' ");
+                if (DT.Rows.Count > 0)
+                {  
+                    string listPayment =  DT.Rows[0]["payment"].ToString().Replace(",","','");
+                    listPayment = listPayment.Substring(2).ToString() + "'";
+                    listPayment = Main.Scalar("select Memo from def_Status where Col_Name='Payment' and Status in(" + listPayment + ")");
+
+                    string listDelivery = DT.Rows[0]["delivery"].ToString().Replace(",", "','");
+                    listDelivery = listDelivery.Substring(2).ToString() + "'";
+                    listDelivery = Main.Scalar("select Memo from def_Status where Col_Name='Payment' and Status in(" + listDelivery + ")");
+
+                    L_view.Text = "<a href='Product_Detail.aspx?entry=" + Request.QueryString["entry"] + "&view=2'>  <div class='col-xs-12 libor paytheway'>" +
+                             "      <label   class='col-xs-6'>運費規則</label>" +
+                             "      <p>" + listDelivery + " </p>" +
+                             "  </div> " +
+                             "  <div class='col-xs-12 libor sendtheway'>" +
+                             "      <label  class='col-xs-6'>付款方式</label>" +
+                             "      <p>" + listPayment + " </p>" +
+                             "  </div></a>";
+
+
+                }
+
+
+                
+             this.DL_qty.Attributes.Add("onchange", "loadPriceScript();");
             }
         }
         void CarouselPic()
@@ -30,11 +56,11 @@ namespace MiniStore
                 DataTable DT = Main.GetDataSetNoNull(str);
                 if (DT.Rows.Count > 0)
                 {
-                    L_Name.Text = DT.Rows[0]["Product_Name"].ToString();
-                    L_Description.Text = DT.Rows[0]["description"].ToString();
+                    L_Name.Text = DT.Rows[0]["Product_Name"].ToString();  
                     L_Price.Text = DT.Rows[0]["Price"].ToString();
                     TB_Dimension.Text = DT.Rows[0]["dimension"].ToString();
                     TB_Price.Text = DT.Rows[0]["Price"].ToString();
+                    TB_Description.Text = DT.Rows[0]["description"].ToString();
 
                     for (int i = 1; i <= 4; i++)
                     {
@@ -63,23 +89,22 @@ namespace MiniStore
             Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);
             Main.ParaAdd("@Total_AMT", TB_Paysum.Text, SqlDbType.NVarChar);
             Main.ParaAdd("@Delivery_Date", System.DateTime.Today.AddDays(3).ToShortDateString(), SqlDbType.DateTime);
-            Main.ParaAdd("@Store_ID", "1", SqlDbType.Int);             //用意? 跟 users ID 疑惑
+            Main.ParaAdd("@Store_ID", "1", SqlDbType.Int);             //用意? 跟 users ID 疑惑 151014 要改為appweb 的 user_id
             Main.ParaAdd("@Customer_ID", "1", SqlDbType.NVarChar);     //暫時寫1 待購物user 處理好要改
-            Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar); 
-            Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@Email", "jason", SqlDbType.NVarChar);       //暫時寫 要拉會員表
-            Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@County", "Taoyuan ", SqlDbType.NVarChar);   //暫時寫 要拉會員表?
-            Main.ParaAdd("@City", "Zhongli", SqlDbType.NVarChar);      //暫時寫 要拉會員表?
-            Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);             //??
+            //Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar); 
+            //Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@Email", "jason", SqlDbType.NVarChar);       //暫時寫 要拉會員表
+            //Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@County", "Taoyuan ", SqlDbType.NVarChar);   //暫時寫 要拉會員表?
+            //Main.ParaAdd("@City", "Zhongli", SqlDbType.NVarChar);      //暫時寫 要拉會員表?
+            //Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);             //??
             Main.ParaAdd("@Status", "-1", SqlDbType.NVarChar);         //暫時寫-1 待結帳改1(未付款)
-            Main.ParaAdd("@HowTake", DL_Delivery.SelectedValue.ToString(), SqlDbType.NVarChar);
-            Main.ParaAdd("@Payment_ID", DL_Payment.SelectedValue.ToString(), SqlDbType.NVarChar);
-
-            c = Main.NonQuery("insert into Orders(Order_No,Total_AMT,Delivery_Date,Store_ID,Customer_ID,Contact_Name,TEL,Email,MNO,County,City,Addr,Memo,Creat_Date,Last_Update,Status,HowTake,Payment_ID) " +
-                          "values(@Order_No,@Total_AMT,@Delivery_Date,@Store_ID,@Customer_ID,@Contact_Name,@TEL,@Email,@MNO,@County,@City,@Addr,@Memo,GETDATE(),GETDATE(),@Status,@HowTake,@Payment_ID)");
-
+ 
+            c = Main.NonQuery("insert into Orders(Order_No,Total_AMT,Delivery_Date,Store_ID,Customer_ID,Creat_Date,Last_Update,Status ) " +
+                          "values(@Order_No,@Total_AMT,@Delivery_Date,@Store_ID,@Customer_ID,GETDATE(),GETDATE(),@Status )");
+            //,Contact_Name,TEL,Email,MNO,County,City,Addr,Memo
+            //,@Contact_Name,@TEL,@Email,@MNO,@County,@City,@Addr,@Memo
 
             Main.ParaClear();
             OrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='1' and Status='-1'");
@@ -112,6 +137,20 @@ namespace MiniStore
             Car_baby += "," + Request.QueryString["entry"] + "-" + DL_qty.SelectedValue + "";
             Comm.SaveCookie("Car_baby", Car_baby, 30); 
             Response.Redirect("Default.aspx");
+        }
+
+        protected void BT_MSG_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("P_MSG.aspx?entry=" + Request.QueryString["entry"] + "");
+        }
+
+        protected void DL_qty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DL_qty.SelectedValue!="")
+            {
+                int a = Main.Cint2(DL_qty.SelectedValue.ToString()) * Main.Cint2(TB_Price.Text);
+                TB_Paysum.Text = a.ToString();
+            }
         }
     }
 }

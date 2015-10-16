@@ -54,7 +54,7 @@
             <div class="container-fluid">
                 <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
                     <div class="row">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="default.aspx">
                             <img class="iapplogo" src="img/ministorelogo.png"/>
                         </a>
                     </div>
