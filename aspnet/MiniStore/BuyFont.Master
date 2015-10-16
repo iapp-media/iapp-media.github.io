@@ -139,9 +139,9 @@
                     <!-- 搜尋框 -->
                     <input type="text" class="form-control bar-text" placeholder="Search iApp..." id="searchWeb" autocomplete="on" name="search"/>
                     <!-- 下拉按鈕 -->
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-menu-hamburger sandwich" aria-hidden="true"></span>
+                   <div class="input-group-btn">
+                        <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
                         </button>
                     </div>
                     <!-- /btn-group -->
@@ -162,17 +162,7 @@
                 <div class="username-icon">
                     <h4>Digital+</h4></div>
             </div>
-            <!-- 微創作 -->
-            <div class="col-sm-1 col-md-1 portalCreate">
-                <div class="row">
-                    <a href="http://www.iapp-media.com/basic/Default.aspx">
-                        <button type="button" class="btn btn-default navbar-btn2">
-                            微創作
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        </button>
-                    </a>
-                </div>
-            </div>
+            <a href="#" class="menusandwich example1"><span></span></a>
         </div>
         <div class="col-xs-12 allClassification swiper-container">
             <div class="row swiper-container">

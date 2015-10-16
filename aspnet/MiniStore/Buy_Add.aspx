@@ -8,10 +8,9 @@
 
     <ul class="buydivmove"> 
         <li class="productcare col-xs-12">
-            <div class="col-xs-12  ">
+            <div class="col-xs-12 insidecare">
                 <div class="row">
                     <div class="col-xs-12 libor productsinside">
-
                         <div class="col-xs-6">
                             <!-- 輪播圖 -->
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -36,6 +35,13 @@
                        
                         <span class="col-xs-6">
                             <asp:Literal ID="L_Price" runat="server"></asp:Literal></span>
+                    </div>
+                    <div class="col-xs-12 libor sendadress">
+                        <div class="col-xs-12">
+                            <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4" OnClick="BT_MSG_Click" />
+                            <asp:Button ID="BT_Like" runat="server" Text="LIKE" CssClass="col-xs-4" />
+                            <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4" />
+                        </div>
                     </div>
                     <div class="col-xs-12 libor paynumber">
                         <label for="" class="col-xs-6">購買數量</label>
@@ -76,13 +82,7 @@
                             <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
                         </div>
                     </div>--%>
-                    <div class="col-xs-12 libor sendadress">
-                        <div class="col-xs-12">
-                            <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4" OnClick="BT_MSG_Click" />
-                            <asp:Button ID="BT_Like" runat="server" Text="LIKE" CssClass="col-xs-4" />
-                            <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4" />
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-5 sendcareButtom" OnClick="BT_Confirm_Click" />
