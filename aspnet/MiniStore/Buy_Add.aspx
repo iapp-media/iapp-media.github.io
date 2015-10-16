@@ -53,12 +53,15 @@
                         <span class="col-xs-6">
                             <asp:Literal ID="L_Price" runat="server"></asp:Literal></span>
                     </div>
+                    <div style="display:none">
+                        <!--這段要搬到產品內容頁-->
                     <div class="col-xs-12 libor sendadress">
                         <div class="col-xs-12">
                             <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4" OnClick="BT_MSG_Click" />
                             <asp:Button ID="BT_Like" runat="server" Text="LIKE" CssClass="col-xs-4" />
                             <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4" />
                         </div>
+                    </div>
                     </div>
                     <div class="col-xs-12 libor paynumber">
                         <label for="" class="col-xs-6">購買數量</label>
@@ -87,8 +90,26 @@
                         <label for="" class="col-xs-6">付款金額</label>
                         <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6">99</asp:TextBox>
                     </div>
-
+                    <div style="display:none">
+                        <!--之後要拿掉的部分-->
                     <asp:Literal ID="L_view" runat="server"></asp:Literal>
+                    </div>
+                    <div class="col-xs-12 libor paytheway">
+                        <label for="" class="col-xs-6">付款方式</label>
+                        <select class="form-control">
+                            <option>面交</option>
+                            <option>7-11 ibon</option>
+                            <option>銀行轉帳</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 libor sendtheway">
+                        <label for="" class="col-xs-6">寄送方式</label>
+                        <select class="form-control">
+                            <option>面交自取</option>
+                            <option>7-11</option>
+                            <option>寄送到府</option>
+                        </select>
+                    </div>
                    
 <%--                    <div class="col-xs-12 libor sendadress">
                         <label for="" class="col-xs-5">收件人資訊</label>

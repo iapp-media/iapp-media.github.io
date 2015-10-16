@@ -979,7 +979,7 @@ a {
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: 117px;
+    top: 35px;
 }
 
 .productcareEnd,
@@ -1180,7 +1180,7 @@ a {
 .proAJAX {
     height: 55px;
     background-color: #b4b4b4;
-    margin-top: 29px;
+    margin-top: 39px;
     position: absolute;
     font-size: 180%;
     text-align: center;
@@ -1377,7 +1377,7 @@ a {
 
 .swiper-container {
     width: 100%;
-    top: 82px;
+    top: 92px;
     /* height: 19px; */
     margin: 0;
 }
@@ -1527,6 +1527,9 @@ a {
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;
+    }
+    .input-group-btn {
+        display:none;
     }
 }
 
