@@ -6,185 +6,185 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Root\AppWeb\發行區\MiniStore</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\GitHub\發行區\MiniStore</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/13/2015 15:27:08</publishTime>
+      <publishTime>10/16/2015 16:56:55</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>10/13/2015 16:02:30</publishTime>
+      <publishTime>10/16/2015 16:56:56</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
-      <publishTime>08/04/2015 09:59:36</publishTime>
+      <publishTime>10/15/2015 18:09:50</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>10/12/2015 08:55:10</publishTime>
+      <publishTime>10/16/2015 16:45:04</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
-      <publishTime>10/13/2015 16:01:13</publishTime>
+      <publishTime>10/16/2015 16:54:44</publishTime>
     </File>
     <File Include="Buy_Car.aspx">
-      <publishTime>10/12/2015 13:45:27</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="Buy_Ctrl.aspx">
-      <publishTime>10/12/2015 13:51:25</publishTime>
+      <publishTime>10/16/2015 12:11:01</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
-      <publishTime>10/13/2015 14:53:25</publishTime>
+      <publishTime>10/16/2015 12:11:01</publishTime>
     </File>
     <File Include="css/colorbox.css">
-      <publishTime>10/06/2015 14:42:06</publishTime>
+      <publishTime>10/16/2015 11:10:11</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/06/2015 17:04:10</publishTime>
+      <publishTime>10/16/2015 16:45:08</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>10/06/2015 14:42:06</publishTime>
+      <publishTime>10/16/2015 16:45:07</publishTime>
     </File>
     <File Include="css/promptumenu.css">
-      <publishTime>10/06/2015 14:42:06</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="css/reset.css">
-      <publishTime>10/06/2015 14:42:06</publishTime>
+      <publishTime>10/16/2015 11:10:11</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>10/06/2015 14:52:44</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/111.html">
-      <publishTime>08/26/2015 15:15:49</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/bootstrap.min.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/colorbox.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/contact.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/custom.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/framework.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/framework.launcher.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jquery-1.11.3.min.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jquery.infinitescroll.min.js">
-      <publishTime>08/26/2015 15:15:52</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jquery.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jquery.masonry.min.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jquery.swipebox.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/jqueryui.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/owl.carousel.min.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/scripts/snap.js">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/shopcart.html">
-      <publishTime>08/26/2015 15:15:49</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/bootstrap.min.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/colorbox.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/framework.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/masonry.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/owl.carousel.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/owl.theme.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/style.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="DEL/styles/swipebox.css">
-      <publishTime>08/26/2015 15:15:53</publishTime>
+      <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>08/26/2015 15:15:50</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>08/26/2015 15:15:50</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>08/26/2015 15:15:50</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>08/26/2015 15:15:50</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>08/26/2015 15:15:50</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/114.png">
-      <publishTime>10/02/2015 08:49:37</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/2531170_203204624000_2.jpg">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/6RMhx.gif">
-      <publishTime>10/02/2015 08:49:37</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/backarrow.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/cloth.jpg">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/defaulthead.jpg">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/lineicon.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/ministorelogo.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/Noodles.jpg">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/p1-like01.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/p1-like02.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/p2-like01.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/p2-like02.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/qr-iappmedia.jpg">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/top.png">
-      <publishTime>10/02/2015 08:49:38</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="img/uploadicon.png">
-      <publishTime>10/08/2015 14:59:18</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="Index.aspx">
       <publishTime>08/26/2015 15:15:49</publishTime>
@@ -193,40 +193,40 @@
       <publishTime>10/06/2015 14:57:03</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/ga-iappportal.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>10/12/2015 18:29:48</publishTime>
+      <publishTime>10/16/2015 16:45:06</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery-2.1.4.min.js">
-      <publishTime>10/06/2015 17:22:17</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery.colorbox-min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery.infinitescroll.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery.masonry.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery.promptumenu.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/jquery.touchSwipe.min.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/main.js">
-      <publishTime>10/06/2015 14:42:28</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="js/swiper.min.js">
-      <publishTime>10/06/2015 14:42:29</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="MiniStore_Add.aspx">
       <publishTime>10/02/2015 08:57:35</publishTime>
@@ -240,29 +240,35 @@
     <File Include="Order_Detail.aspx">
       <publishTime>10/05/2015 15:42:53</publishTime>
     </File>
+    <File Include="Order_history.aspx">
+      <publishTime>10/16/2015 12:11:01</publishTime>
+    </File>
+    <File Include="Order_prn.aspx">
+      <publishTime>10/16/2015 12:11:01</publishTime>
+    </File>
     <File Include="Product_Add.aspx">
       <publishTime>10/05/2015 15:48:35</publishTime>
     </File>
     <File Include="Product_Detail.aspx">
-      <publishTime>08/26/2015 15:15:49</publishTime>
+      <publishTime>10/16/2015 12:11:01</publishTime>
     </File>
     <File Include="Product_Img.aspx">
-      <publishTime>10/12/2015 14:01:25</publishTime>
+      <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="P_MSG.aspx">
-      <publishTime>10/13/2015 16:01:54</publishTime>
+      <publishTime>10/16/2015 12:11:01</publishTime>
     </File>
     <File Include="Shopping_Cart.aspx">
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>10/12/2015 18:28:10</publishTime>
+      <publishTime>10/16/2015 16:45:07</publishTime>
     </File>
     <File Include="TT.aspx">
       <publishTime>10/02/2015 11:22:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/07/2015 09:17:05</publishTime>
+      <publishTime>10/16/2015 16:56:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

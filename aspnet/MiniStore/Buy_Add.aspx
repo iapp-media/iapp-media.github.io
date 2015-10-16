@@ -11,7 +11,7 @@
             <div class="col-xs-12 insidecare">
                 <div class="row">
                     <div class="col-xs-12 libor productsinside">
-                        <div class="col-xs-6">
+                      <%--  <div class="col-xs-6">
                             <!-- 輪播圖 -->
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
@@ -28,6 +28,23 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
+                        </div>--%>
+                        <div id="slider">
+                            <div class="control_next glyphicon glyphicon-chevron-right"></div>
+                            <div class="control_prev glyphicon glyphicon-chevron-left"></div>
+                            <ul>
+                                <li>
+                                    <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /></li>
+                                <li>
+                                    <img src="#" alt="Alternate Text" /></li>
+                                <li>
+                                    <img src="#" alt="Alternate Text" /></li>
+                                <li>
+                                    <img src="#" alt="Alternate Text" /></li>
+                            </ul>
+                        </div>
+                        <div class="slider_option">
+                            <input type="checkbox" id="checkbox">  
                         </div>
 
                         <h1 class="col-xs-6">

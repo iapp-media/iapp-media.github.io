@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('.finder').show();
         $(".theme").hide();
     });
-    $(".select").click(function() {
+    $(".menusandwich").click(function () {
         $(".theme").animate({
             height: 'toggle',
             overflowY: 'scroll !important' //doesn't work
@@ -132,14 +132,14 @@ $(document).ready(function() {
     });
 
 
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        centeredSlides: true,
-        paginationClickable: true,
-        spaceBetween: 0,
-        grabCursor: true,
+    //var swiper = new Swiper('.swiper-container', {
+        //slidesPerView: 3,
+        //centeredSlides: true,
+        //paginationClickable: true,
+        //spaceBetween: 0,
+        //grabCursor: true,
 
-    });
+    //});
 
 
     //瀑布流

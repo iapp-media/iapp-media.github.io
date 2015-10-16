@@ -18,7 +18,7 @@ namespace MiniStore
             if (!IsPostBack)
             {
                 if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
-                CarouselPic();
+               // CarouselPic();
 
                 DataTable DT = Main.GetDataSetNoNull("select payment,delivery from Product where idno='" + Request.QueryString["entry"] + "' ");
                 if (DT.Rows.Count > 0)
@@ -66,12 +66,10 @@ namespace MiniStore
                     {
                         if (i == 1)
                         {
-                            L.Text += "<div class=\"item active\"><iframe src=\"Product_Img.aspx?PID=" + DT.Rows[0]["IDNo"].ToString() + "&Img=1\" scrolling=\"no\" id=\"Iframe1\" style=\"width:100%;height:350px\"></iframe></div>";
-                        }
+                         }
                         else
                         {
-                            L.Text += "<div class=\"item\"><iframe src=\"Product_Img.aspx?PID=" + DT.Rows[0]["IDNo"].ToString() + "&Img=" + i + "\" scrolling=\"no\" id=\"Iframe" + i + "\" style=\"width:100%;height:350px\"></iframe></div>";
-                        }
+                         }
                     }
                 }
 
@@ -83,7 +81,7 @@ namespace MiniStore
             //貨物數量還沒控制
             string OrderNo = "", OrderID = "";
             int c = 0;
-            OrderNo = Comm.GetOrdersNO("1", System.DateTime.Today);
+            //OrderNo = Comm.GetOrdersNO("1", System.DateTime.Today);
 
             Main.ParaClear();
             Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);

@@ -117,7 +117,7 @@ namespace MiniStore
             ////貨物數量還沒控制
             string OrderNo = "", OrderID = "";
             int c = 0, Total_AMT = 0;
-            OrderNo = Comm.GetOrdersNO("1", System.DateTime.Today);
+          //  OrderNo = Comm.GetOrdersNO("1", System.DateTime.Today);
 
             Main.ParaClear();
             Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);

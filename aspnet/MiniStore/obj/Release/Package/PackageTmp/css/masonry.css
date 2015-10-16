@@ -340,11 +340,14 @@ input[type="checkbox"] {
 
 .select {
     background-color: #ff9933;
+    color:#fff;
 }
-
-.select:visited,
-.select:hover {
-    background-color: #ff9933;
+.select:hover,
+.select:focus,
+.select:link,
+.select:active {
+     background-color: #ff9933;
+     color:#fff;
 }
 
 .login-box {
@@ -353,7 +356,7 @@ input[type="checkbox"] {
     /* width: 8%; */
     width: 111px;
     position: absolute;
-    right: 100px;
+    right: 80px;
 }
 
 .boxpos {
@@ -532,17 +535,14 @@ input[type="checkbox"] {
         margin-left: 0;
     }
     .select {
-        background-color: transparent;
+        background-color: #ff9933;
     }
-    .sandwich {
-        color: #ff9933;
-        font-size: 33px;
-    }
+  
     .select:hover,
     .select:link,
     .select:visited,
     .select:active {
-        background-color: transparent;
+        background-color: #ff9933;
     }
     .theme li:nth-child(7) a {
         border: none;

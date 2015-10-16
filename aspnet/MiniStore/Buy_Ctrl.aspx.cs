@@ -77,7 +77,7 @@ namespace MiniStore
             c = Main.NonQuery("Update Orders set status='1',Contact_Name=@Contact_Name,MNO=@MNO,TEL=@TEL,Addr=@Addr " +
                               ",Delivery_ID=@Delivery_ID,Payment_ID=@Payment_ID where IDNo=@entry");
 
-            if (c > 0) { Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx','_self');</script>"); }
+            if (c > 0) { Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry="+ Request.QueryString["entry"] + "','_self');</script>"); }
         }
     }
 }
