@@ -19,6 +19,8 @@
                         </div>
                         <div class="col-xs-12 libor status">
                             <label for="" class="col-xs-6">商品圖片</label>
+                           <div style="display:none;">
+                               <%-- 不要的 --%>
                             <div class="form-group">
                                 <div style="margin: 0 0 0 300px; width: 500px">
                                     <!-- 輪播圖 -->
@@ -39,6 +41,37 @@
                                     </div> 
                                 </div> 
                             </div>
+                           </div>
+                            <div id="slider" class="col-xs-6">
+                                <div class="control_next glyphicon glyphicon-chevron-right"></div>
+                                <div class="control_prev glyphicon glyphicon-chevron-left"></div>
+                                <ul>
+                                    <li>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+
+                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                    </li>
+                                    <li>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                    </li>
+
+                                    <li>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                    </li>
+
+                                    <li>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <%-- slider自動播放函式 --%>
+                       <%-- <div class="slider_option">
+                            <input type="checkbox" id="checkbox">  
+                        </div>--%>
                         </div>
                     </div>
                 </div>
@@ -71,15 +104,49 @@
                         </div>
                         <div class="col-xs-12 libor paynumber">
                             <label class="col-xs-6">付款方式</label>
-                            <asp:CheckBoxList ID="CB_Payment" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
-                             
-                            </asp:CheckBoxList> 
+                           <div style="display:none">
+                               <asp:CheckBoxList ID="CB_Payment" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
+                               </asp:CheckBoxList>
+                           </div>
+                            <div class="checkbox col-xs-4 florichebox">
+                                <label>
+                                    <input type="checkbox">
+                                    面交
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox">
+                                    7-11 ibon
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox">
+                                    銀行轉帳
+                                </label>
+                            </div>
                         </div>
                         <div class="col-xs-12 libor paynumber">
                             <label  class="col-xs-6">寄送方式</label>
-                            <asp:CheckBoxList ID="CB_Delivery" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
-                         
-                            </asp:CheckBoxList>  
+                            <div style="display:none">
+                               <asp:CheckBoxList ID="CB_Delivery" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  >        
+                               </asp:CheckBoxList>
+                           </div>  
+                             <div class="checkbox col-xs-4 florichebox">
+                                <label>
+                                    <input type="checkbox">
+                                    面交自取
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox">
+                                    7-11
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox">
+                                    寄送到府
+                                </label>
+                            </div>
                         </div>
                         <div class="col-xs-12 libor paynumber">
                             <label for="" class="col-xs-6">備註</label>
@@ -87,10 +154,11 @@
                         </div>
                     </div>
                 </div>
+                 <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-primary btn-lg btn-block sendcareButtom" OnClick="BT_Create_Click" />
+        <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-primary btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
             </li>
         </ul>
-        <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-default btn-lg btn-block" OnClick="BT_Create_Click" />
-        <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-primary btn-lg btn-block" OnClick="BT_Cancel_Click" />
+       
 
         <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal> 
     </div> 

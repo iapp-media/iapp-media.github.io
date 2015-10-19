@@ -2,8 +2,8 @@
 // <自動產生的>
 //     這段程式碼是由工具產生的。
 //
-//     對這個檔案所做的變更可能會造成錯誤的行為，而且如果重新產生程式碼，
-//     所做的變更將會遺失。 
+//     變更這個檔案可能會導致不正確的行為，而且如果已重新產生
+//     程式碼，則會遺失變更。
 // </自動產生的>
 //------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DL_Cate;
         
@@ -26,7 +26,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal L;
         
@@ -35,7 +35,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_ProductName;
         
@@ -44,7 +44,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Price;
         
@@ -53,7 +53,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_qty;
         
@@ -62,7 +62,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Description;
         
@@ -71,7 +71,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Dimension;
         
@@ -80,7 +80,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CB_Payment;
         
@@ -89,7 +89,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CB_Delivery;
         
@@ -98,7 +98,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Memo;
         
@@ -107,7 +107,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_Create;
         
@@ -116,7 +116,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_Cancel;
         
@@ -125,7 +125,7 @@ namespace StoreMana.Mini {
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal LPID;
     }

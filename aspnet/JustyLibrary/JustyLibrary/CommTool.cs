@@ -1454,4 +1454,23 @@ public class CommTool: System.Web.UI.Page
             return str;
         }
     }
+    public string GetProductNO(string IDNo, DateTime SDate)
+    {
+        JDB Main = new JDB();
+        Main.ParaClear();
+        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
+        string HeadNO = "" + (SDate.Year - 1911).ToString() + "-";
+        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
+        string tmpNO = Main.Scalar("select Max(Cast(Replace(Product_No,@HeadNO,'') as int))  from product ");
+        string Product_No = HeadNO + "0000001";
+        if (tmpNO != "")
+        {
+            if (IsNumeric(tmpNO))
+            {
+                Product_No = Product_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 7));
+            }
+        }
+        return Product_No;
+    }
+
 }
