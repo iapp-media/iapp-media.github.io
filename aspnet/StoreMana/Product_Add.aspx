@@ -42,7 +42,7 @@
                                 </div> 
                             </div>
                            </div>
-                            <div id="slider" class="col-xs-6">
+                            <div id="slider" class="col-xs-12">
                                 <div class="control_next glyphicon glyphicon-chevron-right"></div>
                                 <div class="control_prev glyphicon glyphicon-chevron-left"></div>
                                 <ul>
@@ -154,8 +154,8 @@
                         </div>
                     </div>
                 </div>
-                 <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-primary btn-lg btn-block sendcareButtom" OnClick="BT_Create_Click" />
-        <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-primary btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
+                 <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Create_Click" />
+        <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
             </li>
         </ul>
        

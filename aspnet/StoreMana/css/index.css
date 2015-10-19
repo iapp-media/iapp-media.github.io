@@ -41,17 +41,24 @@
     height: 73%;
     margin: auto;
 }
+
 .imgsize {
     width: 80px !important;
     height: 80px !important;
 }
+.titleleftfont {
+    font-size:150%;
+    padding: 6px 12px;
+    width: 24%;
+}
+
 .poscenter {
-    position:absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    margin:auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 
@@ -1051,7 +1058,7 @@ a {
 
     .insidecare label {
         color: #838485;
-        font-size: 109%;
+        font-size: 150%;
         font-weight: inherit;
     }
 
@@ -1505,7 +1512,7 @@ a {
             float: left;
             margin: 0;
             padding: 0;
-            width: 400px;
+            width: 100%;
             height: 300px;
             /* background: #ccc; */
             text-align: center;
@@ -1558,6 +1565,30 @@ a {
     float: right;
 }
 
+    .paynumber .florichebox label {
+        font-size: 109%;
+    }
+
+.col2 {
+    float: left;
+    width: 24%;
+    box-sizing: border-box;
+    font-size: 117%;
+    padding: 6px 12px;
+}
+
+.row1 {
+    float: left;
+    /*padding: 2px 2px 2px 2px;*/
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #aaa;
+}
+
+.row1:first-child {
+    outline: 1px solid #000;
+}
+
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;
@@ -1571,7 +1602,7 @@ a {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
-   
+
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 112px;
@@ -1744,20 +1775,21 @@ a {
     .swiper-container {
         top: 71px;
     }
+
     #slider ul li {
-        width:300px;
-        height:250px;
-        line-height:0;
+        width: 300px;
+        height: 250px;
+        line-height: 0;
     }
-     
 }
 
 @media only screen and (max-width:480px) {
     #slider ul li {
-        width:200px;
-        height:150px;
-        line-height:0;
+        width: 200px;
+        height: 150px;
+        line-height: 0;
     }
+
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 115px;
@@ -1977,7 +2009,8 @@ a {
     .swiper-container {
         top: 72px;
     }
+
     .glyphicon-search {
-        color:#ff9933;
+        color: #ff9933;
     }
 }

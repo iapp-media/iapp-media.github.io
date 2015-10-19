@@ -22,13 +22,13 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.DropDownList DL;
         
         /// <summary>
-        /// BT_Search 控制項。
+        /// Button1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_Search;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// RP1 控制項。
@@ -56,5 +56,14 @@ namespace StoreMana {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SD1;
+        
+        /// <summary>
+        /// BT_Search 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_Search;
     }
 }
