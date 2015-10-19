@@ -18,7 +18,7 @@
                             </asp:DropDownList>
                         </div>
                         <div class="col-xs-12 libor status">
-                            <label for="" class="col-xs-6">商品圖片</label>
+                            <label for="" class="col-xs-12">商品圖片</label>
                            <div style="display:none;">
                                <%-- 不要的 --%>
                             <div class="form-group">
@@ -48,7 +48,6 @@
                                 <ul>
                                     <li>
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
-
                                         <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
                                     </li>
                                     <li>
@@ -65,7 +64,6 @@
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
                                         <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
                                     </li>
-                                    
                                 </ul>
                             </div>
                             <%-- slider自動播放函式 --%>
