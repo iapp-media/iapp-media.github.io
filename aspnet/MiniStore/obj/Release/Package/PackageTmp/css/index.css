@@ -979,7 +979,7 @@ a {
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: 117px;
+    top: 35px;
 }
 
 .productcareEnd,
@@ -1180,7 +1180,7 @@ a {
 .proAJAX {
     height: 55px;
     background-color: #b4b4b4;
-    margin-top: 29px;
+    margin-top: 39px;
     position: absolute;
     font-size: 180%;
     text-align: center;
@@ -1377,7 +1377,7 @@ a {
 
 .swiper-container {
     width: 100%;
-    top: 82px;
+    top: 92px;
     /* height: 19px; */
     margin: 0;
 }
@@ -1459,8 +1459,8 @@ a {
 #slider {
     position: relative;
     overflow: hidden;
-    margin: 20px auto 0 auto;
     border-radius: 4px;
+    margin-left: 24px;
 }
 
     #slider ul {
@@ -1477,15 +1477,15 @@ a {
             float: left;
             margin: 0;
             padding: 0;
-            width: 500px;
+            width: 400px;
             height: 300px;
             background: #ccc;
             text-align: center;
             line-height: 300px;
         }
 
-a.control_prev,
-a.control_next {
+.control_prev,
+.control_next {
     position: absolute;
     top: 40%;
     z-index: 999;
@@ -1502,17 +1502,17 @@ a.control_next {
     cursor: pointer;
 }
 
-    a.control_prev:hover,
-    a.control_next:hover {
+    .control_prev:hover,
+    .control_next:hover {
         opacity: 1;
         -webkit-transition: all 0.2s ease;
     }
 
-a.control_prev {
+.control_prev {
     border-radius: 0 2px 2px 0;
 }
 
-a.control_next {
+.control_next {
     right: 0;
     border-radius: 2px 0 0 2px;
 }
@@ -1537,8 +1537,9 @@ a.control_next {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
+   
     .promana {
-        outline: 1px solid #f00;
+        /*outline: 1px solid #f00;*/
         margin-top: 112px;
         height: 500px;
     }
@@ -1631,6 +1632,7 @@ a.control_next {
 
     .select {
         right: 0;
+        display: none;
     }
 
     .search-sm {
@@ -1655,6 +1657,8 @@ a.control_next {
         left: 0;
         margin: auto;
         display: block;
+        font-size: 29px;
+        color: #ff9933;
     }
 
     .login-sm {
@@ -1694,9 +1698,32 @@ a.control_next {
         background-color: transparent;
         border-color: transparent;
     }
+
+    .menusandwich {
+        margin: 17px 39px;
+    }
+
+    .menuAJAX, .proAJAX {
+        margin-top: 29px;
+    }
+
+    .swiper-container {
+        top: 71px;
+    }
+    #slider ul li {
+        width:300px;
+        height:250px;
+        line-height:0;
+    }
+     
 }
 
 @media only screen and (max-width:480px) {
+    #slider ul li {
+        width:200px;
+        height:150px;
+        line-height:0;
+    }
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 115px;
@@ -1750,6 +1777,7 @@ a.control_next {
         width: 57px;
         height: 44px;
         top: -15px;
+        display: none;
     }
 
         .select:hover {
@@ -1897,5 +1925,25 @@ a.control_next {
     .select:focus {
         background-color: transparent;
         border-color: transparent;
+    }
+
+    .menusandwich {
+        margin: 16px 20px;
+    }
+
+    .search2 {
+        font-size: 29px;
+        color: ff9933;
+    }
+
+    .menuAJAX, .proAJAX {
+        margin-top: 29px;
+    }
+
+    .swiper-container {
+        top: 72px;
+    }
+    .glyphicon-search {
+        color:#ff9933;
     }
 }

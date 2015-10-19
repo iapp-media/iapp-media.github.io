@@ -10,25 +10,25 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/16/2015 16:56:55</publishTime>
+      <publishTime>10/19/2015 10:24:00</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>10/16/2015 16:56:56</publishTime>
+      <publishTime>10/19/2015 10:24:01</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/15/2015 18:09:50</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>10/16/2015 16:45:04</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
-      <publishTime>10/16/2015 16:54:44</publishTime>
+      <publishTime>10/16/2015 18:00:15</publishTime>
     </File>
     <File Include="Buy_Car.aspx">
       <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="Buy_Ctrl.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
       <publishTime>10/16/2015 12:11:01</publishTime>
@@ -37,10 +37,10 @@
       <publishTime>10/16/2015 11:10:11</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/16/2015 16:45:08</publishTime>
+      <publishTime>10/16/2015 18:59:06</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>10/16/2015 16:45:07</publishTime>
+      <publishTime>10/16/2015 18:44:38</publishTime>
     </File>
     <File Include="css/promptumenu.css">
       <publishTime>10/15/2015 18:09:52</publishTime>
@@ -241,34 +241,34 @@
       <publishTime>10/05/2015 15:42:53</publishTime>
     </File>
     <File Include="Order_history.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Order_prn.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Product_Add.aspx">
       <publishTime>10/05/2015 15:48:35</publishTime>
     </File>
     <File Include="Product_Detail.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Product_Img.aspx">
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="P_MSG.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Shopping_Cart.aspx">
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>10/16/2015 16:45:07</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="TT.aspx">
       <publishTime>10/02/2015 11:22:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/16/2015 16:56:56</publishTime>
+      <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
   </ItemGroup>
 </Project>
