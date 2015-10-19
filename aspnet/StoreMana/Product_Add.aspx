@@ -47,23 +47,21 @@
                                 <div class="control_prev glyphicon glyphicon-chevron-left"></div>
                                 <ul>
                                     <li>
-                                        
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
-                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
-                                        
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
+                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">            
                                     </li>
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
                                         <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
                                     </li>
 
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
                                         <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
                                     </li>
 
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
                                         <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
                                     </li>
                                 </ul>
