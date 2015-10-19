@@ -50,7 +50,7 @@ namespace StoreMana
             if (DL.SelectedValue != "")
             {
                 SD1.SelectParameters.Add("IsReplay", DL.SelectedValue.ToString());
-                L.Text += " and IsReplay=@IsReplay ";
+                L.Text += " and isnull(IsReplay,0)=@IsReplay ";
             }
  
             L.Text += " order by CreatDate DESC";

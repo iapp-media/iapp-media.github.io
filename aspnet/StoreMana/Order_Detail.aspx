@@ -8,7 +8,7 @@
 
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                        <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
+                        <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound" >
                             <HeaderTemplate>
                                 <div class="row1">
                                     <div class="col2">訂單狀態</div>
@@ -21,7 +21,7 @@
 
                             </HeaderTemplate>
                             <ItemTemplate> 
-                                        <asp:DropDownList ID="DL_STA" runat="server">
+                                        <asp:DropDownList ID="DL_STA" runat="server" >
                                                                             <asp:ListItem Value="1">未付款</asp:ListItem>
                                 <asp:ListItem Value="2">未發貨</asp:ListItem>
                                 <asp:ListItem Value="3">已發貨</asp:ListItem>
@@ -30,6 +30,7 @@
                                         </asp:DropDownList>
                                 <div class="row1">
                                     <div class="col2"> 
+
                                     </div>
                                     <div class="col2">
                                         <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>

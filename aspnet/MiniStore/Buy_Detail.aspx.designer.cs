@@ -10,61 +10,43 @@
 namespace MiniStore {
     
     
-    public partial class Buy_Ctrl {
+    public partial class Buy_Detail {
         
         /// <summary>
-        /// GV 控制項。
+        /// L_Name 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GV;
+        protected global::System.Web.UI.WebControls.Literal L_Name;
         
         /// <summary>
-        /// L 控制項。
+        /// BT_MSG 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L;
+        protected global::System.Web.UI.WebControls.Button BT_MSG;
         
         /// <summary>
-        /// SD1 控制項。
+        /// BT_Like 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SD1;
+        protected global::System.Web.UI.WebControls.Button BT_Like;
         
         /// <summary>
-        /// TB_Paysum 控制項。
+        /// BT_SHARE 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Paysum;
-        
-        /// <summary>
-        /// DL_Payment 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Payment;
-        
-        /// <summary>
-        /// DL_Delivery 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DL_Delivery;
+        protected global::System.Web.UI.WebControls.Button BT_SHARE;
         
         /// <summary>
         /// TB_Name 控制項。
@@ -76,31 +58,40 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.TextBox TB_Name;
         
         /// <summary>
-        /// TB_Tel 控制項。
+        /// TB_Price 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Tel;
+        protected global::System.Web.UI.WebControls.TextBox TB_Price;
         
         /// <summary>
-        /// TB_MNO 控制項。
+        /// TB_Description 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_MNO;
+        protected global::System.Web.UI.WebControls.TextBox TB_Description;
         
         /// <summary>
-        /// TB_Addr 控制項。
+        /// TB_Dimension 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Addr;
+        protected global::System.Web.UI.WebControls.TextBox TB_Dimension;
+        
+        /// <summary>
+        /// L_view 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal L_view;
         
         /// <summary>
         /// BT_Confirm 控制項。
@@ -110,5 +101,14 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_Confirm;
+        
+        /// <summary>
+        /// BT_InCar 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_InCar;
     }
 }

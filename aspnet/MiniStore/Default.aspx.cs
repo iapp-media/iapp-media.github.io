@@ -19,6 +19,7 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
+                 
                 ShowData();
                 if (Comm.IsNumeric(Request.QueryString["entry"]))
                 {
@@ -35,10 +36,10 @@ namespace MiniStore
                 for (int i = 0; i < dr.Rows.Count; i++)
                 {
                     DataRow dw = dr.Rows[i];
-                    string src ="";// +dw["Img01"];
-                    string iGD = "";
-                    string iLK = "";
-                    string iFV = "";
+                    //string src ="";// +dw["Img01"];
+                    //string iGD = "";
+                    //string iLK = "";
+                    //string iFV = "";
                     //if (Comm.Cint2(dw["iGD"].ToString()) > 0) { iGD = " checked"; }
                     //if (Comm.Cint2(dw["iLK"].ToString()) > 0) { iLK = " checked"; }
                     //if (Comm.Cint2(dw["iFV"].ToString()) > 0) { iFV = " checked"; }
@@ -57,7 +58,7 @@ namespace MiniStore
                         ss.Append("<div class='item'>" + "\n\r");
                         ss.Append("  <div class='imgcenter'>\n\r");
                         ss.Append("     <div>" + "\n\r");
-                        ss.Append("       <a class='#' href=\"" + "#" + "\"><img class=\"item-pic\" src='" + dw["FilePath"].ToString() + "'/></a>" + "\n\r");
+                        ss.Append("        <a href='Buy_detail.aspx?entry=" + dw["IDNo"].ToString() + "'><img class=\"item-pic\" src='" + dw["FilePath"].ToString() + "'/></a>" + "\n\r");
 
                         //doListItem(ref ss, iLK, iGD, iFV, dw);
 
