@@ -51,6 +51,9 @@
     padding: 6px 12px;
     width: 24%;
 }
+.sliderimgH {
+    height:100%;
+}
 
 .poscenter {
     position: absolute;
@@ -1512,7 +1515,7 @@ a {
             float: left;
             margin: auto;
             padding: 0;
-            width: 100%;
+            width: 463px;
             height: 300px;
             max-width: 500px;
             /* background: #ccc; */
