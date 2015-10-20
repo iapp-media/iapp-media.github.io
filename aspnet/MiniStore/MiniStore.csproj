@@ -65,6 +65,7 @@
     <Content Include="Buy_Add.aspx" />
     <Content Include="Buy_Car.aspx" />
     <Content Include="Buy_Ctrl.aspx" />
+    <Content Include="Buy_Detail.aspx" />
     <Content Include="css\promptumenu.css" />
     <Content Include="Default.aspx" />
     <Content Include="DEL\111.html" />
@@ -160,6 +161,13 @@
     </Compile>
     <Compile Include="Buy_Ctrl.aspx.designer.cs">
       <DependentUpon>Buy_Ctrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Detail.aspx.cs">
+      <DependentUpon>Buy_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_Detail.aspx.designer.cs">
+      <DependentUpon>Buy_Detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

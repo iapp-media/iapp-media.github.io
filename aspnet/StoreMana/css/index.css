@@ -1105,7 +1105,7 @@ a {
     letter-spacing: 5px;
     font-size: 170%;
     border-radius: 1px;
-    /* margin: 8px 0 20px 0; */
+    margin: 8px 0 0 0 !important;
     /* margin-top: 0px; */
 }
 
