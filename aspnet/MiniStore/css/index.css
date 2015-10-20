@@ -45,7 +45,7 @@
 .question {
     background-color:transparent;
     font-size:150%;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 22px 12px;
     color: #838485;
     float: right;
@@ -60,12 +60,89 @@
 .borbot {
     border-bottom: 4px solid #b4b5b6 !important;
 }
+.imgH {
+    height:120px !important;
+    display:block;
+    float:left;
+}
+.texcenter {
+    text-align:center;
+}
+
+.rightbox {
+    height:120px;
+    float:left;
+    position:relative;
+    width: 275px;
+}
+.rightbox span {
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.rightbox p {
+    position:absolute;
+    right:0;
+    bottom:0;
+    margin:0;
+}
+.spansizebig ,spansizemid {
+    font-size:150%;
+    line-height: 3.2;
+}
+.spansizemid {
+    float:right;
+    line-height: 5.2;
+    color:#aaa;
+}
+.spansizemidleft {
+    color:#aaa;
+}
+.Issue {
+    padding:6px 12px !important;
+}
+
+.Issue:nth-child(odd) {
+    background-color: #eee !important;
+}
+
+.Issue p {
+    font-size: 150%;
+}
+.fixBar {
+    /* outline:1px solid #f00; */
+    padding:0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 463px;
+    box-sizing:border-box;
+    padding:6px 12px;
+    background-color:#fff;
+}
+.fixBar textarea {
+    width: 79%;
+    float:left;
+    height: 52px;
+}
+.fixBar .sendcareButtom {
+    float:left;
+    margin: 0;
+    border-radius: 5px;
+    padding: 9px 12px;
+    margin-left: 17px;
+}
+.scroll {
+    max-height:200px;
+}
 
 /* pay UI */
 .detailsbox {
     border:4px solid #b4b5b6;
     border-bottom:none;
-    
+    background-color: #fff;
 }
 .rightmar {
     margin-left:15px;
@@ -146,6 +223,7 @@
   border-radius: 0 4px 4px 0;
   /* font-size: 14px; */
 }
+
 
 /* link CSS UI */
 
@@ -1112,6 +1190,7 @@ a {
         border-left: 4px solid #b4b5b6;
         border-bottom: 3px solid #ddd;
         padding: 15px 0;
+        background-color: #fff;
     }
 
         .insidecare .libor:nth-child(1) {

@@ -48,33 +48,65 @@
                 </div>
             </div>
             <div class="col-xs-12 insidecare">
-                <div class="row">  
+                <div class="row">
                     <div class="col-xs-12 libor payNum">
-                        <h1>問與答</h1>
+                        <h1 class="texcenter">問與答</h1>
                     </div>
-                   <div class="col-xs-12 libor detailsbox">
-                        <div class="details">
-                            <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="productSize">
-                            <h3>香嫩多汁烤雞</h3>
-                            <br />
-                            <br />
+                    <div class="col-xs-12 libor payNum insideCSS">
+                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="imgH" />
+                        <div class="rightbox">
+                            <h4>香Q嫩烤雞可郵寄(下標前請仔細看過置頂文)</h4>
                             <span>$100</span>
-                        </div> 
-                    </div>
-                    <div class="col-xs-12 libor paytheway">
-                        <label for="" class="col-xs-6">Y8781273812731</label>
-                        
-                    </div>
-                    <div class="col-xs-12 libor sendadress">
-                        <label for="" class="col-xs-5">收件人資訊</label>
-                        <div class="col-xs-7">
-                            
+                            <p>Leo</p>
                         </div>
                     </div>
+                    
+                    <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">YYY12312DSA</span>
+                        <span class="spansizemidleft">發問</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>要    多    久?</p>
+                    </div>
+                    <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">Leo</span>
+                        <span class="spansizemidleft">回覆</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>已優先幫您處理了請稍後</p>
+                    </div>
+                    <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">YYY12312DSA</span>
+                        <span class="spansizemidleft">發問</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>自己親自去拿我住台北市台北有店面嗎?</p>
+                    </div>
+                    <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">Leo</span>
+                        <span class="spansizemidleft">回覆</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>有喔在101附近</p>
+                    </div>
+                    <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">YYY12312DSA</span>
+                        <span class="spansizemidleft">發問</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>請問多久送到?</p>
+                    </div>
+                     <div class="col-xs-12 libor payNum Issue">
+                        <span class="spansizebig">Leo</span>
+                        <span class="spansizemidleft">回覆</span>
+                        <span class="spansizemid">2015年12月25日</span>
+                        <p>處理時間為1~2天</p>
+                    </div>
+                     
                 </div>
+               
             </div>
-            <asp:Button ID="Button1" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />
+            
         </li>
     </ul>
+    <div class="col-xs-12 fixBar">
+        <textarea class="form-control" rows="3"></textarea>
+        <asp:Button ID="Button1" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />
+    </div>
  
 </asp:Content>
