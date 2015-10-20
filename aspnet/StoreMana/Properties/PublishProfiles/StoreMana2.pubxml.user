@@ -6,7 +6,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\GitHub\發行區\StoreMana\store_mana</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\GitHub\發行區\StoreMana</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AA/bootstrap.min.css">
@@ -16,10 +16,10 @@
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/19/2015 14:21:32</publishTime>
+      <publishTime>10/20/2015 11:28:46</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>10/19/2015 14:21:32</publishTime>
+      <publishTime>10/20/2015 11:40:41</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/15/2015 18:09:50</publishTime>
@@ -31,10 +31,10 @@
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/19/2015 12:55:16</publishTime>
+      <publishTime>10/20/2015 11:22:13</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>10/16/2015 18:44:38</publishTime>
+      <publishTime>10/19/2015 15:07:10</publishTime>
     </File>
     <File Include="css/promptumenu.css">
       <publishTime>10/15/2015 18:09:52</publishTime>
@@ -43,7 +43,7 @@
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="Cust_Mana.aspx">
-      <publishTime>10/15/2015 18:09:52</publishTime>
+      <publishTime>10/19/2015 21:47:32</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>10/15/2015 18:09:52</publishTime>
@@ -160,16 +160,16 @@
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="Order_Detail.aspx">
-      <publishTime>10/16/2015 12:11:01</publishTime>
+      <publishTime>10/19/2015 21:47:32</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>10/19/2015 14:20:35</publishTime>
+      <publishTime>10/20/2015 11:20:47</publishTime>
     </File>
     <File Include="Product_Img.aspx">
       <publishTime>10/15/2015 18:09:52</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>10/15/2015 18:09:52</publishTime>
+      <publishTime>10/19/2015 17:44:12</publishTime>
     </File>
     <File Include="Setting.aspx">
       <publishTime>10/15/2015 18:09:52</publishTime>

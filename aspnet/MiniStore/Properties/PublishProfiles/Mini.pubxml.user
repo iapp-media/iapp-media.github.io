@@ -10,10 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/19/2015 10:24:00</publishTime>
+      <publishTime>10/20/2015 11:28:46</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>10/19/2015 10:24:01</publishTime>
+      <publishTime>10/20/2015 11:28:47</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/15/2015 18:09:50</publishTime>
@@ -22,13 +22,16 @@
       <publishTime>10/16/2015 17:44:06</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
-      <publishTime>10/16/2015 18:00:15</publishTime>
+      <publishTime>10/19/2015 21:47:32</publishTime>
     </File>
     <File Include="Buy_Car.aspx">
       <publishTime>10/15/2015 18:09:51</publishTime>
     </File>
     <File Include="Buy_Ctrl.aspx">
-      <publishTime>10/16/2015 17:44:06</publishTime>
+      <publishTime>10/19/2015 21:47:32</publishTime>
+    </File>
+    <File Include="Buy_Detail.aspx">
+      <publishTime>10/20/2015 11:12:18</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
       <publishTime>10/16/2015 12:11:01</publishTime>
@@ -37,7 +40,7 @@
       <publishTime>10/16/2015 11:10:11</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/16/2015 18:59:06</publishTime>
+      <publishTime>10/20/2015 11:11:32</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/16/2015 18:44:38</publishTime>
@@ -49,7 +52,7 @@
       <publishTime>10/16/2015 11:10:11</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>10/15/2015 18:09:51</publishTime>
+      <publishTime>10/19/2015 21:47:32</publishTime>
     </File>
     <File Include="DEL/111.html">
       <publishTime>10/15/2015 18:09:51</publishTime>
@@ -262,7 +265,7 @@
       <publishTime>08/26/2015 15:15:49</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>10/16/2015 17:44:06</publishTime>
+      <publishTime>10/19/2015 11:40:37</publishTime>
     </File>
     <File Include="TT.aspx">
       <publishTime>10/02/2015 11:22:04</publishTime>

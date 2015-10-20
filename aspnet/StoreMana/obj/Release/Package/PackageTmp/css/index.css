@@ -41,17 +41,27 @@
     height: 73%;
     margin: auto;
 }
+
 .imgsize {
     width: 80px !important;
     height: 80px !important;
 }
+.titleleftfont {
+    font-size:150%;
+    padding: 6px 12px;
+    width: 24%;
+}
+.sliderimgH {
+    height:100%;
+}
+
 .poscenter {
-    position:absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    margin:auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 
@@ -1021,6 +1031,7 @@ a {
         border-left: 4px solid #b4b5b6;
         border-bottom: 1px solid #b4b5b6;
         padding: 15px 0;
+        position: relative;
     }
 
         .insidecare .libor:nth-child(1) {
@@ -1029,13 +1040,16 @@ a {
 
         .insidecare .libor:last-child {
             border-bottom: 4px solid #b4b5b6;
+            margin-bottom: 5px;
         }
 
-    .insidecare div:nth-child(1) img {
+    /*.insidecare div:nth-child(1) img {
         height: 100%;
-        /* width: 100%; */
+         width: 100%; 
         max-height: 200px;
-    }
+         margin: auto; 
+        text-align: center;
+    }*/
 
     .insidecare div:nth-child(1) h1 {
         margin: 0;
@@ -1047,7 +1061,7 @@ a {
 
     .insidecare label {
         color: #838485;
-        font-size: 155%;
+        font-size: 150%;
         font-weight: inherit;
     }
 
@@ -1091,7 +1105,8 @@ a {
     letter-spacing: 5px;
     font-size: 170%;
     border-radius: 1px;
-    margin: 8px 0 20px 0;
+    margin: 8px 0 0 0 !important;
+    /* margin-top: 0px; */
 }
 
 .productsinside h1 {
@@ -1230,9 +1245,15 @@ a {
 
 .promana {
     /* outline: 1px solid #f00; */
-    margin-top: 122px;
+    /* margin: 122px auto; */
     height: 500px;
-    position: relative;
+    /* width: 100%; */
+    max-width: 500px;
+    position: absolute;
+    top: 141px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 
@@ -1473,8 +1494,9 @@ a {
 #slider {
     position: relative;
     overflow: hidden;
+    padding: 0;
     border-radius: 4px;
-    margin: 0 17px;
+    /* margin: 0 17px; */
     /* right: 0; */
     float: right;
 }
@@ -1491,11 +1513,12 @@ a {
             position: relative;
             display: block;
             float: left;
-            margin: 0;
+            margin: auto;
             padding: 0;
-            width: 400px;
+            width: 463px;
             height: 300px;
-            background: #ccc;
+            max-width: 500px;
+            /* background: #ccc; */
             text-align: center;
             line-height: 300px;
         }
@@ -1526,6 +1549,7 @@ a {
 
 .control_prev {
     border-radius: 0 2px 2px 0;
+    left: 0;
 }
 
 .control_next {
@@ -1538,6 +1562,35 @@ a {
     margin: 10px auto;
     width: 160px;
     font-size: 18px;
+}
+
+.paynumber .florichebox {
+    /* text-align:right; */
+    float: right;
+}
+
+    .paynumber .florichebox label {
+        font-size: 109%;
+    }
+
+.col2 {
+    float: left;
+    width: 24%;
+    box-sizing: border-box;
+    font-size: 117%;
+    padding: 6px 12px;
+}
+
+.row1 {
+    float: left;
+    /*padding: 2px 2px 2px 2px;*/
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #aaa;
+}
+
+.row1:first-child {
+    outline: 1px solid #000;
 }
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
@@ -1553,7 +1606,7 @@ a {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
-   
+
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 112px;
@@ -1726,20 +1779,21 @@ a {
     .swiper-container {
         top: 71px;
     }
+
     #slider ul li {
-        width:300px;
-        height:250px;
-        line-height:0;
+        width: 300px;
+        height: 250px;
+        line-height: 0;
     }
-     
 }
 
 @media only screen and (max-width:480px) {
     #slider ul li {
-        width:200px;
-        height:150px;
-        line-height:0;
+        width: 200px;
+        height: 150px;
+        line-height: 0;
     }
+
     .promana {
         /*outline: 1px solid #f00;*/
         margin-top: 115px;
@@ -1959,7 +2013,8 @@ a {
     .swiper-container {
         top: 72px;
     }
+
     .glyphicon-search {
-        color:#ff9933;
+        color: #ff9933;
     }
 }

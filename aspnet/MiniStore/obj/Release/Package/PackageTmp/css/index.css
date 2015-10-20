@@ -42,7 +42,22 @@
     margin: auto;
 }
 
-
+.question {
+    background-color:transparent;
+    font-size:150%;
+    border: 1px solid #ddd;
+    padding: 22px 12px;
+    color: #838485;
+}
+.question:last-child {
+    border-left: 4px solid #b4b5b6;
+}
+.question:first-child {
+    border-right: 4px solid #b4b5b6;
+}
+.borbot {
+    border-bottom: 4px solid #b4b5b6 !important;
+}
 /* link CSS UI */
 
 .mart10 {
@@ -980,6 +995,9 @@ a {
     position: absolute;
     z-index: 1;
     top: 35px;
+    /* left: 0; */
+    /* right: 0; */
+    /* margin: auto; */
 }
 
 .productcareEnd,
@@ -997,6 +1015,7 @@ a {
 
 .insidecare {
     border-radius: 2px;
+    /* max-width: 500px; */
 }
 
     .insidecare ul {
@@ -1007,12 +1026,13 @@ a {
     .insidecare .libor {
         border-right: 4px solid #b4b5b6;
         border-left: 4px solid #b4b5b6;
-        border-bottom: 1px solid #b4b5b6;
+        border-bottom: 1px solid #ddd;
         padding: 15px 0;
     }
 
         .insidecare .libor:nth-child(1) {
             border-top: 4px solid #b4b5b6;
+            border-bottom: none;
         }
 
         .insidecare .libor:last-child {
@@ -1033,7 +1053,7 @@ a {
 
     .insidecare label {
         color: #838485;
-        font-size: 155%;
+        font-size: 150%;
         font-weight: inherit;
     }
 
@@ -1077,7 +1097,7 @@ a {
     letter-spacing: 5px;
     font-size: 170%;
     border-radius: 1px;
-    margin: 8px 0 20px 0;
+    margin: 8px 0 0 0;
 }
 
 .productsinside h1 {
@@ -1216,9 +1236,14 @@ a {
 
 .promana {
     /* outline: 1px solid #f00; */
-    margin-top: 122px;
+    /* margin-top: 122px; */
     height: 500px;
-    position: relative;
+    max-width: 500px;
+    position: absolute;
+    top: 122px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 
@@ -1459,8 +1484,11 @@ a {
 #slider {
     position: relative;
     overflow: hidden;
+    padding: 0;
     border-radius: 4px;
-    margin-left: 24px;
+    /* margin: 0 17px; */
+    /* right: 0; */
+    float: right;
 }
 
     #slider ul {
@@ -1475,11 +1503,12 @@ a {
             position: relative;
             display: block;
             float: left;
-            margin: 0;
+            margin: auto;
             padding: 0;
-            width: 400px;
+            width: 463px;
             height: 300px;
-            background: #ccc;
+            max-width: 500px;
+            /* background: #ccc; */
             text-align: center;
             line-height: 300px;
         }
@@ -1510,6 +1539,7 @@ a {
 
 .control_prev {
     border-radius: 0 2px 2px 0;
+    left: 0;
 }
 
 .control_next {
@@ -1523,6 +1553,7 @@ a {
     width: 160px;
     font-size: 18px;
 }
+
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {

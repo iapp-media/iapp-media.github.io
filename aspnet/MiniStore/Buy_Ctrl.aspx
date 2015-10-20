@@ -8,8 +8,9 @@
             <div class="col-xs-12 insidecare">
                 <div class="row">
                     <%-- 總金額 -付款方式 -寄送方式 -收件人資訊 -購買商品明細( name*qty = price) --%>
+                    <div style="display:none">
                     <div class="col-xs-12 libor sendadress">
-                        <label for="" class="col-xs-5">購買商品明細</label>
+                        <label for="" class="col-xs-12">購買商品明細</label>
                         <div class="col-xs-7">
                             <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" EnableTheming="True" DataKeyNames="ItemID,carID" BorderStyle="Solid" Width="100%">
                                 <Columns>
@@ -50,6 +51,36 @@
                             <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
                         </div>
                     </div>
+                    </div>
+                    
+                    <div class="col-xs-12 detailsbox">
+                        <h1>購買商品明細</h1>
+                        <div class="details">
+                            <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="productSize"/>
+                            <h3>烤雞</h3>
+                            <span>$100</span>
+                            <br />
+                            <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+                            <span class="glyphicon glyphicon-remove cancelTransaction" aria-hidden="true"></span>
+                        </div> 
+                        <div class="details">
+                            <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="productSize"/>
+                            <h3>烤雞</h3>
+                            <span>$100</span>
+                            <br />
+                            <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+                            <span class="glyphicon glyphicon-remove cancelTransaction" aria-hidden="true"></span>
+                        </div> 
+                        <div class="details">
+                            <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="productSize"/>
+                            <h3>烤雞</h3>
+                            <span>$100</span>
+                            <br />
+                            <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+                            <span class="glyphicon glyphicon-remove cancelTransaction" aria-hidden="true"></span>
+                        </div> 
+                    </div>
+
 
                     <div class="col-xs-12 libor payNum">
                         <label for="" class="col-xs-6">應付金額</label>
