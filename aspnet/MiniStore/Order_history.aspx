@@ -36,8 +36,8 @@
                             <HeaderTemplate>
                                 <div class="row1">
                                     <div class="col2">訂單狀態</div>
-                                    <div class="col2">商品</div> 
-                                      <div class="col2">數量</div>
+                                   <%-- <div class="col2">商品</div> 
+                                      <div class="col2">數量</div>--%>
                                     <div class="col2">訂單編號</div>
                                     <div class="col2">實付金額</div>
                                     <div class="col2">下單時間</div>
@@ -49,27 +49,28 @@
                                     <div class="col2">
                                         <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
                                     </div>
-                                    <div class="col2">
+<%--                                    <div class="col2">
                                         <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
-                                    </div>   
+                                    </div>
                                     <div class="col2">
                                         <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("AMT")%>'></asp:Literal>
-                                    </div>
+                                    </div> --%>  
                                     <div class="col2">
                                         <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Order_No")%>'></asp:Literal>
                                     </div>
                                     <div class="col2">
-                                        <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total")%>'></asp:Literal>
+                                        <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT")%>'></asp:Literal>
                                     </div>
 
                                     <div class="col2">
                                         <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
                                     </div>
-                                    <%--     <div class="col2">
+                                   
+                                         <div class="col2">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      詳細資訊
                             </asp:HyperLink>
-                        </div>--%>
+                        </div>
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>
