@@ -13,21 +13,21 @@
                             <asp:ListItem Value="1">已回覆</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <div class="col-xs-12 libor paynumber">
+                    <div class="col-xs-12 libor paynumber delettoplin">
                         <label class="col-xs-6">商品名稱</label>
                         <asp:DropDownList class="form-control" ID="DL_Pname" runat="server">
                         </asp:DropDownList>
                     </div>
-                    <div class="col-xs-12 libor paynumber">
+                    <div class="col-xs-12 libor paynumber delettoplin">
                         <asp:Button ID="BT_Search" runat="server" Text="Search" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Search_Click" />
                     </div>
-                    <div class="col-xs-12 libor payNum Issue">
+                    <div class="col-xs-12 libor payNum Issue delettoplin">
                         <span class="spansizebig">有折扣嗎?</span>
                         <span class="spansizemidleft">5天前</span>
                         <a href="#" class="spansizemid">回覆</a>
                         <p>尚未回覆</p>
                     </div>
-                     <div class="col-xs-12 libor payNum Issue">
+                     <div class="col-xs-12 libor payNum Issue delettoplin">
                         <span class="spansizebig">有折扣嗎?</span>
                         <span class="spansizemidleft">5天前</span>
                         <a href="#" class="spansizemid">回覆</a>
@@ -39,8 +39,8 @@
                     <HeaderTemplate>
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <div style="display:none;">
-                        <%--<div class="col-xs-12 libor paynumber">--%>
+                       
+                        <!--<div class="col-xs-12 libor paynumber">
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Question")%>'></asp:Literal>
                             <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("agoday")%>'></asp:Literal>
                         </div>
@@ -51,8 +51,8 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      回覆
                             </asp:HyperLink>
-                        </div>
-                        <%--</div> --%>
+                        </div>-->
+                       
                     </ItemTemplate>
                 </asp:Repeater>
                 <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>

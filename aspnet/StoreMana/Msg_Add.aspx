@@ -5,20 +5,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="buydivmove">
         <div class="productcare col-xs-12">
-            <div class="col-xs-12 insidecare">
+            <div class="col-xs-12">
                 <div class="row">
-                    <div class="col-xs-12 libor paynumber">
-                        <asp:TextBox ID="TB_Qen" runat="server" ReadOnly="true" Class="form-control"></asp:TextBox>
+                    <div class="col-xs-12 libor Reply Issue">
+                        <asp:TextBox ID="TB_Qen" runat="server" ReadOnly="true" CssClass="spansizebig"></asp:TextBox>
                         <asp:TextBox ID="TB_Ans" runat="server" Class="form-control" Rows="5"></asp:TextBox>
                         <asp:Button ID="Button2" runat="server" Text="回覆" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClick="BT_Confirm_Click" />
                     </div>
                 </div>
             </div>
-        </div>
-        <input />
-        <div class="" style="width: 100px; height: 100px; background-image: url()">
-            s
-123213
         </div>
     </div>
 </asp:Content>
