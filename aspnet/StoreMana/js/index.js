@@ -194,6 +194,10 @@ $(document).ready(function() {
 
     });
 
+    $('.openslider').on('click', function () {
+        $('.productDIV').fadeIn();
+    })
+
 
     //瀑布流
 

@@ -31,12 +31,12 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.TextBox TB_Ans;
         
         /// <summary>
-        /// BT_Confirm 控制項。
+        /// Button2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_Confirm;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

@@ -23,13 +23,13 @@
                                <%-- 不要的 --%>
                             <div class="form-group">
                                 <div style="margin: 0 0 0 300px; width: 500px">
-                                    <!-- 輪播圖 -->
+                                    <!-- 輪播圖 
                                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                        <!-- Wrapper for slides -->
+                                    
                                         <div class="carousel-inner" role="listbox">
                                             <asp:Literal ID="L" runat="server"></asp:Literal>
                                         </div>
-                                        <!-- Controls -->
+                             
                                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
@@ -39,6 +39,7 @@
                                             <span class="sr-only">Next</span>
                                         </a>
                                     </div> 
+                                -->
                                 </div> 
                             </div>
                            </div>
@@ -48,21 +49,27 @@
                                 <ul>
                                     <li>
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
-                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">            
+                                        <label>
+                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
+                                        </label>
                                     </li>
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
-                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
+                                        <label>
+                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
+                                        </label>
                                     </li>
-
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
-                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
+                                        <label>
+                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
+                                        </label>
                                     </li>
-
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
-                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter">
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
+                                        <label>
+                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -100,16 +107,21 @@
                             <label for="" class="col-xs-6">商品規格</label>
                             <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
                         </div>
-                        <div class="col-xs-12 libor paynumber">
+                        <!--<div class="col-xs-12 libor paynumber">
                             <label class="col-xs-6">付款方式</label>
-                           <div style="display:none">
-                               <asp:CheckBoxList ID="CB_Payment" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
+                           <div>
+                               <asp:CheckBoxList ID="CB_Payment" runat="server" CssClass="aaa"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
                                </asp:CheckBoxList>
+                               <asp:ListBox ID="aa" runat="server" SelectionMode="Multiple">
+                                   <asp:ListItem Text="aaaa"></asp:ListItem>
+                                   <asp:ListItem Text="aaaa"></asp:ListItem>
+                                   <asp:ListItem Text="aaaa"></asp:ListItem>
+                               </asp:ListBox>
                            </div>
-                            <div class="checkbox col-xs-4 florichebox">
-                                <label>
+                            <div class="checkbox col-xs-4 florichebox" style="display:none">
                                     <input type="checkbox">
-                                    面交
+                                 <label>
+                                   面交
                                 </label>
                                 <br />
                                 <label>
@@ -122,8 +134,8 @@
                                     銀行轉帳
                                 </label>
                             </div>
-                        </div>
-                        <div class="col-xs-12 libor paynumber">
+                        </div>-->
+                        <!--<div class="col-xs-12 libor paynumber">
                             <label  class="col-xs-6">寄送方式</label>
                             <div style="display:none">
                                <asp:CheckBoxList ID="CB_Delivery" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  >        
@@ -145,7 +157,7 @@
                                     寄送到府
                                 </label>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="col-xs-12 libor paynumber">
                             <label for="" class="col-xs-6">備註</label>
                             <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>
@@ -156,9 +168,8 @@
         <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
             </li>
         </ul>
-       
-
         <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal> 
+       
     </div> 
     <script>
         $('.carousel').carousel({

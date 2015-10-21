@@ -17,7 +17,6 @@ D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.pdb
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.dll
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.pdb
-C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\StoreMana.dll.config
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\StoreMana.dll
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\StoreMana.pdb
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\JustyLibrary.dll

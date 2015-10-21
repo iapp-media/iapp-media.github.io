@@ -56,10 +56,10 @@
                    
                          <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
             <asp:Button ID="BT_InCar" runat="server" Text="加入購物車" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_InCar_Click" />
-                   
+                   s
                     <div style="display:none">  
                     <asp:Literal ID="L_view" runat="server"></asp:Literal>
-                        </di>
+                        </div>
                 </div>
             </div>
            

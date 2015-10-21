@@ -15,7 +15,7 @@
             float: left;
         }
     </style>
-</asp:Content>
+</asp:Content> 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-header">
         <div>&nbsp;</div>

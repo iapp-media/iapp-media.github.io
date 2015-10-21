@@ -15,7 +15,6 @@ D:\Root\Github\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1
 D:\Root\Github\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.dll
 D:\Root\Github\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.xml
 D:\Root\Github\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\obj\Debug\AppWeb1.4.pdb
-C:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\bin\AppWeb1.4.dll.config
 C:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\bin\AppWeb1.4.dll
 C:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\bin\AppWeb1.4.pdb
 C:\GitHub\iapp-media.github.io\aspnet\AppWeb1.4\AppWeb1.4\bin\AppWeb1.4.xml

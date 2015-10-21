@@ -1,3 +1,4 @@
+
 .navbar-header {
     /*outline: 1px solid #f00;*/
     width: 100px;
@@ -55,6 +56,9 @@
     height:100%;
 }
 
+
+
+
 .poscenter {
     position: absolute;
     top: 0;
@@ -63,6 +67,25 @@
     left: 0;
     margin: auto;
 }
+
+
+.Issue {
+    padding:6px 12px !important;
+}
+.spansizebig ,spansizemid {
+    font-size:150%;
+    line-height: 3.2;
+}
+.spansizemid {
+    float:right;
+    line-height: 5.2;
+    color:#aaa;
+    font-size: 18px;
+}
+.spansizemidleft {
+    color:#aaa;
+}
+
 
 
 /* link CSS UI */
@@ -1392,6 +1415,7 @@ a {
     border-radius: 2px;
     background-color: #fff;
 }
+
 
 .fonts {
     font-size: 150%;
