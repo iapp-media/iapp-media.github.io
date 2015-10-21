@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                                                                 <p>購物車明細</p>
-                                        <div  style="color:red">
+                                        <div style="color:red">
                                             要放商品明細抄buy_ctrl
                                         </div>
                         </div></div>

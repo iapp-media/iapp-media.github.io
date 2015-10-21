@@ -248,6 +248,28 @@
     border-radius: 0 4px 4px 0;
 }
 
+/* List Layout */
+.titleleftfont {
+    font-size: 150%;
+    padding: 6px 12px;
+    width: 24%;
+}
+.col2 {
+    float: left;
+    width: 24%;
+    box-sizing: border-box;
+    font-size: 117%;
+    padding: 6px 12px;
+}
+
+.row1 {
+    float: left;
+    /*padding: 2px 2px 2px 2px;*/
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #aaa;
+}
+
 
 /* link CSS UI */
 
