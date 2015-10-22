@@ -13,22 +13,13 @@ namespace MiniStore {
     public partial class P_MSG {
         
         /// <summary>
-        /// PName 控制項。
+        /// L_Puc 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal PName;
-        
-        /// <summary>
-        /// PPrice 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal PPrice;
+        protected global::System.Web.UI.WebControls.Literal L_Puc;
         
         /// <summary>
         /// RP1 控制項。
@@ -74,14 +65,5 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btsend;
-        
-        /// <summary>
-        /// Button1 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

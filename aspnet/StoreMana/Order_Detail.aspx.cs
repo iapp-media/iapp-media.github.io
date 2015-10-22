@@ -34,26 +34,21 @@ namespace StoreMana.Mini
 
             }
  
-        }
+        } 
 
-        protected void Bt_Leave_Click(object sender, EventArgs e)
-        {
+        //protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        //{
 
-        }
-
-        protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-
-            DropDownList DL_STAt = (DropDownList)e.Item.FindControl("Repeater1$ctl00$DL_STA");
+        //    DropDownList DL_STAt = (DropDownList)e.Item.FindControl("Repeater1$ctl00$DL_STA");
         
-            //DropDownList DL_STAt = (DropDownList)e.Item.FindControl("DL_STA");
+        //    //DropDownList DL_STAt = (DropDownList)e.Item.FindControl("DL_STA");
             
-           // Response.Write(aaa.Text);
-          //  Comm.GetDDL(DL_STAt, "4");
+        //   // Response.Write(aaa.Text);
+        //  //  Comm.GetDDL(DL_STAt, "4");
 
 
-            //  Main.FillDDP(DL_STA, "select Memo,Status from def_Status where Title='Order_STA'", "Memo", "Status");
+        //    //  Main.FillDDP(DL_STA, "select Memo,Status from def_Status where Title='Order_STA'", "Memo", "Status");
 
-        }
+        //}
     }
 }

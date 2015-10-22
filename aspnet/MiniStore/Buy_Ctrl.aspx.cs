@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
+ 
 
 namespace MiniStore
 {
@@ -24,12 +26,19 @@ namespace MiniStore
               
             }
         }
+        public string ShowImg(object IDNO)
+        {
+            if (IDNO.ToString().Length > 0)
+                return Main.Scalar("Select FilePath from Product_Img where Product_ID='" + IDNO + "' and Num=1");
+            else
+                return "";
+        }
         void GetCar()
         {
             L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id='" + Comm.User_ID() + "' ";
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
-            GV.DataSourceID = SD1.ID;
+            RP1.DataSourceID = SD1.ID;
 
             //參數設定要改過
             str = "Select b.Product_Name,sum(a.qty) * b.Price as total ,b.Payment,b.delivery " +
@@ -51,58 +60,154 @@ namespace MiniStore
         }
         protected void BT_Confirm_Click(object sender, EventArgs e)
         {
-            if (GV.Rows.Count < 0) { return; }
-            ////貨物數量還沒控制
-            string OrderNo = "", OrderID = "", shopcar = "";
-            int c = 0;
-            OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today); //user_id
-
-            Main.ParaClear();
-            Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);
-            Main.ParaAdd("@Total_AMT", Main.Cint2(TB_Paysum.Text), SqlDbType.Int);
-            Main.ParaAdd("@Delivery_Date", System.DateTime.Today.AddDays(3).ToShortDateString(), SqlDbType.DateTime);
-            Main.ParaAdd("@Store_ID", "1", SqlDbType.Int);             //用意? 跟 users ID 疑惑
-            Main.ParaAdd("@Customer_ID", Comm.User_ID(), SqlDbType.NVarChar);
-            Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@Email", Main.Scalar("select Accounts from users where idno='" + Comm.User_ID() + "'"), SqlDbType.NVarChar); ;      //暫時寫 要拉會員表
-            Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@County", " ", SqlDbType.NVarChar);                 //沒資料欄位 要拉會員表?
-            Main.ParaAdd("@City", "", SqlDbType.NVarChar);                    //沒資料欄位 要拉會員表?
-            Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
-            Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);             //??
-            Main.ParaAdd("@Status", "1", SqlDbType.NVarChar);         //暫時寫-1 待結帳改1(未付款)
-            Main.ParaAdd("@Delivery_ID", DL_Delivery.SelectedValue.ToString(), SqlDbType.NVarChar);
-            Main.ParaAdd("@Payment_ID", DL_Payment.SelectedValue.ToString(), SqlDbType.NVarChar);
-
-            c = Main.NonQuery("insert into Orders(Order_No,Total_AMT,Delivery_Date,Store_ID,Customer_ID,Contact_Name,TEL,Email,MNO,County,City,Addr,Memo,Creat_Date,Last_Update,Status,Delivery_ID,Payment_ID) " +
-                          "values(@Order_No,@Total_AMT,@Delivery_Date,@Store_ID,@Customer_ID,@Contact_Name,@TEL,@Email,@MNO,@County,@City,@Addr,@Memo,GETDATE(),GETDATE(),@Status,@Delivery_ID,@Payment_ID)");
-            if (GV.Rows.Count > 0)
+            if (CBinfo.Checked == true)
             {
-                c = 0;
-                for (int i = 0; i < GV.Rows.Count; i++)
-                {
-                    Main.ParaClear();
-                    OrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' and Status='1'");
+                Main.ParaClear();
+                Main.ParaAdd("@Customer_ID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+                Main.ParaAdd("@Num", 1, SqlDbType.Int);      //常用設定組別 先暫時都給1 之後要改
+                Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar);
+                Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
+                Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
+                Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
 
-                    Main.ParaAdd("@Order_ID", Main.Cint2(OrderID), SqlDbType.Int);
-                    Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);
-                    Main.ParaAdd("@Item_ID", Main.Cint2(GV.DataKeys[i][0].ToString()), SqlDbType.Int);
-                    Main.ParaAdd("@AMT", Main.Cint2(GV.Rows[i].Cells[3].Text), SqlDbType.Int);
-                    Main.ParaAdd("@Price", Main.Cint2(GV.Rows[i].Cells[1].Text), SqlDbType.Int);
-                    Main.ParaAdd("@Total", Main.Cint2(GV.Rows[i].Cells[5].Text.Replace(",", "")), SqlDbType.Int);
-                    Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);
-                    c += Main.NonQuery("insert into Order_Content (Order_ID,Order_No,Item_ID,AMT,Price,Total,Memo)" +
-                                    "values(@Order_ID,@Order_No,@Item_ID,@AMT,@Price,@Total,@Memo)");
-                    shopcar += ",'" + GV.DataKeys[i][1].ToString() + "'";
-                }
-                if (c > 0)
-                {
-                    Main.NonQuery("delete ShoppingCart where IDNo in (" + shopcar.Substring(1) + ")");
-                    Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + OrderID + "','_self');</script>");
-                } 
+                Main.NonQuery("Insert into Customer_info (Customer_ID, Num, Contact_Name, TEL, MNO, Addr) Values " +
+                              " (@Customer_ID, @Num, @Contact_Name, @TEL, @MNO, @Addr)");
+            }
+             
+            //金額資料直接再DB撈已防client竄改值??
+            string OrderNo = "", strOrderID = null; //訂單編號之後也要SQL 處理?
+            //Object OrderID = "";
+
+            OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today);  
+
+            SqlConnection conn = new SqlConnection(Main.ConnStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@User_ID", Comm.User_ID());
+            cmd.Parameters.AddWithValue("@OrderNo", OrderNo);
+            cmd.Parameters.AddWithValue("@Delivery_ID", Main.Cint2(DL_Delivery.SelectedValue.ToString()));
+            cmd.Parameters.AddWithValue("@Payment_ID", Main.Cint2(DL_Payment.SelectedValue.ToString()));
+            cmd.Parameters.AddWithValue("@Contact_Name", TB_Name.Text);
+            cmd.Parameters.AddWithValue("@TEL", TB_Tel.Text);
+            cmd.Parameters.AddWithValue("@MNO", TB_MNO.Text);
+            cmd.Parameters.AddWithValue("@Addr", TB_Addr.Text);
+
+
+            cmd.Parameters.AddWithValue("@Ans", "22");  //為了轉型用的 但還是失敗先留著
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "CreatOrders";
+            object OrderID = cmd.ExecuteScalar();
+
+            //轉型一直失敗 暫時這樣寫
+           strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
+            Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "','_self');</script>");
+          
+            //strOrderID = (string)OrderID;
+            //if (strOrderID != "") //----執行回傳成功  ---
+            //{
+
+            //    Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "','_self');</script>");
+            //}
+
+            conn.Close();
+
+            ////if (RP1.Rows.Count < 0) { return; }
+            //////貨物數量還沒控制
+            //string OrderNo = "", OrderID = "", shopcar = "";
+            //int c = 0;
+            //OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today); //user_id 
+
+            //Main.ParaClear();
+            //Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);
+            //Main.ParaAdd("@Total_AMT", Main.Cint2(TB_Paysum.Text), SqlDbType.Int);
+            //Main.ParaAdd("@Delivery_Date", System.DateTime.Today.AddDays(3).ToShortDateString(), SqlDbType.DateTime);
+            //Main.ParaAdd("@Store_ID", "1", SqlDbType.Int);             //用意? 跟 users ID 疑惑
+            //Main.ParaAdd("@Customer_ID", Comm.User_ID(), SqlDbType.NVarChar);
+            //Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@Email", Main.Scalar("select Accounts from users where idno='" + Comm.User_ID() + "'"), SqlDbType.NVarChar); ;      //暫時寫 要拉會員表
+            //Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@County", " ", SqlDbType.NVarChar);                 //沒資料欄位 要拉會員表?
+            //Main.ParaAdd("@City", "", SqlDbType.NVarChar);                    //沒資料欄位 要拉會員表?
+            //Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
+            //Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);             //??
+            //if (DL_Payment.SelectedValue.ToString() == "3")
+            //{
+            //    Main.ParaAdd("@Status", "1", SqlDbType.NVarChar);         // 銀行轉帳直接給1 (未付款)
+            //}
+            //else {
+            //    Main.ParaAdd("@Status", "0", SqlDbType.NVarChar);         // 面交值皆給0 訂單成立 (賣家確認中)
+            //}
+
+            //Main.ParaAdd("@Delivery_ID", DL_Delivery.SelectedValue.ToString(), SqlDbType.NVarChar);
+            //Main.ParaAdd("@Payment_ID", DL_Payment.SelectedValue.ToString(), SqlDbType.NVarChar);
+
+            //c = Main.NonQuery("insert into Orders(Order_No,Total_AMT,Delivery_Date,Store_ID,Customer_ID,Contact_Name,TEL,Email,MNO,County,City,Addr,Memo,Creat_Date,Last_Update,Status,Delivery_ID,Payment_ID) " +
+            //              "values(@Order_No,@Total_AMT,@Delivery_Date,@Store_ID,@Customer_ID,@Contact_Name,@TEL,@Email,@MNO,@County,@City,@Addr,@Memo,GETDATE(),GETDATE(),@Status,@Delivery_ID,@Payment_ID)");
+
+
+
+            ////先註寫 回頭改回RP寫法
+            //if (GV.Rows.Count > 0)
+            //{
+            //    c = 0;
+            //    for (int i = 0; i < GV.Rows.Count; i++)
+            //    {
+            //        Main.ParaClear();
+            //        OrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' and Status='1'");
+
+            //        Main.ParaAdd("@Order_ID", Main.Cint2(OrderID), SqlDbType.Int);
+            //        Main.ParaAdd("@Order_No", OrderNo, SqlDbType.NVarChar);
+            //        Main.ParaAdd("@Item_ID", Main.Cint2(GV.DataKeys[i][0].ToString()), SqlDbType.Int);
+            //        Main.ParaAdd("@AMT", Main.Cint2(GV.Rows[i].Cells[3].Text), SqlDbType.Int);
+            //        Main.ParaAdd("@Price", Main.Cint2(GV.Rows[i].Cells[1].Text), SqlDbType.Int);
+            //        Main.ParaAdd("@Total", Main.Cint2(GV.Rows[i].Cells[5].Text.Replace(",", "")), SqlDbType.Int);
+            //        Main.ParaAdd("@Memo", "", SqlDbType.NVarChar);
+            //        c += Main.NonQuery("insert into Order_Content (Order_ID,Order_No,Item_ID,AMT,Price,Total,Memo)" +
+            //                        "values(@Order_ID,@Order_No,@Item_ID,@AMT,@Price,@Total,@Memo)");
+            //        shopcar += ",'" + GV.DataKeys[i][1].ToString() + "'";
+            //    }
+            //    if (c > 0)
+            //    {
+            //        Main.NonQuery("delete ShoppingCart where IDNo in (" + shopcar.Substring(1) + ")");
+            //        Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + OrderID + "','_self');</script>");
+            //    }
+            //}
+        }
+
+        protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Literal BTminus = (Literal)e.Item.FindControl("L_BTminus");
+                Literal BTplus = (Literal)e.Item.FindControl("L_BTplus");
+                Label P_IDNo = (Label)e.Item.FindControl("Lb_Item");
+                Literal BTDELE = (Literal)e.Item.FindControl("L_DELE");
+                Label CarBabyID = (Label)e.Item.FindControl("Lb_Carbaby");
+
+                BTminus.Text = "<span class='input-number-decrement' onclick='minus(" + e.Item.ItemIndex + ",2," + CarBabyID.Text + ")'>–</span>";
+
+                //數量有要卡嗎?
+                //plus(商品數量上限,RP1項,動作ADD,CarID)
+                BTplus.Text = "<span class='input-number-increment' onclick='plus(" +
+                    Main.Scalar("select qty from product where idno='" + P_IDNo.Text + "'") + "," + e.Item.ItemIndex + ",1," + CarBabyID.Text + ")'>+ </span>";
+
+                //第幾項,1,carID,Pid (carID&Pid 都對ajax才刪)
+                BTDELE.Text = "<span class='glyphicon glyphicon-remove cancelTransaction' style='cursor: pointer;' aria-hidden='true' " +
+                    " onclick='putDELE(" + e.Item.ItemIndex + ",0," + CarBabyID.Text + "," + P_IDNo.Text + ")'></span>";
+             
             }
         }
+
+        protected void SD1_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            LCount.Text = e.AffectedRows.ToString(); 
+        }
+         
 
         //void CarouselPic()
         //{
@@ -164,22 +269,6 @@ namespace MiniStore
 
 
         
-        //}
-
-        //protected void GV_RowDataBound(object sender, GridViewRowEventArgs e)
-        //{
-        //    if (e.Row.RowIndex > -1)
-        //    {
-
-
-        //        Button TT = (Button)e.Row.Cells[2].Controls[1];
-        //        TT.OnClientClick = "minus('" + e.Row.RowIndex + "')";
-        //        TT.Attributes.Add("onkeyup", "minus('" + e.Row.RowIndex + "');");
-        //        Button T2 = (Button)e.Row.Cells[4].Controls[1];
-        //        T2.OnClientClick = "plus('" + e.Row.RowIndex + "')";
-        //        T2.Attributes.Add("onkeyup", "plus('" + e.Row.RowIndex + "');");
-        //    }
-
-        //}
+       
     }
 }

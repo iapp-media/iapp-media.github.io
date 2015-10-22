@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace MiniStore
 {
@@ -13,10 +14,25 @@ namespace MiniStore
         CommTool Comm = new CommTool();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["entry"] == null)
+            if (!IsPostBack)
             {
-                Response.Redirect("Default.aspx"); 
+                if (Request.QueryString["entry"] == null)
+                {
+                    Response.Redirect("Default.aspx");
+                }
+                DataTable DT = Main.GetDataSetNoNull("Select a.Product_Name,a.Price,b.FilePath from product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 where a.idno='" + Request.QueryString["entry"] + "'");
+                if (DT.Rows.Count > 0)
+                {
+                    L_Puc.Text = "<img src='" + DT.Rows[0]["FilePath"] + "' alt='Alternate Text' class='imgH' />" +
+                                 "<div class='rightbox'>" +
+                                 "    <h4>" + DT.Rows[0]["Product_Name"] + "</h4>" +
+                                 "    <span>$" + DT.Rows[0]["Price"] + "</span>" +
+                                 "    <p></p>" +
+                                 "</div>";
+                }
+
             }
+            
             L.Text = "select Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg order by CreatDate DESC ";
 
 
