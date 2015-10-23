@@ -103,7 +103,7 @@
 
 /* link lib */
 .listbox {
-    outline: 3px solid #aaa;
+    outline: 3px solid #ff9933;
     /* width: 95%; */
     margin-top: 15px;
 }
@@ -112,7 +112,7 @@
     background-color: #fff1d1;
 }
 .listbox textarea {
-    border: 1px solid #aaa;
+    border: 1px solid #ff9933;
 }
 .list1 {
     font-size:150%;
@@ -122,12 +122,18 @@
     font-size:150%;
 }
 .listtit,.listval {
-    outline:1px solid #aaa;
+    outline: 1px solid #ff9933;
     padding: 6px 12px;
+}
+.listtit {
+    color: #656565;
+}
+.listval {
+    color: #656364;
 }
 
 .listbor {
-    outline: 1px solid #aaa;
+    /* outline: 1px solid #aaa; */
     /* margin-top: 9px; */
 }
 /* link CSS UI */
