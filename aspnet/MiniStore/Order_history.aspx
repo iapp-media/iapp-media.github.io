@@ -20,9 +20,6 @@
                      <div class="col-xs-12 libor paynumber">
                         <asp:TextBox ID="TB_Search" runat="server" placeholder="請輸入商品名稱" Class="form-control  col-xs-5 "></asp:TextBox>
                     </div>
-                    
-                    
-                    
                     <asp:Button ID="BT_Search" runat="server" Text="查詢" OnClick="BT_Search_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
 
                     <div class="col-xs-12 libor paynumber">

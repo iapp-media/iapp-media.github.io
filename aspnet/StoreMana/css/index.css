@@ -101,7 +101,35 @@
     margin-left: 10px;
 }
 
+/* link lib */
+.listbox {
+    outline: 3px solid #aaa;
+    /* width: 95%; */
+    margin-top: 15px;
+}
+.listbox:nth-child(even),
+.listbox:nth-child(even) textarea {
+    background-color: #fff1d1;
+}
+.listbox textarea {
+    border: 1px solid #aaa;
+}
+.list1 {
+    font-size:150%;
+}
+.list2 {
+    outline:1px solid #000;
+    font-size:150%;
+}
+.listtit,.listval {
+    outline:1px solid #aaa;
+    padding: 6px 12px;
+}
 
+.listbor {
+    outline: 1px solid #aaa;
+    /* margin-top: 9px; */
+}
 /* link CSS UI */
 
 .mart10 {
@@ -1080,7 +1108,7 @@ a:hover {
     border-top: none;
     border-left: 3px solid #b4b5b6;
     border-right: 3px solid #b4b5b6;
-    border-bottom: 1px solid #b4b5b6;
+    /* border-bottom: 1px solid #b4b5b6; */
 }
 
 .insidecare .libor:nth-child(1) {

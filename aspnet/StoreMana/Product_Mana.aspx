@@ -19,7 +19,7 @@
                                   <input type="button" onclick="javascript: location.href = 'Product_Add.aspx'" value="新增商品" class="btn btn-warning btn-lg btn-block sendcareButtom" />
                             </div>
                             <div class="col-xs-12 libor paynumber">
-                                 <asp:Repeater ID="RP1" runat="server">
+                                <!-- <asp:Repeater ID="RP1" runat="server">
                 <HeaderTemplate>
                     
                         <div class="col-xs-3 titleleftfont">商品名稱</div>
@@ -45,7 +45,89 @@
                         </div>
                     </div> 
                 </ItemTemplate>
-            </asp:Repeater>
+            </asp:Repeater> -->
+                                
+                                    <%--<div class="listbox">
+                                        <div class="list1">
+                                            <div class="col-xs-6">商品名稱</div>
+                                            <div class="col-xs-6">氣球</div>
+                                        </div>
+                                        <div class="list2">
+                                            <div>
+                                                <div class="col-xs-4">價格</div>
+                                                <div class="col-xs-4">建檔日期</div>
+                                                <div class="col-xs-4">詳細資料</div>
+                                            </div>
+                                            <div>
+                                                <div class="col-xs-4">1</div>
+                                                <div class="col-xs-4">2015/12/31</div>
+                                                <div class="col-xs-4">你好你好你好</div>
+                                            </div>
+                                        </div>
+                                    </div>--%>
+                                <div class="listbox col-xs-12">
+                                    <div class="row">
+                                    <div class="listbor">
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">商品名稱</div>
+                                        <div class="col-xs-9 listval">氣球</div>
+                                            </div>
+                                    </div>
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">價格</div>
+                                        <div class="col-xs-9 listval">12313</div>
+                                         </div>
+                                    </div>
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">建檔日期</div>
+                                        <div class="col-xs-9 listval">2015/10/18</div>
+                                            </div>
+                                    </div>
+
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3">詳細資料</div>
+                                        <textarea name="" id="" cols="30" rows="3" class="col-xs-9 listval"></textarea>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="listbox col-xs-12">
+                                    <div class="row">
+                                    <div class="listbor">
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">商品名稱</div>
+                                        <div class="col-xs-9 listval">氣球</div>
+                                            </div>
+                                    </div>
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">價格</div>
+                                        <div class="col-xs-9 listval">12313</div>
+                                         </div>
+                                    </div>
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3 listtit">建檔日期</div>
+                                        <div class="col-xs-9 listval">2015/10/18</div>
+                                            </div>
+                                    </div>
+
+                                    <div class="list1 col-xs-12">
+                                        <div class="row">
+                                        <div class="col-xs-3">詳細資料</div>
+                                        <textarea name="" id="Textarea1" cols="30" rows="3" class="col-xs-9 listval"></textarea>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+  
             <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
             <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
                             </div>
