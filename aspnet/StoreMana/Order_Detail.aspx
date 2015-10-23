@@ -36,7 +36,7 @@
                             <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
                         </div>
                         <div class="col2">
-                            <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("AMT")%>'></asp:Literal>
+                            <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("QTY")%>'></asp:Literal>
                         </div>
                         <div class="col2">
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Order_No")%>'></asp:Literal>
