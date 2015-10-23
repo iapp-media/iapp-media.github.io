@@ -44,16 +44,16 @@ namespace StoreMana.Mini
                     TB_Description.Text = DT.Rows[0]["description"].ToString();
                     TB_Memo.Text = DT.Rows[0]["Memo"].ToString();
 
-                    string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
-                    for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
-                    {
-                        Comm.GetDDL(CB_Payment, listPayment[i]);
-                    }
-                    string[] listDelivery = DT.Rows[0]["delivery"].ToString().Substring(1).Split(',');
-                    for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
-                    {
-                        Comm.GetDDL(CB_Delivery, listDelivery[i]);
-                    }
+                    //string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
+                    //for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                    //{
+                    //    Comm.GetDDL(CB_Payment, listPayment[i]);
+                    //}
+                    //string[] listDelivery = DT.Rows[0]["delivery"].ToString().Substring(1).Split(',');
+                    //for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
+                    //{
+                    //    Comm.GetDDL(CB_Delivery, listDelivery[i]);
+                    //}
                    
                     
                 }
@@ -124,7 +124,7 @@ namespace StoreMana.Mini
             //    if (CB_Delivery.Items[i].Selected)
             //    {
             //        strDelivery += "," + CB_Delivery.Items[i].Value;
-            //    }
+            //    } string[] listPayment =
             //}
             //Main.ParaAdd("@Payment", strPayment, System.Data.SqlDbType.NVarChar);
             //Main.ParaAdd("@Delivery", strDelivery, System.Data.SqlDbType.NVarChar);
