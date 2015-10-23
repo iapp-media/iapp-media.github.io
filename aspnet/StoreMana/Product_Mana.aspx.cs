@@ -18,7 +18,7 @@ namespace StoreMana
             if (!IsPostBack)
             {
                 Main.FillDDP(DL, "select * from Product_Cate", "Cate_Name", "IDNO");
-                L.Text = "select IDNo,Product_Name,Price,CONVERT(varchar(12), Creat_Date, 111) AS CDate  from product where 1=1";
+                L.Text = "select IDNo,Product_Name,Price,CONVERT(varchar(12), Creat_Date, 111) AS CDate  from product where Tmp_IDNo > 0 ";
                 SD1.SelectCommand = L.Text;
                 SD1.ConnectionString = Main.ConnStr;
                 RP1.DataSourceID = SD1.ID;
@@ -27,7 +27,7 @@ namespace StoreMana
 
         protected void BT_Search_Click(object sender, EventArgs e)
         {
-            L.Text = "select IDNo,Product_Name,Price,CONVERT(varchar(12), Creat_Date, 111) AS CDate  from product where 1=1";
+            L.Text = "select IDNo,Product_Name,Price,CONVERT(varchar(12), Creat_Date, 111) AS CDate  from product where Tmp_IDNo > 0";
 
             if (DL.SelectedValue != "")
             {
