@@ -20,29 +20,27 @@ namespace MiniStore
                 if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
                   CarouselPic();
 
-                DataTable DT = Main.GetDataSetNoNull("select payment,delivery from Product where idno='" + Request.QueryString["entry"] + "' ");
-                if (DT.Rows.Count > 0)
-                {
-                    string listPayment = DT.Rows[0]["payment"].ToString().Replace(",", "','");
-                    listPayment = listPayment.Substring(2).ToString() + "'";
-                    listPayment = Main.Scalar("select Memo from def_Status where Col_Name='Payment' and Status in(" + listPayment + ")");
+                //DataTable DT = Main.GetDataSetNoNull("select payment,delivery from Product where idno='" + Request.QueryString["entry"] + "' ");
+                //if (DT.Rows.Count > 0)
+                //{
+                //    string listPayment = DT.Rows[0]["payment"].ToString().Replace(",", "','");
+                //    listPayment = listPayment.Substring(2).ToString() + "'";
+                //    listPayment = Main.Scalar("select Memo from def_Status where Col_Name='Payment' and Status in(" + listPayment + ")");
 
-                    string listDelivery = DT.Rows[0]["delivery"].ToString().Replace(",", "','");
-                    listDelivery = listDelivery.Substring(2).ToString() + "'";
+                //    string listDelivery = DT.Rows[0]["delivery"].ToString().Replace(",", "','");
+                //    listDelivery = listDelivery.Substring(2).ToString() + "'";
 
-                    listDelivery = Main.Scalar("select Memo + '....>' as Memo from def_Status where Col_Name='Payment' and Status in(" + listDelivery + ")");
+                //    listDelivery = Main.Scalar("select Memo + '....>' as Memo from def_Status where Col_Name='Payment' and Status in(" + listDelivery + ")");
 
-                    L_view.Text = "<a href='Product_Detail.aspx?entry=" + Request.QueryString["entry"] + "&view=2'   >  <div class='col-xs-12 libor status'>" +
-                             "      <label   class='col-xs-6'>運費規則</label>" +
-                             "      <p>" + listDelivery + " </p>" +
-                             "  </div> " +
-                             "  <div class='col-xs-12 libor status'>" +
-                             "      <label  class='col-xs-6'>付款方式</label>" +
-                             "      <p>" + listPayment + " </p>" +
-                             "  </div></a>";
-
-
-                } 
+                //    L_view.Text = "<a href='Product_Detail.aspx?entry=" + Request.QueryString["entry"] + "&view=2'   >  <div class='col-xs-12 libor status'>" +
+                //             "      <label   class='col-xs-6'>運費規則</label>" +
+                //             "      <p>" + listDelivery + " </p>" +
+                //             "  </div> " +
+                //             "  <div class='col-xs-12 libor status'>" +
+                //             "      <label  class='col-xs-6'>付款方式</label>" +
+                //             "      <p>" + listPayment + " </p>" +
+                //             "  </div></a>"; 
+                //} 
               
             }
         }
@@ -58,21 +56,16 @@ namespace MiniStore
                  
                     TB_Dimension.Text = DT.Rows[0]["dimension"].ToString();
                     TB_Price.Text = DT.Rows[0]["Price"].ToString();
-                    TB_Description.Text = DT.Rows[0]["description"].ToString();
-
-                    for (int i = 1; i <= 4; i++)
+                    TB_Description.Text = DT.Rows[0]["description"].ToString();  
+                }
+                DataTable DT2 = Main.GetDataSetNoNull("Select FilePath from Product_Img where Product_ID=" + Request.QueryString["entry"] + "");
+                if (DT2.Rows.Count > 0)
+                {
+                    for (int i = 0; i < DT2.Rows.Count; i++)
                     {
-                        if (i == 1)
-                        {
-                            // L.Text += "<div class=\"item active\"><iframe src=\"Product_Img.aspx?PID=" + DT.Rows[0]["IDNo"].ToString() + "&Img=1\" scrolling=\"no\" id=\"Iframe1\" style=\"width:100%;height:350px\"></iframe></div>";
-                        }
-                        else
-                        {
-                            //L.Text += "<div class=\"item\"><iframe src=\"Product_Img.aspx?PID=" + DT.Rows[0]["IDNo"].ToString() + "&Img=" + i + "\" scrolling=\"no\" id=\"Iframe" + i + "\" style=\"width:100%;height:350px\"></iframe></div>";
-                        }
+                    IMG_li.Text += "<li><img src='" + DT2.Rows[i]["FilePath"].ToString() + "' alt='Alternate Text' /></li>";
                     }
                 }
-
             }
         }
 

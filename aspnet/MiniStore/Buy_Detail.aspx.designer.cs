@@ -13,6 +13,15 @@ namespace MiniStore {
     public partial class Buy_Detail {
         
         /// <summary>
+        /// IMG_li 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal IMG_li;
+        
+        /// <summary>
         /// L_Name 控制項。
         /// </summary>
         /// <remarks>
@@ -101,14 +110,5 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_InCar;
-        
-        /// <summary>
-        /// L_view 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_view;
     }
 }
