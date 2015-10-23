@@ -50,7 +50,7 @@ namespace StoreMana.Mini
                         Comm.GetDDL(CB_Payment, listPayment[i]);
                     }
                     string[] listDelivery = DT.Rows[0]["delivery"].ToString().Substring(1).Split(',');
-                    for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                    for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
                     {
                         Comm.GetDDL(CB_Delivery, listDelivery[i]);
                     }
@@ -68,8 +68,8 @@ namespace StoreMana.Mini
                 if (LPID.Text == "0")
                 {
                    
-                    str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,Payment,delivery,dimension,description,Memo,store_ID,Product_No)" +
-                    "values ('-99','','','','','','','','','1','')";
+                    str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
+                    "values ('-99','','','','','','','1','')";
                     if (Main.NonQuery(str) > 0)
                     {
                         // 取 Product_ID
@@ -109,25 +109,25 @@ namespace StoreMana.Mini
             Main.ParaAdd("@Cate_ID", DL_Cate.SelectedValue, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);
 
-            string strPayment = "";
-            for (int i = 0; i < CB_Payment.Items.Count; i++)
-            { 
-                if (CB_Payment.Items[i].Selected)
-                {
-                    strPayment += "," + CB_Payment.Items[i].Value;
-                }
-            }
-            string strDelivery = "";
-            for (int i = 0; i < CB_Delivery.Items.Count; i++)
-            {
+            //string strPayment = "";
+            //for (int i = 0; i < CB_Payment.Items.Count; i++)
+            //{ 
+            //    if (CB_Payment.Items[i].Selected)
+            //    {
+            //        strPayment += "," + CB_Payment.Items[i].Value;
+            //    }
+            //}
+            //string strDelivery = "";
+            //for (int i = 0; i < CB_Delivery.Items.Count; i++)
+            //{
 
-                if (CB_Delivery.Items[i].Selected)
-                {
-                    strDelivery += "," + CB_Delivery.Items[i].Value;
-                }
-            }
-            Main.ParaAdd("@Payment", strPayment, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Delivery", strDelivery, System.Data.SqlDbType.NVarChar);
+            //    if (CB_Delivery.Items[i].Selected)
+            //    {
+            //        strDelivery += "," + CB_Delivery.Items[i].Value;
+            //    }
+            //}
+            //Main.ParaAdd("@Payment", strPayment, System.Data.SqlDbType.NVarChar);
+            //Main.ParaAdd("@Delivery", strDelivery, System.Data.SqlDbType.NVarChar);
 
             Main.ParaAdd("@dimension", TB_Dimension.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@description", TB_Description.Text, System.Data.SqlDbType.NVarChar);
@@ -139,7 +139,7 @@ namespace StoreMana.Mini
             {
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int); 
                 str = "update product set Tmp_IDNo=@Tmp_IDNo,qty=@qty,Product_Name=@Product_Name,Cate_ID=@Cate_ID,Price=@Price " +
-                    ",Payment=@Payment,delivery=@Delivery,dimension=@dimension,description=@description,Memo=@Memo where store_ID=1 and idno=@Tmp_IDNo";
+                    ",dimension=@dimension,description=@description,Memo=@Memo where store_ID=1 and idno=@Tmp_IDNo";
             }
             else
             {
@@ -148,7 +148,7 @@ namespace StoreMana.Mini
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
 
                 str = "update product set Product_No=@Product_No,Tmp_IDNo=@Tmp_IDNo,qty=@qty, Product_Name=@Product_Name,Cate_ID=@Cate_ID"+
-                    ",Price=@Price,Payment=@Payment,delivery=@Delivery,dimension=@dimension,description=@description,Memo=@Memo where  idno=@Tmp_IDNo";
+                    ",Price=@Price,dimension=@dimension,description=@description,Memo=@Memo where  idno=@Tmp_IDNo";
             }
             if (Main.NonQuery(str) > 0)
             {
