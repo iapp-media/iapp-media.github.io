@@ -7,7 +7,7 @@
                 <li class="modify col-xs-12">
                     <div class="col-xs-12 insidecare">
                         <div class="row">
-                            <div class="col-xs-12 libor paynumber">
+                            <div class="col-xs-12 libor paytheway">
                                    <label class="col-xs-6">商品類別</label>
                                     <asp:DropDownList class="form-control" ID="DL" runat="server">
                                     </asp:DropDownList>
@@ -19,33 +19,34 @@
                                   <input type="button" onclick="javascript: location.href = 'Product_Add.aspx'" value="新增商品" class="btn btn-warning btn-lg btn-block sendcareButtom" />
                             </div>
                             <div class="col-xs-12 libor paynumber">
-                                <!-- <asp:Repeater ID="RP1" runat="server">
+                                 <asp:Repeater ID="RP1" runat="server">
                 <HeaderTemplate>
                     
-                        <div class="col-xs-3 titleleftfont">商品名稱</div>
-                        <div class="col-xs-3 titleleftfont">價格</div>
-                        <div class="col-xs-3 titleleftfont">建檔日期</div>　
-                   
+                        <div class="col-xs-12 ListTitle">商品名稱</div>
+                        <div class="col-xs-4 ListTitle">價格</div>
+                        <div class="col-xs-4 ListTitle">建檔日期</div>　
+                    
+
                 </HeaderTemplate> 
                 <ItemTemplate>
                     <div class="row1">
-                        <div class="col2">
+                        <div class="col-xs-12">
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
                         </div>
-                        <div class="col2">
+                        <div class="col-xs-4">
                             <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Price")%>'></asp:Literal>
                         </div>
-                        <div class="col2">
+                        <div class="col-xs-4">
                             <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
                         </div>　
-                        <div class="col2">
+                        <div class="col-xs-3">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      詳細資訊
                             </asp:HyperLink>
                         </div>
                     </div> 
                 </ItemTemplate>
-            </asp:Repeater> -->
+            </asp:Repeater> 
                                 
                                     <%--<div class="listbox">
                                         <div class="list1">
@@ -65,7 +66,7 @@
                                             </div>
                                         </div>
                                     </div>--%>
-                                <div class="listbox col-xs-12">
+                                <%--<div class="listbox col-xs-12">
                                     <div class="row">
                                     <div class="listbor">
                                     <div class="list1 col-xs-12">
@@ -126,7 +127,7 @@
                                     </div>
                                     </div>
                                     </div>
-                                </div>
+                                </div>--%>
   
             <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
             <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>

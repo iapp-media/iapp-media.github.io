@@ -1,3 +1,57 @@
+/* list Library */
+
+.BoxTitle {
+    text-align: center;
+    margin: 19px !important;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.BoxBorder {
+    border: 4px solid #b4b5b6;
+}
+
+.BoxLeft {
+    color: #838485;
+    font-size: 150%;
+    font-weight: inherit;
+    margin: 0;
+}
+
+.BoxRight {
+    float: right;
+    margin-right: 17px;
+    border: 1px solid #b3b4b5;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.ValueRight {
+    float: right;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 150%;
+}
+.ValueText {
+    text-align: right;
+}
+
+.ButModdle {
+    color: #fff;
+    border: none;
+}
+
+.ListLen {
+    width: 100%;
+    height: 30px;
+}
+
+
+
+
+
+/* other */
+
 .navbar-header {
     /*outline: 1px solid #f00;*/
     width: 100px;
@@ -248,12 +302,15 @@
     border-radius: 0 4px 4px 0;
 }
 
+
 /* List Layout */
+
 .titleleftfont {
     font-size: 150%;
     padding: 6px 12px;
     width: 24%;
 }
+
 .col2 {
     float: left;
     width: 24%;
@@ -1236,7 +1293,6 @@ a:hover {
     padding: 15px 0;
     background-color: #fff;
 }
-
 
 .insidecare .libor:nth-child(1) {
     border-top: 4px solid #b4b5b6;

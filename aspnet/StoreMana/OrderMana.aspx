@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        .row1 {
+        /*.row1 {
             border: 1px solid #000;
             float: left;
             padding: 2px 2px 2px 2px;
@@ -13,21 +13,19 @@
             margin: 0 0 0 45px;
             border: 1px solid red;
             float: left;
-        }
+        }*/
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="content-header">
-        <div>&nbsp;</div>
-    </div>
+   
 
-    <div class="container-fluid">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-            <div class="list-group">
+    <div class="buydivmove">
+        <div class="productcare col-xs-12">
+            <div class="list-group BoxBorder">
                 <div class="list-group-item">
                     <div class="row">
                         <div class="col-xs-4">
-                            <p>訂單編號</p>
+                            <p class="BoxLeft">訂單編號</p>
                         </div>
                         <div class="col-xs-8">
                             <asp:TextBox ID="TextBox1" runat="server" Class="form-control" placeholder="請輸入訂單編號"></asp:TextBox>
@@ -37,7 +35,7 @@
                 <div class="list-group-item">
                     <div class="row">
                         <div class="col-xs-4">
-                            <p>訂單狀態</p>
+                            <p class="BoxLeft">訂單狀態</p>
                         </div>
                         <div class="col-xs-8">
                             <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
@@ -52,7 +50,7 @@
                     </div>
                 </div>
                 <div class="list-group-item">
-                    <asp:Button ID="BT_Search" runat="server" Text="Search" CssClass="btn btn-default btn-lg btn-block" OnClick="BT_Search_Click" />
+                    <asp:Button ID="BT_Search" runat="server" Text="Search" CssClass="btn btn-default btn-lg btn-block ButModdle" OnClick="BT_Search_Click" />
                 </div>
             </div>
 
@@ -64,6 +62,7 @@
                         <div class="col2">訂單狀態</div>
                         <div class="col2">下單時間</div>
                         <div class="col2">付款方式</div>
+                        <div class="col2">轉帳資訊</div>
                     </div>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -85,22 +84,23 @@
                             <asp:Literal ID="Literal5" runat="server" Text='<%# Eval("Payment")%>'></asp:Literal>
                         </div>
                         <div class="col2">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+
+                            <asp:HyperLink ID="HyperLink1" runat="server" Visible="false" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      詳細資訊 
                             </asp:HyperLink>
                         </div>
                         <div class="col2">
-                            <asp:Button ID="BTCHK" runat="server" Text="訂單確認" CommandName="CN1" />
+                            <asp:Button ID="BTCHK" runat="server" Text="訂單確認" CommandName="CN1" Visible="false"  />
                         </div>
                                                 <div class="col2">
-                            <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" />
+                            <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" Visible="false" />
                         </div>
                           <div class="col2"> 
-                            <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" />
+                            <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" CssClass="btn btn-default btn-lg btn-block ButModdle"/>
                         </div> <div class="col2"> 
-                            <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" />
+                            <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" CssClass="btn btn-default btn-lg btn-block ButModdle"/>
                         </div><div class="col2"> 
-                            <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" />
+                            <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-default btn-lg btn-block ButModdle"/>
                         </div>
                     </div>
                 </ItemTemplate>

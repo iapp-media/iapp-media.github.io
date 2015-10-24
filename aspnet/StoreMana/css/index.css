@@ -1,3 +1,61 @@
+/* list Library */
+
+.BoxTitle {
+    text-align: center;
+    margin: 19px !important;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.BoxBorder {
+    border: 4px solid #b4b5b6;
+}
+
+.BoxLeft {
+    color: #838485;
+    font-size: 150%;
+    font-weight: inherit;
+    margin: 0;
+}
+
+.BoxRight {
+    float: right;
+    margin-right: 17px;
+    border: 1px solid #b3b4b5;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.ValueRight {
+    float: right;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 150%;
+}
+.ValueText {
+    text-align: right;
+}
+
+.ButModdle {
+    color: #fff;
+    border: none;
+}
+
+.ListLen {
+    width: 100%;
+    height: 30px;
+}
+.ListTitle {
+    font-size: 150%;
+    padding: 6px 12px;
+}
+
+
+
+
+
+/* other */
+
 .navbar-header {
     /*outline: 1px solid #f00;*/
     width: 100px;
@@ -47,11 +105,7 @@
     height: 80px !important;
 }
 
-.titleleftfont {
-    font-size: 150%;
-    padding: 6px 12px;
-    width: 24%;
-}
+
 
 .sliderimgH {
     height: 100%;
@@ -101,33 +155,43 @@
     margin-left: 10px;
 }
 
+
 /* link lib */
+
 .listbox {
     outline: 3px solid #ff9933;
     /* width: 95%; */
     margin-top: 15px;
 }
+
 .listbox:nth-child(even),
 .listbox:nth-child(even) textarea {
     background-color: #fff1d1;
 }
+
 .listbox textarea {
     border: 1px solid #ff9933;
 }
+
 .list1 {
-    font-size:150%;
+    font-size: 150%;
 }
+
 .list2 {
-    outline:1px solid #000;
-    font-size:150%;
+    outline: 1px solid #000;
+    font-size: 150%;
 }
-.listtit,.listval {
+
+.listtit,
+.listval {
     outline: 1px solid #ff9933;
     padding: 6px 12px;
 }
+
 .listtit {
     color: #656565;
 }
+
 .listval {
     color: #656364;
 }
@@ -136,6 +200,8 @@
     /* outline: 1px solid #aaa; */
     /* margin-top: 9px; */
 }
+
+
 /* link CSS UI */
 
 .mart10 {
@@ -166,7 +232,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #ff9933;
+    /* color: #ff9933; */
 }
 
 a.iframe-info.cboxElement {
@@ -1332,7 +1398,7 @@ a:hover {
     /* margin: 122px auto; */
     height: 500px;
     /* width: 100%; */
-    max-width: 500px;
+    max-width: 700px;
     position: absolute;
     top: 141px;
     right: 0;
