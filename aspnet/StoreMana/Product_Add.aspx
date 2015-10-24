@@ -1,11 +1,51 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MiniMaster.Master" AutoEventWireup="true" CodeBehind="Product_Add.aspx.cs" Inherits="StoreMana.Mini.Product_Add" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <link rel="stylesheet" type="text/css" href="css/cropper.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobileEditor.css" />
+    <script src="js/exif.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/JIC.js" type="text/javascript"></script>
+    <script src="js/cropper.js"></script>
+    <script src="js/mobileEditor-new.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- 建檔修改 -->
+    <!--上傳剪裁頁面-->
+    <div class="upload-img">
+        <div class="top">
+            <img src="img/iapplogo.png" class="toplogo" align="left" />
+            <img src="img/cancel-01.png" class="cancel" align="right" />
+        </div>
+        <div class="upload-page">
+            <label for="inputImage">
+                <div class="select">
+                    選擇照片
+                </div>
+            </label>
+            <div class="rotate">
+                <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
+            </div>
+            <div class="preview-container hide">
+                <img id="preview" src="" />
+            </div>
+            <div class="img-container">
+                <img src="" alt="支持圖片上傳格式JPG,PNG" />
+            </div>
+            <p class="word">(移動及縮放進行照片裁切)</p>
+            <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
+            <input id="picnum" value="" class="hide" />
+            <input type="file" accept="image/*" id="inputImage" style="display:none;" />
+            <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
+                截圖
+            </button>
+            <button onclick="compress()" type="button" class="compress">
+                確認
+            </button>
+            <input id="Tbase64" value="" style="display:none;" />
+        </div>
+    </div>
     <!-- 建檔修改 -->
     <div class="allmodify">
         <ul class="buydivmove mart10">
