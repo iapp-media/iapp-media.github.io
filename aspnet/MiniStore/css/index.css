@@ -46,7 +46,14 @@
     height: 30px;
 }
 
-
+/* Header */
+.navbar-brand {
+    padding: 0;
+    height:100%;
+}
+.iapplogo {
+    height: 100%;
+}
 
 
 
@@ -184,7 +191,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 463px;
+    max-width: 670px;
     box-sizing: border-box;
     padding: 6px 12px;
     background-color: #fff;
@@ -378,9 +385,6 @@ a:hover {
     z-index: 99;
 }
 
-.navbar-brand {
-    padding: 0;
-}
 
 .btn-default {
     background-color: #ff9933;
@@ -399,10 +403,7 @@ a:hover {
     display: none;
 }
 
-.iapplogo {
-    width: 100%;
-    height: auto;
-}
+
 
 .search {
     position: absolute;
@@ -1301,6 +1302,7 @@ a:hover {
 
 .insidecare .libor:last-child {
     border-bottom: 4px solid #b4b5b6;
+    margin-bottom: 100px;
 }
 
 .insidecare div:nth-child(1) img {
@@ -1502,7 +1504,7 @@ a:hover {
     /* outline: 1px solid #f00; */
     /* margin-top: 122px; */
     height: 500px;
-    max-width: 500px;
+    max-width: 700px;
     position: absolute;
     top: 122px;
     left: 0;
@@ -1772,9 +1774,9 @@ a:hover {
     float: left;
     margin: auto;
     padding: 0;
-    width: 463px;
+    width: 663px;
     height: 300px;
-    max-width: 500px;
+    max-width: 700px;
     /* background: #ccc; */
     text-align: center;
     line-height: 300px;

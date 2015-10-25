@@ -1668,9 +1668,9 @@ a:hover {
     float: left;
     margin: auto;
     padding: 0;
-    width: 463px;
+    width: 664px;
     height: 300px;
-    max-width: 500px;
+    /* max-width: 500px; */
     /* background: #ccc; */
     text-align: center;
     line-height: 300px;
