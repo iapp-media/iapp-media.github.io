@@ -21,6 +21,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="input-group">
+
                                     <asp:CheckBoxList ID="CBL_Cate" runat="server" RepeatDirection="Horizontal"></asp:CheckBoxList>
                                     <asp:Button ID="BTDEL" runat="server" Text="刪除" CssClass="btn btn-default" OnClick="BTDEL_Click" />
                                 </div>

@@ -21,7 +21,7 @@ namespace StoreMana.Mini
             {
                 if (Comm.IsNumeric(Request.QueryString["entry"]))
                 {
-                    L1.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
+                    L1.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.QTY,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
    " inner join Order_Content b on a.IDNo=b.Order_ID" +
    " inner join Product c on b.Item_ID=c.IDNo" +
    " inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
