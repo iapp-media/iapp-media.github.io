@@ -63,9 +63,12 @@
   <ItemGroup>
     <Content Include="AA\bootstrap.min.css" />
     <Content Include="AA\bootstrap.min.js" />
+    <Content Include="css\cropper.css" />
+    <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="Cust_Mana.aspx" />
     <Content Include="img\uploadicon.png" />
+    <Content Include="js\cropper.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\colorbox.css" />
@@ -99,6 +102,7 @@
     <Content Include="js\jquery.promptumenu.min.js" />
     <Content Include="js\jquery.touchSwipe.min.js" />
     <Content Include="js\main.js" />
+    <Content Include="js\mobileEditor-new.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="Msg_Add.aspx" />
     <Content Include="Msg_Mana.aspx" />
