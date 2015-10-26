@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="buydivmove">
         <li class="productcare col-xs-12">
-            <div class="col-xs-12 BoxBorder">
+            <div class="col-xs-12">
                 <div class="row">
                     <div class="col-xs-12">
                                                                 <h1 class="BoxTitle">購物車明細</h1>

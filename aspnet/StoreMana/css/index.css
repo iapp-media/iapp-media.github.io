@@ -4,6 +4,12 @@
     position:relative;
     top:141px;
 }
+#BTNcontent {
+    /* outline:1px solid; */
+    margin:121px auto 0 auto;
+    width:100%;
+    max-width:700px;
+}
 .BoxTitle {
     text-align: center;
     margin: 19px !important;
@@ -61,7 +67,13 @@
     border: none;
     display: inline-block;
     padding: 6px 12px;
-   
+    
+}
+.DefButModdle {
+    padding:12px 12px;
+    width:100%;
+    font-size:150%;
+    margin-bottom:15px;
 }
 
 .ListLen {

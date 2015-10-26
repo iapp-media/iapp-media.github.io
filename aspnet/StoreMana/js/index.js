@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('.finder').show();
         $(".theme").hide();
     });
-    $(".select").click(function() {
+    $(".menusandwich").click(function () {
         $(".theme").animate({
             height: 'toggle',
             overflowY: 'scroll !important' //doesn't work
