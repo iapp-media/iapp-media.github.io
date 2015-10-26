@@ -60,22 +60,22 @@ namespace MiniStore
 
         protected void BTsend_Click(object sender, EventArgs e)
         {
-            //if (TBACC.Text != "" && Main.IsNumeric(TBTotal.Text) && TBACCDate.Text != "")
-            //{
-            //    Main.ParaClear();
-            //    Main.ParaAdd("@AC_AMT", Main.Cint2(TBTotal.Text), SqlDbType.Int);
-            //    Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
-            //    Main.ParaAdd("@ACC_AMT", TBACC.Text, SqlDbType.NVarChar);
+            if (TBACC.Text != "" && Main.IsNumeric(TBTotal.Text) && TBACCDate.Text != "")
+            {
+                Main.ParaClear();
+                Main.ParaAdd("@AC_AMT", Main.Cint2(TBTotal.Text), SqlDbType.Int);
+                Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+                Main.ParaAdd("@ACC_AMT", TBACC.Text, SqlDbType.NVarChar);
 
-            //    Main.ParaAdd("@ACC_Date", TBACCDate.Text, SqlDbType.NVarChar);
+                Main.ParaAdd("@ACC_Date", TBACCDate.Text, SqlDbType.NVarChar);
 
-            //    int c =Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
-            //    if (c>0)
-            //    {
-            //         this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>");
+                int c =Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
+                if (c>0)
+                {
+                     this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>");
 
-            //    }
-            //}
+                }
+            }
         }
     }
 }

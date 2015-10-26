@@ -170,13 +170,13 @@
                         </div>
                         <div class="ListLen">
                             <div class="col-xs-12">
-                                <asp:TextBox ID="TextBox2" runat="server" placeholder="轉帳金額"></asp:TextBox>
+                                <asp:TextBox ID="TBTotal" runat="server" placeholder="轉帳金額"></asp:TextBox>
                             </div>
                         </div>
                         <div class="ListLen">
                             <div class="col-xs-4">
                                 
-                                <asp:TextBox ID="TextBox3" runat="server" placeholder="轉帳日期" ></asp:TextBox>
+                                <asp:TextBox ID="TBACCDate" runat="server" placeholder="轉帳日期" ></asp:TextBox>
                             </div>
                         </div>
                         <div class="ListLen">
