@@ -167,31 +167,31 @@ $(document).ready(function() {
 
     // menu swipe
 
-    $(function() {
+    $(function () {
         //Enable swiping...
         $(".allClassification").swipe({
             //Generic swipe handler for all directions
-            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-                $('.swiper-wrapper li').each(function(e) {
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                $('.swiper-wrapper li').each(function (e) {
                     if ($(this).hasClass('swiper-slide-active')) {
                         var swipeindex = $(this).index();
                         $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
                     }
                 })
             },
-             threshold: 0
+            threshold: 0
         });
     });
 
 
-    //var swiper = new Swiper('.swiper-container', {
-        //slidesPerView: 3,
-        //centeredSlides: true,
-        //paginationClickable: true,
-        //spaceBetween: 0,
-        //grabCursor: true,
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 0,
+        grabCursor: true,
 
-    //});
+    });
 
 
     //瀑布流

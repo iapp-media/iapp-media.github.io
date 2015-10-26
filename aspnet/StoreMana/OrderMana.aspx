@@ -1,28 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MiniMaster.Master" AutoEventWireup="true" CodeBehind="OrderMana.aspx.cs" Inherits="StoreMana.Mini.OrderMana" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-        /*.row1 {
-            border: 1px solid #000;
-            float: left;
-            padding: 2px 2px 2px 2px;
-            width: 100%;
-        }
-
-        .col2 {
-            margin: 0 0 0 45px;
-            border: 1px solid red;
-            float: left;
-        }*/
-    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
 
     <div class="buydivmove">
         <div class="productcare col-xs-12">
-            <div class="list-group BoxBorder">
-                <div class="list-group-item">
+            <div class="list-group">
+                <div class="list-group-item list-group-itemUI">
                     <div class="row">
                         <div class="col-xs-4">
                             <p class="BoxLeft">訂單編號</p>
@@ -32,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item list-group-itemUI">
                     <div class="row">
                         <div class="col-xs-4">
                             <p class="BoxLeft">訂單狀態</p>
@@ -49,38 +36,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item list-group-itemUI">
                     <asp:Button ID="BT_Search" runat="server" Text="Search" CssClass="btn btn-default btn-lg btn-block ButModdle" OnClick="BT_Search_Click" />
                 </div>
             </div>
 
             <asp:Repeater ID="RP1" runat="server" OnItemCommand="RP1_ItemCommand" OnItemDataBound="RP1_ItemDataBound">
                 <HeaderTemplate>
-                    <div class="row1">
-                        <div class="col-xs-4">訂單編號</div>
-                        <div class="col-xs-4">買家</div>
-                        <div class="col-xs-4">訂單狀態</div>
-                        <div class="col-xs-4">下單時間</div>
-                        <div class="col-xs-4">付款方式</div>
-                        <div class="col-xs-4">轉帳資訊</div>
+                    <div>
+                        <div class="col-xs-4 BoxCenter ListTitle">訂單編號</div>
+                        <div class="col-xs-4 BoxCenter ListTitle">買家</div>
+                        <div class="col-xs-4 BoxCenter ListTitle">訂單狀態</div>
+                        <div class="col-xs-4 BoxCenter ListTitle">下單時間</div>
+                        <div class="col-xs-4 BoxCenter ListTitle">付款方式</div>
+                        <div class="col-xs-4 BoxCenter ListTitle">轉帳資訊</div>
                     </div>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <asp:Literal ID="LIDNO" runat="server" Text='<%# Bind("IDNo") %>' Visible="false"></asp:Literal>
-                    <div class="row1">
-                        <div class="col-xs-4">
+                    <div>
+                        <div class="col-xs-4 BoxCenter">
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Eval("Order_No")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-4 BoxCenter">
                             <asp:Literal ID="Literal2" runat="server" Text='<%# Eval("User_name")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-4 BoxCenter">
                             <asp:Literal ID="Literal3" runat="server" Text='<%# Eval("NSta")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-4 BoxCenter">
                             <asp:Literal ID="Literal4" runat="server" Text='<%# Eval("CD")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-4 BoxCenter">
                             <asp:Literal ID="Literal5" runat="server" Text='<%# Eval("Payment")%>'></asp:Literal>
                         </div>
                         <div class="col2">
@@ -95,12 +82,24 @@
                                                 <div class="col2">
                             <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" Visible="false" />
                         </div>
-                          <div class="col-xs-12"> 
-                            <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" CssClass="btn btn-default btn-lg btn-block ButModdle "/>
-                        </div> <div class="col-xs-12"> 
-                            <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" CssClass="btn btn-default btn-lg btn-block ButModdle "/>
-                        </div><div class="col-xs-12"> 
-                            <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-default btn-lg btn-block ButModdle "/>
+                        <div id="liSTfooter" class="col-xs-12">
+                           <div class="row">
+                            <div class="col-xs-4 BoxCenter">
+                                <div class="row">
+                                    <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" CssClass="btn btn-default btn-lg ButModdle " />
+                                </div>
+                            </div>
+                            <div class="col-xs-4 BoxCenter">
+                                <div class="row">
+                                    <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" CssClass="btn btn-default btn-lg  ButModdle " />
+                                </div>
+                            </div>
+                            <div class="col-xs-4 BoxCenter">
+                                <div class="row">
+                                    <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-default btn-lg  ButModdle " />
+                                </div>
+                            </div>
+                               </div>
                         </div>
                     </div>
                 </ItemTemplate>

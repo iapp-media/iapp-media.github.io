@@ -75,15 +75,7 @@
                     <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li>
                 
                 </ul>
-                <div class="menuAJAX col-xs-12">
-                    <div class="row">
-                        <ul>
-                            <li>商品內容頁</li>
-                            <li>購買商品手續</li>
-                            <li>確認購物商品</li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
                 <div class="col-xs-2 search-sm">
@@ -116,20 +108,7 @@
                 </div>
             </div>
         </div>
-        <!-- mobile會員選單 -->
-        <div>
-            <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
-                <li><a href="#">我的iApp</a></li>
-                <li class="divider"></li>
-                <li><a href="#">收藏的iApp</a></li>
-                <li class="divider"></li>
-                <li><a href="login/m-login/m-profile.html">編輯個人資料</a></li>
-                <li class="divider"></li>
-                <li class="m-logout">
-                    <p><a href="#">登出</a></p>
-                </li>
-            </ul>
-        </div>
+        
         <!-- Web -->
         <!-- Web 搜尋bar -->
         <div class="Lgallbar col-md-11">
@@ -163,15 +142,6 @@
             </div>
             <a href="#" class="menusandwich example1"><span></span></a>
         </div>
-        <div class="col-xs-12 allClassification swiper-container">
-            <div class="row swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color:white">商品列表</a></li>
-                    <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color:white">建檔修改</a></li>
-                    <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color:white">參數設定</a></li>
-                </ul>
-            </div>
-        </div>
                 </div></div>
     </nav>
     <!-- 會員資料 -->
@@ -180,37 +150,34 @@
         <div class="option-user">
             <a href="#">
                 <div class="my-iapp">
-                    <p>我的App</p>
+                    <p><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></p>
                 </div>
             </a>
             <a href="#">
                 <div class="collect-iapp">
-                    <p>收藏的App</p>
+                    <p><a href="#">登出</a></p>
                 </div>
             </a>
+
         </div>
+        <!--
         <div class="logout-user">
             <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
             <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
-                <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
+                <li></li>
                 <li class="divider"></li>
-                <li id="logout"><a href="#">登出</a></li>
+                <li id="logout"></li>
             </ul>
         </div>
+        -->
     </div>
     <!-- 回到頂部 -->
     <a href="#"><img class="back-top" src="img/top.png"/> 
     </a>
-                                
-
-        <!-- WRAPPER -->
-    <div class="col-xs-12 promana">
-        <div class="row">      
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-            </asp:ContentPlaceHolder>
-                   </div>
-        </div>
+          
+                       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">      
+      
+                       </asp:ContentPlaceHolder>
           <!-- WRAPPER END -->
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>

@@ -265,8 +265,8 @@
 }
 
 .input-number {
-    width: 200px;
-    padding: 0 12px;
+    width: 70px;
+    /* padding: 0 12px; */
     vertical-align: top;
     text-align: center;
     outline: none;
@@ -1128,9 +1128,7 @@ a:hover {
     height: 100%;
 }
 
-.theme li:nth-child(1),
-.theme li:nth-child(3),
-.theme li:nth-child(9) {
+.theme li:nth-child(1), .theme li:nth-child(3) {
     background-color: #ff9933;
     margin: 0;
     padding: 0;
