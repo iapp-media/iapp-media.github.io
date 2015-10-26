@@ -12,15 +12,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- 建檔修改 -->
-    <!--上傳剪裁頁面-->
+    
+    <!-- 建檔修改 -->
+    <div class="allmodify">
+        <!--上傳剪裁頁面-->
     <div class="upload-img">
         <div class="top">
-            <img src="img/iapplogo.png" class="toplogo" align="left" />
-            <img src="img/cancel-01.png" class="cancel" align="right" />
+            <img src="img/ministorelogo.png" class="toplogo" align="left" />
+            <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
         </div>
         <div class="upload-page">
-            <label for="inputImage">
-                <div class="select">
+            <label for="inputImage" class="selectBTN">
+                <div class="selectBTNin">
                     選擇照片
                 </div>
             </label>
@@ -46,8 +49,6 @@
             <input id="Tbase64" value="" style="display:none;" />
         </div>
     </div>
-    <!-- 建檔修改 -->
-    <div class="allmodify">
         <ul class="buydivmove mart10">
             <li class="modify col-xs-12">
                 <div class="col-xs-12 insidecare">

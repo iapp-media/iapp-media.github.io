@@ -56,7 +56,14 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
-
+    $('.clickslider').click(function () {
+        $('.upload-img').show(function () {
+            $('.cancelimgfun').click(function () {
+                $('.upload-img').fadeOut();
+            })
+        });
+        
+    })
     //頁面ajax
 
     // if click img
