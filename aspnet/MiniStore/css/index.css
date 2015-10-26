@@ -1256,7 +1256,7 @@ a:hover {
     width: 100%;
     position: absolute;
     z-index: 1;
-    top: 35px;
+    /* top: 35px; */
     /* left: 0; */
     /* right: 0; */
     /* margin: auto; */
@@ -1300,7 +1300,7 @@ a:hover {
 
 .insidecare .libor:last-child {
     border-bottom: 4px solid #b4b5b6;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .insidecare div:nth-child(1) img {
@@ -1992,8 +1992,8 @@ a:hover {
     }
     .promana {
         /*outline: 1px solid #f00;*/
-        margin-top: 115px;
-        height: 500px;
+        /* margin-top: 115px; */
+        /* height: 500px; */
     }
     .overflowMenu {
         top: 65px;

@@ -13,6 +13,15 @@ namespace StoreMana.Mini {
     public partial class Product_Add {
         
         /// <summary>
+        /// CurrentId 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CurrentId;
+        
+        /// <summary>
         /// DL_Cate 控制項。
         /// </summary>
         /// <remarks>

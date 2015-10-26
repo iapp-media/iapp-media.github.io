@@ -13,7 +13,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- 建檔修改 -->
     <!--上傳剪裁頁面-->
-    <%--<div class="upload-img">
+    <div class="upload-img">
         <div class="top">
             <img src="img/iapplogo.png" class="toplogo" align="left" />
             <img src="img/cancel-01.png" class="cancel" align="right" />
@@ -45,7 +45,7 @@
             </button>
             <input id="Tbase64" value="" style="display:none;" />
         </div>
-    </div>--%>
+    </div>
     <!-- 建檔修改 -->
     <div class="allmodify">
         <ul class="buydivmove mart10">
