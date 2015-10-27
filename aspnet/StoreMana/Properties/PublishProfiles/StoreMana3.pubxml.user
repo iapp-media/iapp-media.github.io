@@ -197,7 +197,7 @@
       <publishTime>10/26/2015 15:57:49</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>10/27/2015 11:30:34</publishTime>
+      <publishTime>10/27/2015 11:38:45</publishTime>
     </File>
     <File Include="Product_Img.aspx">
       <publishTime>10/20/2015 19:38:41</publishTime>
@@ -209,7 +209,7 @@
       <publishTime>10/26/2015 10:34:09</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/27/2015 11:34:40</publishTime>
+      <publishTime>10/27/2015 11:41:18</publishTime>
     </File>
   </ItemGroup>
 </Project>
