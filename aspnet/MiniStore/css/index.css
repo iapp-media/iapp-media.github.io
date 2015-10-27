@@ -90,10 +90,11 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 0;
+    /* top: 0; */
     /* outline: 1px solid; */
-    display: table;
-    line-height: 55px;
+    /* width: 100%; */
+    /* display: table; */
+    line-height: 41px;
     margin: auto !important;
 }
 
@@ -285,6 +286,7 @@
 
 .questionBox {
     border: 3px solid #ff9933;
+    background-color: #ff9933;
 }
 
 .questionBox input {
@@ -299,10 +301,11 @@
     background-color: transparent;
     font-size: 150%;
     color: #fff;
-    ;
     float: right;
-    background-color: #ff9933;
+    /* background-color: #ff9933; */
     padding: 6px 12px;
+    border-radius: 0;
+    display: block;
 }
 
 .borbot {

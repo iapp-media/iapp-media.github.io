@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/JustyLibrary.dll">
+      <publishTime>10/27/2015 11:17:28</publishTime>
+    </File>
+    <File Include="bin/MiniStore.dll">
+      <publishTime>10/27/2015 16:31:20</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>10/20/2015 19:38:38</publishTime>
+    </File>
+    <File Include="BuyFont.Master">
+      <publishTime>10/27/2015 13:17:21</publishTime>
+    </File>
+    <File Include="Buy_Add.aspx">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="Buy_Car.aspx">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="Buy_Ctrl.aspx">
+      <publishTime>10/22/2015 18:48:18</publishTime>
+    </File>
+    <File Include="Buy_Detail.aspx">
+      <publishTime>10/27/2015 16:53:13</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="css/colorbox.css">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="css/index.css">
+      <publishTime>10/27/2015 16:59:00</publishTime>
+    </File>
+    <File Include="css/masonry.css">
+      <publishTime>10/27/2015 13:17:19</publishTime>
+    </File>
+    <File Include="css/promptumenu.css">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>10/26/2015 10:12:35</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/111.html">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/bootstrap.min.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/colorbox.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/contact.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/custom.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/framework.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/framework.launcher.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jquery-1.11.3.min.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jquery.infinitescroll.min.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jquery.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jquery.masonry.min.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jquery.swipebox.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/jqueryui.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/owl.carousel.min.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/scripts/snap.js">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/shopcart.html">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/bootstrap.min.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/colorbox.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/framework.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/masonry.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/owl.carousel.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/owl.theme.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/style.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="DEL/styles/swipebox.css">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/114.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/2531170_203204624000_2.jpg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/6RMhx.gif">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/backarrow.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/cloth.jpg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/defaulthead.jpg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/lineicon.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/ministorelogo.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/Noodles.jpg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/p1-like01.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/p1-like02.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/p2-like01.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/p2-like02.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/qr-iappmedia.jpg">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/top.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="img/uploadicon.png">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/ga-iappportal.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/index.js">
+      <publishTime>10/26/2015 13:48:39</publishTime>
+    </File>
+    <File Include="js/jquery-1.8.0.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery-2.1.4.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery.colorbox-min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery.infinitescroll.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery.masonry.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery.promptumenu.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/jquery.touchSwipe.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/main.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="js/swiper.min.js">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="Order_history.aspx">
+      <publishTime>10/21/2015 18:56:36</publishTime>
+    </File>
+    <File Include="Order_prn.aspx">
+      <publishTime>10/26/2015 18:34:48</publishTime>
+    </File>
+    <File Include="Product_Detail.aspx">
+      <publishTime>10/20/2015 19:38:40</publishTime>
+    </File>
+    <File Include="Product_Img.aspx">
+      <publishTime>10/20/2015 19:38:41</publishTime>
+    </File>
+    <File Include="P_MSG.aspx">
+      <publishTime>10/27/2015 13:17:21</publishTime>
+    </File>
+    <File Include="StoreFront.Master">
+      <publishTime>10/26/2015 18:22:38</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/27/2015 16:59:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

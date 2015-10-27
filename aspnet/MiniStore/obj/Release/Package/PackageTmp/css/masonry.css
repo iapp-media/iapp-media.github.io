@@ -335,7 +335,7 @@ input[type="checkbox"] {
     background-color: #fff;
     background: transparent;
     color: transparent;
-    width: 0;
+    /* width: 0; */
 }
 
 .select {
@@ -585,9 +585,7 @@ input[type="checkbox"] {
     .input-group-btn {
         top: 12px;
     }
-    .col-xs-2 {
-        width: 10.666667%;
-    }
+    
     .input-group-btn:last-child>.btn,
     .input-group-btn:last-child>.btn-group {
         margin-left: 32px;

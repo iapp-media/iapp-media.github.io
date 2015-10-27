@@ -21,7 +21,9 @@
                 <div class="row">
                     <div class="col-xs-12 libor ContentTop">
                         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"/>
+                        
                         <h1 class="col-xs-10">商品內容</h1>
+                           
                     </div>
                     <div class="col-xs-12 libor productsinside">
                         <div id="slider">
@@ -75,7 +77,7 @@
                             <div class="col-xs-12 questionBox">
                                 <div class="row">
                                     <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4 question" OnClick="BT_MSG_Click" />
-                                    <asp:Button ID="BT_Like" runat="server" Text="LIKE" CssClass="col-xs-4 question" />
+                                    <asp:Button ID="BT_Like" runat="server" Text="喜歡" CssClass="col-xs-4 question" />
                                     <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4 question" />
                                 </div>
                             </div>

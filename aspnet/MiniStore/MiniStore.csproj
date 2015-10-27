@@ -228,6 +228,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="BuyFont.Master" />
     <None Include="Properties\PublishProfiles\Mini.pubxml" />
+    <None Include="Properties\PublishProfiles\Mini2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
