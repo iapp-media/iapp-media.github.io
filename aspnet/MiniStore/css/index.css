@@ -268,9 +268,15 @@
    float: left;
    width: 100%;
 }
+
+.contentBG:last-child {
+    margin-bottom: 50px;
+}
 .QCTot, .QCTBot {
     
-    box-shadow: 8px 6px 12px -3px hsla(0, 0%, 0%, 0.25);
+/* box-shadow: 8px 6px 12px -3px hsla(0, 0%, 0%, 0.25); */
+    
+box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 .QCTot {
     background-color:#fff !important;
@@ -281,9 +287,16 @@
     background-color:#ffeecf !important;
     border-radius: 0 0 10% 0/0 0 40% 0;
 }
-.fixBar form-control {
+.fixBar .form-control {
     width:70%;
     display:block;
+}
+.fixBar .fRight {
+    /* width:20%; */
+    height:100%;
+    float: right;
+    /* margin-right: 30px; */
+    /* outline: 1px solid; */
 }
 
 
@@ -365,6 +378,8 @@
     height: 120px !important;
     display: block;
     float: left;
+    /* box-shadow: 7px 11px 21px -10px hsla(0, 0%, 0%, 0.25); */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 
 .texcenter {
@@ -430,6 +445,7 @@
     right: 0;
     margin: auto;
     max-width: 670px;
+    height: 60px;
     box-sizing: border-box;
     padding: 6px 12px;
     background-color: #fff;
@@ -440,6 +456,11 @@
     float: left;
     height: 100%;
     display: block;
+    border: 2px solid #999;
+}
+.fixBar img{
+    height:100%;
+    text-align: center;
 }
 
 .fixBar textarea {
@@ -640,7 +661,7 @@ a:hover {
     width: auto;
     height: auto;
     position: fixed;
-    bottom: 2%;
+    bottom: 13%;
     right: 2%;
     z-index: 90;
 }
@@ -2306,7 +2327,6 @@ ul.swiper-wrapper li a {
         top: 0;
         bottom: 0;
         left: 0;
-        margin: auto;
         display: block;
     }
     .login-sm {
@@ -2358,5 +2378,6 @@ ul.swiper-wrapper li a {
     }
     .glyphicon-search {
         color: #ff9933;
+        margin-left: -15px;
     }
 }

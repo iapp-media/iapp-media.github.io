@@ -58,7 +58,10 @@
             </ul>
             <div class="col-xs-12 fixBar">
                 <asp:TextBox ID="tbQuen" runat="server" AutoPostBack="true" Class="form-control" Rows="3"></asp:TextBox>
-                <asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />
+                <div class="fRight">
+                <img src="img/send.png" alt="Alternate Text" />
+                    </div>
+                <%--<asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />--%>
 
             </div>
         </div>
