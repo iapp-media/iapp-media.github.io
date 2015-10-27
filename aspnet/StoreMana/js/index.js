@@ -56,14 +56,51 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
-    $('.clickslider').click(function () {
-        $('.upload-img').show(function () {
-            $('.cancelimgfun').click(function () {
-                $('.upload-img').fadeOut();
-            })
-        });
+    //$('.clickslider').click(function () {
+    //    $('.upload-img').show(function () {
+    //        $('.cancelimgfun, .compress').click(function () {
+    //            $('.upload-img').fadeOut();
+    //        })
+    //    });
         
-    })
+    //})
+
+    $(document).ready(function () {
+        // window.scrollTo(0, 10);
+        $(".clickslider").click(function () {
+            $('.preview-container').hide();
+            $('.img-container').show();
+            $(".upload-img").show();
+            $(".pages").hide();
+            $('.compress').hide();
+            $('.cut').show();
+            $('.cut').attr("disabled", true);
+            $('.rotate-btn').hide();
+
+        });
+        $(".cut").click(function () {
+            $(".cut").hide();
+            $(".compress").show();
+
+        });
+        $(".compress").click(function () {
+            $(".upload-img").hide();
+            $(".pages").show();
+
+        });
+        $('#inputImage').change(function () {
+            $('.preview-container').hide();
+            $('.img-container').show();
+            $('.compress').hide();
+            $('.cut').show();
+            $('.rotate-btn').show();
+        });
+        $('.cancel').click(function () {
+            $(".upload-img").hide();
+            $(".pages").show();
+        });
+    });
+
     //頁面ajax
 
     // if click img

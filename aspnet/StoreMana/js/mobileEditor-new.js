@@ -169,11 +169,14 @@ var current = 0,
         $('.uploading').show();
         var files = this.files,
           file;
+        console.log(files);
+
         if (files && files.length) {
           file = files[0];
           if (/^image\/\w+$/.test(file.type)) {
             var reader = new FileReader();
-            //rotate image according to orientation
+              //rotate image according to orientation
+            console.log(file);
             var orientation;
             EXIF.getData(file, function() {
               orientation = EXIF.getTag(this, 'Orientation');

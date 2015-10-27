@@ -4,11 +4,10 @@
     <link rel="stylesheet" type="text/css" href="css/cropper.css" />
     <link rel="stylesheet" type="text/css" href="css/mobileEditor.css" />
     <script src="js/exif.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-1.8.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
     <script src="js/JIC.js" type="text/javascript"></script>
     <script src="js/cropper.js"></script>
-    <script src="js/mobileEditor-new.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- 建檔修改 -->
@@ -30,7 +29,7 @@
             <div class="rotate">
                 <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
             </div>
-            <div class="preview-container hide">
+            <div class="preview-container" style="display:none;">
                 <img id="preview" src="" />
             </div>
             <div class="img-container">
@@ -89,25 +88,25 @@
                                 <div class="control_prev glyphicon glyphicon-chevron-left"></div>
                                 <ul>
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH"/>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p01"/>
+                                        <label onclick="setCurrent('01',640,960)">
+                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p02"/>
                                         <label>
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
                                     </li>
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p03"/>
                                         <label>
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
                                     </li>
                                     <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
-                                        <label>
-                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" />
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p04"/>
                                         <label>
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
@@ -212,6 +211,8 @@
         <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal> 
        
     </div> 
+        <script src="js/mobileEditor-new.js"></script>
+
     <script>
         $('.carousel').carousel({
             interval: false

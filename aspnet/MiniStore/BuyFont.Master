@@ -203,14 +203,13 @@
     <a href="#"><img class="back-top" src="img/top.png"/> 
     </a>
         <!-- WRAPPER -->
-    <div class="col-xs-12 promana">
-        <div class="row">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-            </asp:ContentPlaceHolder>
-                   </div>
-        </div>
-          <!-- WRAPPER END -->
+           <div class="col-xs-12 promana">
+               <div class="row">
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                   </asp:ContentPlaceHolder>
+               </div>
+           </div>
+           <!-- WRAPPER END -->
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
