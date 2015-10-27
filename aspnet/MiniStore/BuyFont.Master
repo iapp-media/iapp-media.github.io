@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 
-    <meta charset="utf-8" />
+   <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>iApp Manager</title>
     <!-- about SEO -->
@@ -75,16 +75,7 @@
                     <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li> 
                     <li><a href="javascript:void(0)"  >我的拍賣</a></li>
                        <li><a href="Order_history.aspx" target="_self" >訂單記錄</a></li>
-                </ul>
-                <div class="menuAJAX col-xs-12">
-                    <div class="row">
-                        <ul>
-                            <li>商品內容頁</li>
-                            <li>購買商品手續</li>
-                            <li>確認購物商品</li>
-                        </ul>
-                    </div>
-                </div>
+                </ul> 
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
                 <div class="col-xs-2 search-sm">
@@ -164,52 +155,37 @@
             </div>
             <a href="#" class="menusandwich example1"><span></span></a>
         </div>
-        <div class="col-xs-12 allClassification swiper-container">
-            <div class="row swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color:white">商品列表</a></li>
-                    <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color:white">建檔修改</a></li>
-                    <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color:white">參數設定</a></li>
-                </ul>
-            </div>
-        </div>
+ 
                 </div></div>
     </nav>
     <!-- 會員資料 -->
     <div class="jumbotron">
         <img class="user-icon" src="img/photoicon.png"/>
         <div class="option-user">
-            <a href="#">
+             <a href="#">
                 <div class="my-iapp">
-                    <p>我的App</p>
+                    <p><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></p>
                 </div>
             </a>
             <a href="#">
                 <div class="collect-iapp">
-                    <p>收藏的App</p>
+                    <p><a href="#">登出</a></p>
                 </div>
             </a>
         </div>
-        <div class="logout-user">
-            <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-            <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
-                <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
-                <li class="divider"></li>
-                <li id="logout"><a href="#">登出</a></li>
-            </ul>
-        </div>
+       
     </div>
     <!-- 回到頂部 -->
     <a href="#"><img class="back-top" src="img/top.png"/> 
     </a>
+                 
         <!-- WRAPPER -->
-           <div class="col-xs-12 promana">
-               <div class="row">
-                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                   </asp:ContentPlaceHolder>
-               </div>
-           </div>
-           <!-- WRAPPER END -->
+    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+            </asp:ContentPlaceHolder>
+               
+          <!-- WRAPPER END -->
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
