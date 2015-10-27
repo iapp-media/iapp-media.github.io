@@ -95,19 +95,19 @@
                                     </li>
                                     <li>
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p02"/>
-                                        <label onclick="setCurrent('01',640,960)">
+                                        <label onclick="setCurrent('02',640,960)">
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
                                     </li>
                                     <li>
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p03"/>
-                                        <label onclick="setCurrent('01',640,960)">
+                                        <label onclick="setCurrent('03',640,960)">
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
                                     </li>
                                     <li>
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p04"/>
-                                        <label onclick="setCurrent('01',640,960)">
+                                        <label onclick="setCurrent('04',640,960)">
                                             <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
                                         </label>
                                     </li>

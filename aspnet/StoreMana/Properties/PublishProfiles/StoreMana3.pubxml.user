@@ -23,10 +23,10 @@
       <publishTime>10/26/2015 09:26:39</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>10/27/2015 11:20:28</publishTime>
+      <publishTime>10/27/2015 11:34:39</publishTime>
     </File>
     <File Include="bin/StoreMana.pdb">
-      <publishTime>10/27/2015 11:20:28</publishTime>
+      <publishTime>10/27/2015 11:34:39</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/20/2015 19:38:38</publishTime>
@@ -76,53 +76,62 @@
     <File Include="fonts/glyphicons-halflings-regular.woff2">
       <publishTime>10/20/2015 19:38:41</publishTime>
     </File>
+    <File Include="img/000000102601.jpg">
+      <publishTime>10/27/2015 11:34:07</publishTime>
+    </File>
     <File Include="img/114.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/2531170_203204624000_2.jpg">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/6RMhx.gif">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/backarrow.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
+    </File>
+    <File Include="img/cancel-01.png">
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/cloth.jpg">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/defaulthead.jpg">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
+    </File>
+    <File Include="img/icon_Q1.PNG">
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/lineicon.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/ministorelogo.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/Noodles.jpg">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/p1-like01.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/p1-like02.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/p2-like01.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/p2-like02.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/qr-iappmedia.jpg">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/top.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="img/uploadicon.png">
-      <publishTime>10/20/2015 19:38:41</publishTime>
+      <publishTime>10/27/2015 11:34:07</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
       <publishTime>10/20/2015 19:38:41</publishTime>
@@ -188,7 +197,7 @@
       <publishTime>10/26/2015 15:57:49</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>10/27/2015 10:47:31</publishTime>
+      <publishTime>10/27/2015 11:30:34</publishTime>
     </File>
     <File Include="Product_Img.aspx">
       <publishTime>10/20/2015 19:38:41</publishTime>
@@ -200,7 +209,7 @@
       <publishTime>10/26/2015 10:34:09</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/27/2015 11:20:29</publishTime>
+      <publishTime>10/27/2015 11:34:40</publishTime>
     </File>
   </ItemGroup>
 </Project>

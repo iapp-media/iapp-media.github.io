@@ -67,6 +67,9 @@
     <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="Cust_Mana.aspx" />
+    <Content Include="img\000000102601.jpg" />
+    <Content Include="img\cancel-01.png" />
+    <Content Include="img\icon_Q1.PNG" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\cropper.js" />
     <Content Include="js\exif.js" />
