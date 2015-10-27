@@ -1,4 +1,5 @@
 /* list Library */
+
 .BoxTitle {
     text-align: center;
     margin: 19px !important;
@@ -31,6 +32,7 @@
     border-radius: 2px;
     font-size: 150%;
 }
+
 .ValueText {
     text-align: right;
 }
@@ -38,25 +40,29 @@
 .ButModdle {
     color: #fff;
     border: none;
-    width:100%;
+    width: 100%;
 }
-
 
 .ListLen {
     width: 100%;
     height: 30px;
 }
 
+
 /* Header */
+
 .navbar-brand {
     padding: 0;
-    height:100%;
+    height: 100%;
 }
+
 .iapplogo {
     height: 100%;
 }
 
+
 /*Content Top*/
+
 .status input,
 .productNum input,
 .payNum input {
@@ -69,43 +75,49 @@
     float: right;
     text-align: right;
 }
+
 .ContentTop {
-    background-color:#ff9933 !important;
-    height:60px;
+    background-color: #ff9933 !important;
+    height: 60px;
     box-sizing: border-box;
     padding: 7px 12px !important;
 }
-    .ContentTop h1 {
-        font-size:25px;
-        color:#fff;
-        text-align:center;
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 0;
-        /* outline: 1px solid; */
-        display: table;
-        line-height: 55px;
-        margin: auto !important;
-    }
-    .ContentTop img {
-     width: 40px;
-     /* height: 100%; */
-     /* outline: 1px solid; */
-     padding: 0;
-    }
 
-    /*Contentmid & slider*/
-    #slider {
+.ContentTop h1 {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    /* outline: 1px solid; */
+    display: table;
+    line-height: 55px;
+    margin: auto !important;
+}
+
+.ContentTop img {
+    width: 40px;
+    /* height: 100%; */
+    /* outline: 1px solid; */
+    padding: 0;
+}
+
+
+/*Contentmid & slider*/
+
+#slider {
     position: relative;
     overflow: hidden;
     padding: 0;
     border-radius: 4px;
     float: right;
 }
-    #slider img {
-        height:100%;
-    }
+
+#slider img {
+    height: 100%;
+}
 
 #slider ul {
     position: relative;
@@ -170,49 +182,60 @@
     font-size: 18px;
 }
 
+
 /*ContentBot*/
+
 .CBtitle {
-    padding-top:10px;
+    padding-top: 10px;
 }
 
-.CBtitle input{
-    font-size:170%;
-    color:#9a9a9a;
-    border-bottom:1px solid #aaa;
+.CBtitle input {
+    font-size: 170%;
+    color: #9a9a9a;
+    border-bottom: 1px solid #aaa;
     padding: 0;
 }
+
 .CBbot {
-    padding:0;
-    padding-top:12px;
+    padding: 0;
+    padding-top: 12px;
 }
-    .CBarea input {
-        background-color:#fff1d9;
-        height:150px;
-    }
+
+.CBarea input {
+    background-color: #fff1d9;
+    height: 150px;
+}
+
 .CBarea {
     padding: 15px;
 }
-    .CBarea label {
-        padding:0;
-    }
-.CBBTN{
-    padding:6px 12px;
+
+.CBarea label {
+    padding: 0;
 }
+
+.CBBTN {
+    padding: 6px 12px;
+}
+
 .SBuyCar {
-    background-color:#fff !important;
-    border-color:#ff9933 !important;
+    background-color: #fff !important;
+    border-color: #ff9933 !important;
     border: 3px solid #ff9933 !important;
     text-align: center !important;
     font-size: 170% !important;
-    color:#ff9933 !important;
+    color: #ff9933 !important;
     letter-spacing: 5px;
 }
+
 .CBline {
-    padding:2px 15px 5px 15px;
+    padding: 2px 15px 5px 15px;
 }
-.CBline div{
-    border-top:1px solid #aaa;
+
+.CBline div {
+    border-top: 1px solid #aaa;
 }
+
 
 /* other */
 
@@ -259,17 +282,18 @@
     height: 73%;
     margin: auto;
 }
+
 .questionBox {
     border: 3px solid #ff9933;
 }
 
-    .questionBox input {
-        border-right: 2px solid #d36e00;
-    }
+.questionBox input {
+    border-right: 2px solid #d36e00;
+}
 
-        .questionBox input:first-child {
-            border: none;
-        }
+.questionBox input:first-child {
+    border: none;
+}
 
 .question {
     background-color: transparent;
@@ -280,8 +304,6 @@
     background-color: #ff9933;
     padding: 6px 12px;
 }
-
-
 
 .borbot {
     /* border-bottom: 4px solid #b4b5b6 !important; */
@@ -548,7 +570,6 @@ a:hover {
     z-index: 99;
 }
 
-
 .btn-default {
     background-color: #ff9933;
 }
@@ -565,8 +586,6 @@ a:hover {
 .tem {
     display: none;
 }
-
-
 
 .search {
     position: absolute;
@@ -1291,7 +1310,8 @@ a:hover {
     height: 100%;
 }
 
-.theme li:nth-child(1), .theme li:nth-child(3) {
+.theme li:nth-child(1),
+.theme li:nth-child(3) {
     background-color: #ff9933;
     margin: 0;
     padding: 0;
@@ -1506,8 +1526,6 @@ ul.swiper-wrapper li a {
     transition: all 600ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
     position: relative;
 }
-
-
 
 .sendadress input,
 .sendadress textarea {
@@ -1920,8 +1938,6 @@ ul.swiper-wrapper li a {
 .caresea:active {
     color #fff !important;
 }
-
-
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
