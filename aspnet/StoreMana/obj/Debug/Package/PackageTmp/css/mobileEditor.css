@@ -1,0 +1,162 @@
+
+.upload-page button {
+    width: 100%;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ff9933;
+    border: 2px solid #ff9933;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+
+.upload-page button:active {
+    background: #ffbb66;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+
+.upload-img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.img-container {
+    height: calc(100% - 208px);
+    min-height: 250px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.preview-container {
+    margin-top: 15px;
+    height: calc(100% - 208px);
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+.selectBTN {
+    width:50%;
+}
+.selectBTNin {
+    font-size: 24px;
+    width: 100%;
+    line-height: 36px;
+    color: #ff9933;
+    border: 2px solid #ff9933;
+    border-radius: 8px;
+    background-color: transparent;
+    text-align: center;
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.selectBTNin:active {
+    background: #ffbb66;
+}
+
+.rotate {
+    display: inline-block;
+    width: calc(50% - 5px);
+}
+
+.rotate-btn {
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.word {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.confirm {
+    position: absolute;
+    top: 430px;
+    left: 40%;
+    width: 90px;
+    height: 30px;
+    border: 2px #ff9933 solid;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.confirm a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+.confirm p {
+    color: #ff9933;
+    font-size: 22px;
+    position: absolute;
+    top: 12%;
+    left: 25%;
+}
+
+#Tbase64 {
+    display: none;
+}
+
+#inputImage {
+    display: none;
+}
+
+.top {
+    height: 60px;
+    background-color: #ff9933;
+}
+
+.toplogo {
+    height: 100%;
+}
+
+.cancelimgfun {
+    height: 44px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.upload-page {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    height: 100%;
+    color: #969696;
+}
+
+.create {
+    left: calc(50% - 40px);
+    margin-left: 0;
+}
+
+.uploading img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+
+}

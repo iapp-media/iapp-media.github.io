@@ -69,6 +69,8 @@
     <Content Include="Cust_Mana.aspx" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\cropper.js" />
+    <Content Include="js\exif.js" />
+    <Content Include="js\JIC.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\colorbox.css" />
@@ -204,6 +206,7 @@
     <Content Include="MiniMaster.Master" />
     <None Include="Properties\PublishProfiles\StoreMana.pubxml" />
     <None Include="Properties\PublishProfiles\StoreMana2.pubxml" />
+    <None Include="Properties\PublishProfiles\StoreMana3.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
