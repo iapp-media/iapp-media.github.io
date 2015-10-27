@@ -7,10 +7,9 @@
         <div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">建檔修改</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">圖書文具</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">享受美食</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">品味生活</a></li>
             </ul>
         </div>
     </div>

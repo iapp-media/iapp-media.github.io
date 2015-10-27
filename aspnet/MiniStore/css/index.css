@@ -406,6 +406,7 @@ body {
 a {
     text-decoration: none;
     color: #ff9933;
+    /* font-size: 200%; */
 }
 
 a.iframe-info.cboxElement {
@@ -1213,12 +1214,15 @@ a:hover {
 .allClassification {
     /* outline: 1px solid #f00; */
     height: 50px;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     /* left: 50%; */
     /* margin-left: 19%; */
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
     transform: scale(1.5);
+    background-color: #b4b5b5;
 }
 
 .allClassification ul {
@@ -1227,15 +1231,25 @@ a:hover {
 }
 
 .allClassification li {
-    background-color: #b4b4b4;
+    /* background-color: #b4b4b4; */
     color: #fff;
-    height: 48%;
+    /* height: 48%; */
     border-right: 1px solid #a3a3a3;
     text-align: center;
     font-size: 90%;
     display: table;
     line-height: 36px;
     /* margin: 5px 0 0 0; */
+}
+
+.swiper-wrapper li:nth-child(3) {
+    border: none;
+}
+
+ul.swiper-wrapper {}
+
+ul.swiper-wrapper li a {
+    font-size: 140%;
 }
 
 .item button {
@@ -1536,7 +1550,7 @@ a:hover {
     height: 500px;
     max-width: 700px;
     position: absolute;
-    top: 122px;
+    top: 114px;
     left: 0;
     right: 0;
     margin: auto;
@@ -1699,7 +1713,7 @@ a:hover {
 .swiper-container {
     width: 100%;
     top: 92px;
-    /* height: 19px; */
+    height: 36px;
     margin: 0;
 }
 
@@ -2205,8 +2219,9 @@ a:hover {
     .proAJAX {
         margin-top: 29px;
     }
-    .swiper-container {
-        top: 72px;
+    .allClassification {
+        top: 69px;
+        background-color: #b4b4b4;
     }
     .glyphicon-search {
         color: #ff9933;
