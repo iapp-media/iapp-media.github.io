@@ -182,6 +182,31 @@
     width: 160px;
     font-size: 18px;
 }
+.pagetitle {
+    padding:6px 15px;
+    /* margin-bottom: 8px; */
+}
+.rightbox {
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-left: 9px;
+}
+
+.rightbox span {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color:#ff9933;
+}
+
+.rightbox p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
 
 
 /*ContentBot*/
@@ -235,6 +260,30 @@
 
 .CBline div {
     border-top: 1px solid #aaa;
+}
+.contentBG {
+   padding: 6px 8px 12px 0;
+   background-color: #f9bd82;
+   /* height: 110px; */
+   float: left;
+   width: 100%;
+}
+.QCTot, .QCTBot {
+    
+    box-shadow: 8px 6px 12px -3px hsla(0, 0%, 0%, 0.25);
+}
+.QCTot {
+    background-color:#fff !important;
+    margin-bottom: 6px;
+    border-radius: 0 10% 0 0/0 40% 0 0;
+}
+.QCTBot {
+    background-color:#ffeecf !important;
+    border-radius: 0 0 10% 0/0 0 40% 0;
+}
+.fixBar form-control {
+    width:70%;
+    display:block;
 }
 
 
@@ -326,12 +375,13 @@
     height: 120px;
     float: left;
     position: relative;
-    width: 275px;
+    /* width: 275px; */
+    margin-left: 9px;
 }
 
 .rightbox span {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
 }
 
@@ -342,32 +392,33 @@
     margin: 0;
 }
 
-.spansizebig,
-.spansizemid {
-    font-size: 150%;
-    line-height: 3.2;
+.spansizebig {
+    font-size: 120%;
+    line-height: 2.2;
+    margin-left: 11px;
+    color: #7b7b7b;
 }
 
 .spansizemid {
     float: right;
-    line-height: 5.2;
-    color: #aaa;
+    line-height: 2.2;
+    color: #ccc;
 }
 
 .spansizemidleft {
-    color: #aaa;
+    color: #777878;
+    font-size: 150%;
 }
 
 .Issue {
     padding: 6px 12px !important;
 }
 
-.Issue:nth-child(odd) {
-    background-color: #eee !important;
-}
 
 .Issue p {
-    font-size: 150%;
+    font-size: 120%;
+    margin-left: 54px;
+    color: #7b7b7b;
 }
 
 .fixBar {
@@ -384,6 +435,13 @@
     background-color: #fff;
 }
 
+.fixBar .form-control {
+    width: 80%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
 .fixBar textarea {
     width: 79%;
     float: left;
@@ -393,9 +451,10 @@
 .fixBar .sendcareButtom {
     float: left;
     margin: 0;
+    width: 20%;
     border-radius: 5px;
-    padding: 9px 12px;
-    margin-left: 17px;
+    /* padding: 9px 12px; */
+    /* margin-left: 17px; */
 }
 
 .scroll {

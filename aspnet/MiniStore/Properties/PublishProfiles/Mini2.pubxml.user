@@ -32,7 +32,7 @@
       <publishTime>10/22/2015 18:48:18</publishTime>
     </File>
     <File Include="Buy_Detail.aspx">
-      <publishTime>10/27/2015 16:53:13</publishTime>
+      <publishTime>10/27/2015 17:00:57</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
       <publishTime>10/20/2015 19:38:41</publishTime>
@@ -245,7 +245,7 @@
       <publishTime>10/26/2015 18:22:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/27/2015 16:59:10</publishTime>
+      <publishTime>10/27/2015 17:01:52</publishTime>
     </File>
   </ItemGroup>
 </Project>
