@@ -72,31 +72,40 @@
                                 <h1 class="col-xs-6">
                                     <asp:Literal ID="L_Name" runat="server"></asp:Literal></h1>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 questionBox">
                                 <div class="row">
                                     <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4 question" OnClick="BT_MSG_Click" />
                                     <asp:Button ID="BT_Like" runat="server" Text="LIKE" CssClass="col-xs-4 question" />
                                     <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4 question" />
                                 </div>
                             </div>
-                            <div class="col-xs-12 libor productNum">
-                                <label for="" class="col-xs-6">商品名稱</label>
-                                <asp:TextBox ID="TB_Name" runat="server" CssClass="col-xs-6"></asp:TextBox>
+                            <div class="col-xs-12 libor CBtitle">
+                               
+                                <asp:TextBox ID="TB_Name" runat="server" CssClass="col-xs-12"></asp:TextBox>
+                                   
                             </div>
-                            <div class="col-xs-12 libor productNum">
+                            <div class="col-xs-12 libor productNum CBbot">
                                 <label for="" class="col-xs-6">商品售價</label>
                                 <asp:TextBox ID="TB_Price" runat="server" CssClass="col-xs-6"></asp:TextBox>
                             </div>
-                            <div class="col-xs-12 libor status">
-                                <label for="" class="col-xs-6">商品介紹</label>
-                                <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-6"></asp:TextBox>
-                            </div>
-                            <div class="col-xs-12 libor status borbot">
-                                <label for="" class="col-xs-6">商品規格</label>
+                            
+                            <div class="col-xs-12 libor status CBbot">
+                                <label for="" class="col-xs-6">產品規格</label>
                                 <asp:TextBox ID="TB_Dimension" runat="server" CssClass="col-xs-6"></asp:TextBox>
                             </div>
-                            <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
-                            <asp:Button ID="BT_InCar" runat="server" Text="加入購物車" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_InCar_Click" />
+                    <div class="col-xs-12 libor CBbot CBarea">
+                        <label for="" class="col-xs-12">產品介紹</label>
+                            <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>
+                    </div>
+                    <div class="col-xs-12 libor CBbot CBarea CBline">
+                        <div></div>
+                    </div>
+                     <div class="col-xs-12 libor status CBbot CBBTN">
+                <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
+                         </div>
+                    <div class="col-xs-12 libor status CBbot CBBTN">
+                            <asp:Button ID="BT_InCar" runat="server" Text="加入購物車" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_InCar_Click" />
+                        </div>
                             <%--  <div style="display:none">  
                     <asp:Literal ID="L_view" runat="server"></asp:Literal>
                         </div>--%>
