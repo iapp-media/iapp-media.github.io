@@ -13,18 +13,19 @@
             </ul>
         </div>
     </div>
-    <div class="col-xs-12 promana">
-        <div class="row"> 
-    <ul class="buydivmove">
-        <li class="productcare">
-            <div class="col-xs-12 insidecare">
-                <div class="row">
-                    <div class="col-xs-12 libor ContentTop">
+    <div class="col-xs-12 libor ContentTop">
                         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"/>
                         
                         <h1 class="col-xs-10">商品內容</h1>
                            
                     </div>
+    <div class="col-xs-12 promana">
+        <div class="row"> 
+    <ul>
+        <li class="productcare">
+            <div class="col-xs-12 insidecare">
+                <div class="row">
+                    
                     <div class="col-xs-12 libor productsinside">
                         <div id="slider">
                             <div class="control_next glyphicon glyphicon-chevron-right"></div>
