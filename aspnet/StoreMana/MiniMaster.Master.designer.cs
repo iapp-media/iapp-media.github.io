@@ -13,6 +13,15 @@ namespace StoreMana.Mini {
     public partial class MiniMaster {
         
         /// <summary>
+        /// Head1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
+        /// <summary>
         /// head 控制項。
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace StoreMana.Mini {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// LBLogout 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LBLogout;
         
         /// <summary>
         /// ContentPlaceHolder1 控制項。
