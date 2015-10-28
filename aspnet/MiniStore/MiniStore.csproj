@@ -75,6 +75,8 @@
     <Content Include="css\masonry.css" />
     <Content Include="css\reset.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\000000102601.jpg" />
+    <Content Include="img\000000102901.jpg" />
     <Content Include="img\114.png" />
     <Content Include="img\2531170_203204624000_2.jpg" />
     <Content Include="img\6RMhx.gif" />
@@ -89,6 +91,7 @@
     <Content Include="img\p2-like01.png" />
     <Content Include="img\p2-like02.png" />
     <Content Include="img\qr-iappmedia.jpg" />
+    <Content Include="img\send.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\bootstrap.min.js" />

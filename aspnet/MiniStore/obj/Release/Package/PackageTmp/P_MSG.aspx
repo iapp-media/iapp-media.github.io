@@ -18,30 +18,35 @@
         <div class="row">
 
             <ul class="buydivmove">
-                <li class="productcare col-xs-12">
+                <li class="productcare">
                     <div class="col-xs-12 insidecare">
                         <div class="row">
-                            <div class="col-xs-12 libor payNum">
-                                <h1 class="texcenter">問與答</h1>
-                            </div>
-                            <div class="col-xs-12 libor payNum insideCSS">
+                           <div class="col-xs-12 libor ContentTop">
+                        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"/>
+                        
+                        <h1 class="col-xs-10">問與答</h1>
+                           
+                    </div>
+                            <div class="col-xs-12 libor payNum pagetitle">
                                 <asp:Literal ID="L_Puc" runat="server"></asp:Literal>
                             </div>
                             <asp:Repeater ID="RP1" runat="server">
                                 <HeaderTemplate>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <div class="col-xs-12 libor payNum Issue">
-                                        <span class="spansizebig">客戶A</span>
-                                        <span class="spansizemidleft">發問</span>
-                                        <span class="spansizemid"><%# Eval("agoday") %></span>
-                                        <p><%# Eval("Question") %></p>
-                                    </div>
-                                    <div class="col-xs-12 libor payNum Issue">
-                                        <span class="spansizebig">店家B</span>
-                                        <span class="spansizemidleft">回覆</span>
-                                        <span class="spansizemid">回覆日期</span>
-                                        <p><%# Eval("Ans") %></p>
+                                    <div class="contentBG">
+                                        <div class="col-xs-12 libor payNum Issue QCTot">
+                                            <span class="spansizemidleft">問題</span>
+                                            <span class="spansizebig">客戶A</span>
+                                            <span class="spansizemid"><%# Eval("agoday") %></span>
+                                            <p><%# Eval("Question") %></p>
+                                        </div>
+                                        <div class="col-xs-12 libor payNum Issue QCTBot">
+                                            <span class="spansizemidleft">回覆</span>
+                                            <span class="spansizebig">店家B</span>
+                                            <span class="spansizemid">回覆日期</span>
+                                            <p><%# Eval("Ans") %></p>
+                                        </div>
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -53,7 +58,10 @@
             </ul>
             <div class="col-xs-12 fixBar">
                 <asp:TextBox ID="tbQuen" runat="server" AutoPostBack="true" Class="form-control" Rows="3"></asp:TextBox>
-                <asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />
+                <div class="fRight">
+                <img src="img/send.png" alt="Alternate Text" />
+                    </div>
+                <%--<asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />--%>
 
             </div>
         </div>

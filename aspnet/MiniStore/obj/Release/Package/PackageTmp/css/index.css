@@ -182,6 +182,31 @@
     width: 160px;
     font-size: 18px;
 }
+.pagetitle {
+    padding:6px 15px;
+    /* margin-bottom: 8px; */
+}
+.rightbox {
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-left: 9px;
+}
+
+.rightbox span {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color:#ff9933;
+}
+
+.rightbox p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
 
 
 /*ContentBot*/
@@ -235,6 +260,43 @@
 
 .CBline div {
     border-top: 1px solid #aaa;
+}
+.contentBG {
+   padding: 6px 8px 12px 0;
+   background-color: #f9bd82;
+   /* height: 110px; */
+   float: left;
+   width: 100%;
+}
+
+.contentBG:last-child {
+    margin-bottom: 50px;
+}
+.QCTot, .QCTBot {
+    
+/* box-shadow: 8px 6px 12px -3px hsla(0, 0%, 0%, 0.25); */
+    
+box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+.QCTot {
+    background-color:#fff !important;
+    margin-bottom: 6px;
+    border-radius: 0 10% 0 0/0 40% 0 0;
+}
+.QCTBot {
+    background-color:#ffeecf !important;
+    border-radius: 0 0 10% 0/0 0 40% 0;
+}
+.fixBar .form-control {
+    width:70%;
+    display:block;
+}
+.fixBar .fRight {
+    /* width:20%; */
+    height:100%;
+    float: right;
+    /* margin-right: 30px; */
+    /* outline: 1px solid; */
 }
 
 
@@ -316,6 +378,8 @@
     height: 120px !important;
     display: block;
     float: left;
+    /* box-shadow: 7px 11px 21px -10px hsla(0, 0%, 0%, 0.25); */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 
 .texcenter {
@@ -326,12 +390,13 @@
     height: 120px;
     float: left;
     position: relative;
-    width: 275px;
+    /* width: 275px; */
+    margin-left: 9px;
 }
 
 .rightbox span {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
 }
 
@@ -342,32 +407,33 @@
     margin: 0;
 }
 
-.spansizebig,
-.spansizemid {
-    font-size: 150%;
-    line-height: 3.2;
+.spansizebig {
+    font-size: 120%;
+    line-height: 2.2;
+    margin-left: 11px;
+    color: #7b7b7b;
 }
 
 .spansizemid {
     float: right;
-    line-height: 5.2;
-    color: #aaa;
+    line-height: 2.2;
+    color: #ccc;
 }
 
 .spansizemidleft {
-    color: #aaa;
+    color: #777878;
+    font-size: 150%;
 }
 
 .Issue {
     padding: 6px 12px !important;
 }
 
-.Issue:nth-child(odd) {
-    background-color: #eee !important;
-}
 
 .Issue p {
-    font-size: 150%;
+    font-size: 120%;
+    margin-left: 54px;
+    color: #7b7b7b;
 }
 
 .fixBar {
@@ -379,9 +445,22 @@
     right: 0;
     margin: auto;
     max-width: 670px;
+    height: 60px;
     box-sizing: border-box;
     padding: 6px 12px;
     background-color: #fff;
+}
+
+.fixBar .form-control {
+    width: 80%;
+    float: left;
+    height: 100%;
+    display: block;
+    border: 2px solid #999;
+}
+.fixBar img{
+    height:100%;
+    text-align: center;
 }
 
 .fixBar textarea {
@@ -393,9 +472,10 @@
 .fixBar .sendcareButtom {
     float: left;
     margin: 0;
+    width: 20%;
     border-radius: 5px;
-    padding: 9px 12px;
-    margin-left: 17px;
+    /* padding: 9px 12px; */
+    /* margin-left: 17px; */
 }
 
 .scroll {
@@ -581,7 +661,7 @@ a:hover {
     width: auto;
     height: auto;
     position: fixed;
-    bottom: 2%;
+    bottom: 13%;
     right: 2%;
     z-index: 90;
 }
@@ -2247,7 +2327,6 @@ ul.swiper-wrapper li a {
         top: 0;
         bottom: 0;
         left: 0;
-        margin: auto;
         display: block;
     }
     .login-sm {
@@ -2299,5 +2378,6 @@ ul.swiper-wrapper li a {
     }
     .glyphicon-search {
         color: #ff9933;
+        margin-left: -15px;
     }
 }
