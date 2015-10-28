@@ -251,8 +251,13 @@
         padding: 5px 4px;
         text-align:right;
     }
+.DTimg {
+    height:100%;
+}
 .DTimg img{
-height: 100%;width: 126px;}
+height: 100% !important;
+
+}
 
 
 /*ContentBot*/
