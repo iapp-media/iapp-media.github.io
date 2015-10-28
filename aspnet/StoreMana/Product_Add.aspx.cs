@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text;
 
 namespace StoreMana.Mini
 {
@@ -19,17 +20,77 @@ namespace StoreMana.Mini
             if (!IsPostBack)
             {
                 Main.FillDDP(DL_Cate, "select * from Product_Cate", "Cate_Name", "IDNO");
-                Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
-                Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
+               
                 Getentry();
- 
-            }
-            //暫時 再取一次為了要讓輪播出show出來圖片 
-           // LPID.Text = Main.Scalar("select top 1 IDNo from product where store_ID =1 and Tmp_IDNo='-99' order by Creat_Date desc");
-
-            CarouselPic();
+                loadImg();
+            }  
         }
-        void Getentry() {
+        void loadImg() {
+            Main.ParaClear();
+            Main.ParaAdd("@PID",Main.Cint2( LPID.Text),SqlDbType.Int);
+
+            string p1src = "", p2src = "", p3src = "", p4src = "";
+            string p1do = "", p2do = "", p3do = "", p4do = "";
+            p1do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='1'");
+            p2do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='2'");
+            p3do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='3'");
+            p4do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='4'");
+          
+            if (Main.Cint2(p1do) ==  1 )
+            {
+                p1src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='1'");
+            }
+             
+            if (Main.Cint2(p2do) == 1)
+            {
+                p2src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='2'");
+            }
+
+            if (Main.Cint2(p3do) == 1)
+            {
+                p3src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='3'");
+            }
+
+            if (Main.Cint2(p4do) == 1)
+            {
+                p4src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='4'");
+            }
+            
+
+            StringBuilder ss=new StringBuilder();
+ 
+            ss.Append("                      <ul> ");
+            ss.Append("                         <li> ");
+            ss.Append("                                <img id='p01' src='" + p1src + "' class='sliderimgH'  />    ");
+            ss.Append("                             <label onclick=" + "" + "setCurrent('01','" + LPID.Text.Trim() + "')" + "" + ">");
+            ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
+            ss.Append("                             </label> ");
+            ss.Append("                         </li>");
+            ss.Append("                         <li> ");
+            ss.Append("                               <img id='p02' src='" + p2src + "' class='sliderimgH'  /> ");
+            ss.Append("                             <label onclick=" + "" + "setCurrent('02','" + LPID.Text.Trim()  + "')" + "" + ">");
+            ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
+            ss.Append("                             </label>");
+            ss.Append("                         </li>");
+            ss.Append("                         <li> ");
+            ss.Append("                                <img id='p03' src='" + p3src + "' class='sliderimgH'  /> ");
+            ss.Append("                             <label onclick=" + "" + "setCurrent('03','" + LPID.Text.Trim()  + "')" + "" + ">");
+            ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
+            ss.Append("                             </label>");
+            ss.Append("                         </li>");
+            ss.Append("                         <li>");
+            ss.Append("                                 <img id='p04' src='" + p4src + "' class='sliderimgH' /> ");
+            ss.Append("                             <label onclick=" + "" + "setCurrent('04','" + LPID.Text.Trim() + "')" + "" + ">");
+            ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
+            ss.Append("                              </label>");
+            ss.Append("                         </li>");
+            ss.Append("                      </ul> ");
+
+            L_Img.Text = ss.ToString();
+            
+        }
+        void Getentry()
+        {
             if (Comm.IsNumeric(Request.QueryString["entry"]))
             {
                 str = "select * from product where idno=" + Request.QueryString["entry"] + "";
@@ -44,62 +105,31 @@ namespace StoreMana.Mini
                     TB_Description.Text = DT.Rows[0]["description"].ToString();
                     TB_Memo.Text = DT.Rows[0]["Memo"].ToString();
 
-                    //string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
-                    //for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
-                    //{
-                    //    Comm.GetDDL(CB_Payment, listPayment[i]);
-                    //}
-                    //string[] listDelivery = DT.Rows[0]["delivery"].ToString().Substring(1).Split(',');
-                    //for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
-                    //{
-                    //    Comm.GetDDL(CB_Delivery, listDelivery[i]);
-                    //}
-                   
-                    
                 }
                 LPID.Text = Request.QueryString["entry"].ToString();
 
             }
             else
             {
-                //還沒改圖片流程
-                // store_ID 記在 cookie?
-                LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =1 and Tmp_IDNo='-99' ");
+                // store_ID 記在 cookie 
+                Main.ParaClear();
+                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+                LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
                 if (LPID.Text == "0")
                 {
-                   
+
                     str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
                     "values ('-99','','','','','','','1','')";
                     if (Main.NonQuery(str) > 0)
                     {
                         // 取 Product_ID
-                        LPID.Text = Main.Scalar("select max(IDNo) from product where store_ID =1 and Tmp_IDNo='-99'  ");
+                        LPID.Text = Main.Scalar("select max(IDNo) from product where store_ID =@SID and Tmp_IDNo='-99'  ");
                     }
                     else { ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('寫入失敗');</script>"); }
                 }
-             }
-        }
-        void CarouselPic()
-        { 
-            Main.ParaClear();
-            Main.ParaAdd("@Product_ID", LPID.Text, SqlDbType.Int);
-
-            int picNum = 0;
-            picNum = Main.Cint2(Main.Scalar("select count(1)+1 from Product_Img where Product_ID=@Product_ID "));
-
-
-            for (int i = 1; i <= picNum; i++)
-            {
-                if (i == 1)
-                {
-                    L.Text += "<div class=\"item active\"><iframe src=\"Product_Img.aspx?PID=" + LPID.Text + "&Img=1\" scrolling=\"no\" id=\"Iframe1\" style=\"width:100%;height:350px\"></iframe></div>";
-                }
-                else
-                {
-                    L.Text += "<div class=\"item\"><iframe src=\"Product_Img.aspx?PID=" + LPID.Text + "&Img=" + i + "\" scrolling=\"no\" id=\"Iframe" + i + "\" style=\"width:100%;height:350px\"></iframe></div>";
-                }
             }
         }
+        
 
         protected void BT_Create_Click(object sender, EventArgs e)
         {
@@ -107,31 +137,11 @@ namespace StoreMana.Mini
             Main.ParaAdd("@qty", TB_qty.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Product_Name", TB_ProductName.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Cate_ID", DL_Cate.SelectedValue, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);
-
-            //string strPayment = "";
-            //for (int i = 0; i < CB_Payment.Items.Count; i++)
-            //{ 
-            //    if (CB_Payment.Items[i].Selected)
-            //    {
-            //        strPayment += "," + CB_Payment.Items[i].Value;
-            //    }
-            //}
-            //string strDelivery = "";
-            //for (int i = 0; i < CB_Delivery.Items.Count; i++)
-            //{
-
-            //    if (CB_Delivery.Items[i].Selected)
-            //    {
-            //        strDelivery += "," + CB_Delivery.Items[i].Value;
-            //    } string[] listPayment =
-            //}
-            //Main.ParaAdd("@Payment", strPayment, System.Data.SqlDbType.NVarChar);
-            //Main.ParaAdd("@Delivery", strDelivery, System.Data.SqlDbType.NVarChar);
-
+            Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);  
             Main.ParaAdd("@dimension", TB_Dimension.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@description", TB_Description.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Memo", TB_Memo.Text, System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
 
 
 
@@ -139,7 +149,7 @@ namespace StoreMana.Mini
             {
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int); 
                 str = "update product set Tmp_IDNo=@Tmp_IDNo,qty=@qty,Product_Name=@Product_Name,Cate_ID=@Cate_ID,Price=@Price " +
-                    ",dimension=@dimension,description=@description,Memo=@Memo where store_ID=1 and idno=@Tmp_IDNo";
+                    ",dimension=@dimension,description=@description,Memo=@Memo where store_ID=@SID and idno=@Tmp_IDNo";
             }
             else
             {
