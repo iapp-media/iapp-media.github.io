@@ -1,15 +1,24 @@
 /* list Library */
+.TRC {
+    color:#fc5d20 !important;
+}
+.TOC {
+    color:#ff9933;
+}
 .padReset {
     padding:0;
+}
+.padTOP {
+    padding-top:11px !important;
 }
 .marReset {
     margin: 0 !important;
 }
 .AllPad {
-    padding:6px 12px;
+    padding: 9px 12px;
 }
-.Divide {
-    border-bottom:1px solid #bbb;
+.AllMar {
+    margin-top:5px;
 }
 .BoxTitle {
     text-align: center;
@@ -554,6 +563,10 @@ height: 100%;width: 126px;}
     .details:nth-child(odd) {
         background-color:#f5f5f5;
     }
+
+.details:last-child {
+    border-bottom: 3px solid #ff9933;
+}
 
 .productSize {
     height: 80% !important;
@@ -1594,14 +1607,10 @@ ul.swiper-wrapper li a {
     border: 1px solid #b3b4b5;
     border-radius: 2px;
     background-color: transparent;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     padding: 5px;
 }
 
-.payNum input,
-.payNum label {
-    color: #fd8d00 !important;
-}
 
 .sendcareButtom,
 .sendcareButtomeEnd {
@@ -1886,7 +1895,7 @@ ul.swiper-wrapper li a {
 .paynumber .form-control,
 .paytheway .form-control,
 .sendtheway .form-control {
-    width: 40%;
+    width: 50%;
     float: right;
     margin-right: 17px;
     border: 1px solid #b3b4b5;

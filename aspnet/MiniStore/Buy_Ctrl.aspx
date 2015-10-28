@@ -74,7 +74,7 @@
                                     <div class="MonBox">
                                         
                                         <p>價錢</p>
-                                    <span runat="server" id="Dtotal">$<%# Eval("Total") %></span>
+                                    <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
                                            
                                         </div>
                                     <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
@@ -96,7 +96,7 @@
 
                     <div class="col-xs-12 libor payNum AllPad">
                         <label class="col-xs-6 padReset">總消費金額</label>
-                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset" Enabled="false"></asp:TextBox>
+                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset TRC" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad">
                         <label for="" class="col-xs-6 padReset">付款方式</label>
@@ -105,6 +105,9 @@
                     <div class="col-xs-12 libor paytheway AllPad Divide">
                         <label class="col-xs-6 padReset">運送方式</label>
                         <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control marReset" placeholder="請選擇運送方式"></asp:DropDownList>
+                    </div>
+                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
+                        <div></div>
                     </div>
                     <div class="col-xs-12 libor sendadress AllPad">
                         <label class="col-xs-5 padReset">收件人資訊</label>
@@ -129,7 +132,7 @@
                             <asp:CheckBox ID="CheckBox3" runat="server" Text="組別二" />
                         </div>
                     </div>
-                    <div class="col-xs-12 libor CBbot CBarea CBline">
+                    <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
                         <div></div>
                     </div>
                     <div class="col-xs-12 libor status CBbot CBBTN">
