@@ -117,6 +117,7 @@
     <Content Include="Product_Img.aspx" />
     <Content Include="Product_Mana.aspx" />
     <Content Include="Setting.aspx" />
+    <Content Include="Svim.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -199,6 +200,12 @@
     </Compile>
     <Compile Include="Setting.aspx.designer.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Svim.aspx.cs">
+      <DependentUpon>Svim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Svim.aspx.designer.cs">
+      <DependentUpon>Svim.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
