@@ -253,6 +253,7 @@
     }
 .DTimg {
     height:100%;
+    padding-bottom: 11px;
 }
 .DTimg img{
 height: 100% !important;
