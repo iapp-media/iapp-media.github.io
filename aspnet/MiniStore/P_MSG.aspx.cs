@@ -16,6 +16,12 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
+                //if (Request.QueryString["SN"] == null)
+                //{
+                //    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('參數錯誤');</script>");
+                //    return;
+                //}
+
                 if (Request.QueryString["entry"] == null)
                 {
                     Response.Redirect("Default.aspx");

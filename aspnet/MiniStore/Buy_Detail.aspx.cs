@@ -13,13 +13,33 @@ namespace MiniStore
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
         string str = "";
+       // string SID = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
-                  CarouselPic();
+                //if (Request.QueryString["SN"] == null)
+                //{
+                //    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('參數錯誤');</script>");
+                //    return;
+                //}
+                //else
+                //{
+                    //Main.ParaClear();
+                    //Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
+                    //SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
+                    if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
 
+                    Main.ParaClear();
+                    Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+                    Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int);
+                    Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
+                                  " ( @Product_ID, @Cust_ID, getdate())");
+
+                    CarouselPic();
+              //  }
+
+                //Show 此商品提供的寄送服務 付費服務 目前沒有要
                 //DataTable DT = Main.GetDataSetNoNull("select payment,delivery from Product where idno='" + Request.QueryString["entry"] + "' ");
                 //if (DT.Rows.Count > 0)
                 //{
@@ -48,7 +68,10 @@ namespace MiniStore
         {
             if (Comm.IsNumeric(Request.QueryString["entry"]))
             {
-                str = "select * from product where idno=" + Request.QueryString["entry"] + "";
+                Main.ParaClear();
+                Main.ParaAdd("@idno", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+                //Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);and stor_id=@SID
+                str = "select * from product where idno=@idno ";
                 DataTable DT = Main.GetDataSetNoNull(str);
                 if (DT.Rows.Count > 0)
                 {
@@ -58,7 +81,7 @@ namespace MiniStore
                     TB_Price.Text = DT.Rows[0]["Price"].ToString();
                     TB_Description.Text = DT.Rows[0]["description"].ToString();  
                 }
-                DataTable DT2 = Main.GetDataSetNoNull("Select FilePath from Product_Img where Product_ID=" + Request.QueryString["entry"] + "");
+                DataTable DT2 = Main.GetDataSetNoNull("Select FilePath from Product_Img where Product_ID=@idno ");
                 if (DT2.Rows.Count > 0)
                 {
                     for (int i = 0; i < DT2.Rows.Count; i++)
@@ -71,14 +94,15 @@ namespace MiniStore
 
         protected void BT_Confirm_Click(object sender, EventArgs e)
         {
-            DataTable DT = Main.GetDataSetNoNull("select 1 from Product where idno='" + Request.QueryString["entry"] + "' ");
+            Main.ParaClear();
+            Main.ParaAdd("@idno", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+
+            DataTable DT = Main.GetDataSetNoNull("select 1 from Product where idno=@idno ");
             if (DT.Rows.Count > 0)
-            {
-                Main.ParaClear();
-                Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+            { 
                 Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
                 Main.ParaAdd("@qty", 1, SqlDbType.Int);
-                int c = Main.NonQuery("Insert into ShoppingCart( Product_ID, User_ID, qty) values( @Product_ID, @User_ID, @qty)");
+                int c = Main.NonQuery("Insert into ShoppingCart( Product_ID, User_ID, qty) values(@idno, @User_ID, @qty)");
                 if (c > 0)
                 {
                     Response.Redirect("Buy_Ctrl.aspx");

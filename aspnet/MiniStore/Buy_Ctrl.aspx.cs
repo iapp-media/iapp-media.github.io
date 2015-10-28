@@ -15,16 +15,32 @@ namespace MiniStore
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
         string str = "";
+        string SID = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            { 
-             // if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Buy_Car.aspx"); }
-             //    CarouselPic();
-                GetCar();
+            {
+                if (Request.QueryString["SN"] == null)
+                {
+                    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('參數錯誤');</script>"); 
+                    Response.Redirect("Buy_Ctrl.aspx?SN=Straight5");
+                }
+                else
+                {
+                    Main.ParaClear();
+                    Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
+                    SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
+                    GetCar();
+
+                }
+            
+              
               
             }
+            SD1.ConnectionString = Main.ConnStr;
+            SD1.SelectCommand = L.Text;
+            RP1.DataSourceID = SD1.ID;
         }
         public string ShowImg(object IDNO)
         {
@@ -35,20 +51,36 @@ namespace MiniStore
         }
         void GetCar()
         {
-            L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id='" + Comm.User_ID() + "' ";
+            SD1.SelectParameters.Clear();
+            SD1.SelectParameters.Add("user_id", Comm.User_ID().ToString());
+            SD1.SelectParameters.Add("store_id", SID);
+
+            L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total  " +
+                " from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id=@user_id and a.store_id=@store_id ";
+            Main.WriteLog(SID);
+            Main.WriteLog(Comm.User_ID().ToString());
+            Main.WriteLog(L.Text);
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
 
-            //參數設定要改過
-            str = "Select b.Product_Name,sum(a.qty) * b.Price as total ,b.Payment,b.delivery " +
-                  "from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id='" + Comm.User_ID() + "' " +
-                  "group by Product_Name,Payment,delivery,Price ";
+            Main.ParaClear();
+            Main.ParaAdd("@u_id", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int);
+            Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
+          
+            //str = "Select b.Product_Name,sum(a.qty) * b.Price as total ,b.Payment,b.delivery " +
+            //      "from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id=@u_id    " +
+            //      "group by Product_Name,Payment,delivery,Price ";
+            str = " select SUM(total) from ( " +
+                  "select sum(a.qty) * b.Price total from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo " +
+                  "  where a.user_id=@u_id and a.store_id=@SID  group by  b.IDNo,b.Price ) a ";
+            TB_Paysum.Text = Main.Scalar(str);
 
-            DataTable DT = Main.GetDataSetNoNull(str);
+            DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID =@SID");
             if (DT.Rows.Count > 0)
             {
-                TB_Paysum.Text = DT.Rows[0]["total"].ToString(); 
+               //TB_Paysum.Text = DT.Rows[0]["total"].ToString(); //應負金額
+
                 string listDelivery = DT.Rows[0]["delivery"].ToString().Replace(",", "','");
                 listDelivery = listDelivery.Substring(2).ToString() + "'";
                 Main.FillDDP(DL_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery' and Status in(" + listDelivery + ") ", "Memo", "Status");

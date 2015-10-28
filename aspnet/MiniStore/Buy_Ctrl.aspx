@@ -3,8 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">建檔修改</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
+            </ul>
+        </div>
+    </div>
      <div class="col-xs-12 libor ContentTop">
-                                <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" />
+                                <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
 
                                 <h1 class="col-xs-10">購買商品明細</h1>
 
@@ -13,50 +23,7 @@
         <li class="productcare">
             <div class="col-xs-12 insidecare">
                 <div class="row">
-                    <%-- 總金額 -付款方式 -寄送方式 -收件人資訊 -購買商品明細( name*qty = price) --%>
-                    <%--                    <div style="display:none">
-                    <div class="col-xs-12 libor sendadress">
-                        <label for="" class="col-xs-12">購買商品明細</label>
-                        <div class="col-xs-7">
-                            <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" EnableTheming="True" DataKeyNames="ItemID,carID" BorderStyle="Solid" Width="100%">
-                                <Columns>
-                                    <asp:BoundField DataField="Name" HeaderText="商品名稱">
-                                        <ItemStyle CssClass="gv_row" Width="40px" />
-                                    </asp:BoundField>
-                                    <asp:BoundField DataField="Price" HeaderText="單價" HtmlEncode="false" DataFormatString="{0:#,##0.##}">
-                                        <ItemStyle CssClass="gv_row" Width="70px" />
-                                    </asp:BoundField>
-                                    <asp:TemplateField HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:Button ID="BTminus" runat="server" Text="-" />
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="數量">
-                                        <ItemTemplate>
-                                            <asp:TextBox ID="C3" runat="server" Text='<%# Eval("AMT","{0:0.####}") %>' Width="60px"></asp:TextBox>
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:Button ID="BTplus" runat="server" Text="+" />
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:BoundField DataField="Total" HeaderText="總價">
-                                        <ItemStyle CssClass="gv_row" Width="70px" />
-                                    </asp:BoundField>
-                                    <asp:ButtonField ButtonType="Button" CommandName="DELE" HeaderText="" Text="刪除">
-                                        <ItemStyle CssClass="gv_row" HorizontalAlign="Center" Width="30px" />
-                                    </asp:ButtonField>
-                                </Columns>
-
-                            </asp:GridView>
-                          
-                        </div>
-                    </div> 
-                    </div>--%>
+                    
                     <div class="col-xs-12 detailsbox">
                         <div class="row">
                         <asp:Label ID="LCount" runat="server" Text="" CssClass="hidden"></asp:Label>

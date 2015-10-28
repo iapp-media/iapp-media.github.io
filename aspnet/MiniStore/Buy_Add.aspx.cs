@@ -17,15 +17,18 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
+                 
+
                 if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
-                DataTable DT = Main.GetDataSetNoNull("select 1 from Product where idno='" + Request.QueryString["entry"] + "' ");
+                DataTable DT = Main.GetDataSetNoNull("select Store_ID from Product where idno='" + Request.QueryString["entry"] + "' ");
                 if (DT.Rows.Count > 0)
                 {
                     Main.ParaClear();
+                    Main.ParaAdd("@Store_ID", Main.Cint2(DT.Rows[0]["Store_ID"]), SqlDbType.Int);
                     Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
                     Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
                     Main.ParaAdd("@qty", 1, SqlDbType.Int);
-                    int c =Main.NonQuery("Insert into ShoppingCart( Product_ID, User_ID, qty) values( @Product_ID, @User_ID, @qty)");
+                    int c = Main.NonQuery("Insert into ShoppingCart( Product_ID, User_ID, qty,Store_ID) values( @Product_ID, @User_ID, @qty,@Store_ID)");
                     if (c > 0)
                     {
                         Response.Redirect("Buy_Ctrl.aspx");
