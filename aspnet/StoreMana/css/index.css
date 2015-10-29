@@ -7,21 +7,68 @@
 .TOC {
     color: #ff9933;
 }
+.TOCCenter {
+    color:#ff9933;
+    text-align:center;
+}
 
 .TBC {
     color: #000 !important;
+}
+.TGray {
+    color:#ccc;
 }
 
 .TRBC {
     color: #838485;
 }
+.TtitleC {
+    color:#000;
+    text-align:center;
+    font-size:150%;
+}
 
 .padReset {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .padTOP {
     padding-top: 11px !important;
+}
+.ProLPad {
+    padding:6px 12px;
+    border: 1px solid #ccc;
+}
+.ProLtit {
+    font-size:120%;
+}
+
+.ToBoPad {
+    padding:6px 0;
+}
+.ManaLBG {
+    background-color: #ccc !important;
+}
+.ProMaBOX {
+    background-color:#cccccc;
+    padding: 4px 0;
+    margin-bottom: 6px;
+}
+
+.ProMaBOX:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.ProMaBOX:nth-child(even) {
+    background-color: #fff;
+}
+.ProMain {
+    padding:0;
+    padding: 6px 12px;
+}
+
+.ProMain:nth-child(odd) {
+    /* background-color: #f5f5f5!important; */
 }
 
 .marReset {
@@ -52,15 +99,29 @@
     background-color: #ffeecf;
     padding-bottom: 15px;
 }
+.PadLib {
+    padding:15px;
+}
 
 .BorObot {
     border-bottom: 3px solid #ff9933;
     /* padding: 0; */
 }
+.ListTcenter {
+    text-align:center;
+    color:#ff9933;
+    line-height:1.2;
+    outline:1px solid;
+    height:100%;
+}
 
 .ValTPad {
     padding: 6px 12px;
     font-size: 12px;
+}
+.ProMLtit {
+    background-color:#ccc;
+    padding: 6px 0;
 }
 
 #content {
@@ -423,8 +484,7 @@
     float: left;
     width: 100%;
 }
-
-<<<<<<< HEAD .QCTot,
+.QCTot,
 .QCTBot {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
@@ -475,6 +535,18 @@
 .Prntop {
     background-color: #ccc;
     padding: 6px 0;
+}
+.BorTopno {
+    border-top:none;
+}
+.BorRightno {
+    border-right:none;
+}
+.BorBottompno {
+    border-bottom:none;
+}
+.BorLeftpno {
+    border-left:none;
 }
 
 
@@ -1609,7 +1681,7 @@ a.iframe-info.cboxElement {
     height: 50px;
     position: fixed;
     z-index: 999;
-    position: absolute;
+    /* position: absolute; */
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
@@ -1729,17 +1801,17 @@ ul.swiper-wrapper li a {
 
 .libor {
     border-top: 3px solid #b4b5b6;
-    padding: 15px 0;
+    /* padding: 15px 15px; */
     position: relative;
     border-top: none;
-    border-left: 3px solid #b4b5b6;
-    border-right: 3px solid #b4b5b6;
-    border-bottom: 1px solid #b4b5b6;
+    /* border-left: 3px solid #b4b5b6; */
+    /* border-right: 3px solid #b4b5b6; */
+    /* border-bottom: 1px solid #b4b5b6; */
 }
 
 .insidecare .libor:nth-child(1) {
     border-bottom: none;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .insidecare div:nth-child(1) h1 {

@@ -16,7 +16,7 @@ namespace StoreMana.Mini
             {
                 if (Comm.Store_ID() == -1)
                 {
-                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "if(confirm('請先登入')){window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}else{window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}", true);
+                  //  System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "if(confirm('請先登入')){window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}else{window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}", true);
                 }
             }
         }

@@ -1513,11 +1513,6 @@ a.iframe-info.cboxElement {
 
 /* menu */
 
-.overflowMenu {
-    position: absolute;
-    top: 74px;
-    height: 51px;
-}
 
 .allClassification {
     height: 50px;
