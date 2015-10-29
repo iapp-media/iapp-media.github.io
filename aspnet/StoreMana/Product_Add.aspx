@@ -62,20 +62,26 @@
         </div>
     </div>
     <div class="buydivmove">
-        <div class="insidecare col-xs-12">
+        <div class="insidecare col-xs-12 AllBGC">
 
             <div class="row">
-                <div class="col-xs-12 libor paynumber">
+                <div class="col-xs-12 libor paynumber PadLib">
                     <div class="col-xs-4">
-                        <p class="BoxLeft">商品類別</p>
+                        <div class="row">
+                            <p class="BoxLeft">商品類別</p>
+                        </div>
                     </div>
 
                     <asp:DropDownList class="form-control" ID="DL_Cate" runat="server">
                     </asp:DropDownList>
                 </div>
 
-                <div class="col-xs-12 libor status">
-                    <label for="" class="col-xs-12">商品圖片</label>
+                <div class="col-xs-12 libor status PadLib">
+                    <label for="" class="col-xs-12">
+                        <div class="row">
+                            商品圖片
+                        </div>
+                    </label>
                     <div id="slider" class="col-xs-12">
                         <div class="control_next glyphicon glyphicon-chevron-right"></div>
                         <div class="control_prev glyphicon glyphicon-chevron-left"></div>
@@ -108,14 +114,67 @@
                                             </ul>--%>
                     </div>
                 </div>
-
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品名稱</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TextBox1" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">價格</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">數量</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品說明</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Description" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品規格</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">備註</p>
+                        </div>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>
+                    <%--<asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>--%>
+                </div>
+                <div class="col-xs-12 libor status CBbot CBBTN BorTop">
+                    <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
+                </div>
+                <div class="col-xs-12 libor status CBbot CBBTN">
+                    <asp:Button ID="BT_Cancel" runat="server" Text="取消新增" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Cancel_Click" />
+                </div>
             </div>
         </div>
     </div>
     <p class="text-center fonts">填寫資料</p>
-    <ul class="buydivmove">
-        <li class="modify col-xs-12">
-            <div class="col-xs-12 insidecare">
+   
+            <%--<div class="col-xs-12 insidecare">
                 <div class="row">
                     <div class="col-xs-12 libor paynumber">
                         <label for="" class="col-xs-6">商品名稱</label>
@@ -142,11 +201,10 @@
                         <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
-            </div>
-            <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Create_Click" />
-            <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
-        </li>
-    </ul>
+            </div>--%>
+            
+           
+    
     <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal>
 
     <script src="js/mobileEditor-new.js"></script>

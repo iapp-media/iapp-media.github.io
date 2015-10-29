@@ -75,6 +75,9 @@
 .ProMaBOX:nth-child(even) {
     background-color: #fff;
 }
+.ProGrayC {
+    background-color:#f5f5f5 !important;
+}
 .ProMain {
     padding:0;
     padding: 6px 12px;
@@ -531,6 +534,10 @@
 .Prntop {
     background-color: #ccc;
     padding: 6px 0;
+}
+.BorTop {
+    border-top: 1px solid #ccc !important;
+    /* border-bottom: 1px solid #ccc !important; */
 }
 .BorTopno {
     border-top:none;
@@ -2082,7 +2089,7 @@ ul.swiper-wrapper li a {
 .sendtheway .form-control {
     width: 50%;
     float: right;
-    margin-right: 17px;
+    /* margin-right: 17px; */
     border: 1px solid #b3b4b5;
     border-radius: 2px;
     background-color: #fff;
@@ -2226,8 +2233,6 @@ ul.swiper-wrapper li a {
     padding: 4% 3%;
     width: auto;
     height: auto;
-    background: #2a2a2a;
-    color: #fff;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
