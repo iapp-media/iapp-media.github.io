@@ -1,5 +1,68 @@
 /* list Library */
 
+.TRC {
+    color: #fc5d20 !important;
+}
+
+.TOC {
+    color: #ff9933;
+}
+
+.TBC {
+    color: #000 !important;
+}
+
+.TRBC {
+    color: #838485;
+}
+
+.padReset {
+    padding: 0;
+}
+
+.padTOP {
+    padding-top: 11px !important;
+}
+
+.marReset {
+    margin: 0 !important;
+}
+
+.AllPad {
+    padding: 9px 12px;
+}
+
+.PayPad {
+    padding: 0 6px;
+}
+
+.AllMar {
+    margin-top: 5px;
+}
+
+.AllBGC {
+    background-color: #fff;
+}
+
+.PayBGC {
+    background-color: #f0f0f0;
+}
+
+.PayBGCbot {
+    background-color: #ffeecf;
+    padding-bottom: 15px;
+}
+
+.BorObot {
+    border-bottom: 3px solid #ff9933;
+    /* padding: 0; */
+}
+
+.ValTPad {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
 #content {
     width: 100%;
     position: relative;
@@ -17,6 +80,8 @@
     margin: 19px !important;
     color: #aaa;
     margin-top: 5px;
+    font-size: 120%;
+    letter-spacing: 5px;
 }
 
 .AllBox {
@@ -35,7 +100,7 @@
 
 .BoxLeft {
     color: #838485;
-    font-size: 150%;
+    font-size: 120%;
     font-weight: inherit;
     margin: 0;
 }
@@ -57,16 +122,24 @@
     float: right;
     background-color: transparent;
     border-radius: 2px;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .ValueText {
     text-align: right;
+    font-size: 100%;
+}
+
+.codeeIMG {
+    display: block;
+    height: 100%;
+    margin: auto;
 }
 
 .ButModdle {
     color: #fff;
     border: none;
+    width: 100%;
     display: inline-block;
     padding: 6px 12px;
 }
@@ -80,7 +153,249 @@
 
 .ListLen {
     width: 100%;
+    height: 40px;
+}
+
+
+/* Header */
+
+.navbar-brand {
+    padding: 0;
+    height: 100%;
+}
+
+.iapplogo {
+    height: 100%;
+}
+
+
+/*Content Top*/
+
+.status input,
+.productNum input,
+.payNum input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #6d6e70;
+    font-size: 120%;
+    float: right;
+    text-align: right;
+}
+
+.ContentTop {
+    background-color: #ff9933 !important;
+    height: 60px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    top: 114px;
+    padding: 7px 12px !important;
+}
+
+.ContentTop h1 {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    line-height: 41px;
+    margin: auto !important;
+}
+
+.ContentTop img {
+    width: 40px;
+    padding: 0;
+}
+
+.imgH {
+    height: 120px !important;
+    display: block;
+    float: left;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+
+
+/*Contentmid & slider*/
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 4px;
+    float: right;
+}
+
+#slider img {
+    height: 100%;
+}
+
+#slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    list-style: none;
+}
+
+#slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: auto;
+    padding: 0;
+    width: 663px;
+    height: 300px;
+    max-width: 700px;
+    text-align: center;
+    line-height: 300px;
+}
+
+.control_prev,
+.control_next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    color: #b4b4b4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.control_prev:hover,
+.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+}
+
+.control_prev {
+    border-radius: 0 2px 2px 0;
+    left: 0;
+}
+
+.control_next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+}
+
+.pagetitle {
+    padding: 6px 15px;
+}
+
+.rightbox {
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-left: 9px;
+}
+
+.rightbox span {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color: #ff9933;
+}
+
+.rightbox p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.MonBox {
+    width: 150px;
+    border: 1px solid #eee;
     height: 30px;
+    border-radius: 5px;
+    margin-bottom: 9px;
+}
+
+.MonBox p {
+    width: 30%;
+    float: left;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    background-color: #ff9933;
+}
+
+.MonBox span {
+    width: 70%;
+    float: left;
+    padding: 5px 4px;
+    text-align: right;
+}
+
+.DTimg {
+    height: 100%;
+    padding-bottom: 11px;
+}
+
+.DTimg img {
+    height: 100% !important;
+}
+
+
+/*ContentBot*/
+
+.CBtitle {
+    padding-top: 10px;
+}
+
+.CBtitle input {
+    font-size: 170%;
+    color: #9a9a9a;
+    border-bottom: 1px solid #aaa;
+    padding: 0;
+}
+
+.CBbot {
+    padding: 0;
+    padding-top: 12px;
+}
+
+.CBarea input {
+    background-color: #fff1d9;
+    height: 150px;
+}
+
+.CBarea {
+    padding: 15px;
+}
+
+.CBarea label {
+    padding: 0;
+}
+
+.CBBTN {
+    padding: 6px 12px;
+}
+
+.SBuyCar {
+    background-color: #fff !important;
+    border-color: #ff9933 !important;
+    border: 3px solid #ff9933 !important;
+    text-align: center !important;
+    font-size: 170% !important;
+    color: #ff9933 !important;
+    letter-spacing: 5px;
 }
 
 .ListTitle {
@@ -92,6 +407,74 @@
 .list-group-itemUI {
     background-color: transparent;
     border: none;
+}
+
+.CBline {
+    /* padding: 2px 15px 5px 15px; */
+}
+
+.CBline div {
+    border-top: 1px solid #aaa;
+}
+
+.contentBG {
+    padding: 6px 8px 12px 0;
+    background-color: #f9bd82;
+    float: left;
+    width: 100%;
+}
+
+<<<<<<< HEAD .QCTot,
+.QCTBot {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+
+.QCTot {
+    background-color: #fff !important;
+    margin-bottom: 6px;
+    border-radius: 0 10% 0 0/0 40% 0 0;
+}
+
+.QCTBot {
+    background-color: #ffeecf !important;
+    border-radius: 0 0 10% 0/0 0 40% 0;
+}
+
+.fixBar .form-control {
+    width: 70%;
+    display: block;
+}
+
+.fixBar .fRight {
+    height: 100%;
+    float: right;
+}
+
+.FBMargin {
+    margin-bottom: 60px;
+}
+
+.PaylastBox {
+    background-color: #fff1d9 !important;
+    padding: 6px 12px;
+}
+
+.PLBTop,
+.PLBBot {
+    float: right;
+    text-align: right;
+}
+
+.ListTitle {
+    padding: 6px 12px;
+    background-color: #a1a1a1;
+    color: #fff;
+    font-size: 120%;
+}
+
+.Prntop {
+    background-color: #ccc;
+    padding: 6px 0;
 }
 
 
@@ -130,57 +513,209 @@
     margin: auto;
 }
 
-.imgsize {
-    width: 80px !important;
-    height: 80px !important;
+.questionBox {
+    border: 3px solid #ff9933;
+    background-color: #ff9933;
 }
 
-.sliderimgH {
-    height: 100%;
+.questionBox input {
+    border-right: 2px solid #d36e00;
 }
 
-.poscenter {
+.questionBox input:first-child {
+    border: none;
+}
+
+.question {
+    background-color: transparent;
+    font-size: 150%;
+    color: #fff;
+    float: right;
+    padding: 6px 12px;
+    border-radius: 0;
+    display: block;
+}
+
+.texcenter {
+    text-align: center;
+}
+
+.rightbox {
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-left: 9px;
+}
+
+.rightbox span {
     position: absolute;
-    top: 0;
+    bottom: 20px;
+    left: 0;
+}
+
+.rightbox p {
+    position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
-    margin: auto;
+    margin: 0;
+}
+
+.spansizebig {
+    font-size: 120%;
+    line-height: 2.2;
+    margin-left: 11px;
+    color: #7b7b7b;
+}
+
+.spansizemid {
+    float: right;
+    line-height: 2.2;
+    color: #ccc;
+}
+
+.spansizemidleft {
+    color: #777878;
+    font-size: 150%;
 }
 
 .Issue {
     padding: 6px 12px !important;
 }
 
-.spansizebig,
-.spansizemid {
-    font-size: 150%;
-    line-height: 3.2;
+.Issue p {
+    font-size: 120%;
+    margin-left: 54px;
+    color: #7b7b7b;
 }
 
-.spansizemid {
-    float: right;
-    line-height: 5.2;
-    color: #aaa;
-    font-size: 18px;
+.fixBar {
+    /* outline:1px solid #f00; */
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 670px;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    background-color: #fff;
 }
 
-.spansizemidleft {
-    color: #aaa;
+.fixBar .form-control {
+    width: 80%;
+    float: left;
+    height: 100%;
+    display: block;
+    border: 2px solid #999;
 }
 
-.Reply .form-control {
+.fixBar img {
+    height: 100%;
+    text-align: center;
+}
+
+.fixBar textarea {
     width: 79%;
     float: left;
     height: 52px;
 }
 
-.Reply .sendcareButtom {
+.fixBar .sendcareButtom {
     float: left;
     margin: 0;
+    width: 20%;
     border-radius: 5px;
-    padding: 9px 12px;
-    margin-left: 10px;
+}
+
+.scroll {
+    max-height: 200px;
+}
+
+
+/* pay UI */
+
+.detailsbox {
+    /* border: 4px solid #b4b5b6; */
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.rightmar {
+    margin-left: 15px;
+}
+
+.sliderimgH {
+    height: 100%;
+}
+
+.cancelTransaction {
+    position: absolute;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: auto;
+    /* height: 73px; */
+    line-height: 86px;
+    padding: 0 6px;
+    display: table;
+    /* outline: 1px solid; */
+    border-left: 1px solid #ff9933;
+    font-size: 20px;
+    color: #ff9933;
+}
+
+.detailsbox h1 {
+    text-align: center;
+    margin: 19px !important;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.detailsbox h3 {
+    margin: 0;
+    color: #999;
+    font-size: 18px;
+}
+
+.details {
+    height: 119px;
+    box-sizing: border-box;
+    padding: 14px 0 0 0;
+    /* border-bottom: 3px solid #ddd; */
+    position: relative;
+    /* margin: 14px 0; */
+}
+
+.details:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.details:last-child {
+    border-bottom: 3px solid #ff9933;
+}
+
+.productSize {
+    height: 80% !important;
+    float: left;
+    /* margin-right: 10px; */
+}
+
+.input-number {
+    width: 90px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    background-color: #eee;
+    float: left;
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+    height: 30px;
+    user-select: none;
 }
 
 
@@ -191,36 +726,64 @@
     margin-top: 15px;
 }
 
-.listbox:nth-child(even),
-.listbox:nth-child(even) textarea {
-    background-color: #fff1d1;
+.input-number-decrement,
+.input-number-increment {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    background: #ccc;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    float: left;
 }
 
-.listbox textarea {
-    border: 1px solid #ff9933;
+.input-number-decrement:active,
+.input-number-increment:active {
+    background: #ddd;
 }
 
-.list1 {
+.input-number-decrement {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-number-increment {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+}
+
+
+/* List Layout */
+
+.titleleftfont {
     font-size: 150%;
+    padding: 6px 12px;
+    width: 24%;
 }
 
-.list2 {
-    outline: 1px solid #000;
-    font-size: 150%;
-}
-
-.listtit,
-.listval {
-    outline: 1px solid #ff9933;
+.col2 {
+    float: left;
+    width: 24%;
+    box-sizing: border-box;
+    font-size: 117%;
     padding: 6px 12px;
 }
 
-.listtit {
-    color: #656565;
+.row1 {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #aaa;
 }
 
-.listval {
-    color: #656364;
+
+/* link CSS UI */
+
+.mart10 {
+    margin-top: 10px;
 }
 
 
@@ -230,6 +793,7 @@ body {
     background-color: #f5f5f5;
     font-size: small;
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
+    max-width: 500px;
 }
 
 #loading {
@@ -256,11 +820,6 @@ a.iframe-info.cboxElement {
     margin: 0 auto;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #ff9933;
-}
-
 .navbar {
     min-height: 80px;
     height: 80px;
@@ -268,30 +827,17 @@ a:hover {
     z-index: 99;
 }
 
-.navbar-brand {
-    padding: 0;
-}
-
-.btn-default {
-    background-color: #ff9933;
-}
-
 .back-top {
     width: auto;
     height: auto;
     position: fixed;
-    bottom: 2%;
+    bottom: 13%;
     right: 2%;
     z-index: 90;
 }
 
 .tem {
     display: none;
-}
-
-.iapplogo {
-    width: 100%;
-    height: auto;
 }
 
 .search {
@@ -475,8 +1021,7 @@ a:hover {
     opacity: 0.5;
     width: 2px;
     height: 40px;
-    position: relative;
-    top: 18px;
+    position: relative top: 18px;
 }
 
 .jumbotron {
@@ -782,13 +1327,6 @@ a:hover {
     border: 2px solid #ff9933;
 }
 
-.glyphicon-remove {
-    position: absolute;
-    top: 12%;
-    font-size: 35px;
-    color: #ff9933;
-}
-
 .glyphicon-arrow-left {
     position: absolute;
     top: 12%;
@@ -1026,8 +1564,7 @@ a:hover {
 }
 
 .theme li:nth-child(1),
-.theme li:nth-child(3),
-.theme li:nth-child(9) {
+.theme li:nth-child(3) {
     background-color: #ff9933;
     margin: 0;
     padding: 0;
@@ -1070,10 +1607,14 @@ a:hover {
 
 .allClassification {
     height: 50px;
+    position: fixed;
+    z-index: 999;
     position: absolute;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
     transform: scale(1.5);
+    background-color: #b4b5b5;
 }
 
 .allClassification ul {
@@ -1081,14 +1622,20 @@ a:hover {
 }
 
 .allClassification li {
-    background-color: #b4b4b4;
     color: #fff;
-    height: 48%;
     border-right: 1px solid #a3a3a3;
     text-align: center;
     font-size: 90%;
     display: table;
     line-height: 36px;
+}
+
+.swiper-wrapper li:nth-child(3) {
+    border: none;
+}
+
+ul.swiper-wrapper li a {
+    font-size: 140%;
 }
 
 .item button {
@@ -1145,8 +1692,11 @@ a:hover {
 /* AJAX bottom */
 
 .productcare {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
+    position: absolute;
+    z-index: 1;
+    /* border: 3px solid #ff9933; */
     z-index: 1;
 }
 
@@ -1165,19 +1715,16 @@ a:hover {
 
 .insidecare {
     border-radius: 2px;
-}
-
-.delettoplin {
-    border-top: none !important;
-}
-
-.deletbotlin {
-    border-bottom: none !important;
+    border: 4px solid #ff9933;
 }
 
 .insidecare ul {
     height: 100%;
     width: 100%;
+}
+
+.insidecare .libor {
+    background-color: #fff;
 }
 
 .libor {
@@ -1191,26 +1738,17 @@ a:hover {
 }
 
 .insidecare .libor:nth-child(1) {
-    border-top: 4px solid #b4b5b6;
-    box-sizing: border-box;
-}
-
-.insidecare .libor:last-child {
-    border-bottom: 4px solid #b4b5b6;
-    margin-bottom: 5px;
+    border-bottom: none;
+    padding: 0;
 }
 
 .insidecare div:nth-child(1) h1 {
     margin: 0;
 }
 
-.insidecare input {
-    float: right;
-}
-
 .insidecare label {
     color: #838485;
-    font-size: 150%;
+    font-size: 120%;
     font-weight: inherit;
 }
 
@@ -1220,40 +1758,26 @@ a:hover {
     position: relative;
 }
 
-.status input,
-.productNum input,
-.payNum input {
-    width: 37%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: #6d6e70;
-    font-size: 155%;
-    float: right;
-    text-align: right;
-}
-
 .sendadress input,
 .sendadress textarea {
     border: 1px solid #b3b4b5;
     border-radius: 2px;
     background-color: transparent;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     padding: 5px;
-}
-
-.payNum input,
-.payNum label {
-    color: #fd8d00 !important;
 }
 
 .sendcareButtom,
 .sendcareButtomeEnd {
-    background-color: #fd9a33;
+    background-color: #fd9a33 !important;
     border-color: #fd9a33;
     letter-spacing: 5px;
-    font-size: 170%;
+    font-size: 170% !important;
     border-radius: 1px;
+    text-align: center !important;
+    color: #fff !important;
+    border-radius: 4px;
+    display: block;
 }
 
 .productsinside h1 {
@@ -1394,14 +1918,21 @@ a:hover {
     height: 500px;
     max-width: 700px;
     position: absolute;
-    top: 141px;
-    right: 0;
+    top: 172px;
     left: 0;
+    right: 0;
     margin: auto;
 }
 
 
 /* keyframes */
+
+.buydivmove {
+    -webkit-transform: translate3d(0, 0, 0);
+    transition: all 600ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    position: relative;
+    top: 114px;
+}
 
 .movecss {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -1520,7 +2051,7 @@ a:hover {
 .paynumber .form-control,
 .paytheway .form-control,
 .sendtheway .form-control {
-    width: 40%;
+    width: 50%;
     float: right;
     margin-right: 17px;
     border: 1px solid #b3b4b5;
@@ -1548,6 +2079,7 @@ a:hover {
 .swiper-container {
     width: 100%;
     top: 92px;
+    height: 36px;
     margin: 0;
 }
 
@@ -1888,8 +2420,8 @@ a:hover {
 
 @media only screen and (max-width:480px) {
     #slider ul li {
-        width: 200px;
-        height: 150px;
+        width: 337px;
+        height: 217px;
         line-height: 0;
     }
     .promana {
@@ -2027,7 +2559,6 @@ a:hover {
         top: 0;
         bottom: 0;
         left: 0;
-        margin: auto;
         display: block;
     }
     .login-sm {
@@ -2073,10 +2604,12 @@ a:hover {
     .proAJAX {
         margin-top: 29px;
     }
-    .swiper-container {
-        top: 72px;
+    .allClassification {
+        top: 69px;
+        background-color: #b4b4b4;
     }
     .glyphicon-search {
         color: #ff9933;
+        margin-left: -15px;
     }
 }
