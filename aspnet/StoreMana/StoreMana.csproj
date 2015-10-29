@@ -203,6 +203,7 @@
     </Compile>
     <Compile Include="Svim.aspx.cs">
       <DependentUpon>Svim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Svim.aspx.designer.cs">
       <DependentUpon>Svim.aspx</DependentUpon>
