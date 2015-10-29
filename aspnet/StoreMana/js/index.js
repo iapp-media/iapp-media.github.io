@@ -99,63 +99,68 @@ $(document).ready(function() {
             $(".upload-img").hide();
             $(".pages").show();
         });
+
+        $('.cancel').click(function () {
+            $(".upload-img").hide();
+            $(".pages").show();
+        }); 
     });
 
     //頁面ajax
 
     // if click img
 
-    $('.item-pic').click(function() {
-        $('.menuAJAX li:nth-child(1)').addClass('fadeInRight');
-        $('.product,.allClassification').addClass('movecss').fadeOut(function() {
-            $(window).scrollTop(0);
-            $('.clickimg').fadeIn(function() {
-                $('.imgbuy').click(function() {
-                    $('.menuAJAX li:nth-child(1)').addClass('fadeInRight_Double');
-                    $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
-                    $('.clickimg').addClass('movecss').fadeOut(function() {
-                        $('.productcare').fadeIn(function() {
-                            $('.sendcareButtom').click(function() {
-                                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
-                                $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
-                                $('.productcare').addClass('movecss').fadeOut(function() {
-                                    $(window).scrollTop(0);
-                                    $('.productcareEnd').fadeIn(function() {
-                                        $('.sendcareButtomeEnd').click(function() {
-                                            alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
-                                        });
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });
+    //$('.item-pic').click(function() {
+    //    $('.menuAJAX li:nth-child(1)').addClass('fadeInRight');
+    //    $('.product,.allClassification').addClass('movecss').fadeOut(function() {
+    //        $(window).scrollTop(0);
+    //        $('.clickimg').fadeIn(function() {
+    //            $('.imgbuy').click(function() {
+    //                $('.menuAJAX li:nth-child(1)').addClass('fadeInRight_Double');
+    //                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
+    //                $('.clickimg').addClass('movecss').fadeOut(function() {
+    //                    $('.productcare').fadeIn(function() {
+    //                        $('.sendcareButtom').click(function() {
+    //                            $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
+    //                            $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
+    //                            $('.productcare').addClass('movecss').fadeOut(function() {
+    //                                $(window).scrollTop(0);
+    //                                $('.productcareEnd').fadeIn(function() {
+    //                                    $('.sendcareButtomeEnd').click(function() {
+    //                                        alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
+    //                                    });
+    //                                });
+    //                            });
+    //                        });
+    //                    });
+    //                });
+    //            });
+    //        });
+    //    });
+    //});
 
     // if click buyButton
     
-    $('.buy').click(function() {
-        $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
-        $('.product,.allClassification').addClass('movecss').fadeOut(function() {
-            $(window).scrollTop(0);
-            $('.productcare').fadeIn(function() {
-                $('.sendcareButtom').click(function() {
-                    $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
-                    $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
-                    $('.productcare').addClass('movecss').fadeOut(function() {
-                        $(window).scrollTop(0);
-                        $('.productcareEnd').fadeIn(function() {
-                            $('.sendcareButtomeEnd').click(function() {
-                                alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });
+    //$('.buy').click(function() {
+    //    $('.menuAJAX li:nth-child(2)').addClass('fadeInRight');
+    //    $('.product,.allClassification').addClass('movecss').fadeOut(function() {
+    //        $(window).scrollTop(0);
+    //        $('.productcare').fadeIn(function() {
+    //            $('.sendcareButtom').click(function() {
+    //                $('.menuAJAX li:nth-child(2)').addClass('fadeInRight_Double');
+    //                $('.menuAJAX li:nth-child(3)').addClass('fadeInRight');
+    //                $('.productcare').addClass('movecss').fadeOut(function() {
+    //                    $(window).scrollTop(0);
+    //                    $('.productcareEnd').fadeIn(function() {
+    //                        $('.sendcareButtomeEnd').click(function() {
+    //                            alert('恭喜你完成訂單囉 ^_^                                                     工作天3~4天請耐心等候');
+    //                        });
+    //                    });
+    //                });
+    //            });
+    //        });
+    //    });
+    //});
 
     //products slider
     jQuery(document).ready(function ($) {

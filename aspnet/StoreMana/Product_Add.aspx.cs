@@ -119,7 +119,7 @@ namespace StoreMana.Mini
                 {
 
                     str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
-                    "values ('-99','','','','','','','1','')";
+                    "values ('-99','','','','','','',@SID,'')";
                     if (Main.NonQuery(str) > 0)
                     {
                         // 取 Product_ID
