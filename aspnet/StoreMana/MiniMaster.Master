@@ -98,7 +98,7 @@
                     <div class="input-group">
                         <div class="input-group-btn">
                             <!-- mobile登入／註冊 -->
-                              <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"  CssClass="btn btn-default search2">登出</asp:LinkButton>
+                              
 <%--                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <a href="login/m-login/m-login.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                                   </button>--%>
