@@ -1,58 +1,81 @@
-/* list Library */
+/* All Library */
+
+body {
+    background-color: #f5f5f5;
+    font-size: small;
+    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
+    max-width: 500px;
+}
+
 .TRC {
-    color:#fc5d20 !important;
+    color: #fc5d20 !important;
 }
+
 .TOC {
-    color:#ff9933;
+    color: #ff9933;
 }
+
 .TBC {
     color: #000 !important;
 }
+
 .TRBC {
-    color:#838485;
+    color: #838485;
 }
+
 .padReset {
-    padding:0;
+    padding: 0;
 }
+
 .padTOP {
-    padding-top:11px !important;
+    padding-top: 11px !important;
 }
+
 .marReset {
     margin: 0 !important;
 }
+
 .AllPad {
     padding: 9px 12px;
 }
+
 .PayPad {
     padding: 0 6px;
 }
+
 .AllMar {
-    margin-top:5px;
+    margin-top: 5px;
 }
+
 .AllBGC {
-    background-color:#fff;
+    background-color: #fff;
 }
+
 .PayBGC {
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
+
 .PayBGCbot {
-    background-color:#ffeecf;
+    background-color: #ffeecf;
     padding-bottom: 15px;
 }
+
 .BorObot {
-    border-bottom:3px solid #ff9933;
+    border-bottom: 3px solid #ff9933;
 }
+
 .ValTPad {
-    padding:6px 12px;
+    padding: 6px 12px;
     font-size: 12px;
 }
+
 .BoxTitle {
     text-align: center;
     margin: 19px !important;
     color: #aaa;
     margin-top: 5px;
     font-size: 120%;
-    letter-spacing:5px;
+    letter-spacing: 5px;
 }
 
 .BoxBorder {
@@ -83,15 +106,14 @@
 
 .ValueText {
     text-align: right;
-    font-size:100%;
+    font-size: 100%;
 }
+
 .codeeIMG {
-    display:block
-;
+    display: block;
     height: 100%;
     margin: auto;
 }
-
 
 .ButModdle {
     color: #fff;
@@ -102,7 +124,6 @@
 .ListLen {
     width: 100%;
     height: 40px;
-    /* margin-bottom: 8px; */
 }
 
 
@@ -265,36 +286,40 @@
     bottom: 0;
     margin: 0;
 }
+
 .MonBox {
-    width:150px;
+    width: 150px;
     border: 1px solid #eee;
-    height:30px;
-    border-radius:5px;
+    height: 30px;
+    border-radius: 5px;
     margin-bottom: 9px;
 }
-    .MonBox p {
-        width:30%;
-        float:left;
-        display:inline-block;
-        padding: 2px 4px;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 17px;
-        background-color:#ff9933;
-    }
-    .MonBox span {
-        width:70%;
-        float:left;
-        padding: 5px 4px;
-        text-align:right;
-    }
+
+.MonBox p {
+    width: 30%;
+    float: left;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    background-color: #ff9933;
+}
+
+.MonBox span {
+    width: 70%;
+    float: left;
+    padding: 5px 4px;
+    text-align: right;
+}
+
 .DTimg {
-    height:100%;
+    height: 100%;
     padding-bottom: 11px;
 }
-.DTimg img{
-height: 100% !important;
 
+.DTimg img {
+    height: 100% !important;
 }
 
 
@@ -358,8 +383,6 @@ height: 100% !important;
     width: 100%;
 }
 
-
-
 .QCTot,
 .QCTBot {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
@@ -385,20 +408,24 @@ height: 100% !important;
     height: 100%;
     float: right;
 }
+
 .FBMargin {
-    margin-bottom:60px;
+    margin-bottom: 60px;
 }
+
 .PaylastBox {
     background-color: #fff1d9 !important;
     padding: 6px 12px;
 }
-.PLBTop, .PLBBot {
-    float:right;
-    text-align:right;
+
+.PLBTop,
+.PLBBot {
+    float: right;
+    text-align: right;
 }
 
 
-/* other */
+/* Top Bar */
 
 .navbar-header {
     width: 100px;
@@ -509,7 +536,6 @@ height: 100% !important;
 }
 
 .fixBar {
-    /* outline:1px solid #f00; */
     padding: 0;
     position: fixed;
     bottom: 0;
@@ -557,7 +583,6 @@ height: 100% !important;
 /* pay UI */
 
 .detailsbox {
-    /* border: 4px solid #b4b5b6; */
     border-bottom: none;
     background-color: #fff;
 }
@@ -572,11 +597,9 @@ height: 100% !important;
     right: 0 !important;
     bottom: 0 !important;
     margin: auto;
-    /* height: 73px; */
     line-height: 86px;
     padding: 0 6px;
     display: table;
-    /* outline: 1px solid; */
     border-left: 1px solid #ff9933;
     font-size: 20px;
     color: #ff9933;
@@ -598,14 +621,13 @@ height: 100% !important;
 .details {
     height: 119px;
     box-sizing: border-box;
-    padding: 14px 0  0 0;
-    /* border-bottom: 3px solid #ddd; */
+    padding: 14px 0 0 0;
     position: relative;
-    /* margin: 14px 0; */
 }
-    .details:nth-child(odd) {
-        background-color:#f5f5f5;
-    }
+
+.details:nth-child(odd) {
+    background-color: #f5f5f5;
+}
 
 .details:last-child {
     border-bottom: 3px solid #ff9933;
@@ -614,7 +636,6 @@ height: 100% !important;
 .productSize {
     height: 80% !important;
     float: left;
-    /* margin-right: 10px; */
 }
 
 .input-number {
@@ -687,17 +708,10 @@ height: 100% !important;
 }
 
 
-/* link CSS UI */
+/*link CSS UI*/
 
 .mart10 {
     margin-top: 10px;
-}
-
-body {
-    background-color: #f5f5f5;
-    font-size: small;
-    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
-    max-width: 500px;
 }
 
 #loading {
@@ -1591,11 +1605,9 @@ ul.swiper-wrapper li a {
 /* AJAX bottom */
 
 .productcare {
-    /* height: 100%; */
     width: 100%;
     position: absolute;
     z-index: 1;
-    /* border: 3px solid #ff9933; */
 }
 
 .productcareEnd,
@@ -1654,7 +1666,6 @@ ul.swiper-wrapper li a {
     margin-bottom: 12px;
     padding: 5px;
 }
-
 
 .sendcareButtom,
 .sendcareButtomeEnd {
