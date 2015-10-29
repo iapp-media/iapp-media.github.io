@@ -6,6 +6,9 @@ body {
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
     max-width: 500px;
 }
+a {
+    color:#ff9933;
+}
 
 .TRC {
     color: #fc5d20 !important;
