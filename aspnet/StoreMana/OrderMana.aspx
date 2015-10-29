@@ -71,22 +71,22 @@
                             
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Eval("Order_No")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4 ProLPad AlltexC BorTopno">
+                        <div class="col-xs-4 ProLPad AlltexC BorTopno TGray ">
                            
                             <asp:Literal ID="Literal2" runat="server" Text='<%# Eval("User_name")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno">
+                        <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TGray ">
                             <asp:Literal ID="Literal3" runat="server" Text='<%# Eval("NSta")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4 ProLPad AlltexC BorLeftpno BorBottompno">
+                        <div class="col-xs-4 ProLPad AlltexC BorLeftpno BorBottompno TGray ">
                             <asp:Literal ID="Literal4" runat="server" Text='<%# Eval("CD")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4 ProLPad AlltexC BorBottompno">
+                        <div class="col-xs-4 ProLPad AlltexC BorBottompno TGray ">
                             <asp:Literal ID="Literal5" runat="server" Text='<%# Eval("Payment")%>'></asp:Literal>
                         </div>
-                        <div class="col-xs-4 ProLPad AlltexC BorRightno BorBottompno">
+                        <div class="col-xs-4 ProLPad AlltexC BorRightno BorBottompno TGray ">
 
-                            <asp:HyperLink ID="HyperLink1" runat="server" Visible="false" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+                            <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      詳細資訊 
                             </asp:HyperLink>
                         </div>

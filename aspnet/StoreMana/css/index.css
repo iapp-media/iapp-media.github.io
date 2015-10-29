@@ -134,11 +134,7 @@
     padding: 6px 0;
 }
 
-#content {
-    width: 100%;
-    position: relative;
-    top: 141px;
-}
+
 
 #BTNcontent {
     margin: 121px auto 0 auto;
@@ -155,19 +151,8 @@
     letter-spacing: 5px;
 }
 
-.AllBox {
-    box-sizing: border-box;
-    padding: 6px 12px;
-    max-width: 700px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
 
-.BoxBorder {
-    border: 4px solid #b4b5b6;
-}
+
 
 .BoxLeft {
     color: #838485;
@@ -2042,45 +2027,6 @@ ul.swiper-wrapper li a {
 
 /* modify CSS*/
 
-.allmodify .input-group .form-control {
-    display: block;
-    width: 100%;
-}
-
-.allmodify .input-group-btn:last-child > .btn,
-.allmodify .input-group-btn:last-child > .btn-group {
-    margin-left: 0;
-}
-
-.allmodify .input-group-btn {
-    top: 0;
-}
-
-.allmodify .form-control,
-.allmodify .input-group .form-control,
-.allmodify .input-group .form-control {
-    margin-right: 0;
-}
-
-.allmodify .btn-default,
-.allmodify .btn-default {
-    background-color: #fff;
-}
-
-.allmodify .checkbox,
-.allmodify .radio {
-    padding: 0 15px;
-}
-
-.allmodify .status input {
-    font-size: 0;
-}
-
-.addman {
-    float: right;
-    background-color: #fff;
-    margin-right: 15px;
-}
 
 
 /* D3 UI */
