@@ -13,6 +13,33 @@ namespace MiniStore {
     public partial class Order_prn {
         
         /// <summary>
+        /// RP4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RP4;
+        
+        /// <summary>
+        /// L4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal L4;
+        
+        /// <summary>
+        /// SD4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SD4;
+        
+        /// <summary>
         /// RP1 控制項。
         /// </summary>
         /// <remarks>
