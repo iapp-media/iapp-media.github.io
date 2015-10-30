@@ -12,8 +12,7 @@
                 <li class="swiper-slide col-xs-4"><a href="Setting_Gerent.aspx" style="color: white">帳號管理</a></li>
             </ul>
         </div>
-    </div>
-
+    </div> 
     <div id="content">
         <div class="col-xs-12 AllBox BoxBorder">
             <div class="row">
