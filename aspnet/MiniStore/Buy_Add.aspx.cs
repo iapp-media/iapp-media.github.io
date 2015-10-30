@@ -28,10 +28,10 @@ namespace MiniStore
                     Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
                     Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
                     Main.ParaAdd("@qty", 1, SqlDbType.Int);
-                    int c = Main.NonQuery("Insert into ShoppingCart( Product_ID, User_ID, qty,Store_ID) values( @Product_ID, @User_ID, @qty,@Store_ID)");
+                    int c = Main.NonQuery("Insert into ShoppingCart( Store_ID,Product_ID, User_ID, qty) values( @Store_ID, @Product_ID, @User_ID, @qty)");
                     if (c > 0)
                     {
-                        Response.Redirect("Buy_Ctrl.aspx");
+                        Response.Redirect("Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "");
                     }
                 }
             }

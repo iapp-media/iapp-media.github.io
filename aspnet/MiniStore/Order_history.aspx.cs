@@ -33,14 +33,15 @@ namespace MiniStore
 
         protected void BT_Search_Click(object sender, EventArgs e)
         {
-            L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
-         " inner join Order_Content b on a.IDNo=b.Order_ID" +
-         " inner join Product c on b.Item_ID=c.IDNo" +
-         " inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
-         " Where a.Customer_ID='" + Comm.User_ID() + "'  ";
+         //   L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
+         //" inner join Order_Content b on a.IDNo=b.Order_ID" +
+         //" inner join Product c on b.Item_ID=c.IDNo" +
+         //" inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
+         //" Where a.Customer_ID='" + Comm.User_ID() + "'  ";
 
-            //   L.Text = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT  from Orders a " +
-            //"inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status Where Customer_ID='" + Comm.User_ID() + "'  ";
+            L.Text = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT  from Orders a " +
+                     "inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status " +
+            " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 ";
             if (DLDate.SelectedValue != null)
             {
                 L.Text += " and DATEDIFF(MONTH,a.Creat_Date,getdate()) " + DLDate.SelectedValue + "3";

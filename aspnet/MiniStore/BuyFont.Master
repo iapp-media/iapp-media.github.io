@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 
-   <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>iApp Manager</title>
     <!-- about SEO -->
@@ -21,20 +21,20 @@
          6.更改 status bar 樣式    
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
-    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)"/>
-    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)"/>
-    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)"/>
+    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="css/masonry.css"/>
-    <link rel="stylesheet" href="css/colorbox.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/masonry.css" />
+    <link rel="stylesheet" href="css/colorbox.css" />
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -45,147 +45,144 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-       <form id="form1" runat="server">
-    <!-- facebook(必須寫在最上面) & parse init -->
-    <div id="loading">iApp 載入中</div>
-    <!-- 導覽列（共用） -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="row">
-            <div class="container-fluid">
-                <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
-                    <div class="row">
-                        <a class="navbar-brand" href="default.aspx">
-                            <img class="iapplogo" src="img/ministorelogo.png"/>
-                        </a>
-                    </div>
-                </div>
-                <!-- 主題下拉選單（共用） -->
-                <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
-                    <li>熱分享</li>
-                    <li class="boxpos"><img src="img/qr-iappmedia.jpg" alt="" class="QRcode"/>
-                        <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
-                       
-                        <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
-                    </li>
-                    <li>開微店</li>
-                    <li><a href="javascript:void(0)"   id="GO_Mini" target="_self" onclick="GO_Mini()"   >打造自己的微店</a></li>
-                    <li><a href="#">加入行動分店</a></li>
-                    <li><a href="http://www.iapp-media.com/Login/profile.aspx"> 編輯會員資料</a></li> 
-
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li> 
-                    <li><a href="javascript:void(0)"  >我的拍賣</a></li>
-                       <li><a href="Order_history.aspx" target="_self" >訂單記錄</a></li>
-                </ul> 
-                <!-- Mobile -->
-                <div class="col-xs-3 tem"></div>
-                <div class="col-xs-2 search-sm">
-                    <div class="input-group">
-                        <!-- mobile 搜尋 -->
-                        <div class="input-group-btn">
-                            <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
+    <form id="form1" runat="server">
+        <!-- facebook(必須寫在最上面) & parse init -->
+        <div id="loading">iApp 載入中</div>
+        <!-- 導覽列（共用） -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
+                        <div class="row">
+                            <a class="navbar-brand" href="default.aspx">
+                                <img class="iapplogo" src="img/ministorelogo.png" />
+                            </a>
                         </div>
                     </div>
-                </div>
-                <!-- mobile 搜尋bar -->
-                <div class="search-bar">
-                    <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search"/>
-                    <span class="glyphicon glyphicon-remove cancel" aria-hidden="true"/>
-                </div>
+                    <!-- 主題下拉選單（共用） -->
+                    <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
+                        <li>熱分享</li>
+                        <li class="boxpos">
+                            <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
+                            <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
-                <div class="col-xs-2 login-sm">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <!-- mobile登入／註冊 -->
-                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                <a href="login/m-login/m-login.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                    </button>
-                    <!-- mobile會員登入後 -->
-                    <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                        <img class="circle-login" src="img/defaulthead.jpg"/>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- mobile會員選單 -->
-        <div>
-            <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
-                <li><a href="#">我的iApp</a></li>
-                <li class="divider"></li>
-                <li><a href="#">收藏的iApp</a></li>
-                <li class="divider"></li>
-                <li><a href="login/m-login/m-profile.html">編輯個人資料</a></li>
-                <li class="divider"></li>
-                <li class="m-logout">
-                    <p><a href="#">登出</a></p>
-                </li>
-            </ul>
-        </div>
-        <!-- Web -->
-        <!-- Web 搜尋bar -->
-        <div class="Lgallbar col-md-11">
-            <div class="col-xs-9 col-sm-7 col-md-9 Allsearch">
-                <div class="input-group search">
-                    <!-- 搜尋框 -->
-                    <input type="text" class="form-control bar-text" placeholder="Search iApp..." id="searchWeb" autocomplete="on" name="search"/>
-                    <!-- 下拉按鈕 -->
-                   <div class="input-group-btn">
-                        <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
-                        </button>
+                            <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
+                        </li>
+                        <li>開微店</li>
+                        <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
+                    </ul>
+                    <!-- Mobile -->
+                    <div class="col-xs-3 tem"></div>
+                    <div class="col-xs-2 search-sm">
+                        <div class="input-group">
+                            <!-- mobile 搜尋 -->
+                            <div class="input-group-btn">
+                                <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /btn-group -->
+                    <!-- mobile 搜尋bar -->
+                    <div class="search-bar">
+                        <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />
+                        <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
+                    </div>
+
+                    <div class="col-xs-2 login-sm">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <!-- mobile登入／註冊 -->
+                                <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                    <a href="login/m-login/m-login.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                                </button>
+                                <!-- mobile會員登入後 -->
+                                <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                    <img class="circle-login" src="img/defaulthead.jpg" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile會員選單 -->
+                    <div>
+                        <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
+                            <li><a href="#">我的iApp</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">收藏的iApp</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login/m-login/m-profile.html">編輯個人資料</a></li>
+                            <li class="divider"></li>
+                            <li class="m-logout">
+                                <p><a href="#">登出</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Web -->
+                    <!-- Web 搜尋bar -->
+                    <div class="Lgallbar col-md-11">
+                        <div class="col-xs-9 col-sm-7 col-md-9 Allsearch">
+                            <div class="input-group search">
+                                <!-- 搜尋框 -->
+                                <input type="text" class="form-control bar-text" placeholder="Search iApp..." id="searchWeb" autocomplete="on" name="search" />
+                                <!-- 下拉按鈕 -->
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
+                                        <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <!-- /btn-group -->
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- 登入／註冊 -->
+                        <div class="col-sm-2 col-md-1 login-box">
+                            <a class='iframe-info' href="login/login/login.html">
+                                <button type="button" class="btn btn-default navbar-btn1 col-md-12">
+                                    登入／註冊
+                                </button>
+                            </a>
+                        </div>
+                        <!-- 會員登入後 -->
+                        <div class="col-sm-2 col-md-1 icon-box">
+                            <img class="usericon" src="img/photoicon.png" />
+                            <div class="username-icon">
+                                <h4>Digital+</h4>
+                            </div>
+                        </div>
+                        <a href="#" class="menusandwich example1"><span></span></a>
+                    </div>
+
                 </div>
-                <!-- /input-group -->
             </div>
-            <!-- 登入／註冊 -->
-            <div class="col-sm-2 col-md-1 login-box">
-                <a class='iframe-info' href="login/login/login.html">
-                    <button type="button" class="btn btn-default navbar-btn1 col-md-12">
-                        登入／註冊
-                    </button>
+        </nav>
+        <!-- 會員資料 -->
+        <div class="jumbotron">
+            <img class="user-icon" src="img/photoicon.png" />
+            <div class="option-user">
+                <a href="#">
+                    <div class="my-iapp">
+                        <p><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="collect-iapp">
+                        <p><a href="#">登出</a></p>
+                    </div>
                 </a>
             </div>
-            <!-- 會員登入後 -->
-            <div class="col-sm-2 col-md-1 icon-box">
-                <img class="usericon" src="img/photoicon.png"/>
-                <div class="username-icon">
-                    <h4>Digital+</h4></div>
-            </div>
-            <a href="#" class="menusandwich example1"><span></span></a>
+
         </div>
- 
-                </div></div>
-    </nav>
-    <!-- 會員資料 -->
-    <div class="jumbotron">
-        <img class="user-icon" src="img/photoicon.png"/>
-        <div class="option-user">
-             <a href="#">
-                <div class="my-iapp">
-                    <p><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="collect-iapp">
-                    <p><a href="#">登出</a></p>
-                </div>
-            </a>
-        </div>
-       
-    </div>
-    <!-- 回到頂部 -->
-    <a href="#"><img class="back-top" src="img/top.png"/> 
-    </a>
-                 
+        <!-- 回到頂部 -->
+        <a href="#">
+            <img class="back-top" src="img/top.png" />
+        </a>
+
         <!-- WRAPPER -->
-    
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           
-            </asp:ContentPlaceHolder>
-               
-          <!-- WRAPPER END -->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- WRAPPER END -->
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
@@ -198,7 +195,7 @@
     <script src="js/jquery.touchSwipe.min.js"></script>
     <!-- GA iAppPortal -->
     <script type="text/javascript" src="js/ga-iappportal.js"></script>
-        <!-- Loading -->
+    <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
     </script>

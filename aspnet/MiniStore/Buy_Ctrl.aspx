@@ -3,48 +3,50 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       
+ 
     <div class="col-xs-12 libor ContentTop">
         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
+
         <h1 class="col-xs-10">購買商品明細</h1>
+
     </div>
     <ul class="buydivmove">
         <li class="productcare">
             <div class="col-xs-12 insidecare">
                 <div class="row">
-                    
+
                     <div class="col-xs-12 detailsbox">
                         <div class="row">
-                        <asp:Label ID="LCount" runat="server" Text="" CssClass="hidden"></asp:Label>
+                            <asp:Label ID="LCount" runat="server" Text="" CssClass="hidden"></asp:Label>
 
-                       
-                        <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
-                            <ItemTemplate>
-                                <div class="details" runat="server" id="DivDetails">
-                                    <div class="col-xs-5 DTimg">
-                                    <img src="<%# ShowImg(Eval("ItemID")) %>" alt="Alternate Text" class="productSize imgH" />
+
+                            <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
+                                <ItemTemplate>
+                                    <div class="details" runat="server" id="DivDetails">
+                                        <div class="col-xs-5 DTimg">
+                                            <img src="<%# ShowImg(Eval("ItemID")) %>" alt="Alternate Text" class="productSize imgH" />
                                         </div>
-                                    <div class="col-xs-7">
-                     
-                                    <h3><%# Eval("Name") %></h3>
-                                    <div class="MonBox">
-                                        
-                                        <p>價錢</p>
-                                    <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
-                                           
+                                        <div class="col-xs-7">
+
+                                            <h3><%# Eval("Name") %></h3>
+                                            <div class="MonBox">
+
+                                                <p>價錢</p>
+                                                <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
+
+                                            </div>
+                                            <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
+                                            <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
+                                            <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
+
+                                            <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
+                                            <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
+                                            <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
+                                            <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
                                         </div>
-                                    <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
-                                    <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
-                                    <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
-                                  
-                                    <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
-                                    <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
-                                    <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
-                                    <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
-                                        </div>
-                                </div>
-                            </ItemTemplate>
-                        </asp:Repeater>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
                     </div>
                     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
@@ -55,25 +57,39 @@
                         <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset TRC" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad">
-                        <label for="" class="col-xs-4 padReset">付款方式</label>
+                        <label for="" class="col-xs-6 padReset">付款方式</label>
                         <asp:DropDownList ID="DL_Payment" runat="server" CssClass="form-control marReset"></asp:DropDownList>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad Divide">
-                        <label class="col-xs-4 padReset">運送方式</label>
+                        <label class="col-xs-6 padReset">運送方式</label>
                         <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control marReset" placeholder="請選擇運送方式"></asp:DropDownList>
                     </div>
-                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
+                    <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
                         <div></div>
                     </div>
                     <div class="col-xs-12 libor sendadress AllPad">
                         <label class="col-xs-5 padReset">收件人資訊</label>
-                        <div class="col-xs-7 padReset" >
+                        <div class="col-xs-7 padReset">
                             <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3" TextMode="MultiLine"></asp:TextBox>
+                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
                         </div>
                     </div>
+                    <div class="col-xs-12 libor paytheway PaylastBox">
+                        
+                        <div class="PLBTop col-xs-7">
+                            <asp:CheckBox ID="CBinfo" runat="server" Text="是" CssClass="AllPad" />
+                          <label class="col-xs-5 padReset">儲存收件人資訊以便下次使用</label>
+                        </div>
+                    </div>
+                    <%--                    <div class="col-xs-12 libor paytheway  PaylastBox">
+                        <label class="col-xs-5 padReset">使用上次記錄</label>
+                        <div class="PLBBot PLBTop col-xs-7">
+                            <asp:CheckBox ID="CheckBox2" runat="server" Text="組別ㄧ" CssClass="AllPad" />
+                            <asp:CheckBox ID="CheckBox3" runat="server" Text="組別二" />
+                        </div>
+                    </div>--%>
                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
                         <div></div>
                     </div>

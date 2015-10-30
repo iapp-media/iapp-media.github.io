@@ -14,22 +14,30 @@ namespace MiniStore
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
         string str = "";
+        string SID = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                 
-                ShowData();
-                if (Comm.IsNumeric(Request.QueryString["entry"]))
+
+
+                Main.ParaClear();
+                Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
+                SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
+                if (SID != "")
                 {
                     ShowData();
                 }
+
             }
         }
-        void ShowData() {
-            str = "select a.IDNo,Product_Name,Price,b.FilePath from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1";
-            StringBuilder ss = new StringBuilder(); 
+        void ShowData()
+        {
+            Main.ParaClear();
+            Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);
+            str = "select a.IDNo,Product_Name,Price,b.FilePath from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1 and a.store_id=@SID ";
+            StringBuilder ss = new StringBuilder();
             DataTable dr = Main.GetDataSetNoNull(str);
             if (dr.Rows.Count > 0)
             {
@@ -51,38 +59,38 @@ namespace MiniStore
                     //else
                     //{
                     //    src = "img/p00.jpg";
-                        //}
+                    //}
 
-                        // if (Comm.CheckMobile() == false)
-                   
-                        ss.Append("<div class='item'>" + "\n\r");
-                        ss.Append("  <div class='imgcenter'>\n\r");
-                        ss.Append("     <div>" + "\n\r");
-                        ss.Append("        <a href='Buy_detail.aspx?entry=" + dw["IDNo"].ToString() + "'><img class=\"item-pic\" src='" + dw["FilePath"].ToString() + "'/></a>" + "\n\r");
+                    // if (Comm.CheckMobile() == false)
 
-                        //doListItem(ref ss, iLK, iGD, iFV, dw);
+                    ss.Append("<div class='item'>" + "\n\r");
+                    ss.Append("  <div class='imgcenter'>\n\r");
+                    ss.Append("     <div>" + "\n\r");
+                    ss.Append("        <a href='Buy_detail.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'><img class=\"item-pic\" src='" + dw["FilePath"].ToString() + "'/></a>" + "\n\r");
 
-                        ss.Append("     </div>\n\r");
-                        ss.Append("     <div class='col-xs-12 description'>" + "\n\r");
-                        ss.Append("         <div class='col-xs-12'>" + "\n\r");
-                        ss.Append("             <div class='row'>" + "\n");
-                        ss.Append("             <p class='describe'>" + dw["Product_Name"].ToString() + "</p>" + "\n\r");
-                        ss.Append("             </div>" + "\n");
-                        ss.Append("         </div>" + "\n");
-                        ss.Append("         <div class='col-xs-12'>" + "\n\r");
-                        ss.Append("             <div class='row'>" + "\n");
-                        ss.Append("             <input type='checkbox'  name='CC' />" + "\n");
-                        ss.Append("             <label for='c3'></label>" + "\n");
-                        ss.Append("             </div>" + "\n");
-                        ss.Append("         </div>" + "\n");
-                        ss.Append("     </div>" + "\n");
-                        ss.Append("     <div class='col-xs-12'>" + "\n\r");
-                        ss.Append("         <p class='iapp-name'>NT$" + dw["Price"].ToString() + "</p>" + "\n\r");
-                        ss.Append("        <button > <a href='Buy_Add.aspx?entry=" + dw["IDNo"].ToString() + "'>購買</a></button>" + "\n\r");
-                        ss.Append("     </div>" + "\n");
-                        ss.Append("  </div>" + "\n");
-                        ss.Append("</div>" + "\n"); 
-                     
+                    //doListItem(ref ss, iLK, iGD, iFV, dw);
+
+                    ss.Append("     </div>\n\r");
+                    ss.Append("     <div class='col-xs-12 description'>" + "\n\r");
+                    ss.Append("         <div class='col-xs-12'>" + "\n\r");
+                    ss.Append("             <div class='row'>" + "\n");
+                    ss.Append("             <p class='describe'>" + dw["Product_Name"].ToString() + "</p>" + "\n\r");
+                    ss.Append("             </div>" + "\n");
+                    ss.Append("         </div>" + "\n");
+                    ss.Append("         <div class='col-xs-12'>" + "\n\r");
+                    ss.Append("             <div class='row'>" + "\n");
+                    ss.Append("             <input type='checkbox'  name='CC' />" + "\n");
+                    ss.Append("             <label for='c3'></label>" + "\n");
+                    ss.Append("             </div>" + "\n");
+                    ss.Append("         </div>" + "\n");
+                    ss.Append("     </div>" + "\n");
+                    ss.Append("     <div class='col-xs-12'>" + "\n\r");
+                    ss.Append("         <p class='iapp-name'>NT$" + dw["Price"].ToString() + "</p>" + "\n\r");
+                    ss.Append("        <button > <a href='Buy_Add.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'>購買</a></button>" + "\n\r");
+                    ss.Append("     </div>" + "\n");
+                    ss.Append("  </div>" + "\n");
+                    ss.Append("</div>" + "\n");
+
 
 
                 }

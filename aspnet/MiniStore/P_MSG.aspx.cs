@@ -15,12 +15,7 @@ namespace MiniStore
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
-                //if (Request.QueryString["SN"] == null)
-                //{
-                //    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('參數錯誤');</script>");
-                //    return;
-                //}
+            { 
 
                 if (Request.QueryString["entry"] == null)
                 {
@@ -35,8 +30,7 @@ namespace MiniStore
                                  "    <span>$" + DT.Rows[0]["Price"] + "</span>" +
                                  "    <p></p>" +
                                  "</div>";
-                }
-
+                } 
             }
             
             L.Text = "select Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg order by CreatDate DESC ";
