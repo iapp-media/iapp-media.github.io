@@ -21,34 +21,25 @@ namespace StoreMana.Mini
             {
                 if (Comm.IsNumeric(Request.QueryString["entry"]))
                 {
-                    L1.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.QTY,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
-   " inner join Order_Content b on a.IDNo=b.Order_ID" +
-   " inner join Product c on b.Item_ID=c.IDNo" +
-   " inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
-   " Where a.IDNo=" + Request.QueryString["entry"] + " and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 ";
+
+                    SD1.SelectParameters.Clear();
+                    SD1.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
+                    L1.Text = " Select Item_ID,sum(qty) qty,SUM(Total) total,(select product_name from Product where IDNo=Item_ID) Product_Name " +
+                              "from Order_Content where Order_ID=@IDNo group by Item_ID ";
+
+
                     SD1.SelectCommand = L1.Text;
                     SD1.ConnectionString = Main.ConnStr;
-                    RP1.DataSourceID = SD1.ID;
-
+                    RP1.DataSourceID = SD1.ID; 
                 }
-
             }
- 
-        } 
-
-        //protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        //{
-
-        //    DropDownList DL_STAt = (DropDownList)e.Item.FindControl("Repeater1$ctl00$DL_STA");
-        
-        //    //DropDownList DL_STAt = (DropDownList)e.Item.FindControl("DL_STA");
-            
-        //   // Response.Write(aaa.Text);
-        //  //  Comm.GetDDL(DL_STAt, "4");
-
-
-        //    //  Main.FillDDP(DL_STA, "select Memo,Status from def_Status where Title='Order_STA'", "Memo", "Status");
-
-        //}
+        }
+        public string ShowImg(object IDNO)
+        {
+            if (IDNO.ToString().Length > 0)
+                return Comm.MiStoreUrl + Main.Scalar("Select FilePath from Product_Img where Product_ID='" + IDNO + "' and Num=1");
+            else
+                return "";
+        }
     }
 }
