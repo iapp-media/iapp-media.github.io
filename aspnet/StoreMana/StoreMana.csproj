@@ -114,9 +114,10 @@
     <Content Include="OrderMana.aspx" />
     <Content Include="Order_Detail.aspx" />
     <Content Include="Product_Add.aspx" />
-    <Content Include="Product_Img.aspx" />
     <Content Include="Product_Mana.aspx" />
     <Content Include="Setting.aspx" />
+    <Content Include="Setting_Gerent.aspx" />
+    <Content Include="Setting_SInfo.aspx" />
     <Content Include="Svim.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -179,13 +180,6 @@
     <Compile Include="Product_Add.aspx.designer.cs">
       <DependentUpon>Product_Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Product_Img.aspx.cs">
-      <DependentUpon>Product_Img.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Product_Img.aspx.designer.cs">
-      <DependentUpon>Product_Img.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Product_Mana.aspx.cs">
       <DependentUpon>Product_Mana.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,6 +194,20 @@
     </Compile>
     <Compile Include="Setting.aspx.designer.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Gerent.aspx.cs">
+      <DependentUpon>Setting_Gerent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting_Gerent.aspx.designer.cs">
+      <DependentUpon>Setting_Gerent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_SInfo.aspx.cs">
+      <DependentUpon>Setting_SInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting_SInfo.aspx.designer.cs">
+      <DependentUpon>Setting_SInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Svim.aspx.cs">
       <DependentUpon>Svim.aspx</DependentUpon>
