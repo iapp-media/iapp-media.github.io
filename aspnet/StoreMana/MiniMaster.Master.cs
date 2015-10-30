@@ -16,15 +16,17 @@ namespace StoreMana.Mini
             {
                 if (Comm.Store_ID() == -1)
                 {
-                  //  System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "if(confirm('請先登入')){window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}else{window.open('http://localhost:18429/Default.aspx?SN=Straight5','_self');}", true);
+                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>");
                 }
             }
         }
 
         protected void LBLogout_Click(object sender, EventArgs e)
         {
-            Comm.DeleCoookie("iapp_sid");
-            Response.Redirect(Request.RawUrl);
+            if (Comm.DeleCoookie("iapp_sid") == 1)
+            {
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>"); 
+            } 
         }
     }
 }
