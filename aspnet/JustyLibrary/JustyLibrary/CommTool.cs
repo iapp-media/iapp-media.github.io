@@ -29,12 +29,12 @@ public class CommTool: System.Web.UI.Page
     public string AppPath = System.Configuration.ConfigurationManager.AppSettings.Get("AppPath");
     public string MainPath = System.Configuration.ConfigurationSettings.AppSettings.Get("MainPath");
     public string URL = System.Configuration.ConfigurationSettings.AppSettings.Get("URL");
-    public string Theme = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme");
-    public string Theme_ID = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme_ID");
+    public string Theme  = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme");
+    public string Theme_ID  = System.Configuration.ConfigurationSettings.AppSettings.Get("Theme_ID");
     public string MiStoreUrl = System.Configuration.ConfigurationSettings.AppSettings.Get("MiStoreUrl");
     public string MiStorePath = System.Configuration.ConfigurationSettings.AppSettings.Get("MiStorePath");
 
-    public CommTool()
+	public CommTool()
 	{
 		//
 		// TODO: 在這裡新增建構函式邏輯
@@ -1032,25 +1032,6 @@ public class CommTool: System.Web.UI.Page
         }
         return SS;
     }
-    public string GetOrdersNO(string IDNo, DateTime SDate)
-    {
-        JDB Main = new JDB();
-        Main.ParaClear();
-        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
-        Main.ParaAdd("@YY", (SDate.Year - 1911).ToString(), SqlDbType.VarChar);
-        string HeadNO = "A" + (SDate.Year - 1911).ToString() + "-";
-        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
-        string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Store_ID=@IDNo and Order_No like @HeadNO+'%'");
-        string Order_No = HeadNO + "00001";
-        if (tmpNO != "")
-        {
-            if (IsNumeric(tmpNO))
-            {
-                Order_No = Order_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 5));
-            }
-        }
-        return Order_No;
-    }
 
     public string SendMail(string FromMail, string ToMail, string Subj, string Bodystr)
     {
@@ -1386,6 +1367,44 @@ public class CommTool: System.Web.UI.Page
             return 0;
         }
     }
+    public string GetOrdersNO(string IDNo, DateTime SDate)
+    {
+        JDB Main = new JDB();
+        Main.ParaClear();
+        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
+        Main.ParaAdd("@YY", (SDate.Year - 1911).ToString(), SqlDbType.VarChar);
+
+        string HeadNO = "" + System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.Month.ToString() + System.DateTime.Now.Day.ToString() + "";
+        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
+        string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Store_ID=@IDNo and Order_No like @HeadNO+'%'");
+        string Order_No = HeadNO + "00001";
+        if (tmpNO != "")
+        {
+            if (IsNumeric(tmpNO))
+            {
+                Order_No = Order_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 5));
+            }
+        }
+        return Order_No;
+    }
+    public string GetProductNO(string IDNo, DateTime SDate)
+    {
+        JDB Main = new JDB();
+        Main.ParaClear();
+        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar); 
+        string HeadNO = "" + (SDate.Year - 1911).ToString() + "-";
+        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
+        string tmpNO = Main.Scalar("select Max(Cast(Replace(Product_No,@HeadNO,'') as int))  from product ");
+        string Product_No = HeadNO + "0000001";
+        if (tmpNO != "")
+        {
+            if (IsNumeric(tmpNO))
+            {
+                Product_No = Product_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 7));
+            }
+        }
+        return Product_No;
+    } 
 
     public string DoAppCover(int AppID)
     {
@@ -1463,23 +1482,30 @@ public class CommTool: System.Web.UI.Page
             return str;
         }
     }
-    public string GetProductNO(string IDNo, DateTime SDate)
+    public string StoreSN(double StoreID)
     {
-        JDB Main = new JDB();
-        Main.ParaClear();
-        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
-        string HeadNO = "" + (SDate.Year - 1911).ToString() + "-";
-        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
-        string tmpNO = Main.Scalar("select Max(Cast(Replace(Product_No,@HeadNO,'') as int))  from product ");
-        string Product_No = HeadNO + "0000001";
-        if (tmpNO != "")
+        string SSN = "";
+        StoreID = StoreID + Math.Pow(36, 2);
+        if (StoreID < Math.Pow(36, 3))
         {
-            if (IsNumeric(tmpNO))
-            {
-                Product_No = Product_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 7));
-            }
+            double a = Math.Floor(StoreID / Math.Pow(36, 2));
+            StoreID = StoreID - a * Math.Pow(36, 2);
+            double b = Math.Floor(StoreID / 36);
+            StoreID = StoreID - b * 36;
+            SSN = ConverChar36(Cint2(a)) + ConverChar36(Cint2(b)) + ConverChar36(Cint2(StoreID));
         }
-        return Product_No;
+        else
+        {
+            SSN = "###";
+        }
+        return SSN;
+    }
+
+    public string ConverChar36(int num)
+    {
+        string SS = "0123456789abcdefghijklmnopqrstuvwxyz";
+        char[] aa = SS.ToCharArray();
+        return aa[num].ToString();
     }
 
 }

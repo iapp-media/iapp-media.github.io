@@ -22,7 +22,7 @@ public class JDB : System.Web.UI.Page
 
         if (IsNumeric(System.Configuration.ConfigurationManager.AppSettings.Get("LogStat")))
         {
-            LogStat = Cint2(System.Configuration.ConfigurationManager.AppSettings.Get("LogStat"));//
+            LogStat = Cint2(System.Configuration.ConfigurationManager.AppSettings.Get("LogStat")); 
         }
 
     }
@@ -238,7 +238,7 @@ public class JDB : System.Web.UI.Page
             }
         }
         return NewDT;
-        return GetDataSet(sqlstr);
+        //return GetDataSet(sqlstr);
     }
 
     public DataTable GetDataSetNoNull(string sqlstr, CommandType CmdType)
