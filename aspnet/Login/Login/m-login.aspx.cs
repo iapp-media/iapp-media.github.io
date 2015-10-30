@@ -17,6 +17,13 @@ namespace Login
             if (!IsPostBack)
             {
                 if (Comm.CheckMobile() == false) { Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx")); }
+                if (Comm.Store_ID() != -1)
+                {
+                    if (Request.QueryString["done"] != null)
+                    {
+                        Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+                    }
+                }
             }
         }
  
@@ -44,6 +51,39 @@ namespace Login
             string ThemeFolder = "basic";
             string TS = "";
             string TID = "2";
+
+            if (Request.QueryString["done"] != null)
+            {
+                if (Request.QueryString["s"] != null)
+                {
+                    if (Request.QueryString["s"] == "1")
+                    {
+                        if (Main.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") != "1")
+                        {
+                            Main.ParaClear();
+                            Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
+                            Main.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
+                            Main.NonQuery("Insert into Store (User_ID, Store_Name,Creat_Date) values " +
+                             " (@UID, @Name,getdate())   ");
+                        }
+
+                        string SID = "";
+                        SID = Main.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
+                        if (SID != "")
+                        {
+                            Main.ParaClear();
+                            Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
+                            Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
+                            Main.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
+                            //  Response.Write(SID); 
+                            Comm.SaveCookie("iapp_sid", SID);
+                        }
+                    }
+                }
+                Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+            }
+
+
             if (Comm.IsNumeric(Request.QueryString["t"]))
             {
                 TID = Request.QueryString["t"];
