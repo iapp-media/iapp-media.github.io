@@ -8,9 +8,9 @@
     <div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">圖書文具</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">享受美食</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">品味生活</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx" style="color: white">出貨管理</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx" style="color: white">訂單管理</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx?hist=1" style="color: white">歷史訂單</a></li>
             </ul>
         </div>
     </div>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-xs-4 ProLPad AlltexC BorRightno BorBottompno TGray ">
 
-                            <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+                            <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>' CssClass="TOC">
                                      詳細資訊 
                             </asp:HyperLink>
                         </div>

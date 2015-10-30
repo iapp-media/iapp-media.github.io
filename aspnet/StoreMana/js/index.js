@@ -240,7 +240,7 @@ $(document).ready(function() {
         paginationClickable: true,
         spaceBetween: 0,
         grabCursor: true,
-
+        initialSlide: 1
     });
 
     $('.openslider').on('click', function () {

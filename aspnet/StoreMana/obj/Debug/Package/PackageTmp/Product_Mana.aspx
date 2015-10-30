@@ -2,49 +2,68 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">商品建檔</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
+            </ul>
+        </div>
+    </div>
         <div class="allmodify">
             <ul class="buydivmove">
-                <li class="modify col-xs-12">
+                <li>
                     <div class="col-xs-12 insidecare">
                         <div class="row">
-                            <div class="col-xs-12 libor paytheway">
-                                   <label class="col-xs-6">商品類別</label>
-                                    <asp:DropDownList class="form-control" ID="DL" runat="server">
-                                    </asp:DropDownList>
+                            <div class="col-xs-12 libor paytheway PadLib">
+                                   <label class="TBC">商品類別</label>
+                                   <asp:DropDownList class="form-control marReset" ID="DL" runat="server">
+                                   </asp:DropDownList>
                             </div>
-                            <div class="col-xs-12 libor paynumber">
-                                 <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Search_Click" />
+                            <div class="col-xs-12 libor status CBbot CBBTN">
+                                 <asp:Button ID="Button1" runat="server" Text="搜尋" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Search_Click" />
                             </div>
-                             <div class="col-xs-12 libor paynumber">
-                                  <input type="button" onclick="javascript: location.href = 'Product_Add.aspx'" value="新增商品" class="btn btn-warning btn-lg btn-block sendcareButtom" />
+                            <div class="col-xs-12 libor   CBline">
+                        <div></div>
+                    </div>
+                             <div class="col-xs-12 libor status CBbot CBBTN BorObot">
+                                  <input type="button" onclick="javascript: location.href = 'Product_Add.aspx'" value="新增商品" class="btn btn-warning col-xs-12 sendcareButtomeEnd" />
                             </div>
-                            <div class="col-xs-12 libor paynumber">
+                            <div class="col-xs-12 libor paynumber padReset ManaLBG">
                                  <asp:Repeater ID="RP1" runat="server">
                 <HeaderTemplate>
-                    
-                        <div class="col-xs-12 ListTitle">商品名稱</div>
+                    <div class="ProMLtit col-xs-12">
+                        <div class="col-xs-4 ListTitle">商品名稱</div>
+                        <div class="col-xs-4 ListTitle">&nbsp;</div>
+                        <div class="col-xs-4 ListTitle">&nbsp;</div>
                         <div class="col-xs-4 ListTitle">價格</div>
-                        <div class="col-xs-4 ListTitle">建檔日期</div>　
-                    
-
+                        <div class="col-xs-4 ListTitle">建檔日期</div>
+                        <div class="col-xs-4 ListTitle">&nbsp;</div>
+                    </div>
                 </HeaderTemplate> 
                 <ItemTemplate>
-                    <div class="row1">
-                        <div class="col-xs-12">
-                            <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
-                        </div>
-                        <div class="col-xs-4">
-                            <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Price")%>'></asp:Literal>
-                        </div>
-                        <div class="col-xs-4">
-                            <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
-                        </div>　
-                        <div class="col-xs-3">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+                    <div class="ProMaBOX col-xs-12 ToBoPad">
+                        <div class="ProMain col-xs-12">
+                            <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
+                                <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
+                            </div>
+
+                            <div class="col-xs-4 ProLPad ProLtit TRC BorLeftpno BorBottompno">
+                                <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Price")%>'></asp:Literal>
+                            </div>
+                            <div class="col-xs-4 ProLPad ProLtit TGray BorBottompno">
+                                <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
+                            </div>
+
+                            <div class="col-xs-4 ProLPad ProLtit TOCCenter BorRightno BorBottompno">
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>' CssClass="TOC">
                                      詳細資訊
-                            </asp:HyperLink>
+                                </asp:HyperLink>
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
                 </ItemTemplate>
             </asp:Repeater> 
                                 

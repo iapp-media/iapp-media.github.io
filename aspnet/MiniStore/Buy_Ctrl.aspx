@@ -3,16 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="col-xs-12 allClassification swiper-container">
-        <div class="row swiper-container">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">建檔修改</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
-            </ul>
-        </div>
-    </div>
+       
     <div class="col-xs-12 libor ContentTop">
         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
         <h1 class="col-xs-10">購買商品明細</h1>
@@ -80,33 +71,19 @@
                             <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 libor paytheway PaylastBox">
-                        <label class="col-xs-5 padReset">儲存收件人資訊以便下次使用</label>
-                        <div class="PLBTop col-xs-7">
-                            <asp:CheckBox ID="CBinfo" runat="server" Text="是" CssClass="AllPad" />
-                            <asp:CheckBox ID="CheckBox1" runat="server" Text="否" />
-                        </div>
-                    </div>
-                    <div class="col-xs-12 libor paytheway  PaylastBox">
-                        <label class="col-xs-5 padReset">使用上次記錄</label>
-                        <div class="PLBBot PLBTop col-xs-7">
-                            <asp:CheckBox ID="CheckBox2" runat="server" Text="組別ㄧ" CssClass="AllPad" />
-                            <asp:CheckBox ID="CheckBox3" runat="server" Text="組別二" />
+                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3" TextMode="MultiLine"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
                         <div></div>
                     </div>
                     <div class="col-xs-12 libor status CBbot CBBTN">
-                <asp:Button ID="BT_Confirm" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BT_Confirm_Click" />
-                         </div>
-                   
+                        <asp:Button ID="BT_Confirm" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BT_Confirm_Click" />
+                    </div>
+
                 </div>
             </div>
-            
+
         </li>
     </ul>
     <script src="js/jquery-2.1.4.min.js"></script>

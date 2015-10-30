@@ -18,7 +18,15 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
+ <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx?com=1" style="color: white">社群力排行</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx" style="color: white">客戶列表</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx?act=1" style="color: white">活動力排行</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">　

@@ -162,15 +162,15 @@
             </div>
             <a href="#" class="menusandwich example1"><span></span></a>
         </div>
-        <div class="col-xs-12 allClassification swiper-container">
-            <div class="row swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide col-xs-4">圖書文具</li>
-                    <li class="swiper-slide col-xs-4">享受美食</li>
-                    <li class="swiper-slide col-xs-4">品味生活</li>
-                </ul>
-            </div>
+          <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">圖書文具</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">享受美食</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">品味生活</a></li>
+            </ul>
         </div>
+    </div>
                 </div></div>
     </nav>
     <!-- 會員資料 -->

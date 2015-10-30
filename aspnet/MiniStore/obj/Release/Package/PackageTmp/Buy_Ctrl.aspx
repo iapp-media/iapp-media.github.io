@@ -3,111 +3,87 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+       
+    <div class="col-xs-12 libor ContentTop">
+        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
+        <h1 class="col-xs-10">購買商品明細</h1>
+    </div>
     <ul class="buydivmove">
-        <li class="productcare col-xs-12">
+        <li class="productcare">
             <div class="col-xs-12 insidecare">
                 <div class="row">
-                    <%-- 總金額 -付款方式 -寄送方式 -收件人資訊 -購買商品明細( name*qty = price) --%>
-                    <%--                    <div style="display:none">
-                    <div class="col-xs-12 libor sendadress">
-                        <label for="" class="col-xs-12">購買商品明細</label>
-                        <div class="col-xs-7">
-                            <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" EnableTheming="True" DataKeyNames="ItemID,carID" BorderStyle="Solid" Width="100%">
-                                <Columns>
-                                    <asp:BoundField DataField="Name" HeaderText="商品名稱">
-                                        <ItemStyle CssClass="gv_row" Width="40px" />
-                                    </asp:BoundField>
-                                    <asp:BoundField DataField="Price" HeaderText="單價" HtmlEncode="false" DataFormatString="{0:#,##0.##}">
-                                        <ItemStyle CssClass="gv_row" Width="70px" />
-                                    </asp:BoundField>
-                                    <asp:TemplateField HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:Button ID="BTminus" runat="server" Text="-" />
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="數量">
-                                        <ItemTemplate>
-                                            <asp:TextBox ID="C3" runat="server" Text='<%# Eval("AMT","{0:0.####}") %>' Width="60px"></asp:TextBox>
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:Button ID="BTplus" runat="server" Text="+" />
-                                        </ItemTemplate>
-                                        <ItemStyle CssClass="gv_row" Width="60px" HorizontalAlign="Right" />
-                                    </asp:TemplateField>
-                                    <asp:BoundField DataField="Total" HeaderText="總價">
-                                        <ItemStyle CssClass="gv_row" Width="70px" />
-                                    </asp:BoundField>
-                                    <asp:ButtonField ButtonType="Button" CommandName="DELE" HeaderText="" Text="刪除">
-                                        <ItemStyle CssClass="gv_row" HorizontalAlign="Center" Width="30px" />
-                                    </asp:ButtonField>
-                                </Columns>
-
-                            </asp:GridView>
-                          
-                        </div>
-                    </div> 
-                    </div>--%>
+                    
                     <div class="col-xs-12 detailsbox">
+                        <div class="row">
                         <asp:Label ID="LCount" runat="server" Text="" CssClass="hidden"></asp:Label>
 
-                        <h1>購買商品明細</h1>
+                       
                         <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
                             <ItemTemplate>
                                 <div class="details" runat="server" id="DivDetails">
-                                    <img src="<%# ShowImg(Eval("ItemID")) %>" alt="Alternate Text" class="productSize" />
+                                    <div class="col-xs-5 DTimg">
+                                    <img src="<%# ShowImg(Eval("ItemID")) %>" alt="Alternate Text" class="productSize imgH" />
+                                        </div>
+                                    <div class="col-xs-7">
+                     
                                     <h3><%# Eval("Name") %></h3>
-                                    <span runat="server" id="Dtotal">$<%# Eval("Total") %></span>
-                                    <span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>
+                                    <div class="MonBox">
+                                        
+                                        <p>價錢</p>
+                                    <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
+                                           
+                                        </div>
+                                    <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
                                     <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
                                     <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
-                                    <br />
+                                  
                                     <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
                                     <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
                                     <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
                                     <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
+                                        </div>
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>
+                        </div>
                     </div>
                     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                     <asp:SqlDataSource ID="SD1" runat="server" OnSelected="SD1_Selected"></asp:SqlDataSource>
 
-                    <div class="col-xs-12 libor payNum">
-                        <label class="col-xs-6">應付金額</label>
-                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6" Enabled="false"></asp:TextBox>
+                    <div class="col-xs-12 libor payNum AllPad">
+                        <label class="col-xs-6 padReset">總消費金額</label>
+                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset TRC" Enabled="false"></asp:TextBox>
                     </div>
-                    <div class="col-xs-12 libor paytheway">
-                        <label for="" class="col-xs-6">付款方式</label>
-                        <asp:DropDownList ID="DL_Payment" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <div class="col-xs-12 libor paytheway AllPad">
+                        <label for="" class="col-xs-6 padReset">付款方式</label>
+                        <asp:DropDownList ID="DL_Payment" runat="server" CssClass="form-control marReset"></asp:DropDownList>
                     </div>
-                    <div class="col-xs-12 libor paytheway">
-                        <label class="col-xs-6">運送方式</label>
-                        <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control" placeholder="請選擇運送方式"></asp:DropDownList>
+                    <div class="col-xs-12 libor paytheway AllPad Divide">
+                        <label class="col-xs-6 padReset">運送方式</label>
+                        <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control marReset" placeholder="請選擇運送方式"></asp:DropDownList>
                     </div>
-                    <div class="col-xs-12 libor sendadress">
-                        <label class="col-xs-5">收件人資訊</label>
-                        <div class="col-xs-7">
+                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
+                        <div></div>
+                    </div>
+                    <div class="col-xs-12 libor sendadress AllPad">
+                        <label class="col-xs-5 padReset">收件人資訊</label>
+                        <div class="col-xs-7 padReset" >
                             <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12"></asp:TextBox>
                             <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
+                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3" TextMode="MultiLine"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-xs-12 libor paytheway">
-                        <label class="col-xs-5">儲存收件人資訊以便下次使用</label>
-                        <asp:CheckBox ID="CBinfo" runat="server" Text="是" />
-                        <asp:CheckBox ID="CheckBox1" runat="server" Text="否" />
-                        <span>使用上次記錄</span>
-                        <asp:CheckBox ID="CheckBox2" runat="server" Text="組別ㄧ" />
-                        <asp:CheckBox ID="CheckBox3" runat="server" Text="組別二" />
+                    <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
+                        <div></div>
                     </div>
+                    <div class="col-xs-12 libor status CBbot CBBTN">
+                        <asp:Button ID="BT_Confirm" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BT_Confirm_Click" />
+                    </div>
+
                 </div>
             </div>
-            <asp:Button ID="BT_Confirm" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BT_Confirm_Click" />
+
         </li>
     </ul>
     <script src="js/jquery-2.1.4.min.js"></script>

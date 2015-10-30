@@ -2,6 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Msg_Mana.aspx" style="color: white">客戶留言</a></li> 
+            </ul>
+        </div>
+    </div>
         <div class="buydivmove">
         <div class="productcare col-xs-12"> 
             <div class="col-xs-12 insidecare"> 

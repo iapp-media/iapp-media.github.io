@@ -120,8 +120,8 @@
                             <p class="BoxLeft">商品名稱</p>
                         </div>
                     </div>
-                    <asp:TextBox ID="TextBox1" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
-                </div>
+                    <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
+                </div> 
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">
@@ -160,8 +160,8 @@
                             <p class="BoxLeft">備註</p>
                         </div>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>
-                    <%--<asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>--%>
+                 <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
+                    <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"  TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="col-xs-12 libor status CBbot CBBTN BorTop">
                     <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />

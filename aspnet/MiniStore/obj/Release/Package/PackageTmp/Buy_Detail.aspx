@@ -21,7 +21,7 @@
                     </div>
     <div class="col-xs-12 promana">
         <div class="row"> 
-    <ul class="buydivmove">
+    <ul>
         <li class="productcare">
             <div class="col-xs-12 insidecare">
                 <div class="row">

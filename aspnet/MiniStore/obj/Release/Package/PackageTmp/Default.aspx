@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <ul class="buydivmove"> 
+    <ul> 
         <li class="product">
             <div id="container"> 
                 <asp:Literal ID="LData" runat="server"></asp:Literal> 

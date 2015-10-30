@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="col-xs-12 libor ContentTop">
-                                <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" />
+                                <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
 
                                 <h1 class="col-xs-10">問與答</h1>
 
@@ -23,7 +23,7 @@
     <div class="col-xs-12 promana">
         <div class="row">
 
-            <ul class="buydivmove">
+            <ul>
                 <li class="productcare">
                     <div class="col-xs-12 insidecare FBMargin">
                         <div class="row">
