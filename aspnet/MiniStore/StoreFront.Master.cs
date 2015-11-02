@@ -4,13 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace MiniStore
 {
     public partial class StoreFront : System.Web.UI.MasterPage
     {
         CommTool Comm = new CommTool();
-        JDB Main = new JDB(); 
+        JDB Main = new JDB();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,6 +41,16 @@ namespace MiniStore
                                  " <li>我的帳戶</li>" +
                                  " <li><a href='#'>會員資料</a></li>" +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
+
+                L_Cate.Text = "<ul class=\"swiper-wrapper\"> ";
+
+                Main.WriteLog("select * from product_cate where Store_ID='" + Main.Scalar("select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "'") + "'");
+                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID='" + Main.Scalar("select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "'") + "'");
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+                    L_Cate.Text += "  <li class=\"swiper-slide col-xs-4\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></li>";
+                } 
+                L_Cate.Text += " </ul>"; 
             }
         }
     }

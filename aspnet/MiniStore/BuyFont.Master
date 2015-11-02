@@ -89,7 +89,7 @@
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 
-                    <div class="col-xs-2 login-sm">
+<%--                    <div class="col-xs-2 login-sm">
                         <div class="input-group">
                             <div class="input-group-btn">
                                 <!-- mobile登入／註冊 -->
@@ -102,7 +102,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                     <!-- mobile會員選單 -->
                     <div>
                         <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
@@ -135,13 +135,13 @@
                             <!-- /input-group -->
                         </div>
                         <!-- 登入／註冊 -->
-                        <div class="col-sm-2 col-md-1 login-box">
+<%--                        <div class="col-sm-2 col-md-1 login-box">
                             <a class='iframe-info' href="login/login/login.html">
                                 <button type="button" class="btn btn-default navbar-btn1 col-md-12">
                                     登入／註冊
                                 </button>
                             </a>
-                        </div>
+                        </div>--%>
                         <!-- 會員登入後 -->
                         <div class="col-sm-2 col-md-1 icon-box">
                             <img class="usericon" src="img/photoicon.png" />

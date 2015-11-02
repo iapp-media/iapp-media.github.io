@@ -30,45 +30,34 @@ namespace MiniStore
                     ShowData();
                 }
 
+ 
             }
         }
         void ShowData()
         {
+ 
             Main.ParaClear();
-            Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);
+            Main.ParaAdd("@SID", SID, SqlDbType.NVarChar); 
             str = "select a.IDNo,Product_Name,Price,b.FilePath from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1 and a.store_id=@SID ";
+            if (Request.QueryString["c"] != null)
+            {
+                Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar); 
+                str += " and cate_id=@cate_id ";
+            }
+
             StringBuilder ss = new StringBuilder();
             DataTable dr = Main.GetDataSetNoNull(str);
             if (dr.Rows.Count > 0)
             {
                 for (int i = 0; i < dr.Rows.Count; i++)
                 {
-                    DataRow dw = dr.Rows[i];
-                    //string src ="";// +dw["Img01"];
-                    //string iGD = "";
-                    //string iLK = "";
-                    //string iFV = "";
-                    //if (Comm.Cint2(dw["iGD"].ToString()) > 0) { iGD = " checked"; }
-                    //if (Comm.Cint2(dw["iLK"].ToString()) > 0) { iLK = " checked"; }
-                    //if (Comm.Cint2(dw["iFV"].ToString()) > 0) { iFV = " checked"; }
-
-                    //if (!string.IsNullOrEmpty(dw["App_Cover"].ToString()))
-                    //{
-                    //   // src = url + dr.Rows[i]["FoderName"] + "/Apps/" + dw["App_Folder"] + "/pic/" + dw["App_Cover"];
-                    //}
-                    //else
-                    //{
-                    //    src = "img/p00.jpg";
-                    //}
-
-                    // if (Comm.CheckMobile() == false)
+                    DataRow dw = dr.Rows[i]; 
 
                     ss.Append("<div class='item'>" + "\n\r");
                     ss.Append("  <div class='imgcenter'>\n\r");
                     ss.Append("     <div>" + "\n\r");
                     ss.Append("        <a href='Buy_detail.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'><img class=\"item-pic\" src='" + dw["FilePath"].ToString() + "'/></a>" + "\n\r");
-
-                    //doListItem(ref ss, iLK, iGD, iFV, dw);
+                     
 
                     ss.Append("     </div>\n\r");
                     ss.Append("     <div class='col-xs-12 description'>" + "\n\r");
@@ -89,10 +78,7 @@ namespace MiniStore
                     ss.Append("        <button > <a href='Buy_Add.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'>購買</a></button>" + "\n\r");
                     ss.Append("     </div>" + "\n");
                     ss.Append("  </div>" + "\n");
-                    ss.Append("</div>" + "\n");
-
-
-
+                    ss.Append("</div>" + "\n"); 
                 }
             }
             else

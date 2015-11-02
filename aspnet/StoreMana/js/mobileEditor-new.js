@@ -297,8 +297,8 @@ function compress() {
 
 function setCurrent(number, pi) {
   current = number;
-  width = 640;
-  height = 640;
+  width = 300;
+  height = 300;
   Todo = pi;
   document.getElementById('CurrentId').setAttribute('value', current);
   // $image.cropper("setAspectRatio", width / height);

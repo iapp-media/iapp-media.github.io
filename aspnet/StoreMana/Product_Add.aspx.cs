@@ -19,11 +19,13 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-                Main.FillDDP(DL_Cate, "select * from Product_Cate", "Cate_Name", "IDNO");
-               
+                Main.ParaClear();
+                Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
+                Main.FillDDP(DL_Cate, "select * from Product_Cate where store_id=@SID", "Cate_Name", "IDNO");
+
                 Getentry();
                 loadImg();
-            }  
+            }
         }
         void loadImg() {
             Main.ParaClear();
@@ -93,6 +95,9 @@ namespace StoreMana.Mini
         {
             if (Comm.IsNumeric(Request.QueryString["entry"]))
             {
+                BT_Create.Text = "儲存更新";
+                BT_Cancel.Text = "取消更新";
+
                 str = "select * from product where idno=" + Request.QueryString["entry"] + "";
                 DataTable DT = Main.GetDataSetNoNull(str);
                 if (DT.Rows.Count > 0)
@@ -113,7 +118,7 @@ namespace StoreMana.Mini
             {
                 // store_ID 記在 cookie 
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
                 if (LPID.Text == "0")
                 {
@@ -121,11 +126,14 @@ namespace StoreMana.Mini
                     str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
                     "values ('-99','','','','','','',@SID,'')";
                     if (Main.NonQuery(str) > 0)
-                    {
-                        // 取 Product_ID
+                    { 
                         LPID.Text = Main.Scalar("select max(IDNo) from product where store_ID =@SID and Tmp_IDNo='-99'  ");
                     }
-                    else { ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('寫入失敗');</script>"); }
+                    else
+                    {
+                        Response.Redirect("Product_Mana.aspx");
+                        //ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('寫入失敗');</script>"); 
+                    }
                 }
             }
         }
@@ -133,6 +141,17 @@ namespace StoreMana.Mini
 
         protected void BT_Create_Click(object sender, EventArgs e)
         {
+            string tmp = "";
+            if (TB_ProductName.Text == "")  { tmp += ".商品名稱"; }
+            if (TB_qty.Text == "") { tmp += ".數量"; }
+            if (DL_Cate.SelectedValue == "") { tmp += ".商品類別"; }
+            if (TB_Price.Text == "") { tmp += ",售價"; }
+            if (tmp != "")
+            {
+                Response.Write("<script>alert('請填選" + tmp.Substring(1) + "')</script>");
+                return;
+            }
+
             Main.ParaClear();
             Main.ParaAdd("@qty", TB_qty.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Product_Name", TB_ProductName.Text, System.Data.SqlDbType.NVarChar);
