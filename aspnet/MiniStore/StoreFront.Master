@@ -73,13 +73,22 @@
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
                     </ul>
-
+                     <div id="listbox">
+             <%--       <ul class="dropdown-menu dropdown-menu-right finder" role="menu">
+                        <li><a href="#">最新</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">最熱門</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><img class="finder-app" src="img/photoicon.png"
+                        > iApp</a></li>
+                    </ul>--%>
+                </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
 
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
-                              <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server"></asp:TextBox>
+                              <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                      <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
