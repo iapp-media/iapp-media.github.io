@@ -291,7 +291,7 @@ a {
 }
 
 .MonBox {
-    width: 150px;
+    /* width: 150px; */
     border: 1px solid #eee;
     height: 30px;
     border-radius: 5px;
@@ -300,6 +300,7 @@ a {
 
 .MonBox p {
     width: 30%;
+    text-align: center;
     float: left;
     display: inline-block;
     padding: 2px 4px;
@@ -317,8 +318,11 @@ a {
 }
 
 .DTimg {
-    height: 100%;
-    padding-bottom: 11px;
+    /* height: 100%; */
+    /* padding-bottom: 11px; */
+    width: 30%;
+    /* height: 100px; */
+    outline: 1px solid#f00;
 }
 
 .DTimg img {
@@ -591,21 +595,32 @@ a {
     border-bottom: none;
     background-color: #fff;
 }
-
+.DTimg,
+.Detailsmid,
+.Detailsbot {
+    display:inline-block;
+    float: left;
+}
+.Detailsmid {
+    width: 60%;
+}
+.Detailsbot {
+    width:10%;
+}
 .rightmar {
     margin-left: 15px;
 }
 
 .cancelTransaction {
-    position: absolute;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    margin: auto;
-    line-height: 86px;
-    padding: 0 6px;
-    display: table;
-    border-left: 1px solid #ff9933;
+    /* position: absolute; */
+    /* top: 0 !important; */
+    /* right: 0 !important; */
+    /* bottom: 0 !important; */
+    /* margin: auto; */
+    /* line-height: 86px; */
+    /* padding: 0 6px; */
+    /* display: table; */
+    /* border-left: 1px solid #ff9933; */
     font-size: 20px;
     color: #ff9933;
 }
@@ -624,10 +639,15 @@ a {
 }
 
 .details {
-    height: 119px;
+    /* height: 119px; */
     box-sizing: border-box;
-    padding: 14px 0 0 0;
+    /* padding: 14px 0 0 0; */
     position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    /* height: 137px; */
+    padding: 6px 12px;
+    font-size: 0;
 }
 
 .details:nth-child(odd) {
@@ -644,7 +664,7 @@ a {
 }
 
 .input-number {
-    width: 90px;
+    width: 70%;
     vertical-align: top;
     text-align: center;
     outline: none;
@@ -662,8 +682,8 @@ a {
 .input-number-decrement,
 .input-number-increment {
     display: inline-block;
-    width: 30px;
-    line-height: 30px;
+    width: 15%;
+    /* line-height: 30px; */
     background: #ccc;
     color: #444;
     text-align: center;

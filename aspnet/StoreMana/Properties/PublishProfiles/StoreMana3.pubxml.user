@@ -17,16 +17,16 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/31/2015 09:28:02</publishTime>
+      <publishTime>11/02/2015 10:40:57</publishTime>
     </File>
     <File Include="bin/JustyLibrary.pdb">
-      <publishTime>10/31/2015 09:28:02</publishTime>
+      <publishTime>11/02/2015 10:40:57</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>10/31/2015 09:40:47</publishTime>
+      <publishTime>11/02/2015 10:40:58</publishTime>
     </File>
     <File Include="bin/StoreMana.pdb">
-      <publishTime>10/31/2015 09:40:47</publishTime>
+      <publishTime>11/02/2015 10:40:58</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -176,13 +176,13 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/mobileEditor-new.js">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/02/2015 10:39:45</publishTime>
     </File>
     <File Include="js/swiper.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>10/30/2015 16:35:12</publishTime>
+      <publishTime>11/02/2015 10:39:45</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -218,7 +218,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/31/2015 09:41:55</publishTime>
+      <publishTime>11/02/2015 10:40:58</publishTime>
     </File>
   </ItemGroup>
 </Project>

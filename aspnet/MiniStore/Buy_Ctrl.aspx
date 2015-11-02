@@ -22,27 +22,26 @@
 
                             <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
                                 <ItemTemplate>
-                                    <div class="details" runat="server" id="DivDetails">
-                                        <div class="col-xs-5 DTimg">
+                                    <div class="details col-xs-12" runat="server" id="DivDetails">
+                                        <div class="DTimg">
                                             <img src="<%# ShowImg(Eval("ItemID")) %>" alt="Alternate Text" class="productSize imgH" />
                                         </div>
-                                        <div class="col-xs-7">
-
+                                        <div class="Detailsmid">
                                             <h3><%# Eval("Name") %></h3>
                                             <div class="MonBox">
-
                                                 <p>價錢</p>
                                                 <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
-
                                             </div>
                                             <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
                                             <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
                                             <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
-
                                             <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
                                             <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
                                             <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
-                                            <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
+                                           
+                                        </div>
+                                        <div class="Detailsbot">
+                                             <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
                                         </div>
                                     </div>
                                 </ItemTemplate>
