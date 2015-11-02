@@ -70,9 +70,8 @@
                         </li>
                         <li>開微店</li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
-                                                <li>
-                            <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
-
+             <li> <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
+                         
                     </ul>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>

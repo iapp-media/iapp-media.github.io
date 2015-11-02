@@ -32,11 +32,12 @@ namespace MiniStore
                 if (Request.QueryString["SN"] == null)
                 {
                     Response.Redirect("Default.aspx?SN=OfficACC");
+                     
                 }
 
                 jump = "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "";
                 L_MyStore.Text = " <li><a href='" + jump + "' id='GO_Mini' target='_self' >打造自己的微店</a></li>" +
-                                 " <li><a href='#'>加入行動分店</a></li>" +
+                                 " <li><a href='javascript:void(0)'>加入行動分店</a></li>" +
                                  " <li><a href='http://www.iapp-media.com/Login/profile.aspx'> 編輯會員資料</a></li> " +
                                  " <li><a href='javascript:void(0)'  >我的拍賣</a></li>" +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "' target='_self' >訂單記錄</a></li>";
@@ -48,6 +49,7 @@ namespace MiniStore
             if (Comm.DeleCoookie("iapp_uid") == 1)
             {
                 Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "','_self')</Script>");
+            
             }
         }
     }
