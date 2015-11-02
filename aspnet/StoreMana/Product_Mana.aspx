@@ -5,8 +5,8 @@
     <div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
                 <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">商品建檔</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
                 <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
             </ul>
         </div>
@@ -34,9 +34,8 @@
                                  <asp:Repeater ID="RP1" runat="server">
                 <HeaderTemplate>
                     <div class="ProMLtit col-xs-12">
-                        <div class="col-xs-4 ListTitle">商品名稱</div>
-                        <div class="col-xs-4 ListTitle">&nbsp;</div>
-                        <div class="col-xs-4 ListTitle">&nbsp;</div>
+                        <div class="col-xs-12 ListTitle">商品名稱</div>
+                        
                         <div class="col-xs-4 ListTitle">價格</div>
                         <div class="col-xs-4 ListTitle">建檔日期</div>
                         <div class="col-xs-4 ListTitle">&nbsp;</div>
@@ -45,6 +44,9 @@
                 <ItemTemplate>
                     <div class="ProMaBOX col-xs-12 ToBoPad">
                         <div class="ProMain col-xs-12">
+                            <div>
+                                <img src="img/000000102601.jpg" />
+                            </div>
                             <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
                                 <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
                             </div>

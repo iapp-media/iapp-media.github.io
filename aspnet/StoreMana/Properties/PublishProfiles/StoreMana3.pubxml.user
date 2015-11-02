@@ -23,10 +23,10 @@
       <publishTime>11/02/2015 11:21:07</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/02/2015 14:24:38</publishTime>
+      <publishTime>11/02/2015 16:46:00</publishTime>
     </File>
     <File Include="bin/StoreMana.pdb">
-      <publishTime>11/02/2015 14:24:38</publishTime>
+      <publishTime>11/02/2015 16:46:00</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -59,7 +59,7 @@
       <publishTime>11/02/2015 14:14:53</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/02/2015 16:36:24</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -197,16 +197,16 @@
       <publishTime>10/30/2015 16:21:20</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>10/30/2015 11:20:05</publishTime>
+      <publishTime>11/02/2015 16:28:02</publishTime>
     </File>
     <File Include="Product_Img.aspx">
       <publishTime>10/29/2015 17:33:30</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>10/30/2015 16:18:41</publishTime>
+      <publishTime>11/02/2015 16:45:50</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>10/30/2015 16:21:20</publishTime>
+      <publishTime>11/02/2015 16:42:35</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
       <publishTime>10/30/2015 16:55:24</publishTime>
@@ -218,7 +218,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/02/2015 14:24:39</publishTime>
+      <publishTime>11/02/2015 17:07:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

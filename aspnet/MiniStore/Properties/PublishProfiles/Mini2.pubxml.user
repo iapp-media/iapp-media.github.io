@@ -14,7 +14,7 @@
       <publishTime>10/30/2015 18:27:11</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/02/2015 12:01:47</publishTime>
+      <publishTime>11/02/2015 14:14:56</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -29,7 +29,7 @@
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="Buy_Ctrl.aspx">
-      <publishTime>11/02/2015 13:34:56</publishTime>
+      <publishTime>11/02/2015 14:14:56</publishTime>
     </File>
     <File Include="Buy_Detail.aspx">
       <publishTime>11/02/2015 10:39:45</publishTime>
@@ -41,7 +41,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/02/2015 13:55:36</publishTime>
+      <publishTime>11/02/2015 15:22:03</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -224,7 +224,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>11/02/2015 13:55:11</publishTime>
+      <publishTime>11/02/2015 14:15:50</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -257,7 +257,7 @@
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
     <File Include="Order_prn.aspx">
-      <publishTime>10/30/2015 16:55:24</publishTime>
+      <publishTime>11/02/2015 15:23:03</publishTime>
     </File>
     <File Include="Product_Detail.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -275,7 +275,7 @@
       <publishTime>11/02/2015 11:21:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/02/2015 13:58:19</publishTime>
+      <publishTime>11/02/2015 16:36:27</publishTime>
     </File>
   </ItemGroup>
 </Project>

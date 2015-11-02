@@ -73,7 +73,32 @@
                 <HeaderTemplate>
                 </HeaderTemplate>
                 <ItemTemplate>
-
+                    
+                    <div class="QMargin col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-11 BTbox ShareMargin IssueUI1">
+                                <div class="Qutop">
+                                    <p class="TBlack"> <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Question")%>'></asp:Literal></p>
+                                    <p class="TBlack TRBC">YYYY12313</p>
+                                    <p class="TRBC"><asp:Literal ID="Literal4" runat="server" Text='<%# Bind("agoday")%>'></asp:Literal></p>
+                                </div>
+                                <p class="TRBC">我的果菜汁什麼時候送來?</p>
+                            </div>
+                            <div class="col-xs-11 BTbox TalkUI"> 
+                            <asp:HyperLink ID="HyperLink1" CssClass="TBlack TalkR" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+                                     回覆
+                            </asp:HyperLink>
+                            </div>
+                            <div class="col-xs-11 BTbox IssueUI2">
+                                <div class="Qutop">
+                                    <p class="TBlack">回覆</p>
+                                    <p class="TBlack TRBC">賣家</p>
+                                    <p class="TRBC">5天前</p>
+                                </div>
+                                <p class="TRBC"> <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Ans")%>'></asp:Literal></p>
+                            </div>
+                        </div>
+                    </div>
                     <!--<div class="col-xs-12 libor paynumber">
                             <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Question")%>'></asp:Literal>
                             <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("agoday")%>'></asp:Literal>

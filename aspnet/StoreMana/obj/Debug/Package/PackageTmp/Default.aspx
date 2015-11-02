@@ -3,10 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="BTNcontent">
-        <asp:Button Text="商品管理" runat="server" CssClass="btn btn-warning  ButModdle DefButModdle" />
-        <asp:Button ID="Button1" Text="客戶管理" runat="server" CssClass="btn btn-warning  ButModdle DefButModdle" />
-        <asp:Button ID="Button2" Text="訂單管理" runat="server" CssClass="btn btn-warning ButModdle DefButModdle" />
-        <asp:Button ID="Button3" Text="訊息管理" runat="server" CssClass="btn btn-warning ButModdle DefButModdle" />
-        <asp:Button ID="Button4" Text="設定" runat="server" CssClass="btn btn-warning  ButModdle DefButModdle" />
+        
+        <a href="#" class="btn btn-warning  ButModdle DefButModdle"><img src="#" alt="Alternate Text" />商品管理<span>3</span></a>
+         <a href="#" class="btn btn-warning  ButModdle DefButModdle"><img src="#" alt="Alternate Text" />客戶管理<span>3</span></a>
+         <a href="#" class="btn btn-warning  ButModdle DefButModdle"><img src="#" alt="Alternate Text" />訂單管理<span>3</span></a>
+         <a href="#" class="btn btn-warning  ButModdle DefButModdle"><img src="#" alt="Alternate Text" />訊息管理<span>3</span></a>
+         <a href="#" class="btn btn-warning  ButModdle DefButModdle"><img src="#" alt="Alternate Text" />設定<span>3</span></a>
     </div>
 </asp:Content>

@@ -10,6 +10,8 @@ a {
     color:#ff9933;
 }
 
+
+
 .TRC {
     color: #fc5d20 !important;
 }
@@ -127,6 +129,9 @@ a {
 .ListLen {
     width: 100%;
     height: 40px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
 }
 
 
@@ -323,14 +328,16 @@ a {
     float: left;
     padding: 5px 4px;
     text-align: right;
+    font-size: 16px;
 }
 
 .DTimg {
-    /* height: 100%; */
-    /* padding-bottom: 11px; */
+   
     width: 25%;
-    /* height: 100px; */
-    /* outline: 1px solid#f00; */
+    
+}
+.BuyDTimg {
+    width:100%;
 }
 
 .DTimg img {
@@ -9462,6 +9469,7 @@ a {
     outline: none;
     background-color: #eee;
     float: left;
+    font-size: 16px;
 }
 
 .input-number,
