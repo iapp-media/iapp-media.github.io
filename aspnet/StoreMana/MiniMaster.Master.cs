@@ -14,10 +14,10 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-                if (Comm.Store_ID() == -1)
-                {
-                    Comm.SaveCookie("iapp_sid", "7");
-                }
+                Comm.DeleCoookie("iapp_sid");
+            
+                    Comm.SaveCookie("iapp_sid", "4");
+               
 
                 if (Comm.Store_ID() == -1)
                 {

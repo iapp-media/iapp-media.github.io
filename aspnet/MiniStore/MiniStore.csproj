@@ -114,7 +114,9 @@
     <Content Include="Order_prn.aspx" />
     <Content Include="P_MSG.aspx" />
     <Content Include="ShopCarBaby.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuyFont.Master.cs">
@@ -176,6 +178,7 @@
     </Compile>
     <Compile Include="ShopCarBaby.aspx.cs">
       <DependentUpon>ShopCarBaby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ShopCarBaby.aspx.designer.cs">
       <DependentUpon>ShopCarBaby.aspx</DependentUpon>

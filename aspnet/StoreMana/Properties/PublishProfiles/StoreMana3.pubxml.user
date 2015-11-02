@@ -17,16 +17,16 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/30/2015 09:34:27</publishTime>
+      <publishTime>10/31/2015 09:28:02</publishTime>
     </File>
     <File Include="bin/JustyLibrary.pdb">
-      <publishTime>10/30/2015 09:34:27</publishTime>
+      <publishTime>10/31/2015 09:28:02</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>10/30/2015 11:20:09</publishTime>
+      <publishTime>10/31/2015 09:40:47</publishTime>
     </File>
     <File Include="bin/StoreMana.pdb">
-      <publishTime>10/30/2015 11:20:09</publishTime>
+      <publishTime>10/31/2015 09:40:47</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -41,7 +41,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/30/2015 12:36:12</publishTime>
+      <publishTime>10/30/2015 17:57:14</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -182,19 +182,19 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>10/30/2015 11:40:08</publishTime>
+      <publishTime>10/30/2015 16:35:12</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Msg_Mana.aspx">
-      <publishTime>10/30/2015 11:47:24</publishTime>
+      <publishTime>10/30/2015 17:56:49</publishTime>
     </File>
     <File Include="OrderMana.aspx">
       <publishTime>10/30/2015 12:37:23</publishTime>
     </File>
     <File Include="Order_Detail.aspx">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>10/30/2015 16:21:20</publishTime>
     </File>
     <File Include="Product_Add.aspx">
       <publishTime>10/30/2015 11:20:05</publishTime>
@@ -203,16 +203,22 @@
       <publishTime>10/29/2015 17:33:30</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>10/30/2015 11:42:49</publishTime>
+      <publishTime>10/30/2015 16:18:41</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>10/30/2015 11:54:50</publishTime>
+      <publishTime>10/30/2015 16:21:20</publishTime>
+    </File>
+    <File Include="Setting_Gerent.aspx">
+      <publishTime>10/30/2015 16:55:24</publishTime>
+    </File>
+    <File Include="Setting_SInfo.aspx">
+      <publishTime>10/30/2015 16:55:24</publishTime>
     </File>
     <File Include="Svim.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/30/2015 14:30:23</publishTime>
+      <publishTime>10/31/2015 09:41:55</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -16,6 +16,9 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
+                Comm.DeleCoookie("iapp_uid");
+                Comm.SaveCookie("iapp_uid", "2");
+
                 string jump = "";
                 if (Comm.User_ID() == -1)
                 {

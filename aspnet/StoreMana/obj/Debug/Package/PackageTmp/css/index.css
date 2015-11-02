@@ -1,4 +1,4 @@
-/* list Library */
+
 
 body {
     background-color: #f5f5f5;
@@ -10,16 +10,15 @@ body {
 a {
     text-decoration: none;
 }
-
-.ThreeBTN {
-    background-color: #fd9a33 !important;
-    border-color: #fd9a33;
-    text-align: center !important;
-    color: #fff !important;
-    border-radius: 3px;
-    font-size: 18px;
+.QMargin {
+    margin:12px 0;
 }
+.ShareMargin {
+    margin:5px 0;
+}
+text
 
+/*TEXT*/
 .TRC {
     color: #fc5d20 !important;
 }
@@ -37,8 +36,9 @@ a {
     color: #000 !important;
 }
 
-.TGray {
+.TBlack {
     color: #000;
+    font-size:18px;
 }
 
 .TRBC {
@@ -50,6 +50,63 @@ a {
     text-align: center;
     font-size: 150%;
 }
+
+
+
+/* ALLBOX */
+#content {
+    position: relative;
+    top: 114px;
+}
+.BTbox {
+    padding: 6px 12px;
+    background-color:#fff;
+}
+
+    .BTbox .BTleft,
+    .BTbox .BTright {
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 20px;
+        width: 50%;
+    }
+
+.BTright {
+    float: right;
+    border: 1px solid #aaa;
+}
+.Qutop p {
+    display:inline-block;
+    padding-right:12px;
+}
+    .Qutop p:last-child {
+        float:right;
+    }
+.IssueUI1 {
+    border-radius: 0 10% 0 0/0 50% 0 0;
+}
+.IssueUI2 {
+    border-radius: 0 0 10% 0/0 0 50% 0;
+    background-color:#ffeed0;
+}
+.TalkUI {
+    background-color:#ffeed0;
+}
+.TalkR {
+    float:right;
+}
+    
+
+
+.ThreeBTN {
+    background-color: #fd9a33 !important;
+    border-color: #fd9a33;
+    text-align: center !important;
+    color: #fff !important;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
 
 .AlltexC {
     text-align: center;
@@ -559,7 +616,7 @@ a {
 }
 
 .BorRightno {
-    border-right: none;
+    border-right: none !important;
 }
 
 .BorBottompno {
@@ -653,23 +710,9 @@ a {
     margin: 0;
 }
 
-.spansizebig {
-    font-size: 120%;
-    line-height: 2.2;
-    margin-left: 11px;
-    color: #7b7b7b;
-}
 
-.spansizemid {
-    float: right;
-    line-height: 2.2;
-    color: #ccc;
-}
 
-.spansizemidleft {
-    color: #777878;
-    font-size: 150%;
-}
+
 
 .Issue {
     padding: 6px 12px !important;
@@ -1786,6 +1829,7 @@ ul.swiper-wrapper li a {
 .insidecare {
     border-radius: 2px;
     border: 4px solid #ff9933;
+    background-color:#aaa;
 }
 
 .insidecare ul {
@@ -1817,11 +1861,7 @@ ul.swiper-wrapper li a {
     font-weight: inherit;
 }
 
-.buydivmove {
-    -webkit-transform: translate3d(0, 0, 0);
-    transition: all 600ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    position: relative;
-}
+
 
 .sendadress input,
 .sendadress textarea {
@@ -2068,7 +2108,7 @@ ul.swiper-wrapper li a {
 
 /* inclu CSS */
 
-.paynumber .magclose {
+/*.paynumber .magclose {
     margin-right: 0 !important;
 }
 
@@ -2082,7 +2122,7 @@ ul.swiper-wrapper li a {
     border-radius: 2px;
     background-color: #fff;
     padding: 7px 12px;
-}
+}*/
 
 .fonts {
     font-size: 150%;
