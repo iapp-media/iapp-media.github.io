@@ -27,13 +27,7 @@
                                 <h1 class="col-xs-6">
                                     <asp:Literal ID="L_Name" runat="server"></asp:Literal></h1>
                             </div>
-                            <div class="col-xs-12 questionBox">
-                                <div class="row">
-                                    <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4 question" OnClick="BT_MSG_Click" />
-                                    <asp:Button ID="BT_Like" runat="server" Text="喜歡" CssClass="col-xs-4 question" />
-                                    <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4 question" />
-                                </div>
-                            </div>
+ 
                             <div class="col-xs-12 libor CBtitle">
 
                                 <asp:TextBox ID="TB_Name" runat="server" CssClass="col-xs-12"></asp:TextBox>
@@ -51,6 +45,13 @@
                             <div class="col-xs-12 libor CBbot CBarea">
                                 <label for="" class="col-xs-12">產品介紹</label>
                                 <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>
+                            </div>
+                             <div class="col-xs-12 questionBox">
+                                <div class="row">
+                                    <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4 question" OnClick="BT_MSG_Click" />
+                                    <asp:Button ID="BT_Like" runat="server" Text="喜歡" CssClass="col-xs-4 question" />
+                                    <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4 question" />
+                                </div>
                             </div>
                             <div class="col-xs-12 libor CBbot CBarea CBline">
                                 <div></div>
