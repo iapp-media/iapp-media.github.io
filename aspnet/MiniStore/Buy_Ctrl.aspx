@@ -40,9 +40,9 @@
                                             <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
                                            
                                         </div>
-                                        <div class="Detailsbot">
+                                        
                                              <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
-                                        </div>
+                                        
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -56,11 +56,11 @@
                         <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset TRC" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad">
-                        <label for="" class="col-xs-6 padReset">付款方式</label>
+                        <label for="" class="col-xs-4 padReset">付款方式</label>
                         <asp:DropDownList ID="DL_Payment" runat="server" CssClass="form-control marReset"></asp:DropDownList>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad Divide">
-                        <label class="col-xs-6 padReset">運送方式</label>
+                        <label class="col-xs-4 padReset">運送方式</label>
                         <asp:DropDownList ID="DL_Delivery" runat="server" CssClass="form-control marReset" placeholder="請選擇運送方式"></asp:DropDownList>
                     </div>
                     <div class="col-xs-12 libor CBbot CBarea CBline padTOP">
@@ -75,13 +75,7 @@
                             <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-xs-12 libor paytheway PaylastBox">
-                        
-                        <div class="PLBTop col-xs-7">
-                            <asp:CheckBox ID="CBinfo" runat="server" Text="是" CssClass="AllPad" />
-                          <label class="col-xs-5 padReset">儲存收件人資訊以便下次使用</label>
-                        </div>
-                    </div>
+                   
                     <%--                    <div class="col-xs-12 libor paytheway  PaylastBox">
                         <label class="col-xs-5 padReset">使用上次記錄</label>
                         <div class="PLBBot PLBTop col-xs-7">

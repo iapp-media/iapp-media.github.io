@@ -80,9 +80,7 @@ namespace MiniStore
             }   
         }
         protected void BT_Confirm_Click(object sender, EventArgs e)
-        {
-            if (CBinfo.Checked == true)
-            {
+        { 
                 Main.ParaClear();
                 Main.ParaAdd("@Customer_ID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
                 Main.ParaAdd("@Num", 1, SqlDbType.Int);      //常用設定組別 先暫時都給1 之後要改
@@ -93,7 +91,7 @@ namespace MiniStore
 
                 Main.NonQuery("Insert into Customer_info (Customer_ID, Num, Contact_Name, TEL, MNO, Addr) Values " +
                               " (@Customer_ID, @Num, @Contact_Name, @TEL, @MNO, @Addr)");
-            }
+         
              
             //金額資料直接再DB撈已防client竄改值??
             string OrderNo = "", strOrderID = null; //訂單編號之後也要SQL 處理?

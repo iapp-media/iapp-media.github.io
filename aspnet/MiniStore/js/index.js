@@ -124,16 +124,20 @@ $(document).ready(function() {
         var slideWidth = $('#slider ul li').width();
         var slideHeight = $('#slider ul li').height();
         var sliderUlWidth = slideCount * slideWidth;
+        var screenW = $('#slider').width();
+        console.log(screenW);
 
-        $('#slider').css({
-            width: slideWidth,
-            height: slideHeight
-        });
+        //$('#slider').css({
+        //    width: screenW,
+        //    height: slideHeight
+        //});
 
         $('#slider ul').css({
-            width: sliderUlWidth,
-            marginLeft: -slideWidth
+            width: screenW * slideCount
         });
+        $('#slider ul li').css({
+            width: screenW
+        })
 
         $('#slider ul li:last-child').prependTo('#slider ul');
 
