@@ -280,7 +280,7 @@ function compress() {
            document.getElementById('p' + current).src = imgurl;
       },
       error: function (ss) {
-          alert('2');
+         //  alert('2');
       }
   });
      
