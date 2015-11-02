@@ -24,9 +24,10 @@ $(document).ready(function () {
     $("#mSearch").keypress(function (e) {
         var key = window.event ? e.keyCode : e.which;
         if (key == 13) {
+            // alert('jump');
             window.open('Default.aspx?SN=OfficACC&w=' + encodeURI($("#mSearch").val()), "_blank");
             //window.open('Default.aspx?SN=OfficACC&w=' + encodeURI($("#mSearch").val()), "_self");
-           // alert('jump');
+           
         }
     });
     function getQValue(varname) {

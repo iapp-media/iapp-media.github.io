@@ -60,6 +60,7 @@ namespace MiniStore
             if (Comm.DeleCoookie("iapp_uid") == 1)
             {
                 Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "','_self')</Script>");
+           //
             }  
         }
     }

@@ -21,11 +21,9 @@ namespace AppPortal
             }
             else
             { Response.Write(""); }
-           
+          
             Response.End(); 
-        }
-
- 
+        } 
 
         public string Querylist()
         {
@@ -42,7 +40,7 @@ namespace AppPortal
                           "<img class=\"finder-app\" src=\"" + src + "\">" + dr.Rows[i]["Product_Name"] + "</a></li>" + "\n\r");
             }
             ss.Append("</ul>" + "\n");
-
+            //
  
 
             return ss.ToString();
