@@ -55,7 +55,7 @@
                     <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
                         <div class="row">
                             <a class="navbar-brand" href="default.aspx">
-                                <img class="iapplogo" src="img/ministorelogo.png">
+                                <img class="iapplogo" src="img/ministorelogo.png" />
                             </a>
                         </div>
                     </div>
@@ -70,22 +70,17 @@
                         </li>
                         <li>開微店</li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
+                        <li>
+                            <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
                     </ul>
-                    <div class="menuAJAX col-xs-12">
-                        <div class="row">
-                            <ul>
-                                <li>商品內容頁</li>
-                                <li>購買商品手續</li>
-                                <li>確認購物商品</li>
-                            </ul>
-                        </div>
-                    </div>
+
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
-                     
+
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
-                        <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />
+                              <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server"></asp:TextBox>
+                     <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
                     <div class="col-xs-2 search-sm">
@@ -97,29 +92,6 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                        <!-- mobile登入／註冊 -->
-                    <div class="col-xs-2 login-sm">
-                        <div class="input-group">
-                            <div class="input-group-btn">
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <!-- mobile會員選單 -->
-                    <div>
-                        <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
-                            <li><a href="#">我的iApp</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">收藏的iApp</a></li>
-                            <li class="divider"></li>
-                            <li><a href="login/m-login/m-profile.html">編輯個人資料</a></li>
-                            <li class="divider"></li>
-                            <li class="m-logout">
-                                <p><a href="#">登出</a></p>
-                            </li>
-                        </ul>
                     </div>
                     <!-- Web -->
                     <!-- Web 搜尋bar -->
@@ -138,55 +110,16 @@
                             </div>
                             <!-- /input-group -->
                         </div>
-                        <!-- 登入／註冊 -->
-                        <div class="col-sm-2 col-md-1 login-box">
-                            <a class='iframe-info' href="login/login/login.html">
-                                <button type="button" class="btn btn-default navbar-btn1 col-md-12">
-                                    登入／註冊
-                                </button>
-                            </a>
-                        </div>
-                        <!-- 會員登入後 -->
-                        <div class="col-sm-2 col-md-1 icon-box">
-                            <img class="usericon" src="img/photoicon.png" />
-                            <div class="username-icon">
-                                <h4>Digital+</h4>
-                            </div>
-                        </div>
                         <a href="#" class="menusandwich example1"><span></span></a>
                     </div>
                     <div class="col-xs-12 allClassification swiper-container">
                         <div class="row swiper-container">
-                            <asp:Literal ID="L_Cate" runat="server"></asp:Literal> 
+                            <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <!-- 會員資料 -->
-        <div class="jumbotron">
-            <img class="user-icon" src="img/photoicon.png" />
-            <div class="option-user">
-                <a href="#">
-                    <div class="my-iapp">
-                        <p>我的App</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="collect-iapp">
-                        <p>收藏的App</p>
-                    </div>
-                </a>
-            </div>
-            <div class="logout-user">
-                <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-                <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
-                    <li><a class='iframe-info' href="http://www.iapp-media.com/basic/profile.aspx">會員資料</a></li>
-                    <li class="divider"></li>
-                    <li id="logout"><a href="#">登出</a></li>
-                </ul>
-            </div>
-        </div>
         <!-- 回到頂部 -->
         <a href="#">
             <img class="back-top" src="img/top.png" />
@@ -210,30 +143,7 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-    </script>
-    <script>
-        // 建立cookie
-        function createCookie(name, value, days, path) {
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                var expires = "; expires=" + date.toGMTString();
-            }
-            else var expires = "";
-            document.cookie = name + "=" + value + expires + "; path=/";
-        }
-        //讀取
-        function readCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-    </script>
+    </script> 
     <asp:ContentPlaceHolder ID="footJs" runat="server">
     </asp:ContentPlaceHolder>
 </body>
