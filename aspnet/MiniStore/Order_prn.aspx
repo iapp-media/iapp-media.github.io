@@ -9,16 +9,12 @@
     </div>
     <ul class="buydivmove">
         <li class="productcare col-xs-12 insidecare AllBGC">
-            <div class="col-xs-12 padTOP">
-                <div class="row">
-                    <div class="col-xs-12"> 
-                        <div class="row">
-                            <div class="col-xs-12"> 
+            <div class="row">    
                                 <asp:Repeater ID="RP4" runat="server">
                                     <ItemTemplate>
                                         <div class="details" runat="server" id="DivDetails">
-                                            <div class="col-xs-5 DTimg">
-                                                <img src="<%# ShowImg(Eval("Item_ID")) %>" alt="Alternate Text" class="productSize imgH" />
+                                            <div class="col-xs-5">
+                                                <img src="<%# ShowImg(Eval("Item_ID")) %>" alt="Alternate Text" class=" imgH" />
                                             </div>
                                             <div class="col-xs-7">
                                                 <h3><%# Eval("Name") %></h3>
@@ -33,33 +29,27 @@
                                 <asp:Literal ID="L4" runat="server" Visible="false"></asp:Literal>
                                 <asp:SqlDataSource ID="SD4" runat="server"></asp:SqlDataSource>  
                             </div>
-                            <div class="col-xs-12">
+                            <div>
                                 <asp:Repeater ID="RP1" runat="server">
                                     <HeaderTemplate>
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <div class="row"> 
+                                        <div class="row">
                                             <div class="ListLen">
                                                 <div class="col-xs-4">
-                                                    <div class="row">
-                                                        <p class="BoxLeft TBC">應付金額</p>
-                                                    </div>
+                                                    <p class="BoxLeft TBC">應付金額</p>
                                                 </div>
-                                                <div class="col-xs-8 padReset">
+                                                <div class="col-xs-8">
                                                     <div class="ValueRight TBC">
-
                                                         <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Cost")%>'></asp:Literal>
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="ListLen">
                                                 <div class="col-xs-4">
-                                                    <div class="row">
-                                                        <p class="BoxLeft TBC">付款方式</p>
-                                                    </div>
+                                                    <p class="BoxLeft TBC">付款方式</p>
                                                 </div>
-                                                <div class="col-xs-8 padReset">
+                                                <div class="col-xs-8">
                                                     <div class="ValueRight TRBC">
                                                         <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("Payment")%>'></asp:Literal>
                                                     </div>
@@ -67,11 +57,9 @@
                                             </div>
                                             <div class="ListLen">
                                                 <div class="col-xs-4">
-                                                    <div class="row">
-                                                        <p class="BoxLeft TBC">運送方式</p>
-                                                    </div>
+                                                    <p class="BoxLeft TBC">運送方式</p>
                                                 </div>
-                                                <div class="col-xs-8 padReset">
+                                                <div class="col-xs-8 ">
                                                     <div class="ValueRight TRBC">
                                                         <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Delivery")%>'></asp:Literal>
                                                     </div>
@@ -85,9 +73,10 @@
                                 <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                                 <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
                             </div>
-                        </div>
-                        <div class="row BorObot">
+                  
+                        <div class="row">
                             <div class="col-xs-12">
+                                
                                 <asp:Repeater ID="RP2" runat="server">
                                     <HeaderTemplate>
                                         <div class="ListLen">
@@ -139,6 +128,7 @@
                                 </asp:Repeater>
                                 <asp:Literal ID="L2" runat="server" Visible="false"></asp:Literal>
                                 <asp:SqlDataSource ID="SD2" runat="server"></asp:SqlDataSource>
+                                </div>
                             </div>
                         </div>
                         <div class="row" runat="server" id="Div_Store_ACInfo">
@@ -249,15 +239,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 CBBTN">
+                       
+                    
+                    
+                </div>
+            <div class="col-xs-12 CBBTN">
                         <div class="row">
                             <asp:Button ID="Button1" runat="server" Text="送出" OnClick="BTsend_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
                         </div>
                     </div>
-                </div>
-            </div>
+          </div>           
         </li>
     </ul>
 
