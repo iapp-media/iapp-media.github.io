@@ -44,6 +44,12 @@ namespace MiniStore
                 Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar); 
                 str += " and cate_id=@cate_id ";
             }
+            if (Request.QueryString["w"] != null)               //關鍵字
+            {
+                str += " and ( Product_Name Like @KW or Price like @KW )  ";
+                //HL1.NavigateUrl += "&t=" + Request.QueryString["w"];
+                Main.ParaAdd("@KW", "%" + HttpUtility.UrlDecode(Request.QueryString["w"]) + "%", SqlDbType.NVarChar);
+            }
 
             StringBuilder ss = new StringBuilder();
             DataTable dr = Main.GetDataSetNoNull(str);

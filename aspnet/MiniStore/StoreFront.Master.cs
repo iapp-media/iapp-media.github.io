@@ -41,6 +41,7 @@ namespace MiniStore
                                  " <li>我的帳戶</li>" +
                                  " <li><a href='#'>會員資料</a></li>" +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
+                                 
 
                 L_Cate.Text = "<ul class=\"swiper-wrapper\"> ";
 
@@ -52,6 +53,14 @@ namespace MiniStore
                 } 
                 L_Cate.Text += " </ul>"; 
             }
+        }
+
+        protected void LBLogout_Click(object sender, EventArgs e)
+        {
+            if (Comm.DeleCoookie("iapp_uid") == 1)
+            {
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "','_self')</Script>");
+            }  
         }
     }
 }
