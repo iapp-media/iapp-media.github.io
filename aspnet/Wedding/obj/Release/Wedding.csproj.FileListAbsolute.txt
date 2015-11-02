@@ -1,0 +1,8 @@
+D:\DataYi\AppWeb\Wedding\bin\Wedding.dll
+D:\DataYi\AppWeb\Wedding\bin\Wedding.pdb
+D:\DataYi\AppWeb\Wedding\bin\JustyLibrary.dll
+D:\DataYi\AppWeb\Wedding\bin\ThoughtWorks.QRCode.dll
+D:\DataYi\AppWeb\Wedding\bin\JustyLibrary.pdb
+D:\DataYi\AppWeb\Wedding\obj\Release\Wedding.dll
+D:\DataYi\AppWeb\Wedding\obj\Release\Wedding.pdb
+D:\DataYi\AppWeb\Wedding\obj\Release\Wedding.csprojResolveAssemblyReference.cache
