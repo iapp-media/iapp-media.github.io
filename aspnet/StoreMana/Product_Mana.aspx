@@ -17,9 +17,9 @@
             <li>
                 <div class="col-xs-12 insidecare">
                     <div class="row">
-                        <div class="col-xs-12 libor paytheway PadLib">
-                            <label class="TBC">商品類別</label>
-                            <asp:DropDownList class="form-control marReset" ID="DL" runat="server">
+                        <div class="col-xs-12 BTbox">
+                            <label class="BTleft">商品類別</label>
+                            <asp:DropDownList class="BTright" ID="DL" runat="server">
                             </asp:DropDownList>
                         </div>
                         <div class="col-xs-12 libor status CBbot CBBTN">
@@ -42,14 +42,15 @@
                                     </div>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <div class="ProMaBOX col-xs-12 ToBoPad">
+                                    <div class="ProMaBOX col-xs-12">
                                         <div class="ProMain col-xs-12">
-                                            
                                             <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
                                                 <div class="SHead">
-                                                <img src='<%# ShowImg(Eval("FilePath"))%>' />
-                                            </div>
-                                                <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
+                                                    <img src='<%# ShowImg(Eval("FilePath"))%>' />
+                                                </div>
+                                                <span>
+                                                    <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
+                                                </span>
                                             </div>
 
                                             <div class="col-xs-4 ProLPad TRC BorLeftpno BorBottompno">
