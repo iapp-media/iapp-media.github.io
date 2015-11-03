@@ -37,8 +37,11 @@ namespace MiniStore
         {
  
             Main.ParaClear();
-            Main.ParaAdd("@SID", SID, SqlDbType.NVarChar); 
-            str = "select a.IDNo,Product_Name,Price,b.FilePath from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1 and a.store_id=@SID ";
+            Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);
+            Main.ParaAdd("@MyID", Comm.User_ID(), SqlDbType.Int);
+            str = "select a.IDNo,Product_Name,Price,b.FilePath ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK" +
+                " from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1 and a.store_id=@SID ";
+
             if (Request.QueryString["c"] != null)
             {
                 Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar); 
@@ -57,7 +60,10 @@ namespace MiniStore
             {
                 for (int i = 0; i < dr.Rows.Count; i++)
                 {
-                    DataRow dw = dr.Rows[i]; 
+                    DataRow dw = dr.Rows[i];
+
+                    string iLK = "";
+                    if (Comm.Cint2(dw["iLK"].ToString()) > 0) { iLK = " checked"; }
 
                     ss.Append("<div class='item'>" + "\n\r");
                     ss.Append("  <div class='imgcenter'>\n\r");
@@ -74,8 +80,13 @@ namespace MiniStore
                     ss.Append("         </div>" + "\n");
                     ss.Append("         <div class='col-xs-12'>" + "\n\r");
                     ss.Append("             <div class='row'>" + "\n");
-                    ss.Append("             <input type='checkbox'  name='CC' />" + "\n");
-                    ss.Append("             <label for='c3'></label>" + "\n");
+
+                    ss.Append("                <label class=\"label--checkbox\">\n\r");
+                    ss.Append("                    <input type=\"checkbox\" class=\"like\" onclick=\"likeit(this)\" id=\"k" + dw["IDNo"].ToString() + "\"" + iLK + ">  <p id=\"kn" + dw["IDNo"].ToString() + "\"></p>\n\r"); 
+                    ss.Append("                </label>\n\r");
+                    //ss.Append("             <input type='checkbox'  name='CC' />" + "\n");
+                    //ss.Append("             <label for='c3'></label>" + "\n");
+
                     ss.Append("             </div>" + "\n");
                     ss.Append("         </div>" + "\n");
                     ss.Append("     </div>" + "\n");

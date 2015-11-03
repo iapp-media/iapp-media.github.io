@@ -45,8 +45,11 @@ namespace MiniStore
 
                 L_Cate.Text = "<ul class=\"swiper-wrapper\"> ";
 
-                Main.WriteLog("select * from product_cate where Store_ID='" + Main.Scalar("select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "'") + "'");
-                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID='" + Main.Scalar("select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "'") + "'");
+                Main.ParaClear();
+                Main.ParaAdd("@SN", Request.QueryString["SN"], System.Data.SqlDbType.NVarChar);
+
+                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
+                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID=@SN )");
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
                     L_Cate.Text += "  <li class=\"swiper-slide col-xs-4\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></li>";
