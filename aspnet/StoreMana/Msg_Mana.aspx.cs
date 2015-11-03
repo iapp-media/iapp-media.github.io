@@ -16,8 +16,9 @@ namespace StoreMana
         {
              if (!IsPostBack)
             {
-                Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID=1 ", "name", "IDNO"); 
-                L.Text = "select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg order by CreatDate DESC";
+                Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Comm.Store_ID() + "' ", "name", "IDNO"); ;
+                L.Text = "Select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
+                         ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday from product_msg order by CreatDate DESC";
 
             }
 
@@ -36,7 +37,8 @@ namespace StoreMana
 
         protected void BT_Search_Click(object sender, EventArgs e)
         {
-            L.Text = "select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg  where 1=1 ";
+            L.Text = "select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
+                     ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday from product_msg  where 1=1 ";
 
             SD1.SelectParameters.Clear();
 
