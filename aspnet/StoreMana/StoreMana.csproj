@@ -69,7 +69,12 @@
     <Content Include="Cust_Mana.aspx" />
     <Content Include="img\000000102601.jpg" />
     <Content Include="img\cancel-01.png" />
+    <Content Include="img\Client.png" />
     <Content Include="img\icon_Q1.PNG" />
+    <Content Include="img\message.png" />
+    <Content Include="img\order.png" />
+    <Content Include="img\Product.png" />
+    <Content Include="img\setting.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\cropper.js" />
     <Content Include="js\exif.js" />
