@@ -114,6 +114,7 @@
     <Content Include="Order_history.aspx" />
     <Content Include="Order_prn.aspx" />
     <Content Include="P_MSG.aspx" />
+    <Content Include="search_List.aspx" />
     <Content Include="ShopCarBaby.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -176,6 +177,12 @@
     </Compile>
     <Compile Include="P_MSG.aspx.designer.cs">
       <DependentUpon>P_MSG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search_List.aspx.cs">
+      <DependentUpon>search_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search_List.aspx.designer.cs">
+      <DependentUpon>search_List.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShopCarBaby.aspx.cs">
       <DependentUpon>ShopCarBaby.aspx</DependentUpon>

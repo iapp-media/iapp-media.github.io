@@ -79,6 +79,11 @@
                     <div class="row">
                         <div class="col-xs-11 BTbox ShareMargin IssueUI1">
                             <div class="Qutop">
+                                <div>
+                                    <img src="#" alt="Alternate Text" /></div>
+                                <h1>棒球套件組</h1>
+                            </div>
+                            <div class="Qutop">
                                 <p class="TBlack">問題</p>
                                 <p class="TBlack TRBC">YYYY12313</p>
                                 <p class="TRBC"><%# Eval("agoday")%></p>

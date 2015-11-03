@@ -8,7 +8,7 @@
             <div class="col-xs-12">
                 <div class="row">
                     <div class="col-xs-12 libor Reply Issue">
-                        
+
                         <asp:TextBox ID="TB_Qen" runat="server" ReadOnly="true" CssClass="spansizebig" Visible="false"></asp:TextBox>
                         <asp:TextBox ID="TB_Ans" runat="server" Class="form-control" Rows="10" TextMode="MultiLine"></asp:TextBox>
                         <br />

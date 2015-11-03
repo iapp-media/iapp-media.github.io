@@ -9,6 +9,26 @@ body {
 
 a {
     color: #ff9933;
+    text-decoration:none;
+}
+/* unvisited link */
+a:link {
+    color: #ff9933;
+}
+
+/* visited link */
+a:visited {
+    color: #ff9933;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ff9933;
+}
+
+/* selected link */
+a:active {
+    color: #ff9933;
 }
 
 .TRC {
