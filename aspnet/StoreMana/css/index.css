@@ -20,6 +20,7 @@ a {
 .SHead {
     width:40px;
     height:40px;
+    position: absolute;
 }
     .SHead img {
         width:100%;
@@ -134,9 +135,10 @@ a {
 }
 
 .ProLPad {
-    height: 30px;
-    line-height: 30px;
+    height: 48px;
+    line-height: 48px;
     border: 1px solid #eee;
+    text-align: center;
 }
 
 .ProLtit {
@@ -155,6 +157,9 @@ a {
     background-color: #cccccc;
     padding: 4px 0;
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ProMaBOX:nth-child(odd) {
