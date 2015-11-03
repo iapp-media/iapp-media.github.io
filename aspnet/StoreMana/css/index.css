@@ -548,7 +548,7 @@ a {
 }
 
 .ListTitle {
-    font-size: 150%;
+    font-size: 16px;
     padding: 6px 12px;
     color: #838485;
 }
@@ -1736,7 +1736,7 @@ a.iframe-info.cboxElement {
 .allClassification {
     height: 50px;
     position: fixed;
-    z-index: 999;
+    z-index: 9;
     /* position: absolute; */
     overflow-x: hidden;
     overflow-y: hidden;

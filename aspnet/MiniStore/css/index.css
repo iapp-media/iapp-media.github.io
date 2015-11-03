@@ -30,6 +30,49 @@ a:hover {
 a:active {
     color: #ff9933;
 }
+.BTbox {
+    padding: 6px 12px;
+    background-color: #fff;
+}
+
+.BTbox .BTleft,
+.BTbox .BTright {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 20px;
+    width: 50%;
+    margin: 0;
+}
+
+.BTright {
+    float: right;
+    border: 1px solid #aaa;
+    font-size: 15px !important;
+}
+.Hisvalue {
+    width:100%;
+    font-size: 15px !important;
+    border: 1px solid #aaa;
+        padding: 6px 12px;
+}
+.ProMLtit {
+    background-color: #ffd5b3;
+    padding: 6px 0;
+}
+    .ProMLtit div {
+        background-color:#aca39c;
+        color:#fff;
+    }
+.ListTitle {
+    font-size: 16px;
+    padding: 6px 12px;
+    color: #838485;
+}
+
+.BoxCenter {
+    text-align: center;
+    padding: 6px 0px;
+}
 
 .TRC {
     color: #fc5d20 !important;
