@@ -240,7 +240,7 @@ $(document).ready(function () {
 
 
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
+        slidesPerView: 4,
         centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 0,

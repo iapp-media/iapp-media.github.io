@@ -30,7 +30,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
-    <link rel="stylesheet" href="css/reset.css" />
+  
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/masonry.css" />
@@ -116,9 +116,12 @@
                                     <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
                                         <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
                                     </button>
+                                   
                                 </div>
+
                                 <!-- /btn-group -->
                             </div>
+                             
                             <!-- /input-group -->
                         </div>
                         <a href="#" class="menusandwich example1"><span></span></a>
