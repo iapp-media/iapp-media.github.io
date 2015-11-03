@@ -17,6 +17,14 @@ a {
     margin: 5px 0;
 }
 
+.SHead {
+    width:40px;
+    height:40px;
+}
+    .SHead img {
+        width:100%;
+    }
+
 
 /*TEXT*/
 
@@ -848,8 +856,6 @@ a {
     user-select: none;
 }
 
-
-/* link lib */
 
 .listbox {
     outline: 3px solid #ff9933;

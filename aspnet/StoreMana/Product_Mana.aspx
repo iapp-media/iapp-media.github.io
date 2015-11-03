@@ -44,21 +44,22 @@
                                 <ItemTemplate>
                                     <div class="ProMaBOX col-xs-12 ToBoPad">
                                         <div class="ProMain col-xs-12">
-                                            <div>
+                                            
+                                            <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
+                                                <div class="SHead">
                                                 <img src='<%# ShowImg(Eval("FilePath"))%>' />
                                             </div>
-                                            <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
                                                 <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
                                             </div>
 
-                                            <div class="col-xs-4 ProLPad ProLtit TRC BorLeftpno BorBottompno">
+                                            <div class="col-xs-4 ProLPad TRC BorLeftpno BorBottompno">
                                                 NT:<asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Price")%>'></asp:Literal>
                                             </div>
-                                            <div class="col-xs-4 ProLPad ProLtit TGray BorBottompno">
+                                            <div class="col-xs-4 ProLPad TGray BorBottompno">
                                                 <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
                                             </div>
 
-                                            <div class="col-xs-4 ProLPad ProLtit TOCCenter BorRightno BorBottompno">
+                                            <div class="col-xs-4 ProLPad TOCCenter BorRightno BorBottompno">
                                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>' CssClass="TOC">
                                      詳細資訊
                                                 </asp:HyperLink>
