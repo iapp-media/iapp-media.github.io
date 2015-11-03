@@ -35,16 +35,19 @@
                             </div>
                             <div class="col-xs-12 libor productNum CBbot">
                                 <label for="" class="col-xs-6">商品售價</label>
-                                <asp:TextBox ID="TB_Price" runat="server" CssClass="col-xs-6"></asp:TextBox>
+                                <asp:Literal ID="TB_Price" runat="server"></asp:Literal>
+                           <%--     <asp:TextBox ID="TB_Price" runat="server" CssClass="col-xs-6"></asp:TextBox>--%>
                             </div>
 
                             <div class="col-xs-12 libor status CBbot">
                                 <label for="" class="col-xs-6">產品規格</label>
-                                <asp:TextBox ID="TB_Dimension" runat="server" CssClass="col-xs-6"></asp:TextBox>
+                                  <asp:Literal ID="TB_Dimension" runat="server"></asp:Literal>
+                          <%--      <asp:TextBox ID="TB_Dimension" runat="server" CssClass="col-xs-6"></asp:TextBox>--%>
                             </div>
                             <div class="col-xs-12 libor CBbot CBarea">
                                 <label for="" class="col-xs-12">產品介紹</label>
-                                <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>
+                                    <asp:Literal ID="TB_Description" runat="server"></asp:Literal>
+                            <%--    <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>--%>
                             </div>
                              <div class="col-xs-12 questionBox">
                                 <div class="row">

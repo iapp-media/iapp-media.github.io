@@ -46,7 +46,7 @@ namespace MiniStore {
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Price;
+        protected global::System.Web.UI.WebControls.Literal TB_Price;
         
         /// <summary>
         /// TB_Dimension 控制項。
@@ -55,7 +55,7 @@ namespace MiniStore {
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Dimension;
+        protected global::System.Web.UI.WebControls.Literal TB_Dimension;
         
         /// <summary>
         /// TB_Description 控制項。
@@ -64,7 +64,7 @@ namespace MiniStore {
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Description;
+        protected global::System.Web.UI.WebControls.Literal TB_Description;
         
         /// <summary>
         /// BT_MSG 控制項。
