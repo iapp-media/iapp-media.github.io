@@ -1,6 +1,57 @@
 //觸發
 
-$(document).ready(function() {
+$(document).ready(function () {
+    $("#mSearch").keydown(function () {
+        var x = $("#mSearch").val().length;
+        if (x >= 2) {
+            $('#listbox').empty();
+            $.ajax({
+                type: 'GET',
+                url: 'search_List.aspx?SN=' + encodeURI(getQValue("SN")) + '&w=' + encodeURI($("#mSearch").val()),
+                success: function (word) {
+                    if (word != "") {
+                        $("#listbox").append(word);
+                        $('.finder').show();
+                        $(".theme").hide();
+                    }
+                },
+                error: function () {
+                    alert('search_List.aspx?SN=' + getQValue("SN") + '&w=' + encodeURI($("#mSearch").val()));
+                }
+            });
+        } 
+    });
+    $("#mSearch").keypress(function (e) {
+        var key = window.event ? e.keyCode : e.which;
+        if (key == 13) {
+            // alert('jump');
+            window.open('Default.aspx?SN=OfficACC&w=' + encodeURI($("#mSearch").val()), "_blank");
+            //window.open('Default.aspx?SN=OfficACC&w=' + encodeURI($("#mSearch").val()), "_self");
+           
+        }
+    });
+    function getQValue(varname) {
+        var url = window.location.href;
+        var qparts = url.split("?");
+        if (qparts.length <= 1) {
+            return "";
+        } else {
+            var query = qparts[1];
+            var vars = query.split("&amp;");
+            var value = "";
+            for (i = 0; i < vars.length; i++) {
+                var parts = vars[i].split("=");
+                if (parts[0] == varname) {
+                    value = parts[1];
+                    break;
+                }
+            }
+            value = unescape(value);
+            value.replace(/\+/g, " ").replace("#", "");
+            return value;
+        }
+    }
+
     $("#user-login").click(function() {
         $(".m-profile").animate({
             height: 'toggle'

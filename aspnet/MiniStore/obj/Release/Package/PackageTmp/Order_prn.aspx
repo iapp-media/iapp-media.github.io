@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="col-xs-12 libor ContentTop">
-        <h1 class="col-xs-10">購物車明細</h1>
+        <h1 class="col-xs-10">購買明細</h1>
     </div>
     <ul class="buydivmove">
         <li class="productcare col-xs-12 insidecare AllBGC">
@@ -222,20 +222,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="ListLen">
-                                            <div class="col-xs-4">
-                                                <p class="BoxLeft">輸入驗證碼:</p>
-
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="ValueRight">
-                                                    <asp:TextBox ID="TBScode" runat="server" placeholder="輸入驗證碼" CssClass="ValTPad"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ListLen">
-                                            <img src="img/codee.jpg" alt="Alternate Text" class="codeeIMG" />
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +232,7 @@
                 </div>
             <div class="col-xs-12 CBBTN">
                         <div class="row">
-                            <asp:Button ID="Button1" runat="server" Text="送出" OnClick="BTsend_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
+                            <asp:Button ID="Button1" runat="server" Text="完成" OnClick="BTsend_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
                         </div>
                     </div>
           </div>           

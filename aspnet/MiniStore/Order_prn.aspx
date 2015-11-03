@@ -222,20 +222,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="ListLen">
-                                            <div class="col-xs-4">
-                                                <p class="BoxLeft">輸入驗證碼:</p>
-
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="ValueRight">
-                                                    <asp:TextBox ID="TBScode" runat="server" placeholder="輸入驗證碼" CssClass="ValTPad"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ListLen">
-                                            <img src="img/codee.jpg" alt="Alternate Text" class="codeeIMG" />
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>

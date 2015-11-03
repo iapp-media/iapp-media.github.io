@@ -17,16 +17,16 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/02/2015 11:21:07</publishTime>
+      <publishTime>11/03/2015 17:35:44</publishTime>
     </File>
     <File Include="bin/JustyLibrary.pdb">
-      <publishTime>11/02/2015 11:21:07</publishTime>
+      <publishTime>11/03/2015 17:35:44</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/02/2015 16:46:00</publishTime>
+      <publishTime>11/03/2015 17:37:23</publishTime>
     </File>
     <File Include="bin/StoreMana.pdb">
-      <publishTime>11/02/2015 16:46:00</publishTime>
+      <publishTime>11/03/2015 17:37:23</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -41,7 +41,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>10/30/2015 17:57:14</publishTime>
+      <publishTime>11/03/2015 16:32:27</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -56,10 +56,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Cust_Mana.aspx">
-      <publishTime>11/02/2015 14:14:53</publishTime>
+      <publishTime>11/03/2015 16:32:25</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/02/2015 16:36:24</publishTime>
+      <publishTime>11/03/2015 16:32:25</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -77,61 +77,82 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="img/000000102601.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/114.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/2531170_203204624000_2.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/6RMhx.gif">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/backarrow.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/cancel-01.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/cart.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/Client.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/cloth.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/defaulthead.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/icon_Q1.PNG">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="img/lineicon.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/message.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/ministorelogo.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/Noodles.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/order.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/p1-like01.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/p1-like02.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/p2-like01.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/p2-like02.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/Product.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/qr-iappmedia.jpg">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/setting.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
+    </File>
+    <File Include="img/store-bstage.png">
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/top.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="img/uploadicon.png">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -176,7 +197,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/mobileEditor-new.js">
-      <publishTime>11/02/2015 10:39:45</publishTime>
+      <publishTime>11/02/2015 22:52:13</publishTime>
     </File>
     <File Include="js/swiper.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -185,13 +206,13 @@
       <publishTime>11/02/2015 14:24:19</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/03/2015 15:10:19</publishTime>
     </File>
     <File Include="Msg_Mana.aspx">
-      <publishTime>10/30/2015 17:56:49</publishTime>
+      <publishTime>11/03/2015 15:10:19</publishTime>
     </File>
     <File Include="OrderMana.aspx">
-      <publishTime>10/30/2015 12:37:23</publishTime>
+      <publishTime>11/03/2015 16:25:56</publishTime>
     </File>
     <File Include="Order_Detail.aspx">
       <publishTime>10/30/2015 16:21:20</publishTime>
@@ -203,7 +224,7 @@
       <publishTime>10/29/2015 17:33:30</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>11/02/2015 16:45:50</publishTime>
+      <publishTime>11/03/2015 16:32:25</publishTime>
     </File>
     <File Include="Setting.aspx">
       <publishTime>11/02/2015 16:42:35</publishTime>
@@ -218,7 +239,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/02/2015 17:07:01</publishTime>
+      <publishTime>11/03/2015 17:37:24</publishTime>
     </File>
   </ItemGroup>
 </Project>

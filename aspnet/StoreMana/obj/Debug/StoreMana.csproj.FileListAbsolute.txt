@@ -14,11 +14,11 @@ D:\DataYi\AppWeb\StoreMana\bin\JustyLibrary.pdb
 D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
 D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.dll
 D:\DataYi\AppWeb\StoreMana\obj\Debug\StoreMana.pdb
-C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
-C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.dll
-C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.pdb
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\StoreMana.dll
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\StoreMana.pdb
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\JustyLibrary.dll
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\ThoughtWorks.QRCode.dll
 C:\GitHub\iapp-media.github.io\aspnet\StoreMana\bin\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.csprojResolveAssemblyReference.cache
+C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.dll
+C:\GitHub\iapp-media.github.io\aspnet\StoreMana\obj\Debug\StoreMana.pdb

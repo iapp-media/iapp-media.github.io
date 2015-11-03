@@ -13,6 +13,15 @@ namespace MiniStore {
     public partial class Buy_Detail {
         
         /// <summary>
+        /// TB_Name 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal TB_Name;
+        
+        /// <summary>
         /// IMG_li 控制項。
         /// </summary>
         /// <remarks>
@@ -31,15 +40,6 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.Literal L_Name;
         
         /// <summary>
-        /// TB_Name 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Name;
-        
-        /// <summary>
         /// TB_Price 控制項。
         /// </summary>
         /// <remarks>
@@ -47,6 +47,24 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal TB_Price;
+        
+        /// <summary>
+        /// BT_Confirm 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_Confirm;
+        
+        /// <summary>
+        /// BT_InCar 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_InCar;
         
         /// <summary>
         /// TB_Dimension 控制項。
@@ -92,23 +110,5 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_SHARE;
-        
-        /// <summary>
-        /// BT_Confirm 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_Confirm;
-        
-        /// <summary>
-        /// BT_InCar 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_InCar;
     }
 }

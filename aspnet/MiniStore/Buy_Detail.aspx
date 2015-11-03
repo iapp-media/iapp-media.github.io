@@ -7,7 +7,7 @@
  
     <div class="col-xs-12 libor ContentTop">
         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" /> 
-        <h1 class="col-xs-10">商品內容</h1> 
+        <h1 class="col-xs-10"><asp:Literal ID="TB_Name" runat="server"></asp:Literal></h1> 
     </div>
     <div class="col-xs-12 promana">
         <div class="row">
@@ -26,18 +26,19 @@
 
                                 <h1 class="col-xs-6">
                                     <asp:Literal ID="L_Name" runat="server"></asp:Literal></h1>
-                            </div>
- 
-                            <div class="col-xs-12 libor CBtitle">
-
-                                <asp:TextBox ID="TB_Name" runat="server" CssClass="col-xs-12"></asp:TextBox>
-
-                            </div>
+                            </div> 
                             <div class="col-xs-12 libor productNum CBbot">
-                                <label for="" class="col-xs-6">商品售價</label>
+                                $
                                 <asp:Literal ID="TB_Price" runat="server"></asp:Literal>
                            <%--     <asp:TextBox ID="TB_Price" runat="server" CssClass="col-xs-6"></asp:TextBox>--%>
                             </div>
+                            <div class="col-xs-6 libor status CBbot CBBTN">
+                                <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
+                            </div>
+
+                            <div class="col-xs-6 libor status CBbot CBBTN hide">
+                                <asp:Button ID="BT_InCar" runat="server" Text="加入購物車" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_InCar_Click" />
+                            </div> 
 
                             <div class="col-xs-12 libor status CBbot">
                                 <label for="" class="col-xs-6">產品規格</label>
@@ -59,12 +60,6 @@
                             <div class="col-xs-12 libor CBbot CBarea CBline">
                                 <div></div>
                             </div>
-                            <div class="col-xs-12 libor status CBbot CBBTN">
-                                <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
-                            </div>
-                            <div class="col-xs-12 libor status CBbot CBBTN">
-                                <asp:Button ID="BT_InCar" runat="server" Text="加入購物車" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_InCar_Click" />
-                            </div> 
                         </div>
                     </div>
 
