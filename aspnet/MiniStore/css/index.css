@@ -566,6 +566,7 @@ a {
     margin: auto;
     max-width: 670px;
     height: 60px;
+    z-index: 2;
     box-sizing: border-box;
     padding: 6px 12px;
     background-color: #fff;
@@ -7073,7 +7074,7 @@ a.iframe-info.cboxElement {
 }
 
 .back-top {
-    width: auto;
+    width: 50px;
     height: auto;
     position: fixed;
     bottom: 13%;
@@ -7847,7 +7848,7 @@ a.iframe-info.cboxElement {
 .allClassification {
     height: 50px;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;

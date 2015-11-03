@@ -37,10 +37,10 @@ namespace MiniStore
 
                 jump = "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "";
                 L_MyStore.Text = " <li><a href='" + jump + "' id='GO_Mini' target='_self' >打造自己的微店</a></li>" +
-                                 " <li><a href='javascript:void(0)'>加入行動分店</a></li>" +
+                                 " <li><a href='javascript:void(0)'>加入行動分店</a></li>" + 
+                                 " <li><a>我的帳戶</a></li>" +
                                  " <li><a href='http://www.iapp-media.com/Login/profile.aspx'> 編輯會員資料</a></li> " +
-                                 " <li><a href='javascript:void(0)'  >我的拍賣</a></li>" +
-                                 " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "' target='_self' >訂單記錄</a></li>";
+                                 " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
             }
         }
 

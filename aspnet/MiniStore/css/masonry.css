@@ -588,6 +588,6 @@ input[type="checkbox"] {
     
     .input-group-btn:last-child>.btn,
     .input-group-btn:last-child>.btn-group {
-        margin-left: 32px;
+        margin-left: 66px;
     }
 }

@@ -132,7 +132,7 @@
         </nav>
         <!-- 回到頂部 -->
         <a href="#">
-            <img class="back-top" src="img/top.png" />
+            <img class="back-top" src="img/cart.png" />
         </a>
         <!-- WRAPPER -->
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
