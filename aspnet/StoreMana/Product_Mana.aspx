@@ -54,7 +54,7 @@
                                             </div>
 
                                             <div class="col-xs-4 ProLPad TRC BorLeftpno BorBottompno">
-                                                NT$<asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Price")%>'></asp:Literal>
+                                                NT$<asp:Literal ID="Literal2" runat="server" Text='<%# ShowPrice(Bind("Price"))%>'></asp:Literal>
                                             </div>
                                             <div class="col-xs-4 ProLPad TGray BorBottompno">
                                                 <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>

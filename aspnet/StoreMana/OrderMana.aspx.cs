@@ -18,11 +18,16 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-
+                L.Text = "select * ,CONVERT(varchar(10), Creat_Date, 120) AS CD " +
+    ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment " +
+    ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
+    ",( select User_Name from users where IDNo=Customer_ID) User_name " +
+    " from orders where store_ID ='" + Comm.Store_ID() + "'";
+                SD1.SelectCommand = L.Text;
+                SD1.ConnectionString = Main.ConnStr;
+                RP1.DataSourceID = SD1.ID;
             }
-            SD1.SelectCommand = L.Text;
-            SD1.ConnectionString = Main.ConnStr;
-            RP1.DataSourceID = SD1.ID;
+
         }
 
         protected void BT_Search_Click(object sender, EventArgs e)
@@ -31,7 +36,7 @@ namespace StoreMana.Mini
                 ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment "+
                 ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
                 ",( select User_Name from users where IDNo=Customer_ID) User_name "+
-                " from orders where store_ID =1";
+                " from orders where store_ID ='" + Comm.Store_ID() + "'";
 
             if (TextBox1.Text != "")
             {
@@ -125,11 +130,39 @@ namespace StoreMana.Mini
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 Literal Order_Key = (Literal)e.Item.FindControl("LIDNO");
-                Button BT = (Button)e.Item.FindControl("BTCHK");
-                if (Main.Scalar("select status from orders where idno='" + Order_Key.Text + "'") == "1")
+                Button BTCHK = (Button)e.Item.FindControl("BTCHK");
+                Button BTEND = (Button)e.Item.FindControl("BTEND");
+                Button BT1 = (Button)e.Item.FindControl("BT1");
+                Button BT2 = (Button)e.Item.FindControl("BT2");
+                Button BT3 = (Button)e.Item.FindControl("BT3"); 
+ 
+                //sta control
+                if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "1")
                 {
-                   
-                    //BT.Visible = false;
+                    BTEND.Visible = false;
+                }
+                if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "0") //訂單成立
+                {
+                    BTCHK.Visible = true;
+                }
+
+                if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "3") //訂單確認
+                { 
+                    BTEND.Visible = true;
+                }
+
+
+                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "5") //入帳確認
+                {
+                    BT1.Visible = true;
+                }
+                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "10") //出貨確認
+                {
+                    BT3.Visible = true;
+                }
+                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "15") //出貨確認
+                {
+                    BT2.Visible = true;
                 } 
             }
         } 

@@ -32,7 +32,7 @@
                                                 <p>價錢</p>
                                                 <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
                                             </div>
-                                            <%--<span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>--%>
+                                            <span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>
                                             <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
                                             <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
                                             <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
@@ -150,6 +150,7 @@
         }
 
         function minus(num, K0, K1) {
+          
             var a1 = cint2($("#ContentPlaceHolder1_RP1_Qty_" + num).val().replace(/\,/g, ""));
             if (a1 == 1) {
                 alert('不能再少了');

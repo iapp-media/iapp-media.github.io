@@ -46,9 +46,9 @@ namespace MiniStore
 
             L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total  " +
                 " from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id=@user_id and a.store_id=@store_id ";
-            Main.WriteLog(SID);
-            Main.WriteLog(Comm.User_ID().ToString());
-            Main.WriteLog(L.Text);
+            //Main.WriteLog(SID);
+            //Main.WriteLog(Comm.User_ID().ToString());
+            //Main.WriteLog(L.Text);
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
@@ -56,7 +56,7 @@ namespace MiniStore
             Main.ParaClear();
             Main.ParaAdd("@u_id", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int);
             Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-          
+
             //str = "Select b.Product_Name,sum(a.qty) * b.Price as total ,b.Payment,b.delivery " +
             //      "from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id=@u_id    " +
             //      "group by Product_Name,Payment,delivery,Price ";
@@ -68,7 +68,7 @@ namespace MiniStore
             DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID =@SID");
             if (DT.Rows.Count > 0)
             {
-               //TB_Paysum.Text = DT.Rows[0]["total"].ToString(); //應負金額
+                //TB_Paysum.Text = DT.Rows[0]["total"].ToString(); //應負金額
 
                 string listDelivery = DT.Rows[0]["delivery"].ToString().Replace(",", "','");
                 listDelivery = listDelivery.Substring(2).ToString() + "'";
@@ -76,28 +76,67 @@ namespace MiniStore
                 string listRB_Payment = DT.Rows[0]["Payment"].ToString().Replace(",", "','");
                 listRB_Payment = listRB_Payment.Substring(2).ToString() + "'";
                 Main.FillDDP(DL_Payment, "select Status,Memo from def_Status where Col_Name='Payment' and Status in(" + listRB_Payment + ") ", "Memo", "Status");
-                 
-            }   
+
+            }
+
+            if (Main.Scalar("select 1 from Customer_info where Customer_ID=@u_id") == "1")
+            {
+                DataTable DTinfo = Main.GetDataSetNoNull("select * from Customer_info where Customer_ID=@u_id ");
+                if (DTinfo.Rows.Count > 0)
+                {
+                    TB_Name.Text = DTinfo.Rows[0]["Contact_Name"].ToString();
+                    TB_Tel.Text = DTinfo.Rows[0]["TEL"].ToString();
+                    TB_MNO.Text = DTinfo.Rows[0]["MNO"].ToString();
+                    TB_Addr.Text = DTinfo.Rows[0]["Addr"].ToString();
+                }
+            }
         }
         protected void BT_Confirm_Click(object sender, EventArgs e)
-        { 
-                Main.ParaClear();
-                Main.ParaAdd("@Customer_ID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
-                Main.ParaAdd("@Num", 1, SqlDbType.Int);      //常用設定組別 先暫時都給1 之後要改
-                Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar);
-                Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
-                Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
-                Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
+        {
+            string tmp = "";
+            if (DL_Delivery.SelectedValue == "") { tmp += ",運送方式"; }
+            if (DL_Payment.SelectedValue == "") { tmp += ",付款方式"; }
+            if (TB_Name.Text.Trim() == "") { tmp += ",收件人姓名"; }
+            if (TB_Tel.Text.Trim() == "") { tmp += ",電話"; }
+            if (TB_MNO.Text.Trim() == "") { tmp += ",郵遞區號"; }
+            if (TB_Addr.Text.Trim() == "") { tmp += ",地址"; }
 
+            if (tmp != "")
+            {
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "String", "alert('請填選" + tmp.Substring(1) + "');", true);
+                // Response.Write("<script>alert('請填選" + tmp.Substring(1) + "')</script>");
+                return;
+            }
+
+            Main.ParaClear();
+            Main.ParaAdd("@Customer_ID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+            Main.ParaAdd("@Num", 1, SqlDbType.Int);      //常用設定組別 先暫時都給1 之後要改
+            Main.ParaAdd("@Contact_Name", TB_Name.Text, SqlDbType.NVarChar);
+            Main.ParaAdd("@TEL", TB_Tel.Text, SqlDbType.NVarChar);
+            Main.ParaAdd("@MNO", TB_MNO.Text, SqlDbType.NVarChar);
+            Main.ParaAdd("@Addr", TB_Addr.Text, SqlDbType.NVarChar);
+
+            if (Main.Scalar("select 1 from Customer_info where Customer_ID=@Customer_ID") != "1")
+            {
                 Main.NonQuery("Insert into Customer_info (Customer_ID, Num, Contact_Name, TEL, MNO, Addr) Values " +
-                              " (@Customer_ID, @Num, @Contact_Name, @TEL, @MNO, @Addr)");
-         
-             
+                          " (@Customer_ID, @Num, @Contact_Name, @TEL, @MNO, @Addr)");
+            }
+            else
+            {
+                Main.NonQuery("update Customer_info set Contact_Name=@Contact_Name, TEL=@TEL, MNO=@MNO, Addr=@Addr where Customer_ID=@Customer_ID and num=1 ");
+            }
+
+
             //金額資料直接再DB撈已防client竄改值??
             string OrderNo = "", strOrderID = null; //訂單編號之後也要SQL 處理?
             //Object OrderID = "";
 
-            OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today);  
+            OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today);
+
+            Main.ParaClear();
+            Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
+            SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
+
 
             SqlConnection conn = new SqlConnection(Main.ConnStr);
             conn.Open();
@@ -111,8 +150,8 @@ namespace MiniStore
             cmd.Parameters.AddWithValue("@Contact_Name", TB_Name.Text);
             cmd.Parameters.AddWithValue("@TEL", TB_Tel.Text);
             cmd.Parameters.AddWithValue("@MNO", TB_MNO.Text);
-            cmd.Parameters.AddWithValue("@Addr", TB_Addr.Text);
-
+            cmd.Parameters.AddWithValue("@Addr", TB_Addr.Text); 
+            cmd.Parameters.AddWithValue("@Store_ID", SID);
 
             cmd.Parameters.AddWithValue("@Ans", "22");  //為了轉型用的 但還是失敗先留著
 
@@ -122,9 +161,9 @@ namespace MiniStore
             object OrderID = cmd.ExecuteScalar();
 
             //轉型一直失敗 暫時這樣寫
-           strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
-           Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
-          //
+            strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
+            Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
+            //
 
             //strOrderID = (string)OrderID;
             //if (strOrderID != "") //----執行回傳成功  ---
@@ -133,7 +172,7 @@ namespace MiniStore
             //    Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "','_self');</script>");
             //}
 
-            conn.Close(); 
+            conn.Close();
         }
 
         protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
