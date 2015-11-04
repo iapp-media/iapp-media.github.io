@@ -361,9 +361,9 @@ a:active {
     float: left;
     display: inline-block;
     border-radius: 5px;
-    color: #fff;
+    color: #000;
     font-size: 17px;
-    background-color: #f93;
+    background-color: #CCc;
     padding: 2px 4px;
 }
 
@@ -551,6 +551,7 @@ a:active {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 999;
     max-width: 670px;
     height: 60px;
     box-sizing: border-box;

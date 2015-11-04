@@ -66,12 +66,12 @@
                             <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
-                            <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
+                           
                         </li>
                         <li class="SandTitle">開微店</li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
-                            <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
+                            <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
               
                     </ul>
                      <div id="listbox">
