@@ -79,14 +79,7 @@
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
                     </ul>
                      <div id="listbox">
-             <%--       <ul class="dropdown-menu dropdown-menu-right finder" role="menu">
-                        <li><a href="#">最新</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">最熱門</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><img class="finder-app" src="img/photoicon.png"
-                        > iApp</a></li>
-                    </ul>--%>
+ 
                 </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
@@ -137,10 +130,9 @@
                 </div>
             </div>
         </nav>
-        <!-- 回到頂部 -->
-        <a href="#">
-            <img class="back-top" src="img/cart.png" />
-        </a>
+        <!-- 至購物車 -->
+        <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
+ 
         <!-- WRAPPER -->
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>

@@ -165,10 +165,8 @@
             </div>
 
         </div>
-        <!-- 回到頂部 -->
-        <a href="#">
-            <img class="back-top" src="img/cart.png" />
-        </a>
+        <!-- 至購物車 -->
+        <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
 
         <!-- WRAPPER -->
 

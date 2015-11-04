@@ -39,7 +39,7 @@ namespace MiniStore
                 L_MyStore.Text = " <li><a href='" + jump + "'  target='_self' >打造自己的微店</a></li>" +
                                  " <li><a href='#'>加入行動分店</a></li>" +
                                  " <li class='SandTitle'>我的帳戶</li>" +
-                                 " <li><a href='http://www.iapp-media.com/Login/profile.aspx'> 編輯會員資料</a></li> " +
+                                 " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 編輯會員資料</a></li> " +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
                                  
 
@@ -54,7 +54,9 @@ namespace MiniStore
                 {
                     L_Cate.Text += "  <li class=\"swiper-slide col-xs-4\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></li>";
                 } 
-                L_Cate.Text += " </ul>"; 
+                L_Cate.Text += " </ul>";
+
+                LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
             }
         }
 

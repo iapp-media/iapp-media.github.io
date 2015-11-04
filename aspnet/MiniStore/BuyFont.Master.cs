@@ -41,6 +41,9 @@ namespace MiniStore
                                  " <li class='SandTitle'>我的帳戶</li>" +
                                  " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 編輯會員資料</a></li> " +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
+
+                LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
+
             }
         }
 
