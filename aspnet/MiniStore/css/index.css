@@ -24,6 +24,45 @@ a:active {
     color: #b25221;
     text-decoration:none;
 }
+.BTbox {
+    padding: 6px 12px;
+    background-color: #fff;
+}
+.BTbox .BTleft,
+.BTbox .BTright {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 20px;
+    width: 50%;
+}
+.BTright {
+    float: right;
+    border: 1px solid #aaa;
+}
+.ProMLtit {
+    background-color: #a1a1a1;
+    padding: 6px 0;
+}
+.ListTitle {
+    padding: 6px 12px;
+    background-color: #a1a1a1;
+    color: #fff;
+    font-size: 16px;
+}
+.ListIn {
+    padding:6px 12px;
+    color: #aaa;
+    font-size: 16px;
+}
+.ProMaBOX {
+    background-color:#fff;
+    margin:4px 0;
+}
+.Hisvalue {
+        border: 1px solid #aaa;
+    width:100%;
+    padding:6px 12px;
+}
 .FixTitle {
     text-align:center;
     color:#ff9933;
@@ -38,6 +77,9 @@ a:active {
 .MidFonts {
     font-size:18px;
     color:#fff;
+}
+.ProMaBOXIMG img{
+    width:100%;
 }
 
 .TRC {
@@ -58,6 +100,9 @@ a:active {
 
 .marReset {
     margin: 0!important;
+}
+.padReset {
+    padding:0 !important;
 }
 
 .AllPad {
@@ -128,6 +173,9 @@ a:active {
 .ValueText {
     text-align: right;
     font-size: 18px;
+}
+.ManaLBG {
+    background-color: #ffd5b3 !important;
 }
 
 .codeeIMG {

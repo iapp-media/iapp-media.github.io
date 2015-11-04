@@ -34,51 +34,80 @@
                     <div class="col-xs-12 BTbox BorObot">
                         <asp:Button ID="BT_Search" runat="server" Text="查詢" OnClick="BT_Search_Click" CssClass="btn btn-warning col-xs-12 SBuyCar" />
                     </div>
-              
+                    <div class="col-xs-12 libor paynumber padReset ManaLBG">
                         <asp:Repeater ID="RP1" runat="server">
                             <HeaderTemplate>
                                 <div class="ProMLtit col-xs-12">
-                                    <div class="col-xs-4 BoxCenter ListTitle">訂單狀態</div>
-                                   <%-- <div class="col2">商品</div> 
+                                    <div class="col-xs-3">&nbsp</div>
+                                    <div class="col-xs-7">
+                                        <div class="col-xs-6 BoxCenter ListTitle">
+                                            <div class="row">
+                                            訂單狀態</div></div>
+                                        <%-- <div class="col2">商品</div> 
                                       <div class="col2">數量</div>--%>
-                                    <div class="col-xs-4 BoxCenter ListTitle">訂單編號</div>
-                                    <div class="col-xs-4 BoxCenter ListTitle">&nbsp;</div>
-                                    <div class="col-xs-4 BoxCenter ListTitle">實付金額</div>
-                                    <div class="col-xs-4 BoxCenter ListTitle">下單時間</div>
-                                    <div class="col-xs-4 BoxCenter ListTitle">&nbsp;</div>
+                                        <div class="col-xs-6 BoxCenter ListTitle">
+                                            <div class="row">
+                                            訂單編號</div></div>
+                                        
+                                        <div class="col-xs-6 BoxCenter ListTitle">
+                                            <div class="row">
+                                            實付金額</div></div>
+                                        <div class="col-xs-6 BoxCenter ListTitle">
+                                            <div class="row">
+                                            下單時間</div></div>
+                                       
+                                    </div>
+                                    <div class="col-xs-2">&nbsp</div>
                                 </div>
 
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <div class="row1">
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
-                                    </div>
-<%--                                    <div class="col2">
+                                <div class="ProMaBOX col-xs-12">
+                                    <div class="row">
+                                    <div class="col-xs-3 ProMaBOXIMG">
+                                        <div class="row">
+                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /></div></div>
+                                    <div class="col-xs-7">
+                                        <div class="col-xs-6 ListIn">
+                                            <div class="row">
+                                            <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
+                                                </div>
+                                        </div>
+                                        <%--                                    <div class="col2">
                                         <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
                                     </div>
                                     <div class="col2">
                                         <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("AMT")%>'></asp:Literal>
-                                    </div> --%>  
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Order_No")%>'></asp:Literal>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT")%>'></asp:Literal>
-                                    </div>
+                                    </div> --%>
+                                        <div class="col-xs-6 ListIn">
+                                            <div class="row">
+                                            <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Order_No")%>'></asp:Literal>
+                                                </div>
+                                        </div>
+                                        <div class="col-xs-6 ListIn">
+                                            <div class="row">
+                                            <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT")%>'></asp:Literal>
+                                                </div>
+                                        </div>
 
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
+                                        <div class="col-xs-6 ListIn">
+                                            <div class="row">
+                                            <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
+                                                </div>
+                                        </div>
                                     </div>
+                                    <div class="col-xs-2"></div>
                                    
-                                         <div class="col2">
+                                      <%--   <div class="col2">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      詳細資訊
                             </asp:HyperLink>
-                        </div>
+                        </div>--%>
+                                    </div>
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>
+                        </div>
                         <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                         <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
                     
