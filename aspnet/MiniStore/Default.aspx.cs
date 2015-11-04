@@ -81,11 +81,11 @@ namespace MiniStore
                     ss.Append("         <div class='col-xs-12'>" + "\n\r");
                     ss.Append("             <div class='row'>" + "\n");
 
-                    ss.Append("                <label class=\"label--checkbox\">\n\r");
-                    ss.Append("                    <input type=\"checkbox\" class=\"like\" onclick=\"likeit(this)\" id=\"k" + dw["IDNo"].ToString() + "\"" + iLK + ">  <p id=\"kn" + dw["IDNo"].ToString() + "\"></p>\n\r"); 
-                    ss.Append("                </label>\n\r");
-                    //ss.Append("             <input type='checkbox'  name='CC' />" + "\n");
-                    //ss.Append("             <label for='c3'></label>" + "\n");
+                   // ss.Append("                <label class=\"label--checkbox\">\n\r");
+                    ss.Append("                    <input type=\"checkbox\" class=\"like\" onclick=\"likeit(this)\" id=\"k" + dw["IDNo"].ToString() + "\"" + iLK + "> \n\r"); 
+                   // ss.Append("                </label>\n\r");
+                   // ss.Append("             <input type='checkbox' id='c3'  name='CC' />" + "\n");
+                    ss.Append("             <label for='k" + dw["IDNo"].ToString() + "'></label>" + "\n");
 
                     ss.Append("             </div>" + "\n");
                     ss.Append("         </div>" + "\n");
