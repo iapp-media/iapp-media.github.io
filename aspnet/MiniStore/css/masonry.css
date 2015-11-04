@@ -591,3 +591,11 @@ input[type="checkbox"] {
         margin-left: 80px;
     }
 }
+@media only screen and (max-width: 355px) {
+
+.item {
+    float: left;
+    padding: 0px;
+    width: 148px;
+    }
+}
