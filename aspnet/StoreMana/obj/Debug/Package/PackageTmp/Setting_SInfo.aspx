@@ -54,7 +54,8 @@
                                     </div>
                                     <div class="col-xs-12 libor paynumber">
                                         <label class="col-xs-6">商店名稱</label>
-                                        <asp:TextBox ID="TBName" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        <asp:TextBox ID="TBName"  Font-Names="TBName" runat="server" CssClass="form-control magclose" onkeyup="words_deal(12)" ></asp:TextBox>
+ 
                                     </div>
                                     <div class="col-xs-12 libor paynumber">
                                         <label class="col-xs-6">聯絡地址</label>
@@ -78,4 +79,22 @@
             </div>
         </div>
     </div> 
+     <script src="js/jquery-2.1.4.min.js"></script>
+    <script> 
+
+        var texttmp = $("#ContentPlaceHolder1_TBName").val();
+        function words_deal(cct) { 
+            var curLength = getlength($("#ContentPlaceHolder1_TBName").val());
+            if (curLength > cct) {
+                document.getElementById('ContentPlaceHolder1_TBName').value = texttmp;
+                alert("超過字數限制，多出的字將被移除！");
+            } else {
+                texttmp = $("#ContentPlaceHolder1_TBName").val();
+            }
+        }
+        function getlength(str) {
+            var arr = str.match(/[^\x00-\xff]/ig);
+            return (arr == null) ? str.length : str.length + arr.length;
+        }
+    </script>
 </asp:Content>

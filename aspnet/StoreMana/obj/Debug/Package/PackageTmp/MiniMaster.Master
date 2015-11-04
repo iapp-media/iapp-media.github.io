@@ -74,7 +74,7 @@
                     <li><a href="OrderMana.aspx"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>
                     <li><a href="Msg_Mana.aspx"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>訊息管理</a></li>
                     <li><a href="setting.aspx"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li> 
-                    <li><asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click" ><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click" ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>登出</asp:LinkButton></li>
  
                 </ul>
                 

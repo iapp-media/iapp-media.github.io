@@ -93,7 +93,6 @@
     <Content Include="img\mail.png" />
     <Content Include="img\message.png" />
     <Content Include="img\ministorelogo.png" />
-    <Content Include="img\Msg_icon.PNG" />
     <Content Include="img\Noodles.jpg" />
     <Content Include="img\order.png" />
     <Content Include="img\p1-like01.png" />
@@ -104,8 +103,6 @@
     <Content Include="img\qr-iappmedia.jpg" />
     <Content Include="img\send.png" />
     <Content Include="img\setting.png" />
-    <Content Include="img\sharefb.png" />
-    <Content Include="img\shareline.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\act.js" />

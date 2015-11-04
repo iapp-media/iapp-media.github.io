@@ -120,8 +120,8 @@
                             <p class="BoxLeft">商品名稱</p>
                         </div>
                     </div>
-                    <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
-                </div> 
+                    <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限22個字以內" onkeyup="words_deal(44)"></asp:TextBox>
+                </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">
@@ -160,8 +160,8 @@
                             <p class="BoxLeft">備註</p>
                         </div>
                     </div>
-                 <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
-                    <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"  TextMode="MultiLine"></asp:TextBox>
+                    <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
+                    <asp:TextBox ID="TB_Memo" Class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="col-xs-12 libor status CBbot CBBTN BorTop">
                     <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
@@ -173,46 +173,29 @@
         </div>
     </div>
     <p class="text-center fonts">填寫資料</p>
-   
-            <%--<div class="col-xs-12 insidecare">
-                <div class="row">
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">商品名稱</label>
-                        <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
-                    </div>
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">價格</label>
-                        <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">數量</label>
-                        <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">商品說明</label>
-                        <asp:TextBox ID="TB_Description" Class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">商品規格</label>
-                        <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="col-xs-12 libor paynumber">
-                        <label for="" class="col-xs-6">備註</label>
-                        <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-            </div>--%>
-            
-           
-    
+
     <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal>
 
     <script src="js/mobileEditor-new.js"></script>
-
+    <script src="js/mobileEditor-new.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script>
         $('.carousel').carousel({
             interval: false
         })
- 
+        var texttmp = $("#ContentPlaceHolder1_TB_ProductName").val();
+        function words_deal(cct) {
+            var curLength = getlength($("#ContentPlaceHolder1_TB_ProductName").val());
+            if (curLength > cct) {
+                document.getElementById('ContentPlaceHolder1_TB_ProductName').value = texttmp;
+                alert("超過字數限制，多出的字將被移除！");
+            } else {
+                texttmp = $("#ContentPlaceHolder1_TB_ProductName").val();
+            }
+        }
+        function getlength(str) {
+            var arr = str.match(/[^\x00-\xff]/ig);
+            return (arr == null) ? str.length : str.length + arr.length;
+        }
     </script>
 </asp:Content>

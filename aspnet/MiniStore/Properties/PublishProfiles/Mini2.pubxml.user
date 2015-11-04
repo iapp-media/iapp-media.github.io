@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>10/30/2015 18:27:11</publishTime>
+      <publishTime>11/05/2015 00:42:34</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/04/2015 16:51:42</publishTime>
+      <publishTime>11/05/2015 00:43:03</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -32,7 +32,7 @@
       <publishTime>11/03/2015 12:40:44</publishTime>
     </File>
     <File Include="Buy_Detail.aspx">
-      <publishTime>11/04/2015 15:03:00</publishTime>
+      <publishTime>11/04/2015 18:18:06</publishTime>
     </File>
     <File Include="Buy_Like.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -44,7 +44,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/04/2015 16:30:24</publishTime>
+      <publishTime>11/04/2015 18:18:54</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/04/2015 12:12:08</publishTime>
@@ -146,85 +146,94 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="img/000000102601.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/000000102901.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/114.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/2531170_203204624000_2.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/6RMhx.gif">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/arrow.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/backarrow.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:56</publishTime>
     </File>
     <File Include="img/cart.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:56</publishTime>
     </File>
     <File Include="img/Client.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:56</publishTime>
     </File>
     <File Include="img/cloth.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:56</publishTime>
     </File>
     <File Include="img/codee.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:56</publishTime>
     </File>
     <File Include="img/defaulthead.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
+    </File>
+    <File Include="img/facebook-02.png">
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/iAppStore.ico">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
+    </File>
+    <File Include="img/line.png">
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/lineicon.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
+    </File>
+    <File Include="img/mail.png">
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/message.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/ministorelogo.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/Msg_icon.PNG">
       <publishTime>11/04/2015 16:44:14</publishTime>
     </File>
     <File Include="img/Noodles.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/order.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/p1-like01.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/p1-like02.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/p2-like01.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/p2-like02.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/Product.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/qr-iappmedia.jpg">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/send.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/setting.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/sharefb.png">
       <publishTime>11/04/2015 16:44:14</publishTime>
@@ -233,10 +242,10 @@
       <publishTime>11/04/2015 16:44:14</publishTime>
     </File>
     <File Include="img/top.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="img/uploadicon.png">
-      <publishTime>11/04/2015 16:44:14</publishTime>
+      <publishTime>11/04/2015 18:01:55</publishTime>
     </File>
     <File Include="js/act.js">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -302,7 +311,7 @@
       <publishTime>11/04/2015 16:30:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/04/2015 16:51:42</publishTime>
+      <publishTime>11/05/2015 00:43:03</publishTime>
     </File>
   </ItemGroup>
 </Project>
