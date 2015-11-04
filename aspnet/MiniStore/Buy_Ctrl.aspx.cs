@@ -131,8 +131,8 @@ namespace MiniStore
             string OrderNo = "", strOrderID = null; //訂單編號之後也要SQL 處理?
             //Object OrderID = "";
 
-            OrderNo = Comm.GetOrdersNO(Comm.User_ID().ToString(), System.DateTime.Today);
-
+            OrderNo = Comm.GetOrdersNO(Request.QueryString["SN"].ToString(), System.DateTime.Today);
+           
             Main.ParaClear();
             Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
             SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");

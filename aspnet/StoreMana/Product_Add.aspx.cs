@@ -172,7 +172,7 @@ namespace StoreMana.Mini
             }
             else
             {
-                Product_No = Comm.GetProductNO(LPID.Text, System.DateTime.Today);
+                Product_No = Comm.GetProductNO(Comm.Store_ID().ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
                 Main.ParaAdd("@Product_No", Product_No, System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
 

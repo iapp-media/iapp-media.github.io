@@ -1367,41 +1367,39 @@ public class CommTool: System.Web.UI.Page
             return 0;
         }
     }
-    public string GetOrdersNO(string IDNo, DateTime SDate)
+    public string GetOrdersNO(string SN, DateTime SDate)
     {
         JDB Main = new JDB();
         Main.ParaClear();
-        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar);
-        Main.ParaAdd("@YY", (SDate.Year - 1911).ToString(), SqlDbType.VarChar);
-
-        string HeadNO = "" + System.DateTime.Now.Year.ToString().Substring(2, 2) + System.DateTime.Now.Month.ToString() + System.DateTime.Now.Day.ToString() + "";
+        Main.ParaAdd("@SN", SN, SqlDbType.VarChar);
+        string StoreNo = Main.Scalar("select Store_No from store where Store_NID=@SN");
+        string HeadNO = StoreNo + (SDate.Year - 1911).ToString() + SDate.Month.ToString().PadLeft(2, '0') + SDate.Day.ToString().PadLeft(2, '0');
         Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
-        string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Store_ID=@IDNo and Order_No like @HeadNO+'%'");
-        string Order_No = HeadNO + "00001";
+        string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Order_No like @HeadNO+'%'");
+        string Order_No = HeadNO + "0001";
         if (tmpNO != "")
         {
-            if (IsNumeric(tmpNO))
-            {
-                Order_No = Order_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 5));
-            }
+            Order_No = Order_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 4));
         }
         return Order_No;
     }
-    public string GetProductNO(string IDNo, DateTime SDate)
+    public string GetProductNO(string SID,string cateid, DateTime SDate)
     {
         JDB Main = new JDB();
         Main.ParaClear();
-        Main.ParaAdd("@IDNo", IDNo, SqlDbType.VarChar); 
-        string HeadNO = "" + (SDate.Year - 1911).ToString() + "-";
-        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
-        string tmpNO = Main.Scalar("select Max(Cast(Replace(Product_No,@HeadNO,'') as int))  from product ");
-        string Product_No = HeadNO + "0000001";
+        //商品類別編號 還沒改他自己建
+        Main.ParaAdd("@cateid", cateid, SqlDbType.NVarChar);
+        string CateNo = Main.Scalar("select 'mo' from Product_Cate where IDNo=@cateid");
+        Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);
+        string StoreNo = Main.Scalar("select Store_No from store where idno=@SID");
+        string HeadNO = StoreNo + CateNo;
+        Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar); 
+      
+        string tmpNO = Main.Scalar("select Max(Cast(Replace(Product_No,@HeadNO,'') as int))  from product  where Product_No like @HeadNO+'%'");
+        string Product_No = HeadNO + "001";
         if (tmpNO != "")
-        {
-            if (IsNumeric(tmpNO))
-            {
-                Product_No = Product_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 7));
-            }
+        { 
+            Product_No = Product_No.Substring(0, HeadNO.Length) + (GetFullNum(Cint2(tmpNO) + 1, 3)); 
         }
         return Product_No;
     } 
