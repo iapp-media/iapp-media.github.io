@@ -73,6 +73,9 @@
              <li> <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
                          
                     </ul>
+                     <div id="listbox">
+
+                     </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
                     <div class="col-xs-2 search-sm">
@@ -87,7 +90,7 @@
                     </div>
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
-                        <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />
+                        <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 

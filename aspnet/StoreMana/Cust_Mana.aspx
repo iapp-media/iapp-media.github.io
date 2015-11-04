@@ -6,9 +6,7 @@
     <div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx?com=1" style="color: white">社群力排行</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx" style="color: white">客戶列表</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Cust_Mana.aspx?act=1" style="color: white">活動力排行</a></li>
+                <asp:Literal ID="Sub_Menu" runat="server"></asp:Literal>
             </ul>
         </div>
     </div>
@@ -16,7 +14,22 @@
     <!-- WRAPPER -->
     <div class="buydivmove">
         <div class="insidecare col-xs-12">
-            <div class="row">
+            <div class="row"> 
+                <div class="list-group">
+                    <div class="list-group-item list-group-itemUI">
+                        <div class="row"> 
+                            <div class="col-xs-8">
+                                <asp:TextBox ID="TBName" runat="server" Class="form-control" placeholder="輸入姓名查詢"></asp:TextBox>
+                            </div>
+                            <div class="col-xs-4">
+                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Search_Click" />
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+
+
                 <asp:Repeater ID="RP1" runat="server">
                     <HeaderTemplate>
                         <div>
@@ -86,27 +99,31 @@
                     <HeaderTemplate>
                         <div>
                             <div class="ProMLtit col-xs-12">
-                                <div class="col-xs-6 BoxCenter ListTitle">客戶Email</div>
-                                <div class="col-xs-6 BoxCenter ListTitle">姓名</div>
+                                <div class="col-xs-4 BoxCenter ListTitle">姓名</div>
+                                <div class="col-xs-4 BoxCenter ListTitle">Email</div>
+                                <div class="col-xs-4 BoxCenter ListTitle">電話</div>
                             </div>
                         </div>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="ProMaBOX col-xs-12 ToBoPad">
                             <div class="ProMain col-xs-12">
-                                <div class="col-xs-6 ProLPad AlltexC BorTopno BorLeftpno">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno">
+                                    <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("User_Name")%>'></asp:Literal> 
+                                </div>
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno TGray ">
                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Account")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-6 ProLPad AlltexC BorTopno TGray ">
-                                    <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("User_Name")%>'></asp:Literal>
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno TGray ">
+                                    <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("TEL")%>'></asp:Literal>
                                 </div>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
                 <asp:Literal ID="L3" runat="server" Visible="false"></asp:Literal>
-                <asp:SqlDataSource ID="SD3" runat="server"></asp:SqlDataSource> 
+                <asp:SqlDataSource ID="SD3" runat="server"></asp:SqlDataSource>
             </div>
         </div>
-    </div> 
+    </div>
 </asp:Content>

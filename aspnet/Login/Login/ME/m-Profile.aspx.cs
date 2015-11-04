@@ -62,7 +62,15 @@ namespace Login
             if (str != "")
             {
                 Main.NonQuery(str);
-                Response.Redirect("http://www.iapp-media.com/portal/");
+
+                if (Request.QueryString["done"] != null)
+                {
+                    Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+                }
+                else
+                {
+                    Response.Redirect("http://www.iapp-media.com/portal/");
+                } 
                // Response.Write("<Script>window.parent.ref()</Script>");
             } 
         }
@@ -77,6 +85,18 @@ namespace Login
                 Main.ParaAdd("@User_Icon", buf, System.Data.SqlDbType.Image);
                 str = "Update Users set User_Icon=@User_Icon where IDNo=@User_ID";
                 Main.NonQuery(str);
+            }
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            if (Request.QueryString["done"] != null)
+            {
+                Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+            }
+            else
+            {
+                Response.Redirect("http://www.iapp-media.com/portal/");
             }
         }
          

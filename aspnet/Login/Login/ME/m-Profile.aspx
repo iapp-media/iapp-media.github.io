@@ -108,7 +108,10 @@
                 </div>
 
                 <div class="login-back">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true" onclick="window.open('http://www.iapp-media.com/portal/','_self')"></span>
+                                        <asp:LinkButton ID="LinkButton2" runat="server"  OnClick="LinkButton2_Click">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+                    </asp:LinkButton>
+<%--                    <span class="glyphicon glyphicon-remove" aria-hidden="true" onclick="window.open('http://www.iapp-media.com/portal/','_self')"></span>--%>
                 </div>
                 <div class="send" id="login">
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
