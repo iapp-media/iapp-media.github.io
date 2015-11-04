@@ -80,7 +80,7 @@ a:active {
 }
 .MidFonts {
     font-size:18px;
-    color:#fff;
+    color: #ff9933;
 }
 .ProMaBOXIMG {
     display: flex;
@@ -630,19 +630,22 @@ a:active {
 .DetailMbox {
   display:inline-flex;
   flex-direction:row;
-      align-items:center;
-      justify-content:space-between;
-      background-color:#ff9933;
-      
+  align-items:center;
+  justify-content:space-between;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-bottom: 3px solid #ff9933;
 }
 .DetailML {
     
 }
 .DetailMR {
    
+width: 33%;
 }
 .DetailML p {
     margin:0;
+    font-size: 22px;
 }
 
 .DTimg,
@@ -1209,7 +1212,7 @@ ul.swiper-wrapper li a {
 .sendcareButtom,
 .sendcareButtomeEnd {
     background-color: #fd9a33!important;
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     font-size: 22px!important;
     text-align: center!important;
     color: #fff!important;
