@@ -34,6 +34,7 @@ namespace MiniStore
                 {
                     Response.Redirect("Default.aspx?SN=OfficACC");
                 }
+                LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
 
                 jump = "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx");
                 L_MyStore.Text = " <li><a href='" + jump + "'  target='_self' >打造自己的微店</a></li>" +
@@ -56,8 +57,7 @@ namespace MiniStore
                 } 
                 L_Cate.Text += " </ul>";
 
-                LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
-            }
+             }
         }
 
         protected void LBLogout_Click(object sender, EventArgs e)
