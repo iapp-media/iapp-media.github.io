@@ -92,19 +92,19 @@
                                 <div id="liSTfooter" class="col-xs-12">
                                     <div class="row">
                                         <div class="col-xs-4 BoxCenter">
-                                            <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" CssClass="btn btn-warning ThreeBTN " Visible="false" />
+                                            <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" CssClass="btn btn-warning ThreeBTN " Enabled="false" />
                                         </div>
                                         <div class="col-xs-4 BoxCenter">
-                                            <asp:Button ID="BTCHK" runat="server" Text="訂單確認" CommandName="CN1" CssClass="btn btn-warning ThreeBTN " Visible="false" />
+                                            <asp:Button ID="BTCHK" runat="server" Text="訂單確認" CommandName="CN1" CssClass="btn btn-warning ThreeBTN " Enabled="false" />
                                         </div>
                                         <div class="col-xs-4 BoxCenter"> 
-                                            <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" CssClass="btn btn-warning ThreeBTN " Visible="false" /> 
+                                            <asp:Button ID="BT1" runat="server" Text="入帳確認" CommandName="CN3" CssClass="btn btn-warning ThreeBTN " Enabled="false" /> 
                                         </div>
                                         <div class="col-xs-4 BoxCenter"> 
-                                            <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" CssClass="btn btn-warning  ThreeBTN" Visible="false" /> 
+                                            <asp:Button ID="BT2" runat="server" Text="出貨單列印" CommandName="CN4" CssClass="btn btn-warning  ThreeBTN" Enabled="false" /> 
                                         </div>
                                         <div class="col-xs-4 BoxCenter"> 
-                                            <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-warning ThreeBTN" Visible="false" /> 
+                                            <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-warning ThreeBTN"  Enabled="false" /> 
                                         </div>
                                     </div>
                                 </div>

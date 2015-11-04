@@ -139,30 +139,30 @@ namespace StoreMana.Mini
                 //sta control
                 if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "1")
                 {
-                    BTEND.Visible = false;
+                    BTEND.Enabled = false; 
                 }
                 if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "0") //訂單成立
                 {
-                    BTCHK.Visible = true;
+                    BTCHK.Enabled = true;
                 }
 
                 if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "3") //訂單確認
-                { 
-                    BTEND.Visible = true;
+                {
+                    BTEND.Enabled = true;
                 }
 
 
                 if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "5") //入帳確認
                 {
-                    BT1.Visible = true;
+                    BT1.Enabled = true;
                 }
                 if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "10") //出貨確認
                 {
-                    BT3.Visible = true;
+                    BT3.Enabled = true;
                 }
                 if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "15") //出貨確認
                 {
-                    BT2.Visible = true;
+                    BT2.Enabled = true;
                 } 
             }
         } 
