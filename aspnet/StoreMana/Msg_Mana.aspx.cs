@@ -17,8 +17,9 @@ namespace StoreMana
              if (!IsPostBack)
             {
                 Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Comm.Store_ID() + "' ", "name", "IDNO"); ;
-                L.Text = "Select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
-                         ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday from product_msg order by CreatDate DESC";
+                L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
+                         ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
+                         " from product_msg a order by CreatDate DESC";
 
             }
 
@@ -34,18 +35,25 @@ namespace StoreMana
             else
                 return "";
         }
-
+        public string ShowImg(object road)
+        {
+            if (road.ToString().Length > 0)
+                return Comm.MiStoreUrl + road.ToString();
+            else
+                return "";
+        }
         protected void BT_Search_Click(object sender, EventArgs e)
         {
-            L.Text = "select idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
-                     ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday from product_msg  where 1=1 ";
+            L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday " +
+                     ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
+                     " from product_msg a  where 1=1 ";
 
             SD1.SelectParameters.Clear();
 
             if (DL_Pname.SelectedValue != "")
             {
                 SD1.SelectParameters.Add("PID", DL_Pname.SelectedValue.ToString());
-                L.Text += " and product_id=@PID ";
+                L.Text += " and a.product_id=@PID ";
             } 
 
 

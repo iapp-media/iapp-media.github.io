@@ -33,7 +33,7 @@
                 <div class="col-xs-12 BTbox BorObot">
                     <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Search_Click" />
                 </div>
-<%--                <div class="QMargin col-xs-12">
+                <%--                <div class="QMargin col-xs-12">
                     <div class="row">
                         <div class="col-xs-11 BTbox ShareMargin IssueUI1">
                             <div class="Qutop">
@@ -80,7 +80,8 @@
                         <div class="col-xs-11 BTbox ShareMargin IssueUI1">
                             <div class="Qutop">
                                 <div>
-                                    <img src="#" alt="Alternate Text" /></div>
+                                    <img src='<%# ShowImg(Eval("FilePath"))%>' alt="Alternate Text" />
+                                </div>
                                 <h1>棒球套件組</h1>
                             </div>
                             <div class="Qutop">
@@ -105,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </ItemTemplate>
         </asp:Repeater>
         <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
