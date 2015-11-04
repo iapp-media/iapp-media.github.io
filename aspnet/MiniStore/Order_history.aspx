@@ -68,7 +68,7 @@
                                         <div class="row">
                                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /></div></div>
                                     <div class="col-xs-8">
-                                        <div class="col-xs-6 ListIn ProLPad BorTopno BorLeftpno">
+                                        <div class="col-xs-6 ListIn ProLPad BorTopno">
                                             <div class="row">
                                             <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
                                                 </div>
@@ -79,18 +79,18 @@
                                     <div class="col2">
                                         <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("AMT")%>'></asp:Literal>
                                     </div> --%>
-                                        <div class="col-xs-6 ListIn ProLPad BorTopno BorRightno">
+                                        <div class="col-xs-6 ListIn ProLPad BorTopno">
                                             <div class="row">
                                             <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("Order_No")%>'></asp:Literal>
                                                 </div>
                                         </div>
-                                        <div class="col-xs-6 ListIn ProLPad BorBottompno BorLeftpno">
+                                        <div class="col-xs-6 ListIn ProLPad BorBottompno">
                                             <div class="row">
                                             <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT")%>'></asp:Literal>
                                                 </div>
                                         </div>
 
-                                        <div class="col-xs-6 ListIn ProLPad BorBottompno BorRightno">
+                                        <div class="col-xs-6 ListIn ProLPad BorBottompno">
                                             <div class="row">
                                             <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
                                                 </div>
