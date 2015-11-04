@@ -35,6 +35,9 @@ a:active {
     margin:auto;
     line-height: 60px;
 }
+.DetailMoN {
+
+}
 .TRC {
     color: #fc5d20!important;
 }
@@ -516,10 +519,15 @@ a:active {
     border-bottom: none;
     background-color: #fff;
 }
+.DetailMbox {
+  
+}
 
 .DTimg,
 .Detailsmid,
-.Detailsbot {
+.Detailsbot,
+.DetailMoN,
+ {
     display: inline-block;
     float: left;
 }
