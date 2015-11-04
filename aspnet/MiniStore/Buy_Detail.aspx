@@ -64,13 +64,20 @@
                                 </div>
                             
                             
-                            <div class="col-xs-12 questionBox">
-                                <div class="row"> 
-                                    
-                                    <asp:Button ID="BT_Like" runat="server" Text="sharefb"   />
-                                    <asp:Button ID="BT_SHARE" runat="server" Text="shareline" OnClick="BT_SHARE_Click"   />
-                                   
-                                 </div>
+                            <div class="col-xs-9 MsgBox">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="img/mail.png" alt="Alternate Text" />
+                                    </div>
+                                    <div class="col-xs-4">
+                  
+                                       <asp:ImageButton ID="BT_SHARE" runat="server" ImageUrl="img/line.png"  OnClick="BT_SHARE_Click" />
+                                        
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <asp:ImageButton ID="BT_Like" runat="server" ImageUrl="img/facebook-02.png" />   
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div> 

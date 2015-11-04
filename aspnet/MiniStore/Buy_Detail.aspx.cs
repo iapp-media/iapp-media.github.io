@@ -111,7 +111,7 @@ namespace MiniStore
             Response.Redirect("P_MSG.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "");
         }
 
-        protected void BT_SHARE_Click(object sender, EventArgs e)
+        protected void BT_SHARE_Click(object sender, ImageClickEventArgs e)
         {
              Uri u = Request.UrlReferrer;
              string aa = "https://www.facebook.com/sharer.php?u=" + u ;
