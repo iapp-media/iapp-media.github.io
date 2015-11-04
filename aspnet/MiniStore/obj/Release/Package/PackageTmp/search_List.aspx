@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="search_List.aspx.cs" Inherits="AppPortal.search_List" %>

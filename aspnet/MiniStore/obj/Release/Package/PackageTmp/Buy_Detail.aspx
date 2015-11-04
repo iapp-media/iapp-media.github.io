@@ -39,8 +39,8 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 libor status CBbot">
-                                <label for="" class="col-xs-6">產品規格</label>
-                                <span class="ValueText col-xs-6 TRC">
+                                <label for="" class="col-xs-4">產品規格</label>
+                                <span class="ValueText col-xs-8 TRBC">
                                   <asp:Literal ID="TB_Dimension" runat="server"></asp:Literal>
                                     </span>
                           <%--      <asp:TextBox ID="TB_Dimension" runat="server" CssClass="col-xs-6"></asp:TextBox>--%>
@@ -54,17 +54,30 @@
                                     </span>
                             <%--    <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>--%>
                             </div>
-                             <div class="col-xs-12 questionBox">
-                                <div class="row" style="width:100px;height:100px;">  
-                                       <asp:ImageButton ID="BT_MSG" runat="server" ImageUrl="img/Msg_icon.png" CssClass="col-xs-12"  OnClick="BT_MSG_Click" /> 
-                                       <asp:Literal ID="MSG_COUNT" runat="server"></asp:Literal> 
-                                     </div>
-                            </div>
-                            <div class="col-xs-12 questionBox">
-                                <div class="row"> 
-                                    <asp:ImageButton ID="BT_Like" runat="server" ImageUrl="img/sharefb.png" CssClass="col-xs-6" /> 
-                                    <asp:ImageButton ID="BT_SHARE" runat="server" ImageUrl="img/shareline.png"  CssClass="col-xs-6" OnClick="BT_SHARE_Click" />
-                                 </div>
+                           
+                                <div class="col-xs-12 libor status CBbot CBBTN questionBTN">
+                                    
+                      
+                                        <asp:Button ID="BT_MSG" runat="server" Text="留言" OnClick="BT_MSG_Click" CssClass="btn btn-warning col-xs-12 SBuyCar" />
+                                        <%--  <asp:Literal ID="MSG_COUNT" runat="server"></asp:Literal>--%>
+                                   
+                                </div>
+                            
+                            
+                            <div class="col-xs-9 MsgBox">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="img/mail.png" alt="Alternate Text" />
+                                    </div>
+                                    <div class="col-xs-4">
+                  
+                                       <asp:ImageButton ID="BT_SHARE" runat="server" ImageUrl="img/line.png"  OnClick="BT_SHARE_Click" />
+                                        
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <asp:ImageButton ID="BT_Like" runat="server" ImageUrl="img/facebook-02.png" />   
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div> 

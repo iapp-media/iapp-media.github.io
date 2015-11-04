@@ -80,7 +80,7 @@ a:active {
 }
 .MidFonts {
     font-size:18px;
-    color:#fff;
+    color: #ff9933;
 }
 .ProMaBOXIMG {
     display: flex;
@@ -91,30 +91,29 @@ a:active {
     padding: 3px 12px;
 }
 
-.ProMaBOX img{
+.ProMaBOX img,
+.MsgBox img,
+.MsgBox input{
     width:100%;
     /* transform: scale(1.3); */
 }
 .ProLast {
     position:relative;
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    /* padding: 17px 12px; */
+    
     padding: 0;
 }
 .ProLastIn {
     width: 13px;
-    /* position:absolute; */
-    /* display: table-cell; */
-    /* vertical-align: middle; */
-    /* outline: 1px solid; */
+   
     padding: 27px 0px;
 }
 .ProLPad {
     border: 1px solid #eee;
     text-align: center;
 }
-
+.MsgBox {
+    float:right;
+}
 .BorTopno {
     border-top: none;
 }
@@ -630,19 +629,22 @@ a:active {
 .DetailMbox {
   display:inline-flex;
   flex-direction:row;
-      align-items:center;
-      justify-content:space-between;
-      background-color:#ff9933;
-      
+  align-items:center;
+  justify-content:space-between;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-bottom: 3px solid #ff9933;
 }
 .DetailML {
     
 }
 .DetailMR {
    
+width: 33%;
 }
 .DetailML p {
     margin:0;
+    font-size: 22px;
 }
 
 .DTimg,
@@ -1155,6 +1157,7 @@ ul.swiper-wrapper li a {
     width: 100%;
     position: absolute;
     z-index: 1;
+    background-color: #fff;
 }
 
 .productcareEnd,
@@ -1209,7 +1212,7 @@ ul.swiper-wrapper li a {
 .sendcareButtom,
 .sendcareButtomeEnd {
     background-color: #fd9a33!important;
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     font-size: 22px!important;
     text-align: center!important;
     color: #fff!important;
