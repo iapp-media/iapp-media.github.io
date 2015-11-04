@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-
+<head id="Head1" runat="server"> 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>iApp Manager</title>
@@ -22,6 +21,7 @@
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="img/iAppStore.ico" rel="shortcut icon" />    
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)" />
@@ -61,18 +61,22 @@
                     </div>
                     <!-- 主題下拉選單（共用） -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
-                        <li>熱分享</li>
+                        <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
                             <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
-                            <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
+                           
                         </li>
-                        <li>開微店</li>
+                        <li class="SandTitle">開微店</li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
-             <li> <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
-                         
+                        <li>
+                            <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
+              
                     </ul>
+                     <div id="listbox">
+
+                     </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
                     <div class="col-xs-2 search-sm">
@@ -87,7 +91,7 @@
                     </div>
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
-                        <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />
+                        <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 
@@ -161,10 +165,8 @@
             </div>
 
         </div>
-        <!-- 回到頂部 -->
-        <a href="#">
-            <img class="back-top" src="img/cart.png" />
-        </a>
+        <!-- 至購物車 -->
+        <asp:Literal ID="LCarLink" runat="server">111</asp:Literal>
 
         <!-- WRAPPER -->
 

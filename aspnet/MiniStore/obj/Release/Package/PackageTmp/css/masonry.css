@@ -483,8 +483,8 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 480px) {
     #container {
-        margin: 72px auto;
-        margin: 125px 0 0 3%;
+        margin: 105px auto;
+        /* margin: 125px 0 0 0; */
     }
     .item {
         float: left;
@@ -583,11 +583,19 @@ input[type="checkbox"] {
         background-color: transparent;
     }
     .input-group-btn {
-        top: 12px;
+        top: 14px;
     }
     
     .input-group-btn:last-child>.btn,
     .input-group-btn:last-child>.btn-group {
-        margin-left: 66px;
+        margin-left: 80px;
+    }
+}
+@media only screen and (max-width: 355px) {
+
+.item {
+    float: left;
+    padding: 0px;
+    width: 148px;
     }
 }

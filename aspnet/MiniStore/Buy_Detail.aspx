@@ -39,8 +39,8 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 libor status CBbot">
-                                <label for="" class="col-xs-6">產品規格</label>
-                                <span class="ValueText col-xs-6 TRC">
+                                <label for="" class="col-xs-4">產品規格</label>
+                                <span class="ValueText col-xs-8 TRC">
                                   <asp:Literal ID="TB_Dimension" runat="server"></asp:Literal>
                                     </span>
                           <%--      <asp:TextBox ID="TB_Dimension" runat="server" CssClass="col-xs-6"></asp:TextBox>--%>

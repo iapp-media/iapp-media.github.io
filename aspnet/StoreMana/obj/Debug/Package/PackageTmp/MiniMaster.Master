@@ -22,6 +22,7 @@
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+     <link href="img/iAppStore.ico" rel="shortcut icon" />    
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)"/>
