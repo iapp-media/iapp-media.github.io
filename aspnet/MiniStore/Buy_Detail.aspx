@@ -28,14 +28,14 @@
                                     <asp:Literal ID="L_Name" runat="server"></asp:Literal></h1>
                             </div>
 
-                            <div class="DetailMbox">
-                                <div class="DetailMoN">
+                            <div class="DetailMbox col-xs-12">
+                                <div class="DetailML MidFonts">
                                     <p>
                                         <asp:Literal ID="TB_Price" runat="server"></asp:Literal>
                                     </p>
                                 </div>
-                                <div class="DetailMoN">
-                                    <asp:Button ID="BT_Confirm" runat="server" Text="立即購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
+                                <div class="DetailMR">
+                                    <asp:Button ID="BT_Confirm" runat="server" Text="購買" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Confirm_Click" />
                                 </div>
                             </div>
                             <div class="col-xs-12 libor status CBbot">
@@ -50,10 +50,15 @@
                             </div>
                              <div class="col-xs-12 questionBox">
                                 <div class="row">
-                                    <asp:Button ID="BT_MSG" runat="server" Text="問與答" CssClass="col-xs-4 question" OnClick="BT_MSG_Click" />
-                                    <asp:Button ID="BT_Like" runat="server" Text="喜歡" CssClass="col-xs-4 question" />
-                                    <asp:Button ID="BT_SHARE" runat="server" Text="分享" CssClass="col-xs-4 question" />
+                                    <asp:Button ID="BT_MSG" runat="server" Text="留言" CssClass="col-xs-12 question" OnClick="BT_MSG_Click" />
+                                    
                                 </div>
+                            </div>
+                            <div class="col-xs-12 questionBox">
+                                <div class="row">
+                                 <asp:Button ID="BT_Like" runat="server" Text="Facebook" CssClass="col-xs-6 question" />
+                                    <asp:Button ID="BT_SHARE" runat="server" Text="LINE" CssClass="col-xs-6 question" />
+                                    </div>
                             </div>
                         </div>
                     </div>

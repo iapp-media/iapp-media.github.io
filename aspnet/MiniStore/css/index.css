@@ -35,9 +35,11 @@ a:active {
     margin:auto;
     line-height: 60px;
 }
-.DetailMoN {
-
+.MidFonts {
+    font-size:18px;
+    color:#fff;
 }
+
 .TRC {
     color: #fc5d20!important;
 }
@@ -99,6 +101,7 @@ a:active {
     font-weight: inherit;
     margin: 0;
 }
+
 
 .BoxRight {
     float: right;
@@ -441,7 +444,8 @@ a:active {
 }
 
 .questionBox input {
-    border-right: 2px solid #d36e00;
+    /* border-right: 2px solid #d36e00; */
+    text-align:left;
 }
 
 .question {
@@ -520,7 +524,21 @@ a:active {
     background-color: #fff;
 }
 .DetailMbox {
-  
+  display:inline-flex;
+  flex-direction:row;
+      align-items:center;
+      justify-content:space-between;
+      background-color:#ff9933;
+      
+}
+.DetailML {
+    
+}
+.DetailMR {
+   
+}
+.DetailML p {
+    margin:0;
 }
 
 .DTimg,
