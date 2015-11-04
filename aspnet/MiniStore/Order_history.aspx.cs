@@ -61,7 +61,7 @@ namespace MiniStore
         public string ShowDetail(object IDNO)
         {
             if (IDNO.ToString().Length > 0)
-                return "Order_prn.aspx?entry=" + IDNO + "";
+                return "Order_prn.aspx?entry=" + IDNO + "&SN=" + Request.QueryString["SN"] + "";
             else
                 return "";
         }
