@@ -85,6 +85,7 @@
     <Content Include="img\cloth.jpg" />
     <Content Include="img\codee.jpg" />
     <Content Include="img\defaulthead.jpg" />
+    <Content Include="img\iAppStore.ico" />
     <Content Include="img\lineicon.png" />
     <Content Include="img\message.png" />
     <Content Include="img\ministorelogo.png" />
