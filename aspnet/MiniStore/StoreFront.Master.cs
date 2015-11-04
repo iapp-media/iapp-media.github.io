@@ -38,7 +38,7 @@ namespace MiniStore
                 jump = "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx");
                 L_MyStore.Text = " <li><a href='" + jump + "'  target='_self' >打造自己的微店</a></li>" +
                                  " <li><a href='#'>加入行動分店</a></li>" +
-                                 " <li><a>我的帳戶</a></li>" +
+                                 " <li class='SandTitle'>我的帳戶</li>" +
                                  " <li><a href='http://www.iapp-media.com/Login/profile.aspx'> 編輯會員資料</a></li> " +
                                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
                                  

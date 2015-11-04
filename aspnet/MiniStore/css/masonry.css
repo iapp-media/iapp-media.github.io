@@ -583,11 +583,11 @@ input[type="checkbox"] {
         background-color: transparent;
     }
     .input-group-btn {
-        top: 12px;
+        top: 14px;
     }
     
     .input-group-btn:last-child>.btn,
     .input-group-btn:last-child>.btn-group {
-        margin-left: 66px;
+        margin-left: 80px;
     }
 }

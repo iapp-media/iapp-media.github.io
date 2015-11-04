@@ -58,19 +58,22 @@
                                 <img class="iapplogo" src="img/ministorelogo.png" />
                             </a>
                             <div>
-                                <asp:Literal ID="Store_Name" runat="server"></asp:Literal></div>
+                                <h3 class="FixTitle">
+                                    <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                                </h3>
+                            </div>
                         </div>
                     </div>
                     <!-- 主題下拉選單（共用） -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
-                        <li>熱分享</li>
+                        <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
                             <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
                             <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
                         </li>
-                        <li>開微店</li>
+                        <li class="SandTitle">開微店</li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>登出</asp:LinkButton></li>
