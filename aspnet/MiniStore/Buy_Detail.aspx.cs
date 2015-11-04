@@ -39,7 +39,7 @@ namespace MiniStore
                 Main.ParaAdd("@SN", Request.QueryString["SN"], SqlDbType.NVarChar); 
                 Main.ParaAdd("@SID", Main.Scalar("select IDNo from Store where Store_NID=@SN"), SqlDbType.NVarChar);
 
-                str = "select * from product where idno=@idno and store_id=@SID";
+                str = "select *,(select COUNT(1) from Product_MSG where Product_ID=a.IDNo) cmsg from product a where a.idno=@idno and a.store_id=@SID";
                 DataTable DT = Main.GetDataSetNoNull(str);
                 if (DT.Rows.Count > 0)
                 {
@@ -47,6 +47,7 @@ namespace MiniStore
                     TB_Dimension.Text = DT.Rows[0]["dimension"].ToString();
                     TB_Price.Text = DT.Rows[0]["Price"].ToString();
                     TB_Description.Text = DT.Rows[0]["description"].ToString();
+                    MSG_COUNT.Text = DT.Rows[0]["cmsg"].ToString();
                 }
                 DataTable DT2 = Main.GetDataSetNoNull("Select FilePath from Product_Img where Product_ID=@idno ");
                 if (DT2.Rows.Count > 0)
@@ -105,9 +106,16 @@ namespace MiniStore
             } 
         }
 
-        protected void BT_MSG_Click(object sender, EventArgs e)
+        protected void BT_MSG_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("P_MSG.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "");
+        }
+
+        protected void BT_SHARE_Click(object sender, ImageClickEventArgs e)
+        {
+             Uri u = Request.UrlReferrer;
+             string aa = "https://www.facebook.com/sharer.php?u=" + u ;
+             Response.Write("<script> window.open('" + aa + "', '_blank', width=400,height=400);</script>");
         } 
     }
 }

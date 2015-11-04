@@ -31,7 +31,7 @@
                             <div class="DetailMbox col-xs-12">
                                 <div class="DetailML MidFonts">
                                     <p>
-                                        <asp:Literal ID="TB_Price" runat="server"></asp:Literal>
+                                        NT$<asp:Literal ID="TB_Price" runat="server"></asp:Literal>
                                     </p>
                                 </div>
                                 <div class="DetailMR">
@@ -55,23 +55,21 @@
                             <%--    <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>--%>
                             </div>
                              <div class="col-xs-12 questionBox">
-                                <div class="row">
-                                    <asp:Button ID="BT_MSG" runat="server" Text="留言" CssClass="col-xs-12 question" OnClick="BT_MSG_Click" />
-                                    
-                                </div>
+                                <div class="row" style="width:100px;height:100px;">  
+                                       <asp:ImageButton ID="BT_MSG" runat="server" ImageUrl="img/Msg_icon.png" CssClass="col-xs-12"  OnClick="BT_MSG_Click" /> 
+                                       <asp:Literal ID="MSG_COUNT" runat="server"></asp:Literal> 
+                                     </div>
                             </div>
                             <div class="col-xs-12 questionBox">
-                                <div class="row">
-                                 <asp:Button ID="BT_Like" runat="server" Text="Facebook" CssClass="col-xs-6 question" />
-                                    <asp:Button ID="BT_SHARE" runat="server" Text="LINE" CssClass="col-xs-6 question" />
-                                    </div>
+                                <div class="row"> 
+                                    <asp:ImageButton ID="BT_Like" runat="server" ImageUrl="img/sharefb.png" CssClass="col-xs-6" /> 
+                                    <asp:ImageButton ID="BT_SHARE" runat="server" ImageUrl="img/shareline.png"  CssClass="col-xs-6" OnClick="BT_SHARE_Click" />
+                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div> 
                 </li>
-            </ul>
-
+            </ul> 
         </div>
     </div>
 </asp:Content>
