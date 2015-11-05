@@ -22,7 +22,7 @@ a {
     /* height:40px; */
     /* position: absolute; */
     /* top: 0; */
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
 }
     .SHead img {
         width:100%;
@@ -183,6 +183,9 @@ a {
     border: 1px solid #eee;
     text-align: center;
 }
+.ProLast img {
+    width:15px;
+}
 
 .ProLtit {
     font-size: 120%;
@@ -220,7 +223,10 @@ a {
 .ProMain {
     padding: 0;
     padding: 6px 12px;
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
+}
+.ProLast {
+    /* outline:1px solid #f00; */
 }
 
 .marReset {
@@ -255,6 +261,19 @@ a {
 .PadLib {
     padding: 15px;
 }
+    .PadLib .form-control,
+    .PadLib .form-control2 {
+        display:inline-block;
+        background-color:#fff;
+        float: right;
+        width: 65%;
+        border: none;
+    }
+        .PadLib .form-control2 {
+            width:100%;
+            border-radius: 4px;
+            height: 100px;
+        }
 
 .BorObot {
     border-bottom: 3px solid #ff9933;
@@ -591,6 +610,7 @@ a {
     font-size: 22px !important;
     color: #ff9933 !important;
     letter-spacing: 5px;
+    font-weight: bold;
 }
 
 .ListTitle {
@@ -662,6 +682,7 @@ a {
     background-color: #a1a1a1;
     color: #fff;
     font-size: 18px;
+    text-align: center;
 }
 
 .Prntop {
@@ -1748,11 +1769,7 @@ a.iframe-info.cboxElement {
     font-weight: bold;
 }
 
-.theme .glyphicon-user,
-.theme .glyphicon-tags,
-.theme .glyphicon-list-alt,
-.theme .glyphicon-comment,
-.theme .glyphicon-cog {
+.theme .glyphicon-user, .theme .glyphicon-tags, .theme .glyphicon-list-alt, .theme .glyphicon-comment, .theme .glyphicon-cog, .theme .glyphicon-log-out {
     color: #7d7d7e;
     font-size: 100%;
     left: 0;
@@ -1937,6 +1954,8 @@ ul.swiper-wrapper li a {
     color: #fff !important;
     border-radius: 4px;
     display: block;
+    padding: 9px 12px;
+    font-weight: bold;
 }
 
 .productsinside h1 {
@@ -1983,6 +2002,17 @@ ul.swiper-wrapper li a {
 
 
 /* click img CSS */
+
+.Addbutton {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width: 80px;
+    height: 80px;
+}
 
 .clickimg {
     top: 99px;

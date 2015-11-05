@@ -85,7 +85,7 @@
                                                 </div>
                                                 <div class="col-xs-6 ListIn ProLPad BorBottompno">
                                                     <div class="row">
-                                                        NT$<asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT","{0:#,##0}")%>'></asp:Literal>
+                                                        <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Total_AMT","{0:#,##0}")%>'></asp:Literal>
                                                     </div>
                                                 </div> 
                                                 <div class="col-xs-6 ListIn ProLPad BorBottompno">

@@ -66,7 +66,7 @@
                     <li class="boxpos"><img src="img/qr-iappmedia.jpg" alt="" class="QRcode"/>
                         <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
                        
-                        <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
+                       
                     </li>
                     <li>微後台</li>
                     <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>

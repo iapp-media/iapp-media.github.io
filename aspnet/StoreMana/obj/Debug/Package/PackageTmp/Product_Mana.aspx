@@ -35,48 +35,47 @@
                             <asp:Repeater ID="RP1" runat="server">
                                 <HeaderTemplate>
                                     <div class="ProMLtit col-xs-12">
-                                        <div class="col-xs-12 ListTitle">商品名稱</div> 
+                                        <div class="col-xs-12 ListTitle">商品名稱</div>
+                                        <div class="col-xs-3 ListTitle">&nbsp;</div>
                                         <div class="col-xs-4 ListTitle">價格</div>
                                         <div class="col-xs-4 ListTitle">建檔日期</div>
-                                        <div class="col-xs-4 ListTitle">&nbsp;</div>
+                                        <div class="col-xs-1 ListTitle">&nbsp;</div>
                                     </div>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <div class="ProMaBOX col-xs-12">
-                                        <div class="SHead col-xs-3">
-                                                    <img src='<%# ShowImg(Eval("FilePath"))%>' />
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'> 
+                                        <div class="ProMaBOX col-xs-12">
+                                            <div class="SHead col-xs-3">
+                                                <img src='<%# ShowImg(Eval("FilePath"))%>' />
+                                            </div>
+                                            <div class="ProMain col-xs-8">
+                                                <div class="col-xs-12 ProLPad TtitleC BorTopno">
+                                                    <span>
+                                                        <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
+                                                    </span>
                                                 </div>
-                                        <div class="ProMain col-xs-8">
-                                            <div class="col-xs-12 ProLPad TtitleC BorTopno BorRightno BorLeftpno">
-                                                <span>
-                                                    <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
-                                                </span>
+                                                <div class="col-xs-6 ProLPad TRC BorBottompno">
+                                                    <asp:Literal ID="Literal2" runat="server" Text='<%# ShowPrice(Eval("Price"))%>'></asp:Literal>
+                                                </div>
+                                                <div class="col-xs-6 ProLPad TGray BorBottompno">
+                                                    <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
+                                                </div>
                                             </div>
-
-                                            <div class="col-xs-6 ProLPad TRC BorLeftpno BorBottompno">
-                                                <asp:Literal ID="Literal2" runat="server" Text='<%# ShowPrice(Eval("Price"))%>'></asp:Literal>
+                                            <div class="col-xs-1 ProLast">
+                                                <div class="row">
+                                                    <img src="img/arrow.png" alt="Alternate Text" />
+                                                </div>
                                             </div>
-                                            <div class="col-xs-6 ProLPad TGray BorBottompno">
-                                                <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
-                                            </div>
-
-                                           <%-- <div class="col-xs-4 ProLPad TOCCenter BorRightno BorBottompno">
-                                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>' CssClass="TOC">
-                                     詳細資訊
-                                                </asp:HyperLink>
-                                            </div>--%>
                                         </div>
-                                        <div class="col-xs-1"></div>
-                                    </div> 
+                                    </asp:HyperLink>
                                 </ItemTemplate>
                             </asp:Repeater>
-
                             <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                             <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
                         </div>
                     </div>
-                </div>  
-            </li> 
+                </div>
+            </li>
         </ul>
     </div>
 

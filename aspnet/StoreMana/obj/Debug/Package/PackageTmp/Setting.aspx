@@ -16,38 +16,25 @@
     <!-- WRAPPER -->
     <div id="content">
 
-        <div class="col-xs-12 AllBox BoxBorder">
+        <div class="col-xs-12 insidecare">
             <div class="row">
-                <!-- 參數設定 -->
-                <div class="allmodify">
-                    <ul class="buydivmove mart10">
-                        <li class="modify col-xs-12">
-                            <div class="col-xs-12 insidecare">
-                                <div class="row">
-                                    <div class="col-xs-12 libor paynumber">
-                                        <label for="" class="col-xs-6">商品類別</label>
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                                <asp:TextBox ID="TB_Cate" runat="server"  BorderColor="Red" ></asp:TextBox>
-                                                <span class="input-group-btn">
-                                                    <asp:Button ID="BTplus" runat="server" Text="+" CssClass="btn btn-default" OnClick="BTplus_Click" />
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="input-group">
-                                                <asp:CheckBoxList ID="CBL_Cate" runat="server" RepeatDirection="Horizontal"></asp:CheckBoxList>
-                                                <asp:Button ID="BTDEL" runat="server" Text="刪除" CssClass="btn btn-default" OnClick="BTDEL_Click" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="col-xs-12 BTbox">
+                    <p class="BTleft">商品類別</p>
+                    <div class="BTright">
+                        <asp:TextBox ID="TB_Cate" runat="server" BorderColor="Red"></asp:TextBox>
+                        <span class="input-group-btn">
+                            <asp:Button ID="BTplus" runat="server" Text="+" CssClass="btn btn-default" OnClick="BTplus_Click" />
+                        </span>
+                    </div>
                 </div>
-                <!-- 參數設定 end -->
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <asp:CheckBoxList ID="CBL_Cate" runat="server" RepeatDirection="Horizontal"></asp:CheckBoxList>
+                            <asp:Button ID="BTDEL" runat="server" Text="刪除" CssClass="btn btn-default" OnClick="BTDEL_Click" />
+                        </div>
+                    </div>
             </div>
         </div>
+
     </div>
 </asp:Content>
