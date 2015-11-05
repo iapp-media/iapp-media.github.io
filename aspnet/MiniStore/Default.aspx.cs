@@ -91,7 +91,7 @@ namespace MiniStore
                     ss.Append("         </div>" + "\n");
                     ss.Append("     </div>" + "\n");
                     ss.Append("     <div class='col-xs-12'>" + "\n\r");
-                    ss.Append("         <p class='iapp-name'>NT$" + dw["Price"].ToString() + "</p>" + "\n\r");
+                    ss.Append("         <p class='iapp-name'>NT$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</p>" + "\n\r");
                     ss.Append("        <button > <a href='Buy_Add.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'>購買</a></button>" + "\n\r");
                     ss.Append("     </div>" + "\n");
                     ss.Append("  </div>" + "\n");

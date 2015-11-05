@@ -45,7 +45,7 @@ namespace MiniStore
                 {
                     TB_Name.Text = DT.Rows[0]["Product_Name"].ToString(); 
                     TB_Dimension.Text = DT.Rows[0]["dimension"].ToString();
-                    TB_Price.Text = DT.Rows[0]["Price"].ToString();
+                    TB_Price.Text = string.Format("{0:#,##0}", Main.Cint2(DT.Rows[0]["Price"]));
                     TB_Description.Text = DT.Rows[0]["description"].ToString();
                   //  MSG_COUNT.Text = DT.Rows[0]["cmsg"].ToString();,(select COUNT(1) from Product_MSG where Product_ID=a.IDNo) cmsg
                 }
