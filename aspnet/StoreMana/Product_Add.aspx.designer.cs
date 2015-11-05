@@ -94,15 +94,6 @@ namespace StoreMana.Mini {
         protected global::System.Web.UI.WebControls.TextBox TB_Memo;
         
         /// <summary>
-        /// BT_Create 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_Create;
-        
-        /// <summary>
         /// BT_Cancel 控制項。
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace StoreMana.Mini {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BT_Cancel;
+        
+        /// <summary>
+        /// BT_Create 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_Create;
         
         /// <summary>
         /// LPID 控制項。

@@ -66,22 +66,20 @@
 
             <div class="row">
                 <div class="col-xs-12 libor paynumber PadLib">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 BTbox">
                         <div class="row">
-                            <p class="BoxLeft">商品類別</p>
+                            <p class="BTleft">商品類別</p>
+                            <asp:DropDownList class="BTright" ID="DL_Cate" runat="server"></asp:DropDownList>
                         </div>
                     </div>
-
-                    <asp:DropDownList class="form-control" ID="DL_Cate" runat="server">
-                    </asp:DropDownList>
                 </div>
 
                 <div class="col-xs-12 libor status PadLib">
-                    <label for="" class="col-xs-12">
+                    <div class="col-xs-12 BTbox">
                         <div class="row">
-                            商品圖片
+                            <p class="BTleft">商品圖片</p>
                         </div>
-                    </label>
+                    </div>
                     <div id="slider" class="col-xs-12">
                         <div class="control_next glyphicon glyphicon-chevron-right"></div>
                         <div class="control_prev glyphicon glyphicon-chevron-left"></div>
@@ -161,13 +159,17 @@
                         </div>
                     </div>
                     <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
-                    <asp:TextBox ID="TB_Memo" Class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="TB_Memo" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
-                <div class="col-xs-12 libor status CBbot CBBTN BorTop">
-                    <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
-                </div>
-                <div class="col-xs-12 libor status CBbot CBBTN">
-                    <asp:Button ID="BT_Cancel" runat="server" Text="取消新增" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Cancel_Click" />
+                <div class="col-xs-12 BorTop">
+                    <div class="row">
+                        <div class="col-xs-5 libor status CBbot CBBTN">
+                            <asp:Button ID="BT_Cancel" runat="server" Text="取消" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Cancel_Click" />
+                        </div>
+                        <div class="col-xs-7 libor status CBbot CBBTN">
+                            <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

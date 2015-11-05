@@ -261,6 +261,19 @@ a {
 .PadLib {
     padding: 15px;
 }
+    .PadLib .form-control,
+    .PadLib .form-control2 {
+        display:inline-block;
+        background-color:#fff;
+        float: right;
+        width: 65%;
+        border: none;
+    }
+        .PadLib .form-control2 {
+            width:100%;
+            border-radius: 4px;
+            height: 100px;
+        }
 
 .BorObot {
     border-bottom: 3px solid #ff9933;
@@ -1940,6 +1953,7 @@ ul.swiper-wrapper li a {
     color: #fff !important;
     border-radius: 4px;
     display: block;
+    padding: 9px 12px;
 }
 
 .productsinside h1 {
@@ -1986,6 +2000,17 @@ ul.swiper-wrapper li a {
 
 
 /* click img CSS */
+
+.Addbutton {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width: 80px;
+    height: 80px;
+}
 
 .clickimg {
     top: 99px;

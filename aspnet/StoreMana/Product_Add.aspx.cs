@@ -64,25 +64,25 @@ namespace StoreMana.Mini
             ss.Append("                      <ul> ");
             ss.Append("                         <li> ");
             ss.Append("                                <img id='p01' src='" + p1src + "' class='sliderimgH'  />    ");
-            ss.Append("                             <label onclick=" + "" + "setCurrent('01','" + LPID.Text.Trim() + "')" + "" + ">");
+            ss.Append("                             <label class=\"Addbutton\" onclick=" + "" + "setCurrent('01','" + LPID.Text.Trim() + "')" + "" + ">");
             ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
             ss.Append("                             </label> ");
             ss.Append("                         </li>");
             ss.Append("                         <li> ");
             ss.Append("                               <img id='p02' src='" + p2src + "' class='sliderimgH'  /> ");
-            ss.Append("                             <label onclick=" + "" + "setCurrent('02','" + LPID.Text.Trim()  + "')" + "" + ">");
+            ss.Append("                             <label class=\"Addbutton\" onclick=" + "" + "setCurrent('02','" + LPID.Text.Trim() + "')" + "" + ">");
             ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
             ss.Append("                             </label>");
             ss.Append("                         </li>");
             ss.Append("                         <li> ");
             ss.Append("                                <img id='p03' src='" + p3src + "' class='sliderimgH'  /> ");
-            ss.Append("                             <label onclick=" + "" + "setCurrent('03','" + LPID.Text.Trim()  + "')" + "" + ">");
+            ss.Append("                             <label class=\"Addbutton\" onclick=" + "" + "setCurrent('03','" + LPID.Text.Trim() + "')" + "" + ">");
             ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
             ss.Append("                             </label>");
             ss.Append("                         </li>");
             ss.Append("                         <li>");
             ss.Append("                                 <img id='p04' src='" + p4src + "' class='sliderimgH' /> ");
-            ss.Append("                             <label onclick=" + "" + "setCurrent('04','" + LPID.Text.Trim() + "')" + "" + ">");
+            ss.Append("                             <label class=\"Addbutton\" onclick=" + "" + "setCurrent('04','" + LPID.Text.Trim() + "')" + "" + ">");
             ss.Append("                                 <img src='img/uploadicon.png' alt='...' class='imgsize poscenter clickslider openslider' />");
             ss.Append("                              </label>");
             ss.Append("                         </li>");
@@ -96,7 +96,7 @@ namespace StoreMana.Mini
             if (Comm.IsNumeric(Request.QueryString["entry"]))
             {
                 BT_Create.Text = "儲存更新";
-                BT_Cancel.Text = "取消更新";
+                BT_Cancel.Text = "取消";
 
                 str = "select * from product where idno=" + Request.QueryString["entry"] + "";
                 DataTable DT = Main.GetDataSetNoNull(str);
