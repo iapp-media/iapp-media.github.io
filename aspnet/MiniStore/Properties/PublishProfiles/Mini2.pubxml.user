@@ -14,13 +14,13 @@
       <publishTime>11/05/2015 12:16:27</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/05/2015 15:52:50</publishTime>
+      <publishTime>11/05/2015 18:59:03</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>11/05/2015 17:03:29</publishTime>
+      <publishTime>11/05/2015 18:45:36</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -44,7 +44,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/05/2015 17:26:28</publishTime>
+      <publishTime>11/05/2015 18:45:36</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/04/2015 12:12:08</publishTime>
@@ -308,10 +308,10 @@
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>11/05/2015 17:03:17</publishTime>
+      <publishTime>11/05/2015 18:45:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/05/2015 17:27:18</publishTime>
+      <publishTime>11/05/2015 18:59:04</publishTime>
     </File>
   </ItemGroup>
 </Project>
