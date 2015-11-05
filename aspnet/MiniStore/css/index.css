@@ -70,10 +70,13 @@ a:active {
 .FixTitle {
     text-align:center;
     color:#ff9933;
-    font-size:22px;
+    /* font-size:22px; */
+    display: inline-block;
     position:absolute;
     left:0;
     /* z-index: 999; */
+    width: 162px;
+    /* outline: 1px solid #f00; */
     right:0;
     margin:auto;
     line-height: 60px;
@@ -1144,7 +1147,6 @@ ul.swiper-wrapper li a {
     color: #f93;
     float: right;
     font-size: 150%;
-    width: 38%;
     padding: 0;
 }
 
