@@ -1755,11 +1755,7 @@ a.iframe-info.cboxElement {
     font-weight: bold;
 }
 
-.theme .glyphicon-user,
-.theme .glyphicon-tags,
-.theme .glyphicon-list-alt,
-.theme .glyphicon-comment,
-.theme .glyphicon-cog {
+.theme .glyphicon-user, .theme .glyphicon-tags, .theme .glyphicon-list-alt, .theme .glyphicon-comment, .theme .glyphicon-cog, .theme .glyphicon-log-out {
     color: #7d7d7e;
     font-size: 100%;
     left: 0;
