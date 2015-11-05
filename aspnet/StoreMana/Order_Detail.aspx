@@ -17,7 +17,7 @@
     <div class="col-xs-12 libor ContentTop">
         <h1 class="col-xs-10">購買明細</h1>
     </div>
-    <ul class="buydivmove">
+    <ul class="buydivmove ODetailTop">
         <li class="productcare col-xs-12 insidecare AllBGC">
             <div class="row">
                 <asp:Repeater ID="RP4" runat="server">

@@ -67,7 +67,6 @@
     <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="Cust_Mana.aspx" />
-    <Content Include="img\000000102601.jpg" />
     <Content Include="img\arrow.png" />
     <Content Include="img\cancel-01.png" />
     <Content Include="img\cart.png" />
