@@ -72,7 +72,7 @@
 <%--                                                <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /> --%>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-8">
+                                            <div class="col-xs-8 Orderlist">
                                                 <div class="col-xs-6 ListIn ProLPad BorTopno">
                                                     <div class="row">
                                                         <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
