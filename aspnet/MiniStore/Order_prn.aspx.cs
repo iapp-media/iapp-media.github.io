@@ -82,6 +82,7 @@ namespace MiniStore
 
                 }
             }
+            Response.Redirect("Order_history.aspx"); 
         }
 
         public string ShowImg(object IDNO)
