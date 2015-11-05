@@ -1373,7 +1373,7 @@ public class CommTool: System.Web.UI.Page
         Main.ParaClear();
         Main.ParaAdd("@SN", SN, SqlDbType.VarChar);
         string StoreNo = Main.Scalar("select Store_No from store where Store_NID=@SN");
-        string HeadNO = StoreNo + (SDate.Year - 1911).ToString() + SDate.Month.ToString().PadLeft(2, '0') + SDate.Day.ToString().PadLeft(2, '0');
+        string HeadNO = StoreNo + (SDate.Year).ToString().Substring(2,2) + SDate.Month.ToString().PadLeft(2, '0') + SDate.Day.ToString().PadLeft(2, '0');
         Main.ParaAdd("@HeadNO", HeadNO, SqlDbType.NVarChar);
         string tmpNO = Main.Scalar("Select Max(Cast(Replace(Order_No,@HeadNO,'') as int)) from Orders where Order_No like @HeadNO+'%'");
         string Order_No = HeadNO + "0001";
