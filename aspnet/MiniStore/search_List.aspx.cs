@@ -37,7 +37,8 @@ namespace AppPortal
                 string src = dr.Rows[i]["FilePath"].ToString();
 
                 ss.Append("<li><a href=\"default.aspx?SN=" + Request.QueryString["SN"] + "&w=" + dr.Rows[i]["Product_Name"].ToString() + "\">" +
-                          "<img class=\"finder-app\" src=\"" + src + "\">" + dr.Rows[i]["Product_Name"] + "</a></li>" + "\n\r");
+                          "" + dr.Rows[i]["Product_Name"] + "</a></li>" + "\n\r");
+                // "<img class=\"finder-app\" src=\"" + src + "\">"
             }
             ss.Append("</ul>" + "\n");
             //
