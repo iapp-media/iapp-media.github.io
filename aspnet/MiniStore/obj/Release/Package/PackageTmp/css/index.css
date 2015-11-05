@@ -1234,6 +1234,7 @@ ul.swiper-wrapper li a {
     border-radius: 4px;
     display: block;
     border-color: #fd9a33;
+    font-weight:bold;
 }
 
 .productsinside h1 {

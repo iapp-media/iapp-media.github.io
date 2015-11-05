@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-xs-12 BTbox">
                     <p class="BTleft">商品類別</p>
-                    <div class="BTright">
+                    <div class="BTright SettAdd">
                         <asp:TextBox ID="TB_Cate" runat="server" BorderColor="Red"></asp:TextBox>
                         <span class="input-group-btn">
                             <asp:Button ID="BTplus" runat="server" Text="+" CssClass="btn btn-default" OnClick="BTplus_Click" />

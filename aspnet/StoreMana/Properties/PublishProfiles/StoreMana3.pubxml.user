@@ -41,7 +41,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/05/2015 15:49:34</publishTime>
+      <publishTime>11/05/2015 16:59:24</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -209,7 +209,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/05/2015 14:25:40</publishTime>
+      <publishTime>11/05/2015 17:03:04</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -218,10 +218,10 @@
       <publishTime>11/05/2015 12:09:15</publishTime>
     </File>
     <File Include="OrderMana.aspx">
-      <publishTime>11/04/2015 11:24:04</publishTime>
+      <publishTime>11/05/2015 16:35:22</publishTime>
     </File>
     <File Include="Order_Detail.aspx">
-      <publishTime>11/04/2015 11:24:04</publishTime>
+      <publishTime>11/05/2015 16:28:46</publishTime>
     </File>
     <File Include="Product_Add.aspx">
       <publishTime>11/05/2015 15:42:20</publishTime>
@@ -233,7 +233,7 @@
       <publishTime>11/05/2015 14:40:44</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>11/05/2015 14:40:46</publishTime>
+      <publishTime>11/05/2015 16:56:29</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
       <publishTime>10/30/2015 16:55:24</publishTime>
@@ -245,7 +245,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/05/2015 16:09:44</publishTime>
+      <publishTime>11/05/2015 17:27:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

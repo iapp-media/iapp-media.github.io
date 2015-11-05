@@ -20,18 +20,20 @@
             <div class="row">
                 <div class="col-xs-12 BTbox">
                     <p class="BTleft">商品類別</p>
-                    <div class="BTright">
-                        <asp:TextBox ID="TB_Cate" runat="server" BorderColor="Red"></asp:TextBox>
-                        <span class="input-group-btn">
+                    <div class="BTright SettAdd">
+                        <asp:TextBox ID="TB_Cate" runat="server" CssClass></asp:TextBox>
+                        
                             <asp:Button ID="BTplus" runat="server" Text="+" CssClass="btn btn-default" OnClick="BTplus_Click" />
-                        </span>
+                       
                     </div>
                 </div>
-                    <div class="col-lg-12">
-                        <div class="input-group">
+                    <div class="col-xs-12">
+                        <div class="row">
+                        <div class="SetTable">
                             <asp:CheckBoxList ID="CBL_Cate" runat="server" RepeatDirection="Horizontal"></asp:CheckBoxList>
-                            <asp:Button ID="BTDEL" runat="server" Text="刪除" CssClass="btn btn-default" OnClick="BTDEL_Click" />
+                            <asp:Button ID="BTDEL" runat="server" Text="刪除" CssClass="btn btn-warning SBuyCar2" OnClick="BTDEL_Click" />
                         </div>
+                            </div>
                     </div>
             </div>
         </div>

@@ -40,6 +40,16 @@ a {
     /* outline:1px solid #f00; */
     margin-left: 50px;
 }
+.ODetailTop {
+    top: 161px !important;
+}
+.SettAdd {
+    height:40px;
+    position:relative;
+}
+.SettAdd input{
+   height:100%;
+}
 
 
 /*TEXT*/
@@ -159,12 +169,12 @@ a {
 }
 
 .ThreeBTN {
-    background-color: #fd9a33 !important;
-    border-color: #fd9a33;
+    background-color: #ff9933 !important;
     text-align: center !important;
     color: #fff !important;
-    border-radius: 3px;
-    font-size: 18px;
+    border-radius: 4px;
+    width:90%;
+    font-size: 16px;
 }
 
 .AlltexC {
@@ -246,7 +256,7 @@ a {
 }
 
 .AllBGC {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 .PayBGC {
@@ -401,7 +411,7 @@ a {
     background-color: #ff9933 !important;
     height: 60px;
     box-sizing: border-box;
-    position: fixed;
+    position: fixed !important;
     z-index: 999;
     top: 114px;
     padding: 7px 12px !important;
@@ -547,7 +557,7 @@ a {
     border-radius: 5px;
     color: #fff;
     font-size: 17px;
-    background-color: #ff9933;
+    background-color: #ccc;
 }
 
 .MonBox span {
@@ -891,10 +901,13 @@ a {
 }
 
 .details {
-    height: 119px;
+    /* height: 119px; */
     box-sizing: border-box;
-    padding: 14px 0 0 0;
+    /* padding: 14px 0 0 0; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .details:nth-child(odd) {
