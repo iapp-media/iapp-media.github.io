@@ -1,24 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BuyFont.Master" AutoEventWireup="true" CodeBehind="P_MSG.aspx.cs" Inherits="MiniStore.P_MSG" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
+
     <div class="col-xs-12 libor ContentTop">
-                                <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
-
-                                <h1 class="col-xs-10">問與答</h1>
-
-                            </div>
+    <%--  <a href="Default.aspx"> <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" /></a> --%>
+        <asp:Literal ID="L_Back" runat="server"></asp:Literal>
+        <h1 class="col-xs-10">問與答</h1> 
+    </div>
     <div class="col-xs-12 promana">
-        <div class="row">
-
+        <div class="row"> 
             <ul>
                 <li class="productcare">
                     <div class="col-xs-12 insidecare FBMargin">
                         <div class="row">
-                            
+
                             <div class="col-xs-12 libor payNum pagetitle">
                                 <asp:Literal ID="L_Puc" runat="server"></asp:Literal>
                             </div>
@@ -51,10 +48,10 @@
             <div class="col-xs-12 fixBar">
                 <asp:TextBox ID="tbQuen" runat="server" AutoPostBack="true" Class="form-control" Rows="3"></asp:TextBox>
                 <div class="fRight">
-                <img src="img/send.png" alt="Alternate Text" />
-                    </div>
+                    <%--  <img src="img/send.png" alt="Alternate Text" />--%>
+                    <asp:ImageButton ID="btsend" runat="server" ImageUrl="img/send.png" OnClick="btsend_Click" />
+                </div>
                 <%--<asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />--%>
-
             </div>
         </div>
     </div>

@@ -57,7 +57,7 @@ a:active {
 .ProMaBOX {
     background-color:#fff;
     margin:4px 0;
-    height: 76px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,10 +70,13 @@ a:active {
 .FixTitle {
     text-align:center;
     color:#ff9933;
-    font-size:22px;
+    /* font-size:22px; */
+    display: inline-block;
     position:absolute;
     left:0;
     /* z-index: 999; */
+    width: 162px;
+    /* outline: 1px solid #f00; */
     right:0;
     margin:auto;
     line-height: 60px;
@@ -82,13 +85,24 @@ a:active {
     font-size:18px;
     color: #ff9933;
 }
-.ProMaBOXIMG {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.ProMaBOXIMG,
+.Orderlist,
+.ProLast {
+    /* outline:1px solid #f00; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* overflow: hidden; */
     /* outline: 1px solid; */
-    padding: 3px 12px;
+    /* padding: 3px 12px; */
+}
+
+.ProLast {
+    padding: -1px 0px;
+}
+
+.Orderlist {
+    padding: 11px 0;
 }
 
 .ProMaBOX img,
@@ -97,15 +111,17 @@ a:active {
     width:100%;
     /* transform: scale(1.3); */
 }
+
+.ProLastIn img {
+width: 15px;}
 .ProLast {
     position:relative;
     
     padding: 0;
 }
 .ProLastIn {
-    width: 13px;
-   
-    padding: 27px 0px;
+    /* width: 13px; */
+    padding: 33px 8px;
 }
 .ProLPad {
     border: 1px solid #eee;
@@ -1144,7 +1160,6 @@ ul.swiper-wrapper li a {
     color: #f93;
     float: right;
     font-size: 150%;
-    width: 38%;
     padding: 0;
 }
 

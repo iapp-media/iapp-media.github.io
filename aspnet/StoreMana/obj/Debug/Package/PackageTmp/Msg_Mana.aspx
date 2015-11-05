@@ -74,39 +74,38 @@
             <HeaderTemplate>
             </HeaderTemplate>
             <ItemTemplate>
-
-                <div class="QMargin col-xs-12">
+                <div class="Boxlist col-xs-12">
                     <div class="row">
-                        <div class="col-xs-11 BTbox ShareMargin IssueUI1">
-                            <div class="Qutop">
-                                <div>
-                                    <img src='<%# ShowImg(Eval("FilePath"))%>' alt="Alternate Text" />
+                        <div class="QMargin col-xs-12">
+                            <div class="row">
+                                <div class="ShareMargin IssueUI1">
+                                    <div class="Qutop">
+                                        <img src='<%# ShowImg(Eval("FilePath"))%>' alt="Alternate Text" />
+                                        <h3 class="TBC">棒球套件組</h3>
+                                    </div>
+                                    <div class="Qubot">
+                                        <p class="TBlack TRBC">問題</p>
+                                        <p class="TBlack TRBC">YYYY12313</p>
+                                        <p class="TBlack TextBright"><%# Eval("agoday")%></p>
+                                        <p class="TRBC"><%# Eval("Question")%></p>
+                                    </div>
+
                                 </div>
-                                <h1>棒球套件組</h1>
-                            </div>
-                            <div class="Qutop">
-                                <p class="TBlack">問題</p>
-                                <p class="TBlack TRBC">YYYY12313</p>
-                                <p class="TRBC"><%# Eval("agoday")%></p>
-                            </div>
-                            <p class="TRBC"><%# Eval("Question")%></p>
-                        </div>
-                        <div class="col-xs-11 BTbox TalkUI">
-                            <asp:HyperLink ID="HyperLink1" CssClass="TBlack TalkR" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
+                                <div class="col-xs-11 BTbox TalkUI">
+                                    <asp:HyperLink ID="HyperLink1" CssClass="TRBC TBlack" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'>
                                      回覆
-                            </asp:HyperLink>
-                        </div>
-                        <div class="col-xs-11 BTbox IssueUI2">
-                            <div class="Qutop">
-                                <p class="TBlack">回覆</p>
-                                <p class="TBlack TRBC">賣家</p>
-                                <p class="TRBC"><%# Eval("reday")%></p>
+                                    </asp:HyperLink>
+                                </div>
+                                <div class="col-xs-11 BTbox IssueUI2">
+                                    <p class="TRBC TBlack">回覆</p>
+                                    <p class="TBlack TRBC">賣家</p>
+                                    <p class="TRBC TextBright"><%# Eval("reday")%></p>
+                                    <p class="TRBC"><%# Eval("Ans")%></p>
+                                </div>
                             </div>
-                            <p class="TRBC"><%# Eval("Ans")%></p>
                         </div>
                     </div>
                 </div>
-
             </ItemTemplate>
         </asp:Repeater>
         <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>

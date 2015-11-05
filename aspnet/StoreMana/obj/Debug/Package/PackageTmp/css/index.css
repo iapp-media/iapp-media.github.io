@@ -18,14 +18,28 @@ a {
 }
 
 .SHead {
-    width:40px;
-    height:40px;
-    position: absolute;
-    top: 0;
+    /* width:40px; */
+    /* height:40px; */
+    /* position: absolute; */
+    /* top: 0; */
+    outline: 1px solid #f00;
 }
     .SHead img {
         width:100%;
     }
+    .Qubot p:nth-child(2),
+    .IssueUI2 p:nth-child(2) {
+    /* outline: 1px solid#f00; */
+    margin-left: 11px;
+}
+    .TBlack:nth-child(3) {
+        /* float:right; */
+    }
+.Qubot .TRBC:nth-child(4),
+.IssueUI2 .TRBC:nth-child(4) {
+    /* outline:1px solid #f00; */
+    margin-left: 50px;
+}
 
 
 /*TEXT*/
@@ -44,16 +58,24 @@ a {
 }
 
 .TBC {
-    color: #000 !important;
+    color: #7d7d7d !important;
+}
+.TextBright {
+    color: #b4b4b4 !important;
+    font-size: 13px !important;
+    float: right;
 }
 
 .TBlack {
     color: #000;
     font-size: 18px;
+    display:inline;
 }
 
+
+
 .TRBC {
-    color: #838485;
+    color: #7d7d7d;
 }
 
 .TtitleC {
@@ -70,6 +92,9 @@ a {
 #content {
     position: relative;
     top: 114px;
+}
+.Boxlist {
+    background-color:#cbcdca;
 }
 
 .BTbox {
@@ -89,27 +114,44 @@ a {
     float: right;
     border: 1px solid #aaa;
 }
-
-.Qutop p {
-    display: inline-block;
-    padding-right: 12px;
+.Qutop {
+    border-bottom: 1px solid #7d7d7d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
 }
-
-.Qutop p:last-child {
-    float: right;
+.Qutop img,
+.Qutop h3 {
+    display:inline-block;
+}
+.Qutop img {
+    width: 15%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+.Qutop h3 {
+    width: 70%;
+}
+.Qubot {
+    padding:6px 12px;
 }
 
 .IssueUI1 {
-    border-radius: 0 10% 0 0/0 50% 0 0;
+    border-radius: 0 16% 0 0/0 50% 0 0;
+    background-color:#fff;
+    width: 97%;
 }
 
 .IssueUI2 {
     border-radius: 0 0 10% 0/0 0 50% 0;
     background-color: #ffeed0;
+    width: 97%;
 }
 
 .TalkUI {
     background-color: #ffeed0;
+    text-align: right;
+    width: 97%;
 }
 
 .TalkR {
@@ -158,6 +200,9 @@ a {
     background-color: #cccccc;
     padding: 4px 0;
     margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ProMaBOX:nth-child(odd) {
@@ -175,6 +220,7 @@ a {
 .ProMain {
     padding: 0;
     padding: 6px 12px;
+    outline: 1px solid #f00;
 }
 
 .marReset {
