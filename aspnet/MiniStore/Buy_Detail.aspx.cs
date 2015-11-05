@@ -26,7 +26,7 @@ namespace MiniStore
                     Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int);
                     Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
                                   " ( @Product_ID, @Cust_ID, getdate())");
-
+                    L_Back.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"><img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
                     CarouselPic();  
             }
         }
@@ -110,12 +110,14 @@ namespace MiniStore
         {
             Response.Redirect("P_MSG.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "");
         }
+         
 
-        protected void BT_SHARE_Click(object sender, ImageClickEventArgs e)
+        protected void BT_FB_Click(object sender, ImageClickEventArgs e)
         {
-             Uri u = Request.UrlReferrer;
-             string aa = "https://www.facebook.com/sharer.php?u=" + u ;
-             Response.Write("<script> window.open('" + aa + "', '_blank', width=400,height=400);</script>");
+            Uri u = Request.UrlReferrer;
+            string aa = "https://www.facebook.com/sharer.php?u=" + u;
+            Response.Write("<script> window.open('" + aa + "', '_blank', width=400,height=400);</script>");
+
         } 
     }
 }

@@ -15,7 +15,7 @@ namespace MiniStore
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            { 
+            {
 
                 if (Request.QueryString["entry"] == null)
                 {
@@ -30,10 +30,10 @@ namespace MiniStore
                                  "    <span>$" + DT.Rows[0]["Price"] + "</span>" +
                                  "    <p></p>" +
                                  "</div>";
-                } 
+                }
             }
-            
-            L.Text = "select Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg order by CreatDate DESC ";
+            L_Back.Text = "<a href=\"Buy_detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "\"> <img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
+            L.Text = "select Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg where product_id='" + Request.QueryString["entry"] + "' order by CreatDate DESC ";
 
 
             SD1.SelectCommand = L.Text;
@@ -41,7 +41,7 @@ namespace MiniStore
             RP1.DataSourceID = SD1.ID;
         }
 
-        protected void btsend_Click(object sender, EventArgs e)
+        protected void btsend_Click(object sender, ImageClickEventArgs e)
         {
             if (tbQuen.Text != "")
             {

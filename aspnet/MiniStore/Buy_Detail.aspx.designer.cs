@@ -13,6 +13,15 @@ namespace MiniStore {
     public partial class Buy_Detail {
         
         /// <summary>
+        /// L_Back 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal L_Back;
+        
+        /// <summary>
         /// TB_Name 控制項。
         /// </summary>
         /// <remarks>
@@ -85,21 +94,30 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.Button BT_MSG;
         
         /// <summary>
-        /// BT_SHARE 控制項。
+        /// BT_Mail 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BT_SHARE;
+        protected global::System.Web.UI.WebControls.ImageButton BT_Mail;
         
         /// <summary>
-        /// BT_Like 控制項。
+        /// BT_Line 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BT_Like;
+        protected global::System.Web.UI.WebControls.ImageButton BT_Line;
+        
+        /// <summary>
+        /// BT_FB 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BT_FB;
     }
 }
