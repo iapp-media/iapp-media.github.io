@@ -610,6 +610,7 @@ a {
     font-size: 22px !important;
     color: #ff9933 !important;
     letter-spacing: 5px;
+    font-weight: bold;
 }
 
 .ListTitle {
@@ -1954,6 +1955,7 @@ ul.swiper-wrapper li a {
     border-radius: 4px;
     display: block;
     padding: 9px 12px;
+    font-weight: bold;
 }
 
 .productsinside h1 {
