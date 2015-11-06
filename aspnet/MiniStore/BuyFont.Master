@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server"> 
+<head id="Head1" runat="server">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>iApp微店</title>
@@ -21,7 +21,7 @@
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link href="img/iAppStore.ico" rel="shortcut icon" />    
+    <link href="img/iAppStore.ico" rel="shortcut icon" />
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)" />
@@ -47,6 +47,30 @@
 <body>
     <form id="form1" runat="server">
         <!-- facebook(必須寫在最上面) & parse init -->
+        <%-- join --%>
+        <div class="JoinBox">
+            <div class="LOGO">
+                <img src="img/img-1.jpg" alt="Alternate Text" />
+            </div>
+            <div class="Sendbox">
+                <p>輸入您的微店店名</p>
+                <asp:TextBox ID="TB_SNAME" runat="server"></asp:TextBox>
+                <div>
+                    <asp:Button ID="BT_SNAME" runat="server" Text="確定" CssClass="btn btn-warning sendcareButtomeEnd" OnClick="BT_SNAME_Click" />
+                </div>
+            </div>
+        </div>
+        <%-- join end --%>
+
+        <%-- joinBranch --%>
+        <div class="JoinBranchBox">
+            <div class="JBBG">
+                <img src="img/img-2.jpg" alt="Alternate Text" />
+            </div>
+            <div>
+                <asp:Button ID="Button1" runat="server" Text="加入" CssClass="btn btn-warning sendcareButtomeEnd" /></div>
+        </div>
+        <%-- joinBranch end --%>
         <div id="loading">iApp 載入中</div>
         <!-- 導覽列（共用） -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -57,6 +81,11 @@
                             <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/ministorelogo.png" />
                             </a>
+                              <div>
+                                <h3 class="FixTitle">
+                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                                </h3>
+                            </div>
                         </div>
                     </div>
                     <!-- 主題下拉選單（共用） -->
@@ -66,17 +95,19 @@
                             <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
-                           
+
                         </li>
                         <li class="SandTitle">開微店</li>
+                        <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>
+                        <li onclick="JoinBranch(1)"><a href="javascrip:void(0)">加入行動分店</a></li>
+
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
-              
-                    </ul>
-                     <div id="listbox">
 
-                     </div>
+                    </ul>
+                    <div id="listbox">
+                    </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
                     <div class="col-xs-2 search-sm">
@@ -95,7 +126,7 @@
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 
- 
+
                     <!-- mobile會員選單 -->
                     <div>
                         <ul class="dropdown-menu dropdown-menu-right m-profile" role="menu">
@@ -128,7 +159,7 @@
                             <!-- /input-group -->
                         </div>
                         <!-- 登入／註冊 -->
-<%--                        <div class="col-sm-2 col-md-1 login-box">
+                        <%--                        <div class="col-sm-2 col-md-1 login-box">
                             <a class='iframe-info' href="login/login/login.html">
                                 <button type="button" class="btn btn-default navbar-btn1 col-md-12">
                                     登入／註冊
@@ -142,7 +173,7 @@
                                 <h4>Digital+</h4>
                             </div>
                         </div>
-                        <a href="#" class="menusandwich example1"><span></span></a>
+                        <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
 
                 </div>
@@ -190,11 +221,27 @@
     <script>
         document.write('<style>#loading{display:none}</style>');
 
-        function join() {
-            alert('join');
+
+        function JoinBranch(obj) {
+            $('.JoinBranchBox').fadeIn();
         }
-        function JoinBranch() {
-            alert('JoinBranch');
+        function tojoin(obj) {
+            if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); return; }
+            var fn = "";
+
+            $.ajax({
+                type: 'POST',
+                url: 'Join.aspx?join=' + obj,
+                success: function (feedback) {
+                    if (feedback == "join") {
+                        $('.JoinBox').fadeIn();
+                    } else {
+                        window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
+                    }
+                },
+                error: function () {
+                }
+            });
         }
     </script>
 </body>

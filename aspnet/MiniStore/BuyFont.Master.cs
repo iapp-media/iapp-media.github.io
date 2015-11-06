@@ -15,9 +15,8 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-               // Comm.DeleCoookie("iapp_uid");
-              //  Comm.SaveCookie("iapp_uid", "2");
-
+                // Comm.DeleCoookie("iapp_uid");
+                //  Comm.SaveCookie("iapp_uid", "2"); 
                 string jump = "";
                 if (Comm.User_ID() == -1)
                 {
@@ -31,8 +30,7 @@ namespace MiniStore
 
                 if (Request.QueryString["SN"] == null)
                 {
-                    Response.Redirect("Default.aspx?SN=OfficACC");
-                     
+                    Response.Redirect("Default.aspx?SN=OfficACC"); 
                 }
                 else
                 {
@@ -45,15 +43,13 @@ namespace MiniStore
 
                 jump = "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "";
 
+                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
 
-               // L_MyStore.Text = " <li><a href='" + jump + "' id='GO_Mini' target='_self' >打造自己的微店</a></li>" +
-                L_MyStore.Text = " <li><a href='javascript:void(0)'  onclick='join()' target='_self' >打造自己的微店</a></li>" +
-                                 " <li><a href='javascript:void(0)'  onclick='JoinBranch()' >加入行動分店</a></li>" +
-                                 " <li class='SandTitle'>我的帳戶</li>" +
-                                 " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 編輯會員資料</a></li> " +
-                                 " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
+                L_MyStore.Text = " <li class='SandTitle'>我的帳戶</li>" +
+                      " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 編輯會員資料</a></li> " +
+                      " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
 
- 
+
             }
         }
 
@@ -63,6 +59,34 @@ namespace MiniStore
             {
                 Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "','_self')</Script>");
             
+            }
+        }
+        protected void BT_SNAME_Click(object sender, EventArgs e)
+        {
+            if (Comm.User_ID() != -1)
+            {
+                Main.ParaClear();
+                Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
+
+                Main.NonQuery("Insert into Store (User_ID,Creat_Date) values " +
+                 " (@UID,getdate())   ");
+                string SID = "";
+                SID = Main.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
+                if (SID != "")
+                {
+
+                    Main.ParaClear();
+                    Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
+                    Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
+                    Main.ParaAdd("@Store_Name", TB_SNAME.Text, System.Data.SqlDbType.NVarChar);
+                    Main.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
+                    Main.NonQuery("insert into Store_info (Store_ID,Store_Name) values(@SID,@Store_Name)");
+                    Comm.SaveCookie("iapp_sid", SID);
+                }
+                if (SID != "")
+                {
+                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "")));
+                }
             }
         }
     }

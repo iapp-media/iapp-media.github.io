@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server"> 
+<head id="Head1" runat="server">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>iApp微店</title>
@@ -21,7 +21,7 @@
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link href="img/iAppStore.ico" rel="shortcut icon" />    
+    <link href="img/iAppStore.ico" rel="shortcut icon" />
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)" />
@@ -30,7 +30,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
-  
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/masonry.css" />
@@ -54,8 +54,10 @@
             </div>
             <div class="Sendbox">
                 <p>輸入您的微店店名</p>
-                <input type="type" name="name" value=" " />
-                <div class="btn btn-warning sendcareButtomeEnd">確定</div>
+                <asp:TextBox ID="TB_SNAME" runat="server"></asp:TextBox>
+                <div>
+                    <asp:Button ID="BT_SNAME" runat="server" Text="確定" CssClass="btn btn-warning sendcareButtomeEnd" OnClick="BT_SNAME_Click" />
+                </div>
             </div>
         </div>
         <%-- join end --%>
@@ -65,7 +67,8 @@
             <div class="JBBG">
                 <img src="img/img-2.jpg" alt="Alternate Text" />
             </div>
-            <div class="btn btn-warning sendcareButtomeEnd">加入</div>
+            <div>
+                <asp:Button ID="Button1" runat="server" Text="加入" CssClass="btn btn-warning sendcareButtomeEnd" /></div>
         </div>
         <%-- joinBranch end --%>
 
@@ -94,23 +97,24 @@
                             <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
-                            
+
                         </li>
                         <li class="SandTitle">開微店</li>
+                        <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>
+                        <li onclick="JoinBranch(1)"><a href="javascrip:void(0)">加入行動分店</a></li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
                     </ul>
-                     <div id="listbox">
- 
-                </div>
+                    <div id="listbox">
+                    </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
 
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
-                              <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                     <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
+                        <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                        <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
                     <div class="col-xs-2 search-sm">
@@ -135,15 +139,15 @@
                                     <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
                                         <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
                                     </button>
-                                   
+
                                 </div>
 
                                 <!-- /btn-group -->
                             </div>
-                             
+
                             <!-- /input-group -->
                         </div>
-                        <a href="#" class="menusandwich example1"><span></span></a>
+                        <a href="javscript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
                     <div class="col-xs-12 allClassification swiper-container">
                         <div class="row swiper-container">
@@ -155,12 +159,12 @@
         </nav>
         <!-- 至購物車 -->
         <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
- 
+
         <!-- WRAPPER -->
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
         <!-- WRAPPER END -->
-       
+
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
@@ -176,13 +180,28 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-        function join() {
-            alert('join');
+        function JoinBranch(obj) {
+            $('.JoinBranchBox').fadeIn();
         }
-        function JoinBranch() {
-            alert('JoinBranch');
+        function tojoin(obj) {
+            if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); return; }
+            var fn = "";
+
+            $.ajax({
+                type: 'POST',
+                url: 'Join.aspx?join=' + obj,
+                success: function (feedback) {
+                    if (feedback == "join") {
+                        $('.JoinBox').fadeIn();
+                    } else {
+                        window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
+                    }
+                },
+                error: function () {
+                }
+            });
         }
-    </script> 
+    </script>
     <asp:ContentPlaceHolder ID="footJs" runat="server">
     </asp:ContentPlaceHolder>
 </body>
