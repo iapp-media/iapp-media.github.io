@@ -137,6 +137,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
         <!-- WRAPPER END -->
+       
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
@@ -152,6 +153,12 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
+        function join() {
+            alert('join');
+        }
+        function JoinBranch() {
+            alert('JoinBranch');
+        }
     </script> 
     <asp:ContentPlaceHolder ID="footJs" runat="server">
     </asp:ContentPlaceHolder>

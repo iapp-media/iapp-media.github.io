@@ -105,6 +105,8 @@
     <Content Include="img\setting.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
+    <Content Include="Join.aspx" />
+    <Content Include="JoinBranch.aspx" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
@@ -169,6 +171,12 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Join.aspx.designer.cs">
+      <DependentUpon>Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JoinBranch.aspx.designer.cs">
+      <DependentUpon>JoinBranch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order_history.aspx.cs">
       <DependentUpon>Order_history.aspx</DependentUpon>
