@@ -19,43 +19,25 @@ body {
     }
     4%,
     8% {
-        transform: perspective(200px) rotateZ(5deg);
-        -ms-transform: perspective(200px) rotateZ(5deg);
-        -moz-transform: perspective(200px) rotateZ(5deg);
-        -webkit-transform: perspective(200px) rotateZ(5deg);
+        transform: perspective(200px) rotateZ(10deg);
+        -ms-transform: perspective(200px) rotateZ(10deg);
+        -moz-transform: perspective(200px) rotateZ(10deg);
+        -webkit-transform: perspective(200px) rotateZ(10deg);
     }
     2%,
     6% {
-        transform: perspective(200px) rotateZ(-5deg);
-        -ms-transform: perspective(200px) rotateZ(-5deg);
-        -moz-transform: perspective(200px) rotateZ(-5deg);
-        -webkit-transform: perspective(200px) rotateZ(-5deg);
-        
-       
+        transform: perspective(200px) rotateZ(-10deg);
+        -ms-transform: perspective(200px) rotateZ(-10deg);
+        -moz-transform: perspective(200px) rotateZ(-10deg);
+        -webkit-transform: perspective(200px) rotateZ(-10deg);
     }
-    11% {
-        transform:scale(1);
-    }
-    100% {
-        transform:scale(0);
-    }
-
-    
 }
 @keyframes logomove {
    0% {
-        top: 50%;
-    left: 50%;
-    margin-left: -100px;
-    margin-top: -65px;
+    transform:scale(1)
     }
     100% {
-         top: 0;
-    left: 0;
-    margin-left: -80px;
-    margin-top: -80px;
-    width:80px;
-    
+    transform:scale(0)
     }
 }
 @keyframes BGdisno {
@@ -83,7 +65,7 @@ a:hover {
     height:100%;
     position:absolute;
     z-index:999;
-    -webkit-animation:BGdisno 1s 3s both cubic-bezier(.87,-.41,.19,1.44);
+    -webkit-animation:BGdisno 1s 4s both cubic-bezier(.87,-.41,.19,1.44);
 }
 .Storelogo,
 .Logohouse {
@@ -94,18 +76,16 @@ a:hover {
     left: 50%;
     margin-left: -100px;
     margin-top: -65px;
-    
-    
 }
 .Storelogo {
-    -webkit-animation:logomove 1s 2s both cubic-bezier(.87,-.41,.19,1.44);
+    -webkit-animation:logomove 1s 3s both cubic-bezier(.87,-.41,.19,1.44);
 }
 .Logohouse {
     width:40px !important;
     height:40px;
     margin-left: 29px;
     margin-top: -102px;
-    -webkit-animation:tinDownOut1 3s both cubic-bezier(.87,-.41,.19,1.44);
+    -webkit-animation:tinDownOut1 2s both infinite cubic-bezier(.87,-.41,.19,1.44);
 }
     .Storelogo img {
         width:100%;
