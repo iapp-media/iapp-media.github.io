@@ -62,7 +62,10 @@
 
         <%-- joinBranch --%>
         <div class="JoinBranchBox">
-
+            <div class="JBBG">
+                <img src="img/img-2.jpg" alt="Alternate Text" />
+            </div>
+            <div class="btn btn-warning sendcareButtomeEnd">加入</div>
         </div>
         <%-- joinBranch end --%>
 

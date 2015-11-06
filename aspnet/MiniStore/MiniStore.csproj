@@ -89,6 +89,7 @@
     <Content Include="img\facebook-02.png" />
     <Content Include="img\iAppStore.ico" />
     <Content Include="img\img-1.jpg" />
+    <Content Include="img\img-2.jpg" />
     <Content Include="img\line.png" />
     <Content Include="img\lineicon.png" />
     <Content Include="img\mail.png" />
@@ -106,6 +107,7 @@
     <Content Include="img\setting.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
+    <Content Include="img\加入微店.jpg" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />

@@ -33,14 +33,15 @@ a:active {
     width:100%;
     height:100%;
     background-color:#fff;
-    /*display:none;*/
+    display:none;
 }
 .JoinSBox {
     outline:1px solid #f00;
 
 }
     .JoinBox .LOGO,
-    .JoinBox .Sendbox {
+    .JoinBox .Sendbox,
+    .JoinBranchBox .sendcareButtomeEnd  {
         /* outline:1px solid #f00; */
         position:absolute;
         top:50%;
@@ -71,7 +72,13 @@ a:active {
         height: 45px;
         margin-bottom: 15px;
     }
-.JoinBox .LOGO img {
+.JoinBranchBox .sendcareButtomeEnd {
+    width:90%;
+    margin-left:-45%;
+    margin-top:1px;
+}
+.JoinBox .LOGO img,
+.JBBG img {
     width:100%;
 }
 
