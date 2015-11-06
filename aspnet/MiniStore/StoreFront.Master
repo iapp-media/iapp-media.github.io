@@ -46,6 +46,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <%-- join --%>
+        <div class="JoinBox">
+            <div class="LOGO">
+                <img src="img/img-1.jpg" alt="Alternate Text" />
+            </div>
+            <div class="Sendbox">
+                <p>輸入您的微店店名</p>
+                <input type="type" name="name" value=" " />
+                <div class="btn btn-warning sendcareButtomeEnd">確定</div>
+            </div>
+        </div>
+        <%-- join end --%>
+
+        <%-- joinBranch --%>
+        <div class="JoinBranchBox">
+
+        </div>
+        <%-- joinBranch end --%>
+
         <!-- facebook(必須寫在最上面) & parse init -->
         <div id="loading">iApp 載入中</div>
         <!-- 導覽列（共用） -->
