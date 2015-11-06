@@ -21,7 +21,7 @@ namespace Login
                 {
                     if (Request.QueryString["done"] != null)
                     {
-                        Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+                       // Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
                     }
                 }
             }

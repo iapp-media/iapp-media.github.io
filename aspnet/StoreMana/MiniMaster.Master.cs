@@ -14,9 +14,9 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-                Comm.DeleCoookie("iapp_sid");
+              //  Comm.DeleCoookie("iapp_sid");
             
-                    Comm.SaveCookie("iapp_sid", "4");
+              //      Comm.SaveCookie("iapp_sid", "4");
                
 
                 if (Comm.Store_ID() == -1)

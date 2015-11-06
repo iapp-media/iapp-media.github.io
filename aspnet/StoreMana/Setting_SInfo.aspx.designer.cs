@@ -85,13 +85,13 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.TextBox TBName;
         
         /// <summary>
-        /// TBAddr 控制項。
+        /// TBCEO 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBAddr;
+        protected global::System.Web.UI.WebControls.TextBox TBCEO;
         
         /// <summary>
         /// TBTEL 控制項。
@@ -103,13 +103,13 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.TextBox TBTEL;
         
         /// <summary>
-        /// TBCEO 控制項。
+        /// TBAddr 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBCEO;
+        protected global::System.Web.UI.WebControls.TextBox TBAddr;
         
         /// <summary>
         /// BT_Save 控制項。

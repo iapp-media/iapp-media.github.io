@@ -17,8 +17,8 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                Comm.DeleCoookie("iapp_uid");
-                Comm.SaveCookie("iapp_uid", "2");
+               // Comm.DeleCoookie("iapp_uid");
+                //Comm.SaveCookie("iapp_uid", "2");
 
                 string jump = "";
                 if (Comm.User_ID() == -1)
@@ -33,6 +33,13 @@ namespace MiniStore
                 if (Request.QueryString["SN"] == null)
                 {
                     Response.Redirect("Default.aspx?SN=OfficACC");
+                }
+                else
+                {
+                    if (Main.Scalar("select 1 from store where Store_NID='" + Request.QueryString["SN"] + "'") != "1")
+                    {
+                        Response.Redirect("Default.aspx?SN=OfficACC");
+                    }
                 }
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
 
