@@ -5,6 +5,21 @@ body {
     max-width: 500px;
 }
 
+.SinCheck span {
+    width: 100%;
+    /* outline: 1px solid #f00; */
+    display: block;
+    /* padding:6px 12px; */
+}
+.SinCheck input[type="checkbox"]{
+    float:right;
+    border: 1px solid #7d7d7d;
+}
+.SinCheck label {
+    /* position:absolute; */
+    /* right:35px; */
+}
+
 a {
     text-decoration: none;
 }
@@ -88,6 +103,9 @@ a {
     .SetTable input[type="checkbox"] {
         border:2px solid #7b7b7b
     }
+.SinCheck {
+    /* outline:1px solid #f00; */
+}
 
 
 /*TEXT*/

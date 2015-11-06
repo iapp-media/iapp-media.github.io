@@ -20,7 +20,7 @@
       <publishTime>11/05/2015 12:16:27</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/06/2015 11:22:07</publishTime>
+      <publishTime>11/06/2015 11:52:51</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/05/2015 18:45:36</publishTime>
+      <publishTime>11/06/2015 12:03:54</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -218,19 +218,19 @@
       <publishTime>11/05/2015 14:40:44</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>11/06/2015 10:16:57</publishTime>
+      <publishTime>11/06/2015 11:52:49</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
       <publishTime>10/30/2015 16:55:24</publishTime>
     </File>
     <File Include="Setting_SInfo.aspx">
-      <publishTime>11/06/2015 11:26:26</publishTime>
+      <publishTime>11/06/2015 11:52:51</publishTime>
     </File>
     <File Include="Svim.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/06/2015 11:26:33</publishTime>
+      <publishTime>11/06/2015 12:04:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

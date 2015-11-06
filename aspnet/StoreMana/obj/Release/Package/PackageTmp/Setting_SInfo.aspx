@@ -16,25 +16,28 @@
     <div class="buydivmove">
         <div class="col-xs-12 insidecare">
             <div class="row">
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">寄送方式</p>
-                        </div>
-                    </div>
-                    <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                    </asp:CheckBoxList>
-                </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC">
                     <div class="col-xs-4">
                         <div class="row">
                             <p class="BoxLeft">付款方式</p>
                         </div>
                     </div>
-                    <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                    </asp:CheckBoxList>
+                    <div class="col-xs-8 SinCheck">
+                        <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                        </asp:CheckBoxList>
+                    </div>
                 </div>
-
+                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">寄送方式</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 SinCheck">
+                        <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                        </asp:CheckBoxList>
+                    </div>
+                </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">

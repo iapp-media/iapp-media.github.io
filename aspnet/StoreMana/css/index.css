@@ -13,10 +13,11 @@ body {
 }
 .SinCheck input[type="checkbox"]{
     float:right;
+    border: 1px solid #7d7d7d;
 }
 .SinCheck label {
-    position:absolute;
-    right:35px;
+    /* position:absolute; */
+    /* right:35px; */
 }
 
 a {
