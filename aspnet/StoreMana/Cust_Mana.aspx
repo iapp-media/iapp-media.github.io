@@ -12,17 +12,17 @@
     </div>
 
     <!-- WRAPPER -->
-    <div class="buydivmove">
+    <div class="buydivmove CustTop">
         <div class="insidecare col-xs-12">
             <div class="row"> 
                 <div class="list-group">
-                    <div class="list-group-item list-group-itemUI">
+                    <div class="list-group-item list-group-itemUI CustBar">
                         <div class="row"> 
-                            <div class="col-xs-8">
+                            <div class="col-xs-8 Custsend">
                                 <asp:TextBox ID="TBName" runat="server" Class="form-control" placeholder="輸入姓名查詢"></asp:TextBox>
                             </div>
                             <div class="col-xs-4">
-                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Search_Click" />
+                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning sendcareButtom" OnClick="BT_Search_Click" />
                             </div>
                         </div>
                     </div> 
