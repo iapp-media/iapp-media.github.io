@@ -111,6 +111,8 @@
     <Content Include="img\defaulthead.jpg" />
     <Content Include="img\fb.png" />
     <Content Include="img\iapplogo.png" />
+    <Content Include="img\img-1-1.png" />
+    <Content Include="img\img-1.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\cropper.js" />

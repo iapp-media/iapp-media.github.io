@@ -42,6 +42,7 @@
 
     </script>
     <form id="form1" runat="server">
+        
         <div class="content">
             <div class="middle-bar"></div>
             <div class="logo"></div>

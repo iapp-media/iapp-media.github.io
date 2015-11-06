@@ -33,6 +33,14 @@
         }(document, 'script', 'facebook-jssdk'));
     </script> 
     <form id="form1" runat="server">
+        <div class="LoginAni">
+            <div class="Storelogo">
+                <img src="img/img-1.png" alt="Alternate Text" />
+            </div>
+          
+                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+           
+        </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
             <div class="navbar">
