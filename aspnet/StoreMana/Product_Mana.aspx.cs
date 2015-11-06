@@ -68,7 +68,7 @@ namespace StoreMana
         }
         public string ShowPrice(object Price)
         {
-            if (Price.ToString().Length > 6)
+            if (Price.ToString().Length > 10)
                 return Price.ToString().Substring(0, 10) + "...";
             else
                 return Price.ToString();

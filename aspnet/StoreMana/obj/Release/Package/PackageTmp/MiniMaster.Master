@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>iApp Manager</title>
+    <title>iApp微店後台</title>
     <!-- about SEO -->
     <meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
     <meta name="keywords" content="iApp mini store,iApp Social,iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
@@ -22,6 +22,7 @@
      -->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+     <link href="img/iAppStore.ico" rel="shortcut icon" />    
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)"/>
@@ -55,7 +56,7 @@
                 <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
                     <div class="row">
                         <a class="navbar-brand" href="default.aspx">
-                            <img class="iapplogo" src="img/ministorelogo.png"/>
+                            <img class="iapplogo" src="img/store-bstage.png"/>
                         </a>
                     </div>
                 </div>
@@ -65,29 +66,21 @@
                     <li class="boxpos"><img src="img/qr-iappmedia.jpg" alt="" class="QRcode"/>
                         <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
                        
-                        <a href="https://www.facebook.com/digital012?fref=ts" class="digcallme">Digital+ 數碼數位</a>
+                       
                     </li>
                     <li>微後台</li>
                     <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>
                     <li><a href="Cust_Mana.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
                     <li><a href="OrderMana.aspx"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>
                     <li><a href="Msg_Mana.aspx"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>訊息管理</a></li>
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li>
-                
+                    <li><a href="setting.aspx"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li> 
+                    <li><asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click" ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>登出</asp:LinkButton></li>
+ 
                 </ul>
                 
                 <!-- Mobile -->
                 <div class="col-xs-3 tem"></div>
-                <div class="col-xs-2 search-sm">
-                    <div class="input-group">
-                        <!-- mobile 搜尋 -->
-                        <div class="input-group-btn">
-                            <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+               
                 <!-- mobile 搜尋bar -->
                 <div class="search-bar">
                     <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search"/>
@@ -98,13 +91,14 @@
                     <div class="input-group">
                         <div class="input-group-btn">
                             <!-- mobile登入／註冊 -->
-                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+ 
+<%--                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                                 <a href="login/m-login/m-login.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                    </button>
-                    <!-- mobile會員登入後 -->
+                                  </button>--%>
+                    <%--<!-- mobile會員登入後 -->
                     <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                         <img class="circle-login" src="img/defaulthead.jpg"/>
-                    </button>
+                    </button>--%>
                 </div>
             </div>
         </div>

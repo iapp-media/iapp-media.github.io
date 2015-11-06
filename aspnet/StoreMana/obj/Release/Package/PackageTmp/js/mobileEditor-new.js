@@ -1,7 +1,8 @@
 'use strict';
 var current = 0,
   width,
-  height;
+  height,
+      Todo;
 
 (function() {
 
@@ -264,21 +265,41 @@ var current = 0,
 
 
 function compress() {
+   
   document.getElementById('preview').src = jic.compress(document.getElementById('preview'), width, height, 'jpg').src;
   document.getElementById('Tbase64').setAttribute('value', document.getElementById('preview').src.replace(/^data:image\/(png|jpeg);base64,/, ''));
-  document.getElementById('p' + current).src = document.getElementById('preview').src;
-  // document.getElementById('Tbase64-' + current).setAttribute('value', document.getElementById('Tbase64').value);
+   
+
+  $.ajax({
+      type: "POST",
+      url: "Svim.aspx",
+      data: "d=" + Todo + "&i=" + current + "&t=" + encodeURIComponent(document.getElementById('Tbase64').value),
+      cache: false,
+      success: function (imgurl) {
+
+           document.getElementById('p' + current).src = imgurl;
+      },
+      error: function (ss) {
+         //  alert('2');
+      }
+  });
+     
+   document.getElementById('p' + current).src = document.getElementById('preview').src;
+  /// document.getElementById('Tbase64-' + current).setAttribute('value', document.getElementById('Tbase64').value);
   document.getElementById('p' + current).className = document.getElementById('p' + current).className.replace(/(?:^|\s)changestyle(?!\S)/g, '');
   $('.cropper-container').remove();
 
-  // sendImageToParse(current, document.getElementById('Tbase64').value);
+    // sendImageToParse(current, document.getElementById('Tbase64').value);
+   
+  
 
 }
 
-function setCurrent(number, w, h) {
+function setCurrent(number, pi) {
   current = number;
-  width = w;
-  height = h;
+  width = 300;
+  height = 300;
+  Todo = pi;
   document.getElementById('CurrentId').setAttribute('value', current);
   // $image.cropper("setAspectRatio", width / height);
 }

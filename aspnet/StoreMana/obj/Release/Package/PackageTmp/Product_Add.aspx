@@ -5,16 +5,28 @@
     <link rel="stylesheet" type="text/css" href="css/mobileEditor.css" />
     <script src="js/exif.js"></script>
     <script src="js/jquery-1.8.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/JIC.js" type="text/javascript"></script>
     <script src="js/cropper.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div class="col-xs-12 allClassification swiper-container">
+        <div class="row swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">商品建檔</a></li>
+                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WRAPPER -->
+
+
     <!-- 建檔修改 -->
-    
-    <!-- 建檔修改 -->
-    <div class="allmodify">
-        <!--上傳剪裁頁面-->
+
+    <!--上傳剪裁頁面-->
     <div class="upload-img">
         <div class="top">
             <img src="img/ministorelogo.png" class="toplogo" align="left" />
@@ -29,7 +41,7 @@
             <div class="rotate">
                 <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
             </div>
-            <div class="preview-container" style="display:none;">
+            <div class="preview-container" style="display: none;">
                 <img id="preview" src="" />
             </div>
             <div class="img-container">
@@ -38,188 +50,154 @@
             <p class="word">(移動及縮放進行照片裁切)</p>
             <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
             <input id="picnum" value="" class="hide" />
-            <input type="file" accept="image/*" id="inputImage" style="display:none;" />
+            <input type="file" accept="image/*" id="inputImage" style="display: none;" />
             <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
                 截圖
             </button>
             <button onclick="compress()" type="button" class="compress">
                 確認
             </button>
-            <input id="Tbase64" value="" style="display:none;" />
+            <input id="Tbase64" value="" style="display: none;" />
+
         </div>
     </div>
-        <ul class="buydivmove mart10">
-            <li class="modify col-xs-12">
-                <div class="col-xs-12 insidecare">
-                    <div class="row">
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">商品類別</label>
-                            <asp:DropDownList class="form-control" ID="DL_Cate" runat="server">
-                            </asp:DropDownList>
-                        </div>
-                        <div class="col-xs-12 libor status">
-                            <label for="" class="col-xs-12">商品圖片</label>
-                           <div style="display:none;">
-                               <%-- 不要的 --%>
-                            <div class="form-group">
-                                <div style="margin: 0 0 0 300px; width: 500px">
-                                    <!-- 輪播圖 
-                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    
-                                        <div class="carousel-inner" role="listbox">
-                                            <asp:Literal ID="L" runat="server"></asp:Literal>
-                                        </div>
-                             
-                                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div> 
-                                -->
-                                </div> 
-                            </div>
-                           </div>
-                            <div id="slider" class="col-xs-12">
-                                <div class="control_next glyphicon glyphicon-chevron-right"></div>
-                                <div class="control_prev glyphicon glyphicon-chevron-left"></div>
-                                <ul>
-                                    <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p01"/>
-                                        <label onclick="setCurrent('01',640,960)">
-                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p02"/>
-                                        <label>
-                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p03"/>
-                                        <label>
-                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" class="sliderimgH" id="p04"/>
-                                        <label>
-                                            <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider">
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <%-- slider自動播放函式 --%>
-                       <%-- <div class="slider_option">
-                            <input type="checkbox" id="checkbox">  
-                        </div>--%>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <p class="text-center fonts">填寫資料</p>
-        <ul class="buydivmove">
-            <li class="modify col-xs-12">
-                <div class="col-xs-12 insidecare">
-                    <div class="row">
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">商品名稱</label>
-                            <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限30個字以內"></asp:TextBox>
-                        </div>
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">價格</label>
-                            <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">數量</label>
-                            <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">商品說明</label>
-                            <asp:TextBox ID="TB_Description" Class="form-control" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">商品規格</label>
-                            <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
-                        </div>
-                        <!--<div class="col-xs-12 libor paynumber">
-                            <label class="col-xs-6">付款方式</label>
-                           <div>
-                               <asp:CheckBoxList ID="CB_Payment" runat="server" CssClass="aaa"    RepeatDirection="Horizontal" RepeatLayout="Flow"  > 
-                               </asp:CheckBoxList>
-                               <asp:ListBox ID="aa" runat="server" SelectionMode="Multiple">
-                                   <asp:ListItem Text="aaaa"></asp:ListItem>
-                                   <asp:ListItem Text="aaaa"></asp:ListItem>
-                                   <asp:ListItem Text="aaaa"></asp:ListItem>
-                               </asp:ListBox>
-                           </div>
-                            <div class="checkbox col-xs-4 florichebox" style="display:none">
-                                    <input type="checkbox">
-                                 <label>
-                                   面交
-                                </label>
-                                <br />
-                                <label>
-                                    <input type="checkbox">
-                                    7-11 ibon
-                                </label>
-                                <br />
-                                <label>
-                                    <input type="checkbox">
-                                    銀行轉帳
-                                </label>
-                            </div>
-                        </div>-->
-                        <!--<div class="col-xs-12 libor paynumber">
-                            <label  class="col-xs-6">寄送方式</label>
-                            <div style="display:none">
-                               <asp:CheckBoxList ID="CB_Delivery" runat="server"    RepeatDirection="Horizontal" RepeatLayout="Flow"  >        
-                               </asp:CheckBoxList>
-                           </div>  
-                             <div class="checkbox col-xs-4 florichebox">
-                                <label>
-                                    <input type="checkbox">
-                                    面交自取
-                                </label>
-                                <br />
-                                <label>
-                                    <input type="checkbox">
-                                    7-11
-                                </label>
-                                <br />
-                                <label>
-                                    <input type="checkbox">
-                                    寄送到府
-                                </label>
-                            </div>
-                        </div>-->
-                        <div class="col-xs-12 libor paynumber">
-                            <label for="" class="col-xs-6">備註</label>
-                            <asp:TextBox ID="TB_Memo" Class="form-control" runat="server"></asp:TextBox>
-                        </div>
-                    </div>
-                </div>
-                 <asp:Button ID="BT_Create" runat="server" Text="Create" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Create_Click" />
-        <asp:Button ID="BT_Cancel" runat="server" Text="Cancel" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" OnClick="BT_Cancel_Click" />
-            </li>
-        </ul>
-        <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal> 
-       
-    </div> 
-        <script src="js/mobileEditor-new.js"></script>
+    <div class="buydivmove">
+        <div class="insidecare col-xs-12 AllBGC">
 
+            <div class="row">
+                <div class="col-xs-12 libor paynumber PadLib">
+                    <div class="col-xs-12 BTbox">
+                        <div class="row">
+                            <p class="BTleft">商品類別</p>
+                            <asp:DropDownList class="BTright" ID="DL_Cate" runat="server"></asp:DropDownList>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 libor status PadLib">
+                    <div class="col-xs-12 BTbox">
+                        <div class="row">
+                            <p class="BTleft">商品圖片</p>
+                        </div>
+                    </div>
+                    <div id="slider" class="col-xs-12">
+                        <div class="control_next glyphicon glyphicon-chevron-right"></div>
+                        <div class="control_prev glyphicon glyphicon-chevron-left"></div>
+                        <asp:Literal ID="L_Img" runat="server"></asp:Literal>
+                        <%--                                            <ul> 
+                                                <li> 
+                                                       <img id="p01"   src="img/2531170_203204624000_2.jpg" class="sliderimgH"  />    
+                                                    <label onclick="setCurrent('01','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider" />
+                                                    </label> 
+                                                </li>
+                                                <li> 
+                                                      <img id="p02"   src="img/2531170_203204624000_2.jpg"  class="sliderimgH"  /> 
+                                                    <label onclick="setCurrent('02','3033-0')">
+                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider" />
+                                                    </label>
+                                                </li>
+                                                <li> 
+                                                       <img id="p03"   src="img/2531170_203204624000_2.jpg" class="sliderimgH"  /> 
+                                                    <label onclick="setCurrent('03','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider" />
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                        <img id="p04"  src="img/2531170_203204624000_2.jpg" class="sliderimgH"  /> 
+                                                    <label onclick="setCurrent('04','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider" />
+                                                    </label>
+                                                </li>
+                                            </ul>--%>
+                    </div>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品名稱</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限22個字以內" onkeyup="words_deal(44)"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">價格</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">數量</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品說明</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Description" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商品規格</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">備註</p>
+                        </div>
+                    </div>
+                    <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
+                    <asp:TextBox ID="TB_Memo" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 BorTop">
+                    <div class="row">
+                        <div class="col-xs-5 libor status CBbot CBBTN">
+                            <asp:Button ID="BT_Cancel" runat="server" Text="取消" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Cancel_Click" />
+                        </div>
+                        <div class="col-xs-7 libor status CBbot CBBTN">
+                            <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-center fonts">填寫資料</p>
+
+    <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal>
+
+    <script src="js/mobileEditor-new.js"></script>
+    <script src="js/mobileEditor-new.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script>
         $('.carousel').carousel({
             interval: false
         })
-
-        function Iframeload() { 
-            window.location.reload("Product_Add.aspx"); 
+        var texttmp = $("#ContentPlaceHolder1_TB_ProductName").val();
+        function words_deal(cct) {
+            var curLength = getlength($("#ContentPlaceHolder1_TB_ProductName").val());
+            if (curLength > cct) {
+                document.getElementById('ContentPlaceHolder1_TB_ProductName').value = texttmp;
+                alert("超過字數限制，多出的字將被移除！");
+            } else {
+                texttmp = $("#ContentPlaceHolder1_TB_ProductName").val();
+            }
+        }
+        function getlength(str) {
+            var arr = str.match(/[^\x00-\xff]/ig);
+            return (arr == null) ? str.length : str.length + arr.length;
         }
     </script>
 </asp:Content>

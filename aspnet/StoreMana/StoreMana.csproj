@@ -230,7 +230,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MiniMaster.Master" />
-    <None Include="Properties\PublishProfiles\StoreMana.pubxml" />
+    <None Include="Properties\PublishProfiles\S17.pubxml" />
     <None Include="Properties\PublishProfiles\StoreMana2.pubxml" />
     <None Include="Properties\PublishProfiles\StoreMana3.pubxml" />
     <None Include="Web.Debug.config">

@@ -61,7 +61,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.htm" />
     <Content Include="Click.aspx" />
     <Content Include="Favor.aspx" />
     <Content Include="Good.aspx" />

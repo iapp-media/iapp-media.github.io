@@ -5,7 +5,7 @@
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
@@ -17,16 +17,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/06/2015 09:50:23</publishTime>
-    </File>
-    <File Include="bin/JustyLibrary.pdb">
-      <publishTime>11/06/2015 09:50:23</publishTime>
+      <publishTime>11/05/2015 12:16:27</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/06/2015 09:50:24</publishTime>
-    </File>
-    <File Include="bin/StoreMana.pdb">
-      <publishTime>11/06/2015 09:50:24</publishTime>
+      <publishTime>11/06/2015 09:53:14</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -76,9 +70,6 @@
     <File Include="fonts/glyphicons-halflings-regular.woff2">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
-    <File Include="img/000000102601.jpg">
-      <publishTime>11/03/2015 13:51:00</publishTime>
-    </File>
     <File Include="img/114.png">
       <publishTime>11/03/2015 13:51:00</publishTime>
     </File>
@@ -111,9 +102,6 @@
     </File>
     <File Include="img/iAppStore.ico">
       <publishTime>11/04/2015 09:29:53</publishTime>
-    </File>
-    <File Include="img/icon_Q1.PNG">
-      <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="img/lineicon.png">
       <publishTime>11/03/2015 13:51:00</publishTime>
@@ -226,9 +214,6 @@
     <File Include="Product_Add.aspx">
       <publishTime>11/05/2015 15:42:20</publishTime>
     </File>
-    <File Include="Product_Img.aspx">
-      <publishTime>10/29/2015 17:33:30</publishTime>
-    </File>
     <File Include="Product_Mana.aspx">
       <publishTime>11/05/2015 14:40:44</publishTime>
     </File>
@@ -245,7 +230,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/06/2015 09:50:50</publishTime>
+      <publishTime>11/06/2015 09:53:14</publishTime>
     </File>
   </ItemGroup>
 </Project>
