@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-tw" class="no-js">
 
 <head>
@@ -9,12 +9,12 @@
     <meta name="description" content="行動哈雷iApp Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
     <meta name="keywords" content="行動哈雷iApp,活動報名,iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
     <!-- for apple (PS:iphone5 去除width=device-width)
-         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
-         2-3.將Web Page儲存為home screen icon時的圖示
-         4.設定載入頁面時 loading 圖片
-         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
-         6.更改 status bar 樣式    
-     -->
+1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+2-3.將Web Page儲存為home screen icon時的圖示
+4.設定載入頁面時 loading 圖片
+5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+6.更改 status bar 樣式    
+-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
@@ -26,9 +26,9 @@
     <!-- End for apple -->
     <!-- Add to Home Screen -->
     <!--
-    <link rel="stylesheet" href="css/add2home.css">
-    <script type="application/javascript" src="js/add2home.js" charset="utf-8"></script>    
-    <!-- End Add to Home Screen -->
+<link rel="stylesheet" href="css/add2home.css">
+<script type="application/javascript" src="js/add2home.js" charset="utf-8"></script>    
+<!-- End Add to Home Screen -->
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/maker.css" />
     <link rel="stylesheet" type="text/css" href="css/slide.css?v2" />
@@ -42,18 +42,20 @@
 
 <body>
     <!-- 首頁三明治 -->
+    <!-- <img src="img/wedding-bg.jpg" class="bg_img" alt=""> -->
     <div id="loading">iApp 載入中</div>
     <div class="allMove" id="allMove">
         <a href="#" class="sandwich">
         </a>
         <ul class="menu" id="menu">
             <li>
-                <a href="#" class="liColor">
-                    <p>創建喜帖</p>
+                <a href="" class="liColor moveIndex">
+                    <img src="img/p7-pic.png" alt="">
                 </a>
             </li>
-            <li id="jump2"><a>赴宴名冊</a></li>
-            <li class="Blessing"><a>朋友的祝福</a></li>
+            <li><a href="index.html">創建喜帖</a></li>
+            <li class="colorboxlist1"><a>赴宴名冊</a></li>
+            <li class="colorboxlist2"><a>朋友的祝福</a></li>
             <li><a>婚禮 iApp</a></li>
             <li><a>婚禮 微創作</a></li>
             <li><img src="img/qr-code-harley.jpg" alt="" class="QRcode">
@@ -66,37 +68,42 @@
     <!-- 三明治 end -->
     <!-- Page1 -->
     <div class="page page-1-1 page-current">
-        <div class="time">
-            <p>民國<span>104</span>年</p>
-            <p>國曆<span>3/15</span></p>
-            <p>農曆<span>1/25</span></p>
+        <div class="time animated fadeInDown">
+            <input type="text" placeholder="民國104年">
+            <input type="text" placeholder="國曆3/15">
+            <input type="text" placeholder="農曆1/25">
         </div>
         <div class="page1Title">
-            <div>葉大雄</div>
+            <input type="text" placeholder="葉大雄">
             <div id="heart"></div>
-            <div>源靜香</div>
+            <input type="text" placeholder="源靜香">
         </div>
-        <div class="Protagonist">
+        <div class="Protagonist animated fadeInDown">
             <img src="img/p1-photo.jpg" alt="">
+            <div class="Uploadimg takeimage1">
+                <label for="inputImage" onclick="setCurrent('01',640,960)">
+                    <img src="img/uploadicon.png">
+                </label>
+            </div>
         </div>
-        <div class="inside">
+        <div class="inside animated fadeInDown">
             <div>
                 <label for="">席設 :</label>
-                <input type="text" value="台北君悅酒店">
+                <input type="text" placeholder="台北君悅酒店">
             </div>
             <div>
                 <label for="">地點 :</label>
-                <input type="text" value="台北市地球村">
+                <input type="text" placeholder="台北市地球村">
                 <img src="img/p1-location.png" class="location" alt="">
             </div>
             <div>
                 <label for="">電話 :</label>
-                <input type="text" value="(02) 1234567">
+                <input type="number" placeholder="(02)123456789">
                 <img src="img/p1-callphone.png" class="callphone" alt="">
             </div>
             <div>
                 <label for="">時間 :</label>
-                <input type="text" value="中午十二時入場">
+                <input type="text" placeholder="中午十二時入場">
             </div>
             <button class="carewed">我要赴宴</button>
         </div>
@@ -106,11 +113,17 @@
     <div class="page page-2-1  hide">
         <ul class="Page2index">
             <li class="animated fadeInDown">
-                <input type="text" value="一個意外  讓我們  相遇">
-                <input type="text" value="一場大雨  讓我們  相知">
+                <input type="text" placeholder="一個意外  讓我們  相遇">
+                <input type="text" placeholder="一場大雨  讓我們  相知">
             </li>
         </ul>
-        <div class="page2pic"><img src="img/p2-photo2.jpg" alt=""></div>
+        <div class="page2pic"><img src="img/p2-photo2.jpg" alt="">
+            <div class="Uploadimg takeimage1">
+                <label for="inputImage" onclick="setCurrent('01',640,960)">
+                    <img src="img/uploadicon.png">
+                </label>
+            </div>
+        </div>
         <div class="page2pic2"><img src="img/p2-photo1.jpg" alt=""></div>
         <img class="up moveIconUp" src="img/icon_up.png" />
     </div>
@@ -119,21 +132,51 @@
     <div class="page page-3-1 hide">
         <ul class="Page3index">
             <li class="animated fadeInDown">
-                <input type="text" value="習慣了妳的聲音、妳的氣味、妳的存在...">
-                <input type="text" value="連思念都成了習慣">
+                <input type="text" placeholder="習慣了妳的聲音、妳的氣味、妳的存在...">
+                <input type="text" placeholder="連思念都成了習慣">
             </li>
         </ul>
         <ul class="display-animation Page3Insidepic">
-            <li><img src="img/p3-photo1.jpg" alt=""></li>
-            <li><img src="img/p3-photo2.jpg" alt=""></li>
-            <li><img src="img/p3-photo3.jpg" alt=""></li>
-            <li><img src="img/p3-photo4.jpg" alt=""></li>
-            <li><img src="img/p3-photo5.jpg" alt=""></li>
+            <li><img src="img/p3-photo1.jpg" alt="">
+                <div class="Uploadimg takeimage1">
+                    <label for="inputImage" onclick="setCurrent('01',640,960)">
+                        <img src="img/uploadicon.png">
+                    </label>
+                </div>
+            </li>
+            <li><img src="img/p3-photo2.jpg" alt="">
+                <div class="Uploadimg takeimage1">
+                    <label for="inputImage" onclick="setCurrent('01',640,960)">
+                        <img src="img/uploadicon.png">
+                    </label>
+                </div>
+            </li>
+            <li><img src="img/p3-photo3.jpg" alt="">
+                <div class="Uploadimg takeimage1">
+                    <label for="inputImage" onclick="setCurrent('01',640,960)">
+                        <img src="img/uploadicon.png">
+                    </label>
+                </div>
+            </li>
+            <li><img src="img/p3-photo4.jpg" alt="">
+                <div class="Uploadimg takeimage1">
+                    <label for="inputImage" onclick="setCurrent('01',640,960)">
+                        <img src="img/uploadicon.png">
+                    </label>
+                </div>
+            </li>
+            <li><img src="img/p3-photo5.jpg" alt="">
+                <div class="Uploadimg takeimage1">
+                    <label for="inputImage" onclick="setCurrent('01',640,960)">
+                        <img src="img/uploadicon.png">
+                    </label>
+                </div>
+            </li>
         </ul>
         <ul class="Page3indexBot">
             <li class="animated fadeInDown">
-                <input type="text" value="終於  我牽起你的手">
-                <input type="text" value="那一天起  就決定再也不放開">
+                <input type="text" placeholder="終於  我牽起你的手">
+                <input type="text" placeholder="那一天起  就決定再也不放開">
             </li>
         </ul>
         <img class="up moveIconUp" src="img/icon_up.png" />
@@ -169,6 +212,11 @@
             <li>
                 <a href="#" class="Button Block">
                     <img src="img/p5-photo1.jpg" alt="">
+                    <div class="Uploadimg takeimage1">
+                        <label for="inputImage" onclick="setCurrent('01',640,960)">
+                            <img src="img/uploadicon.png">
+                        </label>
+                    </div>
                 </a>
             </li>
             <li>
@@ -207,16 +255,23 @@
             <iframe class="map" name="iframemap" src="map.html"></iframe>
             <a href="javascript: return false;" onclick="iframemap.window.location.reload()" class="button"><img src="img/reflash.png" border="0" onclick="this.src=='http://tkining.bitbucket.org/iwedding/img/reflash.png'?this.src='http://tkining.bitbucket.org/iwedding/img/reflash.png':this.src='http://tkining.bitbucket.org/iwedding/img/reflash2.png'"></a>
         </div>
-        <h1>交通資訊</h1>
-        <div>
-            <label for="">公車 :</label>
-            <textarea rows="2" cols="3">搭台北聯營公車20.202.207.258.282.284.信義 幹線等路，在世貿下車可抵達君悅大飯店。
-            </textarea>
+        <div class="google_adress">
+            <label for="">席設地址 :</label>
+            <textarea cols="3" placeholder="台北市地球村"></textarea>
         </div>
+        <h1>交通資訊</h1>
         <div class="Carmargin">
             <label for="">開車 :</label>
-            <textarea rows="5" cols="3">1.下圓山(松江路)交流道，循建國高架橋南行， 於信義路出口下，轉信義路東行，再左轉基隆路可抵達君悅大飯店 2.北二高台北聯絡道，延辛亥路右轉基隆路行約3公里可抵達
-            </textarea>
+            <textarea rows="2" cols="50" placeholder="1.下圓山(松江路)交流道，循建國高架橋南行， 於信義路出口下，轉信義路東行，再左轉基隆路可抵達君悅大飯店 2.北二高台北聯絡道，延辛亥路右轉基隆路行約3公里可抵達"></textarea>
+        </div>
+        <div class="Carmargin">
+            <label for="">捷運 :</label>
+            <textarea rows="2" cols="50" placeholder="搭台北聯營公車20.202.207.258.282.284.信義 幹線等路，在世貿下車可抵達君悅大飯店。"></textarea>
+        </div>
+        <div class="Carmargin">
+            <label for="">公車 :</label>
+            <textarea rows="2" cols="50" placeholder="搭台北聯營公車20.202.207.258.282.284.信義 幹線等路，在世貿下車可抵達君悅大飯店。
+            </textarea>"></textarea>
         </div>
     </div>
     <!-- Page6 end -->
@@ -225,11 +280,277 @@
         <ul class="page7pic">
             <li><img src="img/p7-pic.png" alt=""></li>
             <li><img src="img/p7-qr.jpg" alt=""></li>
-            <li><img src="img/p7-create.png" alt=""></li>
-            <li><img src="img/p7-share.png" alt=""></li>
+            <li>
+                <a href="m-set.html"><img src="img/p7-publish.png" alt=""></a>
+            </li>
         </ul>
     </div>
     <!-- Page7 end -->
+    <!-- list -->
+    <div id="mobile" class="friendtable">
+        <div class="close hairline"></div>
+        <table>
+            <h1>赴宴名冊</h1>
+            <thead>
+                <tr>
+                    <th>名稱</th>
+                    <th>電話</th>
+                    <th>人數</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="mobile" class="friendtable">
+        <div class="close hairline"></div>
+        <table>
+            <h1>朋友的祝福</h1>
+            <thead>
+                <tr>
+                    <th>名稱</th>
+                    <th>電話</th>
+                    <th>祝福</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeyan</td>
+                    <td>0936884498</td>
+                    <td>
+                        <button class="Blessingyou">點我觀看</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="applecolorbox">
+              <textarea rows="4" cols="50">你好恭喜發財</textarea>
+        </div>
+       
+    </div>
+    <!-- list end -->
+    <!-- Src JS -->
     <script src="js/zepto.min.js"></script>
     <script src="js/touch.js"></script>
     <script src="js/index.js"></script>
@@ -237,10 +558,9 @@
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/snap.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/jquery.flipster.js"></script>
-    <script type="text/javascript" src="js/velocity.min.js"></script>
     <!--行動哈雷iApp GA -->
     <script>
     (function(i, s, o, g, r, a, m) {

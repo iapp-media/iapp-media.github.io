@@ -48,7 +48,6 @@
 .flip-item {
     position: absolute;
     opacity: 0.99;
-    /* Fix for strange clipping behavior on rotated elements in Chrome. */
     top: 17%;
 }
 

@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="01\index.html" />
     <Content Include="bin\JustyLibrary.dll" />
     <Content Include="Couple_Add.aspx" />
     <Content Include="Couple_list.aspx" />
@@ -129,6 +130,7 @@
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
     <Content Include="js\jquery.tinyMap.js" />
     <Content Include="js\jquery.tinyMap.min.js" />
+    <Content Include="js\mobileEditor-new.js" />
     <Content Include="js\share.js" />
     <Content Include="js\snap.js" />
     <Content Include="js\touch.js" />
