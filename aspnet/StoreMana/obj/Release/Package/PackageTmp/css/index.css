@@ -5,6 +5,55 @@ body {
     max-width: 500px;
 }
 
+
+a {
+    text-decoration: none;
+}
+/*TEXT*/
+
+.TRC {
+    color: #fc5d20 !important;
+}
+
+.TOC {
+    color: #ff9933;
+}
+
+.TOCCenter {
+    color: #ff9933;
+    text-align: center;
+}
+
+.TBC {
+    color: #7d7d7d !important;
+}
+.TextBright {
+    color: #b4b4b4 !important;
+    font-size: 13px !important;
+    float: right;
+}
+
+.TBlack {
+    color: #000;
+    font-size: 18px;
+    display:inline;
+}
+
+
+
+.TRBC {
+    color: #7d7d7d;
+}
+
+.TtitleC {
+    color: #000;
+    text-align: center;
+    font-size: 150%;
+    padding: 10px 12px;
+    /* outline: 1px solid; */
+}
+
+
 .SinCheck span {
     width: 100%;
     /* outline: 1px solid #f00; */
@@ -18,10 +67,6 @@ body {
 .SinCheck label {
     /* position:absolute; */
     /* right:35px; */
-}
-
-a {
-    text-decoration: none;
 }
 
 .QMargin {
@@ -106,51 +151,20 @@ a {
 .SinCheck {
     /* outline:1px solid #f00; */
 }
-
-
-/*TEXT*/
-
-.TRC {
-    color: #fc5d20 !important;
+.CustTop {
+    top:42px !important;
+}
+.CustBar {
+     outline:1px solid #f00;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+}
+.Custsend input{
+    height:30px;
+    border:1px solid #aaa;
 }
 
-.TOC {
-    color: #ff9933;
-}
-
-.TOCCenter {
-    color: #ff9933;
-    text-align: center;
-}
-
-.TBC {
-    color: #7d7d7d !important;
-}
-.TextBright {
-    color: #b4b4b4 !important;
-    font-size: 13px !important;
-    float: right;
-}
-
-.TBlack {
-    color: #000;
-    font-size: 18px;
-    display:inline;
-}
-
-
-
-.TRBC {
-    color: #7d7d7d;
-}
-
-.TtitleC {
-    color: #000;
-    text-align: center;
-    font-size: 150%;
-    padding: 10px 12px;
-    /* outline: 1px solid; */
-}
 
 
 /* ALLBOX */

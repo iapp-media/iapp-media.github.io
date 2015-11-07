@@ -108,6 +108,7 @@
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="img\加入微店.jpg" />
+    <Content Include="Join.aspx" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Join.aspx.cs">
+      <DependentUpon>Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Join.aspx.designer.cs">
+      <DependentUpon>Join.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order_history.aspx.cs">
       <DependentUpon>Order_history.aspx</DependentUpon>
