@@ -169,16 +169,15 @@ a:active {
 .FixTitle {
     text-align:center;
     color:#ff9933;
-    /* font-size:22px; */
-    display: inline-block;
-    position:absolute;
+    font-size:22px;
+    position: fixed;
     left:0;
     /* z-index: 999; */
     width: 162px;
     /* outline: 1px solid #f00; */
     right:0;
     margin:auto;
-    line-height: 60px;
+    line-height: 77px;
 }
 .MidFonts {
     font-size:18px;
@@ -264,7 +263,10 @@ width: 15px;}
     margin: 0!important;
 }
 .padReset {
-    padding:0 !important;
+    /* padding:0 !important; */
+    margin: auto;
+    max-width: 700px;
+    /* outline: 1px solid; */
 }
 
 .AllPad {
@@ -639,19 +641,25 @@ width: 15px;}
 }
 
 .container-fluid {
-    height: 60px;
-    max-height: 60px;
-    background-color: #fff;
+    /* height: 60px; */
+    /* max-height: 60px; */
+    /* background-color: #fff; */
+    position: relative;
 }
 
 .Lgallbar {
-    float: right;
+    /* float: right; */
     /* outline: 1px solid #f00; */
-    width: 90%;
-    height: 100%;
-    position: relative;
-    /* display: flex; */
-    /* align-items:center; */
+    /* width: 90%; */
+    /* height: 100%; */
+    right: 34px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    align-items:center;
     /* justify-content:center; */
 }
 
@@ -902,10 +910,12 @@ a.iframe-info.cboxElement {
 }
 
 .navbar {
-    min-height: 80px;
-    height: 80px;
+    /* min-height: 80px; */
+    /* height: 80px; */
     background-color: #FFF;
     z-index: 99;
+    max-width: 700px;
+    margin: auto;
 }
 
 .back-top {
@@ -933,6 +943,8 @@ a.iframe-info.cboxElement {
     border-style: none;
     margin: 0;
     padding: 0;
+    color: #ff9933;
+    font-size: 32px;
 }
 
 .search2:hover {
@@ -1534,12 +1546,13 @@ ul.swiper-wrapper li a {
 } */
 
 .menusandwich {
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     width: 30px;
     height: 30px;
+    margin-left: 14px;
     right: 0;
-    margin: 25px;
+    /* margin: 25px; */
 }
 
 .menusandwich span {
@@ -1561,6 +1574,7 @@ ul.swiper-wrapper li a {
     height: 6px;
     background-color: #f93;
     display: block;
+    border-radius: 3px;
 }
 
 .menusandwich span:before {
@@ -1578,7 +1592,13 @@ body {
     background-color: #f5f5f5;
     font-size: small;
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, sans-serif;
-    max-width: 500px;
+    /* max-width: 500px; */
+}
+
+.product {
+    /* outline: 1px solid #f00; */
+    max-width: 700px;
+    margin: auto;
 }
 
 .TOC,
@@ -2166,7 +2186,7 @@ body {
 
 @media only screen and (min-width:768px) and (max-width:972px) {
     .Lgallbar {
-        width: 73%;
+        /* width: 73%; */
     }
 }
 
