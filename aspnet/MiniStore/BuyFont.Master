@@ -93,9 +93,9 @@
                         <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
                             <img src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.com/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="QRcode" />
-                            <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
-
-
+                            <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.com/">
+                                <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
+                            </a>
                         </li>
                         <li class="SandTitle">開微店</li>
                         <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>
