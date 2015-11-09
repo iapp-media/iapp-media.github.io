@@ -88,7 +88,9 @@
                                 <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TRBC">
                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("ck")%>'></asp:Literal>
                                 </div>
-                                 
+                                <div class="col-xs-12 ProLPad AlltexC BorTopno BorRightno TRBC">
+                                    辣椒一枝
+                                </div> 
                             </div>
                         </div>
                     </ItemTemplate>
