@@ -14,10 +14,10 @@
       <publishTime>10/29/2015 09:41:37</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/05/2015 12:16:27</publishTime>
+      <publishTime>11/09/2015 11:52:38</publishTime>
     </File>
     <File Include="bin/Login.dll">
-      <publishTime>11/06/2015 14:31:32</publishTime>
+      <publishTime>11/09/2015 11:58:40</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -98,31 +98,34 @@
       <publishTime>10/29/2015 09:41:37</publishTime>
     </File>
     <File Include="img/box-fblogin.png">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/button-sprite-1.png">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/button-sprite-2.png">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/defaulthead.jpg">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/fb.png">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/iapplogo.png">
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="img/img-1-1.png">
-      <publishTime>11/06/2015 12:37:14</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/img-1.png">
-      <publishTime>11/06/2015 12:37:14</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
+    </File>
+    <File Include="img/ministorelogo2.png">
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="img/uploadicon.png">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/09/2015 10:00:21</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -149,7 +152,7 @@
       <publishTime>11/06/2015 12:49:38</publishTime>
     </File>
     <File Include="m-login.aspx">
-      <publishTime>11/06/2015 14:16:27</publishTime>
+      <publishTime>11/09/2015 12:00:31</publishTime>
     </File>
     <File Include="ME/css/action.css">
       <publishTime>10/29/2015 09:41:37</publishTime>
@@ -272,7 +275,7 @@
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/06/2015 15:11:38</publishTime>
+      <publishTime>11/09/2015 12:00:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

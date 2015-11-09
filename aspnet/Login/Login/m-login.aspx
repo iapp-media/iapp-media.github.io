@@ -37,9 +37,7 @@
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-          
-                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
-           
+            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
@@ -83,7 +81,7 @@
         <!-- mobile會員註冊畫面 -->
         <div class="register-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/iapplogo.png">
+                <img class="iapplogo" src="img/ministorelogo2.png">
             </div>
             <div class="content">
                 <div class="login">
@@ -104,9 +102,9 @@
                     </asp:LinkButton>
                 </div>
             </div>
-            <div class="footer"> 
-                    <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
-                    </asp:LinkButton>
+            <div class="footer">
+                <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
+                </asp:LinkButton>
             </div>
         </div>
     </form>

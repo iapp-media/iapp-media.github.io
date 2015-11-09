@@ -82,6 +82,46 @@ a:active {
     width:100%;
 }
 
+/* Menu bar */
+ .swiper-container {
+            width: 100%;
+            background-color:#a3a3a3;
+            height: 48px;
+            top: -2px;
+        }
+.swiper-slide:first-child {
+     border-left: 1px solid #bbb;
+}
+        .swiper-slide {
+            background-color:#a3a3a3;
+            text-align: center;
+            font-size: 22px;
+            color:#fff;
+            width: 30%;
+                border-right: 1px solid #bbb;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+            .swiper-slide:nth-child(2n) {
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(3n) {
+                width: 20%;
+            }
+
 
 .BTbox {
     padding: 6px 12px;
@@ -1184,7 +1224,7 @@ a.iframe-info.cboxElement {
     overflow: auto;
 }
 
-.allClassification {
+/* .allClassification {
     height: 50px;
     position: fixed;
     z-index: 9;
@@ -1210,7 +1250,7 @@ a.iframe-info.cboxElement {
 
 ul.swiper-wrapper li a {
     font-size: 16px;
-}
+} */
 
 .item button {
     background-color: transparent;
@@ -1472,14 +1512,14 @@ ul.swiper-wrapper li a {
     font-size: 150%;
 }
 
-.swiper-container {
+/* .swiper-container {
     width: 100%;
     top: 69px;
     height: 36px;
     margin: 0;
-}
+} */
 
-.swiper-slide {
+/* .swiper-slide {
     text-align: center;
     color: #fff;
     display: flex;
@@ -1491,7 +1531,7 @@ ul.swiper-wrapper li a {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-}
+} */
 
 .menusandwich {
     position: absolute;
@@ -2116,7 +2156,7 @@ body {
 
 .swiper-slide:nth-child(2n),
 .swiper-slide:nth-child(3n) {
-    width: 22%;
+    /* width: 22%; */
 }
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
@@ -2420,10 +2460,10 @@ body {
     .proAJAX {
         margin-top: 29px;
     }
-    .allClassification {
-        /* top: 68px; */
+/*     .allClassification {
+        top: 68px;
         background-color: #b4b4b4;
-    }
+    } */
     .glyphicon-search {
         color: #f93;
         margin-left: -15px;

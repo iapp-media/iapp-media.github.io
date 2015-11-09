@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/masonry.css" />
     <link rel="stylesheet" href="css/colorbox.css" />
+    <link href="css/swiper.min.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -43,6 +44,9 @@
     <![endif]-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -94,10 +98,10 @@
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
                         <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
-                            <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
-                            <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
-
-
+                            <img src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.com/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="QRcode" />
+                            <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.com/">
+                                <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
+                            </a>
                         </li>
                         <li class="SandTitle">開微店</li>
                         <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>
@@ -147,11 +151,30 @@
 
                             <!-- /input-group -->
                         </div>
-                        <a href="javscript:void(0)" class="menusandwich example1"><span></span></a>
+                        <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
-                    <div class="col-xs-12 allClassification swiper-container">
-                        <div class="row swiper-container">
-                            <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+                    <div style="display: none;">
+                        <%-- 這段先不要因為要換新的寫法 --%>
+                        <div class="col-xs-12 allClassification swiper-container">
+                            <div class="row swiper-container">
+                                <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">運動</div>
+                            <div class="swiper-slide">3C產品</div>
+                            <div class="swiper-slide">耳機</div>
+                            <div class="swiper-slide">上衣</div>
+                            <div class="swiper-slide">下身</div>
+                            <div class="swiper-slide">裙子</div>
+                            <div class="swiper-slide">眼鏡</div>
+                            <div class="swiper-slide">牙套</div>
+                            <div class="swiper-slide">盥洗用品類</div>
+                            <div class="swiper-slide">鞋子</div>
+                            <div class="swiper-slide">襪子</div>
+                            <div class="swiper-slide">可以一直增加</div>
                         </div>
                     </div>
                 </div>

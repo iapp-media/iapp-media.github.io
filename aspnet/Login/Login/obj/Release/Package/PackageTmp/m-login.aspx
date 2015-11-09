@@ -44,7 +44,7 @@
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/iapplogo.png">
+                <img class="iapplogo" src="img/ministorelogo2.png">
             </div>
             <div class="content">
                 <div class="fb">
@@ -83,7 +83,7 @@
         <!-- mobile會員註冊畫面 -->
         <div class="register-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/iapplogo.png">
+                <img class="iapplogo" src="img/ministorelogo2.png">
             </div>
             <div class="content">
                 <div class="login">
