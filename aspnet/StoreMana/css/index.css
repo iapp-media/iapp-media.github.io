@@ -240,11 +240,11 @@ a {
 
 .ThreeBTN {
     background-color: #ff9933 !important;
-    text-align: center !important;
+    /* text-align: center !important; */
     color: #fff !important;
     border-radius: 4px;
-    width:90%;
-    font-size: 16px;
+    width: 100%;
+    /* font-size: 16px; */
 }
 
 .AlltexC {
@@ -2553,7 +2553,10 @@ ul.swiper-wrapper li a {
         margin: 0;
         color: #838485;
     }
-    
+#liSTfooter .BoxCenter {
+    padding:0 10px;
+    margin-top: 10px;
+}
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;

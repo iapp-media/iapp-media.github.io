@@ -90,8 +90,8 @@
                                     </asp:HyperLink>
                                 </div>
 
-                                <div id="liSTfooter" class="col-xs-12">
-                                    <div class="row">
+                                <div id="liSTfooter">
+                                    
                                         <div class="col-xs-4 BoxCenter">
                                             <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" CssClass="btn btn-warning ThreeBTN " Enabled="false" />
                                         </div>
@@ -107,8 +107,9 @@
                                         <div class="col-xs-4 BoxCenter"> 
                                             <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-warning ThreeBTN"  Enabled="false" /> 
                                         </div>
-                                    </div>
+                                     <div class="clearfix"></div>
                                 </div>
+                               
                             </div>
                         </div>
                     </ItemTemplate>
