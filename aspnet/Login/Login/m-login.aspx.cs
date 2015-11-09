@@ -17,13 +17,7 @@ namespace Login
             if (!IsPostBack)
             {
                 if (Comm.CheckMobile() == false) { Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx")); }
-                if (Comm.Store_ID() != -1)
-                {
-                    if (Request.QueryString["done"] != null)
-                    {
-                       // Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
-                    }
-                }
+                 
             }
         }
  
@@ -58,29 +52,32 @@ namespace Login
                 {
                     if (Request.QueryString["s"] == "1")
                     {
-                        if (Main.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") != "1")
+                        JDB Main2 = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2")); 
+                        if (Main2.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") != "1")
                         {
-                            Main.ParaClear();
-                            Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
-                            Main.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
-                            Main.NonQuery("Insert into Store (User_ID, Store_Name,Creat_Date) values " +
+                            Main2.ParaClear();
+                            Main2.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
+                            Main2.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
+                            Main2.NonQuery("Insert into Store (User_ID, Store_Name,Creat_Date) values " +
                              " (@UID, @Name,getdate())   ");
                         }
 
                         string SID = "";
-                        SID = Main.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
+                        SID = Main2.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
                         if (SID != "")
                         {
-                            Main.ParaClear();
-                            Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
-                            Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
-                            Main.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
+                            Main2.ParaClear();
+                            Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
+                            Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
+                            Main2.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
                             //  Response.Write(SID); 
                             Comm.SaveCookie("iapp_sid", SID);
                         }
                     }
                 }
+                Main.WriteLog(HttpUtility.UrlDecode(Request.QueryString["done"]));
                 Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+    
             }
 
 

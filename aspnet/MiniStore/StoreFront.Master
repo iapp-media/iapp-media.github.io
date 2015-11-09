@@ -147,7 +147,7 @@
 
                             <!-- /input-group -->
                         </div>
-                        <a href="javscript:void(0)" class="menusandwich example1"><span></span></a>
+                        <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
                     <div class="col-xs-12 allClassification swiper-container">
                         <div class="row swiper-container">

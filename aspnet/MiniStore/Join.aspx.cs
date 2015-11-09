@@ -25,10 +25,10 @@ namespace MiniStore
                             SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
                             if (SID != "")
                             {
-                                Main.WriteLog("jason_select idno from Store where User_ID='" + Comm.User_ID() + "'");
-                                int c=Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
+                              
+                                int c = Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
                                 int a = Comm.SaveCookie("iapp_sid", SID, 365);
-                                Main.WriteLog("jason'" + a.ToString() + "'&c='" + c.ToString() + "'");
+                              
                                 Response.Write("jump");
                             }
                             else

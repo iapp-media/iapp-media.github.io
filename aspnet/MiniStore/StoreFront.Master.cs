@@ -36,7 +36,7 @@ namespace MiniStore
                 }
                 else
                 {
-                    if (Main.Scalar("select 1 from store where Store_NID='" + Request.QueryString["SN"] + "'") != "1")
+                    if (Main.Scalar("select 1 from store where Store_NID='" + Request.QueryString["SN"].ToString() + "'") != "1")
                     {
                         Response.Redirect("Default.aspx?SN=OfficACC");
                     }
@@ -45,17 +45,17 @@ namespace MiniStore
 
 
                 L_MyStore.Text = " <li class='SandTitle'>我的帳戶</li>" +
-                 " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 編輯會員資料</a></li> " +
-                 " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>訂單查詢</a></li>";
+                 " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"].ToString()) + "'> 編輯會員資料</a></li> " +
+                 " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"].ToString() + "'>訂單查詢</a></li>";
 
 
                 L_Cate.Text = "<ul class=\"swiper-wrapper\"> ";
 
                 Main.ParaClear();
-                Main.ParaAdd("@SN", Request.QueryString["SN"], System.Data.SqlDbType.NVarChar);
+               // Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
 
-                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
-                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID=@SN )");
+                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"].ToString() + "' )");
+                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"].ToString() + "' )");
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
                     L_Cate.Text += "  <li class=\"swiper-slide col-xs-4\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></li>";
