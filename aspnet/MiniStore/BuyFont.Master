@@ -92,7 +92,7 @@
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
                         <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
-                            <img src="img/qr-iappmedia.jpg" alt="" class="QRcode" />
+                            <img src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.com/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="QRcode" />
                             <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
 
 
