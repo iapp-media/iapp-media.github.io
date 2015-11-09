@@ -12,47 +12,40 @@
                 <li class="swiper-slide col-xs-4"><a href="Setting_Gerent.aspx" style="color: white">帳號管理</a></li>
             </ul>
         </div>
-    </div> 
-    <div id="content">
-        <div class="col-xs-12 AllBox BoxBorder">
+    </div>
+    <div class="buydivmove">
+        <div class="col-xs-12 insidecare">
             <div class="row">
-                <!-- 參數設定 -->
-                <div class="allmodify">
-                    <ul class="buydivmove mart10">
-                        <li class="modify col-xs-12">
-                            <div class="col-xs-12 insidecare">
-                                <div class="row">
-                                    <div>
-                                        <label>Iapp帳號</label>
-                                        <asp:TextBox ID="TB_ACC" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div>
-                                        <asp:Button ID="BT_Confirm" runat="server" Text="加入" OnClick="BT_Confirm_Click" />
-                                    </div>
-                                    <div>
-                                        <asp:Repeater ID="RP1" runat="server">
-                                            <HeaderTemplate>
-                                                <div>
-                                                    <label>管理員帳號</label>
-                                                </div>
-                                            </HeaderTemplate>
-                                            <ItemTemplate>
-                                                <div>
-                                                    <div>
-                                                        <label><%# Eval("Account") %></label>
-                                                    </div>
-                                                </div>
-                                            </ItemTemplate>
-                                        </asp:Repeater>
-                                        <asp:Literal ID="L1" runat="server" Visible="false"></asp:Literal>
-                                        <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="Gerentbox AllBGC">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">iApp帳號</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TB_ACC" runat="server" CssClass="col-xs-8"></asp:TextBox>
+                    <div class="clearfix"></div>
                 </div>
-                <!-- 參數設定 end -->
+                <div class="AllBGC BorObot SetAdd">
+                    <asp:Button ID="BT_Confirm" runat="server" Text="加入" CssClass="btn btn-warning SBuyCar2" OnClick="BT_Confirm_Click" />
+                </div>
+                <div id="GerBot">
+                    <asp:Repeater ID="RP1" runat="server">
+                        <HeaderTemplate>
+                            <div>
+                                <p class="BotTitle">管理員帳號</p>
+                            </div>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <div>
+                                
+                                    <p class="BotTitle"><%# Eval("Account") %></p>
+                        
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:Literal ID="L1" runat="server" Visible="false"></asp:Literal>
+                    <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
+                </div>
             </div>
         </div>
     </div>

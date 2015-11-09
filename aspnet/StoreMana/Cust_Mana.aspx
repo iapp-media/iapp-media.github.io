@@ -10,9 +10,8 @@
             </ul>
         </div>
     </div>
-
     <!-- WRAPPER -->
-    <div class="buydivmove CustTop">
+    <div class="buydivmove">
         <div class="insidecare col-xs-12">
             <div class="row"> 
                 
@@ -39,23 +38,23 @@
                                 <div class="col-xs-4 BoxCenter ListTitle">名次</div>
                                 <div class="col-xs-4 BoxCenter ListTitle">姓名</div>
                                 <div class="col-xs-4 BoxCenter ListTitle">點擊次數</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">產品名稱</div>
+                                <div class="col-xs-12 BoxCenter ListTitle">產品名稱</div>
                             </div>
                         </div>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="ProMaBOX col-xs-12 ToBoPad">
                             <div class="ProMain col-xs-12">
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno TRBC">
                                     <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("ROWID")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno TGray ">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno TRBC">
                                     <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("User_Name")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TGray ">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TRBC">
                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("ck")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-4 ProLPad AlltexC BorLeftpno BorBottompno TGray ">
+                                <div class="col-xs-12 ProLPad AlltexC BorLeftpno BorBottompno TRBC">
                                     <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("Product_Name")%>'></asp:Literal>
                                 </div>
                             </div>
@@ -73,22 +72,23 @@
                                 <div class="col-xs-4 BoxCenter ListTitle">名次</div>
                                 <div class="col-xs-4 BoxCenter ListTitle">姓名</div>
                                 <div class="col-xs-4 BoxCenter ListTitle">介紹人次</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">產品名稱</div>
+                                <div class="col-xs-12 BoxCenter ListTitle">產品名稱</div>
                             </div>
                         </div>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="ProMaBOX col-xs-12 ToBoPad">
                             <div class="ProMain col-xs-12">
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno TRBC">
                                     <asp:Literal ID="Literal1" runat="server" Text='<%# Bind("ROWID")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno TGray ">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno TRBC">
                                     <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("User_Name")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TGray ">
+                                <div class="col-xs-4 ProLPad AlltexC BorTopno BorRightno TRBC">
                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("ck")%>'></asp:Literal>
                                 </div>
+                                 
                             </div>
                         </div>
                     </ItemTemplate>
@@ -113,13 +113,13 @@
                     <ItemTemplate>
                         <div class="ProMaBOX col-xs-12 ToBoPad">
                             <div class="ProMain">
-                                <div class="col-xs-4 ProLPad AlltexC ListNVa">
+                                <div class="col-xs-4 ProLPad AlltexC ListNVa TRBC">
                                     <asp:Literal ID="Literal5" runat="server" Text='<%# Bind("User_Name")%>'></asp:Literal> 
                                 </div>
-                                <div class="col-xs-8 ProLPad AlltexC ListMVa">
+                                <div class="col-xs-8 ProLPad AlltexC ListMVa TRBC">
                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Account")%>'></asp:Literal>
                                 </div>
-                                <div class="col-xs-8 ProLPad AlltexC ListpVa">
+                                <div class="col-xs-8 ProLPad AlltexC ListpVa TRBC">
                                     <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("TEL")%>'></asp:Literal>
                                 </div>
                             </div>

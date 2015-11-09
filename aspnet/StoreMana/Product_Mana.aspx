@@ -12,9 +12,7 @@
             </ul>
         </div>
     </div>
-    <div class="allmodify">
-        <ul class="buydivmove">
-            <li>
+        <div class="buydivmove">
                 <div class="col-xs-12 insidecare">
                     <div class="row">
                         <div class="col-xs-12 BTbox">
@@ -75,8 +73,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-        </ul>
-    </div>
+            
+        </div>
+
 
 </asp:Content>
