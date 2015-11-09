@@ -67,6 +67,7 @@
     <Content Include="Buy_Detail.aspx" />
     <Content Include="Buy_Like.aspx" />
     <Content Include="css\promptumenu.css" />
+    <Content Include="css\swiper.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\colorbox.css" />
