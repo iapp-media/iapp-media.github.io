@@ -65,4 +65,5 @@ function checkRegister() {
   $('#register-email').focus();
   return false;
 }
-$('')
+
+

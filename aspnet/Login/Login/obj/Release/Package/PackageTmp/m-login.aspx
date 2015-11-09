@@ -37,9 +37,7 @@
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-          
-                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
-           
+            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
@@ -104,9 +102,9 @@
                     </asp:LinkButton>
                 </div>
             </div>
-            <div class="footer"> 
-                    <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
-                    </asp:LinkButton>
+            <div class="footer">
+                <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
+                </asp:LinkButton>
             </div>
         </div>
     </form>
@@ -139,6 +137,7 @@
             }, { scope: 'publish_actions' });
 
         }
+        alert("previous url is: " + window.history.previous.href);
 
     </script>
     <script src="js/bootstrap.min.js"></script>

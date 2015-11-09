@@ -137,7 +137,6 @@
             }, { scope: 'publish_actions' });
 
         }
-
     </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/m-login.js"></script>

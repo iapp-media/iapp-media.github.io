@@ -155,10 +155,11 @@ a {
     top:42px !important;
 }
 .CustBar {
-     outline:1px solid #f00;
+     /* outline:1px solid #f00; */
      display:flex;
      align-items:center;
      justify-content:center;
+     padding: 6px 12px;
 }
 .Custsend input{
     /* height:30px; */
@@ -260,7 +261,7 @@ a {
 }
 
 .ProLPad {
-    border: 1px solid #eee;
+    outline: 1px solid #eee;
     text-align: center;
 }
 .ProLast img {
@@ -407,10 +408,6 @@ a {
     background-color: #fff;
 }
 
-.BoxCenter {
-    text-align: center;
-    padding: 6px 0px;
-}
 
 .ValueRight {
     float: right;
@@ -699,11 +696,7 @@ a {
     padding:0 12px;
 }
 
-.ListTitle {
-    font-size: 16px;
-    padding: 6px 12px;
-    color: #838485;
-}
+
 
 .list-group-itemUI {
     background-color: transparent;
@@ -2037,14 +2030,14 @@ ul.swiper-wrapper li a {
     background-color: #fd9a33 !important;
     border-color: #fd9a33;
     letter-spacing: 5px;
-    font-size: 170% !important;
+    font-size: 20px !important;
     border-radius: 1px;
     text-align: center !important;
     color: #fff !important;
     border-radius: 4px;
     display: block;
-    padding: 9px 12px;
-    font-weight: bold;
+    /* padding: 9px 12px; */
+    /* font-weight: bold; */
 }
 
 .productsinside h1 {
@@ -2495,7 +2488,40 @@ ul.swiper-wrapper li a {
     /* padding:6px 12px; */
     font-size: 15px;
 }
-
+.Ltitbox {
+    /* outline:1px solid #f00; */
+    /* height:30px; */
+}
+    .Ltitbox .ListName {
+        /* outline:1px solid #f00; */
+        display: table;
+        /* vertical-align:middle; */
+        /* padding: 9px 12px; */
+        line-height: 60px;
+        font-size: 15px;
+        text-align:center;
+        background-color: #888888;
+    }
+    .Ltitbox .ListMail,
+    .Ltitbox .Listphone {
+        font-size: 15px;
+        /* outline:1px solid #f00; */
+        display: table;
+        line-height: 30px;
+        background-color: #888888;
+    }
+.ListNVa {
+    display:table;
+    line-height:60px;
+    font-size:18px;
+}
+.ListMVa,
+.ListpVa {
+     display:table;
+    line-height:30px;
+    text-align:left;
+}
+    
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;

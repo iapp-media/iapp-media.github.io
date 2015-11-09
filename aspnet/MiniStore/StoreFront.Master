@@ -134,23 +134,7 @@
                     <!-- Web -->
                     <!-- Web 搜尋bar -->
                     <div class="Lgallbar col-md-11">
-                        <div class="col-xs-9 col-sm-7 col-md-9 Allsearch">
-                            <div class="input-group search">
-                                <!-- 搜尋框 -->
-                                <input type="text" class="form-control bar-text" placeholder="Search iApp..." id="searchWeb" autocomplete="on" name="search" />
-                                <!-- 下拉按鈕 -->
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
-                                        <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
-                                    </button>
-
-                                </div>
-
-                                <!-- /btn-group -->
-                            </div>
-
-                            <!-- /input-group -->
-                        </div>
+                       
                         <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
                     <div style="display: none;">
