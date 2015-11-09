@@ -17,19 +17,7 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                // Comm.DeleCoookie("iapp_uid");
-                //Comm.SaveCookie("iapp_uid", "2");
-
-                string jump = "";
-                if (Comm.User_ID() == -1)
-                {
-                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "";
-                    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
-                    return;
-                    //System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String",
-                    //    "if(confirm('請先登入')){window.open('" + jump + "','_self');}else{window.open('" + jump + "','_self');}", true); 
-                }
-
+                
                 if (Request.QueryString["SN"] == null)
                 {
                     Response.Redirect("Default.aspx?SN=OfficACC");
@@ -41,6 +29,16 @@ namespace MiniStore
                         Response.Redirect("Default.aspx?SN=OfficACC");
                     }
                 }
+
+                string jump = "";
+                if (Comm.User_ID() == -1)
+                {
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "";
+                    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
+                    return;
+                }
+
+ 
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
 
 

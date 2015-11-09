@@ -21,16 +21,16 @@ namespace MiniStore
             if (!IsPostBack)
             {
 
-
-                Main.ParaClear();
-                Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
-                SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
-                if (SID != "")
+                if (Request.QueryString["SN"] != null)
                 {
-                    ShowData();
-                }
-
- 
+                    Main.ParaClear();
+                    Main.ParaAdd("@Store_NID", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
+                    SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
+                    if (SID != "")
+                    {
+                        ShowData();
+                    }
+                } 
             }
         }
         void ShowData()
