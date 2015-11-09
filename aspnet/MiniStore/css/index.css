@@ -89,7 +89,9 @@ a:active {
             height: 48px;
             top: -2px;
         }
-
+.swiper-slide:first-child {
+     border-left: 1px solid #bbb;
+}
         .swiper-slide {
             background-color:#a3a3a3;
             text-align: center;
