@@ -124,8 +124,8 @@
                     <!-- Web 搜尋bar -->
                     <div class="Lgallbar">
                         <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
                         <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
                     <div style="display: none;">

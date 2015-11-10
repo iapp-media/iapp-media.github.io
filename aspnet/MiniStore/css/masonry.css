@@ -125,7 +125,10 @@ body {
     padding-left: 0px;
     font-size: 15px;
     text-align: left;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    /* padding: 1px 7px; */
+    padding: 5px 0;
+    /* outline: 1px solid; */
 }
 
 .iapp-name a {
@@ -146,7 +149,7 @@ body {
 }
 
 
-/* checkboxè¨­å®š */
+/* checkboxÃ¨Â¨Â­Ã¥Â®Å¡ */
 
 .list {
     float: left;
