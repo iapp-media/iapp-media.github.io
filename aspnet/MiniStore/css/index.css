@@ -2612,3 +2612,12 @@ justify-content: center;
         width: 100%;
     }
 }
+@media screen and (orientation: portrait) {  
+    /*針對縱向 css去撰寫*/
+}
+@media screen and (orientation: landscape) {
+      /*針對橫向 css*去撰寫*/
+    .scrollable-menu {
+        max-height: 300px;
+    }
+          }
