@@ -23,6 +23,7 @@
             <a href="Setting.aspx" class="btn btn-warning col-xs-12 sendcareButtomeEnd"> 
                 <img src="img/setting.png" alt="Alternate Text" class="Menuicon" />設定</a>
         </div>
+        <div class="clearfix"></div>
     </div>
 
    <%-- <span class="MenuNum">99+</span>--%>

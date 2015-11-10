@@ -89,9 +89,9 @@ namespace StoreMana
                 SD3.ConnectionString = Main.ConnStr;
                 RP3.DataSourceID = SD3.ID;
 
-                Sub_Menu.Text = " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?com=1\" style=\"color: white\">社群力排行</a></li>  " +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx\" style=\"color: white\">客戶列表</a></li>" +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?act=1\" style=\"color: white\">活動力排行</a></li>";
+                Sub_Menu.Text = " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx?com=1\" style=\"color: white\">社群力排行</a></div>  " +
+                                " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx\" style=\"color: white\">客戶列表</a></div>" +
+                                " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx?act=1\" style=\"color: white\">活動力排行</a></div>";
  
             }
         }

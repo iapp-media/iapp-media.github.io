@@ -11,13 +11,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="col-xs-12 allClassification swiper-container">
+    <%--<div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide col-xs-4"><a href="Product_Mana.aspx" style="color: white">商品列表</a></li>
                 <li class="swiper-slide col-xs-4"><a href="Product_Add.aspx" style="color: white">商品建檔</a></li>
                 <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
             </ul>
+        </div>
+    </div>--%>
+    <div id="Allswiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="Product_Mana.aspx" style="color: white">商品列表</a></div>
+                <div class="swiper-slide"><a href="Product_Add.aspx" style="color: white">商品建檔</a></div>
+                <div class="swiper-slide"><a href="Setting.aspx" style="color: white">參數設定</a></div>
+            </div>
         </div>
     </div>
 
@@ -63,7 +72,6 @@
     </div>
     <div class="buydivmove">
         <div class="insidecare col-xs-12 AllBGC">
-
             <div class="row">
                 <div class="col-xs-12 libor paynumber PadLib">
                     <div class="col-xs-12 BTbox">
@@ -142,7 +150,7 @@
                             <p class="BoxLeft">商品說明</p>
                         </div>
                     </div>
-                    <asp:TextBox ID="TB_Description" Class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Description" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
@@ -150,7 +158,7 @@
                             <p class="BoxLeft">商品規格</p>
                         </div>
                     </div>
-                    <asp:TextBox ID="TB_Dimension" Class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Dimension" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
@@ -174,7 +182,6 @@
             </div>
         </div>
     </div>
-    <p class="text-center fonts">填寫資料</p>
 
     <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal>
 

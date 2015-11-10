@@ -2,13 +2,49 @@ body {
     background-color: #f5f5f5;
     font-size: small;
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 
 a {
     text-decoration: none;
 }
+/* unvisited link */
+
+a {
+    text-decoration: none;
+}
+
+a:link{
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* selected link */
+
+a:active {
+    color: #b25221;
+    text-decoration: none;
+}
+
+
 /*TEXT*/
 
 .TRC {
@@ -169,10 +205,6 @@ a {
 
 /* ALLBOX */
 
-#content {
-    position: relative;
-    top: 114px;
-}
 .Boxlist {
     background-color:#cbcdca;
 }
@@ -188,6 +220,7 @@ a {
     padding: 6px 12px;
     font-size: 20px;
     width: 50%;
+    color: #838485;
 }
 
 .BTright {
@@ -305,6 +338,7 @@ a {
     padding: 6px 12px;
     /* outline: 1px solid #f00; */
     /* font-size: 15px; */
+    width: 100%;
 }
 .ProLast {
     /* outline:1px solid #f00; */
@@ -518,9 +552,6 @@ a {
     float: right;
 }
 
-#slider img {
-    height: 100%;
-}
 
 #slider ul {
     position: relative;
@@ -805,7 +836,7 @@ a {
 
 .container-fluid {
     height: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .Lgallbar {
@@ -1102,6 +1133,8 @@ a.iframe-info.cboxElement {
     height: 80px;
     background-color: white;
     z-index: 99;
+    max-width: 700px;
+    margin: auto;
 }
 
 .back-top {
@@ -1872,44 +1905,6 @@ a.iframe-info.cboxElement {
 
 /* menu */
 
-.overflowMenu {
-    position: absolute;
-    top: 74px;
-    height: 51px;
-}
-
-.allClassification {
-    height: 50px;
-    position: fixed;
-    z-index: 9;
-    /* position: absolute; */
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100%;
-    transform: scale(1.5);
-    background-color: #b4b5b5;
-}
-
-.allClassification ul {
-    background-color: #b4b4b4;
-}
-
-.allClassification li {
-    color: #fff;
-    border-right: 1px solid #a3a3a3;
-    text-align: center;
-    font-size: 90%;
-    display: table;
-    line-height: 36px;
-}
-
-.swiper-wrapper li:nth-child(3) {
-    border: none;
-}
-
-ul.swiper-wrapper li a {
-    font-size: 16px;
-}
 
 .item button {
     background-color: transparent;
@@ -2036,7 +2031,7 @@ ul.swiper-wrapper li a {
     color: #fff !important;
     border-radius: 4px;
     display: block;
-    /* padding: 9px 12px; */
+    padding: 10px 12px;
     /* font-weight: bold; */
 }
 
@@ -2199,7 +2194,9 @@ ul.swiper-wrapper li a {
 
 .buydivmove {
     position: relative;
-    top: 114px;
+    top: 127px;
+    max-width: 700px;
+    margin: auto;
 }
 
 .movecss {
@@ -2287,39 +2284,6 @@ ul.swiper-wrapper li a {
 }
 
 
-/* menu swipe UI CSS */
-
-.swiper-container {
-    width: 100%;
-    top: 92px;
-    height: 36px;
-    margin: 0;
-}
-
-.swiper-slide {
-    text-align: center;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.swiper-slide:nth-child(2n) {
-    width: 22%;
-}
-
-.swiper-slide:nth-child(3n) {
-    width: 22%;
-}
 
 
 /* menu sandwich UI CSS */
@@ -2352,6 +2316,7 @@ ul.swiper-wrapper li a {
     height: 6px;
     background-color: #ff9933;
     display: block;
+    border-radius: 3px;
 }
 
 .menusandwich span:before {
@@ -2405,7 +2370,7 @@ ul.swiper-wrapper li a {
 .control_next {
     position: absolute;
     top: 40%;
-    z-index: 999;
+    z-index: 3;
     display: block;
     padding: 4% 3%;
     width: auto;
@@ -2557,6 +2522,59 @@ ul.swiper-wrapper li a {
     padding:0 10px;
     margin-top: 10px;
 }
+/* Menu bar */
+#Allswiper .swiper-container {
+    /* margin: 81px auto 0 auto; */
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    background-color: #a3a3a3;
+    height: 48px;
+    top: -2px;
+    margin: 81px auto;
+    max-width: 700px;
+}
+
+.swiper-slide:first-child {
+    border-left: 1px solid #bbb;
+}
+
+.swiper-slide {
+    background-color: #a3a3a3;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    width: 30%;
+    border-right: 1px solid #bbb;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 40%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+}
+
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;
@@ -2570,6 +2588,12 @@ ul.swiper-wrapper li a {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
+     #Allswiper .swiper-container {
+        top:60px;
+    }
+    .buydivmove {
+        top:107px;
+    }
     .promana {
         margin-top: 112px;
         height: 500px;
@@ -2720,6 +2744,12 @@ ul.swiper-wrapper li a {
 }
 
 @media only screen and (max-width:480px) {
+    #Allswiper .swiper-container {
+        top:60px;
+    }
+    .buydivmove {
+        top:107px;
+    }
     #slider ul li {
         width: 337px;
         height: 217px;

@@ -3,11 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-xs-12 allClassification swiper-container">
+    <%--<div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
-                <asp:Literal ID="Sub_Menu" runat="server"></asp:Literal>
+                
             </ul>
+        </div>
+    </div>--%>
+    <div id="Allswiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <asp:Literal ID="Sub_Menu" runat="server"></asp:Literal>
+            </div>
         </div>
     </div>
     <!-- WRAPPER -->
@@ -22,8 +29,8 @@
                                     <asp:TextBox ID="TBName" runat="server" Class="form-control" placeholder="輸入姓名查詢"></asp:TextBox>
                  
                             </div>
-                            <div class="col-xs-4">
-                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning sendcareButtom" OnClick="BT_Search_Click" />
+                            <div class="col-xs-4 col-sm-2">
+                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning SBuyCar2" OnClick="BT_Search_Click" />
                             </div>
                        
                     </div> 

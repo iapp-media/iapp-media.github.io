@@ -4,11 +4,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="col-xs-12 allClassification swiper-container">
+    <%--<div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide col-xs-4 BorRightno"><a href="Msg_Mana.aspx" style="color: white">客戶留言</a></li>
             </ul>
+        </div>
+    </div>--%>
+    <div id="Allswiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="Msg_Mana.aspx" style="color: white">客戶留言</a></div>
+            </div>
         </div>
     </div>
     <div id="content">

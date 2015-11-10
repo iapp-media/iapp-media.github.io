@@ -66,6 +66,7 @@
     <Content Include="css\cropper.css" />
     <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />
+    <Content Include="css\swiper.min.css" />
     <Content Include="Cust_Mana.aspx" />
     <Content Include="img\arrow.png" />
     <Content Include="img\cancel-01.png" />
