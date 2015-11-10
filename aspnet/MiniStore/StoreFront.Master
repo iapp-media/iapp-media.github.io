@@ -116,9 +116,11 @@
 
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
+                        <div class="SearBoxCenter">
                         <asp:TextBox ID="mSearch" CssClass="search bar-text" placeholder="Search product..." runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                         <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
+                            </div>
                     </div>
                     <!-- Web -->
                     <!-- Web 搜尋bar -->

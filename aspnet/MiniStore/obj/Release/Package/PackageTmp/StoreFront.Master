@@ -82,6 +82,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="row">
                 <div class="container-fluid">
+
                     <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
                         <div class="row">
                             <a class="navbar-brand" href="default.aspx">
@@ -110,8 +111,6 @@
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
                     </ul>
-                    <div id="listbox">
-                    </div>
                     <!-- Mobile -->
                     <div class="col-xs-3 tem"></div>
 
@@ -121,36 +120,12 @@
                         <%--   <input type="text" class="search bar-text" placeholder="Search iApp..." id="search" name="search" />--%>
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
-                    <div class="col-xs-2 search-sm">
-                        <div class="input-group">
-                            <!-- mobile 搜尋 -->
-                            <div class="input-group-btn">
-                                <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Web -->
                     <!-- Web 搜尋bar -->
-                    <div class="Lgallbar col-md-11">
-                        <div class="col-xs-9 col-sm-7 col-md-9 Allsearch">
-                            <div class="input-group search">
-                                <!-- 搜尋框 -->
-                                <input type="text" class="form-control bar-text" placeholder="Search iApp..." id="searchWeb" autocomplete="on" name="search" />
-                                <!-- 下拉按鈕 -->
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default select" data-toggle="dropdown" aria-expanded="false">
-                                        <span class="glyphicon glyphicon-search caresea" aria-hidden="true"></span>
-                                    </button>
-
-                                </div>
-
-                                <!-- /btn-group -->
-                            </div>
-
-                            <!-- /input-group -->
-                        </div>
+                    <div class="Lgallbar">
+                        <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
                         <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
                     </div>
                     <div style="display: none;">
@@ -161,7 +136,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-container">
+                </div>
+            </div>
+              <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">運動</div>
                             <div class="swiper-slide">3C產品</div>
@@ -177,9 +154,8 @@
                             <div class="swiper-slide">可以一直增加</div>
                         </div>
                     </div>
-                </div>
-            </div>
         </nav>
+       
         <!-- 至購物車 -->
         <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
 

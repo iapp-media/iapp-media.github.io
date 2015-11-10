@@ -63,14 +63,13 @@
                                 </div>
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <div class="ProMaBOX col-xs-12">
-                                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>'> 
-                                        <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# ShowDetail(Eval("IDNo")) %>' CssClass="ProMaBOX"> 
+                                   
                                             <div class="col-xs-3 ProMaBOXIMG">
-                                                <div class="row">
                                                     <img src='<%# Eval("FilePath")%>' alt="Alternate Text" />
 <%--                                                <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /> --%>
-                                                </div>
                                             </div>
                                             <div class="col-xs-8 Orderlist">
                                                 <div class="col-xs-6 ListIn ProLPad BorTopno">
@@ -99,8 +98,9 @@
                                                     <img src="img/arrow.png" alt="Alternate Text" />
                                                 </div> 
                                             </div>  
-                                        </div>
+                                        
                                      </asp:HyperLink>
+                                        </div>
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>

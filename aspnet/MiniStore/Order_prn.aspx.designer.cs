@@ -166,15 +166,6 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.TextBox TBACCDate;
         
         /// <summary>
-        /// TBScode 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBScode;
-        
-        /// <summary>
         /// Button1 控制項。
         /// </summary>
         /// <remarks>

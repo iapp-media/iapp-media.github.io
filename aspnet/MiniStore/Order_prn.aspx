@@ -13,10 +13,10 @@
                                 <asp:Repeater ID="RP4" runat="server">
                                     <ItemTemplate>
                                         <div class="details" runat="server" id="DivDetails">
-                                            <div class="col-xs-5">
+                                            <div class="col-xs-5 col-sm-3">
                                                 <img src="<%# ShowImg(Eval("Item_ID")) %>" alt="Alternate Text" class=" imgH" />
                                             </div>
-                                            <div class="col-xs-7">
+                                            <div class="col-xs-7 col-sm-9">
                                                 <h3><%# Eval("Name") %></h3>
                                                 <div class="MonBox">
                                                     <p>價錢</p>
