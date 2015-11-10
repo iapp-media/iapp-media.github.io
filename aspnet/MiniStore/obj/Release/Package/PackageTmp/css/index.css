@@ -16,6 +16,8 @@ a:link,
 .glyphicon {
     color: #ff9933;
     text-decoration: none;
+    border:none;
+    outline:none;
 }
 
 
@@ -25,6 +27,8 @@ a:visited,
 .glyphicon {
     color: #ff9933;
     text-decoration: none;
+    border:none;
+    outline:none;
 }
 
 
@@ -34,6 +38,8 @@ a:hover,
 .glyphicon {
     color: #ff9933;
     text-decoration: none;
+    border:none;
+    outline:none;
 }
 
 
@@ -42,6 +48,8 @@ a:hover,
 a:active {
     color: #b25221;
     text-decoration: none;
+    border:none;
+    outline:none;
 }
 
 
@@ -1006,7 +1014,7 @@ a.iframe-info.cboxElement {
     padding: 0;
     color: #ff9933;
     font-size: 30px;
-   
+    height: 35px;
 }
 
 .search2:hover {
@@ -2612,3 +2620,12 @@ justify-content: center;
         width: 100%;
     }
 }
+@media screen and (orientation: portrait) {  
+   
+}
+@media screen and (orientation: landscape) {
+     
+    .scrollable-menu {
+        max-height: 250px;
+    }
+          }
