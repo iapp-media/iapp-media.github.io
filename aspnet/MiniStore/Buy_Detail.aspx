@@ -63,11 +63,11 @@
                             </div>
 
 
-                            <div class="col-xs-9 MsgBox">
+                            <div class="col-xs-9 col-sm-6 MsgBox">
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <%--  <img src="img/mail.png" alt="Alternate Text" />--%>
-                                        <asp:ImageButton ID="BT_Mail" runat="server" ImageUrl="img/mail.png" />
+                                        <asp:ImageButton ID="BT_Mail" runat="server" ImageUrl="img/mail.png" CssClass="img-responsive"/>
                                     </div>
                                     <div class="col-xs-4">
                                         <asp:ImageButton ID="BT_Line" runat="server" ImageUrl="img/line.png" />
