@@ -20,7 +20,7 @@
       <publishTime>10/29/2015 09:41:36</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>11/10/2015 09:35:32</publishTime>
+      <publishTime>11/10/2015 12:01:56</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -44,16 +44,16 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/10/2015 11:18:11</publishTime>
+      <publishTime>11/10/2015 12:26:56</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>11/10/2015 09:44:58</publishTime>
+      <publishTime>11/10/2015 11:28:37</publishTime>
     </File>
     <File Include="css/promptumenu.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/reset.css">
-      <publishTime>10/29/2015 09:41:39</publishTime>
+      <publishTime>11/10/2015 12:20:50</publishTime>
     </File>
     <File Include="css/swiper.min.css">
       <publishTime>11/09/2015 09:49:59</publishTime>
@@ -323,10 +323,10 @@
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>11/10/2015 09:42:16</publishTime>
+      <publishTime>11/10/2015 12:06:28</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/10/2015 11:18:26</publishTime>
+      <publishTime>11/10/2015 12:27:09</publishTime>
     </File>
   </ItemGroup>
 </Project>

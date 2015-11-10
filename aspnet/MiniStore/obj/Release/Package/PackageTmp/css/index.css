@@ -12,7 +12,8 @@ a {
     text-decoration: none;
 }
 
-a:link {
+a:link,
+.glyphicon {
     color: #ff9933;
     text-decoration: none;
 }
@@ -20,7 +21,8 @@ a:link {
 
 /* visited link */
 
-a:visited {
+a:visited,
+.glyphicon {
     color: #ff9933;
     text-decoration: none;
 }
@@ -28,7 +30,8 @@ a:visited {
 
 /* mouse over link */
 
-a:hover {
+a:hover,
+.glyphicon {
     color: #ff9933;
     text-decoration: none;
 }
@@ -40,6 +43,7 @@ a:active {
     color: #b25221;
     text-decoration: none;
 }
+
 
 
 /* Join */
@@ -713,10 +717,10 @@ a:active {
     bottom: 0;
     top: 0;
     margin: auto;
-    height: 40px;
+    height: 49px;
     display: flex;
     align-items: center;
-    /* justify-content:center; */
+    justify-content:center;
 }
 
 .questionBox {
@@ -985,23 +989,24 @@ a.iframe-info.cboxElement {
 }
 
 .search {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
     /* width: 100%; */
-    margin: auto;
+    /* margin: auto; */
 }
 
 .search2 {
     background: none;
     text-align: center;
-    width: 37px;
+    /* width: 37px; */
     border-style: none;
     margin: 0;
     padding: 0;
     color: #ff9933;
-    font-size: 32px;
+    font-size: 30px;
+   
 }
 
 .search2:hover {
@@ -1256,12 +1261,28 @@ a.iframe-info.cboxElement {
 .search-bar {
     background-color: #f93;
     position: absolute;
+    right: 0;
     top: 0;
     left: 0;
+    margin: auto;
     width: 100%;
-    height: 60px;
+    height: 81px;
+    max-width: 700px;
     z-index: 3;
     display: none;
+}
+.SearBoxCenter {
+    width: 63%;
+    /* outline:1px solid #f00; */
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right:0;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .username-icon h4 {
@@ -1699,7 +1720,7 @@ ul.swiper-wrapper li a {
 
 .fixBar .form-control,
 .fixBar.form-control {
-    width: 90%;
+    width: 85%;
     float: left;
     height: 100%;
     display: block;
@@ -2054,13 +2075,14 @@ ul.swiper-wrapper li a {
 
 .search-bar.search,
 .search-bar .search {
-    width: 70%;
+    width: 90%;
     height: 40px;
     float: left;
     opacity: 0.8;
     border-radius: 45px;
     border: 0;
     padding-left: 15px;
+    /* outline: 1px solid; */
 }
 
 .search-bar.search:hover,
@@ -2070,13 +2092,17 @@ ul.swiper-wrapper li a {
 
 .search-bar.cancel,
 .search-bar .cancel {
-    position: relative;
-    right: 1px;
-    top: 7px;
-    padding-top: 10px;
+    /* position: relative; */
+    /* right: 1px; */
+    /* top: 7px; */
+    /* padding-top: 10px; */
     font-size: 30px;
-    font-weight: 700;
+    /* font-weight: 700; */
+    width: 10%;
+    /* outline: 1px solid; */
+    float: right;
     color: #fff;
+    text-align: center;
 }
 
 .finder.finder-app,
@@ -2239,6 +2265,11 @@ ul.swiper-wrapper li a {
 }
 .FrontBot {
     
+display: flex;
+    
+align-items: center;
+    
+justify-content: center;
 }
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
@@ -2388,8 +2419,27 @@ ul.swiper-wrapper li a {
 }
 
 @media only screen and (max-width:480px) {
+    .promana {
+       top:119px;
+    }
+    .buydivmove {
+            top: 119px;
+    }
+    .ListIn {
+        font-size:12px;
+    }
+    .ContentTop {
+            top: 60px;
+    }
+    .SearBoxCenter {
+        width:70%;
+    }
     .FixTitle {
             line-height: 60px;
+    }
+    .search-bar {
+        /* outline:1px solid #f00; */
+        height: 60px;
     }
     #slider ul li {
         width: 337px;
@@ -2411,9 +2461,9 @@ ul.swiper-wrapper li a {
         height: auto;
     }
     .search {
-        position: absolute;
-        top: 0;
-        bottom: -5px;
+        /* position: absolute; */
+        /* top: 0; */
+        /* bottom: -5px; */
     }
     .login-sm {
         display: inline;
@@ -2507,14 +2557,14 @@ ul.swiper-wrapper li a {
         text-align: center;
         /* outline: 1px solid; */
         /* width: 37px; */
-        /* height: 35px; */
+        height: 35px;
         /* position: absolute; */
         /* right: 0; */
         /* top: 0; */
         /* bottom: 0; */
         /* left: 0; */
         /* display: block; */
-        /* font-size: 29px; */
+        /* font-size: 30px; */
         color: #f93;
         border-style: none;
         /* padding: 0; */
@@ -2523,17 +2573,19 @@ ul.swiper-wrapper li a {
         right: 61px;
     }
     .search-bar .cancel {
-        position: absolute;
-        right: 36px;
-        padding-top: 10px;
-        font-size: 30px;
-        font-weight: 700;
+        /* position: absolute; */
+        /* right: 36px; */
+        /* padding-top: 10px; */
+        /* font-size: 26px; */
+        /* font-weight: 700; */
         color: #fff;
+        width: 10%;
+        /* outline: 1px solid; */
     }
     .bar-text {
-        position: absolute;
-        top: -3px;
-        right: 80px;
+        /* position: absolute; */
+        /* top: -3px; */
+        /* right: 80px; */
     }
     .select.focus,
     .select:focus {

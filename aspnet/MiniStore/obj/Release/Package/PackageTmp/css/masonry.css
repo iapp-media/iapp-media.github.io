@@ -486,7 +486,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 480px) {
     #container {
-        margin: 105px auto;
+        margin: 117px auto;
         /* margin: 125px 0 0 0; */
     }
     .item {
