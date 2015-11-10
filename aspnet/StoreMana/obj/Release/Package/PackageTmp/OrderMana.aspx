@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="col-xs-12 allClassification swiper-container">
+  <%--  <div class="col-xs-12 allClassification swiper-container">
         <div class="row swiper-container">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx" style="color: white">出貨管理</a></li>
@@ -12,7 +12,17 @@
                 <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx?hist=1" style="color: white">歷史訂單</a></li>
             </ul>
         </div>
+    </div>--%>
+     <div id="Allswiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="Order_Mana.aspx" style="color: white">出貨管理</a></div>
+                <div class="swiper-slide"><a href="Order_Mana.aspx" style="color: white">訂單管理</a></div>
+                <div class="swiper-slide"><a href="Order_Mana.aspx?hist=1" style="color: white">歷史訂單</a></div>
+            </div>
+        </div>
     </div>
+
     <div class="buydivmove">
         <div class="insidecare col-xs-12">
             <div class="row">
@@ -90,8 +100,8 @@
                                     </asp:HyperLink>
                                 </div>
 
-                                <div id="liSTfooter" class="col-xs-12">
-                                    <div class="row">
+                                <div id="liSTfooter">
+                                    
                                         <div class="col-xs-4 BoxCenter">
                                             <asp:Button ID="BTEND" runat="server" Text="結案" CommandName="CN2" CssClass="btn btn-warning ThreeBTN " Enabled="false" />
                                         </div>
@@ -107,8 +117,9 @@
                                         <div class="col-xs-4 BoxCenter"> 
                                             <asp:Button ID="BT3" runat="server" Text="出貨確認" CommandName="CN5" CssClass="btn btn-warning ThreeBTN"  Enabled="false" /> 
                                         </div>
-                                    </div>
+                                     <div class="clearfix"></div>
                                 </div>
+                               
                             </div>
                         </div>
                     </ItemTemplate>

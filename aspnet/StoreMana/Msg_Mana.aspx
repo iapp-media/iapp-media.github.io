@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div id="content">
+    <div class="buydivmove">
         <div class="col-xs-12 insidecare">
             <div class="row">
                 <div class="col-xs-12 BTbox">

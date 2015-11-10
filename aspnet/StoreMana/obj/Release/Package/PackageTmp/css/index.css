@@ -2,13 +2,49 @@ body {
     background-color: #f5f5f5;
     font-size: small;
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 
 a {
     text-decoration: none;
 }
+/* unvisited link */
+
+a {
+    text-decoration: none;
+}
+
+a:link{
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #ff9933;
+    text-decoration: none;
+}
+
+
+/* selected link */
+
+a:active {
+    color: #b25221;
+    text-decoration: none;
+}
+
+
 /*TEXT*/
 
 .TRC {
@@ -50,7 +86,6 @@ a {
     text-align: center;
     font-size: 150%;
     padding: 10px 12px;
-    /* outline: 1px solid; */
 }
 
 
@@ -152,16 +187,17 @@ a {
     /* outline:1px solid #f00; */
 }
 .CustTop {
-    top:42px !important;
+    /* top:42px !important; */
 }
 .CustBar {
-     outline:1px solid #f00;
+     /* outline:1px solid #f00; */
      display:flex;
      align-items:center;
      justify-content:center;
+     padding: 6px 12px;
 }
 .Custsend input{
-    height:30px;
+    /* height:30px; */
     border:1px solid #aaa;
 }
 
@@ -169,10 +205,6 @@ a {
 
 /* ALLBOX */
 
-#content {
-    position: relative;
-    top: 114px;
-}
 .Boxlist {
     background-color:#cbcdca;
 }
@@ -188,6 +220,7 @@ a {
     padding: 6px 12px;
     font-size: 20px;
     width: 50%;
+    color: #838485;
 }
 
 .BTright {
@@ -240,11 +273,11 @@ a {
 
 .ThreeBTN {
     background-color: #ff9933 !important;
-    text-align: center !important;
+    /* text-align: center !important; */
     color: #fff !important;
     border-radius: 4px;
-    width:90%;
-    font-size: 16px;
+    width: 100%;
+    /* font-size: 16px; */
 }
 
 .AlltexC {
@@ -260,7 +293,7 @@ a {
 }
 
 .ProLPad {
-    border: 1px solid #eee;
+    outline: 1px solid #eee;
     text-align: center;
 }
 .ProLast img {
@@ -304,6 +337,8 @@ a {
     padding: 0;
     padding: 6px 12px;
     /* outline: 1px solid #f00; */
+    /* font-size: 15px; */
+    width: 100%;
 }
 .ProLast {
     /* outline:1px solid #f00; */
@@ -407,10 +442,6 @@ a {
     background-color: #fff;
 }
 
-.BoxCenter {
-    text-align: center;
-    padding: 6px 0px;
-}
 
 .ValueRight {
     float: right;
@@ -521,9 +552,6 @@ a {
     float: right;
 }
 
-#slider img {
-    height: 100%;
-}
 
 #slider ul {
     position: relative;
@@ -691,7 +719,7 @@ a {
     font-size: 22px !important;
     color: #ff9933 !important;
     letter-spacing: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
     display: block;
     margin: 0 auto;
 }
@@ -699,11 +727,7 @@ a {
     padding:0 12px;
 }
 
-.ListTitle {
-    font-size: 16px;
-    padding: 6px 12px;
-    color: #838485;
-}
+
 
 .list-group-itemUI {
     background-color: transparent;
@@ -765,9 +789,9 @@ a {
 
 .ListTitle {
     padding: 6px 12px;
-    background-color: #a1a1a1;
+    background-color: #888;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -812,7 +836,7 @@ a {
 
 .container-fluid {
     height: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .Lgallbar {
@@ -1109,6 +1133,8 @@ a.iframe-info.cboxElement {
     height: 80px;
     background-color: white;
     z-index: 99;
+    max-width: 700px;
+    margin: auto;
 }
 
 .back-top {
@@ -1879,44 +1905,6 @@ a.iframe-info.cboxElement {
 
 /* menu */
 
-.overflowMenu {
-    position: absolute;
-    top: 74px;
-    height: 51px;
-}
-
-.allClassification {
-    height: 50px;
-    position: fixed;
-    z-index: 9;
-    /* position: absolute; */
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100%;
-    transform: scale(1.5);
-    background-color: #b4b5b5;
-}
-
-.allClassification ul {
-    background-color: #b4b4b4;
-}
-
-.allClassification li {
-    color: #fff;
-    border-right: 1px solid #a3a3a3;
-    text-align: center;
-    font-size: 90%;
-    display: table;
-    line-height: 36px;
-}
-
-.swiper-wrapper li:nth-child(3) {
-    border: none;
-}
-
-ul.swiper-wrapper li a {
-    font-size: 16px;
-}
 
 .item button {
     background-color: transparent;
@@ -2037,14 +2025,14 @@ ul.swiper-wrapper li a {
     background-color: #fd9a33 !important;
     border-color: #fd9a33;
     letter-spacing: 5px;
-    font-size: 170% !important;
+    font-size: 20px !important;
     border-radius: 1px;
     text-align: center !important;
     color: #fff !important;
     border-radius: 4px;
     display: block;
-    padding: 9px 12px;
-    font-weight: bold;
+    padding: 10px 12px;
+    /* font-weight: bold; */
 }
 
 .productsinside h1 {
@@ -2205,10 +2193,10 @@ ul.swiper-wrapper li a {
 /* keyframes */
 
 .buydivmove {
-    -webkit-transform: translate3d(0, 0, 0);
-    transition: all 600ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
     position: relative;
-    top: 114px;
+    top: 127px;
+    max-width: 700px;
+    margin: auto;
 }
 
 .movecss {
@@ -2296,39 +2284,6 @@ ul.swiper-wrapper li a {
 }
 
 
-/* menu swipe UI CSS */
-
-.swiper-container {
-    width: 100%;
-    top: 92px;
-    height: 36px;
-    margin: 0;
-}
-
-.swiper-slide {
-    text-align: center;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.swiper-slide:nth-child(2n) {
-    width: 22%;
-}
-
-.swiper-slide:nth-child(3n) {
-    width: 22%;
-}
 
 
 /* menu sandwich UI CSS */
@@ -2361,6 +2316,7 @@ ul.swiper-wrapper li a {
     height: 6px;
     background-color: #ff9933;
     display: block;
+    border-radius: 3px;
 }
 
 .menusandwich span:before {
@@ -2414,7 +2370,7 @@ ul.swiper-wrapper li a {
 .control_next {
     position: absolute;
     top: 40%;
-    z-index: 999;
+    z-index: 3;
     display: block;
     padding: 4% 3%;
     width: auto;
@@ -2495,6 +2451,129 @@ ul.swiper-wrapper li a {
     /* padding:6px 12px; */
     font-size: 15px;
 }
+.Ltitbox {
+    /* outline:1px solid #f00; */
+    /* height:30px; */
+}
+    .Ltitbox .ListName {
+        /* outline:1px solid #f00; */
+        display: table;
+        /* vertical-align:middle; */
+        /* padding: 9px 12px; */
+        line-height: 60px;
+        font-size: 15px;
+        text-align:center;
+        background-color: #888888;
+        color: #fff;
+    }
+    .Ltitbox .ListMail,
+    .Ltitbox .Listphone {
+        font-size: 15px;
+        /* outline:1px solid #f00; */
+        display: table;
+        line-height: 30px;
+        background-color: #888888;
+        color: #fff;
+    }
+.ListNVa {
+    display:table;
+    line-height:60px;
+    font-size:18px;
+}
+.ListMVa,
+.ListpVa {
+     display:table;
+    line-height:30px;
+    text-align:left;
+}
+.Gerentbox {
+    padding:15px;
+}
+.Gerentbox input{
+    border:1px solid #888;
+    border-radius:4px;
+    height:30px;
+}
+.SetAdd {
+    padding-bottom:15px;
+}
+#GerBot {
+    /* outline:1px solid #f00; */
+}
+    #GerBot div:first-child p {
+        line-height: 70px;
+    }
+    #GerBot div:nth-child(odd) {
+        background-color:#fff;
+    }
+    #GerBot div:nth-child(even) {
+       background-color:#e6e6e6;
+    }
+   .BotTitle {
+        text-align:center;
+        font-size:18px;
+        display:table;
+        width: 100%;
+        line-height: 49px;
+        margin: 0;
+        color: #838485;
+    }
+#liSTfooter .BoxCenter {
+    padding:0 10px;
+    margin-top: 10px;
+}
+/* Menu bar */
+#Allswiper .swiper-container {
+    /* margin: 81px auto 0 auto; */
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    background-color: #a3a3a3;
+    height: 48px;
+    top: -2px;
+    margin: 81px auto;
+    max-width: 700px;
+}
+
+.swiper-slide:first-child {
+    border-left: 1px solid #bbb;
+}
+
+.swiper-slide {
+    background-color: #a3a3a3;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    width: 30%;
+    border-right: 1px solid #bbb;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 40%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+}
 
 @media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
@@ -2509,6 +2588,12 @@ ul.swiper-wrapper li a {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
+     #Allswiper .swiper-container {
+        top:60px;
+    }
+    .buydivmove {
+        top:107px;
+    }
     .promana {
         margin-top: 112px;
         height: 500px;
@@ -2659,6 +2744,12 @@ ul.swiper-wrapper li a {
 }
 
 @media only screen and (max-width:480px) {
+    #Allswiper .swiper-container {
+        top:60px;
+    }
+    .buydivmove {
+        top:107px;
+    }
     #slider ul li {
         width: 337px;
         height: 217px;

@@ -2272,19 +2272,17 @@ align-items: center;
 justify-content: center;
 }
 
-@media only screen and (min-width:972px) and (max-width:1100px) {
-    .Lgallbar {
-        width: 85%;
-    }
+/*@media only screen and (min-width:972px) and (max-width:1100px) {
+   
 }
 
 @media only screen and (min-width:768px) and (max-width:972px) {
     .Lgallbar {
-        /* width: 73%; */
+       
     }
-}
+}*/
 
-@media only screen and (min-width:481px) and (max-width:768px) {
+/*@media only screen and (min-width:481px) and (max-width:768px) {
     .promana {
         margin-top: 112px;
         height: 500px;
@@ -2416,7 +2414,17 @@ justify-content: center;
     .se {
         display: none;
     }
-}
+    .search2 {
+        background: none;
+        text-align: center;
+        
+        height: 35px;
+        
+        color: #f93;
+        border-style: none;
+        
+    }
+}*/
 
 @media only screen and (max-width:480px) {
     .promana {
@@ -2555,32 +2563,21 @@ justify-content: center;
     .search2 {
         background: none;
         text-align: center;
-        /* outline: 1px solid; */
-        /* width: 37px; */
+        
         height: 35px;
-        /* position: absolute; */
-        /* right: 0; */
-        /* top: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-        /* display: block; */
-        /* font-size: 30px; */
+        
         color: #f93;
         border-style: none;
-        /* padding: 0; */
+        
     }
     .Allsearch {
         right: 61px;
     }
     .search-bar .cancel {
-        /* position: absolute; */
-        /* right: 36px; */
-        /* padding-top: 10px; */
-        /* font-size: 26px; */
-        /* font-weight: 700; */
+        
         color: #fff;
         width: 10%;
-        /* outline: 1px solid; */
+        
     }
     .bar-text {
         /* position: absolute; */
@@ -2593,19 +2590,16 @@ justify-content: center;
         border-color: transparent;
     }
     .menusandwich {
-        /* margin: 16px 20px; */
+        
     }
     .menuAJAX,
     .proAJAX {
         margin-top: 29px;
     }
-    /*     .allClassification {
-        top: 68px;
-        background-color: #b4b4b4;
-    } */
+    
     .glyphicon-search {
         color: #f93;
-        /* margin-left: -15px; */
+        
     }
     .col-sm-1.col-md-1.portalCreate .row:before,
     .input-group .form-control,

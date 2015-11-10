@@ -719,7 +719,7 @@ a:active {
     font-size: 22px !important;
     color: #ff9933 !important;
     letter-spacing: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
     display: block;
     margin: 0 auto;
 }

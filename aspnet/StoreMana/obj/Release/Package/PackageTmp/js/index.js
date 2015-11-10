@@ -217,29 +217,13 @@ $(document).ready(function() {
     });
 
     // menu swipe
-    $(function() {
-        //Enable swiping...
-        $(".allClassification").swipe({
-            //Generic swipe handler for all directions
-            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-                $('.swiper-wrapper li').each(function(e) {
-                    if ($(this).hasClass('swiper-slide-active')) {
-                        var swipeindex = $(this).index();
-                        $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
-                    }
-                })
-            },
-             threshold: 0
-        });
-    });
-
 
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
+        pagination: '.swiper-pagination',
+        slidesPerView: 2,
         centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 0,
-        grabCursor: true,
         initialSlide: 1
     });
 
