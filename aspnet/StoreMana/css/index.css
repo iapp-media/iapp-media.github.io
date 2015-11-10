@@ -2,20 +2,20 @@ body {
     background-color: #f5f5f5;
     font-size: small;
     font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
-    /* max-width: 500px; */
 }
-
 
 a {
     text-decoration: none;
 }
+
+
 /* unvisited link */
 
 a {
     text-decoration: none;
 }
 
-a:link{
+a:link {
     color: #ff9933;
     text-decoration: none;
 }
@@ -63,6 +63,7 @@ a:active {
 .TBC {
     color: #7d7d7d !important;
 }
+
 .TextBright {
     color: #b4b4b4 !important;
     font-size: 13px !important;
@@ -72,10 +73,8 @@ a:active {
 .TBlack {
     color: #000;
     font-size: 18px;
-    display:inline;
+    display: inline;
 }
-
-
 
 .TRBC {
     color: #7d7d7d;
@@ -88,20 +87,14 @@ a:active {
     padding: 10px 12px;
 }
 
-
 .SinCheck span {
     width: 100%;
-    /* outline: 1px solid #f00; */
     display: block;
-    /* padding:6px 12px; */
 }
-.SinCheck input[type="checkbox"]{
-    float:right;
+
+.SinCheck input[type="checkbox"] {
+    float: right;
     border: 1px solid #7d7d7d;
-}
-.SinCheck label {
-    /* position:absolute; */
-    /* right:35px; */
 }
 
 .QMargin {
@@ -112,101 +105,86 @@ a:active {
     margin: 5px 0;
 }
 
-.SHead {
-    /* width:40px; */
-    /* height:40px; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* outline: 1px solid #f00; */
+.SHead img {
+    width: 100%;
 }
-    .SHead img {
-        width:100%;
-    }
-    .Qubot p:nth-child(2),
-    .IssueUI2 p:nth-child(2) {
-    /* outline: 1px solid#f00; */
+
+.Qubot p:nth-child(2),
+.IssueUI2 p:nth-child(2) {
     margin-left: 11px;
 }
-    .TBlack:nth-child(3) {
-        /* float:right; */
-    }
+
 .Qubot .TRBC:nth-child(4),
 .IssueUI2 .TRBC:nth-child(4) {
-    /* outline:1px solid #f00; */
     margin-left: 50px;
 }
+
 .ODetailTop {
     top: 161px !important;
 }
+
 .SettAdd {
-    height:40px;
-    position:relative;
+    height: 40px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.SettAdd input:nth-child(1){
-   height:100%;
-   width:80%;
+
+.SettAdd input:nth-child(1) {
+    height: 100%;
+    width: 80%;
 }
-    .SettAdd input:nth-child(2) {
-        position:absolute;
-        right:0;
-        height:100%;
-        top:0;
-        width:20%;
-        border-radius:0;
-        border:none;
-        background-color:#b4b4b4;
-        color:#787878;
-        padding: 0;
-        /* font-size: 50px; */
-        /* transform: scale(3.5); */
-        /* line-height: 40px; */
-    }
+
+.SettAdd input:nth-child(2) {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    width: 20%;
+    border-radius: 0;
+    border: none;
+    background-color: #b4b4b4;
+    color: #787878;
+    padding: 0;
+}
+
 .SetTable {
     width: 97%;
     margin: auto;
     padding: 6px 12px;
-    /* outline:1px solid #f00; */
     background-color: #fef1da;
     border-radius: 4px;
 }
-    .SetTable table {
-        table-layout:fixed;
-        width:100%;
-        /* outline:1px solid #f00; */
-    }
-    .SetTable td {
-        width:25%;word-break : break-all; overflow:hidden; 
-    }
-    .SetTable input[type="checkbox"] {
-        border:2px solid #7b7b7b
-    }
-.SinCheck {
-    /* outline:1px solid #f00; */
+
+.SetTable table {
+    table-layout: fixed;
+    width: 100%;
 }
-.CustTop {
-    /* top:42px !important; */
+
+.SetTable td {
+    width: 25%;
+    word-break: break-all;
+    overflow: hidden;
 }
+
+.SetTable input[type="checkbox"] {
+    border: 2px solid #7b7b7b
+}
+
 .CustBar {
-     /* outline:1px solid #f00; */
-     display:flex;
-     align-items:center;
-     justify-content:center;
-     padding: 6px 12px;
-}
-.Custsend input{
-    /* height:30px; */
-    border:1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
 }
 
-
-
-/* ALLBOX */
+.Custsend input {
+    border: 1px solid #aaa;
+}
 
 .Boxlist {
-    background-color:#cbcdca;
+    background-color: #cbcdca;
 }
 
 .BTbox {
@@ -227,6 +205,7 @@ a:active {
     float: right;
     border: 1px solid #aaa;
 }
+
 .Qutop {
     border-bottom: 1px solid #7d7d7d;
     display: flex;
@@ -234,24 +213,28 @@ a:active {
     align-items: center;
     padding: 10px 0;
 }
+
 .Qutop img,
 .Qutop h3 {
-    display:inline-block;
+    display: inline-block;
 }
+
 .Qutop img {
     width: 15%;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
+
 .Qutop h3 {
     width: 70%;
 }
+
 .Qubot {
-    padding:6px 12px;
+    padding: 6px 12px;
 }
 
 .IssueUI1 {
     border-radius: 0 16% 0 0/0 50% 0 0;
-    background-color:#fff;
+    background-color: #fff;
     width: 97%;
 }
 
@@ -273,11 +256,9 @@ a:active {
 
 .ThreeBTN {
     background-color: #ff9933 !important;
-    /* text-align: center !important; */
     color: #fff !important;
     border-radius: 4px;
     width: 100%;
-    /* font-size: 16px; */
 }
 
 .AlltexC {
@@ -296,8 +277,9 @@ a:active {
     outline: 1px solid #eee;
     text-align: center;
 }
+
 .ProLast img {
-    width:15px;
+    width: 15px;
 }
 
 .ProLtit {
@@ -336,12 +318,7 @@ a:active {
 .ProMain {
     padding: 0;
     padding: 6px 12px;
-    /* outline: 1px solid #f00; */
-    /* font-size: 15px; */
     width: 100%;
-}
-.ProLast {
-    /* outline:1px solid #f00; */
 }
 
 .marReset {
@@ -376,19 +353,21 @@ a:active {
 .PadLib {
     padding: 15px;
 }
-    .PadLib .form-control,
-    .PadLib .form-control2 {
-        display:inline-block;
-        background-color:#fff;
-        float: right;
-        width: 65%;
-        border: none;
-    }
-        .PadLib .form-control2 {
-            width:100%;
-            border-radius: 4px;
-            height: 100px;
-        }
+
+.PadLib .form-control,
+.PadLib .form-control2 {
+    display: inline-block;
+    background-color: #fff;
+    float: right;
+    width: 65%;
+    border: none;
+}
+
+.PadLib .form-control2 {
+    width: 100%;
+    border-radius: 4px;
+    height: 100px;
+}
 
 .BorObot {
     border-bottom: 3px solid #ff9933;
@@ -442,7 +421,6 @@ a:active {
     background-color: #fff;
 }
 
-
 .ValueRight {
     float: right;
     background-color: transparent;
@@ -492,9 +470,6 @@ a:active {
 .iapplogo {
     height: 100%;
 }
-
-
-/*Content Top*/
 
 .status input,
 .productNum input,
@@ -551,7 +526,6 @@ a:active {
     border-radius: 4px;
     float: right;
 }
-
 
 #slider ul {
     position: relative;
@@ -674,9 +648,6 @@ a:active {
     height: 100% !important;
 }
 
-
-/*ContentBot*/
-
 .CBtitle {
     padding-top: 10px;
 }
@@ -723,11 +694,10 @@ a:active {
     display: block;
     margin: 0 auto;
 }
+
 .SBuyCar2 {
-    padding:0 12px;
+    padding: 0 12px;
 }
-
-
 
 .list-group-itemUI {
     background-color: transparent;
@@ -820,9 +790,6 @@ a:active {
     border-left: none;
 }
 
-
-/* other */
-
 .navbar-header {
     width: 100px;
 }
@@ -836,7 +803,6 @@ a:active {
 
 .container-fluid {
     height: 100%;
-    /* background-color: #fff; */
 }
 
 .Lgallbar {
@@ -957,9 +923,6 @@ a:active {
     max-height: 200px;
 }
 
-
-/* pay UI */
-
 .detailsbox {
     border-bottom: none;
     background-color: #fff;
@@ -1001,9 +964,7 @@ a:active {
 }
 
 .details {
-    /* height: 119px; */
     box-sizing: border-box;
-    /* padding: 14px 0 0 0; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -1039,7 +1000,6 @@ a:active {
     user-select: none;
 }
 
-
 .listbox {
     outline: 3px solid #ff9933;
     margin-top: 15px;
@@ -1074,9 +1034,6 @@ a:active {
     border-radius: 0 4px 4px 0;
 }
 
-
-/* List Layout */
-
 .titleleftfont {
     font-size: 150%;
     padding: 6px 12px;
@@ -1097,16 +1054,6 @@ a:active {
     box-sizing: border-box;
     border-top: 1px solid #aaa;
 }
-
-
-/* link CSS UI */
-
-.mart10 {
-    margin-top: 10px;
-}
-
-
-/* link CSS UI */
 
 #loading {
     z-index: 100000;
@@ -1749,8 +1696,6 @@ a.iframe-info.cboxElement {
     border-style: #ff9933;
     border-radius: 0px;
     border-bottom: 0px;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
     padding: 8px;
 }
 
@@ -1772,8 +1717,6 @@ a.iframe-info.cboxElement {
     border: 1px solid #7b7b7b;
     border-style: #7b7b7b;
     border-radius: 0px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
     padding: 8px;
 }
 
@@ -1884,7 +1827,12 @@ a.iframe-info.cboxElement {
     font-weight: bold;
 }
 
-.theme .glyphicon-user, .theme .glyphicon-tags, .theme .glyphicon-list-alt, .theme .glyphicon-comment, .theme .glyphicon-cog, .theme .glyphicon-log-out {
+.theme .glyphicon-user,
+.theme .glyphicon-tags,
+.theme .glyphicon-list-alt,
+.theme .glyphicon-comment,
+.theme .glyphicon-cog,
+.theme .glyphicon-log-out {
     color: #7d7d7e;
     font-size: 100%;
     left: 0;
@@ -1901,10 +1849,6 @@ a.iframe-info.cboxElement {
 .dropdown-menu {
     padding: 0;
 }
-
-
-/* menu */
-
 
 .item button {
     background-color: transparent;
@@ -1953,9 +1897,6 @@ a.iframe-info.cboxElement {
     background: url('../img/p2-like02.png') left top no-repeat;
 }
 
-
-/* AJAX bottom */
-
 .productcare {
     width: 100%;
     position: absolute;
@@ -1979,7 +1920,6 @@ a.iframe-info.cboxElement {
 .insidecare {
     border-radius: 2px;
     border: 4px solid #ff9933;
-    /* background-color: #aaa; */
 }
 
 .insidecare ul {
@@ -2032,7 +1972,6 @@ a.iframe-info.cboxElement {
     border-radius: 4px;
     display: block;
     padding: 10px 12px;
-    /* font-weight: bold; */
 }
 
 .productsinside h1 {
@@ -2077,16 +2016,13 @@ a.iframe-info.cboxElement {
     text-align: left;
 }
 
-
-/* click img CSS */
-
 .Addbutton {
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 80px;
     height: 80px;
 }
@@ -2176,9 +2112,6 @@ a.iframe-info.cboxElement {
     left: 0;
 }
 
-
-/* Manager CSS */
-
 .promana {
     height: 500px;
     max-width: 700px;
@@ -2189,43 +2122,12 @@ a.iframe-info.cboxElement {
     margin: auto;
 }
 
-
-/* keyframes */
-
 .buydivmove {
     position: relative;
     top: 127px;
     max-width: 700px;
     margin: auto;
 }
-
-.movecss {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transition: .35s;
-}
-
-.UpfadeIn {
-    -webkit-transform: translate3d(0, 100%, 0);
-    opacity: 1;
-}
-
-.fadeInRight {
-    opacity: 1;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    transition: .35s;
-}
-
-.fadeInRight_Double {
-    -webkit-transform: translate3d(-200%, 0, 0);
-    transform: translate3d(-200%, 0, 0);
-}
-
-
-/* modify CSS*/
-
-
-/* D3 UI */
 
 .Clienth1 {
     font-family: Montserrat;
@@ -2282,8 +2184,6 @@ a.iframe-info.cboxElement {
     margin-bottom: 0;
     margin-right: 15px;
 }
-
-
 
 
 /* menu sandwich UI CSS */
@@ -2413,118 +2313,99 @@ a.iframe-info.cboxElement {
     font-size: 109%;
 }
 
-.col2 {
-    float: left;
-    width: 24%;
-    box-sizing: border-box;
-    font-size: 117%;
-    padding: 6px 12px;
-}
-
-.row1 {
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid #aaa;
-}
-
-.row1:first-child {
-    outline: 1px solid #000;
-}
 .Menuicon {
     width: 30px;
     position: absolute;
     left: 20px;
 }
+
 .MenuNum {
-    position:absolute;
+    position: absolute;
     right: 8px;
-    border-radius:50%;
-    color:#fff;
+    border-radius: 50%;
+    color: #fff;
     width: 30px;
     height: 30px;
     line-height: 30px;
-    /* text-align: center; */
-    background-color:#fe5a29;
+    background-color: #fe5a29;
     letter-spacing: 0;
-    display:inline-block;
-    /* padding:6px 12px; */
+    display: inline-block;
     font-size: 15px;
 }
-.Ltitbox {
-    /* outline:1px solid #f00; */
-    /* height:30px; */
+
+.Ltitbox .ListName {
+    display: table;
+    line-height: 60px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #888888;
+    color: #fff;
 }
-    .Ltitbox .ListName {
-        /* outline:1px solid #f00; */
-        display: table;
-        /* vertical-align:middle; */
-        /* padding: 9px 12px; */
-        line-height: 60px;
-        font-size: 15px;
-        text-align:center;
-        background-color: #888888;
-        color: #fff;
-    }
-    .Ltitbox .ListMail,
-    .Ltitbox .Listphone {
-        font-size: 15px;
-        /* outline:1px solid #f00; */
-        display: table;
-        line-height: 30px;
-        background-color: #888888;
-        color: #fff;
-    }
+
+.Ltitbox .ListMail,
+.Ltitbox .Listphone {
+    font-size: 15px;
+    display: table;
+    line-height: 30px;
+    background-color: #888888;
+    color: #fff;
+}
+
 .ListNVa {
-    display:table;
-    line-height:60px;
-    font-size:18px;
+    display: table;
+    line-height: 60px;
+    font-size: 18px;
 }
+
 .ListMVa,
 .ListpVa {
-     display:table;
-    line-height:30px;
-    text-align:left;
+    display: table;
+    line-height: 30px;
+    text-align: left;
 }
+
 .Gerentbox {
-    padding:15px;
+    padding: 15px;
 }
-.Gerentbox input{
-    border:1px solid #888;
-    border-radius:4px;
-    height:30px;
+
+.Gerentbox input {
+    border: 1px solid #888;
+    border-radius: 4px;
+    height: 30px;
 }
+
 .SetAdd {
-    padding-bottom:15px;
+    padding-bottom: 15px;
 }
-#GerBot {
-    /* outline:1px solid #f00; */
+
+#GerBot div:first-child p {
+    line-height: 70px;
 }
-    #GerBot div:first-child p {
-        line-height: 70px;
-    }
-    #GerBot div:nth-child(odd) {
-        background-color:#fff;
-    }
-    #GerBot div:nth-child(even) {
-       background-color:#e6e6e6;
-    }
-   .BotTitle {
-        text-align:center;
-        font-size:18px;
-        display:table;
-        width: 100%;
-        line-height: 49px;
-        margin: 0;
-        color: #838485;
-    }
+
+#GerBot div:nth-child(odd) {
+    background-color: #fff;
+}
+
+#GerBot div:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.BotTitle {
+    text-align: center;
+    font-size: 18px;
+    display: table;
+    width: 100%;
+    line-height: 49px;
+    margin: 0;
+    color: #838485;
+}
+
 #liSTfooter .BoxCenter {
-    padding:0 10px;
+    padding: 0 10px;
     margin-top: 10px;
 }
-/* Menu bar */
+
 #Allswiper .swiper-container {
-    /* margin: 81px auto 0 auto; */
     position: fixed;
     top: 80px;
     left: 0;
@@ -2575,7 +2456,8 @@ a.iframe-info.cboxElement {
     width: 20%;
 }
 
-@media only screen and (min-width:972px) and (max-width:1100px) {
+
+/*@media only screen and (min-width:972px) and (max-width:1100px) {
     .Lgallbar {
         width: 85%;
     }
@@ -2588,11 +2470,11 @@ a.iframe-info.cboxElement {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
-     #Allswiper .swiper-container {
-        top:60px;
+    #Allswiper .swiper-container {
+        top: 60px;
     }
     .buydivmove {
-        top:107px;
+        top: 107px;
     }
     .promana {
         margin-top: 112px;
@@ -2741,14 +2623,14 @@ a.iframe-info.cboxElement {
         height: 250px;
         line-height: 0;
     }
-}
+}*/
 
 @media only screen and (max-width:480px) {
     #Allswiper .swiper-container {
-        top:60px;
+        top: 60px;
     }
     .buydivmove {
-        top:107px;
+        top: 107px;
     }
     #slider ul li {
         width: 337px;
@@ -2944,12 +2826,11 @@ a.iframe-info.cboxElement {
         margin-left: -15px;
     }
 }
-@media screen and (orientation: portrait) {  
-    /*針對縱向 css去撰寫*/
-}
+
+@media screen and (orientation: portrait) {}
+
 @media screen and (orientation: landscape) {
-      /*針對橫向 css*去撰寫*/
     .scrollable-menu {
         max-height: 250px;
     }
-          }
+}
