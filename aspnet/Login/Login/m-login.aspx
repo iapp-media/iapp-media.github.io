@@ -37,7 +37,9 @@
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+          
+                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+           
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
@@ -63,10 +65,11 @@
                     <a href="javascript:history.back();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                 </div>
                 <div class="send" id="login">
-                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
+                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="LinkButton1_Click" />
+                    <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 
-                    </asp:LinkButton>
-                </div>
+                    </asp:LinkButton>--%>
+                </div> 
             </div>
 
             <div class="footer">
@@ -81,7 +84,7 @@
         <!-- mobile會員註冊畫面 -->
         <div class="register-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/ministorelogo2.png">
+                <img class="iapplogo" src="img/iapplogo.png">
             </div>
             <div class="content">
                 <div class="login">
@@ -102,9 +105,9 @@
                     </asp:LinkButton>
                 </div>
             </div>
-            <div class="footer">
-                <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
-                </asp:LinkButton>
+            <div class="footer"> 
+                    <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
+                    </asp:LinkButton>
             </div>
         </div>
     </form>
@@ -137,6 +140,7 @@
             }, { scope: 'publish_actions' });
 
         }
+
     </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/m-login.js"></script>
