@@ -17,7 +17,7 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                
+
                 if (Request.QueryString["SN"] == null)
                 {
                     Response.Redirect("Default.aspx?SN=OfficACC");
@@ -38,7 +38,7 @@ namespace MiniStore
                     return;
                 }
 
- 
+
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
 
 
@@ -47,18 +47,17 @@ namespace MiniStore
                  " <li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"].ToString() + "'>訂單查詢</a></li>";
 
 
-                L_Cate.Text = "<ul class=\"swiper-wrapper\"> ";
 
                 Main.ParaClear();
-               // Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
 
-                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"].ToString() + "' )");
-                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"].ToString() + "' )");
+                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
+                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID=@SN )");
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
-                    L_Cate.Text += "  <li class=\"swiper-slide col-xs-4\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></li>";
+                    L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
                 }
-                L_Cate.Text += " </ul>";
+
 
             }
         }
