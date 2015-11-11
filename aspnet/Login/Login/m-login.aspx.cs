@@ -41,9 +41,7 @@ namespace Login
         }
 
         void AfterLogin()
-        {
-       
-
+        { 
             string ThemeFolder = "basic";
             string TS = "";
             string TID = "2";
@@ -90,8 +88,9 @@ namespace Login
                             }
                         }
                     } 
-                    Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
-                    
+                    //Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+                    Response.Write("<Script>window.open('" + Comm.URL + HttpUtility.UrlDecode(Request.QueryString["done"]) + "','_self')</Script>"); 
+
                     //Response.Write("<Script>window.open('" + Comm.URL + HttpUtility.UrlDecode(Request.QueryString["done"]) + "','_self')</Script>");
                     //string tmpurl = HttpUtility.UrlDecode(Request.QueryString["done"]).ToString();
                     //Response.Write("<Script>window.open('" + Comm.URL + tmpurl + "','_blank')</Script>");

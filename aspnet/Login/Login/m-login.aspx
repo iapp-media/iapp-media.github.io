@@ -58,17 +58,16 @@
                     <div class="bar"></div>
                     <asp:TextBox ID="accBox" class="admin" autocomplete="on" runat="server" placeholder="電子郵件"></asp:TextBox>
                     <asp:TextBox ID="pwBox" class="password" runat="server" placeholder="密碼"></asp:TextBox>
-                    <input type="submit" id="login-submit" style="display: none;" />
+                  <%--  <input type="submit" id="login-submit" style="display: none;" />--%>
 
                 </div>
                 <div class="login-back">
                     <a href="javascript:history.back();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                 </div>
-                <div class="send" id="login">
-                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="LinkButton1_Click" />
-                    <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
+                <div class="send" > 
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 
-                    </asp:LinkButton>--%>
+                    </asp:LinkButton>
                 </div> 
             </div>
 
