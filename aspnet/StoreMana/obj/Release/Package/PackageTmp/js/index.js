@@ -95,12 +95,12 @@ $(document).ready(function() {
             $('.cut').show();
             $('.rotate-btn').show();
         });
-        $('.cancel').click(function () {
+        $('.cancelimgfun').click(function () {
             $(".upload-img").hide();
             $(".pages").show();
         });
 
-        $('.cancel').click(function () {
+        $('.cancelimgfun').click(function () {
             $(".upload-img").hide();
             $(".pages").show();
         }); 
