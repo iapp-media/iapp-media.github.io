@@ -14,7 +14,7 @@
       <publishTime>11/11/2015 13:54:50</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/11/2015 13:54:52</publishTime>
+      <publishTime>11/11/2015 14:25:49</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -338,10 +338,10 @@
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>11/11/2015 13:35:23</publishTime>
+      <publishTime>11/11/2015 14:20:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/11/2015 14:12:31</publishTime>
+      <publishTime>11/11/2015 14:25:49</publishTime>
     </File>
   </ItemGroup>
 </Project>
