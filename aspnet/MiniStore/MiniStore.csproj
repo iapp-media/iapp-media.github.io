@@ -108,6 +108,7 @@
     <Content Include="img\setting.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
+    <Content Include="img\web-transpage-img.jpg" />
     <Content Include="Join.aspx" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />

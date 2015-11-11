@@ -64,6 +64,7 @@ a:active {
     z-index: 999;
     width: 100%;
     height: 100%;
+    top: 0;
     background-color: #fff;
     display: none;
 }
@@ -113,7 +114,7 @@ a:active {
 .JoinBranchBox .sendcareButtomeEnd {
     width: 90%;
     margin-left: -45%;
-    margin-top: 1px;
+    margin-top: 180px;
 }
 
 .JoinBox .LOGO img,
@@ -505,7 +506,7 @@ a:active {
 .control_next {
     position: absolute;
     top: 40%;
-    z-index: 999;
+    z-index: 1;
     display: block;
     width: auto;
     height: auto;
@@ -1313,8 +1314,10 @@ a.iframe-info.cboxElement {
 
 .productcare {
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     z-index: 1;
+    height: 100%;
+    background-color: #fff;
 }
 
 .productcareEnd,
@@ -1478,13 +1481,15 @@ a.iframe-info.cboxElement {
 }
 
 .promana {
-    height: 500px;
+    /* height: 500px; */
     max-width: 700px;
     position: absolute;
+    height: 100%;
     top: 138px;
     left: 0;
     right: 0;
     margin: auto;
+    background-color: #fff;
 }
 
 .movecss {

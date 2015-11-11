@@ -181,6 +181,7 @@ a:active {
     align-items: center;
     justify-content: center;
     padding: 6px 12px;
+    background-color: #fff;
 }
 
 .Custsend input {
@@ -301,7 +302,7 @@ a:active {
 .ProMaBOX {
     background-color: #cccccc;
     padding: 4px 0;
-    margin-bottom: 6px;
+    /* margin-bottom: 6px; */
     display: flex;
     justify-content: center;
     align-items: center;
