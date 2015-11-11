@@ -128,7 +128,7 @@ a:active {
 .JoinBranchBox .sendcareButtomeEnd {
     width: 60%;
     margin-left: -30%;
-    margin-top: 210px;
+    margin-top: 262px;
 }
 .JoinBranchBox .JBBG1,
 .JoinBranchBox .JBBG2 {
@@ -137,10 +137,10 @@ a:active {
     margin-left: -30%;
 }
 .JoinBranchBox .JBBG1 {
-    margin-top: -231px;
+    margin-top: -205px;
 }
 .JoinBranchBox .JBBG2 {
-    margin-top: -42px;
+    margin-top: 15px;
 }
 
 .JoinBox .LOGO img,
@@ -2396,9 +2396,13 @@ a.iframe-info.cboxElement {
         width:90%;
         margin-left: -45%;
     }
+    .JoinBranchBox .JBBG2 {
+    margin-top: -17px;
+}
     .JoinBranchBox .sendcareButtomeEnd {
         width:90%;
         margin-left:-45%;
+        margin-top: 203px;
     }
 }
 
