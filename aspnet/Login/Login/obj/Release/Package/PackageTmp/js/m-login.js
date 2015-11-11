@@ -13,16 +13,16 @@
   //   }, 300);
   //   $(".theme").hide();
   // });
-  $(".login-back").click(function() {
+  //$(".login-back").click(function() {
 
     // hide();
-  });
-  $("#login").click(function() {
-      $('#login-submit').click();
-  });
-  $("#register").click(function() {
-    $('#register-submit').click();
-  });
+  //});
+  //$("#login").click(function() {
+  //    $('#login-submit').click();
+  //});
+  //$("#register").click(function() {
+  //  $('#register-submit').click();
+  //});
 })();
 
 function validateEmail(sEmail) {
@@ -65,5 +65,3 @@ function checkRegister() {
   $('#register-email').focus();
   return false;
 }
-
-

@@ -37,7 +37,9 @@
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+          
+                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+           
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
@@ -56,17 +58,17 @@
                     <div class="bar"></div>
                     <asp:TextBox ID="accBox" class="admin" autocomplete="on" runat="server" placeholder="電子郵件"></asp:TextBox>
                     <asp:TextBox ID="pwBox" class="password" runat="server" placeholder="密碼"></asp:TextBox>
-                    <input type="submit" id="login-submit" style="display: none;" />
+                  <%--  <input type="submit" id="login-submit" style="display: none;" />--%>
 
                 </div>
                 <div class="login-back">
                     <a href="javascript:history.back();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                 </div>
-                <div class="send" id="login">
+                <div class="send" > 
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 
                     </asp:LinkButton>
-                </div>
+                </div> 
             </div>
 
             <div class="footer">
@@ -81,7 +83,7 @@
         <!-- mobile會員註冊畫面 -->
         <div class="register-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/ministorelogo2.png">
+                <img class="iapplogo" src="img/iapplogo.png">
             </div>
             <div class="content">
                 <div class="login">
@@ -102,9 +104,9 @@
                     </asp:LinkButton>
                 </div>
             </div>
-            <div class="footer">
-                <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
-                </asp:LinkButton>
+            <div class="footer"> 
+                    <asp:LinkButton ID="LB3" runat="server" OnClick="LB3_Click" CssClass="hidden"> 
+                    </asp:LinkButton>
             </div>
         </div>
     </form>
@@ -137,7 +139,6 @@
             }, { scope: 'publish_actions' });
 
         }
-        alert("previous url is: " + window.history.previous.href);
 
     </script>
     <script src="js/bootstrap.min.js"></script>

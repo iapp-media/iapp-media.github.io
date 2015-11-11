@@ -118,12 +118,12 @@ a:hover {
 .content {
     height: calc(100% - 113px);
     min-height: 300px;
-    padding: 5% 5% 0 5%;
+    padding: 5% 5% 5% 5%;
     /*width: 100%;*/
-
     background-color: #fff;
-    /*position: absolute;*/
-    
+    /* margin-top: 63px; */
+    /* position: absolute; */
+    overflow: scroll;
 }
 .content .login{
     margin: 5px 0 5px 0;
@@ -134,8 +134,8 @@ a:hover {
 	}*/
 
 .login-mobile .fb {
-    /*position: absolute;*/
-    margin-bottom: 5%;
+    /* position: absolute; */
+    margin: 39px 0;
     /*height: 10%;*/
 }
 
@@ -178,7 +178,7 @@ a:hover {
     font-size: 1.2em;
     width: 100%;
     border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+   
     border-radius: 0px;
     border-bottom: 0px;
     border-top-left-radius: 2px;
@@ -191,7 +191,7 @@ a:hover {
     font-size: 1.2em;
     width: 100%;
     border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+    
     border-radius: 0px;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -365,7 +365,7 @@ a:hover {
     font-size: 1.2em;
     width: 100%;
     border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+   
     border-radius: 0px;
     border-bottom: 0px;
     border-top-left-radius: 2px;
@@ -378,7 +378,7 @@ a:hover {
     font-size: 1.2em;
     width: 100%;
     border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+   
     border-radius: 0px;
     border-bottom: 0px;
     padding: 8px;
@@ -389,7 +389,7 @@ a:hover {
     font-size: 1.2em;
     width: 100%;
     border: 1px solid #7b7b7b;
-    border-style: #7b7b7b;
+   
     border-radius: 0px;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
