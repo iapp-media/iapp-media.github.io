@@ -65,10 +65,11 @@
         <%-- joinBranch --%>
         <div class="JoinBranchBox">
             <div class="JBBG">
-                <img src="img/img-2.jpg" alt="Alternate Text" />
+                <img src="img/pcimg-2.png" alt="Alternate Text" />
             </div>
             <div>
-                <asp:Button ID="Button1" runat="server" Text="加入" CssClass="btn btn-warning sendcareButtomeEnd" /></div>
+                <asp:Button ID="Button1" runat="server" Text="加入" CssClass="btn btn-warning sendcareButtomeEnd" />
+            </div>
         </div>
         <%-- joinBranch end --%>
         <div id="loading">iApp 載入中</div>
@@ -216,7 +217,8 @@
                     if (feedback == "join") {
                         $('.JoinBox').fadeIn();
                     } else {
-                        window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
+                        window.open('http://220.132.67.201:88/StoreMana/Default.aspx', '_self')
+                      //  window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
                     }
                 },
                 error: function () {

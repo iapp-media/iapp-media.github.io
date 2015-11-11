@@ -17,10 +17,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/11/2015 11:00:42</publishTime>
+      <publishTime>11/11/2015 13:54:50</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/11/2015 11:00:43</publishTime>
+      <publishTime>11/11/2015 13:55:25</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -236,7 +236,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/11/2015 11:00:43</publishTime>
+      <publishTime>11/11/2015 13:55:26</publishTime>
     </File>
   </ItemGroup>
 </Project>
