@@ -72,11 +72,9 @@
             </div>
 
             <div class="footer">
-                <p>還不是會員嗎？>></p>
+                <p>還不是會員嗎？⇒</p>
                 <div class="join">
-                    <p>
-                        <a class="" href="">加入我們</a>
-                    </p>
+                    加入我們
                 </div>
             </div>
         </div>
