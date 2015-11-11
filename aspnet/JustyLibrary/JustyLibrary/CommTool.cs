@@ -138,6 +138,15 @@ public class CommTool: System.Web.UI.Page
         }
         else { return -1; }
     }
+    public int Wedding_ID()
+    {
+        if (HttpContext.Current.Request.Cookies["iapp_wid"] != null)
+        {
+            //是不是要再延長cookie的期間??
+            return Cint2(HttpContext.Current.Request.Cookies["iapp_wid"].Value);
+        }
+        else { return -1; }
+    }
     public string User_Name() { 
         if (HttpContext.Current.Request.Cookies["iapp_uname"] != null)
         {

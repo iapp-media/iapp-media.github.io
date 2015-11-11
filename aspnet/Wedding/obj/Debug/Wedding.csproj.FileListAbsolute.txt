@@ -6,3 +6,11 @@ D:\DataYi\AppWeb\Wedding\obj\Debug\Wedding.pdb
 D:\DataYi\AppWeb\Wedding\bin\JustyLibrary.dll
 D:\DataYi\AppWeb\Wedding\bin\ThoughtWorks.QRCode.dll
 D:\DataYi\AppWeb\Wedding\bin\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\obj\Debug\Wedding.csprojResolveAssemblyReference.cache
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\obj\Debug\Wedding.dll
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\bin\Wedding.dll
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\bin\Wedding.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\bin\JustyLibrary.dll
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\bin\ThoughtWorks.QRCode.dll
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\bin\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Wedding\obj\Debug\Wedding.pdb
