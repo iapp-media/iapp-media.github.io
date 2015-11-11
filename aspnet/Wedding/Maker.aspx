@@ -40,28 +40,65 @@
     <link rel="stylesheet" href="css/jquery.flipster.css" />
     <link rel="stylesheet" href="css/demo.css" />
     <link rel="stylesheet" href="css/flipsternavtabs.css" />
+
+    <link href="css/mobileEditor.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
+        <!--上傳剪裁頁面-->
+        <div class="upload-img">
+            <div class="top">
+                <img src="img/ministorelogo.png" class="toplogo" align="left" />
+                <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
+            </div>
+            <div class="upload-page">
+                <label for="inputImage" class="selectBTN">
+                    <div class="selectBTNin">
+                        選擇照片
+                    </div>
+                </label>
+                <div class="rotate">
+                    <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
+                </div>
+                <div class="preview-container" style="display: none;">
+                    <img id="preview" src="" />
+                </div>
+                <div class="img-container">
+                    <img src="" alt="支持圖片上傳格式JPG,PNG" />
+                </div>
+                <p class="word">(移動及縮放進行照片裁切)</p>
+                <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
+                <input id="picnum" value="" class="hide" />
+                <input type="file" accept="image/*" id="inputImage" style="display: none;" />
+                <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
+                    截圖
+                </button>
+                <button onclick="compress()" type="button" class="compress">
+                    確認
+                </button>
+                <input id="Tbase64" value="" style="display: none;" />
+            </div>
+        </div>
         <!-- 首頁三明治 -->
-        <!-- <img src="img/wedding-bg.jpg" class="bg_img" alt=""> -->
+        <!-- <img src="img/wedding-bg.jpg" class="bg_img" alt="">-->
         <div id="loading">iApp 載入中</div>
         <div class="allMove" id="allMove">
-            <a href="#" class="sandwich"></a>
+            <a href="javascript:void(0)" class="sandwich"></a>
             <ul class="menu" id="menu">
                 <li>
                     <a href="javascript:void(0)" class="liColor moveIndex">
                         <img src="img/p7-pic.png" alt="">
                     </a>
                 </li>
-                <li><a href="index.html">創建喜帖</a></li>
+                <li><a>創建喜帖</a></li>
                 <li class="colorboxlist1"><a>赴宴名冊</a></li>
                 <li class="colorboxlist2"><a>朋友的祝福</a></li>
                 <li><a>婚禮 iApp</a></li>
                 <li><a>婚禮 微創作</a></li>
                 <li>
-                    <img src="img/qr-code-harley.jpg" alt="" class="QRcode">
-                    <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.net/harley/">
+                  <%--  <img src="img/qr-code-harley.jpg" alt="" class="QRcode">--%>
+                    <asp:Literal ID="menu_QR" runat="server"></asp:Literal>
+                    <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.net/harley/"> 
                         <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
                     </a>
                 </li>
@@ -71,43 +108,39 @@
         <!-- Page1 -->
         <div class="page page-1-1 page-current">
             <div class="time animated fadeInDown">
-                <input type="text" placeholder="民國104年">
-                <input type="text" placeholder="國曆3/15">
-                <input type="text" placeholder="農曆1/25">
+                <asp:TextBox ID="TB_calender1" runat="server" placeholder="民國104年"></asp:TextBox>
+                <asp:TextBox ID="TB_calender2" runat="server" placeholder="國曆3/15"></asp:TextBox>
+                <asp:TextBox ID="TB_calender3" runat="server" placeholder="農曆1/25"></asp:TextBox>
             </div>
             <div class="page1Title">
-                <input type="text" placeholder="葉大雄">
+                <asp:TextBox ID="TB_man" runat="server" placeholder="葉大雄"></asp:TextBox>
                 <div id="heart"></div>
-                <input type="text" placeholder="源靜香">
+                <asp:TextBox ID="TB_woman" runat="server" placeholder="源靜香"></asp:TextBox>
             </div>
             <div class="Protagonist animated fadeInDown">
-                <img src="img/p1-photo.jpg" alt="">
-                <div class="Uploadimg takeimage1">
-                    <label for="inputImage" onclick="setCurrent('01',640,960)">
-                        <img src="img/uploadicon.png">
-                    </label>
-                </div>
+                <asp:Literal ID="Lp01" runat="server"></asp:Literal> 
             </div>
             <div class="inside animated fadeInDown">
                 <div>
                     <label for="">席設 :</label>
-                    <input type="text" placeholder="台北君悅酒店">
+                    <asp:TextBox ID="TB_plece" runat="server"></asp:TextBox>
+
                 </div>
                 <div>
                     <label for="">地點 :</label>
-                    <input type="text" placeholder="台北市地球村">
+                    <asp:TextBox ID="TB_Addr" runat="server"></asp:TextBox>
                     <img src="img/p1-location.png" class="location" alt="">
                 </div>
                 <div>
                     <label for="">電話 :</label>
-                    <input type="number" placeholder="(02)123456789">
+                    <asp:TextBox ID="TB_Tel" runat="server"></asp:TextBox>
                     <img src="img/p1-callphone.png" class="callphone" alt="">
                 </div>
                 <div>
                     <label for="">時間 :</label>
-                    <input type="text" placeholder="中午十二時入場">
+                    <asp:TextBox ID="TB_Time" runat="server"></asp:TextBox>
                 </div>
-                <button class="carewed">我要赴宴</button>
+                <button class="carewed" disabled="disabled">我要赴宴</button>
             </div>
         </div>
         <!-- Page1 end -->
@@ -115,17 +148,11 @@
         <div class="page page-2-1  hide">
             <ul class="Page2index">
                 <li class="animated fadeInDown">
-                    <input type="text" placeholder="一個意外  讓我們  相遇">
-                    <input type="text" placeholder="一場大雨  讓我們  相知">
+                    <asp:TextBox ID="TB_p2Memo" runat="server" TextMode="MultiLine" placeholder="一個意外  讓我們  相遇      一場大雨  讓我們  相知"></asp:TextBox> 
                 </li>
             </ul>
             <div class="page2pic">
-                <img src="img/p2-photo2.jpg" alt="">
-                <div class="Uploadimg takeimage1">
-                    <label for="inputImage" onclick="setCurrent('01',640,960)">
-                        <img src="img/uploadicon.png">
-                    </label>
-                </div>
+                <asp:Literal ID="Lp02" runat="server"></asp:Literal> 
             </div>
             <div class="page2pic2">
                 <img src="img/p2-photo1.jpg" alt="">
@@ -137,56 +164,58 @@
         <div class="page page-3-1 hide">
             <ul class="Page3index">
                 <li class="animated fadeInDown">
-                    <input type="text" placeholder="習慣了妳的聲音、妳的氣味、妳的存在...">
-                    <input type="text" placeholder="連思念都成了習慣">
+                    <asp:TextBox ID="TB_p3Memo1" runat="server" TextMode="MultiLine" placeholder="習慣了妳的聲音、妳的氣味、妳的存在...連思念都成了習慣"></asp:TextBox>
+                    
                 </li>
             </ul>
             <ul class="display-animation Page3Insidepic">
-                <li>
-                    <img src="img/p3-photo1.jpg" alt="">
+                  <asp:Literal ID="Lp03" runat="server"></asp:Literal> 
+               <%-- <li>
+                    <img id='p03' src="img/p3-photo1.jpg" alt="">
                     <div class="Uploadimg takeimage1">
-                        <label for="inputImage" onclick="setCurrent('01',640,960)">
-                            <img src="img/uploadicon.png">
+                        <label for="inputImage" onclick="setCurrent('03',5,275,275)">
+                            <img src="img/uploadicon.png" class="clickslider">
                         </label>
                     </div>
                 </li>
                 <li>
-                    <img src="img/p3-photo2.jpg" alt="">
+                    <img id='p04' src="img/p3-photo2.jpg" alt="">
                     <div class="Uploadimg takeimage1">
-                        <label for="inputImage" onclick="setCurrent('01',640,960)">
-                            <img src="img/uploadicon.png">
+                        <label for="inputImage" onclick="setCurrent('04',5,276,317)">
+                            <img src="img/uploadicon.png" class="clickslider">
                         </label>
                     </div>
                 </li>
                 <li>
-                    <img src="img/p3-photo3.jpg" alt="">
+                    <img id='p05' src="img/p3-photo3.jpg" alt="">
                     <div class="Uploadimg takeimage1">
-                        <label for="inputImage" onclick="setCurrent('01',640,960)">
-                            <img src="img/uploadicon.png">
+                        <label for="inputImage" onclick="setCurrent('05',5,300,200)">
+                            <img src="img/uploadicon.png" class="clickslider">
                         </label>
                     </div>
                 </li>
                 <li>
-                    <img src="img/p3-photo4.jpg" alt="">
+                    <img id='p06' src="img/p3-photo4.jpg" alt="">
                     <div class="Uploadimg takeimage1">
-                        <label for="inputImage" onclick="setCurrent('01',640,960)">
-                            <img src="img/uploadicon.png">
+                        <label for="inputImage" onclick="setCurrent('06',5,300,200)">
+                            <img src="img/uploadicon.png" class="clickslider">
                         </label>
                     </div>
                 </li>
                 <li>
-                    <img src="img/p3-photo5.jpg" alt="">
+                    <img id='p07' src="img/p3-photo5.jpg" alt="">
                     <div class="Uploadimg takeimage1">
-                        <label for="inputImage" onclick="setCurrent('01',640,960)">
-                            <img src="img/uploadicon.png">
+                        <label for="inputImage" onclick="setCurrent('07',5,300,200)">
+                            <img src="img/uploadicon.png" class="clickslider">
                         </label>
                     </div>
-                </li>
+                </li>--%>
             </ul>
             <ul class="Page3indexBot">
                 <li class="animated fadeInDown">
-                    <input type="text" placeholder="終於  我牽起你的手">
-                    <input type="text" placeholder="那一天起  就決定再也不放開">
+                     <asp:TextBox ID="TB_p3Memo2" runat="server" TextMode="MultiLine" placeholder="終於  我牽起你的手 那一天起  就決定再也不放開"></asp:TextBox>
+               
+
                 </li>
             </ul>
             <img class="up moveIconUp" src="img/icon_up.png" />
@@ -195,11 +224,11 @@
         <!-- Page4 -->
         <div class="page page-4-1 hide">
             <ul class="Page4Top">
-                <li class="animated fadeInDown">
-                    <input type="text" value="妳使我的生命得到豐富">
-                    <input type="text" value="妳照亮了前方的迷霧">
-                    <input type="text" value="牽著妳的手我更清楚">
-                    <input type="text" value="相知與相惜">
+                <li class="animated fadeInDown">　
+                    <input type="text" value="妳使我的生命得到豐富" disabled="disabled">
+                    <input type="text" value="妳照亮了前方的迷霧" disabled="disabled" >
+                    <input type="text" value="牽著妳的手我更清楚" disabled="disabled">
+                    <input type="text" value="相知與相惜" disabled="disabled">
                 </li>
             </ul>
             <ul class="weddinghand">
@@ -212,8 +241,8 @@
             </ul>
             <ul class="Page4Bot">
                 <li class="animated fadeInDown">
-                    <input type="text" value="『我們結婚吧』">
-                    <input type="text" value="Yes I do">
+                    <input type="text" value="『我們結婚吧』" disabled="disabled">
+                    <input type="text" value="Yes I do" disabled="disabled">
                 </li>
             </ul>
             <img class="up moveIconUp" src="img/icon_up.png" />
@@ -222,41 +251,67 @@
         <!-- Page5 -->
         <div class="page page-5-1 flipster hide">
             <ul>
-                <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                 <asp:Literal ID="Lp05" runat="server"></asp:Literal> 
+<%--                <li>
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p08' src="img/p5-photo1.jpg" alt="">
                         <div class="Uploadimg takeimage1">
-                            <label for="inputImage" onclick="setCurrent('01',640,960)">
-                                <img src="img/uploadicon.png">
+                            <label for="inputImage" onclick="setCurrent('08',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
                             </label>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p09' src="img/p5-photo1.jpg" alt="">
+                        <div class="Uploadimg takeimage1">
+                            <label for="inputImage" onclick="setCurrent('09',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
+                            </label>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p10' src="img/p5-photo1.jpg" alt="">
+                        <div class="Uploadimg takeimage1">
+                            <label for="inputImage" onclick="setCurrent('10',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
+                            </label>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p11' src="img/p5-photo1.jpg" alt="">
+                        <div class="Uploadimg takeimage1">
+                            <label for="inputImage" onclick="setCurrent('11',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
+                            </label>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p12' src="img/p5-photo1.jpg" alt="">
+                        <div class="Uploadimg takeimage1">
+                            <label for="inputImage" onclick="setCurrent('12',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
+                            </label>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Button Block">
-                        <img src="img/p5-photo1.jpg" alt="">
+                    <a href="javascript:void(0)" class="Button Block">
+                        <img id='p13' src="img/p5-photo1.jpg" alt="">
+                        <div class="Uploadimg takeimage1">
+                            <label for="inputImage" onclick="setCurrent('13',5,435,650)">
+                                <img src="img/uploadicon.png" class="clickslider">
+                            </label>
+                        </div>
                     </a>
-                </li>
+                </li>--%>
             </ul>
             <img class="up moveIconUp" src="img/icon_up.png" />
         </div>
@@ -265,27 +320,28 @@
         <div class="page page-6-1 hide">
             <div class="wrap">
                 <img class="up animated moveIconUp" src="img/icon_up.png" />
+                <%--                <asp:Literal ID="L_map" runat="server"></asp:Literal>--%>
                 <iframe class="map" name="iframemap" src="map.html"></iframe>
                 <a href="javascript: return false;" onclick="iframemap.window.location.reload()" class="button">
                     <img src="img/reflash.png" border="0" onclick="this.src=='http://tkining.bitbucket.org/iwedding/img/reflash.png'?this.src='http://tkining.bitbucket.org/iwedding/img/reflash.png':this.src='http://tkining.bitbucket.org/iwedding/img/reflash2.png'"></a>
             </div>
             <div class="google_adress">
                 <label for="">席設地址 :</label>
-                <textarea cols="3" placeholder="台北市地球村"></textarea>
+                <asp:TextBox ID="TB_map_addr" runat="server" TextMode="MultiLine" placeholder="台北市地球村"></asp:TextBox>
             </div>
             <h1>交通資訊</h1>
             <div class="Carmargin">
-                <label for="">開車 :</label>
-                <textarea rows="2" cols="50" placeholder="1.下圓山(松江路)交流道，循建國高架橋南行， 於信義路出口下，轉信義路東行，再左轉基隆路可抵達君悅大飯店 2.北二高台北聯絡道，延辛亥路右轉基隆路行約3公里可抵達"></textarea>
+              <%--  <label for="">開車 :</label>--%>
+                <asp:TextBox ID="TB_Traffic_info" runat="server" TextMode="MultiLine"></asp:TextBox>
             </div>
-            <div class="Carmargin">
+<%--            <div class="Carmargin">
                 <label for="">捷運 :</label>
                 <textarea rows="2" cols="50" placeholder="搭台北聯營公車20.202.207.258.282.284.信義 幹線等路，在世貿下車可抵達君悅大飯店。"></textarea>
             </div>
             <div class="Carmargin">
                 <label for="">公車 :</label>
                 <textarea rows="2" cols="50" placeholder="搭台北聯營公車20.202.207.258.282.284.信義 幹線等路，在世貿下車可抵達君悅大飯店。"></textarea>
-            </div>
+            </div>--%>
         </div>
         <!-- Page6 end -->
         <!-- Page7 -->
@@ -293,16 +349,19 @@
             <ul class="page7pic">
                 <li>
                     <img src="img/p7-pic.png" alt=""></li>
-                <li>
-                    <img src="img/p7-qr.jpg" alt=""></li>
+               
+                    <asp:Literal ID="L_QR" runat="server"></asp:Literal>
+                <%-- <li>    <img src="img/p7-qr.jpg" alt="">  </li>--%> 
                 <li>
                     <a href="m-set.html">
-                        <img src="img/p7-publish.png" alt=""></a>
+                        <%--    <img src="img/p7-publish.png" alt="">--%>
+                        <asp:ImageButton ID="BT_Release" runat="server" ImageUrl="img/p7-publish.png" OnClick="BT_Release_Click" OnClientClick="SendData()" />
+                    </a>
                 </li>
             </ul>
         </div>
         <!-- Page7 end -->
- 
+
         <!-- list -->
 
         <div id="mobile" class="friendtable">
@@ -367,20 +426,29 @@
             </div>
             <textarea rows="4" cols="50" id="SeeMemo">你好恭喜發財</textarea>
         </div>
-
+        <asp:Label ID="Linfo" runat="server" Text="Label" CssClass="hidden"></asp:Label>
     </form>
     <!-- list end -->
     <!-- Src JS -->
+
     <script src="js/zepto.min.js"></script>
     <script src="js/touch.js"></script>
     <script src="js/index.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <%--  <script src="js/jquery-2.1.4.min.js"></script>--%>
+    <script src="js/jquery-1.8.0.min.js"></script>
     <script src="js/snap.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/jquery.flipster.js"></script>
+
+
+    <script src="js/exif.js"></script>
+    <script src="js/JIC.js"></script>
+    <script src="js/cropper.js"></script>
+
+    <script src="js/mobileEditor-new.js"></script>
 
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -405,6 +473,21 @@
             //alert(this.id.replace("blessck", "mo")); 
             document.getElementById("SeeMemo").innerHTML = document.getElementById(this.id.replace("blessck", "mo")).innerHTML;
         });
+
+        function SendData() {
+            $.ajax({
+                type: "POST",
+                url: "makeHtml.aspx?i=" + document.getElementById("Linfo").innerHTML,
+                cache: false,
+                success: function (imgurl) {
+                    alert(imgurl);
+                },
+                error: function (ss) {
+                    alert("makeHtml.aspx?i=" + document.getElementById("Linfo").innerHTML);
+                }
+            });
+        }
+
     </script>
 </body>
 </html>

@@ -29,10 +29,10 @@ namespace Wedding
                     Main.ParaAdd("@Tel", Request.QueryString["T"].ToString(), System.Data.SqlDbType.Char);
                     Main.ParaAdd("@Memo", Request.QueryString["M"].ToString(), System.Data.SqlDbType.NVarChar);
 
-                    str = "if not exists (Select 1 from Wedding_bless where User_App_ID=@AppID and Tel=@Tel) " +
-                              "Insert into Wedding_bless (User_App_ID, Name, Tel, Memo, Creat_Date) values " +
+                    str = "if not exists (Select 1 from Wedding_bless where WInfo_ID=@AppID and Tel=@Tel) " +
+                              "Insert into Wedding_bless (WInfo_ID, Name, Tel, Memo, Creat_Date) values " +
                               " (@AppID, @Name,@Tel,@Memo,getdate()) else " +
-                    "Update Wedding_bless set Memo=@Memo where User_App_ID=@AppID and Tel=@Tel";
+                    "Update Wedding_bless set Memo=@Memo where WInfo_ID=@AppID and Tel=@Tel";
 
                     Main.NonQuery(str);
 

@@ -26,16 +26,13 @@ namespace Wedding
 
             if (Main.Scalar("select 1 from Couple  where IDNu='" + T_No.Text + "'") == "1")
             {
-               int c= Main.NonQuery("Update Couple set User_id='" + Comm.User_ID() + "' where IDNu='" + T_No.Text + "'");
-               if (c > 0)
-               {
-                   Response.Write("<Script>window.open('Maker.aspx','_self')</Script>");
-               }
+                int c = Main.NonQuery("Update Couple set User_id='" + Comm.User_ID() + "' where IDNu='" + T_No.Text + "'");
+                if (c > 0)
+                { 
+                    Comm.SaveCookie("iapp_wid", Main.Scalar("Select IDNo from Couple where User_id='" + Comm.User_ID() + "'"));
+                    Response.Write("<Script>window.open('Maker.aspx','_self')</Script>");
+                }
             }
-            
-
-
-
         }
     }
 }

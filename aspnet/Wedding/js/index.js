@@ -278,3 +278,45 @@
 
 
 })();
+
+$(document).ready(function () {
+    // window.scrollTo(0, 10);
+    $(".clickslider").click(function () {
+        $('.preview-container').hide();
+        $('.img-container').show();
+        $(".upload-img").show();
+        $(".pages").hide();
+        $('.compress').hide();
+        $('.cut').show();
+        $('.cut').attr("disabled", true);
+        $('.rotate-btn').hide();
+
+    });
+    $(".cut").click(function () {
+        $(".cut").hide();
+        $(".compress").show();
+
+    });
+    $(".compress").click(function () {
+        $(".upload-img").hide();
+        $(".pages").show();
+
+    });
+    $('#inputImage').change(function () {
+        $('.preview-container').hide();
+        $('.img-container').show();
+        $('.compress').hide();
+        $('.cut').show();
+        $('.rotate-btn').show();
+    });
+    $('.cancel').click(function () {
+        $(".upload-img").hide();
+        $(".pages").show();
+    });
+
+    $('.cancel').click(function () {
+        $(".upload-img").hide();
+        $(".pages").show();
+    });
+});
+

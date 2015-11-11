@@ -16,7 +16,7 @@ namespace Wedding
         {
             if (!IsPostBack)
             {
-               // if (Comm.CheckMobile() == false) { Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx")); }
+                // if (Comm.CheckMobile() == false) { Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx")); }
             }
         }
 
@@ -33,22 +33,27 @@ namespace Wedding
             }
             else
             {
-                Response.Write("<script>alert('帳號或密碼錯誤')</script>");
+                ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('帳號或密碼錯誤')</script>");
             }
 
-            Response.End();
+            // Response.End();
         }
 
         void AfterLogin()
         {
-
-            if (Main.Scalar("Select 1 from Couple where User_id='" + Comm.User_ID() + "'")=="1")
+           
+            string WID = "";
+            WID = Main.Scalar("Select IDNo from Couple where User_id='" + Comm.User_ID() + "'");
+            if (WID != "")
             {
-                Response.Write("<Script>window.open('Maker.aspx','_self')</Script>");
+                Comm.SaveCookie("iapp_wid", WID);
+               // Response.Write("<Script>window.open('Maker.aspx','_self')</Script>");
+              
+                Response.Redirect("Maker.aspx");
             }
             else
-            { 
-                 Response.Write("<Script>window.open('verify.aspx','_self')</Script>");
+            {
+                Response.Write("<Script>window.open('verify.aspx','_self')</Script>");
             }
             Response.End();
         }
