@@ -80,12 +80,21 @@ a:active {
 
 .JoinBox .LOGO,
 .JoinBox .Sendbox,
-.JoinBranchBox .sendcareButtomeEnd {
+.JoinBranchBox .sendcareButtomeEnd,
+.JoinBranchBox .JBBG1,
+.JoinBranchBox .JBBG2 {
     /* outline:1px solid #f00; */
     position: absolute;
     top: 50%;
     left: 50%;
     height: auto;
+}
+.JoinBranchBox .JBBGlogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height:auto;
+    width:100px;
 }
 
 .JoinBox .LOGO {
@@ -117,13 +126,28 @@ a:active {
 }
 
 .JoinBranchBox .sendcareButtomeEnd {
-    width: 90%;
-    margin-left: -45%;
-    margin-top: 180px;
+    width: 60%;
+    margin-left: -30%;
+    margin-top: 210px;
+}
+.JoinBranchBox .JBBG1,
+.JoinBranchBox .JBBG2 {
+    /* outline:1px solid; */
+    width: 60%;
+    margin-left: -30%;
+}
+.JoinBranchBox .JBBG1 {
+    margin-top: -231px;
+}
+.JoinBranchBox .JBBG2 {
+    margin-top: -42px;
 }
 
 .JoinBox .LOGO img,
-.JBBG img {
+.JBBG img,
+.JBBG1 img,
+.JBBG2 img,
+.JBBGlogo img {
     width: 100%;
 }
 
@@ -2367,6 +2391,14 @@ a.iframe-info.cboxElement {
     }
     .product {
         width: 100%;
+    }
+    .JoinBranchBox .JBBG1, .JoinBranchBox .JBBG2 {
+        width:90%;
+        margin-left: -45%;
+    }
+    .JoinBranchBox .sendcareButtomeEnd {
+        width:90%;
+        margin-left:-45%;
     }
 }
 
