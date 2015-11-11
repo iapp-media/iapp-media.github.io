@@ -86,7 +86,7 @@
                     </div>
                 </div> 
                 <!-- Web 搜尋bar -->
-                <div class="col-xs-1 col-sm-5 col-md-8">
+                <div class="col-sm-8 col-xs-1 BarSear">
                     <div class="input-group search">
                         <!-- 搜尋框 -->
                         <%-- <input type="text" class="form-control " placeholder="Search iApp...">--%>
@@ -107,12 +107,9 @@
                 <!-- 登入／註冊 -->
                 <asp:Literal ID="LLogin" runat="server"></asp:Literal>
  
-                <div class="col-sm-2 col-md-1 se">
-                    <div class="separate"></div>
-                </div>
                 
                 <!-- 微創作 -->
-                <div class="col-sm-1 col-md-1">
+                <div class="col-sm-1 col-md-1 PortalCreat">
                     <asp:Literal ID="LDoIt" runat="server"></asp:Literal>
                 </div>
 

@@ -62,7 +62,7 @@
                                 <%--  <asp:Literal ID="MSG_COUNT" runat="server"></asp:Literal>--%>
                             </div>
 
-
+                            <div class="col-xs-12 AllBGC">
                             <div class="col-xs-9 col-sm-6 MsgBox">
                                 <div class="row">
                                     <div class="col-xs-4">
@@ -77,6 +77,7 @@
                                     </div>
                                 </div>
                             </div>
+                                </div>
                         </div>
                     </div>
                 </li>

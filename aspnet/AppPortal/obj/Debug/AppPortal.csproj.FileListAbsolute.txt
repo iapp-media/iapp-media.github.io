@@ -6,3 +6,11 @@ D:\Root\AppWeb\AppPortal\bin\JustyLibrary.pdb
 D:\Root\AppWeb\AppPortal\obj\Debug\AppPortal.dll
 D:\Root\AppWeb\AppPortal\obj\Debug\AppPortal.pdb
 D:\Root\AppWeb\AppPortal\bin\ThoughtWorks.QRCode.dll
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\bin\AppPortal.dll
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\bin\AppPortal.pdb
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\bin\JustyLibrary.dll
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\bin\ThoughtWorks.QRCode.dll
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\bin\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\obj\Debug\AppPortal.csprojResolveAssemblyReference.cache
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\obj\Debug\AppPortal.dll
+C:\GitHub\iapp-media.github.io\aspnet\AppPortal\obj\Debug\AppPortal.pdb

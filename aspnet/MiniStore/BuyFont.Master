@@ -216,7 +216,8 @@
                     if (feedback == "join") {
                         $('.JoinBox').fadeIn();
                     } else {
-                        window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
+                        window.open('http://220.132.67.201:88/StoreMana/Default.aspx', '_self')
+                      //  window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
                     }
                 },
                 error: function () {
