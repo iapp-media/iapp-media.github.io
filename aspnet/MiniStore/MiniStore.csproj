@@ -113,6 +113,7 @@
     <Content Include="img\uploadicon.png" />
     <Content Include="img\web-transpage-img.jpg" />
     <Content Include="Join.aspx" />
+    <Content Include="JoinAs.aspx" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
@@ -184,6 +185,9 @@
     </Compile>
     <Compile Include="Join.aspx.designer.cs">
       <DependentUpon>Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JoinAs.aspx.cs">
+      <DependentUpon>JoinAs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order_history.aspx.cs">
       <DependentUpon>Order_history.aspx</DependentUpon>
