@@ -762,12 +762,22 @@ a:active {
     text-align: right;
 }
 
-.ListTitle {
-    padding: 6px 12px;
+.ListTitle1,
+.ListTitle2 {
+    /* padding: 6px 12px; */
     background-color: #888;
     color: #fff;
     font-size: 15px;
     text-align: center;
+    outline: 1px solid #999;
+    display: table;
+    
+}
+.ListTitle1 {
+    line-height:60px;
+}
+.ListTitle2 {
+    line-height:30px;
 }
 
 .Prntop {
@@ -2459,6 +2469,10 @@ a.iframe-info.cboxElement {
 
 .swiper-slide:nth-child(3n) {
     width: 20%;
+}
+.ListBG {
+        background-color: #888;
+        padding: 6px 12px;
 }
 
 @media only screen and (max-width:480px) {

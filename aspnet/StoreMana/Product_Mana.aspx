@@ -33,11 +33,20 @@
                             <asp:Repeater ID="RP1" runat="server">
                                 <HeaderTemplate>
                                     <div class="ProMLtit col-xs-12">
-                                        <div class="col-xs-12 ListTitle">商品名稱</div>
-                                        <div class="col-xs-3 ListTitle">&nbsp;</div>
-                                        <div class="col-xs-4 ListTitle">價格</div>
-                                        <div class="col-xs-4 ListTitle">建檔日期</div>
-                                        <div class="col-xs-1 ListTitle">&nbsp;</div>
+                                        <div class="ListBG">
+                                            <div class="col-xs-4 ListTitle1">
+                                                <div class="row">
+                                                商品圖片</div></div>
+                                            <div class="col-xs-8">
+                                                <div class="row">
+                                                <div class="col-xs-12 ListTitle2">商品名稱</div>
+                                                <div class="col-xs-6 ListTitle2">價格</div>
+                                                <div class="col-xs-6 ListTitle2">建檔日期</div>
+                                                <div class="clearfix"></div>
+                                                    </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
                                     </div>
                                 </HeaderTemplate>
                                 <ItemTemplate>
