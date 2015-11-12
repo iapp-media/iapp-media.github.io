@@ -84,7 +84,7 @@ namespace MiniStore
                 }
                 if (SID != "")
                 {
-                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "")));
+                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
                 }
             }
         }
