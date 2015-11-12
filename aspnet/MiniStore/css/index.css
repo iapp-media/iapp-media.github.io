@@ -69,13 +69,13 @@ a:active {
     right: 0;
     margin: auto;
     max-width: 700px;
-    margin: #fff;
     /* margin: auto; */
     display: none;
 }
 
-.JoinSBox {
-    outline: 1px solid #f00;
+.JoinBox {
+    /* outline: 1px solid #f00; */
+    background-color:#fff;
 }
 
 .JoinBox .LOGO,
