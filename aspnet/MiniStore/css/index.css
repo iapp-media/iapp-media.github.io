@@ -205,12 +205,17 @@ a:active {
     display: inline-block;
     padding: 6px 12px;
     font-size: 20px;
-    width: 50%;
+    /* width: 20%; */
+}
+
+.BTleft {
+    width: 30%;
 }
 
 .BTright {
     float: right;
     border: 1px solid #aaa;
+    width: 70%;
 }
 
 .ProMLtit {
