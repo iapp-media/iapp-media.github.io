@@ -108,7 +108,8 @@
                             </a>
                         </li>
                         <li class="SandTitle">開微店</li>
-                        <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>
+                        <li  ><a href="JoinAs.aspx">打造自己的微店</a></li>
+<%--                        <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>--%>
                         <li onclick="JoinBranch(1)"><a href="javascrip:void(0)">加入行動分店</a></li>
 
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>

@@ -15,20 +15,20 @@ namespace MiniStore
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            { 
+            {
                 string SID = "";
                 SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
                 if (SID != "")
-                { 
+                {
                     int c = Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
                     int a = Comm.SaveCookie("iapp_sid", SID, 365);
 
-                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx"))); 
+                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
                 }
                 else
                 {
                     //Response.Write("join");
-                } 
+                }
             }
         }
         protected void BT_SNAME_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace MiniStore
                 string SID = "";
                 SID = Main.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
                 if (SID != "")
-                { 
+                {
                     Main.ParaClear();
                     Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
                     Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
@@ -58,6 +58,6 @@ namespace MiniStore
                 }
             }
         }
-
+         
     }
 }

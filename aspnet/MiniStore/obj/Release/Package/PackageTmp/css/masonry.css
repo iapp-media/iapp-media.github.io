@@ -48,12 +48,11 @@ body {
 .item {
     background: #fff;
     border-radius: 5px;
-    width: 198px;
+    width: 210px;
     float: left;
     padding-bottom: 5px;
     margin: 5px;
-    box-shadow: 3px -3px 6px -3px hsla(0, 0%, 0%, .25);
-    /*overflow:*/
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 
 .container-fluid {
@@ -94,7 +93,10 @@ body {
 }
 
 #container {
-    margin: 153px auto;
+    /* margin-top: 150px; */
+    /* padding: 50%; */
+    margin: 143px auto;
+    /* width: 99% !important; */
     border-radius: 5px;
     clear: both;
     -webkit-border-radius: 5px;
@@ -149,7 +151,7 @@ body {
 }
 
 
-/* checkboxÃ¨Â¨Â­Ã¥Â®Å¡ */
+/* checkboxÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ */
 
 .list {
     float: left;

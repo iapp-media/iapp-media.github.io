@@ -158,7 +158,7 @@ a:active {
     width: 100%;
     background-color: #a3a3a3;
     height: 48px;
-    top: -2px;
+    /* top: 0px; */
 }
 
 .swiper-slide:first-child {
@@ -1640,6 +1640,8 @@ a.iframe-info.cboxElement {
     /* outline: 1px solid #f00; */
     max-width: 700px;
     margin: auto;
+    background-color: #fff;
+    padding: 1px;
 }
 
 .TOC,
@@ -2396,6 +2398,7 @@ a.iframe-info.cboxElement {
     }
     .product {
         width: 100%;
+        background-color: #fff;
     }
     .JoinBranchBox .JBBG1, .JoinBranchBox .JBBG2 {
         width:90%;
@@ -2412,6 +2415,11 @@ a.iframe-info.cboxElement {
         margin-left:-45%;
         margin-top: 203px;
     }
+    .swiper-container {
+
+top: -2px;
+
+}
 
 }
 

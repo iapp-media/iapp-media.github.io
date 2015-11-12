@@ -2415,6 +2415,11 @@ a.iframe-info.cboxElement {
         margin-left:-45%;
         margin-top: 203px;
     }
+    .swiper-container {
+
+top: -2px;
+
+}
 
 }
 

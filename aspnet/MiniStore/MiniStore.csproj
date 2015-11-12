@@ -188,6 +188,10 @@
     </Compile>
     <Compile Include="JoinAs.aspx.cs">
       <DependentUpon>JoinAs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JoinAs.aspx.designer.cs">
+      <DependentUpon>JoinAs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order_history.aspx.cs">
       <DependentUpon>Order_history.aspx</DependentUpon>
