@@ -67,13 +67,13 @@ namespace Login
                         if (Request.QueryString["s"] == "1")
                         {
                             JDB Main2 = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
-                            if (Main2.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") != "1")
+                            if (Main2.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") == "")
                             {
                                 Main2.ParaClear();
                                 Main2.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
-                                Main2.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
-                                Main2.NonQuery("Insert into Store (User_ID, Store_Name,Creat_Date) values " +
-                                 " (@UID, @Name,getdate())   ");
+                                //Main2.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
+                                Main2.NonQuery("Insert into Store (User_ID,Creat_Date) values " +
+                                 " (@UID,getdate())   ");
                             }
 
                             string SID = "";
