@@ -57,7 +57,7 @@
                     <p>會員帳號登入</p>
                     <div class="bar"></div>
                     <asp:TextBox ID="accBox" class="admin" autocomplete="on" runat="server" placeholder="電子郵件"></asp:TextBox>
-                    <asp:TextBox ID="pwBox" class="password" runat="server" placeholder="密碼"></asp:TextBox>
+                    <asp:TextBox ID="pwBox" class="password" runat="server" placeholder="密碼" TextMode="Password"></asp:TextBox>
                   <%--  <input type="submit" id="login-submit" style="display: none;" />--%>
 
                 </div>
@@ -72,9 +72,11 @@
             </div>
 
             <div class="footer">
-                <p>還不是會員嗎？⇒</p>
+                <p>還不是會員嗎？>></p>
                 <div class="join">
-                    加入我們
+                    <p>
+                        <a class="" href="">加入我們</a>
+                    </p>
                 </div>
             </div>
         </div>

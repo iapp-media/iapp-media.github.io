@@ -34,10 +34,11 @@ namespace Login
             }
             else
             {
-                Response.Write("<script>alert('帳號或密碼錯誤')</script>");
+                ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('帳號或密碼錯誤')</script>");
+                //Response.Write("<script>alert('帳號或密碼錯誤')</script>");
             }
 
-            Response.End();
+           // Response.End();
         }
 
         void AfterLogin()
@@ -111,17 +112,24 @@ namespace Login
             Main.ParaAdd("@Pw", Pw.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@User_Name", User_Name.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@User_Type", 1, System.Data.SqlDbType.Int);
-            string sql = "Insert into Users(Account,Password,User_Name,User_Type) Values (@Account,@Pw,@User_Name,@User_Type)";
-            if (Main.NonQuery(sql) > 0) {
-                Response.Write("<script>alert('註冊成功');</script>");
-                accBox.Text = User_Name.Text;
-                pwBox.Text = Pw.Text;
-                DoLogin();
-                //Response.Write("<script>alert('寫入成功');location.href='login.aspx'</script>");
-                //Response.End();
-            } else {
-                Response.Write("<script>alert('寫入失敗')</script>");
-            } 
+            if (Main.Scalar("select 1 from Users where Account=@Account ") != "")
+            {
+                ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('此帳號已註冊過')</script>");
+            }
+            else {
+                string sql = "Insert into Users(Account,Password,User_Name,User_Type) Values (@Account,@Pw,@User_Name,@User_Type)";
+                if (Main.NonQuery(sql) > 0)
+                {
+                    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('註冊成功')</script>");
+                    accBox.Text = Email.Text;
+                    pwBox.Text = Pw.Text;
+                    DoLogin(); 
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('寫入失敗')</script>"); 
+                }
+            }
         }
 
         protected void LB3_Click(object sender, EventArgs e)
