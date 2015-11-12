@@ -96,8 +96,7 @@
         </li>
     </ul>
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script>
-
+    <script> 
         function cint2(obj) {
             if ($.isNumeric(obj)) {
                 return parseInt(obj);
@@ -105,7 +104,18 @@
                 return 0;
             }
         }
-
+        function CountPrice(K1) {
+            $.ajax({
+                type: 'GET',
+                url: 'ShopCarBaby.aspx?K0=3&K3=' + getQValue("SN") + '',
+                success: function (msg) { 
+                    $("#ContentPlaceHolder1_TB_Paysum").val(msg);
+                },
+                error: function (msg) {
+                    alert(msg)
+                }
+            });
+        }
         function putDELE(obj, K0, K1, K2) {
             if (confirm('確定刪除這項商品？')) {
                 $.ajax({
@@ -115,6 +125,7 @@
                         if (msg != "suc") { return false; }
                         document.getElementById("ContentPlaceHolder1_LCount").innerHTML = cint2(document.getElementById("ContentPlaceHolder1_LCount").innerHTML) - 1
                         $("#ContentPlaceHolder1_RP1_DivDetails_" + obj).hide();
+                        CountPrice(K1)
                     },
                     error: function (msg) {
                         alert(msg)
@@ -153,7 +164,7 @@
           
             var a1 = cint2($("#ContentPlaceHolder1_RP1_Qty_" + num).val().replace(/\,/g, ""));
             if (a1 == 1) {
-                alert('不能再少了');
+             //   alert('不能再少了');
             } else {
                 $.ajax({
                     type: 'GET',
@@ -180,6 +191,26 @@
             }
             $("#ContentPlaceHolder1_TB_Paysum").val(tmpA);
         }
-
+        function getQValue(varname) {
+            var url = window.location.href;
+            var qparts = url.split("?");
+            if (qparts.length <= 1) {
+                return "";
+            } else {
+                var query = qparts[1];
+                var vars = query.split("&amp;");
+                var value = "";
+                for (i = 0; i < vars.length; i++) {
+                    var parts = vars[i].split("=");
+                    if (parts[0] == varname) {
+                        value = parts[1];
+                        break;
+                    }
+                }
+                value = unescape(value);
+                value.replace(/\+/g, " ").replace("#", "");
+                return value;
+            }
+        }
     </script>
 </asp:Content>

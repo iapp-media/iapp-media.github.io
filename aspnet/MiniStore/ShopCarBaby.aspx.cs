@@ -67,6 +67,21 @@ namespace StoreMana
                         }
 
                         break;
+                    case "3":  //計算總金額&回傳
+                        if (Request.QueryString["K3"] != null)
+                        {
+                            Main.ParaClear();
+                            Main.ParaAdd("@SNID", Request.QueryString["K3"].ToString(), System.Data.SqlDbType.NVarChar);
+                            Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                            int c = Main.Cint2(Main.Scalar("select sum(a.qty*b.Price) from ( " +
+"select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+") a inner join Product b on a.Product_ID=b.IDNo"));
+
+                            Main.WriteLog("price=" + c.ToString() + "");
+                            Response.Write(c);
+                        }
+
+                        break;
                 }
 
                 //Response.Write("success");
