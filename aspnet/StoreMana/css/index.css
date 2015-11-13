@@ -202,12 +202,14 @@ a:active {
     display: inline-block;
     padding: 6px 12px;
     font-size: 20px;
-    width: 50%;
     color: #838485;
 }
-
+.BTleft {
+     width:35%;
+}
 .BTright {
     float: right;
+    width:65%;
     border: 1px solid #aaa;
 }
 

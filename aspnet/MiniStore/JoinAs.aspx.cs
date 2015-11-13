@@ -23,7 +23,7 @@ namespace MiniStore
                     int c = Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
                     int a = Comm.SaveCookie("iapp_sid", SID, 365);
 
-                    //Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
+                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
                 }
                 else
                 {
