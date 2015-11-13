@@ -303,7 +303,7 @@ a:active {
 
 .ProMaBOX {
     background-color: #cccccc;
-    padding: 4px 0;
+    padding: 6px 12px;
     /* margin-bottom: 6px; */
     display: flex;
     justify-content: center;
@@ -324,8 +324,8 @@ a:active {
 
 .ProMain {
     padding: 0;
-    padding: 6px 12px;
-    width: 100%;
+    /* padding: 6px 12px; */
+    /* width: 100%; */
 }
 
 .marReset {
@@ -773,7 +773,6 @@ a:active {
     text-align: center;
     outline: 1px solid #999;
     display: table;
-    
 }
 .ListTitle1 {
     line-height:60px;
@@ -2452,6 +2451,10 @@ a.iframe-info.cboxElement {
 .ListBG {
         background-color: #888;
         padding: 6px 12px;
+}
+.ProMain,.SHead ,.ProLast {
+    /* outline:1px solid #f00; */
+    text-align: center;
 }
 
 @media only screen and (max-width:480px) {

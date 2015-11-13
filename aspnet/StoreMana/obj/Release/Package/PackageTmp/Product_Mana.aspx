@@ -34,7 +34,7 @@
                                 <HeaderTemplate>
                                     <div class="ProMLtit col-xs-12">
                                         <div class="ListBG">
-                                            <div class="col-xs-4 ListTitle1">
+                                            <div class="col-xs-3 ListTitle1">
                                                 <div class="row">
                                                     商品圖片
                                                 </div>
