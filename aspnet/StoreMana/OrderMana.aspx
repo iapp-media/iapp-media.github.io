@@ -63,12 +63,15 @@
                     <HeaderTemplate>
                         <div>
                             <div class="ProMLtit col-xs-12">
-                                <div class="col-xs-4 BoxCenter ListTitle">訂單編號</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">買家</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">訂單狀態</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">下單時間</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">付款方式</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">轉帳資訊</div>
+                                <div class="ListBG">
+                                    <div class="col-xs-4  ListTitle2">訂單編號</div>
+                                    <div class="col-xs-4  ListTitle2">買家</div>
+                                    <div class="col-xs-4  ListTitle2">訂單狀態</div>
+                                    <div class="col-xs-4  ListTitle2">下單時間</div>
+                                    <div class="col-xs-4  ListTitle2">付款方式</div>
+                                    <div class="col-xs-4  ListTitle2">轉帳資訊</div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </HeaderTemplate>

@@ -42,15 +42,18 @@
                     <HeaderTemplate>
                         <div>
                             <div class="ProMLtit col-xs-12">
-                                <div class="col-xs-4 BoxCenter ListTitle">名次</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">姓名</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">點擊次數</div>
-                                <div class="col-xs-12 BoxCenter ListTitle">產品名稱</div>
+                                <div class="ListBG">
+                                    <div class="col-xs-4 ListTitle2">名次</div>
+                                    <div class="col-xs-4 ListTitle2">姓名</div>
+                                    <div class="col-xs-4 ListTitle2">點擊次數</div>
+                                    <div class="col-xs-12 ListTitle2">產品名稱</div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </HeaderTemplate>
                     <ItemTemplate>
-                       
+
                         <div class="ProMaBOX col-xs-12 ToBoPad">
                             <div class="ProMain col-xs-12">
                                 <div class="col-xs-4 ProLPad AlltexC BorTopno BorLeftpno TRBC">
@@ -78,10 +81,13 @@
                     <HeaderTemplate>
                         <div>
                             <div class="ProMLtit col-xs-12">
-                                <div class="col-xs-4 BoxCenter ListTitle">名次</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">姓名</div>
-                                <div class="col-xs-4 BoxCenter ListTitle">介紹人次</div>
-                                <div class="col-xs-12 BoxCenter ListTitle">產品名稱</div>
+                                <div class="ListBG">
+                                    <div class="col-xs-4 ListTitle2">名次</div>
+                                    <div class="col-xs-4 ListTitle2">姓名</div>
+                                    <div class="col-xs-4 ListTitle2">介紹人次</div>
+                                    <div class="col-xs-12 ListTitle2">產品名稱</div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </HeaderTemplate>
@@ -112,11 +118,13 @@
                     <HeaderTemplate>
                         <div>
                             <div class="ProMLtit col-xs-12">
-                                <div class="Ltitbox">
-                                    <div class="col-xs-4 ListName">姓名</div>
-                                    <div class="col-xs-8 ListMail">Email</div>
-                                    <div class="col-xs-8 Listphone">電話</div>
-                                    <div class="clearfix"></div>
+                                <div class="ListBG">
+                                    <div class="Ltitbox">
+                                        <div class="col-xs-4 ListTitle1">姓名</div>
+                                        <div class="col-xs-8 ListTitle2">Email</div>
+                                        <div class="col-xs-8 ListTitle2">電話</div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

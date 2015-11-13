@@ -73,7 +73,7 @@
     <div class="buydivmove">
         <div class="insidecare col-xs-12 AllBGC">
             <div class="row">
-                <div class="col-xs-12 libor paynumber PadLib">
+                <div class="col-xs-12 libor paynumber">
                     <div class="col-xs-12 BTbox">
                         <div class="row">
                             <p class="BTleft">商品類別</p>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 libor status PadLib">
+                <div class="col-xs-12 libor status">
                     <div class="col-xs-12 BTbox">
                         <div class="row">
                             <p class="BTleft">商品圖片</p>

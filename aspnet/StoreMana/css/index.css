@@ -1844,12 +1844,7 @@ a.iframe-info.cboxElement {
     font-weight: bold;
 }
 
-.theme .glyphicon-user,
-.theme .glyphicon-tags,
-.theme .glyphicon-list-alt,
-.theme .glyphicon-comment,
-.theme .glyphicon-cog,
-.theme .glyphicon-log-out {
+.theme .glyphicon {
     color: #7d7d7e;
     font-size: 100%;
     left: 0;
@@ -2348,24 +2343,6 @@ a.iframe-info.cboxElement {
     letter-spacing: 0;
     display: inline-block;
     font-size: 15px;
-}
-
-.Ltitbox .ListName {
-    display: table;
-    line-height: 60px;
-    font-size: 15px;
-    text-align: center;
-    background-color: #888888;
-    color: #fff;
-}
-
-.Ltitbox .ListMail,
-.Ltitbox .Listphone {
-    font-size: 15px;
-    display: table;
-    line-height: 30px;
-    background-color: #888888;
-    color: #fff;
 }
 
 .ListNVa {

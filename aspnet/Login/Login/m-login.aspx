@@ -37,9 +37,7 @@
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-          
-                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
-           
+            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">

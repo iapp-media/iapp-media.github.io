@@ -36,14 +36,16 @@
                                         <div class="ListBG">
                                             <div class="col-xs-4 ListTitle1">
                                                 <div class="row">
-                                                商品圖片</div></div>
+                                                    商品圖片
+                                                </div>
+                                            </div>
                                             <div class="col-xs-8">
                                                 <div class="row">
-                                                <div class="col-xs-12 ListTitle2">商品名稱</div>
-                                                <div class="col-xs-6 ListTitle2">價格</div>
-                                                <div class="col-xs-6 ListTitle2">建檔日期</div>
-                                                <div class="clearfix"></div>
-                                                    </div>
+                                                    <div class="col-xs-12 ListTitle2">商品名稱</div>
+                                                    <div class="col-xs-6 ListTitle2">價格</div>
+                                                    <div class="col-xs-6 ListTitle2">建檔日期</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
