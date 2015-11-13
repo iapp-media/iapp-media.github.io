@@ -23,16 +23,23 @@ namespace StoreMana
                 DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Comm.Store_ID() + "'");
                 if (DT.Rows.Count > 0)
                 {
-                    string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
-                    for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                    if (DT.Rows[0]["Payment"].ToString() != "")
                     {
-                        Comm.GetDDL(CB_Payment, listPayment[i]);
+                        string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
+                        for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                        {
+                            Comm.GetDDL(CB_Payment, listPayment[i]);
+                        }
                     }
-                    string[] listDelivery = DT.Rows[0]["Delivery"].ToString().Substring(1).Split(',');
-                    for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
+                    if (DT.Rows[0]["Delivery"].ToString() != "")
                     {
-                        Comm.GetDDL(CB_Delivery, listDelivery[i]);
-                    }
+                        string[] listDelivery = DT.Rows[0]["Delivery"].ToString().Substring(1).Split(',');
+                        for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
+                        {
+                            Comm.GetDDL(CB_Delivery, listDelivery[i]);
+                        }
+                    } 
+
                     TBName.Text = DT.Rows[0]["Store_Name"].ToString();
                     TBBankName.Text = DT.Rows[0]["Bank_Name"].ToString();
                     TBBankNo.Text = DT.Rows[0]["Bank_No"].ToString();
