@@ -222,15 +222,18 @@ a:active {
 }
 
 .ProMLtit {
-    background-color: #a1a1a1;
+    /* background-color: #a1a1a1; */
+    background-color: #888;
     padding: 6px 0;
 }
 
 .ListTitle {
     padding: 6px 12px;
-    background-color: #a1a1a1;
+    /* background-color: #a1a1a1; */
     color: #fff;
     font-size: 16px;
+    text-align: center;
+    outline: 1px solid #999;
 }
 
 .ListIn {
@@ -284,7 +287,7 @@ a:active {
 }
 
 .Orderlist {
-    padding: 11px 0;
+    /* padding: 11px 0; */
 }
 
 .ProMaBOX img,

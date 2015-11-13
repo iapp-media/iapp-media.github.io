@@ -169,15 +169,21 @@
                     <%--   <textarea name="" id="" cols="30" rows="10" class="col-xs-12 AllBGC"></textarea>--%>
                     <asp:TextBox ID="TB_Memo" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </div>
-                <div class="col-xs-12 BorTop">
+                <div class="col-xs-12 AddBOt">
                     <div class="row">
-                        <div class="col-xs-5 libor status CBbot CBBTN">
-                            <asp:Button ID="BT_Cancel" runat="server" Text="取消" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Cancel_Click" />
-                        </div>
-                        <div class="col-xs-7 libor status CBbot CBBTN">
-                            <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Create_Click" />
-                        </div>
+                    <div class="col-xs-3">
+                        <asp:Button ID="BT_Cancel" runat="server" Text="取消" CssClass="BTN1" OnClick="BT_Cancel_Click" />
                     </div>
+                    <div class="col-xs-3">
+                       
+                        <input type="type" name="name" value="刪除" class="BTN1" />
+                        
+
+                    </div>
+                    <div class="col-xs-6">
+                        <asp:Button ID="BT_Create" runat="server" Text="確認新增" CssClass="BTN2" OnClick="BT_Create_Click" />
+                    </div>
+                            </div>
                 </div>
             </div>
         </div>

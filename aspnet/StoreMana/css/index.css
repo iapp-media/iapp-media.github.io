@@ -2456,6 +2456,36 @@ a.iframe-info.cboxElement {
     /* outline:1px solid #f00; */
     text-align: center;
 }
+.AddBOt {
+    padding:6px 12px;
+}
+    .AddBOt .BTN1,
+    .AddBOt .BTN2 {
+        border: 1px solid #ff9933;
+        border-radius:4px;
+        font-size:18px;
+        text-align:center;
+        display:block;
+        width:100%;
+        padding:6px 12px;
+    }
+    .AddBOt .BTN1 {
+        color:#ff9933;
+    }
+    .AddBOt .BTN1:active,
+     .AddBOt .BTN1:focus {
+        background-color:#ff9933;
+        color:#fff;
+    }
+    .AddBOt .BTN2 {
+        background-color:#ff9933;
+        color:#fff;
+    }
+    .AddBOt .BTN2:active,
+    .AddBOt .BTN2:focus {
+        background-color:#b25221;
+        color:#fff;
+    }
 
 @media only screen and (max-width:480px) {
     #Allswiper .swiper-container {

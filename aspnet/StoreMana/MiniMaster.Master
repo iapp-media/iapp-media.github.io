@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li>微後台</li>
-                        <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>回微店</a></li>
+                        <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>回iApp微店</a></li>
                         <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>
                         <li><a href="Cust_Mana.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
                         <li><a href="OrderMana.aspx"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>

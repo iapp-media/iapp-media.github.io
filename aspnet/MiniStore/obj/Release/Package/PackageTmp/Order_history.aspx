@@ -37,7 +37,7 @@
                             <HeaderTemplate>
                                 <div class="ProMLtit col-xs-12">
                                     <div class="col-xs-3">&nbsp</div>
-                                    <div class="col-xs-7">
+                                    <div class="col-xs-8">
                                         <div class="col-xs-6 BoxCenter ListTitle">
                                             <div class="row">
                                                 訂單狀態
@@ -59,7 +59,7 @@
                                             </div>
                                         </div> 
                                     </div>
-                                    <div class="col-xs-2">&nbsp</div>
+                                    <div class="col-xs-1">&nbsp</div>
                                 </div>
                             </HeaderTemplate>
                             <ItemTemplate>
@@ -72,6 +72,7 @@
 <%--                                                <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" /> --%>
                                             </div>
                                             <div class="col-xs-8 Orderlist">
+                                                <div class="row">
                                                 <div class="col-xs-6 ListIn ProLPad BorTopno">
                                                     <div class="row">
                                                         <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("Memo")%>'></asp:Literal>
@@ -92,6 +93,7 @@
                                                         <asp:Literal ID="Literal4" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
                                                     </div>
                                                 </div>
+                                                    </div>
                                             </div>
                                             <div class="col-xs-1 ProLast"> 
                                                 <div class="ProLastIn">
