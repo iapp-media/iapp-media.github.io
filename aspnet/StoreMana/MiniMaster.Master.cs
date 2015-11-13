@@ -26,7 +26,7 @@ namespace StoreMana.Mini
                 }
 
 
-                LGoMini.Text = "<li><a href=\"../../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") +"\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>回微店</a></li>";
+                LGoMini.Text = "<li><a href=\"../../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") +"\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>回iApp微店</a></li>";
             }
         }
 
