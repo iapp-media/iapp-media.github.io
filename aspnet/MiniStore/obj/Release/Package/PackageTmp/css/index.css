@@ -76,6 +76,8 @@ a:active {
 .JoinBox {
     /* outline: 1px solid #f00; */
     background-color:#fff;
+    display:block;
+    overflow: auto;
 }
 
 .JoinBox .LOGO,
@@ -104,9 +106,9 @@ a:active {
 }
 
 .JoinBox .Sendbox {
-    margin-left: -45%;
-    margin-top: 91px;
-    width: 90%;
+    margin-left: -25%;
+    margin-top: 53px;
+    width: 50%;
     text-align: center;
 }
 
@@ -2420,6 +2422,10 @@ a.iframe-info.cboxElement {
 top: -2px;
 
 }
+    .JoinBox .Sendbox {
+        width:90%;
+        margin-left: -45%;
+    }
 
 }
 
