@@ -3,3 +3,4 @@ C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\bin\Debug\JustyL
 C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\bin\Debug\ThoughtWorks.QRCode.dll
 C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\obj\Debug\JustyLibrary.dll
 C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\obj\Debug\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\JustyLibrary\JustyLibrary\obj\Debug\JustyLibrary.csprojResolveAssemblyReference.cache
