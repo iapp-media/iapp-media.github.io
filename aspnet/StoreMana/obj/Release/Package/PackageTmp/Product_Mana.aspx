@@ -76,6 +76,29 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="ProMaBOX col-xs-12 Nodate">
+                                            <div class="SHead col-xs-3">
+                                                <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
+                                            </div>
+                                            <div class="ProMain col-xs-8">
+                                                <div class="col-xs-12 ProLPad TtitleC BorTopno">
+                                                    <span>
+                                                        香Q嫩烤雞
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-6 ProLPad TRC BorBottompno">
+                                                    100,000
+                                                </div>
+                                                <div class="col-xs-6 ProLPad TGray BorBottompno">
+                                                    2015/11/11
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-1 ProLast">
+                                                <div class="row">
+                                                    <img src="img/arrow.png" alt="Alternate Text" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </asp:HyperLink>
                                 </ItemTemplate>
                             </asp:Repeater>

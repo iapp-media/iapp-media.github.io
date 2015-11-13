@@ -14,7 +14,7 @@
       <publishTime>11/11/2015 13:54:50</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/13/2015 10:34:55</publishTime>
+      <publishTime>11/13/2015 16:50:54</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -44,7 +44,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/13/2015 14:14:15</publishTime>
+      <publishTime>11/13/2015 16:14:44</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/12/2015 17:46:39</publishTime>
@@ -320,7 +320,7 @@
       <publishTime>11/09/2015 09:49:59</publishTime>
     </File>
     <File Include="Order_history.aspx">
-      <publishTime>11/13/2015 14:15:52</publishTime>
+      <publishTime>11/13/2015 16:14:44</publishTime>
     </File>
     <File Include="Order_prn.aspx">
       <publishTime>11/11/2015 10:14:42</publishTime>
@@ -344,7 +344,7 @@
       <publishTime>11/13/2015 10:05:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/13/2015 14:16:10</publishTime>
+      <publishTime>11/13/2015 16:50:55</publishTime>
     </File>
   </ItemGroup>
 </Project>
