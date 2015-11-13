@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/m-login.css"/>
 </head>
 <body>
-    
+   
     <div id="fb-root"></div>
     <script>
         window.fbAsyncInit = function () {
@@ -33,11 +33,14 @@
         }(document, 'script', 'facebook-jssdk'));
     </script> 
     <form id="form1" runat="server">
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="LoginAni">
             <div class="Storelogo">
                 <img src="img/img-1.png" alt="Alternate Text" />
             </div>
-            <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+          
+                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+           
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">

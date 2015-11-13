@@ -34,8 +34,10 @@ namespace Login
             }
             else
             {
-                ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('帳號或密碼錯誤')</script>");
-                //Response.Write("<script>alert('帳號或密碼錯誤')</script>");
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('帳號或密碼錯誤');", true);
+                //ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('帳號或密碼錯誤')</script>");
+               // Response.Write("<script>alert('帳號或密碼錯誤')</script>");
+               // return;
             }
 
            // Response.End();
@@ -80,11 +82,13 @@ namespace Login
                             SID = Main2.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
                             if (SID != "")
                             {
-                                Main2.ParaClear();
-                                Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
-                                Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
-                                Main2.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
-                                //  Response.Write(SID); 
+                                if (Main2.Scalar("select Store_NID from Store where User_ID='" + Comm.User_ID() + "'") == "")
+                                {
+                                    Main2.ParaClear();
+                                    Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
+                                    Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
+                                    Main2.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No + replace(newid(),'-','')  where idno=@SID"); 
+                                } 
                                 Comm.SaveCookie("iapp_sid", SID);
                             }
                         }
