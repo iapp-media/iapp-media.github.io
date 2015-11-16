@@ -23,6 +23,16 @@ namespace MiniStore
                     Main.ParaClear();
                     Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
 
+                    if (Main.Scalar("Select 1 from Product where IDNo=@Product_ID") != "")
+                    {
+                        L_Mail.Text = "<a href=\"mailto:?subject=[iApp微店推薦]pname&amp;body=嗨！我想請你來看看iApp微店的商品。%0D%0A商品名稱：name%0D%0A" + Comm.URL + "Ministore/Buy_Detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "" + "\" title=\"EMail\"> " +
+                                      "  <img src=\"img/mail.png\" alt=\"Alternate Text\" /></a>";
+                    }
+                    else
+                    {
+                        Response.Redirect("Default.aspx?SN='" + Request.QueryString["SN"] + "'");
+                    }
+
                     if (Comm.User_ID() == -1)
                     {
                         Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int); 
@@ -35,7 +45,9 @@ namespace MiniStore
                       Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
                                   " ( @Product_ID, @Cust_ID, getdate())");
                     L_Back.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"><img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
-                    CarouselPic();  
+                
+  
+                CarouselPic();  
             }
         }
         void CarouselPic()

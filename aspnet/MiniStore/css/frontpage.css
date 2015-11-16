@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: url('../img/web-transpage-img.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.FrontBox {
+    width: 400px;
+    height: 500px;
+    /*outline: 1px solid #f00;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+
+.FrontBox div:nth-child(1) {
+    /*outline: 1px solid #f00;*/
+    width: 50%;
+    height: 180px;
+    background: url('../img/img-1.jpg') no-repeat;
+    background-size: 100%;
+    margin: 15px auto 0 auto;
+}
+
+.FrontBox div:nth-child(2) img {
+   /* outline: 1px solid #f00;*/
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    display: block;
+}
+
+.FrontBox div:nth-child(3) {
+    /*outline: 1px solid #f00;*/
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    font-size: 25px;
+    display: table;
+    line-height: 53px;
+    color: #ff9933;
+    cursor: pointer;
+    -webkit-animation:tinDownOut1 5s both infinite cubic-bezier(.87,-.41,.19,1.44);
+}
+
+@keyframes tinDownOut1 {
+    0%,
+    10% {
+        transform: rotateZ(0deg);
+        -ms--ms-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+    4%,
+    8% {
+        transform: perspective(50px) rotateZ(10deg);
+        -ms-transform: perspective(50px) rotateZ(10deg);
+        -moz-transform: perspective(50px) rotateZ(10deg);
+        -webkit-transform: perspective(50px) rotateZ(10deg);
+    }
+    2%,
+    6% {
+        transform: perspective(50px) rotateZ(-10deg);
+        -ms-transform: perspective(50px) rotateZ(-10deg);
+        -moz-transform: perspective(50px) rotateZ(-10deg);
+        -webkit-transform: perspective(50px) rotateZ(-10deg);
+    }
+}
