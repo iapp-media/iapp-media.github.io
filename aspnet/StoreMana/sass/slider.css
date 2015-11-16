@@ -4,6 +4,7 @@
     padding: 0;
     border-radius: 4px;
     float: right;
+    
 }
 
 #slider ul {
@@ -21,6 +22,7 @@
     margin: auto;
     padding: 0;
     /* width: 663px; */
+    outline: 1px solid #f00;
     height: 300px;
     max-width: 700px;
     text-align: center;
@@ -37,7 +39,6 @@
     top: 40%;
     z-index: 999;
     display: block;
-    /* width: 100px; */
     color: #b4b4b4;
     text-decoration: none;
     font-weight: 600;
