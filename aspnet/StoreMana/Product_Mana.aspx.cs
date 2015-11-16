@@ -73,5 +73,13 @@ namespace StoreMana
             else
                 return Price.ToString();
         }
+
+        protected void SD1_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (Main.Cint2(e.AffectedRows.ToString()) == 0)
+            {
+                PNodate.Visible = true;
+            } 
+        }
     }
 }

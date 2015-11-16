@@ -76,7 +76,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="ProMaBOX col-xs-12 Nodate">
+                                     </asp:HyperLink>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
+                            <asp:SqlDataSource ID="SD1" runat="server" OnSelected="SD1_Selected"></asp:SqlDataSource>
+                        </div>
+                                                                <div class="ProMaBOX col-xs-12 Nodate" runat="server" visible="false" id="PNodate" >
                                             <div class="SHead col-xs-3">
                                                 <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
                                             </div>
@@ -99,12 +105,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </asp:HyperLink>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                            <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
-                            <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
-                        </div>
+
                     </div>
                 </div>
             

@@ -27,9 +27,10 @@ namespace StoreMana.Mini
                 loadImg();
             }
         }
-        void loadImg() {
+        void loadImg()
+        {
             Main.ParaClear();
-            Main.ParaAdd("@PID",Main.Cint2( LPID.Text),SqlDbType.Int);
+            Main.ParaAdd("@PID", Main.Cint2(LPID.Text), SqlDbType.Int);
 
             string p1src = "", p2src = "", p3src = "", p4src = "";
             string p1do = "", p2do = "", p3do = "", p4do = "";
@@ -37,12 +38,12 @@ namespace StoreMana.Mini
             p2do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='2'");
             p3do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='3'");
             p4do = Main.Scalar("Select isnull(sum(1),0) from product_img where Product_ID=@PID and Num='4'");
-          
-            if (Main.Cint2(p1do) ==  1 )
+
+            if (Main.Cint2(p1do) == 1)
             {
                 p1src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='1'");
             }
-             
+
             if (Main.Cint2(p2do) == 1)
             {
                 p2src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='2'");
@@ -57,10 +58,10 @@ namespace StoreMana.Mini
             {
                 p4src = Comm.MiStoreUrl + Main.Scalar("Select FilePath from product_img where Product_ID=@PID and Num='4'");
             }
-            
 
-            StringBuilder ss=new StringBuilder();
- 
+
+            StringBuilder ss = new StringBuilder();
+
             ss.Append("                      <ul> ");
             ss.Append("                         <li> ");
             ss.Append("                                <img id='p01' src='" + p1src + "' class='sliderimgH'  />    ");
@@ -89,7 +90,7 @@ namespace StoreMana.Mini
             ss.Append("                      </ul> ");
 
             L_Img.Text = ss.ToString();
-            
+
         }
         void Getentry()
         {
@@ -126,7 +127,7 @@ namespace StoreMana.Mini
                     str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
                     "values ('-99','','','','','','',@SID,'')";
                     if (Main.NonQuery(str) > 0)
-                    { 
+                    {
                         LPID.Text = Main.Scalar("select max(IDNo) from product where store_ID =@SID and Tmp_IDNo='-99'  ");
                     }
                     else
@@ -137,12 +138,12 @@ namespace StoreMana.Mini
                 }
             }
         }
-        
+
 
         protected void BT_Create_Click(object sender, EventArgs e)
         {
             string tmp = "";
-            if (TB_ProductName.Text == "")  { tmp += ".商品名稱"; }
+            if (TB_ProductName.Text == "") { tmp += ".商品名稱"; }
             if (TB_qty.Text == "") { tmp += ".數量"; }
             if (DL_Cate.SelectedValue == "") { tmp += ".商品類別"; }
             if (TB_Price.Text == "") { tmp += ",售價"; }
@@ -156,7 +157,7 @@ namespace StoreMana.Mini
             Main.ParaAdd("@qty", TB_qty.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Product_Name", TB_ProductName.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Cate_ID", DL_Cate.SelectedValue, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);  
+            Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@dimension", TB_Dimension.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@description", TB_Description.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Memo", TB_Memo.Text, System.Data.SqlDbType.NVarChar);
@@ -166,7 +167,7 @@ namespace StoreMana.Mini
 
             if (Comm.IsNumeric(Request.QueryString["entry"]))
             {
-                Main.ParaAdd("@Tmp_IDNo", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int); 
+                Main.ParaAdd("@Tmp_IDNo", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int);
                 str = "update product set Tmp_IDNo=@Tmp_IDNo,qty=@qty,Product_Name=@Product_Name,Cate_ID=@Cate_ID,Price=@Price " +
                     ",dimension=@dimension,description=@description,Memo=@Memo where store_ID=@SID and idno=@Tmp_IDNo";
             }
@@ -176,7 +177,7 @@ namespace StoreMana.Mini
                 Main.ParaAdd("@Product_No", Product_No, System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
 
-                str = "update product set Product_No=@Product_No,Tmp_IDNo=@Tmp_IDNo,qty=@qty, Product_Name=@Product_Name,Cate_ID=@Cate_ID"+
+                str = "update product set Product_No=@Product_No,Tmp_IDNo=@Tmp_IDNo,qty=@qty, Product_Name=@Product_Name,Cate_ID=@Cate_ID" +
                     ",Price=@Price,dimension=@dimension,description=@description,Memo=@Memo where  idno=@Tmp_IDNo";
             }
             if (Main.NonQuery(str) > 0)
@@ -192,5 +193,19 @@ namespace StoreMana.Mini
         {
             Response.Redirect("Product_Mana.aspx");
         }
-    } 
+
+        protected void BT_DEL_Click(object sender, EventArgs e)
+        {
+            Main.ParaClear();
+            Main.ParaAdd("@pid", Request.QueryString["entry"], System.Data.SqlDbType.NVarChar);
+
+            if (Main.Scalar("Select distinct 1 from Order_Content where Item_ID in ( select IDNo from Product where IDNo=@pid") != "")
+            {
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "String", "alert('已有訂單，商品不可刪除');", true);
+                return;
+            }
+
+            Main.NonQuery("delete product where idno=@pid");
+        }
+    }
 }

@@ -50,43 +50,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-
-        <%-- join --%>
-       <%-- <div class="JoinBox">
-            <div class="LOGO">
-                <img src="img/img-1.jpg" alt="Alternate Text" />
-            </div>
-            <div class="Sendbox">
-                <p>輸入您的微店店名</p>
-                <asp:TextBox ID="TB_SNAME" runat="server"></asp:TextBox>
-                <div>
-                    <asp:Button ID="BT_SNAME" runat="server" Text="確定" CssClass="btn btn-warning sendcareButtomeEnd" OnClick="BT_SNAME_Click" />
-                </div>
-            </div>
-        </div>--%>
-        <%-- join end --%>
-
-        <%-- joinBranch --%>
-        <div class="JoinBranchBox">
-            <div class="JBBGlogo">
-                <img src="img/img-1.png" alt="Alternate Text" />
-            </div>
-            <div class="JBBG">
-                <img src="img/pcimg-2.jpg" alt="Alternate Text" />
-            </div>
-            <div class="JBBG1">
-                <img src="img/pcimg-2-1.png" alt="Alternate Text" />
-            </div>
-            <div class="JBBG2">
-                <img src="img/pcimg-2-2.png" alt="Alternate Text" />
-            </div>
-            <div>
-                <asp:Button ID="Button1" runat="server" Text="加入" CssClass="btn btn-warning sendcareButtomeEnd" />
-            </div>
-        </div>
-        <%-- joinBranch end --%>
-
+    <form id="form1" runat="server">  
         <!-- facebook(必須寫在最上面) & parse init -->
         <div id="loading">iApp 載入中</div>
         <!-- 導覽列（共用） -->
@@ -116,9 +80,8 @@
                             </a>
                         </li>
                         <li class="SandTitle">開微店</li>
-                        <li  ><a href="JoinAs.aspx">打造自己的微店</a></li>
-<%--                        <li onclick="tojoin(0)"><a href="javascrip:void(0)">打造自己的微店</a></li>--%>
-                        <li onclick="JoinBranch(1)"><a href="javascrip:void(0)">加入行動分店</a></li>
+                        <li  ><a href="JoinAs.aspx">打造自己的微店</a></li> 
+                                                <li  ><a href="Join.aspx">加入行動分店</a></li>
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton></li>
@@ -174,29 +137,7 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-        function JoinBranch(obj) {
-            $('.JoinBranchBox').fadeIn();
-        }
-        function tojoin(obj) {
-            if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); return; }
-            var fn = "";
-
-            $.ajax({
-                type: 'POST',
-                url: 'Join.aspx?join=' + obj,
-                success: function (feedback) {
-                    if (feedback == "join") {
-                        $('.JoinBox').fadeIn();
-                    } else {
-                        window.open('http://220.132.67.201:88/StoreMana/Default.aspx', '_self')
-                        //window.open('http://iapp-media.com/StoreMana/Default.aspx', '_self')
-                    }
-                },
-                error: function () {
-                }
-            });
-        }
-    </script>
+     </script>
     <asp:ContentPlaceHolder ID="footJs" runat="server">
     </asp:ContentPlaceHolder>
 </body>

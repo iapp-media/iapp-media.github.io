@@ -175,9 +175,8 @@
                         <asp:Button ID="BT_Cancel" runat="server" Text="取消" CssClass="BTN1" OnClick="BT_Cancel_Click" />
                     </div>
                     <div class="col-xs-3">
-                       
-                        <input type="type" name="name" value="刪除" class="BTN1" />
-                        
+                    <asp:Button ID="BT_DEL" runat="server" Text="刪除" CssClass="BTN1"  OnClick="BT_DEL_Click" />
+                         
 
                     </div>
                     <div class="col-xs-6">

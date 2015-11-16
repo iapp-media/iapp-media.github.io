@@ -3,22 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-  <%--  <div class="col-xs-12 allClassification swiper-container">
-        <div class="row swiper-container">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx" style="color: white">出貨管理</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx" style="color: white">訂單管理</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Order_Mana.aspx?hist=1" style="color: white">歷史訂單</a></li>
-            </ul>
-        </div>
-    </div>--%>
+     
      <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="Order_Mana.aspx" style="color: white">出貨管理</a></div>
-                <div class="swiper-slide"><a href="Order_Mana.aspx" style="color: white">訂單管理</a></div>
-                <div class="swiper-slide"><a href="Order_Mana.aspx?hist=1" style="color: white">歷史訂單</a></div>
+                <div class="swiper-slide"><a href="OrderMana.aspx" style="color: white">出貨管理</a></div>
+                <div class="swiper-slide"><a href="OrderMana.aspx" style="color: white">訂單管理</a></div>
+                <div class="swiper-slide"><a href="OrderMana.aspx?hist=1" style="color: white">歷史訂單</a></div>
             </div>
         </div>
     </div>
