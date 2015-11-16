@@ -129,7 +129,8 @@ $(document).ready(function () {
         //});
 
         $('#slider ul').css({
-            width: screenW * slideCount
+            width: screenW * slideCount,
+            marginLeft: -slideWidth
         });
         $('#slider ul li').css({
             width: screenW
