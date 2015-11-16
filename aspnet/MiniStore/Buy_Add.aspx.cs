@@ -17,7 +17,13 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                 
+                string jump = "";
+                if (Comm.User_ID() == -1)
+                {
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/Buy_Add.aspx?entry=" + Request.QueryString["entry"] + "") + "";
+                    Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
+                    return;
+                }
 
                 if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
                 DataTable DT = Main.GetDataSetNoNull("select Store_ID from Product where idno='" + Request.QueryString["entry"] + "' ");

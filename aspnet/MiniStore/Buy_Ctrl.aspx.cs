@@ -21,7 +21,14 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                 
+                string jump = "";
+                if (Comm.User_ID() == -1)
+                {
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/Buy_Ctrl.aspx") + "";
+                    Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
+                    return;
+                }
+
                 Main.ParaClear();
                 Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
                 SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");

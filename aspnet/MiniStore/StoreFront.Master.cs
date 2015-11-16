@@ -30,13 +30,13 @@ namespace MiniStore
                     }
                 }
 
-                string jump = "";
-                if (Comm.User_ID() == -1)
-                {
-                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "";
-                    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
-                    return;
-                }
+                //string jump = "";
+                //if (Comm.User_ID() == -1)
+                //{
+                //    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "";
+                //    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
+                //    return;
+                //}
 
 
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
@@ -73,33 +73,5 @@ namespace MiniStore
             }
         }
 
-        //protected void BT_SNAME_Click(object sender, EventArgs e)
-        //{
-        //    if (Comm.User_ID() != -1)
-        //    {
-        //        Main.ParaClear();
-        //        Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
-
-        //        Main.NonQuery("Insert into Store (User_ID,Creat_Date) values " +
-        //         " (@UID,getdate())   ");
-        //        string SID = "";
-        //        SID = Main.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
-        //        if (SID != "")
-        //        {
-
-        //            Main.ParaClear();
-        //            Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
-        //            Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
-        //            Main.ParaAdd("@Store_Name", TB_SNAME.Text, System.Data.SqlDbType.NVarChar);
-        //            Main.NonQuery("update Store set Store_No=@Store_No where idno=@SID");
-        //            Main.NonQuery("insert into Store_info (Store_ID,Store_Name) values(@SID,@Store_Name)");
-        //            Comm.SaveCookie("iapp_sid", SID);
-        //        }
-        //        if (SID != "")
-        //        {
-        //            Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
-        //        }
-        //    }
-        //}
-    }
+     }
 }

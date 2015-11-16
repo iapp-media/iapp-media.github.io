@@ -20,11 +20,19 @@ namespace MiniStore
             {
  
                     if (!Comm.IsNumeric(Request.QueryString["entry"])) { Response.Redirect("Default.aspx"); }
-
                     Main.ParaClear();
                     Main.ParaAdd("@Product_ID", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
-                    Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int);
-                    Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
+
+                    if (Comm.User_ID() == -1)
+                    {
+                        Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int); 
+                    }
+                    else
+                    {
+                        Main.ParaAdd("@Cust_ID", Main.Cint2("2"), SqlDbType.Int);
+                    }
+
+                      Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
                                   " ( @Product_ID, @Cust_ID, getdate())");
                     L_Back.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"><img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
                     CarouselPic();  

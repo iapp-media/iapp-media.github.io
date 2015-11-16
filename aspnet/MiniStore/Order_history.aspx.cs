@@ -16,6 +16,16 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
+
+                string jump = "";
+                if (Comm.User_ID() == -1)
+                {
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/Order_history.aspx") + "";
+                    Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
+                    return;
+                }
+
+
                 Main.FillDDP(DL_Payment, "Select Memo,Status from def_Status where Col_Name='Payment'", "Memo", "Status");
                 //L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
                 //         " inner join Order_Content b on a.IDNo=b.Order_ID" +
