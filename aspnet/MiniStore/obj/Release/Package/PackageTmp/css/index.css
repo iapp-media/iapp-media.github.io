@@ -667,6 +667,10 @@ a:active {
     padding: 6px 12px;
 }
 
+.CBBTN input[type="submit"]:active {
+    background-color: #000 !important;
+}
+
 .SBuyCar {
     background-color: #fff!important;
     border: 3px solid #f93!important;
@@ -1348,6 +1352,11 @@ a.iframe-info.cboxElement {
     padding: 0;
 }
 
+.item button:active {
+    background-color: #ff9933;
+    color: #fff;
+}
+
 .description {
     border-bottom: 1px solid #eee;
     margin: 4% 0;
@@ -1421,6 +1430,10 @@ a.iframe-info.cboxElement {
     display: block;
     border-color: #fd9a33;
     /* font-weight:bold; */
+}
+
+.sendcareButtom:active, .sendcareButtomeEnd:active {
+    background-color: #000;
 }
 
 .productsinside h1 {
