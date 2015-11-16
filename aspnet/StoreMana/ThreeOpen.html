@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>三分鐘開微店</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="img/iAppStore.ico" rel="shortcut icon" />
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+    <link rel="apple-touch-icon" href="img/114.png" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/slider.css">
+    <link rel="stylesheet" href="css/cropper.css">
+    <link rel="stylesheet" href="css/mobileEditor.css">
+</head>
+
+<body>
+    <div class="upload-img">
+        <div class="top">
+            <img src="img/ministorelogo.png" class="toplogo" align="left" />
+            <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
+        </div>
+        <div class="upload-page">
+            <label for="inputImage" class="selectBTN">
+                <div class="selectBTNin">
+                    選擇照片
+                </div>
+            </label>
+            <div class="rotate">
+                <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
+            </div>
+            <div class="preview-container" style="display: none;">
+                <img id="preview" src="" />
+            </div>
+            <div class="img-container">
+                <img src="" alt="支持圖片上傳格式JPG,PNG" />
+            </div>
+            <p class="word">(移動及縮放進行照片裁切)</p>
+            <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
+            <input id="picnum" value="" class="hide" />
+            <input type="file" accept="image/*" id="inputImage" style="display: none;" />
+            <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
+                截圖
+            </button>
+            <button onclick="compress()" type="button" class="compress">
+                確認
+            </button>
+            <input id="Tbase64" value="" style="display: none;" />
+        </div>
+    </div>
+    <div>
+        <h1>3分鐘開微店</h1>
+        <div>
+            <h2>Step:1選擇商品類別</h2>
+            <div>
+                <select class="form-control">
+                    <option>女裝配件</option>
+                    <option>男裝配件</option>
+                    <option>嬰幼兒用品</option>
+                    <option>居家生活</option>
+                    <option>數位家電</option>
+                    <option>食品飲料</option>
+                    <option>美妝保養</option>
+                    <option>戶外休閒</option>
+                    <option>圖書影音</option>
+                    <option>玩具模型</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <h2>Step:2選擇付款方式</h2>
+            <div>
+                <label for="">面交</label>
+                <input type="checkbox">
+                <label for="">銀行轉帳</label>
+                <input type="checkbox">
+            </div>
+        </div>
+        <div>
+            <h2>Step:3填寫銀行帳戶(如有ATM轉帳)</h2>
+            <div>
+                <p>店家帳號</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>銀行名稱</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>銀行代碼</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>受款帳號</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>受款戶名</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>商店名稱</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>聯絡人</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>聯絡電話</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>聯絡地址</p>
+                <input type="text">
+            </div>
+        </div>
+        <div>
+            <h2>Step:4選擇寄送方式</h2>
+            <div>
+                <label for="">面交自取</label>
+                <input type="checkbox">
+                <label for="">宅配</label>
+                <input type="checkbox">
+            </div>
+        </div>
+        <div>
+            <h2>Step:5建立一個商品</h2>
+            <div>
+                <select class="form-control">
+                    <option>女裝配件</option>
+                    <option>男裝配件</option>
+                    <option>嬰幼兒用品</option>
+                    <option>居家生活</option>
+                    <option>數位家電</option>
+                    <option>食品飲料</option>
+                    <option>美妝保養</option>
+                    <option>戶外休閒</option>
+                    <option>圖書影音</option>
+                    <option>玩具模型</option>
+                </select>
+            </div>
+            <h1>商品圖片</h1>
+            <div id="slider">
+                <div class="glyphicon glyphicon-chevron-right control_next"></div>
+                <div class="glyphicon glyphicon-chevron-left control_prev"></div>
+                <ul>
+                    <li>
+                        <img id="p01" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <label onclick="setCurrent('01','3033-1')">
+                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                        </label>
+                    </li>
+                    <li>
+                        <img id="p02" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <label onclick="setCurrent('02','3033-0')">
+                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                        </label>
+                    </li>
+                    <li>
+                        <img id="p03" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <label onclick="setCurrent('03','3033-1')">
+                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                        </label>
+                    </li>
+                    <li>
+                        <img id="p04" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <label onclick="setCurrent('04','3033-1')">
+                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Step:6看看我的微店</h2>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+    //products slider
+    jQuery(document).ready(function($) {
+
+        $('#checkbox').change(function() {
+            setInterval(function() {
+                moveRight();
+            }, 3000);
+        });
+
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        var sliderUlWidth = slideCount * slideWidth;
+
+        $('#slider').css({
+            width: slideWidth,
+            height: slideHeight
+        });
+
+        $('#slider ul').css({
+            width: sliderUlWidth,
+            marginLeft: -slideWidth
+        });
+
+        $('#slider ul li:last-child').prependTo('#slider ul');
+
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: +slideWidth
+            }, 200, function() {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        function moveRight() {
+            $('#slider ul').animate({
+                left: -slideWidth
+            }, 200, function() {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        $('.control_prev').click(function() {
+            moveLeft();
+        });
+
+        $('.control_next').click(function() {
+            moveRight();
+        });
+
+    });
+    $(document).ready(function() {
+        // window.scrollTo(0, 10);
+        $(".clickslider").click(function() {
+            $('.preview-container').hide();
+            $('.img-container').show();
+            $(".upload-img").show();
+            $(".pages").hide();
+            $('.compress').hide();
+            $('.cut').show();
+            $('.cut').attr("disabled", true);
+            $('.rotate-btn').hide();
+        });
+        $(".cut").click(function() {
+            $(".cut").hide();
+            $(".compress").show();
+
+        });
+        $(".compress").click(function() {
+            $(".upload-img").hide();
+            $(".pages").show();
+
+        });
+        $('#inputImage').change(function() {
+            $('.preview-container').hide();
+            $('.img-container').show();
+            $('.compress').hide();
+            $('.cut').show();
+            $('.rotate-btn').show();
+        });
+        $('.cancelimgfun').click(function() {
+            $(".upload-img").hide();
+            $(".pages").show();
+        });
+
+        $('.cancelimgfun').click(function() {
+            $(".upload-img").hide();
+            $(".pages").show();
+        });
+    });
+    </script>
+</body>
+
+</html>
