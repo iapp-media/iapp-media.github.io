@@ -30,14 +30,7 @@
             <div class="LOGO">
                 <img src="img/img-1.jpg" alt="Alternate Text" />
             </div>
-            <div class="Sendbox">
-                <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+            <div class="Sendbox"> 
                 <p>輸入您的微店店名</p>
                 <asp:TextBox ID="TB_SNAME" runat="server"></asp:TextBox>
                 <div>
