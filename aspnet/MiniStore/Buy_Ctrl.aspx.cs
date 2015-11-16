@@ -108,6 +108,12 @@ namespace MiniStore
                 return;
             }
 
+            if (Main.Scalar("select 1 from ShoppingCart where user_id='" + Comm.User_ID() + "' and store_id in (select IDNo from store where Store_NID='" + Request.QueryString["SN"] + "')") == "")
+            {
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "String", "alert('目前沒有購物品項');", true);
+                return;
+            }
+
             Main.ParaClear();
             Main.ParaAdd("@Customer_ID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
             Main.ParaAdd("@Num", 1, SqlDbType.Int);      //常用設定組別 先暫時都給1 之後要改

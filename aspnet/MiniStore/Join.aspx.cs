@@ -16,31 +16,12 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["join"] != null)
-                {
-                    switch (Request.QueryString["join"])
-                    {
-                        case "0":
-                            string SID = "";
-                            SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
-                            if (SID != "")
-                            {
-                              
-                                int c = Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
-                                int a = Comm.SaveCookie("iapp_sid", SID, 365);
-                              
-                                Response.Write("jump");
-                            }
-                            else
-                            {
-                                Response.Write("join"); 
-                            }
-                            break;
-                        case "1":
-                            break;
-                    }
-                }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }
