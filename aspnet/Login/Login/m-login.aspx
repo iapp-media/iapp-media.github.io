@@ -45,7 +45,7 @@
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/ministorelogo2.png">
+                <img class="iapplogo" src="img/iapplogo.png">
             </div>
             <div class="content">
                 <div class="fb">
