@@ -1,5 +1,5 @@
 ﻿function likeit(obj) {
-    if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); return; }
+    if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); window.open('../Login/m-login.aspx?done=../MiniStore/default.aspx?SN=' + getValue("SN") + ''); return; }
     var fn = "";
     var apid = obj.id;
     if ($("#" + obj.id).prop("checked") == true) { fn = "&fn=1"; }
