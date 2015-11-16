@@ -16,7 +16,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="sass/slider.css">
+    <!-- <link rel="stylesheet" href="sass/slider.css"> -->
     <link rel="stylesheet" href="css/cropper.css">
     <link rel="stylesheet" href="css/mobileEditor.css">
 </head>
@@ -153,27 +153,27 @@
                 <div class="glyphicon glyphicon-chevron-left control_prev"></div>
                 <ul>
                     <li>
-                        <img id="p01" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <img id="p01" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                         <label onclick="setCurrent('01','3033-1')">
-                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                            <img src="img/uploadicon.png" alt="..." class="PicClick" />
                         </label>
                     </li>
                     <li>
-                        <img id="p02" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <img id="p02" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                         <label onclick="setCurrent('02','3033-0')">
-                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                            <img src="img/uploadicon.png" alt="..." class="PicClick" />
                         </label>
                     </li>
                     <li>
-                        <img id="p03" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <img id="p03" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                         <label onclick="setCurrent('03','3033-1')">
-                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                            <img src="img/uploadicon.png" alt="..." class="PicClick" />
                         </label>
                     </li>
                     <li>
-                        <img id="p04" src="img/2531170_203204624000_2.jpg" class="sliderimgH" />
+                        <img id="p04" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                         <label onclick="setCurrent('04','3033-1')">
-                            <img src="img/uploadicon.png" alt="..." class="clickslider" />
+                            <img src="img/uploadicon.png" alt="..." class="PicClick" />
                         </label>
                     </li>
                 </ul>
@@ -187,26 +187,23 @@
     <script>
     //products slider
     jQuery(document).ready(function($) {
-
-        $('#checkbox').change(function() {
-            setInterval(function() {
-                moveRight();
-            }, 3000);
-        });
-
         var slideCount = $('#slider ul li').length;
         var slideWidth = $('#slider ul li').width();
         var slideHeight = $('#slider ul li').height();
         var sliderUlWidth = slideCount * slideWidth;
+        var WinW = $(window).width();
+        console.log(WinW);
 
         $('#slider').css({
-            width: slideWidth,
-            height: slideHeight
+            width: WinW
         });
 
         $('#slider ul').css({
-            width: sliderUlWidth,
+            width: WinW * 4,
             marginLeft: -slideWidth
+        });
+        $('#slider ul li').css({
+            width: WinW
         });
 
         $('#slider ul li:last-child').prependTo('#slider ul');
@@ -240,7 +237,7 @@
     });
     $(document).ready(function() {
         // window.scrollTo(0, 10);
-        $(".clickslider").click(function() {
+        $(".PicClick").click(function() {
             $('.preview-container').hide();
             $('.img-container').show();
             $(".upload-img").show();

@@ -1,0 +1,42 @@
+@import "compass/css3"
+.Abcenter 
+	position: absolute
+	right: 0
+	bottom: 0
+	left: 0
+	top: 0
+	margin: auto
+#slider
+	position: relative
+	overflow: hidden
+	padding: 0
+	border-radius: (4px)
+	float: left
+	.control_prev
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+		height: 10px	
+		z-index: 1
+		display: block
+		color: #b4b4b4
+		opacity: .8
+		cursor: pointer
+	.control_next
+		@extend .control_prev
+		right: 0
+	ul
+		position: relative
+		li
+			position: relative
+			margin: auto
+			text-align: center
+			float: left
+			height: 200px
+			width: 100%
+			.PicSend
+				height: 100%
+				text-align: center
+			.PicClick
+				@extend .Abcenter
