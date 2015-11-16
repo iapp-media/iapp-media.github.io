@@ -20,7 +20,7 @@ namespace MiniStore
                 string jump = "";
                 if (Comm.User_ID() == -1)
                 {
-                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/Buy_Add.aspx?entry=" + Request.QueryString["entry"] + "") + "";
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/Buy_Add.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "") + "&jump=store";
                     Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
                     return;
                 }

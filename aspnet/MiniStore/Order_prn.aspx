@@ -198,7 +198,7 @@
                         <div class="row">
                             <div class="ListLen">
                                 <div class="col-xs-4">
-                                    <p class="BoxLeft">銀行帳號:</p>
+                                    <p class="BoxLeft">銀行帳號後五碼:</p>
                                 </div>
                                 <div class="col-xs-8">
                                     <div class="ValueRight ">

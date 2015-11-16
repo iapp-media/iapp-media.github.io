@@ -37,8 +37,7 @@
                                             <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
                                             <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
                                             <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
-                                            <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
-                                           
+                                            <asp:Literal ID="L_BTplus" runat="server"></asp:Literal> 
                                         </div>
                                         
                                              <asp:Literal ID="L_DELE" runat="server"></asp:Literal>

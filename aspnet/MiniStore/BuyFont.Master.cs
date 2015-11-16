@@ -39,7 +39,10 @@ namespace MiniStore
 
 
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
- 
+
+                Main.ParaClear();
+                Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+
                 Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
 
                 L_MyStore.Text = " <li class='SandTitle'>我的帳戶</li>" +

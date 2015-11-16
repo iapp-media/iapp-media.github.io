@@ -49,6 +49,17 @@ namespace MiniStore
                 L4.Text = " Select Item_ID,sum(qty) qty,SUM(Total) total,(select product_name from Product where IDNo=Item_ID) name " +
                           "from Order_Content  where Order_ID=@IDNo group by Item_ID";
 
+                Main.ParaClear(); 
+                Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+
+                DataTable DT = Main.GetDataSetNoNull("select *,CONVERT(varchar(12), ACC_Date, 111) AS sdate from orders where IDNo=@IDNo");
+                if (DT.Rows.Count > 0)
+                {
+                    TBTotal.Text=DT.Rows[0]["AC_AMT"].ToString();
+                    TBACC.Text = DT.Rows[0]["ACC_AMT"].ToString();
+                    TBACCDate.Text = DT.Rows[0]["sdate"].ToString();
+                }
+               
             }
             SD1.SelectCommand = L.Text;
             SD1.ConnectionString = Main.ConnStr;
