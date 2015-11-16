@@ -1,29 +1,32 @@
-(function() {
-  $(".join").click(function() {
-    $('.register-mobile').slideToggle(300);
-    return false;
-  });
-  $(".register-back").click(function() {
-    $('.register-mobile').slideToggle(300);
-    return false;
-  });
-  // $("#m-login").click(function() {
-  //   $(".login-mobile").animate({
-  //     height: 'toggle'
-  //   }, 300);
-  //   $(".theme").hide();
-  // });
-  //$(".login-back").click(function() {
+$(function () {
+    $(".join").click(function () {
+        $('.register-mobile').slideToggle(300);
+        return false;
+    });
+    $(".register-back").click(function () {
+        $('.register-mobile').slideToggle(300);
+        return false;
+    });
+    $('.LoginAni').click(function () {
+        $(this).fadeOut();
+    });
+    // $("#m-login").click(function() {
+    //   $(".login-mobile").animate({
+    //     height: 'toggle'
+    //   }, 300);
+    //   $(".theme").hide();
+    // });
+    //$(".login-back").click(function() {
 
     // hide();
-  //});
-  //$("#login").click(function() {
-  //    $('#login-submit').click();
-  //});
-  //$("#register").click(function() {
-  //  $('#register-submit').click();
-  //});
-})();
+    //});
+    //$("#login").click(function() {
+    //    $('#login-submit').click();
+    //});
+    //$("#register").click(function() {
+    //  $('#register-submit').click();
+    //});
+});
 
 function validateEmail(sEmail) {
   var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
