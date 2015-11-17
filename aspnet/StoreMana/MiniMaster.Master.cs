@@ -24,9 +24,9 @@ namespace StoreMana.Mini
                 {
                     Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>");
                 }
-
-
-                LGoMini.Text = "<li><a href=\"../../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") +"\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>回iApp微店</a></li>";
+                string SNID = Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'");
+                menu_QR.Text = "<a href=\"" + Comm.MiStoreUrl + "Default.aspx?SN=" + SNID + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.MiStoreUrl + "Default.aspx?SN=" + SNID + "&Intr=" + Comm.User_ID() +"\" alt=\"\" class=\"QRcode\"> </a>";
+                LGoMini.Text = "<li><a href=\"../../MiniStore/Default.aspx?SN=" + SNID + "\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>回iApp微店</a></li>";
             }
         }
 

@@ -30,6 +30,26 @@ namespace MiniStore
                     }
                 }
 
+                //
+                if (Request.QueryString["Intr"] != null && Comm.User_ID() != -1)
+                {
+                    string a = Main.Scalar("select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "' ");
+
+
+                    if (Main.Scalar("select 1 from Store_Customer where  store_id='" + a + "' and Customer_ID='" + Comm.User_ID() + "'") == "")
+                    {
+                        if (Main.Scalar("Select 1 from users where IDNo='" + Request.QueryString["Intr"] + "'") != "")
+                        {
+                            Main.ParaClear();
+                            Main.ParaAdd("@Store_ID", Main.Cint2(a), SqlDbType.Int);
+                            Main.ParaAdd("@FromUser_ID", Main.Cint2(Request.QueryString["Intr"].ToString()), SqlDbType.NVarChar);
+                            Main.ParaAdd("@Customer_ID", Comm.User_ID(), SqlDbType.Int); 
+
+                            Main.NonQuery(" insert Store_Customer(Store_ID, FromUser_ID, Customer_ID) values (@Store_ID, @FromUser_ID, @Customer_ID)");
+
+                        }
+                    }
+                }
                 //string jump = "";
                 //if (Comm.User_ID() == -1)
                 //{
@@ -37,6 +57,8 @@ namespace MiniStore
                 //    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
                 //    return;
                 //}
+
+                menu_QR.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.MiStoreUrl + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>";
 
 
                 LCarLink.Text = " <a href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"back-top\" src=\"img/cart.png\" /> </a>";
