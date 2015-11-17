@@ -13,6 +13,10 @@ body {
     height: 100%;
 }
 
+form#form1 {
+    /* height: 100%; */
+}
+
 
 /* unvisited link */
 
@@ -1679,10 +1683,14 @@ a.iframe-info.cboxElement {
 .product {
     /* outline: 1px solid #f00; */
     max-width: 700px;
-    margin: auto;
-    height: 100%;
+    margin: 129px auto 0 auto;
+    height: calc(100% + 129px);
     background-color: #fff;
-    padding: 1px 0;
+    /* padding: 1px 0; */
+}
+
+body {
+    height: 100%;
 }
 
 .TOC,
@@ -2435,6 +2443,8 @@ a.iframe-info.cboxElement {
     .product {
         width: 100%;
         background-color: #fff;
+        /* height: 100%; */
+        margin: 108px auto 0 auto;
     }
     .JoinBranchBox .JBBG1,
     .JoinBranchBox .JBBG2 {

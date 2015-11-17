@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThreeOpen.aspx.cs" Inherits="StoreMana.ThreeOpen" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
@@ -30,15 +28,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
-    <link rel="stylesheet" href="css/reset.css" />
+    
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/masonry.css" />
-    <link rel="stylesheet" href="css/colorbox.css" />
-    <link rel="stylesheet" href="css/swiper.min.css" />
+   
 
     <link rel="stylesheet" href="css/screen.css">
-    <link rel="stylesheet" href="sass/slider.css">
     <link rel="stylesheet" href="css/cropper.css">
     <link rel="stylesheet" href="css/mobileEditor.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
@@ -185,30 +179,28 @@
                                             <div class="glyphicon glyphicon-chevron-left control_prev"></div>
                                             <ul>
                                                 <li>
-                                                    <img id="p01" src="" class="sliderimgH">
-                                                    <label onclick="setCurrent('04','9040')">
-                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton">
+                                                    <img id="p01" src="img/2531170_203204624000_2.jpg" class="PicSend" />
+                                                    <label onclick="setCurrent('01','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="PicClick" />
                                                     </label>
                                                 </li>
                                                 <li>
-                                                    <img id="p02" src="" class="sliderimgH" />
-                                                    <label onclick="setCurrent('04','9040')">
-                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton">
+                                                    <img id="p02" src="img/2531170_203204624000_2.jpg" class="PicSend" />
+                                                    <label onclick="setCurrent('02','3033-0')">
+                                                        <img src="img/uploadicon.png" alt="..." class="PicClick" />
                                                     </label>
-
                                                 </li>
                                                 <li>
-                                                    <img id="p03" src="" class="sliderimgH" />
-                                                    <label onclick="setCurrent('04','9040')">
-                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton">
+                                                    <img id="p03" src="img/2531170_203204624000_2.jpg" class="PicSend" />
+                                                    <label onclick="setCurrent('03','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="PicClick" />
                                                     </label>
-
                                                 </li>
                                                 <li>
-                                                    <img id="p04" src="" class="sliderimgH" />
-                                                    <label onclick="setCurrent('04','9040')">
-                                                        <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton">
-                                                    </label> 
+                                                    <img id="p04" src="img/2531170_203204624000_2.jpg" class="PicSend" />
+                                                    <label onclick="setCurrent('04','3033-1')">
+                                                        <img src="img/uploadicon.png" alt="..." class="PicClick" />
+                                                    </label>
                                                 </li>
                                             </ul>
                                         </div>
@@ -253,11 +245,10 @@
         <!-- WRAPPER END -->
 
         <script src="js/jquery-2.1.4.min.js"></script>
-
- 
-        <!-- Loading -->
         <script>
             document.write('<style>#loading{display:none}</style>');
+            console.log('123')
+           
 
             $(document).ready(function () {
                 $('#Step2').hide();
@@ -284,6 +275,96 @@
                     case 4:
                         $('#Step4').hide();
                         $('#Step5').fadeIn();
+                        //products slider
+                        jQuery(document).ready(function ($) {
+                            var slideCount = $('#slider ul li').length;
+                            var slideWidth = $('#slider ul li').width();
+                            var slideHeight = $('#slider ul li').height();
+                            var sliderUlWidth = slideCount * slideWidth;
+                            var WinW = $(window).width();
+                            console.log(WinW);
+
+                            $('#slider').css({
+                                width: WinW
+                            });
+
+                            $('#slider ul').css({
+                                width: WinW * 4,
+                                marginLeft: -slideWidth
+                            });
+                            $('#slider ul li').css({
+                                width: WinW
+                            });
+
+                            $('#slider ul li:last-child').prependTo('#slider ul');
+
+                            function moveLeft() {
+                                $('#slider ul').animate({
+                                    left: +slideWidth
+                                }, 200, function () {
+                                    $('#slider ul li:last-child').prependTo('#slider ul');
+                                    $('#slider ul').css('left', '');
+                                });
+                            };
+
+                            function moveRight() {
+                                $('#slider ul').animate({
+                                    left: -slideWidth
+                                }, 200, function () {
+                                    $('#slider ul li:first-child').appendTo('#slider ul');
+                                    $('#slider ul').css('left', '');
+                                });
+                            };
+
+                            $('.control_prev').click(function () {
+                                moveLeft();
+                            });
+
+                            $('.control_next').click(function () {
+                                moveRight();
+                            });
+
+                        });
+                        $(document).ready(function () {
+                            // window.scrollTo(0, 10);
+                            $(".PicClick").click(function () {
+                                $('.preview-container').hide();
+                                $('.img-container').show();
+                                $(".upload-img").show();
+                                $(".pages").hide();
+                                $('.compress').hide();
+                                $('.cut').show();
+                                $('.cut').attr("disabled", true);
+                                $('.rotate-btn').hide();
+                            });
+                            $(".cut").click(function () {
+                                $(".cut").hide();
+                                $(".compress").show();
+
+                            });
+                            $(".compress").click(function () {
+                                $(".upload-img").hide();
+                                $(".pages").show();
+
+                            });
+                            $('#inputImage').change(function () {
+                                $('.preview-container').hide();
+                                $('.img-container').show();
+                                $('.compress').hide();
+                                $('.cut').show();
+                                $('.rotate-btn').show();
+                            });
+                            $('.cancelimgfun').click(function () {
+                                $(".upload-img").hide();
+                                $(".pages").show();
+                            });
+
+                            $('.cancelimgfun').click(function () {
+                                $(".upload-img").hide();
+                                $(".pages").show();
+                            });
+                        });
+
                         break;
                     case 5:
                         $('#Step5').hide();
@@ -317,9 +398,9 @@
                         break;
                 }
             }
-
- 
+      
         </script>
+       
     </form>
 </body>
 </html>

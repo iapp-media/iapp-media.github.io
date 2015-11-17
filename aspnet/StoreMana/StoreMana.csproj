@@ -228,6 +228,7 @@
     </Compile>
     <Compile Include="ThreeOpen.aspx.cs">
       <DependentUpon>ThreeOpen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ThreeOpen.aspx.designer.cs">
       <DependentUpon>ThreeOpen.aspx</DependentUpon>
