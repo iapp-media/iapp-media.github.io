@@ -1,5 +1,5 @@
 /* line 2, ../sass/slider.sass */
-.Abcenter, #slider ul li .PicClick {
+#slider ul li .PicClick {
   position: absolute;
   right: 0;
   bottom: 0;
