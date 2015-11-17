@@ -900,6 +900,7 @@ a:active {
     color: #f93;
     width: 10%;
     padding: 40px 12px;
+    text-align: center;
 }
 
 .detailsbox h1 {
@@ -925,6 +926,15 @@ a:active {
     font-size: 0;
     padding: 6px 12px;
 }
+.details:nth-child(odd) {
+    background-color: #fff;
+}
+.details .cancelTransaction input{
+    border-left: 1px solid #f93;
+    font-size: 20px;
+    color: #f93;
+}
+
 
 .productSize {
     height: 80%!important;
@@ -1691,7 +1701,7 @@ a.iframe-info.cboxElement {
 
 .BorObot,
 .details:last-child {
-    border-bottom: 3px solid #f93;
+    /* border-bottom: 3px solid #f93; */
 }
 
 #slider img {
@@ -1753,10 +1763,6 @@ a.iframe-info.cboxElement {
     margin: 0;
 }
 
-.details:nth-child( odd),
-.details:nth-child(odd) {
-    background-color: #f5f5f5;
-}
 
 .tem,
 .login-sm,
