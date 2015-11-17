@@ -5,13 +5,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    
-        <div class="product">
-            <div id="container"> 
-                <asp:Literal ID="LData" runat="server"></asp:Literal> 
+
+    <div class="product">
+        <div class="defaultPa">
+            <div id="container">
+                <asp:Literal ID="LData" runat="server"></asp:Literal>
+                <div class="clearfix"></div>
             </div>
         </div>
-     
+    </div>
+
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">

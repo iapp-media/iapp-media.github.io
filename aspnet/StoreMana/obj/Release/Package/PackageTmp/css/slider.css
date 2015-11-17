@@ -1,0 +1,53 @@
+/* line 2, ../sass/slider.sass */
+.Abcenter, #slider ul li .PicClick {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+}
+
+/* line 9, ../sass/slider.sass */
+#slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 4px;
+  float: left;
+}
+/* line 15, ../sass/slider.sass */
+#slider .control_prev, #slider .control_next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 10px;
+  z-index: 1;
+  display: block;
+  color: #b4b4b4;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* line 26, ../sass/slider.sass */
+#slider .control_next {
+  right: 0;
+}
+/* line 29, ../sass/slider.sass */
+#slider ul {
+  position: relative;
+}
+/* line 31, ../sass/slider.sass */
+#slider ul li {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  float: left;
+  height: 200px;
+  width: 100%;
+}
+/* line 38, ../sass/slider.sass */
+#slider ul li .PicSend {
+  height: 100%;
+  text-align: center;
+}

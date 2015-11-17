@@ -20,7 +20,7 @@
       <publishTime>11/11/2015 13:54:50</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/16/2015 11:37:02</publishTime>
+      <publishTime>11/17/2015 13:54:34</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -48,6 +48,12 @@
     </File>
     <File Include="css/reset.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
+    </File>
+    <File Include="css/screen.css">
+      <publishTime>11/17/2015 13:25:04</publishTime>
+    </File>
+    <File Include="css/slider.css">
+      <publishTime>11/16/2015 18:00:36</publishTime>
     </File>
     <File Include="css/swiper.min.css">
       <publishTime>11/09/2015 09:49:59</publishTime>
@@ -235,8 +241,11 @@
     <File Include="Svim.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
+    <File Include="ThreeOpen.aspx">
+      <publishTime>11/17/2015 13:44:49</publishTime>
+    </File>
     <File Include="Web.config">
-      <publishTime>11/17/2015 11:20:46</publishTime>
+      <publishTime>11/17/2015 13:54:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

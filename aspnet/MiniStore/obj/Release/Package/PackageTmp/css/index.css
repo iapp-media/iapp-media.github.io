@@ -14,7 +14,7 @@ body {
 }
 
 form#form1 {
-    /* height: 100%; */
+    height: 100%;
 }
 
 
@@ -680,9 +680,7 @@ a:active {
     padding: 6px 12px;
 }
 
-.CBBTN input[type="submit"]:active {
-    background-color: #000 !important;
-}
+
 
 .SBuyCar {
     background-color: #fff!important;
@@ -1683,11 +1681,16 @@ a.iframe-info.cboxElement {
 .product {
     /* outline: 1px solid #f00; */
     max-width: 700px;
-    margin: 129px auto 0 auto;
-    height: calc(100% + 129px);
+    margin: auto;
+    height: 100%;
     background-color: #fff;
     /* padding: 1px 0; */
 }
+    .product .defaultPa {
+        /* outline:1px solid #f00; */
+        position:relative;
+        height: 100%;
+    }
 
 body {
     height: 100%;
