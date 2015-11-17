@@ -30,8 +30,6 @@
     <!-- End for apple -->
     
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-   
-
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/cropper.css">
     <link rel="stylesheet" href="css/mobileEditor.css">
@@ -268,7 +266,6 @@
                         $('#Step3').fadeIn();
                         break;
                     case 3:
-
                         $('#Step3').hide();
                         $('#Step4').fadeIn();
                         break;
@@ -281,19 +278,19 @@
                             var slideWidth = $('#slider ul li').width();
                             var slideHeight = $('#slider ul li').height();
                             var sliderUlWidth = slideCount * slideWidth;
-                            var WinW = $(window).width();
-                            console.log(WinW);
+                            var sliderW2 = $('#slider').width();
+                            console.log('slider寬'+ sliderW2);
 
                             $('#slider').css({
-                                width: WinW
+                                width: sliderW2
                             });
 
                             $('#slider ul').css({
-                                width: WinW * 4,
+                                width: sliderW2 * 4,
                                 marginLeft: -slideWidth
                             });
                             $('#slider ul li').css({
-                                width: WinW
+                                width: sliderW2
                             });
 
                             $('#slider ul li:last-child').prependTo('#slider ul');
