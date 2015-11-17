@@ -31,6 +31,15 @@ namespace StoreMana {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// CurrentId 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CurrentId;
+        
+        /// <summary>
         /// UpdatePanel1 控制項。
         /// </summary>
         /// <remarks>
@@ -202,15 +211,6 @@ namespace StoreMana {
         protected global::System.Web.UI.UpdatePanel UpdatePanel5;
         
         /// <summary>
-        /// CurrentId 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CurrentId;
-        
-        /// <summary>
         /// DL_Cate 控制項。
         /// </summary>
         /// <remarks>
@@ -218,6 +218,15 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DL_Cate;
+        
+        /// <summary>
+        /// L_Img 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal L_Img;
         
         /// <summary>
         /// TB_ProductName 控制項。
@@ -274,6 +283,24 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.Button BTStep5;
         
         /// <summary>
+        /// UpdatePanel6 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel6;
+        
+        /// <summary>
+        /// upStep6 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button upStep6;
+        
+        /// <summary>
         /// BTStep6 控制項。
         /// </summary>
         /// <remarks>
@@ -281,5 +308,14 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BTStep6;
+        
+        /// <summary>
+        /// LPID 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LPID;
     }
 }

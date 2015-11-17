@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ThreeOpen.aspx.cs" Inherits="StoreMana.ThreeOpen" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -28,11 +29,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
-    
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/screen.css">
-    <link rel="stylesheet" href="css/cropper.css">
-    <link rel="stylesheet" href="css/mobileEditor.css">
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="css/cropper.css" />
+    <link rel="stylesheet" href="css/mobileEditor.css" />
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -54,13 +55,48 @@
             <div class="productcare col-xs-12">
                 <div class="col-xs-12">
                     <div class="row">
+                        <div class="upload-img">
+                            <div class="top">
+                                <img src="img/ministorelogo.png" class="toplogo" align="left" />
+                                <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
+                            </div>
+                            <div class="upload-page">
+                                <label for="inputImage" class="selectBTN">
+                                    <div class="selectBTNin">
+                                        選擇照片
+                                    </div>
+                                </label>
+                                <div class="rotate">
+                                    <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
+                                </div>
+                                <div class="preview-container" style="display: none;">
+                                    <img id="preview" src="" />
+                                </div>
+                                <div class="img-container">
+                                    <img src="" alt="支持圖片上傳格式JPG,PNG" />
+                                </div>
+                                <p class="word">(移動及縮放進行照片裁切)</p>
+                                <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
+                                <input id="picnum" value="" class="hide" />
+                                <input type="file" accept="image/*" id="inputImage" style="display: none;" />
+                                <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
+                                    截圖
+                                </button>
+                                <button onclick="compress()" type="button" class="compress">
+                                    確認
+                                </button>
+                                <input id="Tbase64" value="" style="display: none;" />
+
+                            </div>
+                        </div>
+
                         <div id="Step1" class="col-xs-12 minbox ">
                             <h2>Step1.選擇商店類別</h2>
                             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                 <ContentTemplate>
                                     <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control">
                                     </asp:DropDownList>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep1"  OnClick="BTStep1_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClick="BTStep1_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </div>
@@ -72,7 +108,7 @@
                                     <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                                     </asp:CheckBoxList>
                                     <button id="upStep2" onclick="upStep(2)">上一步</button>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep2"   OnClick="BTStep2_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep2" OnClick="BTStep2_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </div>
@@ -132,40 +168,6 @@
                             <h2>Step5.建立一個商品!!</h2>
                             <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                                 <ContentTemplate>
-                                    <div class="upload-img">
-                                        <div class="top">
-                                            <img src="img/ministorelogo.png" class="toplogo" align="left" />
-                                            <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
-                                        </div>
-                                        <div class="upload-page">
-                                            <label for="inputImage" class="selectBTN">
-                                                <div class="selectBTNin">
-                                                    選擇照片
-                                                </div>
-                                            </label>
-                                            <div class="rotate">
-                                                <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
-                                            </div>
-                                            <div class="preview-container" style="display: none;">
-                                                <img id="preview" src="" />
-                                            </div>
-                                            <div class="img-container">
-                                                <img src="" alt="支持圖片上傳格式JPG,PNG" />
-                                            </div>
-                                            <p class="word">(移動及縮放進行照片裁切)</p>
-                                            <asp:TextBox ID="CurrentId" runat="server" CssClass="hide" ClientIDMode="Static"></asp:TextBox>
-                                            <input id="picnum" value="" class="hide" />
-                                            <input type="file" accept="image/*" id="inputImage" style="display: none;" />
-                                            <button data-method="getCroppedCanvas" type="button" id="cut" class="cut" disabled="true">
-                                                截圖
-                                            </button>
-                                            <button onclick="compress()" type="button" class="compress">
-                                                確認
-                                            </button>
-                                            <input id="Tbase64" value="" style="display: none;" />
-
-                                        </div>
-                                    </div>
                                     <div>
                                         <p>商品類別</p>
                                         <asp:DropDownList ID="DL_Cate" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -175,7 +177,8 @@
                                         <div id="slider">
                                             <div class="glyphicon glyphicon-chevron-right control_next"></div>
                                             <div class="glyphicon glyphicon-chevron-left control_prev"></div>
-                                            <ul>
+                                            <asp:Literal ID="L_Img" runat="server"></asp:Literal>
+                                            <%--                                            <ul>
                                                 <li>
                                                     <img id="p01" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                                                     <label onclick="setCurrent('01','3033-1')">
@@ -200,7 +203,7 @@
                                                         <img src="img/uploadicon.png" alt="..." class="PicClick" />
                                                     </label>
                                                 </li>
-                                            </ul>
+                                            </ul>--%>
                                         </div>
                                     </div>
                                     <div>
@@ -224,7 +227,7 @@
                                         <asp:TextBox ID="TB_Dimension" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                                     </div>
                                     <button id="upStep5" onclick="upStep(5)">上一步</button>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClientClick="goStep(5)" OnClick="BTStep5_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" />
 
                                 </ContentTemplate>
                             </asp:UpdatePanel>
@@ -232,8 +235,12 @@
 
                         <div id="Step6" class="col-xs-12 minbox ">
                             <h2>Step6.看看我的微店</h2>
-                            <a id="upStep6" onclick="upStep(6)">上一步</a>
-                            <asp:Button ID="BTStep6" runat="server" Text="完成" />
+                            <asp:UpdatePanel ID="UpdatePanel6" runat="server">
+                                <ContentTemplate>
+                                    <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
+                                    <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                         </div>
 
                     </div>
@@ -241,12 +248,13 @@
             </div>
         </div>
         <!-- WRAPPER END -->
+        <asp:Literal ID="LPID" runat="server" Visible="false"></asp:Literal>
 
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
             console.log('123')
-           
+
 
             $(document).ready(function () {
                 $('#Step2').hide();
@@ -279,7 +287,7 @@
                             var slideHeight = $('#slider ul li').height();
                             var sliderUlWidth = slideCount * slideWidth;
                             var sliderW2 = $('#slider').width();
-                            console.log('slider寬'+ sliderW2);
+                            console.log('slider寬' + sliderW2);
 
                             $('#slider').css({
                                 width: sliderW2
@@ -395,9 +403,12 @@
                         break;
                 }
             }
-      
+
         </script>
-       
+        <script src="js/exif.js"></script>
+        <script src="js/JIC.js"></script>
+        <script src="js/cropper.js"></script>
+        <script src="js/mobileEditor-new.js"></script>
     </form>
 </body>
 </html>
