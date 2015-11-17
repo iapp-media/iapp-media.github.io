@@ -68,7 +68,7 @@
                                 <ContentTemplate>
                                     <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control">
                                     </asp:DropDownList>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClientClick="goStep(1)" OnClick="BTStep1_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep1"  OnClick="BTStep1_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </div>
@@ -80,7 +80,7 @@
                                     <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                                     </asp:CheckBoxList>
                                     <button id="upStep2" onclick="upStep(2)">上一步</button>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep2" OnClientClick="goStep(2)" OnClick="BTStep2_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep2"   OnClick="BTStep2_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </div>
@@ -118,7 +118,7 @@
                                         <asp:TextBox ID="TBAddr" runat="server" CssClass="form-control magclose"></asp:TextBox>
                                     </div>
                                     <button id="upStep3" onclick="upStep(3)">上一步</button>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep3" OnClientClick="goStep(3)" OnClick="BTStep3_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep3" OnClick="BTStep3_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </div>
@@ -130,7 +130,7 @@
                                     <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                                     </asp:CheckBoxList>
                                     <button id="upStep4" onclick="upStep(4)">上一步</button>
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep4" OnClientClick="goStep(4)" OnClick="BTStep4_Click" />
+                                    <asp:Button runat="server" Text="下一步" ID="BTStep4" OnClick="BTStep4_Click" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
@@ -252,7 +252,7 @@
         </div>
         <!-- WRAPPER END -->
 
- 
+        <script src="js/jquery-2.1.4.min.js"></script>
 
  
         <!-- Loading -->
@@ -266,7 +266,6 @@
                 $('#Step5').hide();
                 $('#Step6').hide();
             });
-
             function goStep(obj) {
                 switch (obj) {
                     case 1:
@@ -294,7 +293,6 @@
 
                 }
             }
-
             function upStep(obj) {
                 switch (obj) {
                     case 2:

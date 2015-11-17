@@ -38,6 +38,7 @@ namespace StoreMana
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@SID ) " +
                           " insert into Store_info (Store_Cate,store_id) values(@Store_Cate,@SID)  else " +
                           " update Store_info set Store_Cate=@Store_Cate where Store_ID=@SID");
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(1);", true);
 
         }
 
@@ -58,15 +59,15 @@ namespace StoreMana
                 Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
                 Main.ParaAdd("@payment", strPayment, SqlDbType.NVarChar);
                 Main.NonQuery("update store_info set payment=@payment where Store_ID=@SID");
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(2)", true);
+
             }
             else
             {
-                if (DLSCate.SelectedValue == "")
-                {
-                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇付款方式');", true);
-                    return;
-                }
-            } 
+
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇付款方式');", true);
+                return;
+            }
         }
 
         protected void BTStep3_Click(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace StoreMana
              Main.NonQuery("Update Store_info set Bank_Name=@Bank_Name,Bank_No=@Bank_No,Bank_ACC=@Bank_ACC,Bank_ACName=@Bank_ACName, " +
                      "   Addr=@Addr, TEL=@TEL, CEOName=@CEOName where  Store_ID=@Store_ID");
 
+             System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(3)", true);
 
         } 
 
@@ -122,15 +124,14 @@ namespace StoreMana
                 Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
                 Main.ParaAdd("@Delivery", strDelivery, SqlDbType.NVarChar);
                 Main.NonQuery(" update store_info  set Delivery=@Delivery where Store_ID=@SID");
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(4)", true);
+
             }
             else
-            {
-                if (DLSCate.SelectedValue == "")
-                {
-                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇寄送方式');", true);
-                    return;
-                }
-            }  
+            { 
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇寄送方式');", true);
+                return; 
+            }
         }
 
         protected void BTStep5_Click(object sender, EventArgs e)
