@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 2, ../sass/slider.sass */
-.Abcenter, #slider ul li .PicClick {
+#slider ul li .PicClick {
   position: absolute;
   right: 0;
   bottom: 0;
