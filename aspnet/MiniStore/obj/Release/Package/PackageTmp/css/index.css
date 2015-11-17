@@ -1682,7 +1682,7 @@ a.iframe-info.cboxElement {
     margin: auto;
     height: 100%;
     background-color: #fff;
-    /* padding: 1px; */
+    padding: 1px 0;
 }
 
 .TOC,

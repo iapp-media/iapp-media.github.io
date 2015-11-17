@@ -128,6 +128,7 @@
     <Content Include="Setting_Gerent.aspx" />
     <Content Include="Setting_SInfo.aspx" />
     <Content Include="Svim.aspx" />
+    <Content Include="ThreeOpen.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -224,6 +225,12 @@
     </Compile>
     <Compile Include="Svim.aspx.designer.cs">
       <DependentUpon>Svim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeOpen.aspx.cs">
+      <DependentUpon>ThreeOpen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeOpen.aspx.designer.cs">
+      <DependentUpon>ThreeOpen.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

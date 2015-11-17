@@ -2495,7 +2495,7 @@ a.iframe-info.cboxElement {
 -moz-filter: grayscale(100%);
 -ms-filter: grayscale(100%);
 -o-filter: grayscale(100%);
-display:none;
+
 }
 @media only screen and (max-width:480px) {
     #Allswiper .swiper-container {
