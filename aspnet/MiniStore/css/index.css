@@ -1,3 +1,6 @@
+html {
+    height: 100%;
+}
 body {
     background-color: #f5f5f5;
     font-size: small;
@@ -6,6 +9,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    height: 100%;
 }
 
 
@@ -1669,8 +1673,9 @@ a.iframe-info.cboxElement {
     /* outline: 1px solid #f00; */
     max-width: 700px;
     margin: auto;
+    height: 100%;
     background-color: #fff;
-    padding: 1px;
+    /* padding: 1px; */
 }
 
 .TOC,
