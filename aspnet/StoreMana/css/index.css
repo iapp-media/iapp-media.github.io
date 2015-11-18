@@ -2457,7 +2457,7 @@ a.iframe-info.cboxElement {
     width: 100%;
 }
 .Alltitle {
-   margin:15px;
+   margin: 15px 0;
 }
 
     .Alltitle span {
@@ -2475,14 +2475,14 @@ a.iframe-info.cboxElement {
         float:left;
     }
     .Alltitle p {
-         width: 77%;
+         /* width: 77%; */
          float:left;
          margin:0;
          margin-left:3%;
          text-align:left;
          font-size: 20px;
          color:#969696;
-         
+         /* outline: 1px solid; */
     }
 .OpenUI,
 .OpenUI3,

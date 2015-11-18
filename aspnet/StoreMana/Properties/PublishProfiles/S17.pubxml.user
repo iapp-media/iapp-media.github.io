@@ -20,7 +20,7 @@
       <publishTime>11/11/2015 13:54:50</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/17/2015 14:45:29</publishTime>
+      <publishTime>11/18/2015 15:40:05</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/17/2015 11:16:02</publishTime>
+      <publishTime>11/18/2015 15:49:27</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/10/2015 12:48:04</publishTime>
@@ -50,10 +50,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/screen.css">
-      <publishTime>11/17/2015 14:45:27</publishTime>
+      <publishTime>11/18/2015 11:29:51</publishTime>
     </File>
     <File Include="css/slider.css">
-      <publishTime>11/17/2015 14:45:27</publishTime>
+      <publishTime>11/18/2015 11:29:51</publishTime>
     </File>
     <File Include="css/swiper.min.css">
       <publishTime>11/09/2015 09:49:59</publishTime>
@@ -151,6 +151,12 @@
     <File Include="img/store-bstage.png">
       <publishTime>11/10/2015 18:52:28</publishTime>
     </File>
+    <File Include="img/store.png">
+      <publishTime>11/17/2015 15:17:16</publishTime>
+    </File>
+    <File Include="img/title.png">
+      <publishTime>11/17/2015 15:17:16</publishTime>
+    </File>
     <File Include="img/top.png">
       <publishTime>11/10/2015 18:52:28</publishTime>
     </File>
@@ -209,7 +215,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/13/2015 16:26:10</publishTime>
+      <publishTime>11/17/2015 15:46:43</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -224,7 +230,7 @@
       <publishTime>11/05/2015 16:28:46</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>11/16/2015 09:49:15</publishTime>
+      <publishTime>11/18/2015 12:06:58</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
       <publishTime>11/17/2015 11:20:35</publishTime>
@@ -242,10 +248,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>11/17/2015 14:45:27</publishTime>
+      <publishTime>11/18/2015 15:39:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/17/2015 14:55:53</publishTime>
+      <publishTime>11/18/2015 15:51:58</publishTime>
     </File>
   </ItemGroup>
 </Project>
