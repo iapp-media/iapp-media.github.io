@@ -37,17 +37,19 @@
 /* line 30, ../sass/slider.sass */
 #slider ul {
   position: relative;
+  padding: 0;
 }
-/* line 32, ../sass/slider.sass */
+/* line 33, ../sass/slider.sass */
 #slider ul li {
   position: relative;
   margin: auto;
   text-align: center;
   float: left;
+  height: 200px;
   width: 100%;
-  outline:1px solid #f00;
+  list-style: none;
 }
-/* line 39, ../sass/slider.sass */
+/* line 41, ../sass/slider.sass */
 #slider ul li .PicSend {
   height: 100%;
   text-align: center;
