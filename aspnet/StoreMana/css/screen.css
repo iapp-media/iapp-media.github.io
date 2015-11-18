@@ -84,8 +84,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0;
   border-radius: 4px;
   float: left;
+  width: 100%;
 }
-/* line 15, ../sass/slider.sass */
+/* line 16, ../sass/slider.sass */
 #slider .control_prev, #slider .control_next {
   position: absolute;
   top: 0;
@@ -98,15 +99,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 0.8;
   cursor: pointer;
 }
-/* line 26, ../sass/slider.sass */
+/* line 27, ../sass/slider.sass */
 #slider .control_next {
   right: 0;
 }
-/* line 29, ../sass/slider.sass */
+/* line 30, ../sass/slider.sass */
 #slider ul {
   position: relative;
 }
-/* line 31, ../sass/slider.sass */
+/* line 32, ../sass/slider.sass */
 #slider ul li {
   position: relative;
   margin: auto;
@@ -115,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 200px;
   width: 100%;
 }
-/* line 38, ../sass/slider.sass */
+/* line 39, ../sass/slider.sass */
 #slider ul li .PicSend {
   height: 100%;
   text-align: center;
