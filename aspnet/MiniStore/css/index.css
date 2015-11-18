@@ -1041,6 +1041,25 @@ a.iframe-info.cboxElement {
 }
 
 .back-top {
+    width:100%;
+   
+}
+
+#Buycar span {
+    width: 30px;
+    height: 30px;
+    background-color: #f00;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding: 6px 2px;
+    color: #fff;
+    position: absolute;
+    top: -23px;
+    right: 0;
+}
+#Buycar {
+    /* outline:1px solid #f00; */
     width: 50px;
     height: auto;
     position: fixed;
@@ -2280,10 +2299,16 @@ body {
         #FastBox .MonBoxL,
         #FastBox .MonBoxR  {
            
-            font-size:18px;
-            width:50%;
-            float:left;
+font-size:18px;
+           
+width:50%;
+           
+float:left;
         }
+            #FastBox .MonBoxR input {
+                border:none;
+                border-radius:0;
+            }
    
     #FastBox .Detailsmid {
         width:75%;
@@ -2304,7 +2329,7 @@ body {
         margin:4px 0 147px 0;
     }
      #FastBox span.TOC {
-    font-size: 12px;
+    /* font-size: 12px; */
 }
     .promana {
         top: 119px;
