@@ -1,4 +1,5 @@
-﻿function likeit(obj) {
+﻿ 
+function likeit(obj) {
     if (document.cookie.indexOf("iapp_uid=") == -1) { alert('請先登入'); window.open('../Login/m-login.aspx?done=../MiniStore/default.aspx?SN=' + getValue("SN") + ''); return; }
     var fn = "";
     var apid = obj.id;
@@ -17,6 +18,55 @@
         }
     });
 }
+
+function cint2(obj) {
+    if ($.isNumeric(obj)) {
+        return parseInt(obj);
+    } else {
+        return 0;
+    }
+}
+
+
+function plus(obj, max) {
+     var a1 = cint2($("#Num_" + obj).val().replace(/\,/g, "")); 
+    if (a1 == max) {
+        alert('超過現貨數量');
+    } else {
+        
+        $.ajax({
+            type: 'GET',
+            url: 'FastShop.aspx?K0=1&K1=' + obj + '',
+            success: function (msg) {
+                if (msg == "err") { return false; }
+                $("#Num_" + obj).val(cint2(msg))  ;
+            },
+            error: function (msg) {
+                alert(msg)
+            }
+        });
+    }
+}
+
+function minus(obj) {
+
+    var a1 = cint2($("#Num_" + obj).val().replace(/\,/g, ""));
+    if (a1 <= 0) { 
+    } else {
+        $.ajax({
+            type: 'GET',
+            url: 'FastShop.aspx?K0=2&K1=' + obj + '',
+            success: function (msg) {
+                if (msg == "err") { return false; }
+                $("#Num_" + obj).val(cint2(msg)); 
+            },
+            error: function (msg) {
+                alert(msg)
+            }
+        });
+    }
+}
+
 
 function getValue(varname) {
     var url = window.location.href;
