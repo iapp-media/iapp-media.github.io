@@ -94,6 +94,8 @@
     <Content Include="img\qr-iappmedia.jpg" />
     <Content Include="img\setting.png" />
     <Content Include="img\store-bstage.png" />
+    <Content Include="img\store.png" />
+    <Content Include="img\title.png" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="img\web-transpage-img.jpg" />
