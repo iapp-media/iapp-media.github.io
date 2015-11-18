@@ -2509,7 +2509,8 @@ a.iframe-info.cboxElement {
     width:35%;
 }
 .OpenUI3 input {
-    width:64%;
+    width: 60%;
+    float: right;
 }
 .OpenCheckUI .left,
 .OpenCheckUI .right {

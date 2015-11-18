@@ -153,7 +153,7 @@
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
                             <span>Step3</span><p>
-                                填寫銀行帳號(如果有選ATM轉帳)
+                                填寫銀行帳號
                             </p>
                         </div>
                         <div class="clearfix"></div>
@@ -203,7 +203,7 @@
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
                             <span>Step4</span><p>
-                                填寫銀行帳號(如果有選ATM轉帳)
+                                填寫銀行帳號
                             </p>
                         </div>
                         <div class="clearfix"></div>
@@ -369,9 +369,10 @@
                                     </div>
                                 </div>
                                 <div style="display: none;">
+                                    <%-- 要刪掉的部分 --%>
                                     <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
                                 </div>
-                                <div class="col-xs-12 libor CBbot CBBTN">
+                                <div class="col-xs-12 libor CBbot">
                                     <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN" />
                                 </div>
                                 <div class="clearfix"></div>
