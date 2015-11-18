@@ -74,6 +74,7 @@
     <Content Include="css\index.css" />
     <Content Include="css\masonry.css" />
     <Content Include="css\reset.css" />
+    <Content Include="FastShop.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\000000102601.jpg" />
     <Content Include="img\000000102901.jpg" />
@@ -178,6 +179,12 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FastShop.aspx.cs">
+      <DependentUpon>FastShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FastShop.aspx.designer.cs">
+      <DependentUpon>FastShop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Join.aspx.cs">
       <DependentUpon>Join.aspx</DependentUpon>
