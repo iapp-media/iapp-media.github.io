@@ -145,7 +145,7 @@
                                 <a href="ThemeManager.aspx"><i class="fa fa-dashboard fa-fw"></i>主題管理</a>
                             </li> 
                                                        <li>
-                                <a href="User_App.aspx"><i class="fa fa-bar-chart-o fa-fw"></i>iApp管理</a>
+                                <a href="User_App.aspx"><i class="fa fa-bar-chart-o fa-fw"></i>iApp指數</a>
                             </li>
                             <li>
                                 <a href="PageManager.aspx"><i class="fa fa-table fa-fw"></i>Page管理</a><%--PageManager.aspx--%>
@@ -155,8 +155,27 @@
                             </li>
                                         <li>
                                 <a href="IApp_Add.aspx"><i class="fa fa-plus fa-fw"></i>(channel)新增IAPP</a>
+                            </li>       <li>
+                                <a href="IApp_Mana.aspx"><i class="fa fa-plus fa-fw"></i>IApp管理</a>
                             </li>
-                           <%-- <li>
+                             <li>
+                                <a href="javascript:void(0)"><i class="fa fa-plus fa-fw"></i>廠商管理</a>
+                                  <ul class="nav nav-second-level">
+                                      <li>
+                                           <a href="Company_Mana.aspx">廠商列表</a>
+                                    </li>
+                                       <li>
+                                           <a href="Company_Add.aspx">新增廠商</a>
+                                    </li>
+ 
+                                </ul>
+                            </li>
+                             <li> 
+                                <a href="cate_mana.aspx"><i class="fa fa-plus fa-fw"></i>商品類別管理</a>
+                            </li>
+                           <%-- <li>       <li>
+                                <a href="IApp_Add.aspx"><i class="fa fa-plus fa-fw"></i>(channel)新增IAPP</a>
+                            </li>
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>none<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
