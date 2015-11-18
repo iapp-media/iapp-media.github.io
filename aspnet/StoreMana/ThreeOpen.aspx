@@ -364,7 +364,7 @@
 
                             $('#slider ul').css({
                                 width: sliderW2 * 4,
-                                marginLeft: -slideWidth
+                                //marginLeft: -slideWidth
                             });
                             $('#slider ul li').css({
                                 width: sliderW2
