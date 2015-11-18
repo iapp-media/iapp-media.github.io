@@ -369,6 +369,7 @@
                                     </div>
                                 </div>
                                 <div style="display: none;">
+                                    <%-- 要刪掉的部分 --%>
                                     <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
                                 </div>
                                 <div class="col-xs-12 libor CBbot">
