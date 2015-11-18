@@ -22,8 +22,15 @@
             </div>
         </div>
 
-        <div class="product" runat="server" id="Fast"> 
-            <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
+        <div class="product" runat="server" id="Fast">
+            <div id="FastBox">
+                <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 libor status CBbot CBBTN">
+                    <input type="submit" name="name" value="結帳" class="btn btn-warning col-xs-12 sendcareButtomeEnd" />
+                 </div>
+            </div>    
+            
         </div>
     </div>
 

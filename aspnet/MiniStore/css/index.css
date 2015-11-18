@@ -444,6 +444,9 @@ a:active {
     text-align: right;
     font-size: 18px;
 }
+ #FastBox h3 {
+       font-size:18px;
+    }
 
 .ManaLBG {
     background-color: #ffd5b3 !important;
@@ -2269,8 +2272,40 @@ body {
     align-items: center;
     justify-content: center;
 }
+#FastBox {
+    
+    margin: 128px 0 55px 0;
+}
+    
+        #FastBox .MonBoxL,
+        #FastBox .MonBoxR  {
+           
+            font-size:18px;
+            width:50%;
+            float:left;
+        }
+   
+    #FastBox .Detailsmid {
+        width:75%;
+        margin-right:0;
+    }
+    #FastBox .CBBTN {
+    position: fixed;
+    bottom: 0;
+    max-width:700px;
+}
+   
+   
+
+   
 
 @media only screen and (max-width:480px) {
+    #FastBox {
+        margin:4px 0 147px 0;
+    }
+     #FastBox span.TOC {
+    font-size: 12px;
+}
     .promana {
         top: 119px;
     }

@@ -79,14 +79,15 @@ namespace MiniStore
                         ss.Append("            </div>" + "\n\r");
                         ss.Append("            <div class=\"Detailsmid\">" + "\n\r");
                         ss.Append("                <h3>" + dw["Product_Name"].ToString() + "</h3>" + "\n\r");
-                        ss.Append("                <div class=\"MonBox\">" + "\n\r"); 
+                        ss.Append("                <div class=\"MonBoxL\">" + "\n\r"); 
                         ss.Append("                    <span class=\"TOC\">NT$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</span>" + "\n\r");
                         ss.Append("                </div>" + "\n\r");
+                        ss.Append("<div class=\"MonBoxR\">");
                         ss.Append("                <span class=\"input-number-decrement\" onclick='minus(" + dw["IDNo"].ToString() + ")'>–</span>" + "\n\r");
                         ss.Append("                <input id=\"Num_" + dw["IDNo"].ToString() + "\" name=\"\" type=\"number\" value=\"" + dw["carbaby"].ToString() + "\" class=\"input-number\">" + "\n\r");
                         ss.Append("                <span class=\"input-number-increment\" onclick='plus(" + dw["IDNo"].ToString() + "," + dw["qty"].ToString() + ")'>+ </span>" + "\n\r");
+                        ss.Append("</div>");
                         ss.Append("            </div>" + "\n\r");
-                        ss.Append("            <span class=\"cancelTransaction\">" + "\n\r");
                         ss.Append("            </span>" + "\n\r");
                         ss.Append("        </div> " + "\n\r");
                      }

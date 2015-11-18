@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="FastShop.aspx.cs">
       <DependentUpon>FastShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FastShop.aspx.designer.cs">
       <DependentUpon>FastShop.aspx</DependentUpon>
