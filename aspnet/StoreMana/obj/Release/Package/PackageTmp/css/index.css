@@ -2509,7 +2509,8 @@ a.iframe-info.cboxElement {
     width:35%;
 }
 .OpenUI3 input {
-    width:64%;
+    width: 60%;
+    float: right;
 }
 .OpenCheckUI .left,
 .OpenCheckUI .right {
@@ -2571,7 +2572,9 @@ a.iframe-info.cboxElement {
 .Step6end div img {
     width: 80px;
 }
-        
+#Step6 .CBbot {
+    padding:6px 12px;
+}
     
 @media only screen and (max-width:480px) {
     #Allswiper .swiper-container {
