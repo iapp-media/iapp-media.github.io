@@ -2488,13 +2488,11 @@ a.iframe-info.cboxElement {
 .OpenUI3,
 .OpenCheckUI {
     border:3px solid #ff9933;
-    padding: 6px 12px;
+    background-color: #fff;
+    /* padding: 6px 12px; */
 }
-    #UpdatePanel1 p {
-        margin:0;
-    }
 
-.OpenUI label,
+.OpenUI .left p,
 .OpenUI3 p{
     font-size: 20px;
     color: #838485;
@@ -2539,11 +2537,41 @@ a.iframe-info.cboxElement {
    
 }
 .ThreeBTN2 {
-    
     background-color: #FFF !important;
     color: #fd9a33 !important;
 }
+.Step5TOP {
+    padding: 6px 12px;
+}
+.Step5Bot {
+    margin-bottom:12px;
+}
+.Step6end {
+    width:100%;
+    height: 125px;
+    position:relative;
+}
+    .Step6end div {
+        width:30%;
+        height: auto;
+        text-align:center;
+        position:absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        margin:auto;
+    }
 
+.Step6end div p {
+    color: #868686;
+    font-size: 20px;
+}
+
+.Step6end div img {
+    width: 80px;
+}
+        
     
 @media only screen and (max-width:480px) {
     #Allswiper .swiper-container {

@@ -99,7 +99,11 @@
 
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="BTbox OpenUI">
                             <ContentTemplate>
-                                <p class="BTleft">商品類別</p>
+                                <div class="col-xs-4 left">
+                                    <div class="row">
+                                        <p>商品類別</p>
+                                    </div>
+                                </div>
                                 <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control">
                                 </asp:DropDownList>
                                 <div class="col-xs-12 libor CBbot CBBTN ">
@@ -153,7 +157,7 @@
                             </p>
                         </div>
                         <div class="clearfix"></div>
-                        <asp:UpdatePanel ID="UpdatePanel3" runat="server" class="OpenUI3">
+                        <asp:UpdatePanel ID="UpdatePanel3" runat="server" class="OpenUI3 BTbox">
                             <ContentTemplate>
                                 <div class="Openlist">
                                     <p>銀行名稱</p>
@@ -236,14 +240,23 @@
                             </p>
                         </div>
                         <div class="clearfix"></div>
-                    <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                    <asp:UpdatePanel ID="UpdatePanel5" runat="server" class="OpenUI">
                         <ContentTemplate>
+                            <div class="BTbox">
                             <div>
-                                <p>商品類別</p>
+                                <div class="col-xs-4 left">
+                                    <div class="row">
+                                        <p>商品類別</p>
+                                    </div>
+                                </div>
                                 <asp:DropDownList ID="DL_Cate" runat="server" CssClass="form-control"></asp:DropDownList>
                             </div>
-                            <div>
-                                <p>商品圖片</p>
+                            
+                                <div class="col-xs-4 left">
+                                    <div class="row">
+                                        <p>商品圖片</p>
+                                    </div>
+                                </div>
                                 <div id="slider">
                                     <div class="glyphicon glyphicon-chevron-right control_next"></div>
                                     <div class="glyphicon glyphicon-chevron-left control_prev"></div>
@@ -275,45 +288,97 @@
                                                 </li>
                                             </ul>--%>
                                 </div>
+                                <div class="clearfix"></div>
                             </div>
-                            <div>
-                                <p>商品名稱</p>
+                            <div class="clearfix"></div>
+                            <div class="col-xs-12">
+                                <div class="row">
+                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <p class="BoxLeft">商品名稱</p>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限22個字以內" onkeyup="words_deal(44)"></asp:TextBox>
                             </div>
-                            <div>
-                                <p>價格</p>
+                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <p class="BoxLeft">價格</p>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
                             </div>
-                            <div>
-                                <p>數量</p>
+                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <p class="BoxLeft">數量</p>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
                             </div>
-                            <div>
-                                <p>商品說明</p>
+                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <p class="BoxLeft">商品說明</p>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="TB_Description" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
                             </div>
-                            <div>
-                                <p>商品規格</p>
+                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <p class="BoxLeft">商品規格</p>
+                                    </div>
+                                </div>
                                 <asp:TextBox ID="TB_Dimension" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
+                            </div>   
+                                </div>
                             </div>
-                            <button id="upStep5" onclick="upStep(5)">上一步</button>
-                            <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" />
+                            <div class="col-xs-12 Step5Bot">
+                            <div class="col-xs-4 libor CBbot  CBBTN ">
+                                <button id="upStep5" onclick="upStep(5)" class="ThreeBTN2">上一步</button>
+                            </div>
+                            <div class="col-xs-7 libor CBbot  CBBTN TalkR">
+                                <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" CssClass="ThreeBTN" />
+                            </div>
+                                </div>
+                             <div class="clearfix"></div>
 
                         </ContentTemplate>
                     </asp:UpdatePanel>
+                        
                     </div>
+                   
                 </div>
 
                 <div id="Step6" class="col-xs-12 minbox ">
-                    <h2>Step6.看看我的微店</h2>
-                    <asp:UpdatePanel ID="UpdatePanel6" runat="server">
-                        <ContentTemplate>
-                            <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
-                            <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" />
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+                    <div class="row">
+                    <div class="col-xs-12 Title Alltitle">
+                            <span>Step6</span><p>
+                                看看我的微店
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <asp:UpdatePanel ID="UpdatePanel6" runat="server" class="OpenUI">
+                            <ContentTemplate>
+                                <div class="Step6end">
+                                    <div>
+                                        <img src="img/store.png" alt="" />
+                                        <p>開店成功 !!!</p>
+                                    </div>
+                                </div>
+                                <div style="display: none;">
+                                    <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
+                                </div>
+                                <div class="col-xs-12 libor CBbot CBBTN ">
+                                    <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
                 </div>
-
             </div>
         </div>
         <!-- WRAPPER END -->
@@ -323,7 +388,7 @@
         <script>
             document.write('<style>#loading{display:none}</style>');
             console.log('123')
-
+           
 
             $(document).ready(function () {
                 $('#Step2').hide();
@@ -364,7 +429,7 @@
 
                             $('#slider ul').css({
                                 width: sliderW2 * 4,
-                                //marginLeft: -slideWidth
+                                marginLeft: -slideWidth
                             });
                             $('#slider ul li').css({
                                 width: sliderW2
@@ -400,7 +465,7 @@
 
                         });
                         $(document).ready(function () {
-                            // window.scrollTo(0, 10);
+                             window.scrollTo(0, 10);
                             $(".PicClick").click(function () {
                                 $('.preview-container').hide();
                                 $('.img-container').show();
@@ -438,7 +503,6 @@
                                 $(".pages").show();
                             });
                         });
-
                         break;
                     case 5:
                         $('#Step5').hide();
