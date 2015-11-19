@@ -197,30 +197,30 @@
                     <div class="col-xs-12">
                         <div class="row">
                             <div class="ListLen">
-                                <div class="col-xs-4">
+                                <div class="col-xs-6">
                                     <p class="BoxLeft">銀行帳號後五碼:</p>
                                 </div>
-                                <div class="col-xs-8">
+                                <div class="col-xs-6">
                                     <div class="ValueRight ">
                                         <asp:TextBox ID="TBACC" runat="server" placeholder="最後五個數字碼" CssClass="ValTPad"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                             <div class="ListLen">
-                                <div class="col-xs-4">
+                                <div class="col-xs-6">
                                     <p class="BoxLeft">轉帳金額:</p>
                                 </div>
-                                <div class="col-xs-8">
+                                <div class="col-xs-6">
                                     <div class="ValueRight">
                                         <asp:TextBox ID="TBTotal" runat="server" placeholder="轉帳金額" CssClass="ValTPad"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                             <div class="ListLen">
-                                <div class="col-xs-4">
+                                <div class="col-xs-6">
                                     <p class="BoxLeft">轉帳日期:</p>
                                 </div>
-                                <div class="col-xs-8">
+                                <div class="col-xs-6">
                                     <div class="ValueRight">
                                         <asp:TextBox ID="TBACCDate" runat="server" placeholder="2015/02/20" CssClass="ValTPad"></asp:TextBox>
                                     </div>

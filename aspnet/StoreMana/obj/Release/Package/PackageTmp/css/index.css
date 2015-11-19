@@ -2840,7 +2840,9 @@ a.iframe-info.cboxElement {
         margin-left: -15px;
     }
 }
-
+@media only screen and (max-width: 355px) {
+    
+}
 @media screen and (orientation: portrait) {}
 
 @media screen and (orientation: landscape) {
