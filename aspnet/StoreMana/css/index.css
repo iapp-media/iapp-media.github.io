@@ -16,6 +16,19 @@ form#form1 {
     height: 100%;
     /* background-color: #fff; */
 }
+.FixTitle {
+    text-align: center;
+    color: #ff9933;
+    font-size: 22px;
+    position: fixed;
+    left: 0;
+    /* z-index: 999; */
+    width: 162px;
+    /* outline: 1px solid #f00; */
+    right: 0;
+    margin: auto;
+    line-height: 77px;
+}
 
 a {
     text-decoration: none;
@@ -2577,6 +2590,9 @@ a.iframe-info.cboxElement {
 }
     
 @media only screen and (max-width:480px) {
+    .FixTitle {
+    line-height: 60px;
+}
     .Addbutton {
         width:50px;
         height:50px;
