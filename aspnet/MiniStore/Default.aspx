@@ -34,6 +34,7 @@
     </div>
 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
+    <asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
     <script src="js/act.js"></script>
+    
 </asp:Content>

@@ -30,11 +30,11 @@
                     <input type="submit" name="name" value="結帳" class="btn btn-warning col-xs-12 sendcareButtomeEnd" />
                  </div>
             </div>    
-            
         </div>
     </div>
 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
+    <asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
     <script src="js/act.js"></script>
+    
 </asp:Content>
