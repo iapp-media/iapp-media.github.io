@@ -254,6 +254,7 @@
     <Content Include="BuyFont.Master" />
     <None Include="Properties\PublishProfiles\Mini.pubxml" />
     <None Include="Properties\PublishProfiles\Mini2.pubxml" />
+    <Content Include="QRcode.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
