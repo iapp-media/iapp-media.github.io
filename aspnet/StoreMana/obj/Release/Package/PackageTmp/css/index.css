@@ -2603,17 +2603,17 @@ a.iframe-info.cboxElement {
     }
     4%,
     8% {
-        transform: perspective(200px) rotateZ(10deg);
-        -ms-transform: perspective(200px) rotateZ(10deg);
-        -moz-transform: perspective(200px) rotateZ(10deg);
-        -webkit-transform: perspective(200px) rotateZ(10deg);
+        transform: perspective(200px) rotateZ(5deg);
+        -ms-transform: perspective(200px) rotateZ(5deg);
+        -moz-transform: perspective(200px) rotateZ(5deg);
+        -webkit-transform: perspective(200px) rotateZ(5deg);
     }
     2%,
     6% {
-        transform: perspective(200px) rotateZ(-10deg);
-        -ms-transform: perspective(200px) rotateZ(-10deg);
-        -moz-transform: perspective(200px) rotateZ(-10deg);
-        -webkit-transform: perspective(200px) rotateZ(-10deg);
+        transform: perspective(200px) rotateZ(-5deg);
+        -ms-transform: perspective(200px) rotateZ(-5deg);
+        -moz-transform: perspective(200px) rotateZ(-5deg);
+        -webkit-transform: perspective(200px) rotateZ(-5deg);
     }
 }
     
@@ -2864,8 +2864,16 @@ a.iframe-info.cboxElement {
         color: #ff9933;
         margin-left: -15px;
     }
+    #slider .PicClick {
+        width:50px;
+        height:50px;
+    }
 }
 @media only screen and (max-width: 355px) {
+     #slider .PicClick {
+        width:50px;
+        height:50px;
+    }
     
 }
 @media screen and (orientation: portrait) {}

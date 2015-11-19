@@ -30,8 +30,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css"  />
     <link rel="stylesheet" href="css/slider.css"  />
+    <link rel="stylesheet" href="css/index.css"  />
     <link rel="stylesheet" href="css/cropper.css" />
     <link rel="stylesheet" href="css/mobileEditor.css" />
     
