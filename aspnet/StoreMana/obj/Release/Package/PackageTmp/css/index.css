@@ -2554,6 +2554,10 @@ a.iframe-info.cboxElement {
     background-color: #FFF !important;
     color: #fd9a33 !important;
 }
+#liSTfooter .ThreeBTN,
+#liSTfooter .ThreeBTN2 {
+    font-size:12px;
+}
 .Step5TOP {
     padding: 6px 12px;
 }
@@ -2603,7 +2607,7 @@ a.iframe-info.cboxElement {
 
     .buydivmove {
         top: 107px;
-        outline: 1px solid #f00;
+        /* outline: 1px solid #f00; */
     }
 
     #slider ul li {

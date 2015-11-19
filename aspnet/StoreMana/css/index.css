@@ -2554,6 +2554,10 @@ a.iframe-info.cboxElement {
     background-color: #FFF !important;
     color: #fd9a33 !important;
 }
+#liSTfooter .ThreeBTN,
+#liSTfooter .ThreeBTN2 {
+    font-size:12px !important;
+}
 .Step5TOP {
     padding: 6px 12px;
 }
