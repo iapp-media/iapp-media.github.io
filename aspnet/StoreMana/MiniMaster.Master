@@ -59,6 +59,11 @@
                             <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/store-bstage.png" />
                             </a>
+                             <div>
+                                <h3 class="FixTitle">
+                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                                </h3>
+                            </div>
                         </div>
                     </div>
                     <!-- 主題下拉選單（共用） -->
