@@ -2534,6 +2534,17 @@ float:left;
     }
 }
 
+@media only screen and (max-width: 355px) {
+    .item {
+        float: left;
+        padding: 0px;
+        width: 148px;
+    }
+        .item button {
+            font-size: 16px;
+        }
+}
+
 @media screen and (orientation: portrait) {}
 
 @media screen and (orientation: landscape) {

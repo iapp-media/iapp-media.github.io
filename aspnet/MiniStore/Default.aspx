@@ -30,7 +30,6 @@
                     <input type="submit" name="name" value="結帳" class="btn btn-warning col-xs-12 sendcareButtomeEnd" />
                  </div>
             </div>    
-            
         </div>
     </div>
 
