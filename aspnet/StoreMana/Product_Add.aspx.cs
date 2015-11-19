@@ -205,7 +205,11 @@ namespace StoreMana.Mini
                 return;
             }
 
-            Main.NonQuery("delete product where idno=@pid");
+            int a = Main.NonQuery("delete product where idno=@pid");
+            if (a > 0)
+            {
+                Response.Redirect("Product_Mana.aspx");
+            }
         }
     }
 }

@@ -20,8 +20,7 @@ namespace StoreMana
             if (!IsPostBack)
             {
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 ", "Cate_Name", "IDNo");
-                Main.FillDDP(DL_Cate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 ", "Cate_Name", "IDNo"); 
-                Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+                 Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
                 Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
 
                 Main.ParaClear();
@@ -260,6 +259,15 @@ namespace StoreMana
         {
             loadImg();
             System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "upStep(6)", true);  
+        }
+
+        protected void DLSCate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DLSCate.SelectedValue.ToString() != "")
+            {
+                Main.FillDDP(DL_Cate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref='" + DLSCate.SelectedValue.ToString() + "'", "Cate_Name", "IDNo");
+            }
+
         }
  
     }

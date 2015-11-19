@@ -104,7 +104,7 @@
                                         <p>商品類別</p>
                                     </div>
                                 </div>
-                                <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control">
+                                <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control" OnSelectedIndexChanged="DLSCate_SelectedIndexChanged" AutoPostBack="true">
                                 </asp:DropDownList>
                                 <div class="col-xs-12 libor CBbot">
                                     <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClick="BTStep1_Click" CssClass="ThreeBTN" />
