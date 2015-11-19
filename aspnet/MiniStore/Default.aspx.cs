@@ -29,8 +29,7 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                        ShowData("5");
-                        //ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
+                        ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
                     }
                 }
             }
@@ -60,7 +59,8 @@ namespace MiniStore
 
             if (obj == "5")
             {
-                
+                Fast.Visible = true;
+                Basic.Visible = false;
                 StringBuilder ss = new StringBuilder();
                 DataTable dr = Main.GetDataSetNoNull(str);
                 if (dr.Rows.Count > 0)
@@ -100,6 +100,8 @@ namespace MiniStore
             }
             else
             {
+                Fast.Visible = false;
+                Basic.Visible = true;
                 StringBuilder ss = new StringBuilder();
                 DataTable dr = Main.GetDataSetNoNull(str);
                 if (dr.Rows.Count > 0)

@@ -252,7 +252,7 @@ namespace StoreMana
         protected void BTStep6_Click(object sender, EventArgs e)
         {
             //要總確認嗎?
-            Response.Redirect("../../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") + "");
+            Response.Redirect("../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") + "");
         }
 
         protected void upStep6_Click(object sender, EventArgs e)

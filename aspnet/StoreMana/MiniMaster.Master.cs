@@ -23,10 +23,10 @@ namespace StoreMana.Mini
 
                 Main.ParaClear();
                 Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
-                if (Main.Scalar("Select isnull(Store_Cate,0) from Store_info where IDNo=@SID") == "0")
+                if (Main.Scalar("Select isnull(Store_Cate,0) from Store_info where store_id=@SID") == "0")
                 {
                     Response.Redirect("ThreeOpen.aspx");
-                    return;
+                    
                 }
 
                 string SNID = Main.Scalar("Select Store_NID from Store where idno=@SID");
