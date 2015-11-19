@@ -20,7 +20,7 @@
       <publishTime>11/19/2015 15:20:56</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/19/2015 16:48:42</publishTime>
+      <publishTime>11/19/2015 18:24:26</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/19/2015 17:27:56</publishTime>
+      <publishTime>11/19/2015 18:24:16</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:32:32</publishTime>
@@ -215,7 +215,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/19/2015 16:37:06</publishTime>
+      <publishTime>11/19/2015 18:22:39</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -251,10 +251,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>11/19/2015 15:20:56</publishTime>
+      <publishTime>11/19/2015 18:11:59</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/19/2015 17:47:42</publishTime>
+      <publishTime>11/19/2015 18:24:26</publishTime>
     </File>
   </ItemGroup>
 </Project>

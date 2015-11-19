@@ -373,7 +373,7 @@
                                     <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
                                 </div>
                                 <div class="col-xs-12 libor CBbot">
-                                    <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN" />
+                                    <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN tinDownOut1" />
                                 </div>
                                 <div class="clearfix"></div>
                             </ContentTemplate>

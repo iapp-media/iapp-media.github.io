@@ -49,15 +49,6 @@ namespace StoreMana.Mini {
         protected global::System.Web.UI.WebControls.Literal Store_Name;
         
         /// <summary>
-        /// menu_QR 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal menu_QR;
-        
-        /// <summary>
         /// LGoMini 控制項。
         /// </summary>
         /// <remarks>
@@ -74,6 +65,15 @@ namespace StoreMana.Mini {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LBLogout;
+        
+        /// <summary>
+        /// menu_QR 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal menu_QR;
         
         /// <summary>
         /// ContentPlaceHolder1 控制項。

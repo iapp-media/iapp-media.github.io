@@ -1855,8 +1855,7 @@ a.iframe-info.cboxElement {
     height: 100%;
 }
 
-.theme li:nth-child(1),
-.theme li:nth-child(3) {
+.theme li:nth-child(1), .theme li:nth-child(9) {
     background-color: #ff9933;
     margin: 0;
     padding: 0;
@@ -2590,6 +2589,32 @@ a.iframe-info.cboxElement {
 }
 #Step6 .CBbot {
     padding:6px 12px;
+}
+.tinDownOut1 {
+    -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87,-.41,.19,1.44);
+}
+@keyframes tinDownOut1 {
+    0%,
+    10% {
+        transform: rotateZ(0deg);
+        -ms--ms-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+    4%,
+    8% {
+        transform: perspective(200px) rotateZ(10deg);
+        -ms-transform: perspective(200px) rotateZ(10deg);
+        -moz-transform: perspective(200px) rotateZ(10deg);
+        -webkit-transform: perspective(200px) rotateZ(10deg);
+    }
+    2%,
+    6% {
+        transform: perspective(200px) rotateZ(-10deg);
+        -ms-transform: perspective(200px) rotateZ(-10deg);
+        -moz-transform: perspective(200px) rotateZ(-10deg);
+        -webkit-transform: perspective(200px) rotateZ(-10deg);
+    }
 }
     
 @media only screen and (max-width:480px) {
