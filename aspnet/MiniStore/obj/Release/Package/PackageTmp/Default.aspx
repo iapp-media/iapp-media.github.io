@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="product" runat="server" id="Fast">
+        <div class="product" runat="server" id="Fast" visible="false">
             <div id="FastBox">
                 <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
                 <div class="clearfix"></div>
