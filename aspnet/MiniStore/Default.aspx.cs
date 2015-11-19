@@ -41,24 +41,26 @@ namespace MiniStore
             Main.ParaClear();
             Main.ParaAdd("@SID", SID, SqlDbType.NVarChar);
             Main.ParaAdd("@MyID", Comm.User_ID(), SqlDbType.Int);
-            str = "select a.IDNo,Product_Name,Price,b.FilePath,a.qty,isnull(c.qty,0) as carbaby ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK" +
-                " from Product a inner join Product_Img b on a.IDNo=b.Product_ID " +
-                "  left join ShoppingCart c on c.Product_ID=a.IDNo and c.User_ID=@MyID where b.Num=1 and a.store_id=@SID ";
-             
-            if (Request.QueryString["c"] != null)
-            {
-                Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar); 
-                str += " and cate_id=@cate_id ";
-            }
-            if (Request.QueryString["w"] != null)               //關鍵字
-            {
-                str += " and ( Product_Name Like @KW or Price like @KW )  ";
-                //HL1.NavigateUrl += "&t=" + Request.QueryString["w"];
-                Main.ParaAdd("@KW", "%" + HttpUtility.UrlDecode(Request.QueryString["w"]) + "%", SqlDbType.NVarChar);
-            }
+ 
 
             if (obj == "5")
-            {
+            { 
+                str = "select a.IDNo,Product_Name,Price,b.FilePath,a.qty,isnull(c.qty,0) as carbaby ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK" +
+    " from Product a inner join Product_Img b on a.IDNo=b.Product_ID " +
+    "  left join ShoppingCart c on c.Product_ID=a.IDNo and c.User_ID=@MyID where b.Num=1 and a.store_id=@SID ";
+
+                if (Request.QueryString["c"] != null)
+                {
+                    Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar);
+                    str += " and cate_id=@cate_id ";
+                }
+                if (Request.QueryString["w"] != null)               //關鍵字
+                {
+                    str += " and ( Product_Name Like @KW or Price like @KW )  ";
+                    //HL1.NavigateUrl += "&t=" + Request.QueryString["w"];
+                    Main.ParaAdd("@KW", "%" + HttpUtility.UrlDecode(Request.QueryString["w"]) + "%", SqlDbType.NVarChar);
+                }
+
                 Fast.Visible = true;
                 Basic.Visible = false;
                 StringBuilder ss = new StringBuilder();
@@ -100,6 +102,21 @@ namespace MiniStore
             }
             else
             {
+                str = "select a.IDNo,Product_Name,Price,b.FilePath,a.qty ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK" +
+                      " from Product a inner join Product_Img b on a.IDNo=b.Product_ID where b.Num=1 and a.store_id=@SID ";
+
+                if (Request.QueryString["c"] != null)
+                {
+                    Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar);
+                    str += " and cate_id=@cate_id ";
+                }
+                if (Request.QueryString["w"] != null)               //關鍵字
+                {
+                    str += " and ( Product_Name Like @KW or Price like @KW )  ";
+                    //HL1.NavigateUrl += "&t=" + Request.QueryString["w"];
+                    Main.ParaAdd("@KW", "%" + HttpUtility.UrlDecode(Request.QueryString["w"]) + "%", SqlDbType.NVarChar);
+                }
+
                 Fast.Visible = false;
                 Basic.Visible = true;
                 StringBuilder ss = new StringBuilder();

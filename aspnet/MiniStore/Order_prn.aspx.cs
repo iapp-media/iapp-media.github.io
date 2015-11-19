@@ -93,7 +93,7 @@ namespace MiniStore
 
                 }
             }
-            Response.Redirect("Order_history.aspx"); 
+            Response.Redirect("Order_history.aspx?sn=" + Request.QueryString["SN"] + "");
         }
 
         public string ShowImg(object IDNO)
