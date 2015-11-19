@@ -106,7 +106,7 @@
                                 </div>
                                 <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control">
                                 </asp:DropDownList>
-                                <div class="col-xs-12 libor CBbot CBBTN ">
+                                <div class="col-xs-12 libor CBbot">
                                     <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClick="BTStep1_Click" CssClass="ThreeBTN" />
                                 </div>
                                 <div class="clearfix"></div>
@@ -137,10 +137,10 @@
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <div class="col-xs-4 libor CBbot CBBTN">
+                                <div class="col-xs-4 libor CBbot">
                                     <button id="upStep2" onclick="upStep(2)" class="ThreeBTN2">上一步</button>
                                 </div>
-                                <div class="col-xs-7 libor CBbot CBBTN TalkR">
+                                <div class="col-xs-7 libor CBbot TalkR">
                                     <asp:Button runat="server" Text="下一步" ID="BTStep2" OnClick="BTStep2_Click" CssClass="ThreeBTN" />
                                 </div>
                                 <div class="clearfix"></div>
@@ -187,10 +187,10 @@
                                     <p>聯絡地址</p>
                                     <asp:TextBox ID="TBAddr" runat="server" CssClass="form-control magclose"></asp:TextBox>
                                 </div>
-                                <div class="col-xs-4 libor CBbot CBBTN ">
+                                <div class="col-xs-4 libor CBbot ">
                                     <button id="upStep3" onclick="upStep(3)" class="ThreeBTN2">上一步</button>
                                 </div>
-                                <div class="col-xs-7 libor CBbot CBBTN TalkR">
+                                <div class="col-xs-7 libor CBbot TalkR">
                                     <asp:Button runat="server" Text="下一步" ID="BTStep3" OnClick="BTStep3_Click" CssClass="ThreeBTN" />
                                 </div>
                                 <div class="clearfix"></div>
@@ -220,10 +220,10 @@
                                         </asp:CheckBoxList>
                                     </div>
                                 </div>
-                                <div class="col-xs-4 libor CBbot CBBTN ">
+                                <div class="col-xs-4 libor CBbot">
                                     <button id="upStep4" onclick="upStep(4)" class="ThreeBTN2">上一步</button>
                                 </div>
-                                <div class="col-xs-7 libor CBbot CBBTN TalkR">
+                                <div class="col-xs-7 libor CBbot TalkR">
                                     <asp:Button runat="server" Text="下一步" ID="BTStep4" OnClick="BTStep4_Click" CssClass="ThreeBTN" />
                                 </div>
                                 <div class="clearfix"></div>
@@ -336,10 +336,10 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 Step5Bot">
-                            <div class="col-xs-4 libor CBbot  CBBTN ">
+                            <div class="col-xs-4 libor CBbot">
                                 <button id="upStep5" onclick="upStep(5)" class="ThreeBTN2">上一步</button>
                             </div>
-                            <div class="col-xs-7 libor CBbot  CBBTN TalkR">
+                            <div class="col-xs-7 libor CBbot TalkR">
                                 <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" CssClass="ThreeBTN" />
                             </div>
                                 </div>
