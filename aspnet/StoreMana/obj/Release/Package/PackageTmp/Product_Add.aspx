@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MiniMaster.Master" AutoEventWireup="true" CodeBehind="Product_Add.aspx.cs" Inherits="StoreMana.Mini.Product_Add" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="css/slider.css"  />
     <link rel="stylesheet" type="text/css" href="css/cropper.css" />
     <link rel="stylesheet" type="text/css" href="css/mobileEditor.css" />
     <script src="js/exif.js"></script>
@@ -88,7 +89,7 @@
                             <p class="BTleft">商品圖片</p>
                         </div>
                     </div>
-                    <div id="slider" class="col-xs-12">
+                    <div id="slider">
                         <div class="control_next glyphicon glyphicon-chevron-right"></div>
                         <div class="control_prev glyphicon glyphicon-chevron-left"></div>
                         <asp:Literal ID="L_Img" runat="server"></asp:Literal>
