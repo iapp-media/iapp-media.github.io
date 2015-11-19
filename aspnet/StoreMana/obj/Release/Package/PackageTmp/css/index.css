@@ -548,17 +548,14 @@ a:active {
     float: left;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
-
-
-/*Contentmid & slider*/
-
-/*#slider {
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 4px;
-    float: right;
+#slider {
+   margin-bottom:15px;
 }
+
+
+
+/*Contentmid & slider
+
 
 #slider ul {
     position: relative;
@@ -2556,7 +2553,9 @@ a.iframe-info.cboxElement {
 }
 #liSTfooter .ThreeBTN,
 #liSTfooter .ThreeBTN2 {
-    font-size:12px;
+    font-size:12px !important;
+    padding: 3px 6px;
+    letter-spacing: 0;
 }
 .Step5TOP {
     padding: 6px 12px;
