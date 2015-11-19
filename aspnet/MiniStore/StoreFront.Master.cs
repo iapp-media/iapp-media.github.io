@@ -58,7 +58,7 @@ namespace MiniStore
                 //    return;
                 //}
 
-                menu_QR.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.MiStoreUrl + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>";
+                menu_QR.Text = "<a href=\"" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.MiStoreUrl + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>";
 
 
                 LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">"+
@@ -76,7 +76,9 @@ namespace MiniStore
                 Main.ParaClear();
                 Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
 
-                Store_Name.Text = Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )");
+                Store_Name.Text = "<a class=\"navbar-brand\" href=\"default.aspx?sn=" + Request.QueryString["SN"] + "\"> <img class=\"iapplogo\" src=\"img/ministorelogo.png\" />" +
+           " </a><div><h3 class=\"FixTitle\">" + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + "</h3></div>";
+
                 DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID=@SN )");
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {

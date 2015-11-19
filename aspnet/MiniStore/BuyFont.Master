@@ -55,14 +55,15 @@
                 <div class="container-fluid">
                     <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
                         <div class="row">
-                            <a class="navbar-brand" href="default.aspx">
+                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+
+<%--                            <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/ministorelogo.png" />
                             </a>
                               <div>
                                 <h3 class="FixTitle">
-                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
                                 </h3>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                     <!-- 主題下拉選單（共用） -->

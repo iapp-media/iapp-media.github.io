@@ -86,7 +86,7 @@ namespace MiniStore
                         ss.Append("                </div>" + "\n\r");
                         ss.Append("<div class=\"MonBoxR\">");
                         ss.Append("                <span class=\"input-number-decrement\" onclick='minus(" + dw["IDNo"].ToString() + ")'>–</span>" + "\n\r");
-                        ss.Append("                <input id=\"Num_" + dw["IDNo"].ToString() + "\" name=\"\" type=\"number\" value=\"" + dw["carbaby"].ToString() + "\" class=\"input-number\">" + "\n\r");
+                        ss.Append("                <input id=\"Num_" + dw["IDNo"].ToString() + "\" name=\"\" type=\"number\" value=\"" + dw["carbaby"].ToString() + "\" class=\"input-number\"  disabled=\"disabled\">" + "\n\r");
                         ss.Append("                <span class=\"input-number-increment\" onclick='plus(" + dw["IDNo"].ToString() + "," + dw["qty"].ToString() + ")'>+ </span>" + "\n\r");
                         ss.Append("</div>");
                         ss.Append("            </div>" + "\n\r");
