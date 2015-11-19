@@ -30,7 +30,7 @@
                                             <h3><%# Eval("Name") %></h3>
                                             <div class="MonBox">
                                                 <p>價錢</p>
-                                                <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total") %></span>
+                                                <span runat="server" id="Dtotal" class="TBC">$<%# Eval("Total") %></span>
                                             </div>
                                             <span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>
                                             <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>

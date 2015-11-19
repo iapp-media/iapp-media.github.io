@@ -164,26 +164,23 @@ $(document).ready(function() {
 
     //products slider
     jQuery(document).ready(function ($) {
-
-        $('#checkbox').change(function () {
-            setInterval(function () {
-                moveRight();
-            }, 3000);
-        });
-
         var slideCount = $('#slider ul li').length;
         var slideWidth = $('#slider ul li').width();
         var slideHeight = $('#slider ul li').height();
         var sliderUlWidth = slideCount * slideWidth;
+        var sliderW2 = $('#slider').width();
+        console.log('slider寬' + sliderW2);
 
         $('#slider').css({
-            width: slideWidth,
-            height: slideHeight
+            width: sliderW2
         });
 
         $('#slider ul').css({
-            width: sliderUlWidth,
+            width: sliderW2 * 4,
             marginLeft: -slideWidth
+        });
+        $('#slider ul li').css({
+            width: sliderW2
         });
 
         $('#slider ul li:last-child').prependTo('#slider ul');

@@ -20,11 +20,11 @@
                                 <h3><%# Eval("Name") %></h3>
                                 <div class="MonBox">
                                     <p>價錢</p>
-                                    <span runat="server" id="Dtotal" class="TOC">$<%# Eval("Total","{0:0.####}") %></span>
+                                    <span runat="server" id="Dtotal" class="TBC">$<%# Eval("Total","{0:0.####}") %></span>
                                 </div>
                                 <div class="MonBox">
                                     <p>數量</p>
-                                    <span runat="server" id="Qty" class="TOC"><%# Eval("qty") %></span>
+                                    <span runat="server" id="Qty" class="TBC"><%# Eval("qty") %></span>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                                     <p class="BoxLeft TBC">應付金額</p>
                                 </div>
                                 <div class="col-xs-8">
-                                    <div class="ValueRight TBC">
+                                    <div class="ValueRight TRC">
                                         <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Cost")%>'></asp:Literal>
                                     </div>
                                 </div>

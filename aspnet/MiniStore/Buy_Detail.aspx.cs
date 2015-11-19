@@ -33,7 +33,7 @@ namespace MiniStore
                         Response.Redirect("Default.aspx?SN='" + Request.QueryString["SN"] + "'");
                     }
 
-                    if (Comm.User_ID() == -1)
+                    if (Comm.User_ID() != -1)
                     {
                         Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int); 
                     }

@@ -31,7 +31,7 @@
     <!-- End for apple -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css"  />
-    <link href="css/slider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/slider.css"  />
     <link rel="stylesheet" href="css/cropper.css" />
     <link rel="stylesheet" href="css/mobileEditor.css" />
     

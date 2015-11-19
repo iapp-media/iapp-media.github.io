@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/19/2015 10:10:26</publishTime>
+      <publishTime>11/19/2015 10:45:12</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/19/2015 10:28:21</publishTime>
+      <publishTime>11/19/2015 10:54:43</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -29,7 +29,7 @@
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="Buy_Ctrl.aspx">
-      <publishTime>11/16/2015 18:00:36</publishTime>
+      <publishTime>11/19/2015 10:57:23</publishTime>
     </File>
     <File Include="Buy_Detail.aspx">
       <publishTime>11/16/2015 10:58:47</publishTime>
@@ -44,7 +44,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/19/2015 10:06:29</publishTime>
+      <publishTime>11/19/2015 10:50:32</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/17/2015 14:45:29</publishTime>
@@ -326,7 +326,7 @@
       <publishTime>11/13/2015 16:14:44</publishTime>
     </File>
     <File Include="Order_prn.aspx">
-      <publishTime>11/16/2015 18:00:36</publishTime>
+      <publishTime>11/19/2015 10:58:22</publishTime>
     </File>
     <File Include="Product_Detail.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -347,7 +347,7 @@
       <publishTime>11/17/2015 15:46:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/19/2015 10:28:21</publishTime>
+      <publishTime>11/19/2015 10:59:26</publishTime>
     </File>
   </ItemGroup>
 </Project>
