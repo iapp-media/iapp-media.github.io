@@ -29,8 +29,8 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-
-                        ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
+                        ShowData("5");
+                        //ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
                     }
                 }
             }
@@ -80,7 +80,7 @@ namespace MiniStore
                         ss.Append("            <div class=\"Detailsmid\">" + "\n\r");
                         ss.Append("                <h3>" + dw["Product_Name"].ToString() + "</h3>" + "\n\r");
                         ss.Append("                <div class=\"MonBoxL\">" + "\n\r"); 
-                        ss.Append("                    <span class=\"TOC\">NT$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</span>" + "\n\r");
+                        ss.Append("                    <span class=\"TOC\">$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</span>" + "\n\r");
                         ss.Append("                </div>" + "\n\r");
                         ss.Append("<div class=\"MonBoxR\">");
                         ss.Append("                <span class=\"input-number-decrement\" onclick='minus(" + dw["IDNo"].ToString() + ")'>–</span>" + "\n\r");
@@ -138,7 +138,7 @@ namespace MiniStore
                         ss.Append("         </div>" + "\n");
                         ss.Append("     </div>" + "\n");
                         ss.Append("     <div class='col-xs-12 FrontBot'>" + "\n\r");
-                        ss.Append("         <p class='iapp-name col-xs-8'>$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</p>" + "\n\r");
+                        ss.Append("         <p class='iapp-name col-xs-8'>NT$" + string.Format("{0:#,##0}", Main.Cint2(dw["Price"].ToString())) + "</p>" + "\n\r");
                         ss.Append("        <button  class='col-xs-4'> <a href='Buy_Add.aspx?entry=" + dw["IDNo"].ToString() + "&SN=" + Request.QueryString["SN"] + "'>購買</a></button>" + "\n\r");
                         ss.Append("     </div>" + "\n");
                         ss.Append("  </div>" + "\n");
@@ -152,6 +152,11 @@ namespace MiniStore
                 LData.Text = ss.ToString();
             }
          
+        }
+
+        protected void BTFast_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Buy_Ctrl.aspx?sn=" + Request.QueryString["SN"] + "");
         }
     }
 }

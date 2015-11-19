@@ -26,6 +26,7 @@
     <div class="buydivmove">
         <div class="col-xs-12 insidecare">
             <div class="row">
+ 
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC">
                     <div class="col-xs-4">
                         <div class="row">
@@ -51,11 +52,22 @@
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">
+                            <p class="BoxLeft">選購情境</p>
+                        </div>
+                    </div>
+                    <asp:DropDownList ID="DLlayout" runat="server"  CssClass="form-control">
+                        <asp:ListItem Value="0">basic基本場景</asp:ListItem>
+                        <asp:ListItem Value="5">fast 快速場景</asp:ListItem>
+                    </asp:DropDownList> 
+                </div>
+<%--                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
                             <p class="BoxLeft">店家帳號</p>
                         </div>
                     </div>
                     <asp:TextBox ID="TBStoreNID" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>
+                </div>--%>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">

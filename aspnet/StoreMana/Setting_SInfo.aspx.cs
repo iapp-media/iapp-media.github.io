@@ -19,7 +19,7 @@ namespace StoreMana
             {
                 Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
                 Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
-                TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Comm.Store_ID() + "'");
+             //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Comm.Store_ID() + "'");
                 DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Comm.Store_ID() + "'");
                 if (DT.Rows.Count > 0)
                 {
@@ -49,6 +49,7 @@ namespace StoreMana
                     TBTEL.Text = DT.Rows[0]["TEL"].ToString();
                     TBCEO.Text = DT.Rows[0]["CEOName"].ToString();
 
+                    Comm.GetDDL(DLlayout, DT.Rows[0]["layout"].ToString());
 
                     strBankName = DT.Rows[0]["Bank_Name"].ToString();
                     strBankNo = DT.Rows[0]["Bank_No"].ToString();
@@ -90,7 +91,7 @@ namespace StoreMana
             Main.ParaClear();
             Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
             Main.ParaAdd("@Store_Name", TBName.Text, System.Data.SqlDbType.NVarChar);
-
+            Main.ParaAdd("@layout", DLlayout.SelectedValue.ToString(), System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Bank_Name", TBBankName.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Bank_No", TBBankNo.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Bank_ACC", TBACC.Text, System.Data.SqlDbType.NVarChar);
@@ -100,7 +101,7 @@ namespace StoreMana
             Main.ParaAdd("@Addr", TBAddr.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@TEL", TBTEL.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@CEOName", TBCEO.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@TBStoreNID", TBStoreNID.Text, System.Data.SqlDbType.NVarChar);
+           // Main.ParaAdd("@TBStoreNID", TBStoreNID.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@NotPayment", NotPayment, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@NotDelivery", NotDelivery, System.Data.SqlDbType.NVarChar);
 
@@ -141,12 +142,12 @@ namespace StoreMana
 
 
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@Store_ID ) " +
-                    "insert into Store_info(Store_ID, Store_Name,Bank_Name,Bank_No, Bank_ACC, Bank_ACName, Payment, Delivery, Addr, TEL, CEOName)" +
-                    "values (@Store_ID, @Store_Name,@Bank_Name,@Bank_No, @Bank_ACC, @Bank_ACName, @Payment, @Delivery, @Addr, @TEL, @CEOName) else " +
+                    "insert into Store_info(Store_ID, Store_Name,Bank_Name,Bank_No, Bank_ACC, Bank_ACName, Payment, Delivery, Addr, TEL, CEOName,layout)" +
+                    "values (@Store_ID, @Store_Name,@Bank_Name,@Bank_No, @Bank_ACC, @Bank_ACName, @Payment, @Delivery, @Addr, @TEL, @CEOName,@layout) else " +
                     "update Store_info set Store_Name=@Store_Name,Bank_Name=@Bank_Name,Bank_No=@Bank_No, Bank_ACC=@Bank_ACC, Bank_ACName=@Bank_ACName, " +
-                    " Payment=@Payment, Delivery=@Delivery, Addr=@Addr, TEL=@TEL, CEOName=@CEOName where  Store_ID=@Store_ID");
+                    " Payment=@Payment, Delivery=@Delivery, Addr=@Addr, TEL=@TEL, CEOName=@CEOName,layout=@layout where  Store_ID=@Store_ID");
 
-            Main.NonQuery("update store set Store_NID=@TBStoreNID where idno=@Store_ID ");
+           // Main.NonQuery("update store set Store_NID=@TBStoreNID where idno=@Store_ID ");
 
         }
     }
