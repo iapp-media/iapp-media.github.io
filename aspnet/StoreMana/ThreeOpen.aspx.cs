@@ -19,7 +19,7 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 ", "Cate_Name", "IDNo");
+                Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
                  Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
                 Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
 
