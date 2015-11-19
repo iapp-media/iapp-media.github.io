@@ -11,16 +11,25 @@ namespace StoreMana
     {
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
-
+        string str = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                Main.FillDDP(DL, "select * from Product_Cate WHERE STORE_ID='" + Comm.Store_ID() + "'", "Cate_Name", "IDNO");
+                Main.ParaClear();
+                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+
+                str = "select * from Product_Cate where store_id=@SID  union all " +
+                      " select * from Product_Cate where ref in ( " +
+                      " select Store_Cate from Store_info where Store_ID=@SID)";
+
+                Main.FillDDP(DL, str, "Cate_Name", "IDNO");
+
+
                 L.Text = " Select a.IDNo,a.Product_Name,Replace(Convert(varchar(20),CONVERT(money,Price),1),'.00','') Price,CONVERT(varchar(12), a.Creat_Date, 111) AS CDate ,b.FilePath " +
-                         " From product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 " +
-                         " where Tmp_IDNo > 0 AND  STORE_ID='" + Comm.Store_ID() + "' ";
+                        " From product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 " +
+                        " where Tmp_IDNo > 0 AND  STORE_ID='" + Comm.Store_ID() + "' ";
                 SD1.SelectCommand = L.Text;
                 SD1.ConnectionString = Main.ConnStr;
                 RP1.DataSourceID = SD1.ID;

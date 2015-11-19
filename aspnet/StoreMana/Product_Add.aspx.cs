@@ -21,7 +21,11 @@ namespace StoreMana.Mini
             {
                 Main.ParaClear();
                 Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
-                Main.FillDDP(DL_Cate, "select * from Product_Cate where store_id=@SID", "Cate_Name", "IDNO");
+                str = "select * from Product_Cate where store_id=@SID  union all " +
+                      " select * from Product_Cate where ref in ( " +
+                      " select Store_Cate from Store_info where Store_ID=@SID)";
+
+                Main.FillDDP(DL_Cate, str, "Cate_Name", "IDNO");
 
                 Getentry();
                 loadImg();
