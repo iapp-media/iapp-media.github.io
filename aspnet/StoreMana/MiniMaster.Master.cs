@@ -28,7 +28,7 @@ namespace StoreMana.Mini
                     Response.Redirect("ThreeOpen.aspx");
                     
                 }
-                Store_Name.Text = "Select Store_Name from store_info where Store_ID=@SID";
+                Store_Name.Text = Main.Scalar("Select Store_Name from store_info where Store_ID=@SID");
                 string SNID = Main.Scalar("Select Store_NID from Store where idno=@SID");
                 menu_QR.Text = "<a href=\"" + Comm.MiStoreUrl + "Default.aspx?SN=" + SNID + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.MiStoreUrl + "Default.aspx?SN=" + SNID + "&Intr=" + Comm.User_ID() +"\" alt=\"\" class=\"QRcode\"> </a>";
                 LGoMini.Text = "<li><a href=\"../../MiniStore/Default.aspx?SN=" + SNID + "\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>回iApp微店</a></li>";
