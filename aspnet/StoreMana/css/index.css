@@ -2603,7 +2603,7 @@ a.iframe-info.cboxElement {
 
     .buydivmove {
         top: 107px;
-        outline: 1px solid #f00;
+        /* outline: 1px solid #f00; */
     }
 
     #slider ul li {
