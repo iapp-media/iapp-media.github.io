@@ -17,10 +17,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/19/2015 10:45:12</publishTime>
+      <publishTime>11/19/2015 14:01:15</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/19/2015 12:08:08</publishTime>
+      <publishTime>11/19/2015 14:01:15</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/19/2015 11:35:25</publishTime>
+      <publishTime>11/19/2015 14:14:44</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:32:32</publishTime>
@@ -179,7 +179,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>11/19/2015 11:05:45</publishTime>
+      <publishTime>11/19/2015 14:08:36</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -254,7 +254,7 @@
       <publishTime>11/19/2015 11:38:19</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/19/2015 12:43:49</publishTime>
+      <publishTime>11/19/2015 14:14:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

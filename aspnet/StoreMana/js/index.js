@@ -56,14 +56,6 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
-    //$('.clickslider').click(function () {
-    //    $('.upload-img').show(function () {
-    //        $('.cancelimgfun, .compress').click(function () {
-    //            $('.upload-img').fadeOut();
-    //        })
-    //    });
-        
-    //})
 
     $(document).ready(function () {
         // window.scrollTo(0, 10);

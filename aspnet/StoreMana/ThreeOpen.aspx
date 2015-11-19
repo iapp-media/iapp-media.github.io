@@ -388,8 +388,7 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
-            console.log('123')
-           
+            
 
             $(document).ready(function () {
                 $('#Step2').hide();
@@ -485,7 +484,6 @@
                             $(".compress").click(function () {
                                 $(".upload-img").hide();
                                 $(".pages").show();
-
                             });
                             $('#inputImage').change(function () {
                                 $('.preview-container').hide();

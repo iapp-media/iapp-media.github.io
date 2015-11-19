@@ -14,10 +14,10 @@
       <publishTime>10/29/2015 09:41:37</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/11/2015 13:54:50</publishTime>
+      <publishTime>11/19/2015 10:45:12</publishTime>
     </File>
     <File Include="bin/Login.dll">
-      <publishTime>11/16/2015 18:28:37</publishTime>
+      <publishTime>11/19/2015 12:56:44</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -167,7 +167,7 @@
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="ME/css/mobileEditor.css">
-      <publishTime>10/29/2015 09:41:38</publishTime>
+      <publishTime>11/19/2015 12:55:13</publishTime>
     </File>
     <File Include="ME/css/processBar.css">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -278,7 +278,7 @@
       <publishTime>10/29/2015 09:41:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/16/2015 18:28:37</publishTime>
+      <publishTime>11/19/2015 12:56:44</publishTime>
     </File>
   </ItemGroup>
 </Project>
