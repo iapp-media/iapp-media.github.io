@@ -16,7 +16,7 @@
                     <div class="col-xs-12 insidecare FBMargin">
                         <div class="row">
 
-                            <div class="col-xs-12 libor payNum pagetitle">
+                            <div class="col-xs-12 libor payNum" id="pagetitle">
                                 <asp:Literal ID="L_Puc" runat="server"></asp:Literal>
                             </div>
                             <asp:Repeater ID="RP1" runat="server">

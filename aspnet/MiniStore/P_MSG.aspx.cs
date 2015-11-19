@@ -24,8 +24,10 @@ namespace MiniStore
                 DataTable DT = Main.GetDataSetNoNull("Select a.Product_Name,a.Price,b.FilePath from product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 where a.idno='" + Request.QueryString["entry"] + "'");
                 if (DT.Rows.Count > 0)
                 {
-                    L_Puc.Text = "<img src='" + DT.Rows[0]["FilePath"] + "' alt='Alternate Text' class='imgH' />" +
-                                 "<div class='rightbox'>" +
+                    L_Puc.Text = "<div class='col-xs-4 leftbox'>" +
+                                 "<img src='" + DT.Rows[0]["FilePath"] + "' alt='Alternate Text' class='imgH' />" +
+                                 "</div>" +
+                                 "<div class='rightbox col-xs-8'>" +
                                  "    <h4>" + DT.Rows[0]["Product_Name"] + "</h4>" +
                                  "    <span>$" + DT.Rows[0]["Price"] + "</span>" +
                                  "    <p></p>" +
