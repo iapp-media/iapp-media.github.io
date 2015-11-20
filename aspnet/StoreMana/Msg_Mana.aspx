@@ -37,7 +37,7 @@
                     <asp:DropDownList class="BTright" ID="DL_Pname" runat="server">
                     </asp:DropDownList>
                 </div>
-                <div class="col-xs-12 BTbox BorObot">
+                <div class="col-xs-12 BTbox">
                     <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning col-xs-12 SBuyCar" OnClick="BT_Search_Click" />
                 </div>
                 <%--                <div class="QMargin col-xs-12">

@@ -134,11 +134,11 @@ namespace StoreMana
             {
                 tmp += ",尚未填寫受款帳戶資訊";
             }
-            if (tmp != "")
-            {
-                this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('儲存失敗" + tmp + "');</script>");
-                return;
-            }
+            //if (tmp != "")
+            //{
+            //    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('儲存失敗" + tmp + "');</script>");
+            //    return;
+            //}
 
 
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@Store_ID ) " +
