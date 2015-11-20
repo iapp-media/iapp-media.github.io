@@ -254,9 +254,10 @@
         font-size: 22px;
         position: fixed;
         left: 0;
-        width: 162px;
         right: 0;
         margin: auto;
+        outline: 1px solid#f00;
+        width: 50%;
         line-height: 77px;
     }
     
@@ -451,6 +452,7 @@
     nav .navbar-brand {
         height: 100%;
         padding: 0;
+        width: 25%;
         outline:1px solid #f00;
     }
     
@@ -749,10 +751,11 @@
         bottom: 0;
         top: 0;
         margin: auto;
-        height: 49px;
         display: flex;
         align-items: center;
+        width: 25%;
         justify-content: center;
+        outline: 1px solid;
     }
     
     .questionBox {
@@ -2416,9 +2419,9 @@
         }
         .Lgallbar {
             /* outline: 1px solid; */
-            width: 20%;
+            /* width: 20%; */
             /* position: absolute; */
-            right: 22px;
+            right: 0px;
             /* top: 0; */
         }
         .search-sm {
@@ -2514,6 +2517,9 @@
         }
         .details h3 {
             font-size: 18px;
+        }
+        .FixTitle {
+                font-size: 18px;
         }
        
     }
