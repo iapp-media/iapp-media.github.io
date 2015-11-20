@@ -168,7 +168,8 @@ $(document).ready(function () {
         spaceBetween: 0,
         initialSlide: 1
     });
-
+    
+    
     //瀑布流
 
     var $container = $('#container');

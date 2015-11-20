@@ -168,6 +168,36 @@ $(document).ready(function () {
         spaceBetween: 0,
         initialSlide: 1
     });
+    
+    //購物車滑動
+    $(function () {
+        var dx,
+            dy,
+            isDown = false,
+            $Buycar = $('#Buycar');
+
+        $Buycar.mousedown(function (event) {
+            dx = event.clientX - $(this).position().left;
+            dy = event.clientY - $(this).position().top;
+            isDown = true;
+        });
+        $Buycar.mouseup(function (event) {
+            isDown = false;
+        });
+
+        $Buycar.mousemove(function (event) {
+            if (!isDown) {
+                return;
+            }
+            var cx = event.clientX - dx;
+            var cy = event.clientY - dy;
+            $(this).css({ left: cx, top: cy });
+
+        });
+
+    });
+
+
 
     //瀑布流
 
