@@ -2662,6 +2662,7 @@ a.iframe-info.cboxElement {
 @media only screen and (max-width:480px) {
     .FixTitle {
         line-height: 60px;
+        font-size:18px;
     }
     .Addbutton {
         width: 50px;
@@ -2887,6 +2888,12 @@ a.iframe-info.cboxElement {
     .ODetailTop {
         top:168px;
     }
+      .FixTitle {
+                font-size: 18px;
+        }
+      .scrollable-menu {
+    max-height: 250px;
+}
 }
 
 @media screen and (orientation: portrait) {}

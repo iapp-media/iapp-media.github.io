@@ -2542,6 +2542,9 @@
         .details h3 {
             font-size: 18px;
         }
+        .FixTitle {
+                font-size: 18px;
+        }
     }
     
     @media only screen and (max-width: 355px) {
@@ -2559,6 +2562,9 @@
         .FixTitle {
                 font-size: 18px;
         }
+        .scrollable-menu {
+    max-height: 250px;
+}
        
     }
     
