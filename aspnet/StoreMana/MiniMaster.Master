@@ -51,6 +51,7 @@
         <!-- facebook(必須寫在最上面) & parse init -->
         <div id="loading">iApp 載入中</div>
         <!-- 導覽列（共用） -->
+        <div class="BGW"></div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="row">
                 <div class="container-fluid">

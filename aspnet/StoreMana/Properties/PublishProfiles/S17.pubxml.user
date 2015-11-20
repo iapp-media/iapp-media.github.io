@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/20/2015 14:26:50</publishTime>
+      <publishTime>11/20/2015 14:56:23</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:32:32</publishTime>
@@ -215,7 +215,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/19/2015 18:22:39</publishTime>
+      <publishTime>11/20/2015 14:50:09</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -254,7 +254,7 @@
       <publishTime>11/19/2015 19:04:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/20/2015 14:27:00</publishTime>
+      <publishTime>11/20/2015 14:56:47</publishTime>
     </File>
   </ItemGroup>
 </Project>
