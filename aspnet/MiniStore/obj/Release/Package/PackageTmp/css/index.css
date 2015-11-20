@@ -250,15 +250,17 @@
     
     .FixTitle {
         text-align: center;
-        color: #ff9933;
-        font-size: 22px;
-        position: fixed;
-        left: 0;
-        right: 0;
-        margin: auto;
-        outline: 1px solid#f00;
-        width: 50%;
-        line-height: 77px;
+    color: #ff9933;
+    font-size: 22px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    line-height: 81px;
+    
+    /* margin: 0; */
+
     }
     
     .MidFonts {
@@ -450,10 +452,12 @@
     }
     
     nav .navbar-brand {
-        height: 100%;
-        padding: 0;
-        width: 25%;
-        outline:1px solid #f00;
+           height: 100%;
+    padding: 0;
+    
+    width: 25%;
+    margin: 0;
+        
     }
     
     .status input,
@@ -470,8 +474,16 @@
     
     .ContentTop {
         display: flex;
-        align-items: center;
-        justify-content: center;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
         background-color: #f93!important;
         height: 60px;
         box-sizing: border-box;
@@ -727,6 +739,9 @@
     
     .navbar-header {
         width: 100px;
+        width: 100%;
+        /* outline: 1px solid blue; */
+        padding: 0;
     }
     
     .Allsearch {
@@ -739,23 +754,27 @@
     }
     
     .container-fluid {
-        /* height: 60px; */
-        /* max-height: 60px; */
-        /* background-color: #fff; */
         position: relative;
     }
     
     .Lgallbar {
-        right: 35px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        width: 25%;
-        justify-content: center;
-        outline: 1px solid;
+        right: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 15%;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
     }
     
     .questionBox {
@@ -919,9 +938,17 @@
         font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, sans-serif;
         max-width: 700px;
         box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+         display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
         font-size: 0;
         padding: 6px 12px;
     }
@@ -1339,8 +1366,16 @@
         right: 0;
         margin: auto;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    
     }
     
     .username-icon h4 {
@@ -2294,6 +2329,9 @@
     }
     
     @media only screen and (max-width:480px) {
+        .container-fluid {
+            padding:0;
+        }
         #FastBox {
             margin: 4px 0 147px 0;
         }
@@ -2418,11 +2456,11 @@
             padding: 0;
         }
         .Lgallbar {
-            /* outline: 1px solid; */
-            /* width: 20%; */
-            /* position: absolute; */
-            right: 0px;
-            /* top: 0; */
+              
+    width: 20%;
+    
+    right: 8px;
+    
         }
         .search-sm {
             display: inline;

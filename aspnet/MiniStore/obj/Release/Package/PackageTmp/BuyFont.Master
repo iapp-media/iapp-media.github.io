@@ -51,10 +51,9 @@
         <div id="loading">iApp 載入中</div>
         <!-- 導覽列（共用） -->
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="row">
+            
                 <div class="container-fluid">
-                    <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
-                        <div class="row">
+                    
                                      <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
 
 <%--                            <a class="navbar-brand" href="default.aspx">
@@ -64,8 +63,7 @@
                                 <h3 class="FixTitle">
                                 </h3>
                             </div>--%>
-                        </div>
-                    </div>
+                     
                     <!-- 主題下拉選單（共用） -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
                         <li class="SandTitle">熱分享</li>
@@ -134,8 +132,8 @@
                             </div>
                         </div>  
                     </div>
-                </div>
-            </div>
+                
+         
         </nav>
         <!-- 會員資料 -->
         <div class="jumbotron">
