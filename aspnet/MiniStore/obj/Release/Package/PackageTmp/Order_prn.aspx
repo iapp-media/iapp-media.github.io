@@ -144,40 +144,40 @@
                                         </HeaderTemplate>
                                         <ItemTemplate>
                                             <div class="ListLen">
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-5">
                                                     <p class="BoxLeft">銀行</p>
                                                 </div>
-                                                <div class="col-xs-8">
+                                                <div class="col-xs-7">
                                                     <div class="ValueRight">
                                                         <asp:Literal ID="Literal9" runat="server" Text='<%# Bind("Bank_Name")%>'></asp:Literal>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="ListLen">
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-5">
                                                     <p class="BoxLeft">銀行代碼</p>
                                                 </div>
-                                                <div class="col-xs-8">
+                                                <div class="col-xs-7">
                                                     <div class="ValueRight">
                                                         <asp:Literal ID="Literal10" runat="server" Text='<%# Bind("Bank_No")%>'></asp:Literal>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="ListLen">
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-5">
                                                     <p class="BoxLeft">銀行戶名</p>
                                                 </div>
-                                                <div class="col-xs-8">
+                                                <div class="col-xs-7">
                                                     <div class="ValueRight">
                                                         <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("Bank_ACName")%>'></asp:Literal>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="ListLen">
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-5">
                                                     <p class="BoxLeft">銀行帳號</p>
                                                 </div>
-                                                <div class="col-xs-8">
+                                                <div class="col-xs-7">
                                                     <div class="ValueRight">
                                                         <asp:Literal ID="Literal11" runat="server" Text='<%# Bind("Bank_ACC")%>'></asp:Literal>
                                                     </div>

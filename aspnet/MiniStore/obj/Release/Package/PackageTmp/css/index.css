@@ -249,8 +249,14 @@
         background-color: #fff;
         margin: 4px 0;
         display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
         align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         padding: 9px 12px;
     }
     
@@ -603,8 +609,14 @@
     
     #pagetitle {
         display: flex;
+        display: -webkit-flex;
+         display: -ms-flex;
         justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
         align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
     }
     
     #pagetitle .leftbox {
@@ -877,9 +889,15 @@
     
     .DetailMbox {
         display: inline-flex;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flex;
         flex-direction: row;
         align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
         background-color: #fff;
         padding: 6px 12px;
         border-bottom: 3px solid #ff9933;
@@ -2577,6 +2595,10 @@
         .scrollable-menu {
     max-height: 250px;
 }
+        .BoxLeft {
+            font-size:15px;
+        }
+        
        
     }
     

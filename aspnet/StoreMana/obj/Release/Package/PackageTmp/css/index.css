@@ -245,7 +245,6 @@ a:active {
 .BTbox .BTleft,
 .BTbox .BTright {
     display: inline-block;
-    padding: 6px 12px;
     font-size: 20px;
     color: #838485;
 }
@@ -353,8 +352,14 @@ a:active {
     padding: 6px 12px;
     /* margin-bottom: 6px; */
     display: flex;
+     display: -webkit-flex;
+     display: -ms-flex;
     justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
     align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
 }
 
 .ProMaBOX:nth-child(odd) {
@@ -2452,7 +2457,7 @@ a.iframe-info.cboxElement {
     text-align: center;
     display: block;
     width: 100%;
-    padding: 6px 12px;
+    padding: 6px 0;
 }
 
 .AddBOt .BTN1 {
@@ -2512,7 +2517,7 @@ a.iframe-info.cboxElement {
     color: #fff;
     display: table;
     line-height: 29px;
-    width: 20%;
+    padding:0 6px;
     text-align: center;
     font-size: 20px;
     border-radius: 20% 0 20% 0 /50% 0 50% 0;
@@ -2590,7 +2595,7 @@ a.iframe-info.cboxElement {
     color: #fff !important;
     border-radius: 4px;
     display: block;
-    padding: 10px 12px;
+    padding: 10px 0;
     width: 100% !important;
 }
 

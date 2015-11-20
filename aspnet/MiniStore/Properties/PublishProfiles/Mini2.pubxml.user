@@ -14,13 +14,13 @@
       <publishTime>11/20/2015 10:56:10</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/20/2015 17:01:47</publishTime>
+      <publishTime>11/20/2015 18:09:11</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>11/20/2015 14:49:14</publishTime>
+      <publishTime>11/20/2015 18:09:03</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -44,7 +44,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/20/2015 16:56:05</publishTime>
+      <publishTime>11/20/2015 18:29:28</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:17:37</publishTime>
@@ -293,7 +293,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>11/20/2015 16:22:46</publishTime>
+      <publishTime>11/20/2015 18:07:11</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -322,11 +322,14 @@
     <File Include="js/swiper.min.js">
       <publishTime>11/09/2015 09:49:59</publishTime>
     </File>
+    <File Include="js/touch.min.js">
+      <publishTime>11/20/2015 17:12:25</publishTime>
+    </File>
     <File Include="Order_history.aspx">
       <publishTime>11/13/2015 16:14:44</publishTime>
     </File>
     <File Include="Order_prn.aspx">
-      <publishTime>11/19/2015 17:43:28</publishTime>
+      <publishTime>11/20/2015 18:20:06</publishTime>
     </File>
     <File Include="Product_Detail.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -347,10 +350,10 @@
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
     <File Include="StoreFront.Master">
-      <publishTime>11/20/2015 14:47:21</publishTime>
+      <publishTime>11/20/2015 18:08:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/20/2015 17:01:47</publishTime>
+      <publishTime>11/20/2015 19:14:36</publishTime>
     </File>
   </ItemGroup>
 </Project>

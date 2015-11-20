@@ -159,17 +159,18 @@ $(document).ready(function() {
         var slideCount = $('#slider ul li').length;
         var slideWidth = $('#slider ul li').width();
         var slideHeight = $('#slider ul li').height();
-        var sliderUlWidth = slideCount * slideWidth;
         var sliderW2 = $('#slider').width();
+        var sliderUlWidth = slideCount * sliderW2;
+        
         console.log('slider寬' + sliderW2);
+        
 
         $('#slider').css({
             width: sliderW2
         });
 
         $('#slider ul').css({
-            width: sliderW2 * 4,
-            marginLeft: -slideWidth
+            width: sliderW2 * slideCount
         });
         $('#slider ul li').css({
             width: sliderW2

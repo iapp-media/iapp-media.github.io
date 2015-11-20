@@ -118,7 +118,7 @@
                 <div id="Step2" class="col-xs-12 minbox ">
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
-                            <span>Step1</span><p>
+                            <span>Step2</span><p>
                                 選擇付款
                             </p>
                         </div>

@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/20/2015 14:56:23</publishTime>
+      <publishTime>11/20/2015 19:12:24</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:32:32</publishTime>
@@ -179,7 +179,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>11/19/2015 15:20:56</publishTime>
+      <publishTime>11/20/2015 19:07:10</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -215,13 +215,13 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/20/2015 14:50:09</publishTime>
+      <publishTime>11/20/2015 18:09:40</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
     </File>
     <File Include="Msg_Mana.aspx">
-      <publishTime>11/10/2015 15:47:02</publishTime>
+      <publishTime>11/20/2015 15:11:32</publishTime>
     </File>
     <File Include="OrderMana.aspx">
       <publishTime>11/19/2015 17:03:16</publishTime>
@@ -233,7 +233,7 @@
       <publishTime>11/19/2015 11:04:55</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>11/17/2015 11:20:35</publishTime>
+      <publishTime>11/20/2015 18:38:38</publishTime>
     </File>
     <File Include="QRcode.ashx">
       <publishTime>11/17/2015 15:46:43</publishTime>
@@ -251,10 +251,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>11/19/2015 19:04:45</publishTime>
+      <publishTime>11/20/2015 16:18:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/20/2015 15:04:30</publishTime>
+      <publishTime>11/20/2015 19:14:20</publishTime>
     </File>
   </ItemGroup>
 </Project>

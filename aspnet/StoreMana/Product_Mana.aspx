@@ -59,15 +59,21 @@
                                             </div>
                                             <div class="ProMain col-xs-8">
                                                 <div class="col-xs-12 ProLPad TtitleC BorTopno">
+                                                    <div class="row">
                                                     <span>
                                                         <asp:Literal ID="Literal1" runat="server" Text='<%# ShowName(Eval("Product_Name"))%>'></asp:Literal>
                                                     </span>
+                                                        </div>
                                                 </div>
                                                 <div class="col-xs-6 ProLPad TRC BorBottompno">
+                                                    <div class="row">
                                                     <asp:Literal ID="Literal2" runat="server" Text='<%# ShowPrice(Eval("Price"))%>'></asp:Literal>
+                                                        </div>
                                                 </div>
                                                 <div class="col-xs-6 ProLPad TGray BorBottompno">
+                                                    <div class="row">
                                                     <asp:Literal ID="Literal3" runat="server" Text='<%# Bind("CDate")%>'></asp:Literal>
+                                                        </div>
                                                 </div>
                                             </div>
                                             <div class="col-xs-1 ProLast">
