@@ -43,7 +43,7 @@ namespace MiniStore
                             Main.ParaClear();
                             Main.ParaAdd("@Store_ID", Main.Cint2(a), SqlDbType.Int);
                             Main.ParaAdd("@FromUser_ID", Main.Cint2(Request.QueryString["Intr"].ToString()), SqlDbType.NVarChar);
-                            Main.ParaAdd("@Customer_ID", Comm.User_ID(), SqlDbType.Int); 
+                            Main.ParaAdd("@Customer_ID", Comm.User_ID(), SqlDbType.Int);
 
                             Main.NonQuery(" insert Store_Customer(Store_ID, FromUser_ID, Customer_ID) values (@Store_ID, @FromUser_ID, @Customer_ID)");
 
@@ -61,7 +61,7 @@ namespace MiniStore
                 menu_QR.Text = "<a href=\"" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>";
 
 
-                LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">"+
+                LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                     " <img class=\"back-top\" src=\"img/cart.png\" /><span/>" +
                     Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
                     "</span> </a>";
@@ -79,13 +79,15 @@ namespace MiniStore
                 Store_Name.Text = "<a class=\"navbar-brand\" href=\"default.aspx?sn=" + Request.QueryString["SN"] + "\"> <img class=\"iapplogo\" src=\"img/ministorelogo.png\" />" +
            " </a><div><h3 class=\"FixTitle\">" + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + "</h3></div>";
 
-                DataTable DT = Main.GetDataSetNoNull("select * from product_cate where Store_ID in (select IDNo from Store where Store_NID=@SN )");
-                for (int i = 0; i < DT.Rows.Count; i++)
+                DataTable DT = Main.GetDataSetNoNull("select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
+                                                     "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@SN ))");
+                if (DT.Rows.Count > 0)
                 {
-                    L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
-                }
-
-
+                    for (int i = 0; i < DT.Rows.Count; i++)
+                    {
+                        L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
+                    }
+                } 
             }
         }
 
