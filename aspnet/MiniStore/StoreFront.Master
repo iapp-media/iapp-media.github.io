@@ -63,6 +63,12 @@
                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal> 
                         </div>
                     </div>
+                     <div class="Lgallbar">
+                        <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                        <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
+                    </div>
                     <!-- 主題下拉選單（共用） -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
                         <li class="SandTitle">熱分享</li>
@@ -92,12 +98,7 @@
                     </div>
                     <!-- Web -->
                     <!-- Web 搜尋bar -->
-                    <div class="Lgallbar">
-                        <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        </button>
-                        <a href="javascript:void(0)" class="menusandwich example1"><span></span></a>
-                    </div>
+                   
                 </div>
             </div>
             <div class="swiper-container">

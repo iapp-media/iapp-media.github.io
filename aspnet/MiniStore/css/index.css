@@ -448,9 +448,10 @@
         height: 40px;
     }
     
-    .navbar-brand {
+    nav .navbar-brand {
         height: 100%;
         padding: 0;
+        outline:1px solid #f00;
     }
     
     .status input,
@@ -2514,6 +2515,7 @@
         .details h3 {
             font-size: 18px;
         }
+       
     }
     
     @media screen and (orientation: portrait) {}
