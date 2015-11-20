@@ -169,7 +169,7 @@ $(document).ready(function () {
         initialSlide: 1
     });
     
-    
+  
     //瀑布流
 
     var $container = $('#container');
