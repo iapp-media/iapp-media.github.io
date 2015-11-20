@@ -961,7 +961,7 @@
     -ms-align-items: center;
     
         font-size: 0;
-        padding: 30px 12px;
+        padding: 15px 12px;
     }
     
     .details:nth-child(odd) {
@@ -980,7 +980,7 @@
     }
     
     .input-number {
-        width: 70%;
+        width: 40%;
         vertical-align: top;
         text-align: center;
         outline: none;
@@ -988,19 +988,20 @@
         float: left;
         font-size: 16px;
         border-radius: 0;
+            padding: 0;
     }
     
     .input-number,
     .input-number-decrement,
     .input-number-increment {
-        height: 30px;
+        line-height:40px;
         user-select: none;
     }
     
     .input-number-decrement,
     .input-number-increment {
         display: inline-block;
-        width: 15%;
+        width: 30%;
         background: #ccc;
         color: #444;
         text-align: center;
@@ -1084,7 +1085,7 @@
     
     #Buycar {
         /* outline:1px solid #f00; */
-        width: 50px;
+        width: 60px;
         height: auto;
         position: fixed;
         bottom: 13%;

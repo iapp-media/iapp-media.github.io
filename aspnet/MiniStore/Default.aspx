@@ -30,7 +30,6 @@
                     <asp:Button ID="BTFast" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BTFast_Click" />
                  </div>
             </div>    
-            
         </div>
     </div>
 

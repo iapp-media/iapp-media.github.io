@@ -29,7 +29,9 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                        ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
+                       //ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
+                        ShowData("5");//basic
+                        ShowData("0");//fast
                     }
                 }
             }
