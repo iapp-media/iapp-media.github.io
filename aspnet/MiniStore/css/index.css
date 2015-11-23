@@ -11,6 +11,7 @@
         background-position: center;
         background-size: cover;
         height: 100%;
+        
     }
 .BGW {
     width:100%;
@@ -2357,6 +2358,11 @@
         bottom: 0;
         max-width: 700px;
     }
+@media only screen and (max-width:767px) {
+     .container-fluid {
+            padding:0;
+        }
+}
     
     @media only screen and (max-width:480px) {
         .container-fluid {

@@ -125,6 +125,7 @@
     <Content Include="js\m-login.js" />
     <Content Include="Login.aspx" />
     <Content Include="m-login.aspx" />
+    <Content Include="m-Profile.aspx" />
     <Content Include="ME\css\action.css" />
     <Content Include="ME\css\cropper.css" />
     <Content Include="ME\css\index.css" />
@@ -196,6 +197,12 @@
     </Compile>
     <Compile Include="m-login.aspx.designer.cs">
       <DependentUpon>m-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="m-Profile.aspx.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="m-Profile.aspx.designer.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ME\m-Profile.aspx.cs">
       <DependentUpon>m-Profile.aspx</DependentUpon>

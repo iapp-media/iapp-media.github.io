@@ -27,7 +27,7 @@
                         <%--                    <form method="post" action="" class="login-input" onsubmit="return checkLogin();">--%>
                         <div class="logo-file">
                             <a id="show-upload" class="#" href="javascrip:void(0)" onclick="callAUL()">
-                                <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/headimg.png" />
+                                <asp:Image ID="p1" CssClass="icon" runat="server" ImageUrl="img/defaulthead.jpg" />
                                 <p>選擇檔案</p>
                             </a>
                         </div>

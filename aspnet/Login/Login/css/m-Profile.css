@@ -4,6 +4,10 @@ html {
 
 body {
     height: 100%;
+     background: url('../img/web-transpage-img.jpg') no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
 }
 
 a {
@@ -21,6 +25,10 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 99;
+    max-width: 700px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 .iapplogo {
