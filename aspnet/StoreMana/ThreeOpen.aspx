@@ -516,6 +516,11 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
+                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                    $('html , body').animate({
+                        scrollTop: 0
+                    });
+                });
             }
             function upStep(obj) {
                 switch (obj) {
@@ -544,6 +549,11 @@
                     var stepindex = $(this).index();
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
+                });
+                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                    $('html , body').animate({
+                        scrollTop: 0
+                    });
                 });
             }
             
