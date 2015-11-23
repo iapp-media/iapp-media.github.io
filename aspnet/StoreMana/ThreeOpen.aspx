@@ -388,9 +388,7 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
-            
-
-            $(document).ready(function () {
+            $(function () {
                 $('#Step2').hide();
                 $('#Step3').hide();
                 $('#Step4').hide();
@@ -428,8 +426,7 @@
                             });
 
                             $('#slider ul').css({
-                                width: sliderW2 * 4,
-                                marginLeft: -slideWidth
+                                width: sliderW2 * 4
                             });
                             $('#slider ul li').css({
                                 width: sliderW2
@@ -534,7 +531,6 @@
                         break;
                 }
             }
-
         </script>
         <script src="js/exif.js"></script>
         <script src="js/JIC.js"></script>
