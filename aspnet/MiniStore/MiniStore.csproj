@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="FrontPage.aspx.cs">
       <DependentUpon>FrontPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontPage.aspx.designer.cs">
       <DependentUpon>FrontPage.aspx</DependentUpon>

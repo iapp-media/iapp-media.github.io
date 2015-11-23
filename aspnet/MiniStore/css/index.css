@@ -1834,11 +1834,36 @@
     }
     
     .questionBox input:first-child,
-    .theme.boxpos a,
-    .swiper-wrapper li:nth-child(3),
-    .theme .boxpos a {
+    .swiper-wrapper li:nth-child(3){
         border: none;
     }
+.boxpos a {
+    display:block;
+}
+    .boxpos a:nth-child(1) {
+       
+        width: 101px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -51px;
+    padding:0;
+    }
+    .boxpos a:nth-child(2) {
+        
+            width: 79px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 13px;
+    margin-top: -41px;
+    padding:0;
+    }
+        .boxpos a:nth-child(2) img,
+        .boxpos a:nth-child(1) img {
+            width:100%;
+        }
     
     .fixBar .sendcareButtom,
     .fixBar.sendcareButtom {
