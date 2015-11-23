@@ -86,8 +86,11 @@
 
                     </div>
                 </div>
-
-                <div id="Step1" class="col-xs-12 ">
+                <ul class="Pagenow">
+                    
+                </ul>
+                <div class="StepAll">
+                <div id="Step1" class="col-xs-12 minbox">
                     <div class="row">
 
                         <div class="col-xs-12 Title Alltitle">
@@ -114,7 +117,6 @@
                         </asp:UpdatePanel>
                     </div>
                 </div>
-
                 <div id="Step2" class="col-xs-12 minbox ">
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
@@ -148,7 +150,6 @@
                         </asp:UpdatePanel>
                     </div>
                 </div>
-
                 <div id="Step3" class="col-xs-12 minbox ">
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
@@ -198,7 +199,6 @@
                         </asp:UpdatePanel>
                     </div>
                 </div>
-
                 <div id="Step4" class="col-xs-12 minbox ">
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
@@ -231,7 +231,6 @@
                         </asp:UpdatePanel>
                     </div>
                 </div>
-
                 <div id="Step5" class="col-xs-12 minbox ">
                     <div class="row">
                         <div class="col-xs-12 Title Alltitle">
@@ -351,7 +350,6 @@
                     </div>
                    
                 </div>
-
                 <div id="Step6" class="col-xs-12 minbox ">
                     <div class="row">
                     <div class="col-xs-12 Title Alltitle">
@@ -380,6 +378,7 @@
                         </asp:UpdatePanel>
                     </div>
                 </div>
+                    </div>
             </div>
         </div>
         <!-- WRAPPER END -->
@@ -388,15 +387,25 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
-            
-
-            $(document).ready(function () {
+            $(function () {
                 $('#Step2').hide();
                 $('#Step3').hide();
                 $('#Step4').hide();
                 $('#Step5').hide();
                 $('#Step6').hide();
+                var steplength = $('div[id*="Step"]').length;
+                for (var i = 1; i <= steplength; i++) {
+                    $('.Pagenow').append('<li>' + i + '</li>');
+                }
+                $('div[id^="Step"]:visible').each(function () {
+                    var stepindex = $(this).index();
+                    console.log(stepindex);
+                    $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
+                });
+               
+                //$('.Pagenow li:first').addClass('BTNactive');
             });
+
             function goStep(obj) {
                 switch (obj) {
                     case 1:
@@ -428,8 +437,7 @@
                             });
 
                             $('#slider ul').css({
-                                width: sliderW2 * 4,
-                                marginLeft: -slideWidth
+                                width: sliderW2 * 4
                             });
                             $('#slider ul li').css({
                                 width: sliderW2
@@ -509,6 +517,11 @@
                         break;
                     default:
                 }
+                $('div[id^="Step"]:visible').each(function () {
+                    var stepindex = $(this).index();
+                    console.log(stepindex);
+                    $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
+                });
             }
             function upStep(obj) {
                 switch (obj) {
@@ -533,8 +546,13 @@
                         $('#Step6').hide();
                         break;
                 }
+                $('div[id^="Step"]:visible').each(function () {
+                    var stepindex = $(this).index();
+                    console.log(stepindex);
+                    $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
+                });
             }
-
+            
         </script>
         <script src="js/exif.js"></script>
         <script src="js/JIC.js"></script>
