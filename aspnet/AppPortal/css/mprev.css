@@ -19,14 +19,22 @@ body {
     left: 0px;
     z-index: 999;
     opacity: 1;
-    background-color:rgba(255,255,255,.5)
+    background-color:rgba(255,255,255,.5);
 }
+
 
 .back {
     width: 30px;
     position: absolute;
     top: 8px;
     left: 8px;
+}
+.new {
+    width: 30px;
+    position: absolute;
+    top: 8px;
+    left: 55px;
+    z-index: 2;
 }
 
 .iframe {

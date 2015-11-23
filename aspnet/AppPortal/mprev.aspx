@@ -14,6 +14,7 @@
 <body>
     <div class="apps-bar">
         <a href="" onclick="history.back(-1);"><img class="back" src="img/back-1.png"></a>
+        <a id="top" href="" ><img class="new" src="img/new-1.png"></a>   
              <section class="content">
            <ul class="list">
                 <li class="list__item good">
