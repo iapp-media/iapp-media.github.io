@@ -75,6 +75,7 @@
     <Content Include="css\masonry.css" />
     <Content Include="css\reset.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\01.jpg" />
     <Content Include="img\6RMhx.gif" />
     <Content Include="img\back-1.png" />
     <Content Include="img\border.png" />
@@ -103,6 +104,8 @@
     <Content Include="img\miniApp.jpg" />
     <Content Include="img\mommy-qr.jpg" />
     <Content Include="img\mommy.jpg" />
+    <Content Include="img\new-1.png" />
+    <Content Include="img\new-2.png" />
     <Content Include="img\p00.jpg" />
     <Content Include="img\photoicon.png" />
     <Content Include="img\picture1.jpg" />

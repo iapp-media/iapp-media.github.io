@@ -258,7 +258,6 @@
         align-items: center;
         -webkit-align-items: center;
         -ms-align-items: center;
-        padding: 9px 12px;
     }
     
     .Hisvalue {
@@ -2604,8 +2603,15 @@
         .BoxLeft {
             font-size:15px;
         }
-        
-       
+        .JoinBranchBox .JBBG1 {
+            margin-top:-186px;
+        }
+         .JoinBranchBox .JBBG2 {
+            margin-top: -30px;
+        }
+        .JoinBranchBox .sendcareButtomeEnd {
+                   margin-top: 170px;
+        }
     }
     
     @media screen and (orientation: portrait) {}

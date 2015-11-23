@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="m-Profile.aspx.cs">
       <DependentUpon>m-Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="m-Profile.aspx.designer.cs">
       <DependentUpon>m-Profile.aspx</DependentUpon>

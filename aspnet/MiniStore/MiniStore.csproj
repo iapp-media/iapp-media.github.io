@@ -66,6 +66,7 @@
     <Content Include="Buy_Ctrl.aspx" />
     <Content Include="Buy_Detail.aspx" />
     <Content Include="Buy_Like.aspx" />
+    <Content Include="css\frontpage.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="css\swiper.min.css" />
     <Content Include="Default.aspx" />
@@ -76,6 +77,7 @@
     <Content Include="css\reset.css" />
     <Content Include="FastShop.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FrontPage.aspx" />
     <Content Include="img\000000102601.jpg" />
     <Content Include="img\000000102901.jpg" />
     <Content Include="img\114.png" />
@@ -186,6 +188,12 @@
     </Compile>
     <Compile Include="FastShop.aspx.designer.cs">
       <DependentUpon>FastShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontPage.aspx.cs">
+      <DependentUpon>FrontPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontPage.aspx.designer.cs">
+      <DependentUpon>FrontPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Join.aspx.cs">
       <DependentUpon>Join.aspx</DependentUpon>

@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/20/2015 10:56:10</publishTime>
+      <publishTime>11/23/2015 11:25:47</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/20/2015 18:09:11</publishTime>
+      <publishTime>11/23/2015 16:31:08</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -43,8 +43,11 @@
     <File Include="css/colorbox.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
+    <File Include="css/frontpage.css">
+      <publishTime>11/23/2015 16:20:56</publishTime>
+    </File>
     <File Include="css/index.css">
-      <publishTime>11/20/2015 18:29:28</publishTime>
+      <publishTime>11/23/2015 16:29:42</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:17:37</publishTime>
@@ -150,6 +153,9 @@
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
       <publishTime>10/29/2015 09:41:39</publishTime>
+    </File>
+    <File Include="FrontPage.aspx">
+      <publishTime>11/16/2015 10:58:47</publishTime>
     </File>
     <File Include="img/000000102601.jpg">
       <publishTime>11/11/2015 13:10:39</publishTime>
@@ -353,7 +359,7 @@
       <publishTime>11/20/2015 18:08:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/20/2015 19:14:36</publishTime>
+      <publishTime>11/23/2015 16:31:09</publishTime>
     </File>
   </ItemGroup>
 </Project>
