@@ -2649,6 +2649,41 @@ a.iframe-info.cboxElement {
 #Step6 .CBbot {
     padding: 6px 12px;
 }
+.Pagenow {
+    font-size:0;
+    margin:0;
+    padding:0;
+    width: 120px;
+    margin:auto;
+    padding-top:15px;
+}
+    .Pagenow li {
+        display:inline-block;
+        width:10px;
+        height:10px;
+        background-color:#aaa;
+        border-radius:50%;
+        margin-right:12px;
+    }
+        .Pagenow li.BTNactive {
+            position:relative;
+        }
+        .Pagenow li:last-child {
+            margin:0;
+        }
+            .Pagenow li.BTNactive:before {
+                content:'';
+                width:6px;
+                height:6px;
+                background-color:#fff;
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                margin:auto;
+                border-radius:50%;
+            }
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
