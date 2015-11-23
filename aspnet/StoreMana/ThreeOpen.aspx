@@ -397,13 +397,7 @@
                 for (var i = 1; i <= steplength; i++) {
                     $('.Pagenow').append('<li>' + i + '</li>');
                 }
-                $('div[id^="Step"]:visible').each(function () {
-                    var stepindex = $(this).index();
-                    console.log(stepindex);
-                    $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
-                });
-               
-                //$('.Pagenow li:first').addClass('BTNactive');
+                $('.Pagenow li:first').addClass('BTNactive');
             });
 
             function goStep(obj) {
