@@ -13,10 +13,12 @@
 </head>
 <body>
     <div class="apps-bar">
-        <a href="" onclick="history.back(-1);"><img class="back" src="img/back-1.png"></a>
-        <a id="top" href="" ><img class="new" src="img/new-1.png"></a>   
-             <section class="content">
-           <ul class="list">
+        <a href="" onclick="history.back(-1);">
+            <img class="back" src="img/back-1.png"></a>
+        <a id="top" href="">
+            <img class="new" src="img/new-1.png"></a>
+        <section class="content">
+            <ul class="list">
                 <li class="list__item good">
                     <input type="checkbox" id="c1" value="likeNumber">
                     <label for="c1">
@@ -35,7 +37,7 @@
             </ul>
         </section>
     </div>
-     <asp:Literal ID="LApp" runat="server"></asp:Literal>
+    <asp:Literal ID="LApp" runat="server"></asp:Literal>
     <script src="js/jquery-1.8.0.min.js"></script>
     <script src="js/mprev.js"></script>
 </body>
