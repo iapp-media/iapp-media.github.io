@@ -366,7 +366,7 @@ input[type="checkbox"] {
 
 .boxpos {
     position: relative;
-    height: 180px;
+    height: 127px;
     padding-bottom: 1px;
 }
 
@@ -542,7 +542,7 @@ input[type="checkbox"] {
     }
     .boxpos {
         position: relative;
-        height: 169px;
+        
         padding-bottom: 1px;
         border: none;
     }

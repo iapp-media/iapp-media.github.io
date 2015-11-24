@@ -256,16 +256,8 @@
     <Compile Include="SInfo.aspx.designer.cs">
       <DependentUpon>SInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StoreFront.Master.cs">
-      <DependentUpon>StoreFront.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StoreFront.Master.designer.cs">
-      <DependentUpon>StoreFront.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StoreFront.Master" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
