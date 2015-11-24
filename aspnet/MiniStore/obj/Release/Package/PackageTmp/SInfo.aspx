@@ -6,6 +6,12 @@
         <a href="Default.aspx?SN=OfficACC"><img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"></a> 
         <h1 class="col-xs-10">StudioA</h1>
     </div>
+    
+        <div class="Mapbox">
+            <div id="map"></div>
+        </div>
+        <div class="colorBG"></div>
+
     <div class="col-xs-12 promana" id="SinfoPage">
         <div class="row">
             <div class="productcare">
@@ -23,7 +29,7 @@
                                 <div class="col-xs-10">
                                     <p class="BoxLeft TBC">111台北市士林區文林路138號</p>
                                 </div>
-                                <div class="col-xs-2 RightBTN">
+                                <div class="col-xs-2 RightBTN" id="Mapclick">
                                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                                 </div>
                             </div>

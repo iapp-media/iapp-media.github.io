@@ -165,14 +165,16 @@
         <!-- WRAPPER END -->
     </form>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <!-- Google Map -->
+    <script type="text/javascript" src="js/jquery.tinyMap.min.js"></script>
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
     <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     
     
     <!-- GA iAppPortal -->
