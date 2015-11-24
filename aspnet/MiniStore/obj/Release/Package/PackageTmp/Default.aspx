@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StoreFront.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MiniStore.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BuyFont.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MiniStore.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -14,7 +14,11 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <asp:Literal ID="L_Cate" runat="server"></asp:Literal> 
+                </div>
+            </div>
     <div>
         <div class="product" runat="server" id="Basic">
             <div id="container">
@@ -34,6 +38,6 @@
     </div>
 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
+<%--<asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
     <script src="js/act.js"></script>
-</asp:Content>
+</asp:Content>--%>

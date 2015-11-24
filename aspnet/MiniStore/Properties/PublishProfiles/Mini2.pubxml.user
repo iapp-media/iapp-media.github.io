@@ -11,16 +11,16 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/23/2015 11:25:47</publishTime>
+      <publishTime>11/24/2015 15:59:13</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>11/23/2015 16:31:08</publishTime>
+      <publishTime>11/24/2015 15:59:13</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>11/20/2015 18:09:03</publishTime>
+      <publishTime>11/24/2015 13:08:22</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -47,10 +47,10 @@
       <publishTime>11/23/2015 16:20:56</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/23/2015 16:29:42</publishTime>
+      <publishTime>11/24/2015 16:09:31</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>11/19/2015 12:17:37</publishTime>
+      <publishTime>11/24/2015 13:16:50</publishTime>
     </File>
     <File Include="css/promptumenu.css">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -62,7 +62,7 @@
       <publishTime>11/09/2015 09:49:59</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/20/2015 16:31:14</publishTime>
+      <publishTime>11/24/2015 12:56:01</publishTime>
     </File>
     <File Include="DEL/111.html">
       <publishTime>10/29/2015 09:41:38</publishTime>
@@ -277,6 +277,9 @@
     <File Include="img/uploadicon.png">
       <publishTime>11/11/2015 13:10:41</publishTime>
     </File>
+    <File Include="img/user_store.png">
+      <publishTime>11/24/2015 14:21:07</publishTime>
+    </File>
     <File Include="img/web-transpage-img.jpg">
       <publishTime>11/11/2015 13:10:41</publishTime>
     </File>
@@ -355,11 +358,14 @@
     <File Include="ShopCarBaby.aspx">
       <publishTime>10/30/2015 18:19:54</publishTime>
     </File>
+    <File Include="SInfo.aspx">
+      <publishTime>11/24/2015 16:05:51</publishTime>
+    </File>
     <File Include="StoreFront.Master">
-      <publishTime>11/20/2015 18:08:54</publishTime>
+      <publishTime>11/24/2015 11:27:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/23/2015 16:31:09</publishTime>
+      <publishTime>11/24/2015 16:09:37</publishTime>
     </File>
   </ItemGroup>
 </Project>
