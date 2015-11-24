@@ -135,6 +135,7 @@
     <Content Include="P_MSG.aspx" />
     <Content Include="search_List.aspx" />
     <Content Include="ShopCarBaby.aspx" />
+    <Content Include="SInfo.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="ShopCarBaby.aspx.designer.cs">
       <DependentUpon>ShopCarBaby.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SInfo.aspx.cs">
+      <DependentUpon>SInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SInfo.aspx.designer.cs">
+      <DependentUpon>SInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="StoreFront.Master.cs">
       <DependentUpon>StoreFront.Master</DependentUpon>

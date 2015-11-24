@@ -25,6 +25,12 @@
     background-color:#fff;
 
 }
+
+.scrollable-menu .left,
+.scrollable-menu .right {
+    width:50%;
+}
+
     
     form#form1 {
         height: 100%;
@@ -167,9 +173,15 @@
     /* Menu bar */
     
     .swiper-container {
-        width: 100%;
-        background-color: #a3a3a3;
-        height: 48px;
+       width: 100%;
+    background-color: #a3a3a3;
+    height: 48px;
+    position: fixed;
+    top: 82px;
+    max-width: 700px;
+    right: 0;
+    left: 0;
+    margin: auto;
     }
     
     .swiper-slide:first-child {
@@ -1851,7 +1863,6 @@
     padding:0;
     }
     .boxpos a:nth-child(2) {
-        
             width: 79px;
     position: absolute;
     left: 50%;

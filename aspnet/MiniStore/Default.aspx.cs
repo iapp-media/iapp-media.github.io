@@ -33,6 +33,17 @@ namespace MiniStore
                         ShowData("5");//basic
                         ShowData("0");//fast
                     }
+                    Main.ParaClear();
+                    Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
+                    DataTable DT = Main.GetDataSetNoNull("select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
+                                                    "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@SN ))");
+                    if (DT.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < DT.Rows.Count; i++)
+                        {
+                            L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
+                        }
+                    } 
                 }
             }
         }
