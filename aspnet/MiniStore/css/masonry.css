@@ -546,15 +546,7 @@ input[type="checkbox"] {
         padding-bottom: 1px;
         border: none;
     }
-    .QRcode {
-        width: 101px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -110px;
-        margin-top: -51px;
-    }
-    
+   
     .digcallme {
         position: absolute;
         left: 50%;
