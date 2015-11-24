@@ -6,12 +6,12 @@
         <a href="Default.aspx?SN=OfficACC"><img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"></a> 
         <h1 class="col-xs-10">StudioA</h1>
     </div>
-    
-        <div class="Mapbox">
-            <div id="map"></div>
-        </div>
-        <div class="colorBG"></div>
-
+    <!-- Google Map -->
+    <div class="Mapbox">
+        <div id="map"></div>
+    </div>
+    <!-- end Google Map -->
+    <div class="colorBG"></div>
     <div class="col-xs-12 promana" id="SinfoPage">
         <div class="row">
             <div class="productcare">

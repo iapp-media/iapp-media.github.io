@@ -76,8 +76,9 @@
                             </a>
                         </li>
                         <li class="SandTitle">開微店</li>
-                        <li  ><a href="JoinAs.aspx">打造自己的微店</a></li> 
-                        <li  ><a href="Join.aspx">加入行動分店</a></li>
+                        <li><a href="SInfo.aspx">微店資訊</a></li>
+                        <li><a href="JoinAs.aspx">打造自己的微店</a></li>
+                        <li><a href="Join.aspx">加入行動分店</a></li>
 
                         <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                         <li>
