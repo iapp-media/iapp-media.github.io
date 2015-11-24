@@ -111,9 +111,9 @@ $(document).ready(function () {
     $('#Mapclick').stop(true,false).click(function () {
         $('.Mapbox').css('transform', 'scale(1)');
         $('.Mapbox,#map,.colorBG').show();
-        $('.colorBG').click(function () {
+        $('.colorBG').stop(true, false).click(function () {
             $('.Mapbox,#map,.colorBG').fadeOut(function () {
-                $('.Mapbox').removeAttr('style', 'transform:scale(1)')
+                $('.Mapbox').stop(true, false).removeAttr('style', 'transform:scale(1)')
                 return;
             });
         });
