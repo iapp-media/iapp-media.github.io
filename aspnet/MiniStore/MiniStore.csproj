@@ -130,6 +130,7 @@
     <Content Include="js\jquery.promptumenu.min.js" />
     <Content Include="js\jquery.tinyMap.min.js" />
     <Content Include="js\jquery.touchSwipe.min.js" />
+    <Content Include="js\jquery.ui.touch-punch.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="Order_history.aspx" />
