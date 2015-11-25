@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
- 
+
 
 namespace MiniStore
 {
@@ -32,12 +32,21 @@ namespace MiniStore
                 Main.ParaClear();
                 Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
                 SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
-                GetCar(); 
+                GetCar();
+                Discount();
             }
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
         }
+
+        void Discount()
+        {
+
+
+
+        }
+
         public string ShowImg(object IDNO)
         {
             if (IDNO.ToString().Length > 0)
@@ -45,6 +54,7 @@ namespace MiniStore
             else
                 return "";
         }
+
         void GetCar()
         {
             SD1.SelectParameters.Clear();
@@ -97,6 +107,20 @@ namespace MiniStore
                     TB_Addr.Text = DTinfo.Rows[0]["Addr"].ToString();
                 }
             }
+
+            Main.ParaClear();
+            Main.ParaAdd("@SNID", Request.QueryString["SN"], System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.NVarChar);
+            AllBpoin.Text = Main.Scalar("select point from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
+            BpoinRule.Text = Main.Scalar("Select Convert(varchar,Bpoint) + '點折' + Convert(varchar,Discount) + '元' from Store_bonus");
+
+            LBpoint.Text = "折價點數抵扣(-" +
+                Main.Scalar("Select Point from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID") + "點)";
+            LBprice.Text = "-" + Main.Scalar("Select Discount*(Point/Bpoint) from Bonuspoint a inner join Store_bonus b on a.Store_ID=b.Store_ID where a. Store_ID in (select IDNo from Store where Store_NID=@SNID) and a.User_ID=@UID") + "";
+
+
+
+
         }
         protected void BT_Confirm_Click(object sender, EventArgs e)
         {
@@ -145,7 +169,7 @@ namespace MiniStore
             //Object OrderID = "";
 
             OrderNo = Comm.GetOrdersNO(Request.QueryString["SN"].ToString(), System.DateTime.Today);
-           
+
             Main.ParaClear();
             Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
             SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
@@ -163,7 +187,7 @@ namespace MiniStore
             cmd.Parameters.AddWithValue("@Contact_Name", TB_Name.Text);
             cmd.Parameters.AddWithValue("@TEL", TB_Tel.Text);
             cmd.Parameters.AddWithValue("@MNO", TB_MNO.Text);
-            cmd.Parameters.AddWithValue("@Addr", TB_Addr.Text); 
+            cmd.Parameters.AddWithValue("@Addr", TB_Addr.Text);
             cmd.Parameters.AddWithValue("@Store_ID", SID);
 
             cmd.Parameters.AddWithValue("@Ans", "22");  //為了轉型用的 但還是失敗先留著
@@ -173,8 +197,48 @@ namespace MiniStore
             cmd.CommandText = "CreatOrders";
             object OrderID = cmd.ExecuteScalar();
 
-            //轉型一直失敗 暫時這樣寫
             strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
+            if (ChBonus.Checked == true)
+            {
+                int c = 0; 
+                Main.ParaClear();
+                Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+                Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
+                Main.ParaAdd("@Bpoint_ID", Main.Scalar("select IDNo from Bonuspoint where User_ID=@User_ID and Store_ID=@Store_ID"), SqlDbType.NVarChar);
+                Main.ParaAdd("@Point", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(", "").Replace("點)", "")), SqlDbType.Int);
+                //先抓頁面上的點數扣點 //防範F12之後要想 
+                Main.ParaAdd("@Memo", "購物扣點", SqlDbType.NVarChar);
+
+                c = Main.NonQuery("Insert into Bonuspoint_log (Bpoint_ID, Point, Memo, CreatDate) values " +
+                                   "(@Bpoint_ID, @Point, @Memo, getdate())");
+
+                if (c > 0)
+                {
+                    c = 0;
+                    Main.ParaClear();
+                    Main.ParaAdd("@Order_ID", strOrderID, SqlDbType.NVarChar);
+                    Main.ParaAdd("@Order_No", Main.Scalar("select order_no from Orders where idno=@Order_ID"), SqlDbType.NVarChar);
+                    Main.ParaAdd("@Item_ID", Main.Scalar("Select IDNo from Bonuspoint_log order by CreatDate desc"), SqlDbType.NVarChar); //點數 item_ID 對hist記錄IDNO
+                    Main.ParaAdd("@qty", 1, SqlDbType.Int); //點數
+                    //先抓頁面上的點數折扣金額 //防範F12之後要想 
+                    Main.ParaAdd("@Price", Main.Cint2(LBprice.Text), SqlDbType.Int);
+                    Main.ParaAdd("@Total", Main.Cint2(LBprice.Text), SqlDbType.Int);
+                    Main.ParaAdd("@Item_type", "Bonus", SqlDbType.NVarChar);
+                    Main.ParaAdd("@Memo", "點數抵扣", SqlDbType.NVarChar);
+                    c = Main.NonQuery("Insert into Order_Fee (Order_ID,Order_No,Item_ID,qty,Price,Total,Item_type,Memo) values " +
+                                  "(@Order_ID,@Order_No,@Item_ID,@qty,@Price,@Total,@Item_type,@Memo)");
+                  if (c > 0)
+                  {
+                      Main.ParaClear();
+                      Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+                      Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
+                      Main.ParaAdd("@minusPoint", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), SqlDbType.Int);
+                      Main.NonQuery("update Bonuspoint set Point=Point-@minusPoint where Store_ID=@Store_ID and User_ID=@User_ID");
+                  }
+                } 
+            }
+
+            //轉型一直失敗 暫時這樣寫 
             Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
             //
 
@@ -208,13 +272,13 @@ namespace MiniStore
                 //第幾項,1,carID,Pid (carID&Pid 都對ajax才刪)
                 BTDELE.Text = "<span class='glyphicon glyphicon-remove cancelTransaction' style='cursor: pointer;' aria-hidden='true' " +
                     " onclick='putDELE(" + e.Item.ItemIndex + ",0," + CarBabyID.Text + "," + P_IDNo.Text + ")'></span>";
-             
+
             }
         }
 
         protected void SD1_Selected(object sender, SqlDataSourceStatusEventArgs e)
         {
-            LCount.Text = e.AffectedRows.ToString(); 
-        } 
+            LCount.Text = e.AffectedRows.ToString();
+        }
     }
 }

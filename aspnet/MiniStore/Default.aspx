@@ -14,11 +14,13 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-                <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <asp:Literal ID="L_Cate" runat="server"></asp:Literal> 
-                </div>
-            </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+        </div>
+    </div>
+    <!-- 至購物車 -->
+    <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
     <div>
         <div class="product" runat="server" id="Basic">
             <div id="container">
@@ -30,14 +32,12 @@
             <div id="FastBox">
                 <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
                 <div class="clearfix"></div>
-                <div class="col-xs-12 libor status CBbot CBBTN"> 
+                <div class="col-xs-12 libor status CBbot CBBTN">
                     <asp:Button ID="BTFast" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BTFast_Click" />
-                 </div>
-            </div>    
+                </div>
+            </div>
         </div>
     </div>
-
-</asp:Content>
-<%--<asp:Content ID="Content3" ContentPlaceHolderID="footJs" runat="server">
     <script src="js/act.js"></script>
-</asp:Content>--%>
+</asp:Content>
+

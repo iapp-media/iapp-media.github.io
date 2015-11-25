@@ -6,13 +6,18 @@
     <div class="col-xs-12 libor ContentTop">
         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()">
 
-        <h1 class="col-xs-10">訂單查詢</h1>
+        <h1 class="col-xs-10">購買記錄</h1>
 
     </div>
     <ul class="buydivmove">
         <li>
             <div class="col-xs-12 insidecare">
                 <div class="row">
+                    <div class="col-xs-12 BTbox">
+                          <p class="BTleft">目前紅利點數</p>
+                        <label>
+                            <asp:Literal ID="Lbonus" runat="server"></asp:Literal>點</label>
+                    </div>
                     <div class="col-xs-12 BTbox">
                         <p class="BTleft">篩選</p>
                         <asp:DropDownList ID="DLDate" runat="server" CssClass="BTright">

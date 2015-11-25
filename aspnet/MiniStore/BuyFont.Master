@@ -156,7 +156,7 @@
 
         </div>
         <!-- 至購物車 -->
-        <asp:Literal ID="LCarLink" runat="server">111</asp:Literal>
+<%--        <asp:Literal ID="LCarLink" runat="server">111</asp:Literal>--%>
 
         <!-- WRAPPER -->
 

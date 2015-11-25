@@ -29,14 +29,16 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                       //ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
-                        ShowData("5");//basic
-                        ShowData("0");//fast
+                       // ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
+                        ShowData("5");
+                        LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
+                            " <img class=\"back-top\" src=\"img/cart.png\" /><span/><label id=\"IconCar\">" +
+                            Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
+                            "</label></span> </a>"; 
                     }
-                    Main.ParaClear();
-                    Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
+
                     DataTable DT = Main.GetDataSetNoNull("select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
-                                                    "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@SN ))");
+                                                    "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@Store_NID ))");
                     if (DT.Rows.Count > 0)
                     {
                         for (int i = 0; i < DT.Rows.Count; i++)

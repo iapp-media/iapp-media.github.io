@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text;
 
 namespace MiniStore
 {
@@ -16,10 +17,10 @@ namespace MiniStore
         {
 
             if (!IsPostBack)
-            {  
+            {
                 SD1.SelectParameters.Clear();
                 SD2.SelectParameters.Clear();
-                 SD4.SelectParameters.Clear();
+                SD4.SelectParameters.Clear();
                 SD1.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
                 SD2.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
                 SD4.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
@@ -49,17 +50,17 @@ namespace MiniStore
                 L4.Text = " Select Item_ID,sum(qty) qty,SUM(Total) total,(select product_name from Product where IDNo=Item_ID) name " +
                           "from Order_Content  where Order_ID=@IDNo group by Item_ID";
 
-                Main.ParaClear(); 
+                Main.ParaClear();
                 Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
 
                 DataTable DT = Main.GetDataSetNoNull("select *,CONVERT(varchar(12), ACC_Date, 111) AS sdate from orders where IDNo=@IDNo");
                 if (DT.Rows.Count > 0)
                 {
-                    TBTotal.Text=DT.Rows[0]["AC_AMT"].ToString();
+                    TBTotal.Text = DT.Rows[0]["AC_AMT"].ToString();
                     TBACC.Text = DT.Rows[0]["ACC_AMT"].ToString();
                     TBACCDate.Text = DT.Rows[0]["sdate"].ToString();
                 }
-               
+
             }
             SD1.SelectCommand = L.Text;
             SD1.ConnectionString = Main.ConnStr;
@@ -86,10 +87,10 @@ namespace MiniStore
 
                 Main.ParaAdd("@ACC_Date", TBACCDate.Text, SqlDbType.NVarChar);
 
-                int c =Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
-                if (c>0)
+                int c = Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
+                if (c > 0)
                 {
-                     this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>");
+                    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>");
 
                 }
             }
@@ -104,5 +105,37 @@ namespace MiniStore
                 return "";
         }
 
+        protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Literal L_Fee = (Literal)e.Item.FindControl("L_Fee");
+                Literal L_SumTotal = (Literal)e.Item.FindControl("L_SumTotal");
+
+                int T1 = 0;
+                DataTable DT = Main.GetDataSetNoNull("select * from order_Fee where order_ID='" + Request.QueryString["entry"] + "'");
+                if (DT.Rows.Count > 0)
+                {
+                    StringBuilder SB = new StringBuilder();
+                    SB.Clear();
+                    for (int i = 0; i < DT.Rows.Count; i++)
+                    {
+                        SB.Append("<div class=\"ListLen\">");
+                        SB.Append("   <div class=\"col-xs-4\"> ");
+                        SB.Append("       <p class=\"BoxLeft TBC\">" + DT.Rows[0]["Memo"] + "</p> ");
+                        SB.Append("   </div> ");
+                        SB.Append("   <div class=\"col-xs-8\"> ");
+                        SB.Append("       <div class=\"ValueRight TRC\"> ");
+                        SB.Append("           <label>" + DT.Rows[0]["total"] + "</label> ");
+                        SB.Append("       </div> ");
+                        SB.Append("   </div> ");
+                        SB.Append("</div>");
+                        T1 += Main.Cint2(DT.Rows[0]["total"].ToString());
+                    }
+                    L_SumTotal.Text = (Main.Cint2(L_SumTotal.Text) + T1).ToString();
+                    L_Fee.Text = SB.ToString();
+                }
+            }
+        } 
     }
 }

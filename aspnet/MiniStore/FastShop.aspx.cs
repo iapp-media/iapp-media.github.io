@@ -16,15 +16,16 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                if (!Comm.IsNumeric(Request.QueryString["K0"]) || !Comm.IsNumeric(Request.QueryString["K1"]))
-                {
-                    Response.Write("err");
-                    Response.End();
-                    return;
-                }
+
                 switch (Request.QueryString["K0"])
-                { 
+                {
                     case "1":  //carbaby 數量加1
+                        if (!Comm.IsNumeric(Request.QueryString["K0"]) || !Comm.IsNumeric(Request.QueryString["K1"]))
+                        {
+                            Response.Write("err");
+                            Response.End();
+                            return;
+                        }
                         if (Comm.IsNumeric(Request.QueryString["K1"]))
                         {
                             Main.ParaClear();
@@ -45,6 +46,13 @@ namespace MiniStore
                         }
                         break;
                     case "2":  //carbaby 數量減1
+                        if (!Comm.IsNumeric(Request.QueryString["K0"]) || !Comm.IsNumeric(Request.QueryString["K1"]))
+                        {
+                            Response.Write("err");
+                            Response.End();
+                            return;
+                        }
+
                         if (Comm.IsNumeric(Request.QueryString["K1"]))
                         {
                             Main.ParaClear();
@@ -57,14 +65,29 @@ namespace MiniStore
                             {
                                 Response.Write(Main.Scalar("select sum(qty) from ShoppingCart where Product_ID=@PID and user_id=@UID "));
                             }
-                            else {
+                            else
+                            {
                                 Response.Write("err");
                             }
                         }
 
-                        break; 
-                } 
-                Response.End(); 
+                        break;
+                    case "3":
+                        if (Request.QueryString["K1"] != null)
+                        {
+                            Main.ParaClear();
+                            Main.ParaAdd("@NID", Request.QueryString["K1"], System.Data.SqlDbType.NVarChar);
+                            Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+
+                            Response.Write(Main.Scalar("select isnull(COUNT(1),0) from ShoppingCart where Store_ID in (select IDNo from Store where Store_NID =@NID) and User_ID=@UID"));
+                        }
+                        else
+                        {
+                            Response.Write("err");
+                        }
+                        break;
+                }
+                Response.End();
             }
         }
     }

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
+
     <div class="col-xs-12 libor ContentTop">
         <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
 
@@ -30,18 +30,17 @@
                                             <h3><%# Eval("Name") %></h3>
                                             <div class="MonBox">
                                                 <p>價錢</p>
-                                                <span runat="server" id="Dtotal" class="TBC">$<%# Eval("Total") %></span>
-                                            </div>
+                                                <span runat="server" id="Dtotal" class="TBC">$<%# Eval("Total") %></span></div>
                                             <span runat="server" id="Dprice" style="visibility: hidden"><%# Eval("Price") %></span>
                                             <asp:Label ID="Lb_Item" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Label>
                                             <asp:Label ID="Lb_Carbaby" runat="server" Text='<%# Eval("carID") %>' Visible="false"></asp:Label>
                                             <asp:Literal ID="L_BTminus" runat="server"></asp:Literal>
                                             <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
-                                            <asp:Literal ID="L_BTplus" runat="server"></asp:Literal> 
+                                            <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>
                                         </div>
-                                        
-                                             <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
-                                        
+
+                                        <asp:Literal ID="L_DELE" runat="server"></asp:Literal>
+
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -49,10 +48,23 @@
                     </div>
                     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                     <asp:SqlDataSource ID="SD1" runat="server" OnSelected="SD1_Selected"></asp:SqlDataSource>
-
+                    <div class="col-xs-12 libor payNum AllPad">
+                        <p>您在此商店有<asp:Literal ID="AllBpoin" runat="server"></asp:Literal>點點數</p>
+                        <asp:CheckBox ID="ChBonus" runat="server" Text="使用折扣" />
+                        <p>
+                            <asp:Literal ID="BpoinRule" runat="server"></asp:Literal></p>
+                    </div>
                     <div class="col-xs-12 libor payNum AllPad">
                         <label class="col-xs-6 padReset">總消費金額</label>
-                        <asp:TextBox ID="TB_Paysum" runat="server" CssClass="col-xs-6 padReset TRC" Enabled="false"></asp:TextBox>
+                         <asp:Label ID="TB_Paysum" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
+
+                        <div id="BonusDiscount" class="col-xs-12">
+                            <asp:Label ID="LBpoint" runat="server" CssClass="col-xs-6 padReset" Text="" ></asp:Label>
+                            <asp:Label ID="LBprice" runat="server" CssClass="col-xs-6 padReset TRC" Text="" ></asp:Label>  
+                        </div>
+
+                        <label class="col-xs-6 padReset">合計:</label>
+                        <asp:Label ID="LTotal" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad">
                         <label for="" class="col-xs-4 padReset">付款方式</label>
@@ -74,7 +86,7 @@
                             <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
                         </div>
                     </div>
-                   
+
                     <%--                    <div class="col-xs-12 libor paytheway  PaylastBox">
                         <label class="col-xs-5 padReset">使用上次記錄</label>
                         <div class="PLBBot PLBTop col-xs-7">
@@ -95,7 +107,7 @@
         </li>
     </ul>
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script> 
+    <script>   
         function cint2(obj) {
             if ($.isNumeric(obj)) {
                 return parseInt(obj);
@@ -107,8 +119,9 @@
             $.ajax({
                 type: 'GET',
                 url: 'ShopCarBaby.aspx?K0=3&K3=' + getQValue("SN") + '',
-                success: function (msg) { 
-                    $("#ContentPlaceHolder1_TB_Paysum").val(msg);
+                success: function (msg) {
+                    //$("#ContentPlaceHolder1_TB_Paysum").val(msg);
+                    document.getElementById("ContentPlaceHolder1_TB_Paysum").innerHTML = msg;
                 },
                 error: function (msg) {
                     alert(msg)
@@ -160,10 +173,9 @@
         }
 
         function minus(num, K0, K1) {
-          
             var a1 = cint2($("#ContentPlaceHolder1_RP1_Qty_" + num).val().replace(/\,/g, ""));
             if (a1 == 1) {
-             //   alert('不能再少了');
+                //   alert('不能再少了');
             } else {
                 $.ajax({
                     type: 'GET',
@@ -188,7 +200,8 @@
             for (var i = 0; i < obj; i++) {
                 tmpA += cint2(document.getElementById("ContentPlaceHolder1_RP1_Dtotal_" + i).innerHTML.replace(/\,/g, "").replace("$", ""));
             }
-            $("#ContentPlaceHolder1_TB_Paysum").val(tmpA);
+            //$("#ContentPlaceHolder1_TB_Paysum").val(tmpA);
+            document.getElementById("ContentPlaceHolder1_TB_Paysum").innerHTML = tmpA;
         }
         function getQValue(varname) {
             var url = window.location.href;
@@ -211,5 +224,37 @@
                 return value;
             }
         }
-    </script>
+
+        $(document).ready(function () {
+            var ISChB = 1;
+            $("#BonusDiscount").hide();
+
+            $("#ContentPlaceHolder1_ChBonus").click(function () {
+                if (ISChB == 1) {
+                    $("#BonusDiscount").fadeIn();
+                    tmptotal(1); 
+                    ISChB = 0;
+                } else {
+                    $("#BonusDiscount").hide();
+                    tmptotal(0);
+                    ISChB = 1;
+                }
+            });
+
+            function tmptotal(a) {
+                var a7 = cint2(document.getElementById("ContentPlaceHolder1_TB_Paysum").innerHTML);
+                var a6 = cint2(document.getElementById("ContentPlaceHolder1_LBprice").innerHTML);
+
+                if (a == 1) {
+                    document.getElementById("ContentPlaceHolder1_LTotal").innerHTML = a7 + a6;
+                } else {
+                    document.getElementById("ContentPlaceHolder1_LTotal").innerHTML = a7;
+                }
+
+            }
+
+
+        });
+
+     </script>
 </asp:Content>
