@@ -156,7 +156,7 @@
 
         </div>
         <!-- 至購物車 -->
-        <asp:Literal ID="LCarLink" runat="server">111</asp:Literal>
+<%--        <asp:Literal ID="LCarLink" runat="server">111</asp:Literal>--%>
 
         <!-- WRAPPER -->
 
@@ -175,9 +175,6 @@
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-    
-    
     <!-- GA iAppPortal -->
     <script type="text/javascript" src="js/ga-iappportal.js"></script>
     <!-- Loading -->

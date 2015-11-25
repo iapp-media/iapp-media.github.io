@@ -34,18 +34,40 @@
                 <asp:SqlDataSource ID="SD4" runat="server"></asp:SqlDataSource>
             </div>
             <div>
-                <asp:Repeater ID="RP1" runat="server">
+                <asp:Repeater ID="RP1" runat="server" OnItemDataBound="RP1_ItemDataBound">
                     <HeaderTemplate>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <div class="row AllBGC">
                             <div class="ListLen">
                                 <div class="col-xs-4">
-                                    <p class="BoxLeft TBC">應付金額</p>
+                                    <p class="BoxLeft TBC">總消費金額</p>
                                 </div>
                                 <div class="col-xs-8">
                                     <div class="ValueRight TRC">
                                         <asp:Literal ID="Literal2" runat="server" Text='<%# Bind("Cost")%>'></asp:Literal>
+                                    </div>
+                                </div>
+                            </div>
+                          <asp:Literal ID="L_Fee" runat="server" Text=''></asp:Literal>
+
+<%--                            <div class="ListLen">
+                                <div class="col-xs-4">
+                                    <p class="BoxLeft TBC">購物扣點</p>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="ValueRight TRC">
+                                        <label>-30</label>
+                                    </div>
+                                </div>
+                            </div>--%>
+                            <div class="ListLen">
+                                <div class="col-xs-4">
+                                    <p class="BoxLeft TBC">合計:</p>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="ValueRight TRC">
+                                        <asp:Literal ID="L_SumTotal" runat="server" Text='<%# Bind("Cost")%>'></asp:Literal>
                                     </div>
                                 </div>
                             </div>
@@ -79,8 +101,7 @@
             </div>
 
             <div class="row AllBGC">
-                <div class="col-xs-12">
-
+                <div class="col-xs-12"> 
                     <asp:Repeater ID="RP2" runat="server">
                         <HeaderTemplate>
                             <div class="ListLen">
@@ -123,9 +144,7 @@
                                         <asp:Literal ID="Literal8" runat="server" Text='<%# Bind("Addr")%>'></asp:Literal>
                                     </div>
                                 </div>
-                            </div>
-
-
+                            </div> 
                             </div>
                                 </div>
                         </ItemTemplate>
@@ -133,64 +152,63 @@
                     <asp:Literal ID="L2" runat="server" Visible="false"></asp:Literal>
                     <asp:SqlDataSource ID="SD2" runat="server"></asp:SqlDataSource>
                 </div>
-            </div>
-            </div>
-                        <div class="row AllBGC" runat="server" id="Div_Store_ACInfo">
-                            <div class="PayPad">
-                                <div class="col-xs-12 PayBGC padReset AllMar">
-                                    <asp:Repeater ID="RP3" runat="server">
-                                        <HeaderTemplate>
-                                            <h3 class="BoxTitle TBC">轉帳/匯款資訊</h3>
-                                        </HeaderTemplate>
-                                        <ItemTemplate>
-                                            <div class="ListLen">
-                                                <div class="col-xs-5">
-                                                    <p class="BoxLeft">銀行</p>
-                                                </div>
-                                                <div class="col-xs-7">
-                                                    <div class="ValueRight">
-                                                        <asp:Literal ID="Literal9" runat="server" Text='<%# Bind("Bank_Name")%>'></asp:Literal>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ListLen">
-                                                <div class="col-xs-5">
-                                                    <p class="BoxLeft">銀行代碼</p>
-                                                </div>
-                                                <div class="col-xs-7">
-                                                    <div class="ValueRight">
-                                                        <asp:Literal ID="Literal10" runat="server" Text='<%# Bind("Bank_No")%>'></asp:Literal>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ListLen">
-                                                <div class="col-xs-5">
-                                                    <p class="BoxLeft">銀行戶名</p>
-                                                </div>
-                                                <div class="col-xs-7">
-                                                    <div class="ValueRight">
-                                                        <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("Bank_ACName")%>'></asp:Literal>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ListLen">
-                                                <div class="col-xs-5">
-                                                    <p class="BoxLeft">銀行帳號</p>
-                                                </div>
-                                                <div class="col-xs-7">
-                                                    <div class="ValueRight">
-                                                        <asp:Literal ID="Literal11" runat="server" Text='<%# Bind("Bank_ACC")%>'></asp:Literal>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-                                    <asp:Literal ID="L3" runat="server" Visible="false"></asp:Literal>
-                                    <asp:SqlDataSource ID="SD3" runat="server"></asp:SqlDataSource>
+            </div> 
+            <div class="row AllBGC" runat="server" id="Div_Store_ACInfo">
+                <div class="PayPad">
+                    <div class="col-xs-12 PayBGC padReset AllMar">
+                        <asp:Repeater ID="RP3" runat="server">
+                            <HeaderTemplate>
+                                <h3 class="BoxTitle TBC">轉帳/匯款資訊</h3>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div class="ListLen">
+                                    <div class="col-xs-5">
+                                        <p class="BoxLeft">銀行</p>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="ValueRight">
+                                            <asp:Literal ID="Literal9" runat="server" Text='<%# Bind("Bank_Name")%>'></asp:Literal>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="ListLen">
+                                    <div class="col-xs-5">
+                                        <p class="BoxLeft">銀行代碼</p>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="ValueRight">
+                                            <asp:Literal ID="Literal10" runat="server" Text='<%# Bind("Bank_No")%>'></asp:Literal>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ListLen">
+                                    <div class="col-xs-5">
+                                        <p class="BoxLeft">銀行戶名</p>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="ValueRight">
+                                            <asp:Literal ID="Literal6" runat="server" Text='<%# Bind("Bank_ACName")%>'></asp:Literal>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ListLen">
+                                    <div class="col-xs-5">
+                                        <p class="BoxLeft">銀行帳號</p>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="ValueRight">
+                                            <asp:Literal ID="Literal11" runat="server" Text='<%# Bind("Bank_ACC")%>'></asp:Literal>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <asp:Literal ID="L3" runat="server" Visible="false"></asp:Literal>
+                        <asp:SqlDataSource ID="SD3" runat="server"></asp:SqlDataSource>
+                    </div>
+                </div>
+            </div>
             <div class="PayPad">
                 <div class="row PayBGCbot" runat="server" id="Div_Send_AC">
                     <h3 class="BoxTitle TBC">填寫轉帳資訊</h3>
@@ -235,8 +253,7 @@
                 <div class="row">
                     <asp:Button ID="Button1" runat="server" Text="完成" OnClick="BTsend_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
                 </div>
-            </div>
-            </div>     
+            </div> 
         </li>
     </ul>
 

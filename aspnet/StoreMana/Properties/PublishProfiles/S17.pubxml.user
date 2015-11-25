@@ -17,10 +17,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/23/2015 11:25:47</publishTime>
+      <publishTime>11/25/2015 17:30:15</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/23/2015 11:25:47</publishTime>
+      <publishTime>11/25/2015 17:30:24</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/23/2015 11:23:44</publishTime>
+      <publishTime>11/23/2015 11:53:33</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>11/19/2015 12:32:32</publishTime>
@@ -211,6 +211,9 @@
     <File Include="js/mobileEditor-new.js">
       <publishTime>11/02/2015 22:52:13</publishTime>
     </File>
+    <File Include="js/mobileEditor-store.js">
+      <publishTime>11/25/2015 17:26:02</publishTime>
+    </File>
     <File Include="js/swiper.min.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
@@ -239,22 +242,22 @@
       <publishTime>11/17/2015 15:46:43</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>11/10/2015 15:09:30</publishTime>
+      <publishTime>11/25/2015 17:26:01</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
-      <publishTime>11/10/2015 14:46:47</publishTime>
+      <publishTime>11/25/2015 17:26:01</publishTime>
     </File>
     <File Include="Setting_SInfo.aspx">
-      <publishTime>11/19/2015 11:39:49</publishTime>
+      <publishTime>11/25/2015 17:26:02</publishTime>
     </File>
     <File Include="Svim.aspx">
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>11/23/2015 11:17:40</publishTime>
+      <publishTime>11/23/2015 11:47:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/23/2015 11:25:48</publishTime>
+      <publishTime>11/25/2015 17:30:25</publishTime>
     </File>
   </ItemGroup>
 </Project>

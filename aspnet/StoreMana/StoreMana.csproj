@@ -121,6 +121,7 @@
     <Content Include="js\jquery.touchSwipe.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\mobileEditor-new.js" />
+    <Content Include="js\mobileEditor-store.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="Msg_Add.aspx" />
     <Content Include="Msg_Mana.aspx" />

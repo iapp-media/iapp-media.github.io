@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+      <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
     <div class="col-xs-12 libor ContentTop">
         <%--        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />--%>
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>

@@ -4,21 +4,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <%--<div class="col-xs-12 allClassification swiper-container">
-        <div class="row swiper-container">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide col-xs-4"><a href="Setting.aspx" style="color: white">參數設定</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting_SInfo.aspx" style="color: white">微店管理</a></li>
-                <li class="swiper-slide col-xs-4"><a href="Setting_Gerent.aspx" style="color: white">帳號管理</a></li>
-            </ul>
-        </div>
-    </div>--%>
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="Setting.aspx" style="color: white">參數設定</a></div>
-                <div class="swiper-slide"><a href="Setting_SInfo.aspx" style="color: white">微店管理</a></div>
                 <div class="swiper-slide"><a href="Setting_Gerent.aspx" style="color: white">帳號管理</a></div>
+                <div class="swiper-slide"><a href="Setting_SInfo.aspx" style="color: white">微店管理</a></div>
+                <div class="swiper-slide"><a href="Setting_Bonus.aspx" style="color: white">點數設定</a></div>
             </div>
         </div>
     </div>
@@ -45,10 +37,8 @@
                             </div>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <div>
-                                
-                                    <p class="BotTitle"><%# Eval("Account") %></p>
-                        
+                            <div> 
+                                <p class="BotTitle"><%# Eval("Account") %></p> 
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
