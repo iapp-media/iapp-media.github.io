@@ -36,7 +36,8 @@ namespace MiniStore
                             Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
                             "</label></span> </a>"; 
                     }
-
+                    Main.ParaClear();
+                    Main.ParaAdd("@Store_NID", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar); 
                     DataTable DT = Main.GetDataSetNoNull("select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
                                                     "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@Store_NID ))");
                     if (DT.Rows.Count > 0)

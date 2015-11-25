@@ -55,6 +55,9 @@ namespace StoreMana
                     strBankNo = DT.Rows[0]["Bank_No"].ToString();
                     strACC = DT.Rows[0]["Bank_ACC"].ToString();
                     strACName = DT.Rows[0]["Bank_ACName"].ToString();
+                    psimg.ImageUrl =  DT.Rows[0]["Simg"].ToString();
+                    TB_DayOff.Text = DT.Rows[0]["DayOff"].ToString();
+                    TB_OPTime.Text = DT.Rows[0]["OPTime"].ToString();
                 }
             }
         }
@@ -105,6 +108,9 @@ namespace StoreMana
             Main.ParaAdd("@NotPayment", NotPayment, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@NotDelivery", NotDelivery, System.Data.SqlDbType.NVarChar);
 
+            Main.ParaAdd("@DayOff", TB_DayOff.Text, System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@OPTime", TB_OPTime.Text, System.Data.SqlDbType.NVarChar);
+
             if (NotPayment != "")
             {
                 if (Main.Scalar("select 1 from Orders where Payment_ID  in (" + NotPayment.Substring(1) + ") and Store_ID=@Store_ID and Status not in ('30','99')") == "1")
@@ -142,10 +148,10 @@ namespace StoreMana
 
 
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@Store_ID ) " +
-                    "insert into Store_info(Store_ID, Store_Name,Bank_Name,Bank_No, Bank_ACC, Bank_ACName, Payment, Delivery, Addr, TEL, CEOName,layout)" +
-                    "values (@Store_ID, @Store_Name,@Bank_Name,@Bank_No, @Bank_ACC, @Bank_ACName, @Payment, @Delivery, @Addr, @TEL, @CEOName,@layout) else " +
+                    "insert into Store_info(Store_ID, Store_Name,Bank_Name,Bank_No, Bank_ACC, Bank_ACName, Payment, Delivery, Addr, TEL, CEOName,layout,DayOff,OPTime)" +
+                    "values (@Store_ID, @Store_Name,@Bank_Name,@Bank_No, @Bank_ACC, @Bank_ACName, @Payment, @Delivery, @Addr, @TEL, @CEOName,@layout,@DayOff,@OPTime) else " +
                     "update Store_info set Store_Name=@Store_Name,Bank_Name=@Bank_Name,Bank_No=@Bank_No, Bank_ACC=@Bank_ACC, Bank_ACName=@Bank_ACName, " +
-                    " Payment=@Payment, Delivery=@Delivery, Addr=@Addr, TEL=@TEL, CEOName=@CEOName,layout=@layout where  Store_ID=@Store_ID");
+                    " Payment=@Payment, Delivery=@Delivery, Addr=@Addr, TEL=@TEL, CEOName=@CEOName,layout=@layout,DayOff=@DayOff,OPTime=@OPTime where  Store_ID=@Store_ID");
 
            // Main.NonQuery("update store set Store_NID=@TBStoreNID where idno=@Store_ID ");
 

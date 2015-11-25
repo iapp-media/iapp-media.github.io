@@ -13,6 +13,24 @@ namespace StoreMana {
     public partial class Setting_SInfo {
         
         /// <summary>
+        /// CurrentId 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CurrentId;
+        
+        /// <summary>
+        /// psimg 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image psimg;
+        
+        /// <summary>
         /// CB_Payment 控制項。
         /// </summary>
         /// <remarks>
@@ -110,6 +128,24 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBAddr;
+        
+        /// <summary>
+        /// TB_DayOff 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_DayOff;
+        
+        /// <summary>
+        /// TB_OPTime 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_OPTime;
         
         /// <summary>
         /// BT_Save 控制項。

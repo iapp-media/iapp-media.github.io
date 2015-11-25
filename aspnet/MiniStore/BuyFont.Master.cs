@@ -49,7 +49,7 @@ namespace MiniStore
                 Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
 
 
-                Store_Name.Text = "<a class=\"navbar-brand\" href=\"default.aspx?sn=" + Request.QueryString["SN"] + "\"> <img class=\"iapplogo\" src=\"img/ministorelogo.png\" />" +
+                Store_Name.Text = "<a class=\"navbar-brand\" href=\"default.aspx?SN=" + Request.QueryString["SN"] + "\"> <img class=\"iapplogo\" src=\"img/ministorelogo.png\" />" +
            " </a><div><h3 class=\"FixTitle\">" + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + "</h3></div>";
 
 
