@@ -55,9 +55,9 @@ namespace StoreMana
                     strBankNo = DT.Rows[0]["Bank_No"].ToString();
                     strACC = DT.Rows[0]["Bank_ACC"].ToString();
                     strACName = DT.Rows[0]["Bank_ACName"].ToString();
-                    psimg.ImageUrl =  DT.Rows[0]["Simg"].ToString();
+                    psimg.ImageUrl = Comm.MiStoreUrl + DT.Rows[0]["Simg"].ToString();
                     TB_DayOff.Text = DT.Rows[0]["DayOff"].ToString();
-                    TB_OPTime.Text = Comm.MiStoreUrl + DT.Rows[0]["OPTime"].ToString();
+                    TB_OPTime.Text =  DT.Rows[0]["OPTime"].ToString();
                 }
             }
         }

@@ -32,7 +32,7 @@ namespace MiniStore
                 Main.ParaAdd("@SNID", Request.QueryString["SN"], System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.NVarChar);
 
-                Lbonus.Text = Main.Scalar("select point from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
+                Lbonus.Text = Main.Scalar("select isnull(sum(point),0) from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
 
 
                 //L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +

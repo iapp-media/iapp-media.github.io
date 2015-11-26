@@ -82,7 +82,11 @@ namespace StoreMana.Mini
                       if (c > 0)
                       {
                           this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('寄信/簡訊通知取貨時間地點??');</script>");
+                          SD1.SelectCommand = L.Text;
+                          SD1.ConnectionString = Main.ConnStr;
+                          RP1.DataSourceID = SD1.ID; 
                       }
+ 
                     }
                     break;
                 case "CN2":  //結案 
@@ -92,7 +96,19 @@ namespace StoreMana.Mini
                         int c = Main.NonQuery("update orders set status='30' where idno='" + Order_Key.Text + "'");
                         if (c > 0)
                         {
+                            Main.ParaClear();
+                            Main.ParaAdd("@Store_ID", Comm.Store_ID(), SqlDbType.Int);
+                            Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+                            Main.ParaAdd("@Point", Main.Cint2(Main.Scalar("Select SUM(qty) from order_content where Order_ID='" + Order_Key.Text + "'")), SqlDbType.Int);
+                            Main.NonQuery("if not exists (Select 1 from Bonuspoint where Store_ID=@Store_ID and USER_ID in (Select Customer_ID from orders where IDNo='" + Order_Key.Text + "'))  " +
+                                          "insert into Bonuspoint (Store_ID, User_ID, Point) values (@Store_ID, @User_ID, @Point) else " +
+                                          "update Bonuspoint set Point =Point + @Point where Store_ID=@Store_ID and USER_ID in (Select Customer_ID from orders where IDNo='" + Order_Key.Text + "') ");
+
+
                             this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('訂單結案');</script>");
+                            SD1.SelectCommand = L.Text;
+                            SD1.ConnectionString = Main.ConnStr;
+                            RP1.DataSourceID = SD1.ID; 
                         }
                     }
                     break;
@@ -104,6 +120,9 @@ namespace StoreMana.Mini
                         if (c > 0)
                         {
                             this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('訂單入帳確認');</script>");
+                            SD1.SelectCommand = L.Text;
+                            SD1.ConnectionString = Main.ConnStr;
+                            RP1.DataSourceID = SD1.ID; 
                         }
                     }
                     break;
@@ -118,6 +137,9 @@ namespace StoreMana.Mini
                         if (c > 0)
                         {
                             this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('訂單出貨確認');</script>");
+                            SD1.SelectCommand = L.Text;
+                            SD1.ConnectionString = Main.ConnStr;
+                            RP1.DataSourceID = SD1.ID; 
                         }
                     }
                     break;
