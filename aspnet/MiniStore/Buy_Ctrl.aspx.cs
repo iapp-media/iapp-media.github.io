@@ -33,19 +33,13 @@ namespace MiniStore
                 Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
                 SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
                 GetCar();
-                Discount();
+           
             }
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
         }
 
-        void Discount()
-        {
-
-
-
-        }
 
         public string ShowImg(object IDNO)
         {
@@ -111,7 +105,12 @@ namespace MiniStore
             Main.ParaClear();
             Main.ParaAdd("@SNID", Request.QueryString["SN"], System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.NVarChar);
-            AllBpoin.Text = Main.Scalar("select point from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
+
+            AllBpoin.Text = Main.Scalar("select  isnull(sum(point),0)  from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
+            if (AllBpoin.Text == "0")
+            {
+                ChBonus.Visible = false;
+            }
             BpoinRule.Text = Main.Scalar("Select Convert(varchar,Bpoint) + '點折' + Convert(varchar,Discount) + '元' from Store_bonus");
 
             LBpoint.Text = "折價點數抵扣(-" +

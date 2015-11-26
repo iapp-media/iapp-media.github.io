@@ -37,7 +37,10 @@ namespace MiniStore
                 //    return;
                 //}
 
-                menu_QR.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>";
+                menu_QR.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>" +
+                    " <a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\">" +
+                              "  <img src=\"img/lineicon.png\" alt=\"用LINE傳送\" class=\"line\" />  </a>";
+               
                 LSinfo.Text = "<li><a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\">微店資訊</a></li>";
 
                 //LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
