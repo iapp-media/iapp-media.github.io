@@ -176,8 +176,7 @@ $(document).ready(function () {
         slidesPerView: 2,
         centeredSlides: true,
         paginationClickable: true,
-        spaceBetween: 0,
-        initialSlide: 1
+        spaceBetween: 0
     });
     //touch.on('#Buycar', 'touchstart', function (ev) {
     //    ev.preventDefault();
