@@ -84,15 +84,15 @@
                     </div>
                     <div class="col-xs-12 libor sendadress AllPad">
                          <label class="col-xs-5 padReset">電話</label>
-                        <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-7"></asp:TextBox>
+                        <asp:TextBox ID="TB_Tel" runat="server" CssClass="col-xs-7"></asp:TextBox>
                         </div>
                     <div class="col-xs-12 libor sendadress AllPad">
                         <label class="col-xs-5 padReset">郵遞區號</label>
-                        <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-7"></asp:TextBox>
+                        <asp:TextBox ID="TB_MNO" runat="server" CssClass="col-xs-7"></asp:TextBox>
                         </div>
                      <div class="col-xs-12 libor sendadress AllPad">
                          <label class="col-xs-5 padReset">地址</label>
-                         <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass=" col-xs-7" Rows="3"></asp:TextBox>
+                         <asp:TextBox ID="TB_Addr" runat="server" CssClass=" col-xs-7" Rows="3"></asp:TextBox>
                          </div>
                         
                     
