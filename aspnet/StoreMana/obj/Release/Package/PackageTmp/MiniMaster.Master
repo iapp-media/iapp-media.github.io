@@ -81,12 +81,8 @@
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>登出</asp:LinkButton></li>
                         <li>熱分享</li>
                         <li class="boxpos">
-                           <asp:Literal ID="menu_QR" runat="server"></asp:Literal>
-
-<%--                            <img src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.com/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="QRcode" />--%>
-                            <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.com/ministore">
-                                <img src="img/lineicon.png" alt="用LINE傳送" class="line" />
-                            </a>
+                            <asp:Literal ID="menu_QR" runat="server"></asp:Literal>
+                            <%--                            <img src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.com/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="QRcode" />--%>
                         </li>
 
                     </ul>

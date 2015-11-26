@@ -33,7 +33,8 @@
                             <div class="ListLen">
                                 <div class="col-xs-10">
                                     <p class="BoxLeft TBC">
-                                        <asp:Literal ID="L_place" runat="server"></asp:Literal>
+                                        <asp:Label ID="L_place" runat="server" Text="Label"></asp:Label>
+                                        
                                     </p>
                                 </div>
                                 <div class="col-xs-2 RightBTN" id="Mapclick">

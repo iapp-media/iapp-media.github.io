@@ -71,7 +71,7 @@
                         <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
                            <asp:Literal ID="menu_QR" runat="server"></asp:Literal>
-                            <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.com/">
+                           
 
 <%--                            <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.com/">
 

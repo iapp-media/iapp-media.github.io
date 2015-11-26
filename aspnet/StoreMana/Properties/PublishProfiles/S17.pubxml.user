@@ -20,7 +20,7 @@
       <publishTime>11/26/2015 12:00:54</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>11/26/2015 12:00:54</publishTime>
+      <publishTime>11/26/2015 18:45:11</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>10/29/2015 09:41:36</publishTime>
@@ -35,10 +35,10 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>11/26/2015 12:00:54</publishTime>
+      <publishTime>11/26/2015 15:15:11</publishTime>
     </File>
     <File Include="css/masonry.css">
-      <publishTime>11/19/2015 12:32:32</publishTime>
+      <publishTime>11/26/2015 18:42:29</publishTime>
     </File>
     <File Include="css/mobileEditor.css">
       <publishTime>11/11/2015 14:01:27</publishTime>
@@ -179,7 +179,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>11/20/2015 19:07:10</publishTime>
+      <publishTime>11/26/2015 17:09:36</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>10/29/2015 09:41:39</publishTime>
@@ -218,7 +218,7 @@
       <publishTime>10/29/2015 09:41:39</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>11/26/2015 12:00:54</publishTime>
+      <publishTime>11/26/2015 18:37:20</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>11/03/2015 15:10:19</publishTime>
@@ -257,7 +257,7 @@
       <publishTime>11/23/2015 11:47:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/26/2015 13:12:12</publishTime>
+      <publishTime>11/26/2015 18:45:11</publishTime>
     </File>
   </ItemGroup>
 </Project>

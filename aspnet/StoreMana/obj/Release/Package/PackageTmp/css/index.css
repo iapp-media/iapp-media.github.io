@@ -2687,6 +2687,27 @@ a.iframe-info.cboxElement {
 #psimg {
     width:100%;
 }
+.boxpos a:nth-child(1) {
+    width: 101px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -51px;
+    padding: 0;
+}
+.boxpos a:nth-child(2) {
+    width: 79px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 13px;
+    margin-top: -41px;
+    padding: 0;
+}
+.boxpos a:nth-child(2) img, .boxpos a:nth-child(1) img {
+    width: 100%;
+}
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
