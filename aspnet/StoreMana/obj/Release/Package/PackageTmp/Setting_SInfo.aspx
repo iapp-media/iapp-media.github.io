@@ -57,12 +57,12 @@
         <div class="col-xs-12 insidecare">
             <div class="row">
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12">
                         <div class="row">
                             <p class="BoxLeft">商店封面</p>
                         </div>
                     </div>
-                    <div class="col-xs-8">
+                    <div class="col-xs-12">
                         <div class="row">
                             <%--                            <img id="psimg" src="" class="sliderimgH" />--%>
                             <asp:Image ID="psimg" runat="server" ClientIDMode="Static" />

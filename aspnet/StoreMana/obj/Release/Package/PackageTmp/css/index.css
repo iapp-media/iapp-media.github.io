@@ -2684,6 +2684,9 @@ a.iframe-info.cboxElement {
                 margin:auto;
                 border-radius:50%;
             }
+#psimg {
+    width:100%;
+}
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);

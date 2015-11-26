@@ -79,14 +79,23 @@
                         <div></div>
                     </div>
                     <div class="col-xs-12 libor sendadress AllPad">
-                        <label class="col-xs-5 padReset">收件人資訊</label>
-                        <div class="col-xs-7 padReset">
-                            <asp:TextBox ID="TB_Name" runat="server" placeholder="姓名" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-12"></asp:TextBox>
-                            <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass="form-control" Rows="3"></asp:TextBox>
-                        </div>
+                        <label class="col-xs-5 padReset">姓名</label>
+                        <asp:TextBox ID="TB_Name" runat="server" CssClass="col-xs-7"></asp:TextBox>
                     </div>
+                    <div class="col-xs-12 libor sendadress AllPad">
+                         <label class="col-xs-5 padReset">電話</label>
+                        <asp:TextBox ID="TB_Tel" runat="server" placeholder="電話" CssClass="col-xs-7"></asp:TextBox>
+                        </div>
+                    <div class="col-xs-12 libor sendadress AllPad">
+                        <label class="col-xs-5 padReset">郵遞區號</label>
+                        <asp:TextBox ID="TB_MNO" runat="server" placeholder="郵遞區號" CssClass="col-xs-7"></asp:TextBox>
+                        </div>
+                     <div class="col-xs-12 libor sendadress AllPad">
+                         <label class="col-xs-5 padReset">地址</label>
+                         <asp:TextBox ID="TB_Addr" runat="server" placeholder="地址" CssClass=" col-xs-7" Rows="3"></asp:TextBox>
+                         </div>
+                        
+                    
 
                     <%--                    <div class="col-xs-12 libor paytheway  PaylastBox">
                         <label class="col-xs-5 padReset">使用上次記錄</label>
