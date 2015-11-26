@@ -170,13 +170,14 @@ $(document).ready(function() {
         });
 
         $('#slider ul').css({
-            width: sliderW2 * slideCount
+            width: sliderW2 * slideCount,
+            marginLeft: -slideWidth
         });
         $('#slider ul li').css({
             width: sliderW2
         });
 
-        $('#slider ul li:last-child').prependTo('#slider ul');
+        //$('#slider ul li:last-child').prependTo('#slider ul');
 
         function moveLeft() {
             $('#slider ul').animate({
