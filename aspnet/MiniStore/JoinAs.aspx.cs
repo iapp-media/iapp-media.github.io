@@ -58,7 +58,7 @@ namespace MiniStore
                     Main.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
                     Main.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
                     Main.ParaAdd("@Store_Name", TB_SNAME.Text, System.Data.SqlDbType.NVarChar);
-                    Main.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No + replace(newid(),'-','')  where idno=@SID");
+                    Main.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No where idno=@SID");
                     Main.NonQuery("insert into Store_info (Store_ID,Store_Name) values(@SID,@Store_Name)");
                     Comm.SaveCookie("iapp_sid", SID);
                 }
