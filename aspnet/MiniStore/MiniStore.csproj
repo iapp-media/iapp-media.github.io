@@ -121,6 +121,7 @@
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
+    <Content Include="js\googlemap.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-1.8.0.min.js" />
     <Content Include="js\jquery-2.1.4.min.js" />

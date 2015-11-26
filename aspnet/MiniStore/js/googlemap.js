@@ -1,5 +1,5 @@
  // Google Map
- var myCenter = "台北市信義區台北101";
+var myCenter;
  myCenter = document.getElementById("ContentPlaceHolder1_L_place").innerHTML;
 
  // console.log(getValue("loc"));
