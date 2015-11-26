@@ -139,7 +139,7 @@ $(document).ready(function () {
             width: screenW
         })
 
-        $('#slider ul li:last-child').prependTo('#slider ul');
+        //$('#slider ul li:last-child').prependTo('#slider ul');
 
         function moveLeft() {
             $('#slider ul').animate({
