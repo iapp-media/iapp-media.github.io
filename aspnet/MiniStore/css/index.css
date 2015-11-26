@@ -529,6 +529,16 @@
         float: right;
         text-align: right;
     }
+#BonusDiscount{
+    padding: 9px 12px;
+}
+.payNum span,
+#BonusDiscount span:nth-child(2) {
+    text-align:right;
+}
+#BonusDiscount span:nth-child(1) {
+    text-align:left;
+}
     
     .ContentTop {
         display: flex;
