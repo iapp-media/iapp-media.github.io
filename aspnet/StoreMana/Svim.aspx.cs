@@ -128,6 +128,11 @@ namespace StoreMana
 
                     Main.NonQuery("insert into Product_Img (Product_ID, Num, Folder, FilePath) values " +
                                   "(@idno, @Num, @Folder, @path)");
+                    Main.ParaClear();
+                    Main.ParaAdd("@idno", PID, System.Data.SqlDbType.NVarChar);
+                    Main.NonQuery("update product_img set Num=b.ROWID from  " +
+                                  "(select ROW_NUMBER() OVER (ORDER BY idno) ROWID,idno from product_img where Product_ID=@idno) b  " +
+                                  "where  product_img.IDNo=b.IDNo ");
                     Response.Write(Comm.MiStoreUrl + "Itempic/" + Folder.Trim() + "/" + FileName + ".jpg");
                 }
                 else
@@ -154,6 +159,13 @@ namespace StoreMana
                     Main.ParaAdd("@path", "Itempic/" + Folder.Trim() + "/" + FileName + ".jpg", System.Data.SqlDbType.NVarChar);
                     Main.ParaAdd("@PageID", Main.Cint2(CurrentId), SqlDbType.Int);
                     Main.NonQuery("Update Product_Img set FilePath=@path where IDNo=@PageID");
+
+                    Main.ParaClear();
+                    Main.ParaAdd("@idno", PID, System.Data.SqlDbType.NVarChar);
+                    Main.NonQuery("update product_img set Num=b.ROWID from  " +
+                                  "(select ROW_NUMBER() OVER (ORDER BY idno) ROWID,idno from product_img where Product_ID=@idno) b  " +
+                                  "where  product_img.IDNo=b.IDNo ");
+
                     Response.Write(Comm.MiStoreUrl + "Itempic/" + Folder.Trim() + "/" + FileName + ".jpg");
                 }
                 //END IF DOTHING

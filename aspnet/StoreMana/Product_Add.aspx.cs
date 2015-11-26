@@ -150,10 +150,10 @@ namespace StoreMana.Mini
             if (TB_ProductName.Text == "") { tmp += ".商品名稱"; }
             if (TB_qty.Text == "") { tmp += ".數量"; }
             if (DL_Cate.SelectedValue == "") { tmp += ".商品類別"; }
-            if (TB_Price.Text == "") { tmp += ",售價"; }
+            if (TB_Price.Text == "") { tmp += ",售價"; } 
             if (tmp != "")
             {
-                Response.Write("<script>alert('請填選" + tmp.Substring(1) + "')</script>");
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請填選" + tmp.Substring(1) + "');", true);
                 return;
             }
 
@@ -177,6 +177,12 @@ namespace StoreMana.Mini
             }
             else
             {
+                if (Main.Scalar(" select 1 from Product_Img where  Product_ID=" + Main.Cint2(LPID.Text) + "") == "")
+                {
+                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('至少放入一張照片');", true);
+                    return;
+                }
+
                 Product_No = Comm.GetProductNO(Comm.Store_ID().ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
                 Main.ParaAdd("@Product_No", Product_No, System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
