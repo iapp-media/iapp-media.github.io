@@ -472,6 +472,7 @@
         background-color: #ffeecf;
         height: 100px;
         border-radius: 5px;
+        overflow:auto;
     }
     
     .ValueText {
