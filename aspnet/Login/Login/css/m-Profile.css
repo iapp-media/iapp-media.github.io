@@ -50,6 +50,24 @@ a:hover {
     background-color: #ff9933;
     margin-bottom: 0px;
 }
+    .navbar .glyphicon-remove {
+            color: #fff;
+    font-size: 30px;
+    right: 15px;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 45px;
+    width: 45px;
+    line-height: 43px;
+    text-align: center;
+   
+    border: 2px solid #fff;
+    border-radius: 50%;
+        
+    }
 
 .content {
     height: calc(100% - 113px);
@@ -166,7 +184,7 @@ a:hover {
     margin-left: 10%;
     width: 50px;
     height: 50px;
-    border-radius: 99px;
+    border-radius: 50%;
     border: 2px solid #ff9933;
 }
 
@@ -183,13 +201,13 @@ a:hover {
     margin-left: calc(45% - 50px);
     width: 50px;
     height: 50px;
-    border-radius: 99px;
+    border-radius: 50%;
     border: 2px solid #ff9933;
 }
 
-.glyphicon-remove {
-    top: 12%;
-    left: 12%;
+.login-back .glyphicon-remove {
+    top: 7px;
+    left: 6px;
     font-size: 35px;
     color: #ff9933;
 }

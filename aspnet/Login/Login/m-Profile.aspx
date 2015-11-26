@@ -18,6 +18,7 @@
         <div class="login-mobile">
             <div class="navbar">
                 <img class="iapplogo" src="img/iapplogo.png">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </div>
             <div class="content">
                 <div class="login">
