@@ -35,10 +35,10 @@ namespace MiniStore
 
                 //    Response.Write("<Script>window.open('" + jump + "','_self')</Script>");
                 //    return;
-                //}
+                //} 
 
                 menu_QR.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" target=\"_blank\" ><img src=\"QRcode.ashx?t=" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "&Intr=" + Comm.User_ID() + "\" alt=\"\" class=\"QRcode\"> </a>" +
-                    " <a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\">" +
+                    " <a href=\"http://line.naver.jp/R/msg/text/?" + Comm.URL + "Default.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                               "  <img src=\"img/lineicon.png\" alt=\"用LINE傳送\" class=\"line\" />  </a>";
                
                 LSinfo.Text = "<li><a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\">微店資訊</a></li>";

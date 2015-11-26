@@ -46,7 +46,7 @@ namespace MiniStore {
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal L_place;
+        protected global::System.Web.UI.WebControls.Label L_place;
         
         /// <summary>
         /// LTel 控制項。

@@ -29,20 +29,31 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                        ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
+                      ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
+                        
                         LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                             " <img class=\"back-top\" src=\"img/cart.png\" /><span/><label id=\"IconCar\">" +
                             Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
                             "</label></span> </a>"; 
                     }
                     Main.ParaClear();
-                    Main.ParaAdd("@Store_NID", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar); 
-                    DataTable DT = Main.GetDataSetNoNull("select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
-                                                    "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@Store_NID ))");
+                    Main.ParaAdd("@Store_NID", Request.QueryString["SN"].ToString(), SqlDbType.NVarChar);
+                    str = "select IDNo,Cate_Name from Product_Cate  where IDNo in ( " +
+                         "select Cate_ID from Product where Store_ID in (select IDNo from Store where Store_NID=@Store_NID )) ";
+                    if (Request.QueryString["c"] != null)
+                    {
+                        Main.ParaAdd("@cate_id", Request.QueryString["c"], SqlDbType.NVarChar);
+                        str += " and idno!=@cate_id ";
+                    }
+                    DataTable DT = Main.GetDataSetNoNull(str);
                     if (DT.Rows.Count > 0)
                     {
                         for (int i = 0; i < DT.Rows.Count; i++)
                         {
+                            if (i == 1 && Request.QueryString["c"] != null)
+                            {
+                                L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + Request.QueryString["c"] + "\" style=\"color: white\">" + Main.Scalar("select Cate_Name from product_cate where idno=" + Request.QueryString["c"] + "") + "</a></div> ";
+                            }
                             L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
                         }
                     } 
