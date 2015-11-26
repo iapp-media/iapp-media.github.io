@@ -172,18 +172,12 @@ button:active {
 }
 
 
-/*.top {
-    height: 40px;
-    background-color: #ff9933;
-}
 
-.top img {
-    height: 100%;
-}*/
 
 .top {
     height: 60px;
     background-color: #ff9933;
+    position:relative;
 }
 
 .toplogo {
