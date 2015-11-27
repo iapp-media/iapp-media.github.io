@@ -71,7 +71,7 @@ $(document).ready(function () {
         $(".theme").hide();
     });
     $(".menusandwich").click(function () {
-        $(".theme").animate({
+        $("#Rightwich").animate({
             height: 'toggle',
             overflowY: 'scroll !important' //doesn't work
         }, {
@@ -81,6 +81,22 @@ $(document).ready(function () {
                 $('.scrollable-menu').css('overflowY', 'scroll');
             }
         });
+        $("#Leftwich").css('display', 'none');
+        $(".m-profile").hide();
+        $('.finder').hide();
+    });
+    $(".iapplogo").click(function () {
+        $("#Leftwich").animate({
+            height: 'toggle',
+            overflowY: 'scroll !important' //doesn't work
+        }, {
+            duration: 200,
+            queue: false,
+            complete: function (e) {
+                $('.scrollable-menu').css('overflowY', 'scroll');
+            }
+        });
+        $("#Rightwich").css('display', 'none');
         $(".m-profile").hide();
         $('.finder').hide();
     });

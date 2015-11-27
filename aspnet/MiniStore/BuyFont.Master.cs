@@ -43,10 +43,10 @@ namespace MiniStore
                 Main.ParaClear();
                 Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
 
-                LSinfo.Text = "<li> " + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + " </li>" +
+                LSinfo.Text = "<li class=\"SandTitle\"> " + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + " </li>" +
                     "<li><a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\">微店資訊</a></li>" +
                     "<li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>購買紀錄</a></li>" +
-                    "<a class=\"navbar-brand\" href=\"default.aspx?SN=" + Request.QueryString["SN"] + "\"><li>回首頁</li></a>";
+                    "<li><a href=\"default.aspx?SN=" + Request.QueryString["SN"] + "\">回首頁</a></li>";
 
                 //LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                 //    " <img class=\"back-top\" src=\"img/cart.png\" /><span/>" +
@@ -63,7 +63,7 @@ namespace MiniStore
 
 
 
-                L_MyStore.Text = " <li class='SandTitle'>我的帳戶</li>" +
+                L_MyStore.Text = 
                       " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> " ;
 
 

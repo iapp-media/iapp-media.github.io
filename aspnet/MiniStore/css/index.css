@@ -312,10 +312,12 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 50%;
+    width:150px;
     line-height: 81px;
+    position:fixed;
+    top:0;
     
-    /* margin: 0; */
+   
 
     }
     
@@ -830,6 +832,7 @@
     
     .container-fluid {
         position: relative;
+        height:81px;
     }
     
     .Lgallbar {
@@ -1956,7 +1959,7 @@
     }
     
     .theme> li > a,
-    .theme > li > a {
+    .disabled {
         font-size: 18px;
         color: #9a9a9a;
         text-align: left;
@@ -2458,12 +2461,14 @@
 @media only screen and (max-width:767px) {
      .container-fluid {
             padding:0;
+            height:60px;
         }
 }
     
     @media only screen and (max-width:480px) {
         .container-fluid {
             padding:0;
+            height:60px;
         }
         #FastBox {
             margin: 4px 0 147px 0;
