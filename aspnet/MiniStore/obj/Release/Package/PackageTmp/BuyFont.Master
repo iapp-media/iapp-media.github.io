@@ -178,6 +178,8 @@
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
+    <!-- Google Map -->
+    <script type="text/javascript" src="js/googlemap.js"></script>
     <!-- GA iAppPortal -->
     <script type="text/javascript" src="js/ga-iappportal.js"></script>
     <!-- Loading -->

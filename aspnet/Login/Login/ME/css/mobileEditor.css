@@ -69,6 +69,7 @@ a:active {
     display: none;
     z-index: 999;
     text-align: center;
+    background-color:#fff;
 }
 
 .img-container {
@@ -76,7 +77,6 @@ a:active {
     background-color: #f7f7f7;
     overflow: hidden;
     text-align: center;
-    margin-top: 15px;
 }
 
 .preview-container {
