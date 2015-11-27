@@ -16,6 +16,7 @@ namespace StoreMana.Mini
             if (!IsPostBack)
             { 
 
+                //asdasdasdasdasd
                 if (Comm.Store_ID() == -1)
                 {
                     Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>");
