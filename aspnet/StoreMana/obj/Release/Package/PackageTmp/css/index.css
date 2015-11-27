@@ -2708,6 +2708,11 @@ a.iframe-info.cboxElement {
 .boxpos a:nth-child(2) img, .boxpos a:nth-child(1) img {
     width: 100%;
 }
+.paynumber .Sinfoheadimg {
+    height:92px;
+    background-color:#fff;
+    border-radius:8px;
+}
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
