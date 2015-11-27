@@ -162,7 +162,6 @@
                     $('.img-container').show();
                     $(".upload-img").show();
                     $(".pages").hide();
-                    $('.send').hide();
                     $('.cut').show();
                     $('.cut').attr("disabled", true);
                     $('.rotate-btn').hide();
