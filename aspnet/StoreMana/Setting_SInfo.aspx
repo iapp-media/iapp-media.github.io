@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="row">
+                        <div class="row Sinfoheadimg">
                             <%--                            <img id="psimg" src="" class="sliderimgH" />--%>
                             <asp:Image ID="psimg" runat="server" ClientIDMode="Static" />
                             <label onclick="setCurrent()">
