@@ -8,7 +8,8 @@ a {
     color: #7d7d7d;
 }
 
-button {
+button,
+.send {
     width: 100%;
     font-size: 24px;
     color: #ff9933;
@@ -68,6 +69,8 @@ a:active {
     display: none;
     z-index: 999;
     background-color:#fff;
+    max-width:700px;
+    margin:auto;
 }
 
 .img-container {

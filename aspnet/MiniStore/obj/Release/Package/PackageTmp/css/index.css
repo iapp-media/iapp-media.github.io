@@ -1966,6 +1966,10 @@
         text-align: left;
         padding: 12px;
     }
+.disabled {
+    color:#ddd;
+}
+
     
     .theme> li > a:hover,
     .theme > li > a:hover {

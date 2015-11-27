@@ -63,7 +63,7 @@
                 <div class="rotate">
                     <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
                 </div>
-                <div class="preview-container hide">
+                <div class="preview-container">
                     <img id="preview" src="" />
                 </div>
                 <div class="img-container">
@@ -155,6 +155,7 @@
             $(document).ready(function () {
                 $("#toimg").click(function () {
                     $(".login-mobile").hide();
+                    $(".send").hide();
                 });
 
                 $("#inputImage").click(function () {
