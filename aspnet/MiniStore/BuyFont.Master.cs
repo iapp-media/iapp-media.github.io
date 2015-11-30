@@ -56,16 +56,26 @@ namespace MiniStore
                 Main.ParaClear();
                 Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
 
-                 
+
 
                 Store_Name.Text = "  <img class=\"iapplogo\" src=\"img/ministorelogo.png\" />" +
            "  <a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\"><div><h3 class=\"FixTitle\">" + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + "</h3></div></a>";
 
 
-
-                L_MyStore.Text = 
-                      " <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> " ;
-
+                if (Comm.User_ID() == -1)
+                {
+                    L_MyStore.Text = "   <li><a href=\"JoinAs.aspx\">打造自己的微店</a></li>" +
+                                     "   <li class=\"disabled\">我的行動分店</li>" +
+                                     "   <li><a href=\"www.iapp-media.com\">微店市集</a></li> " +
+                                     "   <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
+                }
+                else
+                {
+                    L_MyStore.Text = "  <li><a href=\"" + Comm.URL + "StoreMana\">我的微店後台</a></li>" +
+                                     "  <li class=\"disabled\">我的行動分店</li>" +
+                                     "  <li><a href=\"www.iapp-media.com\">微店市集</a></li> " +
+                                     "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
+                }
 
             }
         }

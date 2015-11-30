@@ -34,16 +34,12 @@ namespace MiniStore
 
                 Lbonus.Text = Main.Scalar("select isnull(sum(point),0) from Bonuspoint where Store_ID in (select IDNo from Store where Store_NID=@SNID) and User_ID=@UID ");
 
-
-                //L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
-                //         " inner join Order_Content b on a.IDNo=b.Order_ID" +
-                //         " inner join Product c on b.Item_ID=c.IDNo" +
-                //         " inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
-                //         " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 ";
+ 
                 L.Text = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT " +
                     ",(select top 1 FilePath from Product_Img where Product_ID in ( select top 1 Item_ID from Order_Content where Order_Content.Order_ID=a.IDNo ) ) FilePath from Orders a " +
                          "inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status " +
-                " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 ";
+                " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 and a.Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')";
+
                 SD1.SelectCommand = L.Text;
                 SD1.ConnectionString = Main.ConnStr;
                 RP1.DataSourceID = SD1.ID;
@@ -51,17 +47,13 @@ namespace MiniStore
         }
 
         protected void BT_Search_Click(object sender, EventArgs e)
-        {
-            //   L.Text = "Select a.IDNo,d.Memo,c.Product_Name,b.AMT,a.Order_No,b.Total,CONVERT(varchar(12),a.Creat_Date, 111) CDate from Orders a " +
-            //" inner join Order_Content b on a.IDNo=b.Order_ID" +
-            //" inner join Product c on b.Item_ID=c.IDNo" +
-            //" inner join (select Memo,Status from def_Status where Title='Order_STA') d on d.Status=a.Status" +
-            //" Where a.Customer_ID='" + Comm.User_ID() + "'  ";
+        { 
 
             L.Text = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT " +
                 ",(select top 1 FilePath from Product_Img where Product_ID in ( select top 1 Item_ID from Order_Content where Order_Content.Order_ID=a.IDNo ) ) FilePath from Orders a " +
                  "inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status " +
-            " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 ";
+            " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 and a.Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')";
+            
             if (DLDate.SelectedValue != null)
             {
                 L.Text += " and DATEDIFF(MONTH,a.Creat_Date,getdate()) " + DLDate.SelectedValue + "3";

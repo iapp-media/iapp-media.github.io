@@ -103,6 +103,24 @@ namespace StoreMana {
         protected global::System.Web.UI.UpdatePanel UpdatePanel3;
         
         /// <summary>
+        /// LStep3tip 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LStep3tip;
+        
+        /// <summary>
+        /// Bank1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Bank1;
+        
+        /// <summary>
         /// TBBankName 控制項。
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBBankName;
+        
+        /// <summary>
+        /// Bank2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Bank2;
         
         /// <summary>
         /// TBBankNo 控制項。
@@ -121,6 +148,15 @@ namespace StoreMana {
         protected global::System.Web.UI.WebControls.TextBox TBBankNo;
         
         /// <summary>
+        /// Bank3 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Bank3;
+        
+        /// <summary>
         /// TBACC 控制項。
         /// </summary>
         /// <remarks>
@@ -128,6 +164,15 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBACC;
+        
+        /// <summary>
+        /// Bank4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Bank4;
         
         /// <summary>
         /// TBACName 控制項。
@@ -191,6 +236,15 @@ namespace StoreMana {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CB_Delivery;
+        
+        /// <summary>
+        /// upStep4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button upStep4;
         
         /// <summary>
         /// BTStep4 控制項。

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BuyFont.Master" AutoEventWireup="true" CodeBehind="Order_prn.aspx.cs" Inherits="MiniStore.Order_prn" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -49,9 +50,9 @@
                                     </div>
                                 </div>
                             </div>
-                          <asp:Literal ID="L_Fee" runat="server" Text=''></asp:Literal>
+                            <asp:Literal ID="L_Fee" runat="server" Text=''></asp:Literal>
 
-<%--                            <div class="ListLen">
+                            <%--                            <div class="ListLen">
                                 <div class="col-xs-4">
                                     <p class="BoxLeft TBC">購物扣點</p>
                                 </div>
@@ -101,7 +102,7 @@
             </div>
 
             <div class="row AllBGC">
-                <div class="col-xs-12"> 
+                <div class="col-xs-12">
                     <asp:Repeater ID="RP2" runat="server">
                         <HeaderTemplate>
                             <div class="ListLen">
@@ -144,7 +145,7 @@
                                         <asp:Literal ID="Literal8" runat="server" Text='<%# Bind("Addr")%>'></asp:Literal>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             </div>
                                 </div>
                         </ItemTemplate>
@@ -152,7 +153,7 @@
                     <asp:Literal ID="L2" runat="server" Visible="false"></asp:Literal>
                     <asp:SqlDataSource ID="SD2" runat="server"></asp:SqlDataSource>
                 </div>
-            </div> 
+            </div>
             <div class="row AllBGC" runat="server" id="Div_Store_ACInfo">
                 <div class="PayPad">
                     <div class="col-xs-12 PayBGC padReset AllMar">
@@ -239,12 +240,12 @@
                                     <p class="BoxLeft">轉帳日期:</p>
                                 </div>
                                 <div class="col-xs-6">
-                                    <div class="ValueRight">
-                                        <asp:TextBox ID="TBACCDate" runat="server" placeholder="2015/02/20" CssClass="ValTPad"></asp:TextBox>
+                                    <div class="input-group date form_date ValueRight" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+                                        <asp:TextBox ID="TBACCDate" runat="server" CssClass="ValTPad form-control" Enabled="false" placeholder="2015/02/20"></asp:TextBox> 
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
                                 </div>
-                            </div>
-
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -253,9 +254,26 @@
                 <div class="row">
                     <asp:Button ID="Button1" runat="server" Text="完成" OnClick="BTsend_Click" CssClass="btn btn-warning btn-lg btn-block sendcareButtom" />
                 </div>
-            </div> 
+            </div>
         </li>
     </ul>
-
-
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap datetimepicker -->
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript">
+        $('.form_date').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            beforeShow: function () {
+                if (this.container != 'body') top = top + document.body.scrollTop
+            }
+        });
+    </script>
 </asp:Content>

@@ -32,6 +32,8 @@ namespace MiniStore
                 }
                 else
                 {
+                    TBACCDate.Text = DateTime.Today.Date.ToShortTimeString();
+
                     SD3.SelectParameters.Clear();
                     SD3.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
                     L3.Text = " Select b.Bank_Name,b.Bank_No,b.Bank_ACName,b.Bank_ACC from orders a inner join Store_info b on a.Store_ID=b.Store_ID where a.IDNo=@IDNo";
@@ -78,23 +80,53 @@ namespace MiniStore
 
         protected void BTsend_Click(object sender, EventArgs e)
         {
-            if (TBACC.Text != "" && Main.IsNumeric(TBTotal.Text) && TBACCDate.Text != "")
+            if (Div_Send_AC.Visible == true)
             {
+                string tmp = "";
+                if (TBACC.Text == "") { tmp += ",銀行帳號"; }
+                else
+                {
+                    if (TBACC.Text.Length < 5 || TBACC.Text.Length > 5)
+                    {
+                        tmp += ",銀行帳號";
+                    }
+                }
+                if (TBTotal.Text == "" || !Main.IsNumeric(TBTotal.Text)) { tmp += ",轉帳金額"; }
+                else
+                {
+                    if (Main.Cint2(TBTotal.Text) < 0)
+                    {
+                        tmp += ",轉帳金額";
+                    }
+                }
+
+                if (TBACCDate.Text == "") { tmp += ",轉帳日期"; }
+                else
+                {
+                    if (!Main.IsDate(TBACCDate.Text)) { tmp += ",轉帳日期"; }
+                }
+                if (tmp != "")
+                {
+                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('" + tmp.Substring(1) + ",格式有誤');", true);
+                    return; 
+                }
                 Main.ParaClear();
                 Main.ParaAdd("@AC_AMT", Main.Cint2(TBTotal.Text), SqlDbType.Int);
                 Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
                 Main.ParaAdd("@ACC_AMT", TBACC.Text, SqlDbType.NVarChar);
-
                 Main.ParaAdd("@ACC_Date", TBACCDate.Text, SqlDbType.NVarChar);
 
                 int c = Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
                 if (c > 0)
                 {
-                    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>");
-
+                    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>"); 
                 }
             }
-            Response.Redirect("Order_history.aspx?sn=" + Request.QueryString["SN"] + "");
+            else
+            {
+                Response.Redirect("Order_history.aspx?sn=" + Request.QueryString["SN"] + "");
+            }
+
         }
 
         public string ShowImg(object IDNO)

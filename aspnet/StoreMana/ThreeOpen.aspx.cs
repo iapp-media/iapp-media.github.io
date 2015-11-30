@@ -15,25 +15,26 @@ namespace StoreMana
         CommTool Comm = new CommTool();
         string str = "";
         string Product_No = "";
+        int PayBank = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
-                 Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+                Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
                 Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
 
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int); 
+                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
                 if (LPID.Text == "0")
-                { 
+                {
                     str = "insert into product (Tmp_IDNo,Product_Name, Cate_ID, Price,dimension,description,Memo,store_ID,Product_No)" +
                     "values ('-99','','','','','','',@SID,'')";
                     if (Main.NonQuery(str) > 0)
                     {
                         LPID.Text = Main.Scalar("select max(IDNo) from product where store_ID =@SID and Tmp_IDNo='-99'  ");
-                    } 
+                    }
                 }
                 loadImg();
 
@@ -62,11 +63,16 @@ namespace StoreMana
         protected void BTStep2_Click(object sender, EventArgs e)
         {
             string strPayment = "";
+            PayBank = 0;
             for (int i = 0; i < CB_Payment.Items.Count; i++)
             {
                 if (CB_Payment.Items[i].Selected)
                 {
                     strPayment += "," + CB_Payment.Items[i].Value;
+                    if (CB_Payment.Items[i].Value == "3")
+                    {
+                        PayBank = 1;
+                    }
                 }
             }
 
@@ -76,12 +82,28 @@ namespace StoreMana
                 Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
                 Main.ParaAdd("@payment", strPayment, SqlDbType.NVarChar);
                 Main.NonQuery("update store_info set payment=@payment where Store_ID=@SID");
+                if (Bank1.Visible == true)
+                {
+                    LStep3tip.Text = "填寫店家資訊";
+                    Bank1.Visible = false;
+                    Bank2.Visible = false;
+                    Bank3.Visible = false;
+                    Bank4.Visible = false;
+                }
+                else
+                {
+                    LStep3tip.Text = "填寫銀行帳號";
+                    Bank1.Visible = true;
+                    Bank2.Visible = true;
+                    Bank3.Visible = true;
+                    Bank4.Visible = true;
+                }
+
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(2)", true);
 
             }
             else
-            {
-
+            { 
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇付款方式');", true);
                 return;
             }
@@ -90,10 +112,14 @@ namespace StoreMana
         protected void BTStep3_Click(object sender, EventArgs e)
         {
             string tmp = "";
-            if (TBBankName.Text == "") { tmp += ",銀行名稱"; }
-            if (TBBankNo.Text == "") { tmp += ",銀行代碼"; }
-            if (TBACC.Text == "") { tmp += ",受款帳號"; }
-            if (TBACName.Text == "") { tmp += ",受款戶名"; }
+            if (Bank1.Visible == true)
+            {
+                if (TBBankName.Text == "") { tmp += ",銀行名稱"; }
+                if (TBBankNo.Text == "") { tmp += ",銀行代碼"; }
+                if (TBACC.Text == "") { tmp += ",受款帳號"; }
+                if (TBACName.Text == "") { tmp += ",受款戶名"; }
+            }
+
             if (TBCEO.Text == "") { tmp += ",聯絡人"; }
             if (TBTEL.Text == "") { tmp += ",聯絡電話"; }
             if (TBAddr.Text == "") { tmp += ",聯絡地址"; }
@@ -101,38 +127,44 @@ namespace StoreMana
             if (tmp != "")
             {
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請填寫" + tmp.Substring(1) + "');", true);
-                return; 
+                return;
             }
 
             Main.ParaClear();
-            Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int); 
-            Main.ParaAdd("@Bank_Name", TBBankName.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Bank_No", TBBankNo.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Bank_ACC", TBACC.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@Bank_ACName", TBACName.Text, System.Data.SqlDbType.NVarChar);
+
+            if (PayBank == 1)
+            {
+                Main.ParaAdd("@Bank_Name", TBBankName.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@Bank_No", TBBankNo.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@Bank_ACC", TBACC.Text, System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@Bank_ACName", TBACName.Text, System.Data.SqlDbType.NVarChar);
+                str = "Bank_Name=@Bank_Name,Bank_No=@Bank_No,Bank_ACC=@Bank_ACC,Bank_ACName=@Bank_ACName,";
+            }
+            else {
+                str = "";
+            }
+            Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
             Main.ParaAdd("@CEOName", TBCEO.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@TEL", TBTEL.Text, System.Data.SqlDbType.NVarChar);
-             Main.ParaAdd("@Addr", TBAddr.Text, System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@Addr", TBAddr.Text, System.Data.SqlDbType.NVarChar); 
 
+            Main.NonQuery("Update Store_info set  " + str + " " +
+                    "   Addr=@Addr, TEL=@TEL, CEOName=@CEOName where  Store_ID=@Store_ID");
 
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(3)", true);
 
-             Main.NonQuery("Update Store_info set Bank_Name=@Bank_Name,Bank_No=@Bank_No,Bank_ACC=@Bank_ACC,Bank_ACName=@Bank_ACName, " +
-                     "   Addr=@Addr, TEL=@TEL, CEOName=@CEOName where  Store_ID=@Store_ID");
-
-             System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(3)", true);
-
-        } 
+        }
 
         protected void BTStep4_Click(object sender, EventArgs e)
         {
-            string strDelivery = "" ;
+            string strDelivery = "";
             for (int i = 0; i < CB_Delivery.Items.Count; i++)
             {
 
                 if (CB_Delivery.Items[i].Selected)
                 {
                     strDelivery += "," + CB_Delivery.Items[i].Value;
-                } 
+                }
             }
 
             if (strDelivery != "")
@@ -145,9 +177,9 @@ namespace StoreMana
 
             }
             else
-            { 
+            {
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇寄送方式');", true);
-                return; 
+                return;
             }
         }
 
@@ -180,7 +212,7 @@ namespace StoreMana
                 ",Price=@Price,dimension=@dimension,description=@description  where  idno=@Tmp_IDNo";
             if (Main.NonQuery(str) > 0)
             {
-                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(5)", true); 
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(5)", true);
             }
 
         }
@@ -258,7 +290,7 @@ namespace StoreMana
         protected void upStep6_Click(object sender, EventArgs e)
         {
             loadImg();
-            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "upStep(6)", true);  
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "upStep(6)", true);
         }
 
         protected void DLSCate_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,7 +300,6 @@ namespace StoreMana
                 Main.FillDDP(DL_Cate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref='" + DLSCate.SelectedValue.ToString() + "'", "Cate_Name", "IDNo");
             }
 
-        }
- 
+        } 
     }
 }
