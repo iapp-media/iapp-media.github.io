@@ -2645,13 +2645,7 @@
         .glyphicon-search {
             color: #f93;
         }
-        .col-sm-1.col-md-1.portalCreate .row:before,
-        .input-group .form-control,
-        .navbar-btn1,
-        .navbar-btn2,
-        .se {
-            display: none;
-        }
+       
         .product {
             width: 100%;
             background-color: #fff;

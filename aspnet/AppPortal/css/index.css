@@ -162,7 +162,7 @@ a:hover {
     position:relative;
     top:50%;
     transform:translateY(-50%);
-    padding:6px 12px;
+    padding:6px 6px;
 }
 
 .navbar-btn1:hover {
@@ -178,32 +178,39 @@ a:hover {
 .icon-box {
     display: block;
     background-color: #ff9932;
-    margin-top: 20px;
-    width: 110px;
+    width: 100px;
     height: 35px;
     border-radius: 6px;
+    float:left;
     cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .icon-box:hover {
     background-color: #ff9932;
 }
 
-.icon-box h4 {
-    color: #fff;
-}
 
 .usericon {
-    width: auto;
+        width: auto;
     height: 35px;
-    position: absolute;
-    /* top: -2%; */
-    left: 0%;
+    display: block;
+   
+    float: left;
+  
     border-radius: 6px;
 }
 
 .username-icon {
-    position: absolute;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    float:left;
+    margin-left:4px;
 }
 
 .title {
@@ -759,9 +766,9 @@ a:hover {
 }
 
 .username-icon h4 {
-    margin-left: 28px;
-    margin-top: 7px;
+    margin: 0;
     font-size: 16px;
+    color:#fff;
 }
 
 .theme .boxpos a {
@@ -817,6 +824,9 @@ a:hover {
 }
 
 @media only screen and (max-width:768px) {
+    .icon-box {
+        display:none;
+    }
     .search-bar .cancel {
         display: block;
     

@@ -98,6 +98,7 @@ namespace AppPortal
                 LDoIt.Text = "   <a class='iframe-info' href=\"" + loginUrl + "\">" +
                              "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
                              "         微創作" + 
+                             "<span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
                              "     </button>" +
                              "   </a>";
                 //    <button type="button" class="btn btn-default navbar-btn2" >
@@ -112,14 +113,14 @@ namespace AppPortal
                 //MLogin.Text=" <div class=\"col-sm-2 col-md-1 loginHead\">" + 
                 //             "<img src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" alt=\"\"></div>";
 
-                LLogin.Text = "<div class=\"col-sm-2 col-md-1 icon-box\">\n\r" +
+                LLogin.Text = "<div class=\"icon-box\">\n\r" +
                              "  <img class=\"usericon\" src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\">\n\r" +
                              "  <div class=\"username-icon\"><h4>" + Comm.User_Name() + "</h4></div>\n\r" +
                             " </div>\n\r";
                 //JSS.Text = "<script>$('.icon-box').addClass('openlogin');$('#m-login').show();$('#m-login').addClass('openlogin');</script>";
                 LDoIt.Text = "   <a href=\"../" + Tm + "/Default.aspx\">" +
                              "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
-                             "         <h4 class=\"title\">微創作" +
+                             "         微創作" +
                              "         <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
                              "     </button>" +
                              "   </a>";
