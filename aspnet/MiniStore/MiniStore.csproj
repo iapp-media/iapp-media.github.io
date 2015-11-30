@@ -66,6 +66,7 @@
     <Content Include="Buy_Ctrl.aspx" />
     <Content Include="Buy_Detail.aspx" />
     <Content Include="Buy_Like.aspx" />
+    <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\frontpage.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="css\swiper.min.css" />
@@ -119,6 +120,7 @@
     <Content Include="Join.aspx" />
     <Content Include="JoinAs.aspx" />
     <Content Include="js\act.js" />
+    <Content Include="js\bootstrap-datetimepicker.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\ga-iappportal.js" />
     <Content Include="js\googlemap.js" />

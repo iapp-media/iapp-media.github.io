@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/colorbox.css">
-     <link rel="stylesheet" href="css/masonry.css">
+    <!-- 依照不同瀏覽器加上前綴字 -->
+    <script src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="css/masonry.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->

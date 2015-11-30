@@ -127,6 +127,7 @@
     <Content Include="js\jquery.masonry.min.js" />
     <Content Include="js\mprev.js" />
     <Content Include="js\popover.js" />
+    <Content Include="js\prefixfree.min.js" />
     <Content Include="js\tooltip.js" />
     <Content Include="mprev.aspx" />
     <Content Include="css\styles.css" />
