@@ -19,9 +19,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/masonry.css">
     <link rel="stylesheet" href="css/colorbox.css">
+     <link rel="stylesheet" href="css/masonry.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -58,9 +58,9 @@
                     </ul>--%>
                     </div>
 
-                    <div class="col-xs-3 tem"></div>
+                    
 
-                    <div class="col-xs-2 search-sm">
+                    <div class="search-sm">
                         <div class="input-group">
                             <!-- mobile 搜尋 -->
                             <div class="input-group-btn">
@@ -77,7 +77,7 @@
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 
-                    <div class="col-xs-2 login-sm">
+                    <div class="login-sm">
                         <div class="input-group">
                             <div class="input-group-btn">
                                 <asp:Literal ID="MLogin" runat="server"></asp:Literal>

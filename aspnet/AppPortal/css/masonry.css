@@ -92,7 +92,7 @@ body {
 }
 
 #container {
-    margin: 10% auto;
+    margin: 90px auto;
     border-radius: 5px;
     clear: both;
     -webkit-border-radius: 5px;
@@ -398,7 +398,7 @@ input[type="checkbox"] {
 {
     #container
     {
-        margin: 17% auto;
+        margin: 73px auto;
     }
 
     .item
@@ -495,21 +495,12 @@ input[type="checkbox"] {
             color: #ff9933;
         }
 
-    .sandwich
-    {
-        color: #fff;
-        font-size: 150%;
-        padding: 2px 6px;
-    }
-    
+   
 .glyphicon {
     line-height: 0;
 }
  
-    .input-group
-    {
-        top: 12px;
-    }
+
 }
 
 
@@ -645,17 +636,11 @@ input[type="checkbox"] {
     .digcallme:active {
         background-color: transparent;
     }
-    .input-group-btn {
-        top: 12px;
-    }
+  
     .col-xs-2 {
         width: 10.666667%;
     }
-    .input-group-btn:last-child>.btn,
-    .input-group-btn:last-child>.btn-group {
-        margin-left: 32px;
-        padding:0;
-    }
+   
 }
 
 
@@ -671,7 +656,7 @@ input[type="checkbox"] {
         width: 148px;
     }
     #container {
-        margin: 22% auto;
+        margin: 70px auto;
     }
     .icon-box {
         display: none;
@@ -690,11 +675,6 @@ input[type="checkbox"] {
     .select:focus {
         background-color: transparent;
         color: #ff9933;
-    }
-    .search2 {
-        width: 14px;
-        top: 12px;
-        right: 6px;
     }
 }
 
