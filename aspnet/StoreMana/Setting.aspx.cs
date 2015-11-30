@@ -12,7 +12,7 @@ namespace StoreMana
     {
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
-        string strACC = "", strACName = "", strBankName = "", strBankNo = "";
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
