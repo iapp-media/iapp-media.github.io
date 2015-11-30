@@ -88,7 +88,7 @@ namespace AppPortal
                 //MLogin.Text = "<button type=\"button\" id=\"m-login\" class=\"btn btn-default search2\" data-toggle=\"dropdown\" aria-expanded=\"false\">" +
                 //                          "<img class=\"circle-login\" src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" ></button>";
           
-                LLogin.Text = "<div class=\"col-sm-2 col-md-1 login-box\">" +
+                LLogin.Text = "<div class=\"login-box\">" +
                               "   <a class='iframe-info' href=\"" + loginUrl + "\">" +
                               "     <button type=\"button\" class=\"btn btn-default navbar-btn1\">" +
                               "         登入／註冊" +

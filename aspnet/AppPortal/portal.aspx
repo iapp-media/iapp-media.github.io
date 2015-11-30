@@ -32,24 +32,23 @@
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="row">
-            <div class="container-fluid">
-                <div class="col-xs-4 col-sm-2 col-md-1 navbar-header">
-                    <a class="navbar-brand" href="portal.aspx">
-                        <img class="iapplogo" src="img/iapplogo.png">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="row">
+                <div class="container-fluid">
+                    <a class="iapplogo" href="portal.aspx">
+                        <img src="img/iapplogo.png" alt="">
                     </a>
-                </div>
-                <!-- 主題下拉選單（共用） -->
-                <div>
-                    <ul class="dropdown-menu dropdown-menu-right theme" role="menu">
-                                <asp:Literal ID="ThemeLi" runat="server"></asp:Literal>
-                    </ul>
-                </div>
-                
-                <!--  搜尋bar提示框（共用）-->
-                <div id="listbox">
-             <%--       <ul class="dropdown-menu dropdown-menu-right finder" role="menu">
+
+                    <!-- 主題下拉選單（共用） -->
+                    <div>
+                        <ul class="dropdown-menu dropdown-menu-right theme" role="menu">
+                            <asp:Literal ID="ThemeLi" runat="server"></asp:Literal>
+                        </ul>
+                    </div>
+
+                    <!--  搜尋bar提示框（共用）-->
+                    <div id="listbox">
+                        <%--       <ul class="dropdown-menu dropdown-menu-right finder" role="menu">
                         <li><a href="#">最新</a></li>
                         <li class="divider"></li>
                         <li><a href="#">最熱門</a></li>
@@ -57,66 +56,65 @@
                         <li><a href="#"><img class="finder-app" src="img/photoicon.png"
                         > iApp</a></li>
                     </ul>--%>
-                </div>
+                    </div>
 
-                <div class="col-xs-3 tem"></div>
-    
-                <div class="col-xs-2 search-sm">
-                    <div class="input-group">
-                        <!-- mobile 搜尋 -->
-                        <div class="input-group-btn">
-                            <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
+                    <div class="col-xs-3 tem"></div>
+
+                    <div class="col-xs-2 search-sm">
+                        <div class="input-group">
+                            <!-- mobile 搜尋 -->
+                            <div class="input-group-btn">
+                                <button type="button" id="op-search" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- mobile 搜尋bar -->
-                <div class="search-bar">
-                    <asp:TextBox ID="mSearch" CssClass="search bar-text" runat="server"></asp:TextBox>
-                     <!--<input type="text" class="search bar-text" placeholder="Search iApp..." id="mSearch"> -->
-                    <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
-                </div>
-                
-                <div class="col-xs-2 login-sm">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <asp:Literal ID="MLogin" runat="server"></asp:Literal>
+                    <!-- mobile 搜尋bar -->
+                    <div class="search-bar">
+                        <asp:TextBox ID="mSearch" CssClass="search bar-text" runat="server"></asp:TextBox>
+                        <!--<input type="text" class="search bar-text" placeholder="Search iApp..." id="mSearch"> -->
+                        <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
+                    </div>
+
+                    <div class="col-xs-2 login-sm">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <asp:Literal ID="MLogin" runat="server"></asp:Literal>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <!-- Web 搜尋bar -->
-                <div class="col-sm-8 col-xs-1 BarSear">
-                    <div class="input-group search">
-                        <!-- 搜尋框 -->
-                        <%-- <input type="text" class="form-control " placeholder="Search iApp...">--%>
-                        <asp:TextBox ID="Search" CssClass="form-control bar-text" runat="server"></asp:TextBox>
-                        <%--<input type="text" id="Search" class="form-control bar-text" placeholder="Search iApp...">--%>
-                        <!-- 下拉按鈕 -->
-                        <div class="input-group-btn">
-                            <button type="button" class="dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
-                                <span class="glyphicon glyphicon-menu-hamburger sandwich" aria-hidden="true"></span>
-                            </button>
+                    <!-- Web 搜尋bar -->
+                    <div class="BarSear">
+                        <div class="input-group search">
+                            <!-- 搜尋框 -->
+                            <%-- <input type="text" class="form-control " placeholder="Search iApp...">--%>
+                            <asp:TextBox ID="Search" CssClass="form-control bar-text" runat="server"></asp:TextBox>
+                            <%--<input type="text" id="Search" class="form-control bar-text" placeholder="Search iApp...">--%>
+                            <!-- 下拉按鈕 -->
+                            <div class="input-group-btn">
+                                <button type="button" class="dropdown-toggle select" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-menu-hamburger sandwich" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <!-- /btn-group -->
                         </div>
-                        <!-- /btn-group -->
+                        <!-- /input-group -->
                     </div>
-                    <!-- /input-group -->
+
+
+                    <!-- 登入／註冊 -->
+                    <asp:Literal ID="LLogin" runat="server"></asp:Literal>
+                    <!-- 微創作 -->
+                    <div class="PortalCreat">
+                        <asp:Literal ID="LDoIt" runat="server"></asp:Literal>
+                    </div>
+
                 </div>
-
-
-                <!-- 登入／註冊 -->
-                <asp:Literal ID="LLogin" runat="server"></asp:Literal>
- 
-                
-                <!-- 微創作 -->
-                <div class="col-sm-1 col-md-1 PortalCreat">
-                    <asp:Literal ID="LDoIt" runat="server"></asp:Literal>
-                </div>
-
+                <!-- /.col-lg-6 -->
             </div>
-            <!-- /.col-lg-6 -->
-        </div>
-    </nav>
+        </nav>
+        <div class="clearfix"></div>
         
     <!-- 會員資料 -->
     <div class="jumbotron">

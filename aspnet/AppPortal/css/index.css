@@ -18,6 +18,7 @@ a:hover {
     min-height: 80px;
     background-color: white;
     z-index: 99;
+    margin:0;
 }
 
 .btn-default {
@@ -38,22 +39,17 @@ a:hover {
 }
 
 .iapplogo {
-    width: 100px;
-    height: auto;
+    width:100px;
+    height:auto;
+    display:block;
+    float:left;
+    height:80px;
 }
+    .iapplogo img {
+        width:100%;
+    }
+   
 
-.navbar-brand {
-    float: left;
-    height: 80px;
-    padding: 5px 0px;
-}
-
-.search {
-    position: relative;
-    top: 20px;
-    left: 8%;
-    width: 90%;
-}
 
 .search2 {
     background: none;
@@ -152,19 +148,28 @@ a:hover {
 }
 
 .navbar-btn1 {
-    margin-top: 16px;
     border: none;
     background-color: #fff;
     color: #ff9932;
-    font-size: 21px;
+    text-align: center;
+    padding: 6px 12px;
+    font-size: 15px;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
 }
 
 .navbar-btn2 {
-    margin-top: 16px;
     border: none;
     background-color: #fff;
     color: #ff9932;
-    font-size: 21px;
+    text-align:center;
+    padding:0;
+    font-size:15px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    padding:6px 12px;
 }
 
 .navbar-btn1:hover {
@@ -791,8 +796,41 @@ a:hover {
     /* font-size: 17px; */
 }
 .PortalCreat {
+    padding:0;
+    width:86px;
+    float:left;
+    text-align:center;
+    height:70px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    margin:0 7px;
+    border-left:1px solid #aaa;
+}
+.BarSear {
+    float: left;
+    width: calc(100% - 300px - 1em);
+    height: 100%;
+    margin:0 .5em;
 
+}
 
+    .BarSear .search {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+    .login-box {
+    padding:0;
+    float:left;
+    width:100px;
+    text-align:center;
+    height:80px;
+
+}
+    .container-fluid {
+    box-shadow: 3px 6px 12px -3px hsla(0, 0%, 0%, .25);
+    height:80px;
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
@@ -948,5 +986,4 @@ a:hover {
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0 0 0;
-    text
 }
