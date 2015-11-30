@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/colorbox.css">
     <!-- 依照不同瀏覽器加上前綴字 -->
-    <script src="js/prefixfree.min.js"></script>
+    <%--<script src="js/prefixfree.min.js"></script>--%>
     <link rel="stylesheet" href="css/masonry.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
@@ -124,7 +124,7 @@
     <div class="jumbotron">
         <asp:Image ID="ImgUser2" runat="server" CssClass="user-icon" ImageUrl="img/photoicon.png" />
         <!--<img class="user-icon" src="img/photoicon.png">-->
-        <asp:Panel ID="Panel1" runat="server" CssClass="option-user" Visible="false">
+        <asp:Panel ID="Panel1" runat="server" CssClass="option-user" Visible="true">
             <asp:LinkButton ID="LBmyw" runat="server" OnClick="LBmym_Click">
                 我的iApp
             </asp:LinkButton>
@@ -132,7 +132,7 @@
                 收藏的iApp
             </asp:LinkButton>
         </asp:Panel>
-        <asp:Panel ID="Panel2" runat="server" CssClass="logout-user" Visible="false">
+        <asp:Panel ID="Panel2" runat="server" CssClass="logout-user" Visible="true">
             <a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
             <ul class="dropdown-menu dropdown-menu-right logout" role="menu">
             <%--    <li><a class='iframe-info' href="http://www.iapp-media.com/Login/profile.aspx">會員資料</a></li>--%>

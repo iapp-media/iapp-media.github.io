@@ -51,7 +51,17 @@ $(document).ready(function () {
         //$('.icon-box').addClass('openlogin');
     });
     $(".icon-box").click(function () {
-        toggleMy();
+        $('.jumbotron').toggleClass('jumbotronAni');
+        if ($('.jumbotron').hasClass('jumbotronAni')) {
+            $('.user-icon').fadeIn('slow', function () {
+                $('.option-user').fadeIn(function () {
+                    $('.logout-user').fadeIn();
+                });
+            });
+        } else {
+            //$('.user-icon').fadeOut();
+            $('.option-user,.user-icon,.logout-user').css('display', 'none');
+        }
         //window.open('portal.aspx?fn=my', '_self');
         //$('.jumbotron').show();
     });
