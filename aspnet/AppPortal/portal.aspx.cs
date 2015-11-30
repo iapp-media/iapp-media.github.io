@@ -108,7 +108,7 @@ namespace AppPortal
             }
             else
             {
-                MLogin.Text = "<button type=\"button\" onclick=\"toggleMy();\" id=\"user-login\" class=\"btn btn-default search2\" data-toggle=\"dropdown\" aria-expanded=\"false\">" +
+                MLogin.Text = "<button type=\"button\" id=\"user-login\" class=\"btn btn-default search2\" data-toggle=\"dropdown\" aria-expanded=\"false\">" +
                               "<img class=\"circle-login\" src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" ></button>";
                 //MLogin.Text=" <div class=\"col-sm-2 col-md-1 loginHead\">" + 
                 //             "<img src=\"UserIcon.ashx?i=" + Comm.User_ID() + "\" alt=\"\"></div>";

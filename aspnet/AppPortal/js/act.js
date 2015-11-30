@@ -50,7 +50,7 @@ $(document).ready(function () {
         //$('.login-box').hide();
         //$('.icon-box').addClass('openlogin');
     });
-    $(".icon-box").click(function () {
+    $(".icon-box,.login-sm").click(function () {
         $('.jumbotron').toggleClass('jumbotronAni');
         if ($('.jumbotron').hasClass('jumbotronAni')) {
             $('.user-icon').fadeIn('slow', function () {

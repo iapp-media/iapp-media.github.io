@@ -396,10 +396,7 @@ input[type="checkbox"] {
 
 @media only screen and (min-width:481px) and (max-width:768px)
 {
-    #container
-    {
-        margin: 73px auto;
-    }
+   
 
     .item
     {
@@ -507,9 +504,7 @@ input[type="checkbox"] {
 /* Iphone 6 media size */
 
 @media only screen and (min-width: 355px) and (max-width: 480px) {
-    #container {
-        margin: 72px auto;
-    }
+   
     .item {
         float: left;
         padding: 0px;

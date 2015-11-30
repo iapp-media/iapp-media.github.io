@@ -836,6 +836,9 @@ a:hover {
 }
 
 @media only screen and (max-width:768px) {
+    .jumbotron {
+        margin-top:59px;
+    }
     .icon-box {
         display:none;
     }
