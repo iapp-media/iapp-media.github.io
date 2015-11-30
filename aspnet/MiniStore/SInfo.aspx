@@ -47,10 +47,12 @@
                             <div class="ListLen">
                                 <div class="col-xs-10">
                                     <p class="BoxLeft TBC">
+                                        <span id="phoneNUM">
                                         <asp:Literal ID="LTel" runat="server"></asp:Literal>
+                                            </span>
                                     </p>
                                 </div>
-                                <div class="col-xs-2 RightBTN" onclick="location.href='tel:02-28811361'">
+                                <div class="col-xs-2 RightBTN" id="phoneAttr" onclick="location.href='tel:02-28811361'">
 
                                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                                 </div>

@@ -30,11 +30,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- End for apple -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/slider.css"  />
-    <link rel="stylesheet" href="css/index.css"  />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/cropper.css" />
     <link rel="stylesheet" href="css/mobileEditor.css" />
-    
+
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -87,180 +87,181 @@
                     </div>
                 </div>
                 <ul class="Pagenow">
-                    
                 </ul>
                 <div class="StepAll">
-                <div id="Step1" class="col-xs-12 minbox">
-                    <div class="row">
+                    <div id="Step1" class="col-xs-12 minbox">
+                        <div class="row">
 
-                        <div class="col-xs-12 Title Alltitle">
-                            <span>Step1</span><p>
-                                選擇商店類別
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="BTbox OpenUI">
-                            <ContentTemplate>
-                                <div class="col-xs-4 left">
-                                    <div class="row">
-                                        <p>商品類別</p>
-                                    </div>
-                                </div>
-                                <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control" OnSelectedIndexChanged="DLSCate_SelectedIndexChanged" AutoPostBack="true">
-                                </asp:DropDownList>
-                                <div class="col-xs-12 libor CBbot">
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClick="BTStep1_Click" CssClass="ThreeBTN" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                </div>
-                <div id="Step2" class="col-xs-12 minbox ">
-                    <div class="row">
-                        <div class="col-xs-12 Title Alltitle">
-                            <span>Step2</span><p>
-                                選擇付款
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" class="BTbox OpenCheckUI">
-                            <ContentTemplate>
-                                <div class="col-xs-4 left">
-                                    <div class="row">
-                                        <p>付款方式</p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-8 right">
-                                    <div class="row">
-                                        <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                                        </asp:CheckBoxList>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-xs-4 libor CBbot">
-                                    <button id="upStep2" onclick="upStep(2)" class="ThreeBTN2">上一步</button>
-                                </div>
-                                <div class="col-xs-7 libor CBbot TalkR">
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep2" OnClick="BTStep2_Click" CssClass="ThreeBTN" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                </div>
-                <div id="Step3" class="col-xs-12 minbox ">
-                    <div class="row">
-                        <div class="col-xs-12 Title Alltitle">
-                            <span>Step3</span><p>
-                                填寫銀行帳號
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <asp:UpdatePanel ID="UpdatePanel3" runat="server" class="OpenUI3 BTbox">
-                            <ContentTemplate>
-                                <div class="Openlist">
-                                    <p>銀行名稱</p>
-                                    <asp:TextBox ID="TBBankName" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>銀行代碼</p>
-                                    <asp:TextBox ID="TBBankNo" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>受款帳號</p>
-                                    <asp:TextBox ID="TBACC" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>受款戶名</p>
-                                    <asp:TextBox ID="TBACName" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>聯絡人</p>
-                                    <asp:TextBox ID="TBCEO" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>聯絡電話</p>
-                                    <asp:TextBox ID="TBTEL" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="Openlist">
-                                    <p>聯絡地址</p>
-                                    <asp:TextBox ID="TBAddr" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-4 libor CBbot ">
-                                    <button id="upStep3" onclick="upStep(3)" class="ThreeBTN2">上一步</button>
-                                </div>
-                                <div class="col-xs-7 libor CBbot TalkR">
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep3" OnClick="BTStep3_Click" CssClass="ThreeBTN" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                </div>
-                <div id="Step4" class="col-xs-12 minbox ">
-                    <div class="row">
-                        <div class="col-xs-12 Title Alltitle">
-                            <span>Step4</span><p>
-                                填寫銀行帳號
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <asp:UpdatePanel ID="UpdatePanel4" runat="server" class="BTbox OpenCheckUI">
-                            <ContentTemplate>
-                                <div class="col-xs-4 left">
-                                    <div class="row">
-                                        <p>寄送方式</p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-8 right">
-                                    <div class="row">
-                                        <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                                        </asp:CheckBoxList>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 libor CBbot">
-                                    <button id="upStep4" onclick="upStep(4)" class="ThreeBTN2">上一步</button>
-                                </div>
-                                <div class="col-xs-7 libor CBbot TalkR">
-                                    <asp:Button runat="server" Text="下一步" ID="BTStep4" OnClick="BTStep4_Click" CssClass="ThreeBTN" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                </div>
-                <div id="Step5" class="col-xs-12 minbox ">
-                    <div class="row">
-                        <div class="col-xs-12 Title Alltitle">
-                            <span>Step5</span><p>
-                                建立一個商品
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    <asp:UpdatePanel ID="UpdatePanel5" runat="server" class="OpenUI">
-                        <ContentTemplate>
-                            <div class="BTbox">
-                            <div>
-                                <div class="col-xs-4 left">
-                                    <div class="row">
-                                        <p>商品類別</p>
-                                    </div>
-                                </div>
-                                <asp:DropDownList ID="DL_Cate" runat="server" CssClass="form-control"></asp:DropDownList>
+                            <div class="col-xs-12 Title Alltitle">
+                                <span>Step1</span><p>
+                                    選擇商店類別
+                                </p>
                             </div>
-                            
-                                <div class="col-xs-4 left">
-                                    <div class="row">
-                                        <p>商品圖片</p>
+                            <div class="clearfix"></div>
+
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" class="BTbox OpenUI">
+                                <ContentTemplate>
+                                    <div class="col-xs-4 left">
+                                        <div class="row">
+                                            <p>商品類別</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="slider">
-                                    <div class="glyphicon glyphicon-chevron-right control_next"></div>
-                                    <div class="glyphicon glyphicon-chevron-left control_prev"></div>
-                                    <asp:Literal ID="L_Img" runat="server"></asp:Literal>
-                                    <%--                                            <ul>
+                                    <asp:DropDownList ID="DLSCate" runat="server" CssClass="form-control" OnSelectedIndexChanged="DLSCate_SelectedIndexChanged" AutoPostBack="true">
+                                    </asp:DropDownList>
+                                    <div class="col-xs-12 libor CBbot">
+                                        <asp:Button runat="server" Text="下一步" ID="BTStep1" OnClick="BTStep1_Click" CssClass="ThreeBTN" />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+                    <div id="Step2" class="col-xs-12 minbox ">
+                        <div class="row">
+                            <div class="col-xs-12 Title Alltitle">
+                                <span>Step2</span><p>
+                                    選擇付款
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <asp:UpdatePanel ID="UpdatePanel2" runat="server" class="BTbox OpenCheckUI">
+                                <ContentTemplate>
+                                    <div class="col-xs-4 left">
+                                        <div class="row">
+                                            <p>付款方式</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 right">
+                                        <div class="row">
+                                            <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                                            </asp:CheckBoxList>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-xs-4 libor CBbot">
+                                        <button id="upStep2" onclick="upStep(2)" class="ThreeBTN2">上一步</button>
+                                    </div>
+                                    <div class="col-xs-7 libor CBbot TalkR">
+                                        <asp:Button runat="server" Text="下一步" ID="BTStep2" OnClick="BTStep2_Click" CssClass="ThreeBTN" />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+                    <div id="Step3" class="col-xs-12 minbox ">
+                        <div class="row">
+                            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                <ContentTemplate>
+                                    <div class="col-xs-12 Title Alltitle">
+                                        <span>Step3</span><p>
+                                            <asp:Literal ID="LStep3tip" runat="server" Text="填寫銀行帳號"></asp:Literal>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="OpenUI3 BTbox">
+                                        <div class="Openlist" id="Bank1" runat="server">
+                                            <p>銀行名稱</p>
+                                            <asp:TextBox ID="TBBankName" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist" id="Bank2" runat="server">
+                                            <p>銀行代碼</p>
+                                            <asp:TextBox ID="TBBankNo" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist" id="Bank3" runat="server">
+                                            <p>受款帳號</p>
+                                            <asp:TextBox ID="TBACC" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist" id="Bank4" runat="server">
+                                            <p>受款戶名</p>
+                                            <asp:TextBox ID="TBACName" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist">
+                                            <p>聯絡人</p>
+                                            <asp:TextBox ID="TBCEO" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist">
+                                            <p>聯絡電話</p>
+                                            <asp:TextBox ID="TBTEL" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="Openlist">
+                                            <p>聯絡地址</p>
+                                            <asp:TextBox ID="TBAddr" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                                        </div>
+                                        <div class="col-xs-4 libor CBbot ">
+                                            <button id="upStep3" onclick="upStep(3)" class="ThreeBTN2">上一步</button>
+                                        </div>
+                                        <div class="col-xs-7 libor CBbot TalkR">
+                                            <asp:Button runat="server" Text="下一步" ID="BTStep3" OnClick="BTStep3_Click" CssClass="ThreeBTN" />
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+                    <div id="Step4" class="col-xs-12 minbox ">
+                        <div class="row">
+                            <div class="col-xs-12 Title Alltitle">
+                                <span>Step4</span><p>
+                                    填寫銀行帳號
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <asp:UpdatePanel ID="UpdatePanel4" runat="server" class="BTbox OpenCheckUI">
+                                <ContentTemplate>
+                                    <div class="col-xs-4 left">
+                                        <div class="row">
+                                            <p>寄送方式</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 right">
+                                        <div class="row">
+                                            <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                                            </asp:CheckBoxList>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 libor CBbot">
+                                        <asp:Button ID="upStep4" runat="server" Text="上一步" CssClass="ThreeBTN2" OnClientClick="upStep(4)" />
+                                    </div>
+                                    <div class="col-xs-7 libor CBbot TalkR">
+                                        <asp:Button runat="server" Text="下一步" ID="BTStep4" OnClick="BTStep4_Click" CssClass="ThreeBTN" />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+                    <div id="Step5" class="col-xs-12 minbox ">
+                        <div class="row">
+                            <div class="col-xs-12 Title Alltitle">
+                                <span>Step5</span><p>
+                                    建立一個商品
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <asp:UpdatePanel ID="UpdatePanel5" runat="server" class="OpenUI">
+                                <ContentTemplate>
+                                    <div class="BTbox">
+                                        <div>
+                                            <div class="col-xs-4 left">
+                                                <div class="row">
+                                                    <p>商品類別</p>
+                                                </div>
+                                            </div>
+                                            <asp:DropDownList ID="DL_Cate" runat="server" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+
+                                        <div class="col-xs-4 left">
+                                            <div class="row">
+                                                <p>商品圖片</p>
+                                            </div>
+                                        </div>
+                                        <div id="slider">
+                                            <div class="glyphicon glyphicon-chevron-right control_next"></div>
+                                            <div class="glyphicon glyphicon-chevron-left control_prev"></div>
+                                            <asp:Literal ID="L_Img" runat="server"></asp:Literal>
+                                            <%--                                            <ul>
                                                 <li>
                                                     <img id="p01" src="img/2531170_203204624000_2.jpg" class="PicSend" />
                                                     <label onclick="setCurrent('01','3033-1')">
@@ -286,99 +287,99 @@
                                                     </label>
                                                 </li>
                                             </ul>--%>
-                                </div>
-                                <div class="clearfix"></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                                <div class="col-xs-4">
+                                                    <div class="row">
+                                                        <p class="BoxLeft">商品名稱</p>
+                                                    </div>
+                                                </div>
+                                                <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限22個字以內" onkeyup="words_deal(44)"></asp:TextBox>
+                                            </div>
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                                <div class="col-xs-4">
+                                                    <div class="row">
+                                                        <p class="BoxLeft">價格</p>
+                                                    </div>
+                                                </div>
+                                                <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                                <div class="col-xs-4">
+                                                    <div class="row">
+                                                        <p class="BoxLeft">數量</p>
+                                                    </div>
+                                                </div>
+                                                <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                                <div class="col-xs-4">
+                                                    <div class="row">
+                                                        <p class="BoxLeft">商品說明</p>
+                                                    </div>
+                                                </div>
+                                                <asp:TextBox ID="TB_Description" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                            </div>
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                                <div class="col-xs-4">
+                                                    <div class="row">
+                                                        <p class="BoxLeft">商品規格</p>
+                                                    </div>
+                                                </div>
+                                                <asp:TextBox ID="TB_Dimension" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 Step5Bot">
+                                        <div class="col-xs-4 libor CBbot">
+                                            <button id="upStep5" onclick="upStep(5)" class="ThreeBTN2">上一步</button>
+                                        </div>
+                                        <div class="col-xs-7 libor CBbot TalkR">
+                                            <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" CssClass="ThreeBTN" />
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                        </div>
+
+                    </div>
+                    <div id="Step6" class="col-xs-12 minbox ">
+                        <div class="row">
+                            <div class="col-xs-12 Title Alltitle">
+                                <span>Step6</span><p>
+                                    看看我的微店
+                                </p>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-xs-12">
-                                <div class="row">
-                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                                <div class="col-xs-4">
-                                    <div class="row">
-                                        <p class="BoxLeft">商品名稱</p>
+                            <asp:UpdatePanel ID="UpdatePanel6" runat="server" class="OpenUI">
+                                <ContentTemplate>
+                                    <div class="Step6end">
+                                        <div>
+                                            <img src="img/store.png" alt="" />
+                                            <p>開店成功 !!!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <asp:TextBox ID="TB_ProductName" Class="form-control" runat="server" placeholder="限22個字以內" onkeyup="words_deal(44)"></asp:TextBox>
-                            </div>
-                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                                <div class="col-xs-4">
-                                    <div class="row">
-                                        <p class="BoxLeft">價格</p>
+                                    <div style="display: none;">
+                                        <%-- 要刪掉的部分 --%>
+                                        <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
                                     </div>
-                                </div>
-                                <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                                <div class="col-xs-4">
-                                    <div class="row">
-                                        <p class="BoxLeft">數量</p>
+                                    <div class="col-xs-12 libor CBbot">
+                                        <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN tinDownOut1" />
                                     </div>
-                                </div>
-                                <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                                <div class="col-xs-4">
-                                    <div class="row">
-                                        <p class="BoxLeft">商品說明</p>
-                                    </div>
-                                </div>
-                                <asp:TextBox ID="TB_Description" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
-                            </div>
-                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                                <div class="col-xs-4">
-                                    <div class="row">
-                                        <p class="BoxLeft">商品規格</p>
-                                    </div>
-                                </div>
-                                <asp:TextBox ID="TB_Dimension" Class="form-control2" runat="server" TextMode="MultiLine"></asp:TextBox>
-                            </div>   
-                                </div>
-                            </div>
-                            <div class="col-xs-12 Step5Bot">
-                            <div class="col-xs-4 libor CBbot">
-                                <button id="upStep5" onclick="upStep(5)" class="ThreeBTN2">上一步</button>
-                            </div>
-                            <div class="col-xs-7 libor CBbot TalkR">
-                                <asp:Button runat="server" Text="下一步" ID="BTStep5" OnClick="BTStep5_Click" CssClass="ThreeBTN" />
-                            </div>
-                                </div>
-                             <div class="clearfix"></div>
-
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                        
-                    </div>
-                   
-                </div>
-                <div id="Step6" class="col-xs-12 minbox ">
-                    <div class="row">
-                    <div class="col-xs-12 Title Alltitle">
-                            <span>Step6</span><p>
-                                看看我的微店
-                            </p>
+                                    <div class="clearfix"></div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                         </div>
-                        <div class="clearfix"></div>
-                        <asp:UpdatePanel ID="UpdatePanel6" runat="server" class="OpenUI">
-                            <ContentTemplate>
-                                <div class="Step6end">
-                                    <div>
-                                        <img src="img/store.png" alt="" />
-                                        <p>開店成功 !!!</p>
-                                    </div>
-                                </div>
-                                <div style="display: none;">
-                                    <%-- 要刪掉的部分 --%>
-                                    <asp:Button ID="upStep6" runat="server" Text="上一步" OnClick="upStep6_Click" />
-                                </div>
-                                <div class="col-xs-12 libor CBbot">
-                                    <asp:Button ID="BTStep6" runat="server" Text="完成" OnClick="BTStep6_Click" CssClass="ThreeBTN tinDownOut1" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
                     </div>
                 </div>
-                    </div>
             </div>
         </div>
         <!-- WRAPPER END -->
@@ -467,7 +468,7 @@
 
                         });
                         $(document).ready(function () {
-                             window.scrollTo(0, 10);
+                            window.scrollTo(0, 10);
                             $(".PicClick").click(function () {
                                 $('.preview-container').hide();
                                 $('.img-container').show();
@@ -556,7 +557,7 @@
                     });
                 });
             }
-            
+
         </script>
         <script src="js/exif.js"></script>
         <script src="js/JIC.js"></script>

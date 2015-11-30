@@ -6,8 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="col-xs-12 libor ContentTop">
-        <a href="Default.aspx?SN=OfficACC">
-            <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"/></a>
+<%--        <a href="Default.aspx?SN=OfficACC">
+            <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2"/></a>--%>
+        <asp:Literal ID="LSinfo" runat="server"></asp:Literal>
         <h1 class="col-xs-10">微店資訊</h1>
     </div>
     <!-- Google Map -->
@@ -46,10 +47,12 @@
                             <div class="ListLen">
                                 <div class="col-xs-10">
                                     <p class="BoxLeft TBC">
+                                        <span id="phoneNUM">
                                         <asp:Literal ID="LTel" runat="server"></asp:Literal>
+                                            </span>
                                     </p>
                                 </div>
-                                <div class="col-xs-2 RightBTN" onclick="location.href='tel:02-28811361'">
+                                <div class="col-xs-2 RightBTN" id="phoneAttr" onclick="location.href='tel:02-28811361'">
 
                                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                                 </div>

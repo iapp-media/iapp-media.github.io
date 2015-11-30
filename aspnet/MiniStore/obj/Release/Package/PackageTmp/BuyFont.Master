@@ -73,17 +73,16 @@
                            <asp:Literal ID="menu_QR" runat="server"></asp:Literal>
                         </li>
                         <asp:Literal ID="LSinfo" runat="server"></asp:Literal>
-                        <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
+                       
                     </ul>
                     <!-- 右邊三明治 List -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" id="Leftwich" role="menu">
                         <li class="SandTitle">iApp微店</li>
-                        <li><a href="JoinAs.aspx">打造自己的微店</a></li>
+<%--                        <li><a href="JoinAs.aspx">打造自己的微店</a></li>
                         <li><a href="#">我的微店後台</a></li>
                         <li class="disabled">我的行動分店</li>
-                        <li><a href="www.iapp-media.com">微店市集</a></li>
-                        <li><a href="#">個人檔案</a></li>
-                        <asp:Literal ID="Literal3" runat="server"></asp:Literal>
+                        <li><a href="www.iapp-media.com">微店市集</a></li> --%>
+                          <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
                        <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton>
                         </li>
