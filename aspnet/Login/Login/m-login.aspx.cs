@@ -16,8 +16,21 @@ namespace Login
         {
             if (!IsPostBack)
             {
-                if (Comm.CheckMobile() == false) { Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx")); }
-                 
+                if (Comm.CheckMobile() == false)
+                {
+                    if (Request.QueryString["jump"] != null)
+                    {
+                        switch (Request.QueryString["jump"])
+                        {
+                            case "store":
+                                Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "pclogin/login.aspx"));
+                                break;
+                            default:
+                                Response.Redirect(Request.RawUrl.ToLower().Replace("m-login.aspx", "login.aspx"));
+                                break;
+                        }
+                    } 
+                }
             }
         }
  

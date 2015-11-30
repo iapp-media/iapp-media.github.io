@@ -100,10 +100,10 @@ namespace MiniStore
                     }
                 }
 
-                if (TBACCDate.Text == "") { tmp += ",轉帳日期"; }
+                if (TBACCDate.Text == "") { tmp += ",轉帳日期1"; }
                 else
                 {
-                    if (!Main.IsDate(TBACCDate.Text)) { tmp += ",轉帳日期"; }
+                    if (!Main.IsDate(TBACCDate.Text)) { tmp += ",轉帳日期2"; }
                 }
                 if (tmp != "")
                 {

@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+ 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -241,7 +242,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="input-group date form_date ValueRight" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
-                                        <asp:TextBox ID="TBACCDate" runat="server" CssClass="ValTPad form-control" Enabled="false" placeholder="2015/02/20"></asp:TextBox> 
+                                        <asp:TextBox ID="TBACCDate" runat="server" CssClass="ValTPad form-control"  placeholder="2015/02/20" ></asp:TextBox> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
                                 </div>
@@ -274,6 +275,6 @@
             beforeShow: function () {
                 if (this.container != 'body') top = top + document.body.scrollTop
             }
-        });
+        }); 
     </script>
 </asp:Content>

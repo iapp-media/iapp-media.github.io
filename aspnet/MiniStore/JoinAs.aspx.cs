@@ -43,6 +43,12 @@ namespace MiniStore
         }
         protected void BT_SNAME_Click(object sender, EventArgs e)
         {
+            if (TB_SNAME.Text.Trim() == "")
+            {
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請輸入您的微店店名');", true);
+                return;
+            }
+
             if (Comm.User_ID() != -1)
             {
                 Main.ParaClear();

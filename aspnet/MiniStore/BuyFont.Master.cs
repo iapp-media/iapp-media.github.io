@@ -73,7 +73,7 @@ namespace MiniStore
                 {
                     L_MyStore.Text = "  <li><a href=\"" + Comm.URL + "StoreMana\">我的微店後台</a></li>" +
                                      "  <li class=\"disabled\">我的行動分店</li>" +
-                                     "  <li><a href=\"www.iapp-media.com\">微店市集</a></li> " +
+                                     "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
                                      "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                 }
 
@@ -84,7 +84,7 @@ namespace MiniStore
         {
             if (Comm.DeleCoookie("iapp_uid") == 1)
             {
-                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "','_self')</Script>");
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../Ministore/default.aspx?SN=" + Request.QueryString["SN"] + "") + "&jump=store','_self')</Script>");
 
             }
         }
