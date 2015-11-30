@@ -72,9 +72,11 @@
                     </div>
                     <!-- mobile 搜尋bar -->
                     <div class="search-bar">
+                        <div class="container">
                         <asp:TextBox ID="mSearch" CssClass="search bar-text" runat="server"></asp:TextBox>
                         <!--<input type="text" class="search bar-text" placeholder="Search iApp..." id="mSearch"> -->
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
+                            </div>
                     </div>
 
                     <div class="login-sm">
