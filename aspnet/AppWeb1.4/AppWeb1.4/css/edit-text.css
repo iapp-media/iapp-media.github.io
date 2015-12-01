@@ -1,6 +1,5 @@
 body {
     background-color: none;
-    font-family: 'Myriad Pro', 'Microsoft JhengHei', 'sans-serif';
 }
 
 a {
@@ -13,32 +12,22 @@ a:hover {
     color: #ff9933;
 }
 
-.send {
+.Wordbox .done-1 {
     position: absolute;
     top: 410px;
     left: 0;
     right: 0;
     margin: auto;
-    width: 92px;
-    height: 30px;
-    background: url('../img/button-sprite-1.png');
-    background-position: 92px 57px;
+    width:44px;
     cursor: pointer;
 }
 
-.send:hover {
-    background: url('../img/button-sprite-2.png');
-    background-position: 92px 57px;
-}
+
 
 form {
     margin: 40px 0;
 }
 
-div {
-    clear: both;
-    margin: 0 50px;
-}
 
 label {
     width: 80px;

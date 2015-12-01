@@ -2452,10 +2452,14 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    
+
     #SinfoTop img {
         width: 100%;
     }
+#SinfoTop {
+    height:216px;
+    background-color:#eee;
+}
     
     @media only screen and (max-width:767px) {
         .container-fluid {

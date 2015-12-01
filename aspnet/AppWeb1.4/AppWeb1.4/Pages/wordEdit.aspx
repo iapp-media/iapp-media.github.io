@@ -6,39 +6,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-lightness/jquery-ui.css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" >
     <link href="../css/evol.colorpicker.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../css/edit-text.css">
-     
+    <link href="../css/button.css" rel="stylesheet" />
+    <link href="../css/edit-text.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <form id="form1" runat="server">
-<%--        <asp:TextBox ID="txtEditor" CssClass="txtEditor" runat="server" TextMode="MultiLine"></asp:TextBox>--%>
-        <asp:Literal ID="LTextED" runat="server"></asp:Literal>
-        <div class="chkstyle1">
-            <input type="checkbox" name="radio" id="radio1" class="radio" />
-            <label for="radio1">粗體</label>
-        </div>
-        <div class="chkstyle2">
-            <input type="checkbox" name="radio" id="radio2" class="radio" />
-            <label for="radio2">斜體</label>
-        </div>
-        <div class="chkstyle3">
-            <input type="checkbox" name="radio" id="radio3" class="radio" />
-            <label for="radio3">底線</label>
-        </div> 
-        <div class="show-color">
-            <input id="mycolor" />
-            <p style="float: right;  ">色彩</p>
-        </div>
+        <div class="Wordbox">
+            <%--        <asp:TextBox ID="txtEditor" CssClass="txtEditor" runat="server" TextMode="MultiLine"></asp:TextBox>--%>
+            <asp:Literal ID="LTextED" runat="server"></asp:Literal>
+            <div class="chkstyle1">
+                <input type="checkbox" name="radio" id="radio1" class="radio" />
+                <label for="radio1">粗體</label>
+            </div>
+            <div class="chkstyle2">
+                <input type="checkbox" name="radio" id="radio2" class="radio" />
+                <label for="radio2">斜體</label>
+            </div>
+            <div class="chkstyle3">
+                <input type="checkbox" name="radio" id="radio3" class="radio" />
+                <label for="radio3">底線</label>
+            </div>
+            <div class="show-color">
+                <input id="mycolor" />
+                <p>色彩</p>
+            </div>
 
-     <%--   <div class="send">
+            <%--   <div class="send">
             <p>--%>
-                <asp:LinkButton ID="send" runat="server" OnClientClick="docopy()" OnClick="send_Click" CssClass="send"></asp:LinkButton><%--完成--%>
-     <%--       </p>
+            <asp:LinkButton ID="send" runat="server" OnClientClick="docopy()" OnClick="send_Click" CssClass="done-1">完成</asp:LinkButton><%--完成--%>
+            <%--       </p>
         </div>--%>
+        </div>
         <asp:TextBox ID="EDval" runat="server" BorderStyle="None" Font-Size="XX-Small" ForeColor="#FDFDFD" BackColor="#FDFDFD"></asp:TextBox>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
