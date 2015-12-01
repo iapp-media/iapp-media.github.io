@@ -1,7 +1,6 @@
 body {
     background-color: #f5f5f5;
     font-size: small;
-    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
 }
 
 a {
@@ -772,6 +771,7 @@ a:hover {
     margin: 0;
     font-size: 16px;
     color:#fff;
+    font-weight: 200;
 }
 
 .theme .boxpos a {
@@ -973,11 +973,8 @@ a:hover {
     }
 }
 
-
-
 .tile1 {
     font-size: 24px;
-    font-weight: bold;
     margin: 10px 0 0 0;
 }
 
