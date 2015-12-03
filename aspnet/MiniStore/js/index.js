@@ -197,7 +197,10 @@ $(document).ready(function () {
         slidesPerView: 2,
         centeredSlides: true,
         paginationClickable: true,
-        spaceBetween: 0
+        spaceBetween: 0,
+        initialSlide: 1,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
     });
     
     // gray bar PC
@@ -205,7 +208,7 @@ $(document).ready(function () {
         $("#Allswiper").each(function () {
             var _Sliderindex = $(this).find('.swiper-slide-active').index(),
                 _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
-            console.log(_Sliderindex, _SliderJum)
+            console.log(_SliderJum, "抓到第"+(_Sliderindex + 1)+"個選單")
             //window.location = _SliderJum;
         });
     });
@@ -219,7 +222,7 @@ $(document).ready(function () {
                     var NewSrc = '',
                         NewIndex = $('.swiper-slide-active').index(),
                         NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
-                    console.log(NewSrc, NewIndex)
+                    console.log(NewSrc, "抓到第"+(NewIndex+1)+"個選單")
                     //window.location = NewSrc;
                 }
             })

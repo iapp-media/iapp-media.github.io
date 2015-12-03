@@ -2686,6 +2686,9 @@
         .FixTitle {
             font-size: 18px;
         }
+        .swiper-button-next,.swiper-button-prev {
+        display:none;
+    }
     }
     
     @media only screen and (max-width: 355px) {
@@ -2718,6 +2721,9 @@
         .JoinBranchBox .sendcareButtomeEnd {
             margin-top: 170px;
         }
+        .swiper-button-next,.swiper-button-prev {
+        display:none;
+    }
     }
     
     @media screen and (orientation: portrait) {}
