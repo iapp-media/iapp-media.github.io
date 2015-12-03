@@ -52,10 +52,14 @@ namespace MiniStore
                         {
                             if (i == 1 && Request.QueryString["c"] != null)
                             {
-                                L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + Request.QueryString["c"] + "\" style=\"color: white\">" + Main.Scalar("select Cate_Name from product_cate where idno=" + Request.QueryString["c"] + "") + "</a></div> ";
+                                //L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + Request.QueryString["c"] + "\" style=\"color: white\">" + Main.Scalar("select Cate_Name from product_cate where idno=" + Request.QueryString["c"] + "") + "</a></div> ";
+                                L_Cate.Text += " <div class=\"swiper-slide\" data-src=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + Request.QueryString["c"] + "\">" + Main.Scalar("select Cate_Name from product_cate where idno=" + Request.QueryString["c"] + "") + "</div>";
                             }
-                            L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
+                        //    L_Cate.Text += " <div class=\"swiper-slide\"><a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\" style=\"color: white\">" + DT.Rows[i]["Cate_Name"] + "</a></div> ";
+                            L_Cate.Text += " <div class=\"swiper-slide\" data-src=\"Default.aspx?SN=" + Request.QueryString["SN"] + "&C=" + DT.Rows[i]["IDNo"] + "\">" + DT.Rows[i]["Cate_Name"] + "</div>";
+
                         }
+                         
                     } 
                 }
             }

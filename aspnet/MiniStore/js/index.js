@@ -209,7 +209,7 @@ $(document).ready(function () {
             var _Sliderindex = $(this).find('.swiper-slide-active').index(),
                 _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
             console.log(_SliderJum, "抓到第"+(_Sliderindex + 1)+"個選單")
-            //window.location = _SliderJum;
+            window.location = _SliderJum;
         });
     });
 
@@ -223,7 +223,7 @@ $(document).ready(function () {
                         NewIndex = $('.swiper-slide-active').index(),
                         NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
                     console.log(NewSrc, "抓到第"+(NewIndex+1)+"個選單")
-                    //window.location = NewSrc;
+                    window.location = NewSrc;
                 }
             })
         },
