@@ -221,10 +221,11 @@ $(document).ready(function() {
         paginationClickable: true,
         spaceBetween: 0,
         initialSlide: 1,
-        loop: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
     });
+
+   
 
 
     // gray bar PC
@@ -233,6 +234,7 @@ $(document).ready(function() {
             var _Sliderindex = $(this).find('.swiper-slide-active').index(),
                 _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
             console.log(_Sliderindex, _SliderJum)
+            window.location = _SliderJum;
         });
     });
 

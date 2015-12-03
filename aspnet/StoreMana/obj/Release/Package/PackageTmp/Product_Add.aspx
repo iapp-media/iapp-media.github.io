@@ -24,10 +24,13 @@
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="Product_Mana.aspx" style="color: white">商品列表</a></div>
-                <div class="swiper-slide"><a href="Product_Add.aspx" style="color: white">商品建檔</a></div>
-                <div class="swiper-slide"><a href="Setting.aspx" style="color: white">參數設定</a></div>
+                <div class="swiper-slide" data-src="Product_Mana.aspx">商品列表</div>
+                <div class="swiper-slide" data-src="Product_Add.aspx">商品建檔</div>
+                <div class="swiper-slide" data-src="Setting.aspx">參數設定</div>
             </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 

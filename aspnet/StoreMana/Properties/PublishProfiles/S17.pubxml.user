@@ -20,7 +20,7 @@
       <publishTime>11/30/2015 15:55:13</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>12/03/2015 13:57:17</publishTime>
+      <publishTime>12/03/2015 15:41:33</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>12/01/2015 15:51:03</publishTime>
+      <publishTime>12/03/2015 15:40:03</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>12/01/2015 15:38:15</publishTime>
@@ -59,10 +59,10 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="Cust_Mana.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:14:57</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:21:51</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -90,6 +90,12 @@
     </File>
     <File Include="img/arrow.png">
       <publishTime>11/27/2015 15:34:54</publishTime>
+    </File>
+    <File Include="img/arrow1.png">
+      <publishTime>12/03/2015 15:21:27</publishTime>
+    </File>
+    <File Include="img/arrow2.png">
+      <publishTime>12/03/2015 15:21:27</publishTime>
     </File>
     <File Include="img/backarrow.png">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -179,7 +185,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>12/03/2015 13:57:09</publishTime>
+      <publishTime>12/03/2015 15:41:08</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -221,19 +227,19 @@
       <publishTime>12/03/2015 13:31:03</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:18:42</publishTime>
     </File>
     <File Include="Msg_Mana.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:21:17</publishTime>
     </File>
     <File Include="OrderMana.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:27:03</publishTime>
     </File>
     <File Include="Order_Detail.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:23:54</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:31:05</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
       <publishTime>12/03/2015 12:24:26</publishTime>
@@ -242,22 +248,22 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="Setting.aspx">
-      <publishTime>11/30/2015 14:09:55</publishTime>
+      <publishTime>12/03/2015 14:34:17</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:36:21</publishTime>
     </File>
     <File Include="Setting_SInfo.aspx">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/03/2015 14:38:04</publishTime>
     </File>
     <File Include="Svim.aspx">
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>11/30/2015 11:36:10</publishTime>
+      <publishTime>12/03/2015 14:38:51</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/03/2015 13:57:18</publishTime>
+      <publishTime>12/03/2015 15:41:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

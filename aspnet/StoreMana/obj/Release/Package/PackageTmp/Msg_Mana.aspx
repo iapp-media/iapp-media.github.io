@@ -14,7 +14,7 @@
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="Msg_Mana.aspx" style="color: white">客戶留言</a></div>
+                <div class="swiper-slide" data-src="Msg_Mana.aspx">客戶留言</div>
             </div>
         </div>
     </div>

@@ -2716,12 +2716,26 @@ a.iframe-info.cboxElement {
 .boxpos a:nth-child(1) img {
     width: 100%;
 }
+.swiper-button-prev {
+    background-image:url(../img/arrow1.png);
+     background-color: #a3a3a3;
+    padding: 0px 37px;
+    left: 0;
+}
+.swiper-button-next {
+    background-image:url(../img/arrow2.png);
+        background-color: #a3a3a3;
+    padding: 0px 37px;
+    right: 0;
+}
+
 
 
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
 }
+
 
 @keyframes tinDownOut1 {
     0%,
@@ -2966,6 +2980,12 @@ a.iframe-info.cboxElement {
     .ODetailTop {
         top: 166px;
     }
+    .swiper-button-next {
+        display:none;
+    }
+    .swiper-button-prev {
+        display:none;
+    }
 }
 
 @media only screen and (max-width: 355px) {
@@ -2981,6 +3001,12 @@ a.iframe-info.cboxElement {
     }
     .scrollable-menu {
         max-height: 250px;
+    }
+    .swiper-button-next {
+        display:none;
+    }
+    .swiper-button-prev {
+        display:none;
     }
 }
 
