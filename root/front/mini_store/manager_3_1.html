@@ -280,9 +280,10 @@
             swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
                 $('.swiper-wrapper li').each(function(e) {
                     if ($(this).hasClass('swiper-slide-active')) {
-                        var swipeindex = $(this).index() + 1;
+                        var swipeindex = $(this).index();
+                        console.log('抓到個數='+swipeindex);
                         // $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
-                        window.location = 'manager_3_' + swipeindex + '.html';
+                        // window.location = 'manager_3_' + swipeindex + '.html';
                     }
                 })
             },

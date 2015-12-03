@@ -277,8 +277,9 @@
                 $('.swiper-wrapper li').each(function(e) {
                     if ($(this).hasClass('swiper-slide-active')) {
                         var swipeindex = $(this).index() + 1;
+                        console.log(swipeindex);
                         // $('.allmodify').eq(swipeindex).fadeIn().siblings().fadeOut();
-                        window.location = 'manager_2_' + swipeindex + '.html';
+                        // window.location = 'manager_2_' + swipeindex + '.html';
                     }
                 })
             },
