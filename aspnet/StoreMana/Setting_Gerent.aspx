@@ -7,11 +7,14 @@
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="Setting.aspx" style="color: white">參數設定</a></div>
-                <div class="swiper-slide"><a href="Setting_Gerent.aspx" style="color: white">帳號管理</a></div>
-                <div class="swiper-slide"><a href="Setting_SInfo.aspx" style="color: white">微店管理</a></div>
-                <div class="swiper-slide"><a href="Setting_Bonus.aspx" style="color: white">點數設定</a></div>
+                <div class="swiper-slide" data-src="Setting.aspx">參數設定</div>
+                <div class="swiper-slide" data-src="Setting_Gerent.aspx">帳號管理</div>
+                <div class="swiper-slide" data-src="Setting_SInfo.aspx">微店管理</div>
+                <div class="swiper-slide" data-src="Setting_Bonus.aspx">點數設定</div>
             </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
     <div class="buydivmove">

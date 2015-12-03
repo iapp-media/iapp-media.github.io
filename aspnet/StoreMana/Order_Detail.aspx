@@ -6,10 +6,13 @@
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="OrderMana.aspx" style="color: white">出貨管理</a></div>
-                <div class="swiper-slide"><a href="OrderMana.aspx" style="color: white">訂單管理</a></div>
-                <div class="swiper-slide"><a href="OrderMana.aspx?hist=1" style="color: white">歷史訂單</a></div>
+                <div class="swiper-slide" data-src="OrderMana.aspx">出貨管理</div>
+                <div class="swiper-slide" data-src="OrderMana.aspx">訂單管理</div>
+                <div class="swiper-slide" data-src="OrderMana.aspx?hist=1">歷史訂單</div>
             </div>
+             <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
     <!-- WRAPPER -->
