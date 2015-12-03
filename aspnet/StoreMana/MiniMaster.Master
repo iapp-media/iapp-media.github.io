@@ -164,28 +164,10 @@
         <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-        if ($('.swiper-slide').hasClass('swiper-slide-active')) {
-            var zeyan2 = $(this).index();
-            console.log(zeyan2)
-        }
-        //$(function () {
-        //    //Keep track of how many swipes
-        //    var count = 0;
-        //    //Enable swiping...
-        //    $(".swiper-slide").swipe({
-
-        //        //Generic swipe handler for all directions
-        //        swipeStatus: function (event, direction, distance, duration, fingerCount) {
-        //            $(this).each(function () {
-        //                var zeyan = $(this).length;
-                        
-        //            })
-        //        },
-        //        //Default is 75px, set to 0 for demo so any distance triggers swipe
-        //        threshold: 0
-        //    });
-            
-        //});
+        $(function(){
+           
+           
+        });
 
     </script>
 </body>

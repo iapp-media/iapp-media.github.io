@@ -5,7 +5,6 @@ html {
 body {
     background-color: #f5f5f5;
     font-size: small;
-    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
     background: url('../img/web-transpage-img.jpg') no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -16,20 +15,18 @@ body {
 form#form1 {
     height: 100%;
 }
+
 .BGW {
-    width:100%;
+    width: 100%;
     height: calc(100% + 100px);
-    max-width:700px;
-    margin:auto;
-    position:fixed;
-    right:0;
-    left:0;
-    top:0;
-    background-color:#fff;
-
-
+    max-width: 700px;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #fff;
 }
-   
 
 .FixTitle {
     text-align: center;
@@ -40,7 +37,7 @@ form#form1 {
     width: 162px;
     right: 0;
     margin: auto;
-    line-height: 77px;
+    line-height: 81px;
 }
 
 a {
@@ -163,7 +160,7 @@ a:active {
 }
 
 .ODetailTop {
-       top: 188px;
+    top: 188px;
     position: absolute;
     width: 100%;
     max-width: 700px;
@@ -352,8 +349,8 @@ a:active {
     padding: 6px 12px;
     /* margin-bottom: 6px; */
     display: flex;
-     display: -webkit-flex;
-     display: -ms-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
     justify-content: center;
     -webkit-justify-content: center;
     -ms-justify-content: center;
@@ -2517,7 +2514,7 @@ a.iframe-info.cboxElement {
     color: #fff;
     display: table;
     line-height: 29px;
-    padding:0 6px;
+    padding: 0 6px;
     text-align: center;
     font-size: 20px;
     border-radius: 20% 0 20% 0 /50% 0 50% 0;
@@ -2649,45 +2646,52 @@ a.iframe-info.cboxElement {
 #Step6 .CBbot {
     padding: 6px 12px;
 }
+
 .Pagenow {
-    font-size:0;
-    margin:0;
-    padding:0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
     width: 120px;
-    margin:auto;
-    padding-top:15px;
+    margin: auto;
+    padding-top: 15px;
 }
-    .Pagenow li {
-        display:inline-block;
-        width:10px;
-        height:10px;
-        background-color:#aaa;
-        border-radius:50%;
-        margin-right:12px;
-    }
-        .Pagenow li.BTNactive {
-            position:relative;
-        }
-        .Pagenow li:last-child {
-            margin:0;
-        }
-            .Pagenow li.BTNactive:before {
-                content:'';
-                width:6px;
-                height:6px;
-                background-color:#fff;
-                position:absolute;
-                top:0;
-                right:0;
-                bottom:0;
-                left:0;
-                margin:auto;
-                border-radius:50%;
-            }
+
+.Pagenow li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.Pagenow li.BTNactive {
+    position: relative;
+}
+
+.Pagenow li:last-child {
+    margin: 0;
+}
+
+.Pagenow li.BTNactive:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
 #psimg {
-    width:100%;
-    border-radius:8px;
+    width: 100%;
+    border-radius: 8px;
 }
+
 .boxpos a:nth-child(1) {
     width: 101px;
     position: absolute;
@@ -2697,6 +2701,7 @@ a.iframe-info.cboxElement {
     margin-top: -51px;
     padding: 0;
 }
+
 .boxpos a:nth-child(2) {
     width: 79px;
     position: absolute;
@@ -2706,14 +2711,13 @@ a.iframe-info.cboxElement {
     margin-top: -41px;
     padding: 0;
 }
-.boxpos a:nth-child(2) img, .boxpos a:nth-child(1) img {
+
+.boxpos a:nth-child(2) img,
+.boxpos a:nth-child(1) img {
     width: 100%;
 }
-.paynumber .Sinfoheadimg {
-    height:110px;
-    background-color:#fff;
-    border-radius:8px;
-}
+
+
 
 .tinDownOut1 {
     -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
@@ -2746,7 +2750,7 @@ a.iframe-info.cboxElement {
 @media only screen and (max-width:480px) {
     .FixTitle {
         line-height: 60px;
-        font-size:18px;
+        font-size: 18px;
     }
     .Addbutton {
         width: 50px;
@@ -2957,10 +2961,10 @@ a.iframe-info.cboxElement {
         height: 50px;
     }
     .ContentTop {
-            top: 108px;
+        top: 108px;
     }
     .ODetailTop {
-        top:166px;
+        top: 166px;
     }
 }
 
@@ -2970,14 +2974,14 @@ a.iframe-info.cboxElement {
         height: 50px;
     }
     .ODetailTop {
-        top:168px;
+        top: 168px;
     }
-      .FixTitle {
-                font-size: 18px;
-        }
-      .scrollable-menu {
-    max-height: 250px;
-}
+    .FixTitle {
+        font-size: 18px;
+    }
+    .scrollable-menu {
+        max-height: 250px;
+    }
 }
 
 @media screen and (orientation: portrait) {}

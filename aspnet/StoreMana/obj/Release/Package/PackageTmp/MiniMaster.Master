@@ -164,6 +164,11 @@
         <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
+        $(function(){
+           
+           
+        });
+
     </script>
 </body>
 </html>

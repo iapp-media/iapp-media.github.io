@@ -207,22 +207,53 @@ $(document).ready(function() {
 
     });
 
-    // menu swipe
+   
 
+    $('.openslider').on('click', function () {
+        $('.productDIV').fadeIn();
+    });
+
+    // swipe
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 2,
         centeredSlides: true,
         paginationClickable: true,
-        spaceBetween: 0
-        //initialSlide: 1
-       
+        spaceBetween: 0,
+        initialSlide: 1,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
     });
 
-    $('.openslider').on('click', function () {
-        $('.productDIV').fadeIn();
-    })
 
+    // gray bar PC
+    $('.swiper-button-next,.swiper-button-prev').click(function () {
+        $("#Allswiper").each(function () {
+            var _Sliderindex = $(this).find('.swiper-slide-active').index(),
+                _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
+            console.log(_Sliderindex, _SliderJum)
+        });
+    });
+
+    // gray bar mobile
+    $("#Allswiper").swipe({
+        //Generic swipe handler for all directions
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            $(this).each(function (e) {
+                if ($('.swiper-slide').hasClass('swiper-slide-active')) {
+                    var NewSrc = '',
+                        NewIndex = $('.swiper-slide-active').index(),
+                        NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
+                        console.log(NewSrc, NewIndex)
+                        //window.location = NewSrc;
+                }
+            })
+        },
+        threshold: 0
+    });
+    
+    
 
     //瀑布流
 

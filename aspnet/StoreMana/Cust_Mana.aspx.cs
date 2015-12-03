@@ -43,9 +43,9 @@ namespace StoreMana
                 SD1.ConnectionString = Main.ConnStr;
                 RP1.DataSourceID = SD1.ID;
 
-                Sub_Menu.Text = " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?com=1\" style=\"color: white\">社群力排行</a></li>  " +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?act=1\" style=\"color: white\">活動力排行</a></li>" +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx\" style=\"color: white\">客戶列表</a></li>";
+                Sub_Menu.Text = " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?com=1\">社群力排行</div>  " +
+                                " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?act=1\">活動力排行</div>" +
+                                " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx\">客戶列表</div>";
             }
 
             if (Request.QueryString["com"] != null)
@@ -65,9 +65,9 @@ namespace StoreMana
                 SD2.SelectCommand = L2.Text;
                 SD2.ConnectionString = Main.ConnStr;
                 RP2.DataSourceID = SD2.ID;
-                Sub_Menu.Text = " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx\" style=\"color: white\">客戶列表</a></li>  " +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?com=1\" style=\"color: white\">社群力排行</a></li>" +
-                                " <li class=\"swiper-slide col-xs-4\"><a href=\"Cust_Mana.aspx?act=1\" style=\"color: white\">活動力排行</a></li>";
+                Sub_Menu.Text = " <li class=\"swiper-slide\" data-src=\"Cust_Mana.aspx\">客戶列表</li>  " +
+                                " <li class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?com=1\">社群力排行</li>" +
+                                " <li class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?act=1\">活動力排行</li>";
 
             }
 
@@ -89,9 +89,9 @@ namespace StoreMana
                 SD3.ConnectionString = Main.ConnStr;
                 RP3.DataSourceID = SD3.ID;
 
-                Sub_Menu.Text = " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx?com=1\" style=\"color: white\">社群力排行</a></div>  " +
-                                " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx\" style=\"color: white\">客戶列表</a></div>" +
-                                " <div class=\"swiper-slide\"><a href=\"Cust_Mana.aspx?act=1\" style=\"color: white\">活動力排行</a></div>";
+                Sub_Menu.Text = " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?com=1\">社群力排行</div>  " +
+                                " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx\">客戶列表</div>" +
+                                " <div class=\"swiper-slide\" data-src=\"Cust_Mana.aspx?act=1\">活動力排行</div>";
  
             }
         }

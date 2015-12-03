@@ -3,38 +3,32 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<div class="col-xs-12 allClassification swiper-container">
-        <div class="row swiper-container">
-            <ul class="swiper-wrapper">
-                
-            </ul>
-        </div>
-    </div>--%>
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <asp:Literal ID="Sub_Menu" runat="server"></asp:Literal>
             </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
     <!-- WRAPPER -->
     <div class="buydivmove">
         <div class="insidecare col-xs-12">
-            <div class="row"> 
-                
-                    <div class="CustBar">
-                        
-                            <div class="col-xs-8 Custsend">
-                                
-                                    <asp:TextBox ID="TBName" runat="server" Class="form-control" placeholder="輸入姓名查詢"></asp:TextBox>
-                 
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning SBuyCar2" OnClick="BT_Search_Click" />
-                            </div>
-                       
-                    </div> 
-            
+            <div class="row">
+                <div class="CustBar">
+                    <div class="col-xs-8 Custsend">
+
+                        <asp:TextBox ID="TBName" runat="server" Class="form-control" placeholder="輸入姓名查詢"></asp:TextBox>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <asp:Button ID="BT_Search" runat="server" Text="搜尋" CssClass="btn btn-warning SBuyCar2" OnClick="BT_Search_Click" />
+                    </div>
+
+                </div>
+
 
 
 

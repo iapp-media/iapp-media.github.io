@@ -1,6 +1,14 @@
 ﻿ 
 $(document).ready(function () {
 
+    //判斷微店狀態
+
+    //$('.theme li:contains(哈雷)').click(function () {
+    //    console.log(123213)
+    //    alert(12312313)
+    //    $('html:contains(微創作)').text(哈囉)
+    //});
+
     //Examples of how to assign the Colorbox event to elements
 
     var boxwidth = "80%";
