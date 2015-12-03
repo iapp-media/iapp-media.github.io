@@ -5,59 +5,59 @@
     body {
         background-color: #f5f5f5;
         font-size: small;
-        font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, sans-serif;
         background: url('../img/web-transpage-img.jpg') no-repeat;
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
         height: 100%;
-        
     }
-.Mapbox {
-    position: fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    margin:auto;
-    z-index:999;
-    max-width:700px;
-    width: 90%;
-    height: 317px;
-    /*background-color: #f00;*/
-    transform:scale(0);
-    transition:.5s;
-}
-#map {
-    width:100%;
-    height:100%;
-}
-.colorBG {
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index:998;
-    background-color:rgba(0,0,0,.5);
-    display:none;
-}
-.BGW {
-    width:100%;
-    height: calc(100% + 100px);
-    max-width:700px;
-    margin:auto;
-    position:fixed;
-    right:0;
-    left:0;
-    top:0;
-    background-color:#fff;
-
-}
-
-.scrollable-menu .left,
-.scrollable-menu .right {
-    width:50%;
-}
-
+    
+    .Mapbox {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 999;
+        max-width: 700px;
+        width: 90%;
+        height: 317px;
+        /*background-color: #f00;*/
+        transform: scale(0);
+        transition: .5s;
+    }
+    
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .colorBG {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 998;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+    }
+    
+    .BGW {
+        width: 100%;
+        height: calc(100% + 100px);
+        max-width: 700px;
+        margin: auto;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+    }
+    
+    .scrollable-menu .left,
+    .scrollable-menu .right {
+        width: 50%;
+    }
     
     form#form1 {
         height: 100%;
@@ -200,15 +200,15 @@
     /* Menu bar */
     
     .swiper-container {
-       width: 100%;
-    background-color: #a3a3a3;
-    height: 48px;
-    position: fixed;
-    top: 82px;
-    max-width: 700px;
-    right: 0;
-    left: 0;
-    margin: auto;
+        width: 100%;
+        background-color: #a3a3a3;
+        height: 48px;
+        position: fixed;
+        top: 82px;
+        max-width: 700px;
+        right: 0;
+        left: 0;
+        margin: auto;
     }
     
     .swiper-slide:first-child {
@@ -307,18 +307,15 @@
     
     .FixTitle {
         text-align: center;
-    color: #ff9933;
-    font-size: 22px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width:150px;
-    line-height: 81px;
-    position:fixed;
-    top:0;
-    
-   
-
+        color: #ff9933;
+        font-size: 22px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 150px;
+        line-height: 81px;
+        position: fixed;
+        top: 0;
     }
     
     .MidFonts {
@@ -436,7 +433,7 @@
     .ValTPad {
         font-size: 12px;
         padding: 6px;
-        width:100%;
+        width: 100%;
     }
     
     .BoxTitle {
@@ -464,9 +461,9 @@
     
     .ValueRight {
         background-color: transparent;
-    border-radius: 2px;
-    font-size: 18px;
-    text-align: right;
+        border-radius: 2px;
+        font-size: 18px;
+        text-align: right;
     }
     
     .Valuetextarea {
@@ -475,7 +472,7 @@
         background-color: #ffeecf;
         height: 100px;
         border-radius: 5px;
-        overflow:auto;
+        overflow: auto;
     }
     
     .ValueText {
@@ -513,12 +510,10 @@
     }
     
     nav .navbar-brand {
-           height: 100%;
-    padding: 0;
-    
-    width: 25%;
-    margin: 0;
-        
+        height: 100%;
+        padding: 0;
+        width: 25%;
+        margin: 0;
     }
     
     .status input,
@@ -532,29 +527,30 @@
         float: right;
         text-align: right;
     }
-#BonusDiscount{
-    padding: 9px 12px;
-}
-.payNum span,
-#BonusDiscount span:nth-child(2) {
-    text-align:right;
-}
-#BonusDiscount span:nth-child(1) {
-    text-align:left;
-}
+    
+    #BonusDiscount {
+        padding: 9px 12px;
+    }
+    
+    .payNum span,
+    #BonusDiscount span:nth-child(2) {
+        text-align: right;
+    }
+    
+    #BonusDiscount span:nth-child(1) {
+        text-align: left;
+    }
     
     .ContentTop {
         display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
+        display: -webkit-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         background-color: #f93!important;
         height: 60px;
         box-sizing: border-box;
@@ -664,7 +660,7 @@
     #pagetitle {
         display: flex;
         display: -webkit-flex;
-         display: -ms-flex;
+        display: -ms-flex;
         justify-content: center;
         -webkit-justify-content: center;
         -ms-justify-content: center;
@@ -832,28 +828,26 @@
     
     .container-fluid {
         position: relative;
-        height:81px;
-        padding:0;
+        height: 81px;
+        padding: 0;
     }
     
     .Lgallbar {
         right: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    width: 15%;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 15%;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
     }
     
     .questionBox {
@@ -1020,20 +1014,17 @@
     
     .details {
         background-color: #f5f5f5;
-        font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, sans-serif;
         max-width: 700px;
         box-sizing: border-box;
-         display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         font-size: 0;
         padding: 15px 12px;
     }
@@ -1062,13 +1053,13 @@
         float: left;
         font-size: 16px;
         border-radius: 0;
-            padding: 0;
+        padding: 0;
     }
     
     .input-number,
     .input-number-decrement,
     .input-number-increment {
-        line-height:40px;
+        line-height: 40px;
         user-select: none;
     }
     
@@ -1452,16 +1443,14 @@
         right: 0;
         margin: auto;
         display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    
+        display: -webkit-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
     }
     
     .username-icon h4 {
@@ -1594,13 +1583,10 @@
         color: #87888a;
     }
     
-    
     .paynumber option {
         text-align: right;
     }
     
-
-
     .sendadress label {
         display: table;
     }
@@ -1886,35 +1872,38 @@
     }
     
     .questionBox input:first-child,
-    .swiper-wrapper li:nth-child(3){
+    .swiper-wrapper li:nth-child(3) {
         border: none;
     }
-.boxpos a {
-    display:block;
-}
+    
+    .boxpos a {
+        display: block;
+    }
+    
     .boxpos a:nth-child(1) {
-       
         width: 101px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -110px;
-    margin-top: -51px;
-    padding:0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -110px;
+        margin-top: -51px;
+        padding: 0;
     }
+    
     .boxpos a:nth-child(2) {
-            width: 79px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: 13px;
-    margin-top: -41px;
-    padding:0;
+        width: 79px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 13px;
+        margin-top: -41px;
+        padding: 0;
     }
-        .boxpos a:nth-child(2) img,
-        .boxpos a:nth-child(1) img {
-            width:100%;
-        }
+    
+    .boxpos a:nth-child(2) img,
+    .boxpos a:nth-child(1) img {
+        width: 100%;
+    }
     
     .fixBar .sendcareButtom,
     .fixBar.sendcareButtom {
@@ -1966,10 +1955,10 @@
         text-align: left;
         padding: 12px;
     }
-.disabled {
-    color:#ddd;
-}
-
+    
+    .disabled {
+        color: #ddd;
+    }
     
     .theme> li > a:hover,
     .theme > li > a:hover {
@@ -2431,48 +2420,69 @@
         width: 75%;
         margin-right: 0;
     }
+    
+    #FastBox .CBBTN {
+        position: fixed;
+        bottom: 0;
+        max-width: 700px;
+    }
+    
+    #SinfoPage .ListLen,
+    #SinfoPage .Listarea,
+    #SinfoPage .ListT {
+        border-top: 1px solid #eee;
+    }
+    
+    #SinfoPage .ListT .glyphicon-tags {
+        color: #aaa;
+        padding: 0 13px;
+    }
+    
+    .ListLen .RightBTN {
+        text-align: right;
+        font-size: 30px;
+    }
+    
+    #SinfoPage .Listarea textarea {
+        width: 100%;
+        height: 200px;
+    }
+    
+    #SinfoPage .Listarea {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
-        #FastBox .CBBTN {
-            position: fixed;
-            bottom: 0;
-            max-width: 700px;
+    #SinfoTop img {
+        width: 100%;
+    }
+#SinfoTop {
+    height:229px;
+    background-color:#eee;
+}
+.swiper-button-prev {
+    background-image:url(../img/arrow1.png);
+     background-color: #a3a3a3;
+    padding: 0px 37px;
+    left: 0;
+}
+.swiper-button-next {
+    background-image:url(../img/arrow2.png);
+        background-color: #a3a3a3;
+    padding: 0px 37px;
+    right: 0;
+}
+    
+    @media only screen and (max-width:767px) {
+        .container-fluid {
+            padding: 0;
         }
-#SinfoPage .ListLen,
-#SinfoPage .Listarea,
-#SinfoPage .ListT {
-    border-top:1px solid #eee;
-}
-#SinfoPage .ListT .glyphicon-tags {
-    color:#aaa;
-    padding:0 13px;
-}
-.ListLen .RightBTN {
-    text-align:right;
-    font-size:30px;
-}
-#SinfoPage .Listarea textarea{
-    width:100%;
-    height:200px;
-}
-#SinfoPage .Listarea{
-    padding-top:15px;
-    padding-bottom:15px;
-}
-
-#SinfoTop img{
-    width:100%;
-}
-
-@media only screen and (max-width:767px) {
-     .container-fluid {
-            padding:0;
-        }
-}
+    }
     
     @media only screen and (max-width:480px) {
         .container-fluid {
-            padding:0;
-            height:60px;
+            padding: 0;
+            height: 60px;
         }
         #FastBox {
             margin: 4px 0 147px 0;
@@ -2562,7 +2572,6 @@
             top: 60px;
             right: 0;
             left: 0;
-           
             border-radius: 0;
             border-top: none;
             border-left: 0;
@@ -2598,11 +2607,8 @@
             padding: 0;
         }
         .Lgallbar {
-              
-    width: 20%;
-    
-    right: 8px;
-    
+            width: 20%;
+            right: 8px;
         }
         .search-sm {
             display: inline;
@@ -2645,7 +2651,6 @@
         .glyphicon-search {
             color: #f93;
         }
-       
         .product {
             width: 100%;
             background-color: #fff;
@@ -2669,7 +2674,7 @@
             margin-top: 203px;
         }
         .swiper-container {
-               top: 60px;
+            top: 60px;
         }
         .JoinBox .Sendbox {
             width: 90%;
@@ -2679,8 +2684,11 @@
             font-size: 18px;
         }
         .FixTitle {
-                font-size: 18px;
+            font-size: 18px;
         }
+        .swiper-button-next,.swiper-button-prev {
+        display:none;
+    }
     }
     
     @media only screen and (max-width: 355px) {
@@ -2696,23 +2704,26 @@
             font-size: 18px;
         }
         .FixTitle {
-                font-size: 18px;
+            font-size: 18px;
         }
         .scrollable-menu {
-    max-height: 250px;
-}
+            max-height: 250px;
+        }
         .BoxLeft {
-            font-size:15px;
+            font-size: 15px;
         }
         .JoinBranchBox .JBBG1 {
-            margin-top:-186px;
+            margin-top: -186px;
         }
-         .JoinBranchBox .JBBG2 {
+        .JoinBranchBox .JBBG2 {
             margin-top: -30px;
         }
         .JoinBranchBox .sendcareButtomeEnd {
-                   margin-top: 170px;
+            margin-top: 170px;
         }
+        .swiper-button-next,.swiper-button-prev {
+        display:none;
+    }
     }
     
     @media screen and (orientation: portrait) {}

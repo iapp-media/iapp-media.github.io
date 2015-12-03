@@ -223,8 +223,8 @@ $(document).ready(function () {
                         NewIndex = $('.swiper-slide-active').index(),
                         NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
                     console.log(NewSrc, "抓到第"+(NewIndex+1)+"個選單")
-                    window.location = NewSrc;
                 }
+               window.location = NewSrc;
             })
         },
         threshold: 0

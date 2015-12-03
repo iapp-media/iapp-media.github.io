@@ -14,10 +14,16 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+    <div id="Allswiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
+         
     </div>
     <!-- 至購物車 -->
     <asp:Literal ID="LCarLink" runat="server"></asp:Literal>

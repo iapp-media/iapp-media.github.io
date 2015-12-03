@@ -2980,10 +2980,7 @@ a.iframe-info.cboxElement {
     .ODetailTop {
         top: 166px;
     }
-    .swiper-button-next {
-        display:none;
-    }
-    .swiper-button-prev {
+    .swiper-button-next,.swiper-button-prev {
         display:none;
     }
 }
@@ -3002,12 +2999,10 @@ a.iframe-info.cboxElement {
     .scrollable-menu {
         max-height: 250px;
     }
-    .swiper-button-next {
+    .swiper-button-next,.swiper-button-prev {
         display:none;
     }
-    .swiper-button-prev {
-        display:none;
-    }
+   
 }
 
 @media screen and (orientation: portrait) {}

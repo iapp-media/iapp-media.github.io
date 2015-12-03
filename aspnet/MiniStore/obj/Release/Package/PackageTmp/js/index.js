@@ -197,27 +197,39 @@ $(document).ready(function () {
         slidesPerView: 2,
         centeredSlides: true,
         paginationClickable: true,
-        spaceBetween: 0
+        spaceBetween: 0,
+        initialSlide: 1,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
     });
-    //touch.on('#Buycar', 'touchstart', function (ev) {
-    //    ev.preventDefault();
-    //});
+    
+    // gray bar PC
+    $('.swiper-button-next,.swiper-button-prev').click(function () {
+        $("#Allswiper").each(function () {
+            var _Sliderindex = $(this).find('.swiper-slide-active').index(),
+                _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
+            console.log(_SliderJum, "抓到第"+(_Sliderindex + 1)+"個選單")
+            window.location = _SliderJum;
+        });
+    });
 
-    //var target = document.getElementById("Buycar");
-    //var dx, dy;
+    // gray bar mobile
+    $("#Allswiper").swipe({
+        //Generic swipe handler for all directions
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            $(this).each(function (e) {
+                if ($('.swiper-slide').hasClass('swiper-slide-active')) {
+                    var NewSrc = '',
+                        NewIndex = $('.swiper-slide-active').index(),
+                        NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
+                    console.log(NewSrc, "抓到第"+(NewIndex+1)+"個選單")
+                }
+               window.location = NewSrc;
+            })
+        },
+        threshold: 0
+    });
 
-    //touch.on('#Buycar', 'drag', function (ev) {
-    //    dx = dx || 0;
-    //    dy = dy || 0;
-    //    var offx = dx + ev.x + "px";
-    //    var offy = dy + ev.y + "px";
-    //    this.style.webkitTransform = "translate3d(" + offx + "," + offy + ",0)"; 
-    //});
-
-    //touch.on('#Buycar', 'dragend', function (ev) {
-    //    dx += ev.x;
-    //    dy += ev.y;
-    //});
 
     //瀑布流
 
