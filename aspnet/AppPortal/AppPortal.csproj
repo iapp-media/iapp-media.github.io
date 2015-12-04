@@ -99,6 +99,7 @@
     <Content Include="img\like-1.png" />
     <Content Include="img\like-2.png" />
     <Content Include="img\lineicon.png" />
+    <Content Include="img\logout-1.png" />
     <Content Include="img\memory-qr.jpg" />
     <Content Include="img\memory.jpg" />
     <Content Include="img\miniApp.jpg" />

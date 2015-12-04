@@ -835,12 +835,27 @@ a:hover {
     margin:auto;
     display:none;
 }
+.mobileProfileall {
+        display:none;
+    }
 
 
 @media only screen and (max-width:768px) {
+    
+    .smallpro {
+        width:27px;
+        height:13px;
+        background:url('../img/logout-1.png');
+        background-size:100%;
+        position:fixed;
+        top:60px;
+        right:47px;
+        z-index:2;
+    }
     .mobileProfile {
         position: fixed;
-        top: 60px;
+        top: 73px;
+        z-index:1;
         background-color: #fff;
         width: 90%;
         right: 0;
@@ -848,9 +863,9 @@ a:hover {
         margin: auto;
         text-align: center;
         border-radius: 8px;
-        -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
-        -moz-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
-        filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+        -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+        -moz-filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+        filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
     }
         .mobileProfile li {
             padding:12px;

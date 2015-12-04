@@ -58,7 +58,7 @@ $(document).ready(function () {
         //$('.login-box').hide();
         //$('.icon-box').addClass('openlogin');
     });
-    $(".icon-box,.login-sm").click(function () {
+    $(".icon-box").click(function () {
         $('.jumbotron').toggleClass('jumbotronAni');
         if ($('.jumbotron').hasClass('jumbotronAni')) {
             $('.user-icon').fadeIn('slow', function () {
@@ -83,6 +83,9 @@ $(document).ready(function () {
     //    $('.m-profile').hide();
     //    $('#m-login').show();
     //});
+    $('.login-sm').click(function () {
+        $('.mobileProfileall').animate({'top':73})
+    })
 
 
     var $container = $('#container');
