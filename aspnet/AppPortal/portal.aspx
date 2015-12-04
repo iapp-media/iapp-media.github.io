@@ -41,13 +41,19 @@
                         <img src="img/iapplogo.png" alt="">
                     </a>
 
-                    <!-- 主題下拉選單（共用） -->
+                    <!-- 會員資料選單（PC） -->
                     <div>
                         <ul class="dropdown-menu dropdown-menu-right theme" role="menu">
                             <asp:Literal ID="ThemeLi" runat="server"></asp:Literal>
                         </ul>
                     </div>
-
+                    <!-- 會員資料選單（mobile） -->
+                    <ul class="mobileProfile">
+                        <li><a href="javascript:__doPostBack('LBmyw','')">我的iApp</a></li>
+                        <li><a href="#">收藏的iApp</a></li>
+                        <li><a href="#">編輯個人資料</a></li>
+                        <li><a href="javascript:__doPostBack('LBLogout','')">登出</a></li>
+                    </ul>
                     <!--  搜尋bar提示框（共用）-->
                     <div id="listbox">
                         <%--       <ul class="dropdown-menu dropdown-menu-right finder" role="menu">

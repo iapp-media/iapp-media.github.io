@@ -260,6 +260,7 @@ function clickMin() {
 }
 clickMin();
 
+//抓網址位置function
 function getValue(varname) {
     var url = window.location.href;
     try {

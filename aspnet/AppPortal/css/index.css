@@ -836,7 +836,29 @@ a:hover {
     display:none;
 }
 
+
 @media only screen and (max-width:768px) {
+    .mobileProfile {
+        position:fixed;
+        top:60px;
+        background-color:#fff;
+        width:90%;
+        right:0;
+        left:0;
+        margin:auto;
+        text-align:center;
+    }
+        .mobileProfile li {
+            padding:12px;
+            font-size:18px;
+            border-bottom:1px solid #ff9933;
+            width:90%;
+            margin:auto;
+        }
+        
+            .mobileProfile li:last-child {
+                border:none;
+            }
     .jumbotron {
         margin-top:59px;
     }
