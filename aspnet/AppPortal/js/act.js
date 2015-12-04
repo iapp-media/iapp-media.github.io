@@ -253,6 +253,12 @@ function starit(obj) {
 function toggleMy() {
     if (getValue("fn") == "my") { window.open("portal.aspx", "_self"); } else { window.open("portal.aspx?fn=my", "_self"); }
 }
+function clickMin() {
+    if (getValue("t") == "10") {
+        $('.tile1 a').text('開微店');
+    }
+}
+clickMin();
 
 function getValue(varname) {
     var url = window.location.href;
