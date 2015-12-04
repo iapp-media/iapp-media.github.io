@@ -24,10 +24,9 @@ namespace StoreMana.Mini
 
                 Main.ParaClear();
                 Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
-                if (Main.Scalar("Select isnull(Store_Cate,0) from Store_info where store_id=@SID") == "0")
+                if (Main.Scalar("Select isnull(sum(ckStep),0) from Store_info where store_id=@SID") == "0")
                 {
-                    Response.Redirect("ThreeOpen.aspx");
-
+                    Response.Redirect("ThreeOpen.aspx"); 
                 } 
                 Store_Name.Text = Main.Scalar("Select Store_Name from store_info where Store_ID=@SID");
                 string SNID = Main.Scalar("Select Store_NID from Store where idno=@SID");

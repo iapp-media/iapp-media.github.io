@@ -283,6 +283,9 @@ namespace StoreMana
 
         protected void BTStep6_Click(object sender, EventArgs e)
         {
+            Main.ParaClear(); 
+            Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+            Main.NonQuery("update Store_info set ckStep=1 where Store_ID=@SID");
             //要總確認嗎?
             Response.Redirect("../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") + "");
         }
