@@ -31,6 +31,9 @@ namespace Login
                         }
                     } 
                 }
+
+                //Comm.DeleCoookie("iapp_uid");
+                //Comm.DeleCoookie("iapp_sid");
             }
         }
  

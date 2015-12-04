@@ -71,7 +71,7 @@ namespace MiniStore
                 }
                 else
                 {
-                    L_MyStore.Text = "  <li><a href=\"" + Comm.URL + "StoreMana\">我的微店後台</a></li>" +
+                    L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">我的微店後台</a></li>" +
                                      "  <li class=\"disabled\">我的行動分店</li>" +
                                      "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
                                      "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";

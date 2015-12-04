@@ -19,7 +19,7 @@ namespace StoreMana.Mini
                 //asdasdasdasdasd
                 if (Comm.Store_ID() == -1)
                 {
-                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>");
+                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
                 }
 
                 Main.ParaClear();
@@ -43,7 +43,7 @@ namespace StoreMana.Mini
         {
             if (Comm.DeleCoookie("iapp_sid") == 1)
             {
-                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "','_self')</Script>"); 
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>"); 
             } 
         }
     }

@@ -119,7 +119,8 @@ namespace MiniStore
                 int c = Main.NonQuery("update orders set AC_AMT=@AC_AMT ,ACC_AMT=@ACC_AMT,ACC_Date=@ACC_Date,status='5' where IDNo=@IDNo");
                 if (c > 0)
                 {
-                    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');</script>"); 
+                    this.ClientScript.RegisterStartupScript(this.GetType(), "String", "<script>alert('已成功送出通知');window.open('Order_history.aspx?sn=" + Request.QueryString["SN"] + "','_self')</script>");
+ 
                 }
             }
             else
