@@ -37,6 +37,7 @@ $(document).ready(function () {
         }, 300);
         $(".theme").hide();
         $(".m-profile").hide();
+        
     });
     //$(".bar-text").click(function () {
     //    $('.finder').show();
@@ -48,6 +49,9 @@ $(document).ready(function () {
         }, 300);
         $(".m-profile").hide();
         $('.finder').hide();
+        $('.mobileProfileall').fadeOut(function () {
+            $(this).removeClass('LOlist')
+        });
     });
     $(".cancel").click(function () {
         $('.finder').hide();
@@ -76,6 +80,7 @@ $(document).ready(function () {
     //手機板登出頁選單淡入淡出
     $('.circle-login').click(function () {
         var LogList = $('.mobileProfileall');
+        $('.theme').hide();
         LogList.fadeToggle('fast');
         LogList.toggleClass('LOlist');
     });

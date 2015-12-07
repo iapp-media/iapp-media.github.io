@@ -127,11 +127,14 @@ a:hover {
 
 .theme>li>a {
     color: #ff9932;
-    border-bottom: #ff9932 1px solid;
+    border-bottom: 1px solid rgba(255,153,51,.2);
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
 }
+    .theme li:last-child a{
+        border:none;
+    }
 
 .theme>li>a:hover {
     color: #fff;
