@@ -70,25 +70,28 @@ $(document).ready(function () {
             //$('.user-icon').fadeOut();
             $('.option-user,.user-icon,.logout-user').css('display', 'none');
         }
-        //window.open('portal.aspx?fn=my', '_self');
-        //$('.jumbotron').show();
     });
-    //$("#logout").click(function () {
-    //    $('.jumbotron').hide();
-    //    $('.icon-box').hide();
-    //    $('.login-box').show();
-    //});
-    //$(".m-logout").click(function () {
-    //    $('.circle-login').hide();
-    //    $('.m-profile').hide();
-    //    $('#m-login').show();
-    //});
+   
+
+    //手機板登出頁選單淡入淡出
     $('.circle-login').click(function () {
         var LogList = $('.mobileProfileall');
         LogList.fadeToggle('fast');
         LogList.toggleClass('LOlist');
     });
 
+    //瀑布流動畫
+    var item = $('.item');
+    function itemfadeIn() {
+        var itemLen = item.length;
+        for (var y = 0; y <= itemLen; y++) {
+            item.eq(y).each(function (i) {
+                $(this).eq(i).fadeIn();
+                console.log(i);
+            }); //end each
+        } //end for
+     }
+    itemfadeIn();
 
 
     var $container = $('#container');
