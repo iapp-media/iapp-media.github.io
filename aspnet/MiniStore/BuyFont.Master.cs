@@ -43,10 +43,10 @@ namespace MiniStore
                 Main.ParaClear();
                 Main.ParaAdd("@SN", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
 
-                LSinfo.Text = "<li class=\"SandTitle\"> " + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + " </li>" +
-                    "<li><a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\">微店資訊</a></li>" +
-                    "<li><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>購買紀錄</a></li>" +
-                    "<li><a href=\"default.aspx?SN=" + Request.QueryString["SN"] + "\">回首頁</a></li>";
+                LSinfo.Text = "<li class=\"SandTitle PCright\"> " + Main.Scalar("Select Store_Name from Store_info where Store_ID in (select IDNo from Store where Store_NID=@SN )") + " </li>" +
+                    "<li class=\"PCright\"><a href=\"SInfo.aspx?SN=" + Request.QueryString["SN"] + "\">微店資訊</a></li>" +
+                    "<li class=\"PCright\"><a href='Order_history.aspx?SN=" + Request.QueryString["SN"] + "'>購買紀錄</a></li>" +
+                    "<li class=\"PCright\"><a href=\"default.aspx?SN=" + Request.QueryString["SN"] + "\">回首頁</a></li>";
 
                 //LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                 //    " <img class=\"back-top\" src=\"img/cart.png\" /><span/>" +
