@@ -90,7 +90,7 @@ $(document).ready(function () {
     function itemfadeIn() {
         var itemLen = item.length;
             item.each(function (i) {
-                console.log(i);
+                console.log('內容個數='+i);
                 $(this).velocity(
                             {
                                 top: '+=10px',
@@ -277,6 +277,9 @@ function toggleMy() {
 function clickMin() {
     if (getValue("t") == "10") {
         $('.tile1 a').text('開微店');
+        var miniSrc = $('.tile1 a').attr('href');
+        miniSrc.attr('href', 'www.iapp-media.com/ministore');
+        console.log('微店網址=' + miniSrc);
     }
 }
 clickMin();
