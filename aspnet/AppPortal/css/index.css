@@ -852,6 +852,7 @@ a:hover {
         width:100%;
         top:70px; 
         transition:top .5s;
+        display:none;
     }
     .LOlist { 
         top:60px;

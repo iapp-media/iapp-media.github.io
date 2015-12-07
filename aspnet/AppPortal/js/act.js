@@ -83,7 +83,6 @@ $(document).ready(function () {
     //    $('.m-profile').hide();
     //    $('#m-login').show();
     //});
-    $('.mobileProfileall').hide();
     $('.circle-login').click(function () {
         var LogList = $('.mobileProfileall');
         LogList.fadeToggle('fast');
