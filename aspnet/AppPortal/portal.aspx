@@ -54,7 +54,7 @@
                             <li><a href="javascript:__doPostBack('LBmyw','')">我的iApp</a></li>
                             <li><a href="#">收藏的iApp</a></li>
                             <li><a href="#">編輯個人資料</a></li>
-                            <li><a href="javascript:__doPostBack('LBLogout','')">登出</a></li>
+                            <li><a class="btn btn-warning LogOutBTN" href="javascript:__doPostBack('LBLogout','')">登出</a></li>
                         </ul>
                     </div>
                     <!--  搜尋bar提示框（共用）-->

@@ -835,26 +835,43 @@ a:hover {
     margin:auto;
     display:none;
 }
-.mobileProfileall {
-        display:none;
-    }
+.LogOutBTN {
+   width:100%;
+   font-size:18px;
+   background-color:#ff9933;
+   border-color:#ff9933;
+}
+
+
 
 
 @media only screen and (max-width:768px) {
+
+    .mobileProfileall {
+        position:fixed;
+        width:100%;
+        top:70px; 
+        transition:top .5s;
+    }
+    .LOlist { 
+        top:60px;
+        transition:top .5s;
+    }
+
     
     .smallpro {
         width:27px;
         height:13px;
         background:url('../img/logout-1.png');
         background-size:100%;
-        position:fixed;
-        top:60px;
+        position:absolute;
+        top:0px;
         right:47px;
         z-index:2;
     }
     .mobileProfile {
-        position: fixed;
-        top: 73px;
+        position: absolute;
+        top: 13px;
         z-index:1;
         background-color: #fff;
         width: 90%;
@@ -863,12 +880,12 @@ a:hover {
         margin: auto;
         text-align: center;
         border-radius: 8px;
-        -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+        -webkit-filter: drop-shadow(0px 0px 5px rgba0,0,0,.5));
         -moz-filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
         filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
     }
         .mobileProfile li {
-            padding:12px;
+            padding:12px 0;
             font-size:18px;
             /*border-width:1px;
             border-color:rgba(255,153,51,.5);*/
@@ -1021,4 +1038,37 @@ a:hover {
     font-size: 24px;
     margin: 10px 0 0 0;
 }
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
 

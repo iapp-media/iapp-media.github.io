@@ -83,9 +83,13 @@ $(document).ready(function () {
     //    $('.m-profile').hide();
     //    $('#m-login').show();
     //});
-    $('.login-sm').click(function () {
-        $('.mobileProfileall').animate({'top':73})
-    })
+    $('.mobileProfileall').hide();
+    $('.circle-login').click(function () {
+        var LogList = $('.mobileProfileall');
+        LogList.fadeToggle('fast');
+        LogList.toggleClass('LOlist');
+    });
+
 
 
     var $container = $('#container');
