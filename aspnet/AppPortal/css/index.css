@@ -841,7 +841,9 @@ a:hover {
    background-color:#ff9933;
    border-color:#ff9933;
 }
-
+.mobileProfileall {
+    display:none;
+}
 
 
 
@@ -852,7 +854,6 @@ a:hover {
         width:100%;
         top:70px; 
         transition:top .5s;
-        display:none;
     }
     .LOlist { 
         top:60px;

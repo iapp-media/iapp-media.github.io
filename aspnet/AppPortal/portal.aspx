@@ -181,6 +181,7 @@
     <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="js/act.js"></script>
+    <script type="text/javascript" src="js/velocity.min.js"></script>
 
    
     <asp:Literal ID="JSS" runat="server"></asp:Literal>

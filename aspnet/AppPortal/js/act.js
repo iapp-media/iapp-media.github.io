@@ -84,12 +84,18 @@ $(document).ready(function () {
     var item = $('.item');
     function itemfadeIn() {
         var itemLen = item.length;
-        for (var y = 0; y <= itemLen; y++) {
-            item.eq(y).each(function (i) {
-                $(this).eq(i).fadeIn();
+            item.each(function (i) {
                 console.log(i);
+                $(this).velocity(
+                            {
+                                opacity:1
+                            }, {
+                                duration: 1000,
+                                delay:100*i
+                            });
+                
             }); //end each
-        } //end for
+      
      }
     itemfadeIn();
 
