@@ -4,10 +4,12 @@ body {
 }
 
 #infscr-loading {
-    text-align: center;
+   text-align: center;
     z-index: 100;
     position: fixed;
-    margin-left: 40%;
+    right: 0;
+    left: 0;
+    margin: auto;
     bottom: 40px;
     width: 200px;
     padding: 10px;

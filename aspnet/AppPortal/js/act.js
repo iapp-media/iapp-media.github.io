@@ -88,10 +88,11 @@ $(document).ready(function () {
                 console.log(i);
                 $(this).velocity(
                             {
+                                top: '+=10px',
                                 opacity:1
                             }, {
-                                duration: 1000,
-                                delay:100*i
+                                duration: 500,
+                                delay:300*i
                             });
                 
             }); //end each

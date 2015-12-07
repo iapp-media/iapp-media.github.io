@@ -130,6 +130,7 @@
     <Content Include="js\popover.js" />
     <Content Include="js\prefixfree.min.js" />
     <Content Include="js\tooltip.js" />
+    <Content Include="js\velocity.min.js" />
     <Content Include="mprev.aspx" />
     <Content Include="css\styles.css" />
     <Content Include="portal.aspx" />
