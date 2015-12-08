@@ -17,7 +17,7 @@ namespace AppPortal
         string url = "http://www.iapp-media.com/";
         string sql = "";
         string DefaultAppId = "144";
-
+        int IsStore = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -34,8 +34,14 @@ namespace AppPortal
                         Response.Redirect("portal.aspx");
                         return;
                     }
-                } 
-
+                }
+                if (Request.QueryString["t"] != null)
+                {
+                    if (Request.QueryString["t"].ToString() == "10")
+                    {
+                        IsStore = 1;
+                    }
+                }
                 ChkandBinding();
             }
 
@@ -64,21 +70,51 @@ namespace AppPortal
             {
                 if (Comm.CheckMobile() == false)
                 {
-                    Tile1.Text = "<div class='item'>\n\r" +
-                                 "   <div class='imgcenter'>\n\r" +
-                                 "      <div><a href=\"../" + Tm + "/Default.aspx\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                 "      <p class=\"tile1\"><a href=\"../" + Tm + "/Default.aspx\">微創作</a></p>" + "\n\r" + 
-                                 "   </div>\n\r" +
-                                 " </div>\n\r";
+                    if (IsStore == 1)
+                    {
+
+                        Tile1.Text = "<div class='item'>\n\r" +
+                                    "   <div class='imgcenter'>\n\r" +
+                                    "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                    "      <p class=\"tile1\"><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                    "   </div>\n\r" +
+                                    " </div>\n\r";
+
+                    }
+                    else
+                    {
+                        Tile1.Text = "<div class='item'>\n\r" +
+                                    "   <div class='imgcenter'>\n\r" +
+                                    "      <div><a href=\"../" + Tm + "/Default.aspx\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                    "      <p class=\"tile1\"><a href=\"../" + Tm + "/Default.aspx\">微創作</a></p>" + "\n\r" +
+                                    "   </div>\n\r" +
+                                    " </div>\n\r";
+                    }
+
                 }
                 else
                 {
-                    Tile1.Text = "<div class='item'>\n\r" +
-                                 "   <div class='imgcenter'>\n\r" +
-                                 "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                 "   <p class='tile1'><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\">微創作</a></p>" + "\n\r" + 
-                                 "   </div>\n\r" +
-                                 " </div>\n\r";
+                    if (IsStore == 1)
+                    {
+
+                        Tile1.Text = "<div class='item'>\n\r" +
+                                     "   <div class='imgcenter'>\n\r" +
+                                     "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                     "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                     "   </div>\n\r" +
+                                     " </div>\n\r";
+
+                    }
+                    else
+                    {
+                        Tile1.Text = "<div class='item'>\n\r" +
+                                     "   <div class='imgcenter'>\n\r" +
+                                     "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                     "   <p class='tile1'><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\">微創作</a></p>" + "\n\r" +
+                                     "   </div>\n\r" +
+                                     " </div>\n\r";
+                    }
+
                 }
             }
             if (Comm.ChkLoginStat() == false)
@@ -95,12 +131,26 @@ namespace AppPortal
                               "     </button>" +
                               "   </a>" +
                               "</div>";
-                LDoIt.Text = "   <a class='iframe-info' href=\"" + loginUrl + "\">" +
-                             "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
-                             "     <span class='changtext'>微創作</span>" + 
-                             "<span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
-                             "     </button>" +
-                             "   </a>";
+
+                if (IsStore == 1)
+                {
+                    LDoIt.Text = "   <a class='iframe-info' href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">" +
+                                 "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
+                                 "         開微店" +
+                                 "<span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
+                                 "     </button>" +
+                                 "   </a>";
+                }
+                else
+                {
+                    LDoIt.Text = "   <a class='iframe-info' href=\"" + loginUrl + "\">" +
+                                 "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
+                                 "         微創作" +
+                                 "<span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
+                                 "     </button>" +
+                                 "   </a>";
+                }
+
                 //    <button type="button" class="btn btn-default navbar-btn2" >
                 //        <h4 class="title">微創作
                 //    <span class="glyphicon glyphicon glyphicon glyphicon-hand-right" aria-hidden="true"></span>
@@ -118,12 +168,27 @@ namespace AppPortal
                              "  <div class=\"username-icon\"><h4>" + Comm.User_Name() + "</h4></div>\n\r" +
                             " </div>\n\r";
                 //JSS.Text = "<script>$('.icon-box').addClass('openlogin');$('#m-login').show();$('#m-login').addClass('openlogin');</script>";
-                LDoIt.Text = "   <a href=\"../" + Tm + "/Default.aspx\">" +
-                             "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
-                             "         微創作" +
-                             "         <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
-                             "     </button>" +
-                             "   </a>";
+
+                if (IsStore == 1)
+                {
+                    LDoIt.Text = "   <a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\" >" +
+                                 "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
+                                 "         開微店" +
+                                 "         <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
+                                 "     </button>" +
+                                 "   </a>";
+                }
+                else
+                {
+                    LDoIt.Text = "   <a href=\"../" + Tm + "/Default.aspx\">" +
+                                 "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
+                                 "         微創作" +
+                                 "         <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
+                                 "     </button>" +
+                                 "   </a>";
+                }
+
+
 
                 //$.colorbox({href:"thankyou.html"});
                 //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "shoow", "$('.icon-box').show();", true);
@@ -231,7 +296,7 @@ namespace AppPortal
             {
                 str = "Select * " + sql3 + " from (" +
                           "    Select rank() OVER (ORDER BY " + SortCols + " Desc) AS RankNumber, a.* " +
-                          "      ,c.FoderName, b.User_Name from User_App a inner join Users b on a.User_ID=b.IDNo " +
+                          "      ,c.FoderName, b.User_Name,App_URL from User_App a inner join Users b on a.User_ID=b.IDNo " +
                           "        inner join Theme c on a.Theme_ID=c.IDNo where IsPosted=1 " +
                           "          and a.IDNo in (Select User_App_ID from User_App_Favor where User_ID=" + Comm.User_ID().ToString() + ")" +
                           ") as AA where RankNumber between " + (PageSize * (Currpage - 1)) + " and " + (PageSize * Currpage);
@@ -274,7 +339,16 @@ namespace AppPortal
                         ss.Append("<div class='item'>" + "\n\r");
                         ss.Append("   <div class='imgcenter'>\n\r");
                         ss.Append("     <div>" + "\n\r");
-                        ss.Append("       <a class='apps-info' href=\"" + url + dr.Rows[i]["FoderName"] + "/" + dw["IDNo"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+
+                        if (IsStore == 1)
+                        {
+                            ss.Append("       <a target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+
+                        }
+                        else
+                        {
+                            ss.Append("       <a class='apps-info' href=\"" + url + dr.Rows[i]["FoderName"] + "/" + dw["IDNo"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+                        }
 
                         doListItem(ref ss, iLK, iGD, iFV, dw);
 
@@ -282,8 +356,20 @@ namespace AppPortal
 
                         ss.Append("   <p class='describe'>" + dw["App_Memo"] + "</p>" + "\n\r");
                         ss.Append("   <img class=\"circle\" src=\"UserIcon.ashx?i=" + dw["User_ID"] + "\" >" + "\n");
-                        ss.Append("   <p class='iapp-name'><a href='" + url + dr.Rows[i]["FoderName"] + "' class='apps-info'>" + dw["App_Name"] + "</a></p>" + "\n\r");
-                        ss.Append("   <p class='author'>by <a href='portal.aspx?u=" + dw["User_ID"] + "'>" + dw["User_Name"] + "</a></p>" + "\n\r");
+
+                        if (IsStore == 1)
+                        {
+                            ss.Append("   <p class='iapp-name'><a target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\" >" + dw["App_Name"] + "</a></p>" + "\n\r");
+                            ss.Append("   <p class='author'>by <a href='portal.aspx?u=" + dw["User_ID"] + "&t=10'>" + dw["User_Name"] + "</a></p>" + "\n\r");
+
+                        }
+                        else
+                        {
+                            ss.Append("   <p class='iapp-name'><a href='" + url + dr.Rows[i]["FoderName"] + "' class='apps-info'>" + dw["App_Name"] + "</a></p>" + "\n\r");
+                            ss.Append("   <p class='author'>by <a href='portal.aspx?u=" + dw["User_ID"] + "'>" + dw["User_Name"] + "</a></p>" + "\n\r");
+
+                        }
+
                         ss.Append(" </div>" + "\n");
                         ss.Append("</div>" + "\n"); 
                     }

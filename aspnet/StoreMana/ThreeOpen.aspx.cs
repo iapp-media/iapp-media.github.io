@@ -68,11 +68,7 @@ namespace StoreMana
             {
                 if (CB_Payment.Items[i].Selected)
                 {
-                    strPayment += "," + CB_Payment.Items[i].Value;
-                    if (CB_Payment.Items[i].Value == "3")
-                    {
-                        PayBank = 1;
-                    }
+                    strPayment += "," + CB_Payment.Items[i].Value; 
                 }
             }
 
@@ -82,22 +78,25 @@ namespace StoreMana
                 Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
                 Main.ParaAdd("@payment", strPayment, SqlDbType.NVarChar);
                 Main.NonQuery("update store_info set payment=@payment where Store_ID=@SID");
-                if (Bank1.Visible == true)
-                {
-                    LStep3tip.Text = "填寫店家資訊";
-                    Bank1.Visible = false;
-                    Bank2.Visible = false;
-                    Bank3.Visible = false;
-                    Bank4.Visible = false;
-                }
-                else
-                {
-                    LStep3tip.Text = "填寫銀行帳號";
-                    Bank1.Visible = true;
-                    Bank2.Visible = true;
-                    Bank3.Visible = true;
-                    Bank4.Visible = true;
-                }
+
+                PayBank = Main.Cint2(Main.Scalar("select sum(charindex(',3',Payment)) from store_info where Store_ID=@SID"));
+
+               if (PayBank == 0)
+               {
+                   LStep3tip.Text = "填寫店家資訊";
+                   Bank1.Visible = false;
+                   Bank2.Visible = false;
+                   Bank3.Visible = false;
+                   Bank4.Visible = false;
+               }
+               else
+               {
+                   LStep3tip.Text = "填寫銀行帳號";
+                   Bank1.Visible = true;
+                   Bank2.Visible = true;
+                   Bank3.Visible = true;
+                   Bank4.Visible = true;
+               }
 
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(2)", true);
 
@@ -132,7 +131,7 @@ namespace StoreMana
 
             Main.ParaClear();
 
-            if (PayBank == 1)
+            if (PayBank == 0)
             {
                 Main.ParaAdd("@Bank_Name", TBBankName.Text, System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@Bank_No", TBBankNo.Text, System.Data.SqlDbType.NVarChar);
