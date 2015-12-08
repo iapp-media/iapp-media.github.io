@@ -13,6 +13,11 @@ $(document).ready(function () {
             console.log(screenWidth);
             if (screenWidth <= 768) {
                 $('.BarSear').removeAttr('style');
+            } else if (screenWidth >= 768) {
+                $('.mobileProfileall').hide();
+                $('.mobileProfileall').fadeOut(function () {
+                    $(this).removeClass('LOlist')
+                });
             }
         });
         function ifLogin() {
