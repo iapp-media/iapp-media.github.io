@@ -180,7 +180,7 @@ a:hover {
 .icon-box {
     display: block;
     background-color: #ff9932;
-    width: 100px;
+    width: 200px;
     height: 35px;
     border-radius: 6px;
     float:left;
@@ -188,6 +188,7 @@ a:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    overflow:hidden;
 }
 
 .icon-box:hover {
@@ -806,7 +807,7 @@ a:hover {
 }
 .BarSear {
     float: left;
-    width: calc(100% - 300px - 1em);
+    width: calc(100% - 400px - 1em);
     height: 100%;
     margin:0 .5em;
 
