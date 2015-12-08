@@ -105,6 +105,17 @@ $(document).ready(function () {
      }
     itemfadeIn();
 
+    //login判斷登入登出
+    function ifLogin() {
+        var $login = $('.icon-box');
+        if ($login.length == 0) {
+            $('.BarSear').css('width', 'calc((100% - 300px) - 1em)');
+        } else {
+            $('.BarSear').css('width', 'calc((100% - 400px) - 1em)');
+        }
+    }
+    ifLogin();
+
 
     var $container = $('#container');
 
