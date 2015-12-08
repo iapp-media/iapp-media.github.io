@@ -18,6 +18,7 @@ $(document).ready(function () {
                 $('.mobileProfileall').fadeOut(function () {
                     $(this).removeClass('LOlist')
                 });
+                $('.search-bar').hide();
             }
         });
         function ifLogin() {
