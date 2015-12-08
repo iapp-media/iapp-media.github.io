@@ -97,7 +97,7 @@ namespace AppPortal
                               "</div>";
                 LDoIt.Text = "   <a class='iframe-info' href=\"" + loginUrl + "\">" +
                              "     <button type=\"button\" class=\"btn btn-default navbar-btn2\">" +
-                             "         微創作" + 
+                             "     <span class='changtext'>微創作</span>" + 
                              "<span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" +
                              "     </button>" +
                              "   </a>";
