@@ -517,11 +517,12 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                function webTop() {
                     $('html , body').animate({
                         scrollTop: 0
                     });
-                });
+                }
+                webTop();
             }
             function upStep(obj) {
                 switch (obj) {
@@ -551,11 +552,12 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                function webTop() {
                     $('html , body').animate({
                         scrollTop: 0
                     });
-                });
+                }
+                webTop();
             }
 
         </script>
