@@ -131,16 +131,14 @@ $(document).ready(function () {
             item.each(function (i) {
                 console.log('內容個數='+i);
                 $(this).velocity(
-                            {
-                                top: '+=10px',
-                                opacity:1
-                            }, {
-                                duration: 500,
-                                delay:300*i
-                            });
-                
-            }); //end each
-      
+                   {
+                      top: '+=10px',
+                      opacity:1
+                   }, {
+                      duration: 500,
+                      delay:300*i
+                   });
+            }); //end each    
      }
     itemfadeIn();
 
