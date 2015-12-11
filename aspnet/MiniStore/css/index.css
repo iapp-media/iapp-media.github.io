@@ -1483,6 +1483,10 @@
 #Leftwich .SandTitle {
     width:100%;
 }
+#Leftwich li:nth-child(2) a span {
+    text-align:right;
+    float:right;
+}
 #Rightwich .PCright {
     position:absolute;
     right:0;
