@@ -48,24 +48,38 @@
                     </div>
                     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
                     <asp:SqlDataSource ID="SD1" runat="server" OnSelected="SD1_Selected"></asp:SqlDataSource>
-                    <div class="col-xs-12 libor payNum AllPad">
-                        <p>您在此商店有<asp:Literal ID="AllBpoin" runat="server"></asp:Literal>點數</p>
-                        <asp:CheckBox ID="ChBonus" runat="server" Text="使用折扣" />
-                        <p>
-                            <asp:Literal ID="BpoinRule" runat="server"></asp:Literal>
-                        </p>
+                    <div class="col-xs-12 libor">
+                        <div class="buyCtrlMoney2">
+                            <p>您在此商店有<asp:Literal ID="AllBpoin" runat="server"></asp:Literal>點數</p>
+                            <div class="check">
+                                <asp:CheckBox ID="ChBonus" runat="server" Text="使用折扣" />
+                            </div>
+                            <p>
+                                <asp:Literal ID="BpoinRule" runat="server"></asp:Literal>
+                            </p>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 libor payNum AllPad">
-                        <label class="col-xs-6 padReset">總消費金額</label>
-                        <asp:Label ID="TB_Paysum" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
+                    <div class="col-xs-12 libor payNum">
+                        <div class="buyCtrlMoney1">
+                            <label class="col-xs-6 padReset">總消費金額</label>
+                            <asp:Label ID="TB_Paysum" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                    <div id="BonusDiscount" class="col-xs-12">
+                    <div id="BonusDiscount" class="col-xs-12 libor payNum">
+                        <div class="buyCtrlMoney1">
                             <asp:Label ID="LBpoint" runat="server" CssClass="col-xs-6 padReset" Text=""></asp:Label>
                             <asp:Label ID="LBprice" runat="server" CssClass="col-xs-6 padReset TRC" Text=""></asp:Label>
+                            <div class="clearfix"></div>
                         </div>
-                    <div class="col-xs-12 libor payNum AllPad">
-                        <label class="col-xs-6 padReset">合計:</label>
-                        <asp:Label ID="LTotal" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
+                    </div>
+                    <div class="col-xs-12 libor payNum allPadMon">
+                        <div class="buyCtrlMoney">
+                            <label class="col-xs-6 padReset">合計:</label>
+                            <asp:Label ID="LTotal" runat="server" Text="" CssClass="col-xs-6 padReset TRC"></asp:Label>
+                            <div class="clearfix"></div>
+                       </div>
                     </div>
                     <div class="col-xs-12 libor paytheway AllPad">
                         <label for="" class="col-xs-4 padReset">付款方式</label>

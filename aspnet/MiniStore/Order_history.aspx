@@ -13,10 +13,11 @@
         <li>
             <div class="col-xs-12 insidecare">
                 <div class="row">
-                    <div class="col-xs-12 BTbox">
-                          <p class="BTleft">目前紅利點數</p>
-                        <label>
-                            <asp:Literal ID="Lbonus" runat="server"></asp:Literal>點</label>
+                    <div class="col-xs-12 BTbox1">
+                          <p class="BTleft1">目前紅利點數</p>
+                        <span>
+                            <asp:Literal ID="Lbonus" runat="server"></asp:Literal>點</span>
+                        <div class="clearfix"></div>
                     </div>
                     <div class="col-xs-12 BTbox">
                         <p class="BTleft">篩選</p>
