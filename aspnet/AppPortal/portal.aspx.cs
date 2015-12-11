@@ -99,7 +99,7 @@ namespace AppPortal
 
                         Tile1.Text = "<div class='item'>\n\r" +
                                      "   <div class='imgcenter'>\n\r" +
-                                     "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                     "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
                                      "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
                                      "   </div>\n\r" +
                                      " </div>\n\r";
@@ -229,7 +229,7 @@ namespace AppPortal
             if (Comm.IsNumeric(Request.QueryString["p"])) { Currpage = Comm.Cint2(Request.QueryString["p"]); }
             HL1.NavigateUrl = "portal.aspx?p=" + (Currpage + 1).ToString();
 
-            StringBuilder ss = new StringBuilder(); 
+            StringBuilder ss = new StringBuilder();
             //sql = "select b.IDNo, a.Img01,c.FoderName,d.User_Name,b.App_Name,b.App_URL from User_Page a " +
             //      " inner join User_App b on a.User_App_ID=b.IDNo inner join Theme c on b.Theme_ID=c.IDNo " +
             //      " inner join Users d on b.User_ID=d.IDNo where sort=1";
@@ -246,7 +246,7 @@ namespace AppPortal
             {
                 sql += "  and c.IDNo=@ThemeID";
                 HL1.NavigateUrl += "&t=" + Request.QueryString["t"];
-                Main.ParaAdd("@ThemeID", Request.QueryString["t"], SqlDbType.Int); 
+                Main.ParaAdd("@ThemeID", Request.QueryString["t"], SqlDbType.Int);
             }
             if (Comm.IsNumeric(Request.QueryString["u"]) == true)   //切換不同主題
             {
@@ -266,13 +266,13 @@ namespace AppPortal
                 HL1.NavigateUrl += "&t=" + Request.QueryString["w"];
                 Main.ParaAdd("@KW", "%" + HttpUtility.UrlDecode(Request.QueryString["w"]) + "%", SqlDbType.NVarChar);
             }
-           // sql += "  order by a.Last_Update desc";
+            // sql += "  order by a.Last_Update desc";
 
             string sql3 = ",(Select Count(1) from User_App_Good where User_App_ID=AA.IDNo) as GDs " +
                           ",(Select Count(1) from User_App_Good where User_App_ID=AA.IDNo and User_ID=@MyID) as iGD " +
                           ",(Select Count(1) from User_App_Like where User_App_ID=AA.IDNo) as LKs " +
                           ",(Select Count(1) from User_App_Like where User_App_ID=AA.IDNo and User_ID=@MyID) as iLK " +
-                          ",(Select Count(1) from User_App_Favor where User_App_ID=AA.IDNo and User_ID=@MyID) as iFV "; 
+                          ",(Select Count(1) from User_App_Favor where User_App_ID=AA.IDNo and User_ID=@MyID) as iFV ";
 
             str = "Select * " + sql3 + " from (" +
                       "    Select rank() OVER (ORDER BY " + SortCols + " Desc) AS RankNumber, a.* " +
@@ -309,9 +309,9 @@ namespace AppPortal
                           "        inner join Theme c on a.Theme_ID=c.IDNo where IsPosted=1 " + sql;
             if (Comm.Cint2(Main.Scalar(sql2)) <= (PageSize * Currpage)) { HL1.NavigateUrl = ""; }
 
-           // Response.Write(str);
+            // Response.Write(str);
 
-            DataTable dr = Main.GetDataSet(str);         
+            DataTable dr = Main.GetDataSet(str);
             if (dr.Rows.Count > 0)
             {
                 for (int i = 0; i < dr.Rows.Count; i++)
@@ -359,7 +359,7 @@ namespace AppPortal
 
                         if (IsStore == 1)
                         {
-                            ss.Append("   <p class='iapp-name'><a target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\" >" + dw["App_Name"] + "</a></p>" + "\n\r");
+                            ss.Append("   <p class='iapp-name'><a target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\">" + dw["App_Name"] + "</a></p>" + "\n\r");
                             ss.Append("   <p class='author'>by <a href='portal.aspx?u=" + dw["User_ID"] + "&t=10'>" + dw["User_Name"] + "</a></p>" + "\n\r");
 
                         }
@@ -371,14 +371,23 @@ namespace AppPortal
                         }
 
                         ss.Append(" </div>" + "\n");
-                        ss.Append("</div>" + "\n"); 
+                        ss.Append("</div>" + "\n");
                     }
                     else
-                    {  
+                    {
                         ss.Append("<div class='item'>" + "\n\r");
                         ss.Append("   <div class='imgcenter'>\n\r");
                         ss.Append("     <div>" + "\n\r");
-                        ss.Append("       <a class='#' href=\"mPrev.aspx?i=" + dw["IDNo"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+                        if (IsStore == 1)
+                        {
+                            ss.Append("       <a class='#' target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+
+                        }
+                        else
+                        {
+                            ss.Append("       <a class='#' href=\"mPrev.aspx?i=" + dw["IDNo"] + "\"><img class=\"item-pic\" src='" + src + "'/></a>" + "\n\r");
+
+                        }
 
                         doListItem(ref ss, iLK, iGD, iFV, dw);
 
@@ -386,13 +395,20 @@ namespace AppPortal
 
                         ss.Append("   <p class='describe'>" + dw["App_Memo"] + "</p>" + "\n\r");
                         ss.Append("   <img class=\"circle\" src=\"UserIcon.ashx?i=" + dw["User_ID"] + "\" >" + "\n");
-                        ss.Append("   <p class='iapp-name'><a href='mPrev.aspx?i=" + dw["IDNo"] + "'>" + dw["App_Name"] + "</a></p>" + "\n\r");
+
+                        if (IsStore == 1)
+                        {
+                            ss.Append("   <p class='iapp-name'><a target=\"_blank\" href=\"" + dr.Rows[i]["App_URL"] + "\">" + dw["App_Name"] + "</a></p>" + "\n\r");
+                        }
+                        else
+                        {
+                            ss.Append("   <p class='iapp-name'><a href='mPrev.aspx?i=" + dw["IDNo"] + "'>" + dw["App_Name"] + "</a></p>" + "\n\r");
+                        }
+
                         ss.Append("   <p class='author'>by <a href='portal.aspx?u=" + dw["User_ID"] + "'>" + dw["User_Name"] + "</a></p>" + "\n\r");
                         ss.Append(" </div>" + "\n");
                         ss.Append("</div>" + "\n");
-                    }
-
-            
+                    } 
                 }
             }
             else

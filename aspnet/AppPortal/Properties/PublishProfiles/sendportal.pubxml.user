@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AppPortal.dll">
+      <publishTime>12/11/2015 21:25:29</publishTime>
+    </File>
+    <File Include="bin/JustyLibrary.dll">
+      <publishTime>12/11/2015 21:21:12</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>11/27/2015 15:34:51</publishTime>
+    </File>
+    <File Include="css/animated.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/bootstrap-responsive.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/colorbox.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/colorbox2.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/docs.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/index.css">
+      <publishTime>12/08/2015 09:58:20</publishTime>
+    </File>
+    <File Include="css/login.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/m-login.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/masonry.css">
+      <publishTime>12/07/2015 14:23:14</publishTime>
+    </File>
+    <File Include="css/mprev.css">
+      <publishTime>12/01/2015 11:16:51</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="css/styles.css">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/01.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/6RMhx.gif">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/back-1.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/border.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/Collect-1.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/Collect-2.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/collect.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/controls.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/d+.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/defaulthead.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/defaultimg.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/digital-qr.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/digital.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/favicon.ico">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/fb.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/good-1.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/good-2.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/html5-qr.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/html5.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/iApp-web2-41.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/iapplogo.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/like-1.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/like-2.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/lineicon.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/logout-1.png">
+      <publishTime>12/04/2015 18:01:15</publishTime>
+    </File>
+    <File Include="img/memory-qr.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/memory.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/miniApp.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/mommy-qr.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/mommy.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/new-1.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/new-2.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/p00.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/photoicon.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture1.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture2.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture3.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture4.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture5.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/picture6.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/qr-iappmedia.jpg">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="img/top.png">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/act.js">
+      <publishTime>12/10/2015 18:36:11</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/enquire.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery-1.11.3.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery-1.8.0.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery-2.1.4.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery.colorbox-min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery.infinitescroll.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/jquery.masonry.min.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/mprev.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/popover.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/prefixfree.min.js">
+      <publishTime>11/30/2015 15:02:55</publishTime>
+    </File>
+    <File Include="js/tooltip.js">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="js/velocity.min.js">
+      <publishTime>12/07/2015 13:42:16</publishTime>
+    </File>
+    <File Include="mprev.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="portal.aspx">
+      <publishTime>12/11/2015 12:11:15</publishTime>
+    </File>
+    <File Include="search_List.aspx">
+      <publishTime>11/27/2015 15:34:51</publishTime>
+    </File>
+    <File Include="UserIcon.ashx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/11/2015 21:25:29</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

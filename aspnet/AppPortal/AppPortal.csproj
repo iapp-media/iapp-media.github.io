@@ -171,8 +171,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Properties\PublishProfiles\AppPortal_150714.pubxml" />
     <Content Include="UserIcon.ashx" />
+    <None Include="Properties\PublishProfiles\sendportal.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

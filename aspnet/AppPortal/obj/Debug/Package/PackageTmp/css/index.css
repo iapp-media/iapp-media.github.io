@@ -127,11 +127,14 @@ a:hover {
 
 .theme>li>a {
     color: #ff9932;
-    border-bottom: #ff9932 1px solid;
+    border-bottom: 1px solid rgba(255,153,51,.2);
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
 }
+    .theme li:last-child a{
+        border:none;
+    }
 
 .theme>li>a:hover {
     color: #fff;
@@ -177,7 +180,7 @@ a:hover {
 .icon-box {
     display: block;
     background-color: #ff9932;
-    width: 100px;
+    width: 200px;
     height: 35px;
     border-radius: 6px;
     float:left;
@@ -185,6 +188,7 @@ a:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    overflow:hidden;
 }
 
 .icon-box:hover {
@@ -803,7 +807,7 @@ a:hover {
 }
 .BarSear {
     float: left;
-    width: calc(100% - 300px - 1em);
+    width: calc(100% - 400px - 1em);
     height: 100%;
     margin:0 .5em;
 

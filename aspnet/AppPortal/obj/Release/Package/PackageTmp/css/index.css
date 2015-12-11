@@ -1,7 +1,6 @@
 body {
     background-color: #f5f5f5;
     font-size: small;
-    font-family: 'Myriad Pro', 'Microsoft JhengHei', Arial, 'sans-serif';
 }
 
 a {
@@ -18,13 +17,12 @@ a:hover {
     min-height: 80px;
     background-color: white;
     z-index: 99;
+    margin:0;
 }
 
 .btn-default {
     background-color: #ff9933;
 }
-
-
 
 .back-top {
     width: auto;
@@ -40,32 +38,19 @@ a:hover {
 }
 
 .iapplogo {
-    width: 100px;
-    height: auto;
+    width:100px;
+    height:auto;
+    display:block;
+    float:left;
+    height:80px;
 }
+    .iapplogo img {
+        width:100%;
+    }
+   
 
-.navbar-brand {
-    float: left;
-    height: 80px;
-    padding: 5px 0px;
-}
 
-.search {
-    position: relative;
-    top: 20px;
-    left: 8%;
-    width: 90%;
-}
 
-.search2 {
-    background: none;
-    border-style: none;
-    /* outline: 1px solid #000; */
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 0;
-}
 
 .search2:hover {
     background: none;
@@ -75,19 +60,25 @@ a:hover {
     display: none;
 }
 
-.glyphicon-search {
+
+.sandwich {
+    font-size: 17px;
+    line-height: 34px;
+}
+
+.search-sm .glyphicon-search {
     color: #ff9932;
-    font-size: 35px;
 }
 
 .glyphicon-search:hover {
     color: #ff9932;
 }
 
-.glyphicon-user {
+.login-sm .glyphicon-user {
     color: #ff9932;
-    font-size: 35px;
 }
+
+.login-sm
 
 .glyphicon-user:hover {
     color: #ff9932;
@@ -136,11 +127,14 @@ a:hover {
 
 .theme>li>a {
     color: #ff9932;
-    border-bottom: #ff9932 1px solid;
+    border-bottom: 1px solid rgba(255,153,51,.2);
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
 }
+    .theme li:last-child a{
+        border:none;
+    }
 
 .theme>li>a:hover {
     color: #fff;
@@ -149,19 +143,28 @@ a:hover {
 }
 
 .navbar-btn1 {
-    margin-top: 16px;
     border: none;
     background-color: #fff;
     color: #ff9932;
-    font-size: 21px;
+    text-align: center;
+    padding: 6px 12px;
+    font-size: 15px;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
 }
 
 .navbar-btn2 {
-    margin-top: 16px;
     border: none;
     background-color: #fff;
     color: #ff9932;
-    font-size: 21px;
+    text-align:center;
+    padding:0;
+    font-size:15px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    padding:6px 6px;
 }
 
 .navbar-btn1:hover {
@@ -177,31 +180,40 @@ a:hover {
 .icon-box {
     display: block;
     background-color: #ff9932;
-    margin-top: 20px;
-    width: 110px;
+    width: 200px;
     height: 35px;
     border-radius: 6px;
+    float:left;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow:hidden;
 }
 
 .icon-box:hover {
     background-color: #ff9932;
 }
 
-.icon-box h4 {
-    color: #fff;
-}
 
 .usericon {
-    width: auto;
+        width: auto;
     height: 35px;
-    position: absolute;
-    /* top: -2%; */
-    left: 0%;
+    display: block;
+   
+    float: left;
+  
     border-radius: 6px;
 }
 
 .username-icon {
-    position: absolute;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    float:left;
+    margin-left:4px;
 }
 
 .title {
@@ -229,10 +241,18 @@ a:hover {
 }
 
 .jumbotron {
-    display: none;
-    padding-top: 90px;
+    padding:0;
+    margin:0;
+    height:1px;
+    margin-top:80px;
+    transition:.5s;
+    position:relative;
+    background-color:transparent;
+}
+.jumbotronAni {
+    padding-bottom:200px;
+    transition:.5s;
     background-color: #ff9933;
-    height: 280px;
 }
 
 .jumbotron p {
@@ -271,11 +291,6 @@ a:hover {
     background-color: #ff9932;
 }
 
-.user-icon {
-    position: absolute;
-    margin-top: 30px;
-    left: 45%;
-}
 
 .glyphicon-cog {
     color: #fff;
@@ -321,10 +336,11 @@ a:hover {
 }
 
 .logout-user {
-    position: relative;
-    top: 100%;
-    left: calc(98% - 70px);
+    position: absolute;
+    margin-top: 160px;
+    left: calc(97% - 90px);
     width: 2%;
+    display:none;
 }
 
 .logout {
@@ -341,14 +357,22 @@ a:hover {
 }
 
 .option-user {
-    width: 300px;
+    width: 200px;
     position: absolute;
-    margin-top: 130px;
-    left: calc(50% - 150px);
+    margin-top: 160px;
+    margin-left: -100px;
+    left: 50%;
+    font-size: 16px;
+    display:none;
 }
 
-.option-user p {
-    font-size: 22px;
+#Panel1 a:nth-child(2) {
+    float: right;
+}
+
+#LBmyw:hover,
+#LBfvw:hover {
+    text-decoration: underline;
 }
 
 .option-user a:link {
@@ -362,12 +386,10 @@ a:hover {
 }
 
 .my-iapp {
-    /* position: absolute; 
-    left: 22%;
-	display:block; */
-	text-align:right;
-	width:50%;
-    top: 0%;
+    display: block;
+    text-align: right;
+    width: 50%;
+    padding-right: 5%;
 }
 
 .my-iapp:hover {
@@ -377,8 +399,9 @@ a:hover {
 .collect-iapp {
     position: absolute;
     top: 0%;
-	width:50%;
-    left: 60%;
+    width: 50%;
+    left: 50%;
+    padding-left: 5%;
 }
 
 .collect-iapp:hover {
@@ -387,9 +410,9 @@ a:hover {
 
 .circle-login {
     display: block;
-    position: relative;
+    /* position: relative; */
     /* margin-top: 0px; */
-    left: -50%;
+    /* left: -50%; */
     width: 40px;
     height: 40px;
     border-radius: 99em;
@@ -536,13 +559,6 @@ a:hover {
     border: 2px solid #ff9933;
 }
 
-.glyphicon-remove {
-    position: absolute;
-    top: 12%;
-    left: 12%;
-    font-size: 35px;
-    color: #ff9933;
-}
 
 .glyphicon-arrow-left {
     position: absolute;
@@ -716,34 +732,31 @@ a:hover {
 }
 
 .search-bar .search {
-    width: 70%;
+    width: 90%;
     height: 40px;
     float: left;
     opacity: 0.8;
     border-radius: 45px;
     border: 0px;
     padding-left: 15px;
+    
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .search-bar .search:hover {
     opacity: 1;
 }
 
-.search-bar .cancel {
-    position: relative;
-    right: 1px;
-    top: 7px;
-    padding-top: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-}
+
 
 .finder .finder-app {
     width: 40px;
     height: 40px;
     border-radius: 99em;
     border: 3px solid #ff9932;
+    margin-right: 20px;
 }
 
 .finder>li>a {
@@ -760,9 +773,10 @@ a:hover {
 }
 
 .username-icon h4 {
-    margin-left: 28px;
-    margin-top: 7px;
+    margin: 0;
     font-size: 16px;
+    color:#fff;
+    font-weight: 200;
 }
 
 .theme .boxpos a {
@@ -771,35 +785,195 @@ a:hover {
 
 .select {
     border: none;
-    padding: 7px 12px;
+    /* padding: 8px 12px; */
+    height: -2px;
+    padding: 0;
+    width: 31px;
+    border-radius: 0 5px 5px 0;
+    /* font-size: 17px; */
+}
+.PortalCreat {
+    padding:0;
+    width:93px;
+    float:left;
+    text-align:center;
+    height:70px;
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    margin:0 0 0 7px;
+    border-left:1px solid #ddd;
+}
+.BarSear {
+    float: left;
+    width: calc(100% - 400px - 1em);
+    height: 100%;
+    margin:0 .5em;
+
 }
 
-@media only screen and (min-width:481px) and (max-width:768px) {
+    .BarSear .search {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+    .login-box {
+    padding:0;
+    float:left;
+    width:100px;
+    text-align:center;
+    height:80px;
+
+}
+    .container-fluid {
+    box-shadow: 3px 6px 12px -3px hsla(0, 0%, 0%, .25);
+    height:80px;
+}
+.user-icon {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    display:none;
+}
+.LogOutBTN {
+   width:100%;
+   font-size:18px;
+   background-color:#ff9933;
+   border-color:#ff9933;
+}
+.mobileProfileall {
+    display:none;
+}
+
+
+
+@media only screen and (max-width:768px) {
+
+    .mobileProfileall {
+        position:fixed;
+        width:100%;
+        top:70px; 
+        transition:top .5s;
+    }
+    .LOlist { 
+        top:60px;
+        transition:top .5s;
+    }
+
+    
+    .smallpro {
+        width:27px;
+        height:13px;
+        background:url('../img/logout-1.png');
+        background-size:100%;
+        position:absolute;
+        top:0px;
+        right:47px;
+        z-index:2;
+    }
+    .mobileProfile {
+        position: absolute;
+        top: 13px;
+        z-index:1;
+        background-color: #fff;
+        width: 90%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        border-radius: 8px;
+        -webkit-filter: drop-shadow(0px 0px 5px rgba0,0,0,.5));
+        -moz-filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+        filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+    }
+        .mobileProfile li {
+            padding:12px 0;
+            font-size:18px;
+            /*border-width:1px;
+            border-color:rgba(255,153,51,.5);*/
+            border-bottom:1px solid rgba(255,153,51,.2);
+            width:90%;
+            margin:auto;
+        }
+        
+            .mobileProfile li:last-child {
+                border:none;
+            }
+    .jumbotron {
+        margin-top:59px;
+    }
+    .icon-box {
+        display:none;
+    }
+    .search-bar .cancel {
+        display: block;
+    
+    font-weight: bold;
+    color: #fff;
+    width: 10%;
+    float: left;
+    
+    text-align: center;
+   
+    font-size: 30px;
+    height: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+    .search-bar .container {
+        height:100%;
+    }
+
+    .search2 {
+    background: none;
+    border-style: none;
+    /* outline: 1px solid #000; */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+    .login-box {
+        display:none;
+    }
+    .container-fluid {
+        height:60px;
+    }
+    .PortalCreat {
+        display:none;
+    }
     .tem {
         display: inline;
     }
     .navbar {
         min-height: 60px;
-    }
-    .navbar-brand {
-        float: left;
         height: 60px;
-        padding: 0px 0px;
     }
     .iapplogo {
         width: 80px;
         height: auto;
     }
-    .search {
-        position: relative;
-        top: 8px;
-        right: 5px;
-    }
     .search-sm {
-        display: inline;
+        display: inline-block;
+        
+        width:40px;
+        height:100%;
+        text-align:center;
+        position:absolute;
+        right:80px;
     }
     .login-sm {
-        display: inline;
+        display: inline-block;
+        
+        width:40px;
+        height:100%;
+        text-align:center;
+        position:absolute;
+        right:40px;
     }
     .glyphicon-align-justify {
         margin-top: -2px;
@@ -841,78 +1015,66 @@ a:hover {
     .theme .boxpos a {
         border: none;
     }
+    .BarSear {
+        width:40px;
+        float:none;
+        display:inline-block;
+        color:#ff9933;
+        
+        text-align:center;
+        position:absolute;
+           right:0;
+           margin:0;
+    }
+    .login-sm .input-group,
+    .search-sm .input-group {
+        position:relative;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    .BarSear .sandwich,
+    .login-sm .glyphicon-user,
+    .search-sm .glyphicon-search{
+        font-size:30px;
+        display:block;
+    }
 }
 
-@media only screen and (max-width:480px) {
-    .tem {
-        display: inline;
-    }
-    .navbar {
-        min-height: 60px;
-    }
-    .navbar-brand {
-        float: left;
-        height: 60px;
-        padding: 0px 0px;
-    }
-    .iapplogo {
-        width: 80px;
-        height: auto;
-    }
-    .search {
-        position: relative;
-        top: 11px;
-    }
-    .search-sm {
-        display: inline;
-        padding: 0;
-        margin: 0;
-    }
-    .login-sm {
-        display: inline;
-    }
-    .glyphicon-align-justify {
-        margin-top: -2px;
-        font-size: 35px;
-        color: #ff9933;
-    }
-    .glyphicon-align-justify:hover {
-        color: #ff9932;
-    }
-    .input-group .form-control {
-        display: none;
-    }
-    .navbar-btn1 {
-        display: none;
-    }
-    .navbar-btn2 {
-        display: none;
-    }
-    .se {
-        display: none;
-    }
-    .glyphicon-remove:before {
-        margin-top: 9px;
-    }
-    .dropdown-menu-right {
-        position: absolute;
-        top: 61px;
-        right: 0;
-        left: 0;
-        margin: auto;
-        width: 95%;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 0px;
-        border-top: #ff9932 5px solid;
-        border-left: 0px;
-        border-bottom: 0px;
-        border-right: 0px;
-    }
-    .theme .boxpos a {
-        border: none;
-    }
-    .select {
-        margin-top: -16px;
-    }
+.tile1 {
+    font-size: 24px;
+    margin: 10px 0 0 0;
 }
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
