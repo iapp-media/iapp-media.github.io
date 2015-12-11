@@ -365,8 +365,10 @@ input[type="checkbox"] {
 
 .boxpos {
     position: relative;
-    height: 127px;
+    height: 152px;
     padding-bottom: 1px;
+    width:50%;
+    top:44px;
 }
 
 

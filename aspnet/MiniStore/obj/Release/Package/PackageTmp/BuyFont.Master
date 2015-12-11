@@ -86,6 +86,8 @@
                        <li>
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton>
                         </li>
+                        <li class="clearfix"></li>
+                        
                     </ul>
                     <div id="listbox">
                     </div>

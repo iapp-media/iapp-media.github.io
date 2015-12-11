@@ -1465,15 +1465,46 @@
         right: 0;
         width: 100px;
     }
-    
-    .SandTitle {
+
+#Rightwich {
+    height:197px;
+}
+    #Leftwich .SandTitle,
+    #Rightwich .SandTitle {
         background-color: #f93;
         font-size: 18px;
         color: #fff;
         font-weight: 700;
         margin: 0;
         padding: 9px;
+        float:left;
+        width:50%;
     }
+#Leftwich .SandTitle {
+    width:100%;
+}
+#Leftwich li:nth-child(2) a span {
+    text-align:right;
+    float:right;
+}
+#Rightwich .PCright {
+    position:absolute;
+    right:0;
+    top:0;
+
+}
+    #Rightwich  li:nth-child(4),
+    #Rightwich  li:nth-child(5),
+    #Rightwich  li:nth-child(6) {
+        top:44px;
+        width: 50%;
+    }
+#Rightwich  li:nth-child(5) {
+    top:95px;
+}
+#Rightwich  li:nth-child(6) {
+    top:146px;
+}
     
     .scrollable-menu {
         height: auto;
@@ -2478,122 +2509,180 @@
             padding: 0;
         }
     }
-    
-    @media only screen and (max-width:480px) {
-        .container-fluid {
-            padding: 0;
-            height: 60px;
-        }
-        #FastBox {
-            margin: 4px 0 147px 0;
-        }
+
+@media only screen and (max-width:480px) {
+    .boxpos {
+        width:100%;
+        top:0;
+    }
+    #Rightwich {
+        height:auto;
+    }
+    #Rightwich .SandTitle {
+        width:100%;
+        float:none;
+    }
+    #Rightwich .PCright {
+        position: static;
+        width:100%;
+        float:none;
+    }
+
+    #Rightwich li:nth-child(4),
+    #Rightwich li:nth-child(5),
+    #Rightwich li:nth-child(6) {
+        top: 44px;
+        width: 100%;
+    }
+
+    #Rightwich li:nth-child(5) {
+        top: 95px;
+    }
+
+    #Rightwich li:nth-child(6) {
+        top: 146px;
+    }
+
+    .container-fluid {
+        padding: 0;
+        height: 60px;
+    }
+
+    #FastBox {
+        margin: 4px 0 147px 0;
+    }
+
         #FastBox span.TOC {
             /* font-size: 12px; */
         }
-        .promana {
-            top: 119px;
-        }
-        .buydivmove {
-            top: 115px;
-        }
-        .ListIn {
-            font-size: 12px;
-        }
-        .ContentTop {
-            top: 60px;
-        }
-        .SearBoxCenter {
-            width: 70%;
-        }
-        .FixTitle {
-            line-height: 60px;
-        }
-        .search-bar {
-            /* outline:1px solid #f00; */
-            height: 60px;
-        }
-        #slider ul li {
-            width: 337px;
-            /* height: 217px; */
-            line-height: 0;
-        }
-        .overflowMenu {
-            top: 65px;
-        }
-        .tem {
-            display: inline;
-        }
-        .navbar {
-            min-height: 60px;
-            height: 60px;
-        }
-        .iapplogo {
-            width: 80px;
-            height: auto;
-        }
-        .search {
-            /* position: absolute; */
-            /* top: 0; */
-            /* bottom: -5px; */
-        }
-        .login-sm {
-            display: inline;
-            position: absolute;
-            width: 35px;
-            right: 107px;
-            margin-top: -1px;
-        }
-        .glyphicon-align-justify {
-            margin-top: -2px;
-            font-size: 35px;
-            color: #f93;
-        }
+
+    .promana {
+        top: 119px;
+    }
+
+    .buydivmove {
+        top: 115px;
+    }
+
+    .ListIn {
+        font-size: 12px;
+    }
+
+    .ContentTop {
+        top: 60px;
+    }
+
+    .SearBoxCenter {
+        width: 70%;
+    }
+
+    .FixTitle {
+        line-height: 60px;
+    }
+
+    .search-bar {
+        /* outline:1px solid #f00; */
+        height: 60px;
+    }
+
+    #slider ul li {
+        width: 337px;
+        /* height: 217px; */
+        line-height: 0;
+    }
+
+    .overflowMenu {
+        top: 65px;
+    }
+
+    .tem {
+        display: inline;
+    }
+
+    .navbar {
+        min-height: 60px;
+        height: 60px;
+    }
+
+    .iapplogo {
+        width: 80px;
+        height: auto;
+    }
+
+    .search {
+        /* position: absolute; */
+        /* top: 0; */
+        /* bottom: -5px; */
+    }
+
+    .login-sm {
+        display: inline;
+        position: absolute;
+        width: 35px;
+        right: 107px;
+        margin-top: -1px;
+    }
+
+    .glyphicon-align-justify {
+        margin-top: -2px;
+        font-size: 35px;
+        color: #f93;
+    }
+
         .glyphicon-align-justify:hover {
             color: #f93;
         }
-        .select {
-            border: 0;
-            width: 57px;
-            height: 44px;
-            top: -15px;
-            display: none;
-            right: 0;
-        }
+
+    .select {
+        border: 0;
+        width: 57px;
+        height: 44px;
+        top: -15px;
+        display: none;
+        right: 0;
+    }
+
         .select:hover {
             border: 0;
             background-color: #f93;
             border-radius: 20px;
         }
-        .glyphicon-remove:before {
-            margin-top: 9px;
-        }
-        .dropdown-menu-right {
-            position: absolute;
-            top: 60px;
-            right: 0;
-            left: 0;
-            border-radius: 0;
-            border-top: none;
-            border-left: 0;
-            border-bottom: 0;
-            border-right: 0;
-            z-index: 999;
-            margin: auto;
-            padding: 0;
-        }
-        .theme .boxpos a {
-            border: none;
-        }
-        .container-fluid > .navbar-collapse,
-        .container-fluid > .navbar-header,
-        .container > .navbar-collapse,
-        .container > .navbar-header {
-            margin: 0;
-        }
-        .navbar-header {
-            width: 100%;
-            position: relative;
-        }
+
+    .glyphicon-remove:before {
+        margin-top: 9px;
+    }
+
+    .dropdown-menu-right {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        border-top: none;
+        border-left: 0;
+        border-bottom: 0;
+        border-right: 0;
+        z-index: 999;
+        margin: auto;
+        padding: 0;
+    }
+
+    .theme .boxpos a {
+        border: none;
+    }
+
+    .container-fluid > .navbar-collapse,
+    .container-fluid > .navbar-header,
+    .container > .navbar-collapse,
+    .container > .navbar-header {
+        margin: 0;
+    }
+
+    .navbar-header {
+        width: 100%;
+        position: relative;
+    }
+
         .navbar-header p {
             font-size: 180%;
             height: 42%;
@@ -2606,92 +2695,114 @@
             margin: auto;
             padding: 0;
         }
-        .Lgallbar {
-            width: 20%;
-            right: 8px;
-        }
-        .search-sm {
-            display: inline;
-            width: 16px;
-            position: absolute;
-            right: 153px;
-            height: 100%;
-            margin: -1px 0 0;
-            padding: 0;
-        }
-        .search2 {
-            background: none;
-            text-align: center;
-            height: 35px;
-            color: #f93;
-            border-style: none;
-        }
-        .Allsearch {
-            right: 61px;
-        }
-        .search-bar .cancel {
-            color: #fff;
-            width: 10%;
-        }
-        .bar-text {
-            /* position: absolute; */
-            /* top: -3px; */
-            /* right: 80px; */
-        }
-        .select.focus,
-        .select:focus {
-            background-color: transparent;
-            border-color: transparent;
-        }
-        .menusandwich {}
-        .menuAJAX,
-        .proAJAX {
-            margin-top: 29px;
-        }
-        .glyphicon-search {
-            color: #f93;
-        }
-        .product {
-            width: 100%;
-            background-color: #fff;
-            /* height: 100%; */
-            margin: 108px auto 0 auto;
-        }
-        .JoinBranchBox .JBBG1,
-        .JoinBranchBox .JBBG2 {
-            width: 90%;
-            margin-left: -45%;
-        }
-        .JoinBranchBox .JBBG2 {
-            margin-top: -17px;
-        }
-        .JoinBranchBox .JBBG1 {
-            margin-top: -206px;
-        }
-        .JoinBranchBox .sendcareButtomeEnd {
-            width: 90%;
-            margin-left: -45%;
-            margin-top: 203px;
-        }
-        .swiper-container {
-            top: 60px;
-        }
-        .JoinBox .Sendbox {
-            width: 90%;
-            margin-left: -45%;
-        }
-        .details h3 {
-            font-size: 18px;
-        }
-        .FixTitle {
-            font-size: 18px;
-        }
-        .swiper-button-next,.swiper-button-prev {
-        display:none;
+
+    .Lgallbar {
+        width: 20%;
+        right: 8px;
     }
+
+    .search-sm {
+        display: inline;
+        width: 16px;
+        position: absolute;
+        right: 153px;
+        height: 100%;
+        margin: -1px 0 0;
+        padding: 0;
     }
+
+    .search2 {
+        background: none;
+        text-align: center;
+        height: 35px;
+        color: #f93;
+        border-style: none;
+    }
+
+    .Allsearch {
+        right: 61px;
+    }
+
+    .search-bar .cancel {
+        color: #fff;
+        width: 10%;
+    }
+
+    .bar-text {
+        /* position: absolute; */
+        /* top: -3px; */
+        /* right: 80px; */
+    }
+
+    .select.focus,
+    .select:focus {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .menusandwich {
+    }
+
+    .menuAJAX,
+    .proAJAX {
+        margin-top: 29px;
+    }
+
+    .glyphicon-search {
+        color: #f93;
+    }
+
+    .product {
+        width: 100%;
+        background-color: #fff;
+        /* height: 100%; */
+        margin: 108px auto 0 auto;
+    }
+
+    .JoinBranchBox .JBBG1,
+    .JoinBranchBox .JBBG2 {
+        width: 90%;
+        margin-left: -45%;
+    }
+
+    .JoinBranchBox .JBBG2 {
+        margin-top: -17px;
+    }
+
+    .JoinBranchBox .JBBG1 {
+        margin-top: -206px;
+    }
+
+    .JoinBranchBox .sendcareButtomeEnd {
+        width: 90%;
+        margin-left: -45%;
+        margin-top: 203px;
+    }
+
+    .swiper-container {
+        top: 60px;
+    }
+
+    .JoinBox .Sendbox {
+        width: 90%;
+        margin-left: -45%;
+    }
+
+    .details h3 {
+        font-size: 18px;
+    }
+
+    .FixTitle {
+        font-size: 18px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}
     
     @media only screen and (max-width: 355px) {
+
         .item {
             float: left;
             padding: 0px;
@@ -2705,9 +2816,6 @@
         }
         .FixTitle {
             font-size: 18px;
-        }
-        .scrollable-menu {
-            max-height: 250px;
         }
         .BoxLeft {
             font-size: 15px;
