@@ -17,12 +17,15 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
-                Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
-             //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Comm.Store_ID() + "'");
+              //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Comm.Store_ID() + "'");
                 DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Comm.Store_ID() + "'");
                 if (DT.Rows.Count > 0)
                 {
+                    //Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+                    //Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
+                    Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment' and Status in (" + Main.Scalar("select substring(Payment_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
+                    Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery' and Status in (" + Main.Scalar("select substring(Delivery_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
+
                     if (DT.Rows[0]["Payment"].ToString() != "")
                     {
                         string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');

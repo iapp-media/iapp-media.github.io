@@ -6,18 +6,20 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class  cate_mana : System.Web.UI.Page
+public partial class cate_mana : System.Web.UI.Page
 {
-    JDB Main = new JDB("Data Source=192.168.11.12;Initial Catalog=AppWeb2;user id=sa;password=`1qa~!QA");
+    JDB Main = new JDB("Data Source=WIN-EJ8CN160PBQ;Initial Catalog=AppWeb2;user id=sa;password=`1qa~!QA");
     CommTool Comm = new CommTool();
     string str = "";
     protected void Page_Load(object sender, EventArgs e)
-    {
-
+    { 
         if (!IsPostBack)
         {
             Response.Expires = 0;
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Main.FillDDP(CBLDelivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
+            Main.FillDDP(CBLPayment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+ 
             TreeIN();
 
         }
@@ -89,13 +91,44 @@ public partial class  cate_mana : System.Web.UI.Page
             BDel.Visible = true;
             BEdit.Visible = true;
             strNo.Text = View1.SelectedNode.Value;
+
             str = "select * from Product_Cate where IDNo=" + View1.SelectedNode.Value;
             DataTable d = Main.GetDataSetNoNull(str);
             if (d.Rows.Count > 0)
             {
                 TName.Text = d.Rows[0]["Cate_Name"].ToString();
                 TSort.Text = d.Rows[0]["Sort"].ToString();
+                RefNO.Text = d.Rows[0]["Ref"].ToString();
+                Main.FillDDP(CBLDelivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
+                Main.FillDDP(CBLPayment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+
+                if (d.Rows[0]["Payment_STA"].ToString() != "")
+                {
+                    string[] strPayment = d.Rows[0]["Payment_STA"].ToString().Substring(1).Split(',');
+                    for (int i = 0; i < strPayment.Length; i++)
+                    { 
+                        Comm.GetDDL(CBLPayment, strPayment[i]);
+                    }
+                }
+                if (d.Rows[0]["Delivery_STA"].ToString() != "")
+                {
+                    string[] strDelivery = d.Rows[0]["Delivery_STA"].ToString().Substring(1).Split(',');  
+                    for (int i = 0; i < strDelivery.Length; i++)
+                    { 
+                        Comm.GetDDL(CBLDelivery, strDelivery[i]);
+                    }
+                } 
             }
+        }
+
+        if (RefNO.Text == "-1")
+        {
+            TrPayment.Visible = true;
+            TrDelivery.Visible = true;
+        }
+        else {
+            TrPayment.Visible = false;
+            TrDelivery.Visible = false;
         }
     }
     protected void BAdd_Click(object sender, EventArgs e)
@@ -117,14 +150,47 @@ public partial class  cate_mana : System.Web.UI.Page
         Main.ParaAdd("@strNo", strNo.Text, SqlDbType.NVarChar);
         Main.ParaAdd("@Cate_Name", TName.Text, SqlDbType.NVarChar);
         Main.ParaAdd("@Sort", TSort.Text, SqlDbType.NVarChar);
-        Main.NonQuery("update Product_Cate set Cate_Name=@Cate_Name, Sort=@Sort where idno =@strNo");
+
+      
+        string strPayment = "", NotPayment = "";
+        for (int i = 0; i < CBLPayment.Items.Count; i++)
+        {
+            if (CBLPayment.Items[i].Selected)
+            {
+                strPayment += "," + CBLPayment.Items[i].Value;
+            }
+            else
+            {
+                NotPayment += ",'" + CBLPayment.Items[i].Value + "'";
+            }
+        }
+        string strDelivery = "", NotDelivery = "";
+        for (int i = 0; i < CBLDelivery.Items.Count; i++)
+        {
+
+            if (CBLDelivery.Items[i].Selected)
+            {
+                strDelivery += "," + CBLDelivery.Items[i].Value;
+            }
+            else
+            {
+                NotDelivery += ",'" + CBLDelivery.Items[i].Value + "'";
+            }
+        }
+
+        Main.ParaAdd("@Payment_STA", strPayment, SqlDbType.NVarChar);
+        Main.ParaAdd("@Delivery_STA", strDelivery, SqlDbType.NVarChar);
+
+
+
+        Main.NonQuery("update Product_Cate set Payment_STA=@Payment_STA,Delivery_STA=@Delivery_STA, Cate_Name=@Cate_Name, Sort=@Sort where idno =@strNo");
         TreeIN();
         Panel1.Visible = false;
     }
     protected void BDel_Click(object sender, EventArgs e)
     {
         Main.ParaClear();
-        Main.ParaAdd("@strNo", strNo.Text, SqlDbType.NVarChar); 
+        Main.ParaAdd("@strNo", strNo.Text, SqlDbType.NVarChar);
         Main.NonQuery("delete Product_Cate where idno =@strNo");
         TreeIN();
         Panel1.Visible = false;

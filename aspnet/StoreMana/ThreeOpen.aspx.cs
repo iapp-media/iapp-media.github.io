@@ -21,9 +21,7 @@ namespace StoreMana
             if (!IsPostBack)
             {
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
-                Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
-                Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
-
+ 
                 Main.ParaClear();
                 Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
@@ -56,6 +54,10 @@ namespace StoreMana
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@SID ) " +
                           " insert into Store_info (Store_Cate,store_id) values(@Store_Cate,@SID)  else " +
                           " update Store_info set Store_Cate=@Store_Cate where Store_ID=@SID");
+
+            Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment' and Status in (" + Main.Scalar("select substring(Payment_STA,2,99) from Product_Cate where IDNo=@Store_Cate") + ") ", "Memo", "Status");
+            Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery' and Status in (" + Main.Scalar("select substring(Delivery_STA,2,99) from Product_Cate where IDNo=@Store_Cate") + ") ", "Memo", "Status");
+
             System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(1);", true);
 
         }
