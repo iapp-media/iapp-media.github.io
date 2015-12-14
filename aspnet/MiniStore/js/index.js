@@ -221,15 +221,14 @@ $(document).ready(function () {
                 if ($('.swiper-slide').hasClass('swiper-slide-active')) {
                     var NewSrc = '',
                         NewIndex = $('.swiper-slide-active').index(),
-                        NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
-                    console.log(NewSrc, "抓到第"+(NewIndex+1)+"個選單")
+                        NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');                        
+                        console.log(NewSrc, "抓到第" + (NewIndex + 1) + "個選單")  
                 }
-               window.location = NewSrc;
+                window.location = NewSrc;
             })
         },
         threshold: 0
     });
-
 
     //瀑布流
 
