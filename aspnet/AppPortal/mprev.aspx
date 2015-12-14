@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/mprev.css" />
 </head>
 <body>
-    <div class="apps-bar">
+   <%-- <div class="apps-bar">
         <a href="" onclick="history.back(-1);">
             <img class="back" src="img/back-1.png"></a>
         <a id="top" href="">
@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </section>
-    </div>
+    </div>--%>
     <asp:Literal ID="LApp" runat="server"></asp:Literal>
     <script src="js/jquery-1.8.0.min.js"></script>
     <script src="js/mprev.js"></script>
