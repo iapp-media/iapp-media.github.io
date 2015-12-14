@@ -46,11 +46,9 @@ namespace Login
         {     
             //--------------趕效果先這樣放
             if (Request.QueryString["s"] != null)
-            {
-                Main.WriteLog("FFFFFFFFFFFFFFFFFFFFFFFFF");
+            { 
                 if (Request.QueryString["s"] == "1")
-                {
-                    Main.WriteLog("!!!!!!!!!!!!SSSSSSSSSS");
+                { 
                     JDB Main2 = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
                     string SID = "";
                     SID = Main2.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
@@ -61,18 +59,17 @@ namespace Login
                             Main2.ParaClear();
                             Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
                             Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
-                            Main2.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No   where idno=@SID");
+                            Main2.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No  where idno=@SID");
                         }
-                        Comm.SaveCookie("iapp_sid", SID);
-                        Main2.WriteLog("fc");
+                        Comm.SaveCookie("iapp_sid", Main.EnCrypTo(SID)); 
                         Response.Write("<Script>window.open('" + Comm.URL + HttpUtility.UrlDecode(Request.QueryString["done"]) + "','_top')</Script>");
-                        Main.WriteLog("CCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
+                        
                         return;
                     }
                 }
             }
             //-----------------
-            Main.WriteLog("!!!!!!!!!!!!GGGGfc");
+            
             int NewAppId = 0;
             int ThemeID = 2;
             if (Comm.IsNumeric(Request.QueryString["t"])) { ThemeID = Comm.Cint2(Request.QueryString["t"]); }

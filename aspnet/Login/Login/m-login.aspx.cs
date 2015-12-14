@@ -88,8 +88,7 @@ namespace Login
                             if (Main2.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") == "")
                             {
                                 Main2.ParaClear();
-                                Main2.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int);
-                                //Main2.ParaAdd("@Name", Comm.User_Name() + "的商店", System.Data.SqlDbType.NVarChar);
+                                Main2.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int); 
                                 Main2.NonQuery("Insert into Store (User_ID,Creat_Date) values " +
                                  " (@UID,getdate())   ");
                             }
@@ -104,8 +103,8 @@ namespace Login
                                     Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
                                     Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
                                     Main2.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No + replace(newid(),'-','')  where idno=@SID"); 
-                                } 
-                                Comm.SaveCookie("iapp_sid", SID);
+                                }
+                                Comm.SaveCookie("iapp_sid", Main.EnCrypTo(SID)); 
                             }
                         }
                     } 
