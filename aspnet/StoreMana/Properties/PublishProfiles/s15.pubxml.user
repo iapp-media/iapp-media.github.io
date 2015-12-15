@@ -17,10 +17,10 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>12/15/2015 12:07:34</publishTime>
+      <publishTime>12/15/2015 15:44:22</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>12/15/2015 13:55:26</publishTime>
+      <publishTime>12/15/2015 15:44:41</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -259,11 +259,17 @@
     <File Include="Svim.aspx">
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
+    <File Include="TES.aspx">
+      <publishTime>12/15/2015 14:10:44</publishTime>
+    </File>
+    <File Include="Test.aspx">
+      <publishTime>12/15/2015 14:45:37</publishTime>
+    </File>
     <File Include="ThreeOpen.aspx">
       <publishTime>12/10/2015 18:43:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/15/2015 13:55:27</publishTime>
+      <publishTime>12/15/2015 15:44:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

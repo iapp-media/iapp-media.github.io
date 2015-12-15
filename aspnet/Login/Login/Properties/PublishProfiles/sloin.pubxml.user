@@ -14,10 +14,10 @@
       <publishTime>11/27/2015 15:34:52</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>12/15/2015 11:44:55</publishTime>
+      <publishTime>12/15/2015 15:47:23</publishTime>
     </File>
     <File Include="bin/Login.dll">
-      <publishTime>12/15/2015 11:44:56</publishTime>
+      <publishTime>12/15/2015 15:47:24</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
       <publishTime>11/27/2015 15:34:52</publishTime>
@@ -311,7 +311,7 @@
       <publishTime>11/27/2015 15:34:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/15/2015 11:44:56</publishTime>
+      <publishTime>12/15/2015 15:47:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

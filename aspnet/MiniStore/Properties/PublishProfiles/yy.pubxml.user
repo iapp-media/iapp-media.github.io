@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>12/15/2015 12:07:34</publishTime>
+      <publishTime>12/15/2015 15:44:22</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>12/15/2015 13:55:58</publishTime>
+      <publishTime>12/15/2015 15:44:23</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -227,7 +227,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>12/14/2015 15:56:30</publishTime>
+      <publishTime>12/15/2015 14:03:55</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -284,7 +284,7 @@
       <publishTime>12/14/2015 15:56:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/15/2015 13:55:59</publishTime>
+      <publishTime>12/15/2015 15:44:23</publishTime>
     </File>
   </ItemGroup>
 </Project>

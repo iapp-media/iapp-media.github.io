@@ -50,9 +50,9 @@
                             <div class="col-xs-12 libor CBbot CBarea">
                                 <label for="" class="col-xs-12">產品介紹</label>
                                 <span class="Valuetextarea col-xs-12">
-                                    <div class="row">
+                                    
                                         <asp:Literal ID="TB_Description" runat="server"></asp:Literal>
-                                    </div>
+                                    
                                 </span>
                                 <%--    <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>--%>
                             </div>

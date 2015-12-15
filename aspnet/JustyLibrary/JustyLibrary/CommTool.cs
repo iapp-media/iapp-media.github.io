@@ -116,28 +116,41 @@ public class CommTool: System.Web.UI.Page
     }
     public void SaveUserCookies(string UserID, string UserName, string fbId = "")
     {
-        SaveCookie("iapp_uid", UserID);
-        SaveCookie("iapp_uname", UserName);
-        SaveCookie("iapp_fbId", fbId);
+        JDB Main = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
+
+
+        int c = Main.NonQuery(" if not exists (select 1 from Verification where UID='" + UserID + "') " +
+                        " insert into Verification (UID,SessionID,SDate,EDate) values" +
+                        " (" + UserID + ",NEWID(),GETDATE(),GETDATE()+30) else" +
+                        " update Verification set SessionID=NEWID(),SDate=GETDATE(),EDate=GETDATE()+30 where UID=" + UserID + "");
+
+        if (c > 0)
+        {
+            SaveCookie("iapp_uid", Main.Scalar("select SessionID from Verification where UID=" + UserID + ""), 30);
+            SaveCookie("iapp_uname", UserName);
+            SaveCookie("iapp_fbId", fbId);
+        } 
     }
     public int User_ID()
     {
+        JDB Main = new JDB();
         if (HttpContext.Current.Request.Cookies["iapp_uid"] != null)
         {
             //是不是要再延長cookie的期間??
-            return Cint2(HttpContext.Current.Request.Cookies["iapp_uid"].Value);
+
+            return Cint2(Main.Scalar("select UID from Verification where SessionID='" + HttpContext.Current.Request.Cookies["iapp_uid"].Value + "'"));
         }
         else { return -1; }
     }
-    public int Store_ID()
-    {
-        if (HttpContext.Current.Request.Cookies["iapp_sid"] != null)
-        {
-            //是不是要再延長cookie的期間??
-            return Cint2(HttpContext.Current.Request.Cookies["iapp_sid"].Value);
-        }
-        else { return -1; }
-    }
+    //public int Store_ID()
+    //{
+    //    if (HttpContext.Current.Request.Cookies["iapp_sid"] != null)
+    //    {
+    //        //是不是要再延長cookie的期間??
+    //        return Cint2(HttpContext.Current.Request.Cookies["iapp_sid"].Value);
+    //    }
+    //    else { return -1; }
+    //}
     public int Wedding_ID()
     {
         if (HttpContext.Current.Request.Cookies["iapp_wid"] != null)

@@ -15,7 +15,7 @@ namespace Login.PClogin
             {
                 if (Request.QueryString["done"] != null)
                 {
-                    Literal1.Text = "<iframe src=\"http://www.iapp-media.com/login/login.aspx?done=" +  HttpUtility.UrlEncode(Request.QueryString["done"]) + "\"></iframe>";
+                    Literal1.Text = "<iframe src=\"../login.aspx?jump=store&done=" +  HttpUtility.UrlEncode(Request.QueryString["done"]) + "\"></iframe>";
                 }
                 else
                 {
