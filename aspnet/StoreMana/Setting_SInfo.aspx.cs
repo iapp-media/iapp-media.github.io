@@ -17,8 +17,8 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-              //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Comm.Store_ID() + "'");
-                DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Comm.Store_ID() + "'");
+              //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Session["Store_ID"].ToString() + "'");
+                DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Session["Store_ID"].ToString() + "'");
                 if (DT.Rows.Count > 0)
                 {
                     //Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
@@ -95,7 +95,7 @@ namespace StoreMana
             }
 
             Main.ParaClear();
-            Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+            Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
             Main.ParaAdd("@Store_Name", TBName.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@layout", DLlayout.SelectedValue.ToString(), System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Bank_Name", TBBankName.Text, System.Data.SqlDbType.NVarChar);

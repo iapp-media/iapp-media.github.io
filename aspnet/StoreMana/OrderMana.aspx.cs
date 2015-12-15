@@ -22,7 +22,7 @@ namespace StoreMana.Mini
     ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment " +
     ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
     ",( select User_Name from users where IDNo=Customer_ID) User_name " +
-    " from orders where store_ID ='" + Comm.Store_ID() + "'";
+    " from orders where store_ID ='" + Session["Store_ID"].ToString() + "'";
                 SD1.SelectCommand = L.Text;
                 SD1.ConnectionString = Main.ConnStr;
                 RP1.DataSourceID = SD1.ID;
@@ -36,7 +36,7 @@ namespace StoreMana.Mini
                 ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment "+
                 ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
                 ",( select User_Name from users where IDNo=Customer_ID) User_name "+
-                " from orders where store_ID ='" + Comm.Store_ID() + "'";
+                " from orders where store_ID ='" + Session["Store_ID"].ToString() + "'";
 
             if (TextBox1.Text != "")
             {
@@ -97,7 +97,7 @@ namespace StoreMana.Mini
                         if (c > 0)
                         {
                             Main.ParaClear();
-                            Main.ParaAdd("@Store_ID", Comm.Store_ID(), SqlDbType.Int);
+                            Main.ParaAdd("@Store_ID", Session["Store_ID"].ToString(), SqlDbType.Int);
                             Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
                             Main.ParaAdd("@Point", Main.Cint2(Main.Scalar("Select SUM(qty) from order_content where Order_ID='" + Order_Key.Text + "'")), SqlDbType.Int);
                             Main.NonQuery("if not exists (Select 1 from Bonuspoint where Store_ID=@Store_ID and USER_ID in (Select Customer_ID from orders where IDNo='" + Order_Key.Text + "'))  " +

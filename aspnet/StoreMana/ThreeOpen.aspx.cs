@@ -23,7 +23,7 @@ namespace StoreMana
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
  
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
                 if (LPID.Text == "0")
                 {
@@ -48,7 +48,7 @@ namespace StoreMana
             }
 
             Main.ParaClear();
-            Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
+            Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
             Main.ParaAdd("@Store_Cate", DLSCate.SelectedValue.ToString(), SqlDbType.NVarChar);
 
             Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@SID ) " +
@@ -77,7 +77,7 @@ namespace StoreMana
             if (strPayment != "")
             {
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
                 Main.ParaAdd("@payment", strPayment, SqlDbType.NVarChar);
                 Main.NonQuery("update store_info set payment=@payment where Store_ID=@SID");
 
@@ -144,7 +144,7 @@ namespace StoreMana
             else {
                 str = "";
             }
-            Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+            Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
             Main.ParaAdd("@CEOName", TBCEO.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@TEL", TBTEL.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Addr", TBAddr.Text, System.Data.SqlDbType.NVarChar); 
@@ -171,7 +171,7 @@ namespace StoreMana
             if (strDelivery != "")
             {
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
                 Main.ParaAdd("@Delivery", strDelivery, SqlDbType.NVarChar);
                 Main.NonQuery(" update store_info  set Delivery=@Delivery where Store_ID=@SID");
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "goStep(4)", true);
@@ -204,8 +204,8 @@ namespace StoreMana
             Main.ParaAdd("@Price", TB_Price.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@dimension", TB_Dimension.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@description", TB_Description.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
-            Product_No = Comm.GetProductNO(Comm.Store_ID().ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
+            Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.NVarChar);
+            Product_No = Comm.GetProductNO(Session["Store_ID"].ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
             Main.ParaAdd("@Product_No", Product_No, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
 
@@ -285,10 +285,10 @@ namespace StoreMana
         protected void BTStep6_Click(object sender, EventArgs e)
         {
             Main.ParaClear(); 
-            Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.NVarChar);
             Main.NonQuery("update Store_info set ckStep=1 where Store_ID=@SID");
             //要總確認嗎?
-            Response.Redirect("../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Comm.Store_ID() + "'") + "");
+            Response.Redirect("../MiniStore/Default.aspx?SN=" + Main.Scalar("Select Store_NID from Store where idno='" + Session["Store_ID"].ToString() + "'") + "");
         }
 
         protected void upStep6_Click(object sender, EventArgs e)

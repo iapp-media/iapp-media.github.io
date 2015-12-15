@@ -29,7 +29,7 @@ namespace StoreMana
                 Main.ParaClear();
                 Main.ParaAdd("@Ref", -1, System.Data.SqlDbType.Int);
                 Main.ParaAdd("@Cate_Name", TB_Cate.Text, System.Data.SqlDbType.NVarChar);
-                Main.ParaAdd("@Store_ID",  Comm.Store_ID()  , System.Data.SqlDbType.Int);
+                Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 Main.NonQuery("insert into Product_Cate (Ref, Cate_Name,Store_ID) values (@Ref, @Cate_Name,@Store_ID)");
                 getdate();
             }
@@ -61,7 +61,7 @@ namespace StoreMana
         }
         void getdate()
         {
-            Main.FillDDP(CBL_Cate, "select * from Product_Cate where Store_ID='" + Comm.Store_ID() + "'", "Cate_Name", "idno");
+            Main.FillDDP(CBL_Cate, "select * from Product_Cate where Store_ID='" + Session["Store_ID"].ToString() + "'", "Cate_Name", "idno");
         } 
      }
 }

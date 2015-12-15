@@ -28,7 +28,7 @@ namespace StoreMana
             if (Request.QueryString["act"] != null)
             {
                 SD1.SelectParameters.Clear();
-                SD1.SelectParameters.Add("SID", Comm.Store_ID().ToString());
+                SD1.SelectParameters.Add("SID", Session["Store_ID"].ToString());
                 L1.Text = "Select ROW_NUMBER() OVER(ORDER BY ck desc) AS ROWID,a.Product_Name,b.ck,c.User_Name " +
                          "from Product a inner join (select count(1) ck,Product_ID,Cust_ID from Product_Click group by Product_ID,Cust_ID) b" +
                          " on a.IDNo=b.Product_ID " +
@@ -51,7 +51,7 @@ namespace StoreMana
             if (Request.QueryString["com"] != null)
             {
                 SD2.SelectParameters.Clear();
-                SD2.SelectParameters.Add("SID", Comm.Store_ID().ToString());
+                SD2.SelectParameters.Add("SID", Session["Store_ID"].ToString());
 
                 L2.Text = "Select ROW_NUMBER() OVER(ORDER BY ck desc) AS ROWID,ck,b.User_Name  " +
                          " from (select COUNT(1) ck,FromUser_ID,Store_ID from Store_Customer group by FromUser_ID,Store_ID) a" +
@@ -74,7 +74,7 @@ namespace StoreMana
             if (Request.QueryString["com"] == null && Request.QueryString["act"] == null)
             {
                 SD3.SelectParameters.Clear();
-                SD3.SelectParameters.Add("SID", Comm.Store_ID().ToString());
+                SD3.SelectParameters.Add("SID", Session["Store_ID"].ToString());
 
                 L3.Text = " Select Account,User_Name , case when isnull(b.Tel,'')='' then c.TEL else b.Tel end TEL " +
                           " From Store_Customer a left  join users b  on a.Customer_ID=b.IDNo" +

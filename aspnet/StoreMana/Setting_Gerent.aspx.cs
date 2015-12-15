@@ -17,7 +17,7 @@ namespace StoreMana
             if (!IsPostBack)
             {
                 SD1.SelectParameters.Clear();
-                SD1.SelectParameters.Add("Store_ID", Comm.Store_ID().ToString());
+                SD1.SelectParameters.Add("Store_ID", Session["Store_ID"].ToString());
                 L1.Text = "select * from Store_User where store_id=@Store_ID";
                 SD1.SelectCommand = L1.Text;
                 SD1.ConnectionString = Main.ConnStr;
@@ -31,7 +31,7 @@ namespace StoreMana
             if (TB_ACC.Text != "")
             {
                 Main.ParaClear();
-                Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+                Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 Main.ParaAdd("@ACC", TB_ACC.Text, System.Data.SqlDbType.NVarChar);
                 Main.NonQuery("Insert into Store_User (Store_ID,Account) values (@Store_ID,@ACC)");
                 SD1.SelectCommand = L1.Text;

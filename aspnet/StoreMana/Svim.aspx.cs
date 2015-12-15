@@ -28,7 +28,7 @@ namespace StoreMana
                     }
 
                     string Folder = Comm.CheckAppFolder();
-                    string FileName = Comm.ImgSerial(Comm.Store_ID(), 1);
+                    string FileName = Comm.ImgSerial(Main.Cint2(Session["Store_ID"].ToString()), 1);
                     string FullPath = Comm.MiStorePath + "StoreImg\\" + Folder + "\\" + FileName + ".jpg";
                     if (System.IO.Directory.Exists(Comm.MiStorePath + "\\StoreImg\\") == false)
                     {
@@ -51,7 +51,7 @@ namespace StoreMana
                     }
                     Main.ParaClear();
                     Main.ParaAdd("@path", "StoreImg/" + Folder.Trim() + "/" + FileName + ".jpg", System.Data.SqlDbType.NVarChar); 
-                    Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+                    Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.NVarChar);
 
                     Main.NonQuery("update Store_info set simg=@path where Store_ID=@SID ");
                     Response.Write(Comm.MiStorePath + "StoreImg\\" + Folder + "\\" + FileName + ".jpg");

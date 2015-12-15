@@ -309,13 +309,13 @@
                                                 </div>
                                                 <asp:TextBox ID="TB_Price" Class="form-control" runat="server"></asp:TextBox>
                                             </div>
-                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                                            <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop" runat="server" visible="false">
                                                 <div class="col-xs-4">
                                                     <div class="row">
                                                         <p class="BoxLeft">數量</p>
                                                     </div>
                                                 </div>
-                                                <asp:TextBox ID="TB_qty" Class="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="TB_qty" Class="form-control" runat="server" Text="1"></asp:TextBox>
                                             </div>
                                             <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                                                 <div class="col-xs-4">
@@ -517,11 +517,12 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                function webTop() {
                     $('html , body').animate({
                         scrollTop: 0
                     });
-                });
+                }
+                webTop();
             }
             function upStep(obj) {
                 switch (obj) {
@@ -551,11 +552,12 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                $('.ThreeBTN,.ThreeBTN2').click(function () {
+                function webTop() {
                     $('html , body').animate({
                         scrollTop: 0
                     });
-                });
+                }
+                webTop();
             }
 
         </script>

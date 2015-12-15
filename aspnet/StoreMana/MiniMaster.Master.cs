@@ -17,13 +17,13 @@ namespace StoreMana.Mini
             { 
 
                 //asdasdasdasdasd
-                if (Comm.Store_ID() == -1)
+                if (Session["Store_ID"].ToString() == null)
                 {
-                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
+                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
                 }
 
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 if (Main.Scalar("Select isnull(sum(ckStep),0) from Store_info where store_id=@SID") == "0")
                 {
                     Response.Redirect("ThreeOpen.aspx"); 

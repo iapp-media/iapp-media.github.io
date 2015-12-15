@@ -20,7 +20,7 @@ namespace StoreMana.Mini
             if (!IsPostBack)
             {
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
                 str = "select * from Product_Cate where store_id=@SID  union all " +
                       " select * from Product_Cate where ref in ( " +
                       " select Store_Cate from Store_info where Store_ID=@SID)";
@@ -123,7 +123,7 @@ namespace StoreMana.Mini
             {
                 // store_ID 記在 cookie 
                 Main.ParaClear();
-                Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");
                 if (LPID.Text == "0")
                 {
@@ -165,7 +165,7 @@ namespace StoreMana.Mini
             Main.ParaAdd("@dimension", TB_Dimension.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@description", TB_Description.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Memo", TB_Memo.Text, System.Data.SqlDbType.NVarChar);
-            Main.ParaAdd("@SID", Comm.Store_ID(), System.Data.SqlDbType.NVarChar);
+            Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.NVarChar);
 
 
 
@@ -183,7 +183,7 @@ namespace StoreMana.Mini
                     return;
                 }
 
-                Product_No = Comm.GetProductNO(Comm.Store_ID().ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
+                Product_No = Comm.GetProductNO(Session["Store_ID"].ToString(), DL_Cate.SelectedValue.ToString(), System.DateTime.Today);
                 Main.ParaAdd("@Product_No", Product_No, System.Data.SqlDbType.NVarChar);
                 Main.ParaAdd("@Tmp_IDNo", Main.Cint2(LPID.Text), System.Data.SqlDbType.Int);
 

@@ -17,10 +17,10 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>11/30/2015 15:55:13</publishTime>
+      <publishTime>12/15/2015 12:07:34</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>12/03/2015 15:41:33</publishTime>
+      <publishTime>12/15/2015 13:55:26</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -35,7 +35,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>12/03/2015 16:11:46</publishTime>
+      <publishTime>12/08/2015 16:13:23</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>12/01/2015 15:38:15</publishTime>
@@ -185,7 +185,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>12/03/2015 15:41:08</publishTime>
+      <publishTime>12/10/2015 18:41:17</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -224,7 +224,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>12/03/2015 13:31:03</publishTime>
+      <publishTime>12/04/2015 10:44:58</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>12/03/2015 14:18:42</publishTime>
@@ -260,10 +260,10 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>12/03/2015 14:38:51</publishTime>
+      <publishTime>12/10/2015 18:43:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/03/2015 16:58:24</publishTime>
+      <publishTime>12/15/2015 13:55:27</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ namespace StoreMana
             {
                 string num = "", num2 = "";
                 Main.ParaClear();
-                Main.ParaAdd("@Store_ID", Comm.Store_ID(), System.Data.SqlDbType.Int);
+                Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 num = Main.Scalar("Select case when count(1) > 99 then '99+' else Convert(varchar(10),count(1)) end " +
                     "from Product_MSG where Product_ID in (select IDNo from Product where Store_ID=@Store_ID ) and isnull(IsReplay,0)!=1");
 

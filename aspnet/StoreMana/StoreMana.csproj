@@ -247,10 +247,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MiniMaster.Master" />
-    <None Include="Properties\PublishProfiles\S17.pubxml" />
-    <None Include="Properties\PublishProfiles\StoreMana2.pubxml" />
-    <None Include="Properties\PublishProfiles\StoreMana3.pubxml" />
     <Content Include="QRcode.ashx" />
+    <None Include="Properties\PublishProfiles\s15.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

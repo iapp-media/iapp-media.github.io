@@ -16,10 +16,10 @@ namespace StoreMana
         {
              if (!IsPostBack)
             {
-                Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Comm.Store_ID() + "' ", "name", "IDNO"); ;
+                Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Session["Store_ID"].ToString() + "' ", "name", "IDNO"); ;
                 L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
                          ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
-                         " from product_msg a where a.Product_ID in (select IDNo from Product where store_id='" + Comm.Store_ID() + "') order by CreatDate DESC";
+                         " from product_msg a where a.Product_ID in (select IDNo from Product where store_id='" + Session["Store_ID"].ToString() + "') order by CreatDate DESC";
 
             }
 
@@ -46,7 +46,7 @@ namespace StoreMana
         {
             L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday " +
                      ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
-                     " from product_msg a  where a.Product_ID in (select IDNo from Product where store_id='" + Comm.Store_ID() + "') ";
+                     " from product_msg a  where a.Product_ID in (select IDNo from Product where store_id='" + Session["Store_ID"].ToString() + "') ";
 
             SD1.SelectParameters.Clear();
 
