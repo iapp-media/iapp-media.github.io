@@ -31,9 +31,7 @@ namespace Login
                         }
                     } 
                 }
-
-                //Comm.DeleCoookie("iapp_uid");
-                //Comm.DeleCoookie("iapp_sid");
+ 
             }
         }
  
@@ -79,41 +77,8 @@ namespace Login
             else
             {
                 if (Request.QueryString["done"] != null)
-                {
-                    if (Request.QueryString["s"] != null)
-                    {
-                        if (Request.QueryString["s"] == "1")
-                        {
-                            JDB Main2 = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
-                            if (Main2.Scalar("select 1 from Store where User_ID='" + Comm.User_ID() + "'") == "")
-                            {
-                                Main2.ParaClear();
-                                Main2.ParaAdd("@UID", Comm.User_ID(), System.Data.SqlDbType.Int); 
-                                Main2.NonQuery("Insert into Store (User_ID,Creat_Date) values " +
-                                 " (@UID,getdate())   ");
-                            }
-
-                            string SID = "";
-                            SID = Main2.Scalar("select IDNo from Store where User_ID='" + Comm.User_ID() + "'");
-                            if (SID != "")
-                            {
-                                if (Main2.Scalar("select Store_NID from Store where User_ID='" + Comm.User_ID() + "'") == "")
-                                {
-                                    Main2.ParaClear();
-                                    Main2.ParaAdd("@SID", Main.Cint2(SID), System.Data.SqlDbType.Int);
-                                    Main2.ParaAdd("@Store_No", Comm.StoreSN(Main.Cint2(SID)), System.Data.SqlDbType.NVarChar);
-                                    Main2.NonQuery("update Store set Store_No=@Store_No,Store_NID=@Store_No + replace(newid(),'-','')  where idno=@SID"); 
-                                }
-                                Comm.SaveCookie("iapp_sid", Main.EnCrypTo(SID)); 
-                            }
-                        }
-                    } 
-                    //Response.Redirect(HttpUtility.UrlDecode(Request.QueryString["done"]));
+                { 
                     Response.Write("<Script>window.open('" + Comm.URL + HttpUtility.UrlDecode(Request.QueryString["done"]) + "','_self')</Script>"); 
-
-                    //Response.Write("<Script>window.open('" + Comm.URL + HttpUtility.UrlDecode(Request.QueryString["done"]) + "','_self')</Script>");
-                    //string tmpurl = HttpUtility.UrlDecode(Request.QueryString["done"]).ToString();
-                    //Response.Write("<Script>window.open('" + Comm.URL + tmpurl + "','_blank')</Script>");
                 }
                 else
                 {
