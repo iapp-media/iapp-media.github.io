@@ -1,0 +1,37 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@import "compass/css3"
+$web_color: #ff9933
+$white_color: #fff
+body 
+	background: url('../img/web-transpage-img.jpg')
+	background-attachment: fixed
+	background-size: cover
+	.PCbox 
+		width: 620px
+		height: 500px
+		display: block
+		border: 1px solid $web_color
+		border-width: 5px 5px 40px 5px
+		@include border-radius(4px)
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		margin: auto
+		iframe
+			width: 100%
+			height: 100%
+		.glyphicon
+			font-size: 22px
+			width: 20px
+			position: absolute
+			z-index: 99
+			right: 0
+			display: block
+			text-align: center
+			top: 102%
+			color: $white_color
+			

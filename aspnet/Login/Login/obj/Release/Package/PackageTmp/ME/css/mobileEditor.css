@@ -8,10 +8,10 @@ a {
     color: #7d7d7d;
 }
 
-button {
+button,
+.send {
     width: 100%;
     font-size: 24px;
-    line-height: 36px;
     color: #ff9933;
     border: 2px solid #ff9933;
     border-radius: 8px;
@@ -68,7 +68,9 @@ a:active {
     height: 100%;
     display: none;
     z-index: 999;
-    text-align: center;
+    background-color:#fff;
+    max-width:700px;
+    margin:auto;
 }
 
 .img-container {
@@ -76,7 +78,6 @@ a:active {
     background-color: #f7f7f7;
     overflow: hidden;
     text-align: center;
-    margin-top: 15px;
 }
 
 .preview-container {
@@ -101,7 +102,6 @@ a:active {
 }*/
 
 .select {
-    /* width: calc(50% - 8px); */
     font-size: 24px;
     line-height: 36px;
     color: #ff9933;
@@ -110,8 +110,10 @@ a:active {
     background-color: transparent;
     text-align: center;
     display: inline-block;
-    padding-top: 2px;
-    padding-bottom: 3px;
+   
+    font-weight: 200;
+    padding:0 20px;
+    font-weight: normal;
 }
 
 .select:active {
@@ -120,13 +122,10 @@ a:active {
 
 .rotate {
     display: inline-block;
-    width: calc(50% - 5px);
+        
+        float:right;
 }
 
-.rotate-btn {
-    padding-top: 2px;
-    padding-bottom: 3px;
-}
 
 .word {
     text-align: right;
@@ -137,6 +136,7 @@ a:active {
 
 button:active {
     background: #ffbb66;
+    color:#fff;
 }
 
 .confirm {
@@ -172,18 +172,12 @@ button:active {
 }
 
 
-/*.top {
-    height: 40px;
-    background-color: #ff9933;
-}
 
-.top img {
-    height: 100%;
-}*/
 
 .top {
     height: 60px;
     background-color: #ff9933;
+    position:relative;
 }
 
 .toplogo {

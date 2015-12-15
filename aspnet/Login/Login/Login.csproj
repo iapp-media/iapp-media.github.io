@@ -125,7 +125,6 @@
     <Content Include="js\m-login.js" />
     <Content Include="Login.aspx" />
     <Content Include="m-login.aspx" />
-    <Content Include="m-Profile.aspx" />
     <Content Include="ME\css\action.css" />
     <Content Include="ME\css\cropper.css" />
     <Content Include="ME\css\index.css" />
@@ -157,10 +156,21 @@
     <Content Include="ME\js\zepto.min.js" />
     <Content Include="ME\m-Profile.aspx" />
     <Content Include="ME\TEST.html" />
+    <Content Include="PClogin\css\ie.css" />
+    <Content Include="PClogin\css\index.css" />
+    <Content Include="PClogin\css\print.css" />
+    <Content Include="PClogin\img\web-transpage-img.jpg" />
+    <Content Include="PClogin\index.html" />
+    <Content Include="PClogin\login.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="ME\img\Thumbs.db" />
-    <None Include="Properties\PublishProfiles\111.pubxml" />
+    <Content Include="PClogin\config.rb" />
+    <Content Include="PClogin\prepros.cfg" />
+    <Content Include="PClogin\sass\ie.sass" />
+    <Content Include="PClogin\sass\index.sass" />
+    <Content Include="PClogin\sass\print.sass" />
+    <None Include="Properties\PublishProfiles\sloin.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -198,19 +208,19 @@
     <Compile Include="m-login.aspx.designer.cs">
       <DependentUpon>m-login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="m-Profile.aspx.cs">
-      <DependentUpon>m-Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="m-Profile.aspx.designer.cs">
-      <DependentUpon>m-Profile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ME\m-Profile.aspx.cs">
       <DependentUpon>m-Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ME\m-Profile.aspx.designer.cs">
       <DependentUpon>m-Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PClogin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PClogin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
@@ -243,7 +253,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Properties\PublishProfiles\App_Login_150818.pubxml" />
     <Content Include="UserIcon.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

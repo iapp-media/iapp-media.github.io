@@ -4,6 +4,11 @@ html {
 
 body {
     height: 100%;
+     background: url('../img/web-transpage-img.jpg') no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      
 }
 
 a {
@@ -21,6 +26,10 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 99;
+    max-width: 700px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 .iapplogo {
@@ -41,6 +50,24 @@ a:hover {
     background-color: #ff9933;
     margin-bottom: 0px;
 }
+    .top .glyphicon-remove {
+            color: #fff;
+    font-size: 30px;
+    right: 15px;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 45px;
+    width: 45px;
+    line-height: 43px;
+    text-align: center;
+   
+    border: 2px solid #fff;
+    border-radius: 50%;
+        
+    }
 
 .content {
     height: calc(100% - 113px);
@@ -80,9 +107,21 @@ a:hover {
 }
 
 .logo-file {
-    width: 109px;
+        width: 109px;
+    height: 136px;
     margin: 0 auto;
+    position: relative;
 }
+    .logo-file img {
+        width:100%;
+    }
+    .logo-file label {
+            text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
 
 .login-mobile .name {
     display: block;
@@ -145,7 +184,7 @@ a:hover {
     margin-left: 10%;
     width: 50px;
     height: 50px;
-    border-radius: 99px;
+    border-radius: 50%;
     border: 2px solid #ff9933;
 }
 
@@ -162,13 +201,13 @@ a:hover {
     margin-left: calc(45% - 50px);
     width: 50px;
     height: 50px;
-    border-radius: 99px;
+    border-radius: 50%;
     border: 2px solid #ff9933;
 }
 
-.glyphicon-remove {
-    top: 12%;
-    left: 12%;
+.login-back .glyphicon-remove {
+    top: 7px;
+    left: 6px;
     font-size: 35px;
     color: #ff9933;
 }

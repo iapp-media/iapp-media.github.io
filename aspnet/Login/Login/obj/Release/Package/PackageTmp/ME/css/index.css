@@ -3,6 +3,9 @@ html {
     margin: auto;*/
     height: 100%;
 }
+form {
+    height:100%;
+}
 
 #loading {
     z-index: 100000;

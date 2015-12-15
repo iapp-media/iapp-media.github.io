@@ -27,7 +27,7 @@
                     <table>
                         <tr>
                             <td style="width: 50px">姓名:</td>
-                            <td style="width: 250px">
+                            <td>
                                 <asp:TextBox ID="User_Name" runat="server" CssClass="tsty"></asp:TextBox>
                             </td>
                             <td>
@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td style="width: 50px">帳號</td>
-                            <td style="width: 250px">
+                            <td>
                                 <asp:TextBox ID="Email" runat="server" placeholder="Email" CssClass="tsty"></asp:TextBox>
                             </td>
                             <td>
@@ -45,7 +45,7 @@
                         </tr>
                         <tr>
                             <td style="width: 50px">密碼</td>
-                            <td style="width: 250px">
+                            <td>
                                 <asp:TextBox ID="Pw" runat="server" TextMode="Password" CssClass="tsty"></asp:TextBox>
                             </td>
                             <td>
@@ -54,7 +54,8 @@
                         </tr>
                     </table>
                 </div>
-            </div> 
+            </div>
+            
             <div class="confirm">
                 <asp:Button ID="Button1" runat="server" Text="儲存" OnClick="regBtn1_Click" CssClass="save-1" />
             </div>

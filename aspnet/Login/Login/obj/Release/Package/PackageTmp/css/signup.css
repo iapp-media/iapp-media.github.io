@@ -8,14 +8,20 @@ body{
 a{text-decoration:none; color:#ff9933;}
  
 .content{
-	position: fixed;
-	top: 10%;left: 0%;
-	width: 100%;height: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 80%;
 } 
 .title{
-	position: absolute; 
-	top: 5%; left: 15%; 
-	width:70%; height: 10%;
+	    margin: auto;
+    width: 70%;
+    height: 10%;
+    border-bottom: 2px solid #ff9933;
 }
 .title p{
 	text-align: center; 
@@ -23,24 +29,13 @@ a{text-decoration:none; color:#ff9933;}
 	font-weight: bold;
 	color: #ff9933;
 }
-.bar{
-	position: absolute;
-	top: 110%;left: 0%;
-	width: 100%;height: 2px;
-	background-color: #ff9933;
-	opacity: 0.6;
-}
+
 .input{
-	position: absolute;
-	top: 20%;left: 30%;
-	width: 100%;height: 50%;
-	opacity: 0.8;
+	outline:1px solid #000;
 }
 .input table{
 	color: #7d7d7d;
-	position: absolute;
-	top: 5%;
-	left: 0%;
+	
 	width: 100%;
 }
 /*.input table input{
@@ -49,7 +44,9 @@ a{text-decoration:none; color:#ff9933;}
 }*/
 .tsty {
     width: 250px;
-    padding-bottom: 10px;
+    height:25px;
+    display:table-cell;
+    vertical-align:middle;
 }
 .tb5 {
 	border:2px solid #456879;
@@ -65,4 +62,7 @@ a{text-decoration:none; color:#ff9933;}
     position: absolute;
     top: 55%;
     left: 42%;
+}
+.clearfix {
+   clear:both;
 }

@@ -19,7 +19,7 @@
     <div class="colorBG"></div>
     <div class="col-xs-12 promana" id="SinfoPage">
         <div class="row">
-            <div class="productcare">
+            <div class="productcare"> 
                 <div class="col-xs-12 insidecare">
                     <div class="row">
                         <div class="col-xs-12 libor productsinside">

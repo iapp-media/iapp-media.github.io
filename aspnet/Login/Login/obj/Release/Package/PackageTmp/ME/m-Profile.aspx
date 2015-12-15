@@ -51,7 +51,8 @@
         <div class="upload-img">
             <div class="top">
                 <img src="img/iapplogo.png" class="toplogo" align="left"/>
-                <img src="img/cancel-1.png" class="cancel" align="right"/>
+               <%-- <img src="img/cancel-1.png" class="cancel" align="right"/>--%>
+                <span class="glyphicon glyphicon-remove cancel" aria-hidden="true"></span>
             </div>
             <div class="upload-page">
                 <label for="inputImage">
@@ -62,7 +63,7 @@
                 <div class="rotate">
                     <button data-method="rotate" type="button" class="rotate-btn">旋轉</button>
                 </div>
-                <div class="preview-container hide">
+                <div class="preview-container">
                     <img id="preview" src="" />
                 </div>
                 <div class="img-container">
@@ -85,6 +86,7 @@
         <div class="login-mobile">
             <div class="navbar">
                 <img class="iapplogo" src="img/iapplogo.png">
+                
             </div>
             <div class="content">
                 <div class="login">
@@ -153,6 +155,7 @@
             $(document).ready(function () {
                 $("#toimg").click(function () {
                     $(".login-mobile").hide();
+                    $(".send").hide();
                 });
 
                 $("#inputImage").click(function () {
@@ -160,7 +163,6 @@
                     $('.img-container').show();
                     $(".upload-img").show();
                     $(".pages").hide();
-                    $('.send').hide();
                     $('.cut').show();
                     $('.cut').attr("disabled", true);
                     $('.rotate-btn').hide();

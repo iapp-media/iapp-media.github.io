@@ -83,7 +83,7 @@
                         <li class="disabled">我的行動分店</li>
                         <li><a href="www.iapp-media.com">微店市集</a></li> --%>
                           <asp:Literal ID="L_MyStore" runat="server"></asp:Literal>
-                       <li>
+                       <li runat="server" id="lilogout" visible="false">
                             <asp:LinkButton ID="LBLogout" runat="server" OnClick="LBLogout_Click">登出</asp:LinkButton>
                         </li>
                         <li class="clearfix"></li>
