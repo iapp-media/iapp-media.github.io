@@ -40,7 +40,7 @@
   padding: 0;
   width: 400%;
 }
-/* line 33, ../sass/slider.sass */
+/* line 34, ../sass/slider.sass */
 #slider ul li {
   position: relative;
   margin: auto;
@@ -50,7 +50,7 @@
   width: 100%;
   list-style: none;
 }
-/* line 41, ../sass/slider.sass */
+/* line 42, ../sass/slider.sass */
 #slider ul li .PicSend {
   height: 100%;
   text-align: center;
