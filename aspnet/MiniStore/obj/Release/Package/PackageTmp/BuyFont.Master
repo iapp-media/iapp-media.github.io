@@ -169,6 +169,24 @@
 
         <!-- WRAPPER END -->
     </form>
+    <script>
+        function LeftMenuJump(togo) { 
+            switch (togo) {
+                default:
+                    break;
+                case 1:
+                    window.open('JoinAs.aspx', '_self');
+                    break;
+                case 2:
+                    if (confirm('您目前有一間微店是否要前進後台?')) {
+                        window.open('JoinAs.aspx', '_self');
+                    } else {
+                        // Do nothing!
+                    }
+                    break;
+            } 
+        }
+    </script>
     <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
     <!-- Google Map -->
     <script type="text/javascript" src="js/jquery.tinyMap.min.js"></script>

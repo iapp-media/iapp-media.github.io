@@ -193,7 +193,7 @@ namespace StoreMana
             if (TB_Price.Text == "") { tmp += ",售價"; }
             if (tmp != "")
             {
-                Response.Write("<script>alert('請填選" + tmp.Substring(1) + "')</script>");
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請填選" + tmp.Substring(1) + "');", true);
                 return;
             }
 

@@ -59,7 +59,7 @@ namespace MiniStore
 
                 if (Comm.User_ID() == -1)
                 {
-                    //1. 未登入
+                    //未登入
                     L_MyStore.Text = "   <li><a href=\"JoinAs.aspx\">打造行動微店</a></li>" +
                                      "   <li class=\"disabled\">加入行動分店</li>" +
                                      "   <li><a href=\"www.iapp-media.com\">微店市集</a></li> " +
@@ -70,7 +70,7 @@ namespace MiniStore
                     if (Main.Scalar("select 1 from store where Store_NID = '" + Request.QueryString["SN"] + "' and User_ID='" + Comm.User_ID() + "' ") != "")
                     {
                         // 已登入(管理者)
-                        L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">進入微店後台 (<span>" + Main.Scalar("select Store_Name from Store_info where Store_ID in (select IDNo from Store where User_ID=" + Comm.User_ID() + ")") + ")</span></a></li>" +
+                        L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">我的微店後台 (<span>" + Main.Scalar("select Store_Name from Store_info where Store_ID in (select IDNo from Store where User_ID=" + Comm.User_ID() + ")") + ")</span></a></li>" +
                                          "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
                                          "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                         lilogout.Visible = true;
@@ -78,10 +78,18 @@ namespace MiniStore
                     else
                     {
                         // 已登入(非管理者)
-                        L_MyStore.Text = "   <li><a href=\"JoinAs.aspx\">打造行動微店</a></li>" +
-                                        "  <li class=\"disabled\">加入行動分店</li>" +
-                                        "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
-                                        "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
+                        if (Main.Scalar("Select count(1) from store where User_ID='" + Comm.User_ID() + "' ") == "0")
+                        {
+                            L_MyStore.Text = "   <li><a onclick=\"LeftMenuJump(1)\">打造行動微店</a></li>";
+                        }
+                        else
+                        {
+                            L_MyStore.Text = "   <li><a onclick=\"LeftMenuJump(2)\">打造行動微店</a></li>";
+                        }
+                        //<li><a href=\"JoinAs.aspx\">打造行動微店</a></li>
+                        L_MyStore.Text += "  <li class=\"disabled\">加入行動分店</li>" +
+                              "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
+                              "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                         lilogout.Visible = true;
                     }
                 }
