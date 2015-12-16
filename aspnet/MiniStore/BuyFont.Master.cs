@@ -70,7 +70,7 @@ namespace MiniStore
                     if (Main.Scalar("select 1 from store where Store_NID = '" + Request.QueryString["SN"] + "' and User_ID='" + Comm.User_ID() + "' ") != "")
                     {
                         // 已登入(管理者)
-                        L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">我的微店後台 (<span>" + Main.Scalar("select Store_Name from Store_info where Store_ID in (select IDNo from Store where User_ID=" + Comm.User_ID() + ")") + ")</span></a></li>" +
+                        L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">我的微店後台 <span>(" + Main.Scalar("select Store_Name from Store_info where Store_ID in (select IDNo from Store where User_ID=" + Comm.User_ID() + ")") + ")</span></a></li>" +
                                          "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
                                          "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                         lilogout.Visible = true;
