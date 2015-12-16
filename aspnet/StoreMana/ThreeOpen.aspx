@@ -388,6 +388,7 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
+            
             $(function () {
                 $('#Step2').hide();
                 $('#Step3').hide();
@@ -399,6 +400,7 @@
                     $('.Pagenow').append('<li>' + i + '</li>');
                 }
                 $('.Pagenow li:first').addClass('BTNactive');
+
             });
 
             function goStep(obj) {
@@ -418,93 +420,6 @@
                     case 4:
                         $('#Step4').hide();
                         $('#Step5').fadeIn();
-                        //products slider
-                        jQuery(document).ready(function ($) {
-                            var slideCount = $('#slider ul li').length;
-                            var slideWidth = $('#slider ul li').width();
-                            var slideHeight = $('#slider ul li').height();
-                            var sliderUlWidth = slideCount * slideWidth;
-                            var sliderW2 = $('#slider').width();
-                            console.log('slider寬' + sliderW2);
-
-                            $('#slider').css({
-                                width: sliderW2
-                            });
-
-                            $('#slider ul').css({
-                                width: sliderW2 * 4
-                            });
-                            $('#slider ul li').css({
-                                width: sliderW2
-                            });
-
-                            $('#slider ul li:last-child').prependTo('#slider ul');
-
-                            function moveLeft() {
-                                $('#slider ul').animate({
-                                    left: +slideWidth
-                                }, 200, function () {
-                                    $('#slider ul li:last-child').prependTo('#slider ul');
-                                    $('#slider ul').css('left', '');
-                                });
-                            };
-
-                            function moveRight() {
-                                $('#slider ul').animate({
-                                    left: -slideWidth
-                                }, 200, function () {
-                                    $('#slider ul li:first-child').appendTo('#slider ul');
-                                    $('#slider ul').css('left', '');
-                                });
-                            };
-
-                            $('.control_prev').click(function () {
-                                moveLeft();
-                            });
-
-                            $('.control_next').click(function () {
-                                moveRight();
-                            });
-
-                        });
-                        $(document).ready(function () {
-                            window.scrollTo(0, 10);
-                            $(".PicClick").click(function () {
-                                $('.preview-container').hide();
-                                $('.img-container').show();
-                                $(".upload-img").show();
-                                $(".pages").hide();
-                                $('.compress').hide();
-                                $('.cut').show();
-                                $('.cut').attr("disabled", true);
-                                $('.rotate-btn').hide();
-                            });
-                            $(".cut").click(function () {
-                                $(".cut").hide();
-                                $(".compress").show();
-
-                            });
-                            $(".compress").click(function () {
-                                $(".upload-img").hide();
-                                $(".pages").show();
-                            });
-                            $('#inputImage').change(function () {
-                                $('.preview-container').hide();
-                                $('.img-container').show();
-                                $('.compress').hide();
-                                $('.cut').show();
-                                $('.rotate-btn').show();
-                            });
-                            $('.cancelimgfun').click(function () {
-                                $(".upload-img").hide();
-                                $(".pages").show();
-                            });
-
-                            $('.cancelimgfun').click(function () {
-                                $(".upload-img").hide();
-                                $(".pages").show();
-                            });
-                        });
                         break;
                     case 5:
                         $('#Step5').hide();
@@ -512,6 +427,76 @@
                         break;
                     default:
                 }
+                //products slider
+                jQuery(document).ready(function () {
+                        $('#slider ul li:last-child').prependTo('#slider ul');
+
+                        function moveLeft() {
+                            $('#slider ul').animate({
+                                left: +slideWidth
+                            }, 200, function () {
+                                $('#slider ul li:last-child').prependTo('#slider ul');
+                                $('#slider ul').css('left', '');
+                            });
+                        };
+
+                        function moveRight() {
+                            $('#slider ul').animate({
+                                left: -slideWidth
+                            }, 200, function () {
+                                $('#slider ul li:first-child').appendTo('#slider ul');
+                                $('#slider ul').css('left', '');
+                            });
+                        };
+
+                        $('.control_prev').click(function () {
+                            moveLeft();
+                        });
+
+                        $('.control_next').click(function () {
+                            moveRight();
+                        });
+
+                    });
+                
+                $(document).ready(function () {
+                    window.scrollTo(0, 10);
+                    $(".PicClick").click(function () {
+                        $('.preview-container').hide();
+                        $('.img-container').show();
+                        $(".upload-img").show();
+                        $(".pages").hide();
+                        $('.compress').hide();
+                        $('.cut').show();
+                        $('.cut').attr("disabled", true);
+                        $('.rotate-btn').hide();
+                    });
+                    $(".cut").click(function () {
+                        $(".cut").hide();
+                        $(".compress").show();
+
+                    });
+                    $(".compress").click(function () {
+                        $(".upload-img").hide();
+                        $(".pages").show();
+                    });
+                    $('#inputImage').change(function () {
+                        $('.preview-container').hide();
+                        $('.img-container').show();
+                        $('.compress').hide();
+                        $('.cut').show();
+                        $('.rotate-btn').show();
+                    });
+                    $('.cancelimgfun').click(function () {
+                        $(".upload-img").hide();
+                        $(".pages").show();
+                    });
+
+                    $('.cancelimgfun').click(function () {
+                        $(".upload-img").hide();
+                        $(".pages").show();
+                    });
+                });
                 $('div[id^="Step"]:visible').each(function () {
                     var stepindex = $(this).index();
                     console.log(stepindex);
@@ -522,7 +507,8 @@
                         scrollTop: 0
                     });
                 }
-                webTop();
+                zeyan();
+                webTop(); 
             }
             function upStep(obj) {
                 switch (obj) {
@@ -545,8 +531,82 @@
                     case 6:
                         $('#Step5').fadeIn();
                         $('#Step6').hide();
+                        zeyan1();
                         break;
                 }
+                //products slider
+          
+                    jQuery(document).ready(function () {
+                        $('#slider ul li:last-child').prependTo('#slider ul');
+
+                        function moveLeft() {
+                            $('#slider ul').animate({
+                                left: +slideWidth
+                            }, 200, function () {
+                                $('#slider ul li:last-child').prependTo('#slider ul');
+                                $('#slider ul').css('left', '');
+                            });
+                        };
+
+                        function moveRight() {
+                            $('#slider ul').animate({
+                                left: -slideWidth
+                            }, 200, function () {
+                                $('#slider ul li:first-child').appendTo('#slider ul');
+                                $('#slider ul').css('left', '');
+                            });
+                        };
+
+                        $('.control_prev').click(function () {
+                            moveLeft();
+                        });
+
+                        $('.control_next').click(function () {
+                            moveRight();
+                        });
+
+                    });
+                
+                
+                    $(document).ready(function () {
+                        window.scrollTo(0, 10);
+                        $(".PicClick").click(function () {
+                            $('.preview-container').hide();
+                            $('.img-container').show();
+                            $(".upload-img").show();
+                            $(".pages").hide();
+                            $('.compress').hide();
+                            $('.cut').show();
+                            $('.cut').attr("disabled", true);
+                            $('.rotate-btn').hide();
+                        });
+                        $(".cut").click(function () {
+                            $(".cut").hide();
+                            $(".compress").show();
+
+                        });
+                        $(".compress").click(function () {
+                            $(".upload-img").hide();
+                            $(".pages").show();
+                        });
+                        $('#inputImage').change(function () {
+                            $('.preview-container').hide();
+                            $('.img-container').show();
+                            $('.compress').hide();
+                            $('.cut').show();
+                            $('.rotate-btn').show();
+                        });
+                        $('.cancelimgfun').click(function () {
+                            $(".upload-img").hide();
+                            $(".pages").show();
+                        });
+
+                        $('.cancelimgfun').click(function () {
+                            $(".upload-img").hide();
+                            $(".pages").show();
+                        });
+                    });
+                
                 $('div[id^="Step"]:visible').each(function () {
                     var stepindex = $(this).index();
                     console.log(stepindex);
@@ -558,8 +618,33 @@
                     });
                 }
                 webTop();
+                zeyan();
+               
             }
+            function zeyan() {
+                var slideCount = $('#slider ul li').length;
+                var slideWidth = $('#slider ul li').width();
+                var slideHeight = $('#slider ul li').height();
+                var sliderUlWidth = slideCount * slideWidth;
+                var sliderW2 = $('#slider').width();
+                console.log('slider寬' + sliderW2);
 
+                $('#slider').css({
+                    width: sliderW2
+                });
+
+                $('#slider ul').css({
+                    width: sliderW2 * 4
+                });
+                $('#slider ul li').css({
+                    width: sliderW2
+                });
+            }
+            $('.ThreeBTN').resize(function () {
+                zeyan();
+            });
+            zeyan();
+           
         </script>
         <script src="js/exif.js"></script>
         <script src="js/JIC.js"></script>
