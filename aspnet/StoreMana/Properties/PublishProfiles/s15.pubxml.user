@@ -20,7 +20,7 @@
       <publishTime>12/16/2015 09:05:02</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>12/16/2015 09:32:03</publishTime>
+      <publishTime>12/16/2015 10:03:55</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -247,8 +247,26 @@
     <File Include="QRcode.ashx">
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
+    <File Include="sass/ie.sass">
+      <publishTime>11/27/2015 15:34:55</publishTime>
+    </File>
+    <File Include="sass/print.sass">
+      <publishTime>11/27/2015 15:34:55</publishTime>
+    </File>
+    <File Include="sass/screen.sass">
+      <publishTime>11/27/2015 15:34:55</publishTime>
+    </File>
+    <File Include="sass/slider.css">
+      <publishTime>11/27/2015 15:34:55</publishTime>
+    </File>
+    <File Include="sass/slider.sass">
+      <publishTime>11/27/2015 15:34:55</publishTime>
+    </File>
     <File Include="Setting.aspx">
       <publishTime>12/03/2015 14:34:17</publishTime>
+    </File>
+    <File Include="Setting_Bonus.aspx">
+      <publishTime>12/16/2015 10:01:37</publishTime>
     </File>
     <File Include="Setting_Gerent.aspx">
       <publishTime>12/03/2015 14:36:21</publishTime>
@@ -269,7 +287,7 @@
       <publishTime>12/10/2015 18:43:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/16/2015 09:32:04</publishTime>
+      <publishTime>12/16/2015 10:03:55</publishTime>
     </File>
   </ItemGroup>
 </Project>

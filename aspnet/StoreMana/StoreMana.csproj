@@ -129,7 +129,9 @@
     <Content Include="Order_Detail.aspx" />
     <Content Include="Product_Add.aspx" />
     <Content Include="Product_Mana.aspx" />
+    <Content Include="sass\slider.css" />
     <Content Include="Setting.aspx" />
+    <Content Include="Setting_Bonus.aspx" />
     <Content Include="Setting_Gerent.aspx" />
     <Content Include="Setting_SInfo.aspx" />
     <Content Include="Svim.aspx" />
@@ -210,6 +212,13 @@
     <Compile Include="Setting.aspx.designer.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Setting_Bonus.aspx.cs">
+      <DependentUpon>Setting_Bonus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting_Bonus.aspx.designer.cs">
+      <DependentUpon>Setting_Bonus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Setting_Gerent.aspx.cs">
       <DependentUpon>Setting_Gerent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,6 +256,10 @@
     <Content Include="MiniMaster.Master" />
     <Content Include="QRcode.ashx" />
     <None Include="Properties\PublishProfiles\s15.pubxml" />
+    <Content Include="sass\ie.sass" />
+    <Content Include="sass\print.sass" />
+    <Content Include="sass\screen.sass" />
+    <Content Include="sass\slider.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
