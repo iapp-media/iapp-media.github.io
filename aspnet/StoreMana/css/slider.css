@@ -38,6 +38,7 @@
 #slider ul {
   position: relative;
   padding: 0;
+  width: 400%;
 }
 /* line 33, ../sass/slider.sass */
 #slider ul li {
