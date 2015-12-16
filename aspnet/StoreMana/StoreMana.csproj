@@ -61,8 +61,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AA\bootstrap.min.css" />
-    <Content Include="AA\bootstrap.min.js" />
     <Content Include="css\cropper.css" />
     <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />

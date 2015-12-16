@@ -91,7 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AUL.aspx" />
-    <Content Include="button.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\button.css" />
     <Content Include="css\cropper.css" />
@@ -104,7 +103,6 @@
     <Content Include="css\signup.css" />
     <Content Include="FBchk.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="HtmlPage1.html" />
     <Content Include="img\box-fblogin.png" />
     <Content Include="img\button-sprite-1.png" />
     <Content Include="img\button-sprite-2.png" />

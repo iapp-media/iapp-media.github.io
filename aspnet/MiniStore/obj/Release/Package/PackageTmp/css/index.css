@@ -484,15 +484,19 @@
         font-size: 18px;
         text-align: right;
     }
-    
-    .Valuetextarea {
-        font-size: 16px;
-        color: #838485;
-        background-color: #ffeecf;
-        height: 100px;
-        border-radius: 5px;
-        overflow: auto;
-    }
+
+.Valuetextarea {
+    font-size: 16px;
+    color: #838485;
+    background-color: #ffeecf;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    padding: 12px;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: 2.2px;
+}
     
     .ValueText {
         text-align: right;
