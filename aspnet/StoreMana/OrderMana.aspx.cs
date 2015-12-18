@@ -148,7 +148,7 @@ namespace StoreMana.Mini
 
         protected void RP1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            //卡按鈕 還沒用好等套完再用
+            //卡按鈕 寫法要換聰明點
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 Literal Order_Key = (Literal)e.Item.FindControl("LIDNO");
@@ -159,6 +159,7 @@ namespace StoreMana.Mini
                 Button BT3 = (Button)e.Item.FindControl("BT3"); 
  
                 //sta control
+                //--付款方式 面交
                 if (Main.Scalar("select status from orders where Payment_ID=1 and idno='" + Order_Key.Text + "'") == "1")
                 {
                     BTEND.Enabled = false; 
@@ -173,7 +174,7 @@ namespace StoreMana.Mini
                     BTEND.Enabled = true;
                 }
 
-
+                //--付款方式 銀行轉帳
                 if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "5") //入帳確認
                 {
                     BT1.Enabled = true;
