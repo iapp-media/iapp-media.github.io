@@ -20,7 +20,7 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Session["Store_ID"] = "2";
+                //Session["Store_ID"] = "2";
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
  
                 Main.ParaClear();
@@ -195,6 +195,7 @@ namespace StoreMana
             if (tmp != "")
             {
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請填選" + tmp.Substring(1) + "');", true);
+                //;slider();cut();
                 return;
             }
 

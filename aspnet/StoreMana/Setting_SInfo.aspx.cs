@@ -150,12 +150,15 @@ namespace StoreMana
             //}
 
 
-            Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@Store_ID ) " +
+          int c=  Main.NonQuery(" if not exists (select 1 from Store_info where Store_ID=@Store_ID ) " +
                     "insert into Store_info(Store_ID, Store_Name,Bank_Name,Bank_No, Bank_ACC, Bank_ACName, Payment, Delivery, Addr, TEL, CEOName,layout,DayOff,OPTime)" +
                     "values (@Store_ID, @Store_Name,@Bank_Name,@Bank_No, @Bank_ACC, @Bank_ACName, @Payment, @Delivery, @Addr, @TEL, @CEOName,@layout,@DayOff,@OPTime) else " +
                     "update Store_info set Store_Name=@Store_Name,Bank_Name=@Bank_Name,Bank_No=@Bank_No, Bank_ACC=@Bank_ACC, Bank_ACName=@Bank_ACName, " +
                     " Payment=@Payment, Delivery=@Delivery, Addr=@Addr, TEL=@TEL, CEOName=@CEOName,layout=@layout,DayOff=@DayOff,OPTime=@OPTime where  Store_ID=@Store_ID");
-
+          if (c > 0)
+          {
+              Response.Redirect("Setting_SInfo.aspx");
+          }
            // Main.NonQuery("update store set Store_NID=@TBStoreNID where idno=@Store_ID ");
 
         }
