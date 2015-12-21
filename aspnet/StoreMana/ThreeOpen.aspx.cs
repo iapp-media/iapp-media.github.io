@@ -20,9 +20,15 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                 Session["Store_ID"] = "2";
+                 //Session["Store_ID"] = "2";
                 Main.FillDDP(DLSCate, "select IDNo,Cate_Name from Product_Cate where Store_ID=0 and ref=-1 ", "Cate_Name", "IDNo");
- 
+
+                if (Session["Store_ID"] == null)
+                {
+                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
+
+                }
+
                 Main.ParaClear();
                 Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                 LPID.Text = Main.Scalar("select isnull(max(IDNo),'0') from product where store_ID =@SID and Tmp_IDNo='-99' ");

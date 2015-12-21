@@ -236,12 +236,15 @@ namespace MiniStore
                   }
                 } 
             }
+
             if (DL_Payment.SelectedValue.ToString() == "5")
             {
+                Session["OrderID"] = strOrderID;
                 Response.Redirect("CreditCard.aspx");
             }
-            else {
-             Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
+            else
+            {
+                Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
             }
             //轉型一直失敗 暫時用跳頁
             //
