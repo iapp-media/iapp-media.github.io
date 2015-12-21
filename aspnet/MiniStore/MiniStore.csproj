@@ -66,6 +66,8 @@
     <Content Include="Buy_Ctrl.aspx" />
     <Content Include="Buy_Detail.aspx" />
     <Content Include="Buy_Like.aspx" />
+    <Content Include="CreditCard.aspx" />
+    <Content Include="CreditCard_Finish.aspx" />
     <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\frontpage.css" />
     <Content Include="css\promptumenu.css" />
@@ -183,6 +185,20 @@
     </Compile>
     <Compile Include="Buy_Like.aspx.designer.cs">
       <DependentUpon>Buy_Like.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCard.aspx.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditCard.aspx.designer.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCard_Finish.aspx.cs">
+      <DependentUpon>CreditCard_Finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditCard_Finish.aspx.designer.cs">
+      <DependentUpon>CreditCard_Finish.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
