@@ -21,11 +21,11 @@ namespace MiniStore
                 SD1.SelectParameters.Clear();
                 SD2.SelectParameters.Clear();
                 SD4.SelectParameters.Clear();
-                SD1.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
-                SD2.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
-                SD4.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
+                SD1.SelectParameters.Add("IDNo", Session["Order_entry"].ToString());
+                SD2.SelectParameters.Add("IDNo", Session["Order_entry"].ToString());
+                SD4.SelectParameters.Add("IDNo", Session["Order_entry"].ToString());
 
-                if (Main.Scalar("select Payment_ID from orders where idno='" + Request.QueryString["entry"] + "'") != "3")
+                if (Main.Scalar("select Payment_ID from orders where idno='" + Session["Order_entry"].ToString() + "'") != "3")
                 {
                     Div_Store_ACInfo.Visible = false;
                     Div_Send_AC.Visible = false;
@@ -35,7 +35,7 @@ namespace MiniStore
                     TBACCDate.Text = DateTime.Today.Date.ToShortTimeString();
 
                     SD3.SelectParameters.Clear();
-                    SD3.SelectParameters.Add("IDNo", Request.QueryString["entry"]);
+                    SD3.SelectParameters.Add("IDNo", Session["Order_entry"].ToString());
                     L3.Text = " Select b.Bank_Name,b.Bank_No,b.Bank_ACName,b.Bank_ACC from orders a inner join Store_info b on a.Store_ID=b.Store_ID where a.IDNo=@IDNo";
                     SD3.SelectCommand = L3.Text;
                     SD3.ConnectionString = Main.ConnStr;
@@ -53,7 +53,7 @@ namespace MiniStore
                           "from Order_Content  where Order_ID=@IDNo group by Item_ID";
 
                 Main.ParaClear();
-                Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+                Main.ParaAdd("@IDNo", Main.Cint2(Session["Order_entry"].ToString()), SqlDbType.Int);
 
                 DataTable DT = Main.GetDataSetNoNull("select *,CONVERT(varchar(12), ACC_Date, 111) AS sdate from orders where IDNo=@IDNo");
                 if (DT.Rows.Count > 0)
@@ -112,7 +112,7 @@ namespace MiniStore
                 }
                 Main.ParaClear();
                 Main.ParaAdd("@AC_AMT", Main.Cint2(TBTotal.Text), SqlDbType.Int);
-                Main.ParaAdd("@IDNo", Main.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+                Main.ParaAdd("@IDNo", Main.Cint2(Session["Order_entry"].ToString()), SqlDbType.Int);
                 Main.ParaAdd("@ACC_AMT", TBACC.Text, SqlDbType.NVarChar);
                 Main.ParaAdd("@ACC_Date", TBACCDate.Text, SqlDbType.NVarChar);
 
@@ -146,7 +146,7 @@ namespace MiniStore
                 Literal L_SumTotal = (Literal)e.Item.FindControl("L_SumTotal");
 
                 int T1 = 0;
-                DataTable DT = Main.GetDataSetNoNull("select * from order_Fee where order_ID='" + Request.QueryString["entry"] + "'");
+                DataTable DT = Main.GetDataSetNoNull("select * from order_Fee where order_ID='" + Session["Order_entry"].ToString() + "'");
                 if (DT.Rows.Count > 0)
                 {
                     StringBuilder SB = new StringBuilder();

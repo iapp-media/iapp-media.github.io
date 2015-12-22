@@ -78,7 +78,11 @@ namespace MiniStore
 
                     if (Status == "交易失敗")
                     {
-                        Response.Redirect("Buy_CtrlC");
+                        if (Session["OrderID"] != null)
+                        {
+                            string SN = Main.Scalar("select (select Store_NID from Store where IDNo=Store_ID) from Orders where IDNo=" + Session["OrderID"] + "");
+                            Response.Redirect("Buy_CtrlR.aspx?SN=" + SN);
+                        } 
                     }
                     else
                     {

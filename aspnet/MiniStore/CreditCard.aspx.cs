@@ -34,7 +34,7 @@ namespace MiniStore
                         TID.Value = "EC000001";//EC000001(一般交易)、EC000002(分期)
                         ONO.Value = CreditNo.PadLeft(20, '0'); //.PadLeft(20, '0')不可重複，不可包含【_】字元，且英數限用大寫 length 20。
                         TA.Value = DT.Rows[0]["Total_AMT"].ToString();
-                        U.Value = "http://220.132.67.201:88/ministore/CreditCard_Finish.aspx"; //由特約商店提供銀行端回傳授權結果所需使用的URL，URL 不可包含【#】、【?】及【&】字元。
+                        U.Value = Comm.URL + "CreditCard_Finish.aspx"; //由特約商店提供銀行端回傳授權結果所需使用的URL，URL 不可包含【#】、【?】及【&】字元。
                         string MACKey = "SWQWFWOGA5HKZFUFGPD7RYLYLC0OUWQY";
                         M.Value = CMD5(MID.Value + "&" + CID.Value + "&" + TID.Value + "&" + ONO.Value + "&" + TA.Value + "&" + U.Value + "&" + MACKey);
 

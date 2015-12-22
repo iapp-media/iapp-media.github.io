@@ -70,12 +70,33 @@ namespace MiniStore
             SD1.ConnectionString = Main.ConnStr;
             RP1.DataSourceID = SD1.ID;
         }
-        public string ShowDetail(object IDNO)
+
+        protected void RP1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            if (IDNO.ToString().Length > 0)
-                return "Order_prn.aspx?entry=" + IDNO + "&SN=" + Request.QueryString["SN"] + "";
-            else
-                return "";
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Literal LIDNO = (Literal)e.Item.FindControl("LIDNO");
+                if (Main.Scalar("select count(1) from Orders where idno=" + LIDNO.Text + " and Payment_ID='5' and status=1") != "0")
+                {
+                    Session["OrderID"] = LIDNO.Text;
+                    Response.Redirect("Buy_CtrlR.aspx?SN=" + Request.QueryString["SN"]);
+                }
+                else
+                {
+                    Session["Order_entry"] = LIDNO.Text;
+                    Response.Redirect("Order_prn.aspx?SN=" + Request.QueryString["SN"]);
+                }
+                 
+
+            
+            }
         }
+        //public string ShowDetail(object IDNO)
+        //{
+        //    if (IDNO.ToString().Length > 0)
+        //        return "Order_prn.aspx?entry=" + IDNO + "&SN=" + Request.QueryString["SN"] + "";
+        //    else
+        //        return "";
+        //}
     }
 }
