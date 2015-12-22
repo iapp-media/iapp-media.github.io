@@ -240,7 +240,7 @@ namespace MiniStore
             if (DL_Payment.SelectedValue.ToString() == "5")
             {
                 Session["Order_Url"] = "http://220.132.67.201:88/ministore/Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "";
-                //Session["OrderID"] = strOrderID;
+                Session["OrderID"] = strOrderID;
                 Response.Redirect("CreditCard.aspx");
             }
             else
