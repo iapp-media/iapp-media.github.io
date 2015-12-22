@@ -388,7 +388,12 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script>
             document.write('<style>#loading{display:none}</style>');
-            
+            function webTop() {
+                $('html , body').animate({
+                    scrollTop: 0
+                });
+            }
+            webTop();
             $(function () {
                 $('#Step2').hide();
                 $('#Step3').hide();
@@ -433,14 +438,9 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                function webTop() {
-                    $('html , body').animate({
-                        scrollTop: 0
-                    });
-                }
-                webTop();
                 slider();
                 cut();
+                webTop();
             }
             function upStep(obj) {
                 switch (obj) {
@@ -548,15 +548,10 @@
                     console.log(stepindex);
                     $('.Pagenow li').eq(stepindex).addClass('BTNactive').siblings().removeClass('BTNactive');
                 });
-                function webTop() {
-                    $('html , body').animate({
-                        scrollTop: 0
-                    });
-                }
+                
                 webTop();
                 slider();
                 cut();
-                
             }
 
             //products slider

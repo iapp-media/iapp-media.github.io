@@ -64,6 +64,7 @@
   <ItemGroup>
     <Content Include="Buy_Add.aspx" />
     <Content Include="Buy_Ctrl.aspx" />
+    <Content Include="Buy_CtrlR.aspx" />
     <Content Include="Buy_Detail.aspx" />
     <Content Include="Buy_Like.aspx" />
     <Content Include="CreditCard.aspx" />
@@ -171,6 +172,13 @@
     </Compile>
     <Compile Include="Buy_Ctrl.aspx.designer.cs">
       <DependentUpon>Buy_Ctrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_CtrlR.aspx.cs">
+      <DependentUpon>Buy_CtrlR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_CtrlR.aspx.designer.cs">
+      <DependentUpon>Buy_CtrlR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Buy_Detail.aspx.cs">
       <DependentUpon>Buy_Detail.aspx</DependentUpon>

@@ -18,11 +18,10 @@ namespace MiniStore
 
             if (!Page.IsPostBack)
             {
-                string CCIDNo = "";
-                //Dim MACKey As String = "KOPO9UUYFUCXCVHRKKE3X17CJAO0NGWY"     '配上我們丟上去的KEY 
+                
                 string MACKey = "EEIF63Y8WECUQTTN10Z2WKOVKHJBOCVO";
                 //配上我們丟上去的KEY 
-                string FromURL = "http://www.nlac.org.tw/";
+             
                 string Status = "";
 
                 if ((Request.QueryString["RC"] != null))
@@ -31,7 +30,7 @@ namespace MiniStore
                     LMID.Text = Request.QueryString["MID"];
                     LONO.Text = Request.QueryString["ONO"];
 
-
+                     
                     if ((Request.QueryString["M"] != null))
                     {
                         LLTD.Text = Request.QueryString["LTD"];
@@ -62,53 +61,40 @@ namespace MiniStore
                         Status = "交易失敗";
                     }
 
-
-
-                    DataTable DT = Main.GetDataSetNoNull("select IDNo,MACKEY,FromURL,Bill_ID,modu from Credit_Card where MID='" + LMID.Text + "' and ONO='" + LONO.Text + "'");
-                    if (DT.Rows.Count > 0)
+                    if (Session["CreditNo"] != null)
                     {
-                        CCIDNo = DT.Rows[0]["IDNo"].ToString();
-                        MACKey = DT.Rows[0]["MACKEY"].ToString();
-                        FromURL = DT.Rows[0]["FromURL"].ToString();
 
-                        str = "update Credit_Card set RC_Creat_Date=getdate(),RC='" + LRC.Text + "',LTD='" + LLTD.Text + "',LTT='" + LLTT.Text + "',RRN='" + LRRN.Text + "',AIR='" + LAIR.Text + "',AN='" + LAN.Text + "',M2='" + LM2.Text + "',M2_chk='" + LM2_chk.Text + "',Status='" + Status + "' where IDNo=" + CCIDNo + "; ";
-
-
-                        if (Status == "交易成功")
-                        {
-                            switch (DT.Rows[0]["modu"].ToString())
-                            {
-
-                                case "SignUp":
-                                 //   str += "update Sign_User set Status='已登錄繳費資訊',Credit_Card='" + LAN.Text + "',Card_No='" + Strings.Right(LAN.Text, 4) + "' where IDNo=" + DT.Rows(0).Item("Bill_ID");
-
-                                    break;
-                            }
-                        }
-
+                        str = "update Credit_Card set MID='" + LMID.Text + "',ONO='" + LONO.Text + "', RC_Creat_Date=getdate(),RC='" + LRC.Text + "',LTD='" + LLTD.Text + "',LTT='" + LLTT.Text + "',RRN='" + LRRN.Text + "',AIR='" + LAIR.Text + "',AN='" + LAN.Text + "',M2='" + LM2.Text + "',M2_chk='" + LM2_chk.Text + "',Status='" + Status + "' where IDNo=" + Session["CreditNo"] + "; ";
                         Main.NonQuery(str);
-
-                    }
+                        Session.Remove("CreditNo");
+                    }      
                     else
                     {
                         str = "insert into Credit_Card (MID,ONO,RC_Creat_Date,RC,LTD,LTT,RRN,AIR,AN,M2,M2_chk) values" + " ('" + LMID.Text + "','" + LONO.Text + "',getdate(),'" + LRC.Text + "','" + LLTD.Text + "','" + LLTT.Text + "','" + LRRN.Text + "','" + LAIR.Text + "','" + LAN.Text + "','" + LM2.Text + "','" + LM2_chk.Text + "'); ";
                         Main.NonQuery(str);
-                    }
+                    }  
 
+                   
 
-
-                    if (Status == "交易成功")
+                    if (Status == "交易失敗")
                     {
+                        Response.Redirect("Buy_CtrlC");
+                    }
+                    else
+                    {
+                        //交易成功
                         //Send Email?
-                       // Comm.SendMail(Comm.MailFrom, "afh@nlac.narl.org.tw", "動物中心-信用卡交易成功", LONO.Text + "信用卡交易成功<br><br>請至系統檢查");
+                        // Comm.SendMail(Comm.MailFrom, "afh@nlac.narl.org.tw", "動物中心-信用卡交易成功", LONO.Text + "信用卡交易成功<br><br>請至系統檢查");
+
+                        if (Session["Order_Url"] != null)
+                        {
+                            string turl = Session["Order_Url"].ToString();
+                            Session.Remove("Order_Url");
+                            Response.Redirect(turl);
+                        }
                     }
 
-                    if (Session["Order_Url"] != null)
-                    {
-                        string turl = Session["Order_Url"].ToString();
-                        Session.Remove("Order_Url");
-                        Response.Redirect(turl);
-                    }
+
                     
 
                    // this.ClientScript.RegisterStartupScript(this.GetType, "key", "alert('" + Status + "');top.location.href='" + FromURL + "'", true);
