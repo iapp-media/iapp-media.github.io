@@ -2469,7 +2469,7 @@
     
     #FastBox .MonBoxL,
     #FastBox .MonBoxR,
-    #FastBox .MonBoxR1 {
+    #FastBox .radioboxUI {
         font-size: 18px;
         width: 50%;
         float: left;
@@ -2580,12 +2580,15 @@
     .buyCtrlMoney2 p {
         font-size:12px;
     }
-    #FastBox  .MonBoxR1 {
+    #FastBox  .radioboxUI {
     float:none;
     width:auto;
 }
-
-    .MonBoxR1 input {
+#FastBox .radioboxUI label {
+    margin-right:10px;
+    margin-bottom:10px;
+}
+    /*.MonBoxR1 input {
         display: none;
     }
     
@@ -2606,7 +2609,7 @@
     .MonBoxR1 input[type="radio"]:checked + label {
     	background: #aaa;
     	color:#f0f0f0;
-    }
+    }*/
     
     @media only screen and (max-width:767px) {
         .container-fluid {
