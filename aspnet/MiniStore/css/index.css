@@ -11,6 +11,7 @@
         background-size: cover;
         height: 100%;
     }
+
     
     .Mapbox {
         position: fixed;
@@ -2467,7 +2468,8 @@
     }
     
     #FastBox .MonBoxL,
-    #FastBox .MonBoxR {
+    #FastBox .MonBoxR,
+    #FastBox .MonBoxR1 {
         font-size: 18px;
         width: 50%;
         float: left;
@@ -2577,6 +2579,33 @@
     .buyCtrlMoney1 span,
     .buyCtrlMoney2 p {
         font-size:12px;
+    }
+    #FastBox  .MonBoxR1 {
+    float:none;
+    width:auto;
+}
+
+    .MonBoxR1 input {
+        display: none;
+    }
+    
+    .MonBoxR1 label {
+        background: #eee;
+        border-radius: .25em;
+        cursor: pointer;
+        display: block;
+        margin-bottom: .125em;
+        padding: .25em 1em;
+        z-index: 20;
+       	text-align: center;
+       	color:#444;
+       	display:inline-block;
+               margin-right: 9px;
+    margin-bottom: 8px;
+    }
+    .MonBoxR1 input[type="radio"]:checked + label {
+    	background: #aaa;
+    	color:#f0f0f0;
     }
     
     @media only screen and (max-width:767px) {

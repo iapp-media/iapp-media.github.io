@@ -37,7 +37,7 @@
         <asp:SqlDataSource ID="SD" runat="server"></asp:SqlDataSource>
         <div class="product" runat="server" id="Fast" visible="false">
             <div id="FastBox">
-                <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
+                <asp:Literal ID="Layout_fast" runat="server"  visible="false"></asp:Literal>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate> 
                 <asp:Repeater ID="RPFast_Drink" runat="server" OnItemCommand="RPFast_Drink_ItemCommand">
                     <ItemTemplate>
@@ -62,28 +62,28 @@
 <%--                                <span class="input-number-increment" onclick='plus(<%# Eval("IDNo") %>,9999)'>+ </span>--%>
                              
                             </div> 
-                             <div class="MonBoxR"> 
+                             <div class="MonBoxR1"> 
                                 <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
-                                    <asp:ListItem >M</asp:ListItem>
-                                     <asp:ListItem>L</asp:ListItem> 
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>L</asp:ListItem> 
                                 </asp:RadioButtonList>
                             </div>
-                            <div class="MonBoxR"> 
+                            <div class="MonBoxR1"> 
                                 <asp:RadioButtonList ID="RB_DrinkIce" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
                                     <asp:ListItem>熱飲</asp:ListItem>
-                                     <asp:ListItem>正常</asp:ListItem>
+                                    <asp:ListItem>正常</asp:ListItem>
                                     <asp:ListItem>少冰</asp:ListItem>
-                                      <asp:ListItem>多冰</asp:ListItem>
-                                       <asp:ListItem>去冰</asp:ListItem> 
+                                    <asp:ListItem>多冰</asp:ListItem>
+                                    <asp:ListItem>去冰</asp:ListItem> 
                                 </asp:RadioButtonList>
                             </div>   
-                            <div class="MonBoxR"> 
+                            <div class="MonBoxR1"> 
                                 <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
-                                    <asp:ListItem>全糖</asp:ListItem>
-                                     <asp:ListItem>少糖</asp:ListItem>
-                                    <asp:ListItem>半糖</asp:ListItem>
-                                     <asp:ListItem>微糖</asp:ListItem>
-                                       <asp:ListItem>無糖</asp:ListItem> 
+                                <asp:ListItem>全糖</asp:ListItem>
+                                <asp:ListItem>少糖</asp:ListItem>
+                                <asp:ListItem>半糖</asp:ListItem>
+                                <asp:ListItem>微糖</asp:ListItem>
+                                <asp:ListItem>無糖</asp:ListItem> 
                                 </asp:RadioButtonList>
                             </div>
                         </div>
