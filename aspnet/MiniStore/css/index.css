@@ -1084,9 +1084,13 @@
         line-height: 40px;
         user-select: none;
     }
-    
+.addbox {
+    width:50%;
+    float:left;
+}
     .input-number-decrement,
-    .input-number-increment {
+    .input-number-increment,
+    .addbox .input-number-decrement {
         display: inline-block;
         width: 30%;
         background: #ccc;
@@ -1096,6 +1100,14 @@
         cursor: pointer;
         font-size: 20px;
         float: left;
+    }
+    .addbox .input-number-decrement {
+        width: 50px;
+        float: right;
+        border-radius: 4px;
+         -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -o-border-radius: 4px;
     }
     
     .input-number-decrement:active,

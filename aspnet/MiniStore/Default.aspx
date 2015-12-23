@@ -51,11 +51,13 @@
                             <div class="MonBoxL">
                                 <span class="TOC"><%# Eval("Price") %></span>
                             </div>
-                            <div class="MonBoxR">
+                            <%--<div class="clearfix"></div>--%>
+                            <div class="addbox">
                                <%-- <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal>
                                 <asp:Button ID="BTminus" runat="server" Text="–"  CssClass="input-number-decrement" CommandName="CNminus"/>
                                 <asp:TextBox ID="ItemNum" runat="server"   Text='<%# Eval("carbaby") %>' CssClass="input-number"></asp:TextBox>--%>
                                 <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
+                                <div class="clearfix"></div>
 
 <%--                                <span class="input-number-decrement" onclick='minus(<%# Eval("IDNo") %>)'>–</span>--%> 
 <%--                                <input id="Num_<%# Eval("IDNo") %>" name="" type="number" value="0"  value='<%# Eval("carbaby") %>'  class="input-number" disabled="disabled" />--%>
