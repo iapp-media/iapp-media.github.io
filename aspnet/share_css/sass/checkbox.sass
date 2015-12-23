@@ -1,0 +1,84 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+@import "compass/css3"
+
+
+//checkbox normal
+$bg_color: #eee
+$text_color_click: #f0f0f0
+
+//heckbox click
+$text_color: #323232
+$bg_color_click: #000
+
+
+//normal checkbox
+.checkboxUI
+	input
+		display: none
+		&[type="radio"]
+			&:checked + label
+				background: $bg_color_click
+				color: $text_color_click
+	label
+		background: $bg_color
+		+border-radius(.25em)
+		cursor: pointer
+		margin-bottom: .125em
+		padding: .25em 1em
+		z-index: 20
+		text-align: center
+		color: $text_color
+		display:inline-block
+
+//apple checkbox
+.apple_checkbox 
+	input 
+
+		display: none
+		+box-sizing(border-box)
+		&:before,&:after,*,*:before,*:after,+label
+			+box-sizing(border-box)
+		&::-moz-selection
+			background: none
+		&:before::-moz-selection,&:after::-moz-selection,*::-moz-selection,*:before::-moz-selection,*:after::-moz-selection,+label::-moz-selection
+			background: none
+		&:before::selection,&:after::selection,*::selection,*:before::selection,*:after::selection,+label::selection
+			background: none
+		&+label
+			outline: 0
+			display: block
+			width: 4em
+			height: 2em
+			position: relative
+			cursor: pointer
+			+user-select(none)
+			background: #f0f0f0
+			+border-radius(2em)
+			padding: 2px
+			-webkit-transition: all .4s ease
+			transition: all .4s ease
+			&:after,&:before
+				position: relative
+				display: block
+				content: ""
+				width: 50%
+				height: 100%
+			&:after
+				left: 0
+				+border-radius(50%)
+				background: #fff
+				+transition(all .2s ease)
+			&:before
+				display: none
+		&:checked
+			width: 100px
+			&+label:after
+				left: 50%
+			&+label
+				background: #9FD6AE
+
+
