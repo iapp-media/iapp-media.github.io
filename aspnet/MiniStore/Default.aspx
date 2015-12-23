@@ -14,6 +14,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div id="Allswiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -33,10 +34,62 @@
                 <asp:Literal ID="LData" runat="server"></asp:Literal>
             </div>
         </div>
-
+        <asp:SqlDataSource ID="SD" runat="server"></asp:SqlDataSource>
         <div class="product" runat="server" id="Fast" visible="false">
             <div id="FastBox">
                 <asp:Literal ID="Layout_fast" runat="server"></asp:Literal>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate> 
+                <asp:Repeater ID="RPFast_Drink" runat="server" OnItemCommand="RPFast_Drink_ItemCommand">
+                    <ItemTemplate>
+                       <div class="details col-xs-12">
+                        <div class="DTimg">
+                            <a href='Buy_detail.aspx?entry=<%# Eval("IDNo") %>&SN=OfficACC'>
+                                <img class="productSize imgH" src='<%# Eval("FilePath") %>' /></a>
+                        </div>
+                        <div class="Detailsmid">
+                            <h3><%# Eval("Product_Name") %></h3>
+                            <div class="MonBoxL">
+                                <span class="TOC"><%# Eval("Price") %></span>
+                            </div>
+                            <div class="MonBoxR">
+                                <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal>
+                                <asp:Button ID="BTminus" runat="server" Text="–"  CssClass="input-number-decrement" CommandName="CNminus"/>
+                                <asp:TextBox ID="ItemNum" runat="server"   Text='<%# Eval("carbaby") %>' CssClass="input-number"></asp:TextBox>
+                                     <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
+
+<%--                                <span class="input-number-decrement" onclick='minus(<%# Eval("IDNo") %>)'>–</span>--%> 
+<%--                                <input id="Num_<%# Eval("IDNo") %>" name="" type="number" value="0"  value='<%# Eval("carbaby") %>'  class="input-number" disabled="disabled" />--%>
+<%--                                <span class="input-number-increment" onclick='plus(<%# Eval("IDNo") %>,9999)'>+ </span>--%>
+                             
+                            </div> 
+                             <div class="MonBoxR"> 
+                                <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+                                    <asp:ListItem >M</asp:ListItem>
+                                     <asp:ListItem>L</asp:ListItem> 
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class="MonBoxR"> 
+                                <asp:RadioButtonList ID="RB_DrinkIce" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+                                    <asp:ListItem>熱飲</asp:ListItem>
+                                     <asp:ListItem>正常</asp:ListItem>
+                                    <asp:ListItem>少冰</asp:ListItem>
+                                      <asp:ListItem>多冰</asp:ListItem>
+                                       <asp:ListItem>去冰</asp:ListItem> 
+                                </asp:RadioButtonList>
+                            </div>   
+                            <div class="MonBoxR"> 
+                                <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+                                    <asp:ListItem>全糖</asp:ListItem>
+                                     <asp:ListItem>少糖</asp:ListItem>
+                                    <asp:ListItem>半糖</asp:ListItem>
+                                     <asp:ListItem>微糖</asp:ListItem>
+                                       <asp:ListItem>無糖</asp:ListItem> 
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+                    </div>
+                    </ItemTemplate>
+                </asp:Repeater></ContentTemplate></asp:UpdatePanel>
                 <div class="clearfix"></div>
                 <div class="col-xs-12 libor status CBbot CBBTN">
                     <asp:Button ID="BTFast" runat="server" Text="結帳" CssClass="btn btn-warning col-xs-12 sendcareButtomeEnd" OnClick="BTFast_Click" />
