@@ -14,10 +14,6 @@ namespace MiniStore
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-          //  Response.Write("<script>window.open('firm_list.aspx','_self');</script>");
-
-        }
+ 
     }
 }

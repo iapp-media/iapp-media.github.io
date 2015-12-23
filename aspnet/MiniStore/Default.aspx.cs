@@ -29,8 +29,8 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                      ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
-                        
+                     // ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
+                        ShowData("5");  
                         LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                             " <img class=\"back-top\" src=\"img/cart.png\" /><span/><label id=\"IconCar\">" +
                             Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
@@ -116,11 +116,11 @@ namespace MiniStore
                         ss.Append("                </div>" + "\n\r");
                         ss.Append("<div class=\"MonBoxR\">");
                         ss.Append("                <span class=\"input-number-decrement\" onclick='minus(" + dw["IDNo"].ToString() + ")'>–</span>" + "\n\r");
-                        ss.Append("                <input id=\"Num_" + dw["IDNo"].ToString() + "\" name=\"\" type=\"number\" value=\"" + dw["carbaby"].ToString() + "\" class=\"input-number\"  disabled=\"disabled\">" + "\n\r");
+                        ss.Append("                <input id=\"Num_" + dw["IDNo"].ToString() + "\" name=\"\" type=\"number\" value=\"" + dw["carbaby"].ToString() + "\" class=\"input-number\"  disabled=\"disabled\"/>" + "\n\r");
                         ss.Append("                <span class=\"input-number-increment\" onclick='plus(" + dw["IDNo"].ToString() + "," + dw["qty"].ToString() + ")'>+ </span>" + "\n\r");
                         ss.Append("</div>");
                         ss.Append("            </div>" + "\n\r");
-                        ss.Append("            </span>" + "\n\r");
+                       // ss.Append("            </span>" + "\n\r");
                         ss.Append("        </div> " + "\n\r");
                      }
                 }
