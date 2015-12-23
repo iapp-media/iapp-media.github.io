@@ -10,7 +10,7 @@
 /* line 23, sass/checkbox.sass */
 .radioboxUI input[type="radio"]:checked + label {
   background: #aaa;
-  color: #444;
+  color: #f0f0f0;
 }
 /* line 26, sass/checkbox.sass */
 .radioboxUI label {
@@ -23,7 +23,7 @@
   padding: 0.25em 1em;
   z-index: 20;
   text-align: center;
-  color: #f0f0f0;
+  color: #aaa;
 }
 
 /* line 39, sass/checkbox.sass */
