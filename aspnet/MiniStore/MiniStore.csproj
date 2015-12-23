@@ -70,6 +70,7 @@
     <Content Include="CreditCard.aspx" />
     <Content Include="CreditCard_Finish.aspx" />
     <Content Include="css\bootstrap-datetimepicker.min.css" />
+    <Content Include="css\checkbox.css" />
     <Content Include="css\frontpage.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="css\swiper.min.css" />

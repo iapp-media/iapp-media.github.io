@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\checkbox.css" />
     <Content Include="css\cropper.css" />
     <Content Include="css\mobileEditor.css" />
     <Content Include="css\promptumenu.css" />

@@ -132,10 +132,11 @@ a:active {
     display: block;
 }
 
-.SinCheck input[type="checkbox"] {
-    float: right;
-    border: 1px solid #7d7d7d;
+.SinCheck {
+    position:relative;
+    outline:1px solid #f00;
 }
+
 
 .QMargin {
     margin: 12px 0;
@@ -2008,11 +2009,18 @@ a.iframe-info.cboxElement {
     margin: 0;
 }
 
-.insidecare label {
+.insidecare label,
+.SinCheck p {
     color: #838485;
     font-size: 120%;
     font-weight: inherit;
 }
+.SinCheck.apple_checkbox input + label {
+    position:absolute;
+    top:0;
+    right:0;
+}
+    
 
 .sendadress input,
 .sendadress textarea {
