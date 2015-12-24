@@ -39,7 +39,7 @@
             <div id="FastBox">
                 <asp:Literal ID="Layout_fast" runat="server"  visible="false"></asp:Literal>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate> 
-                <asp:Repeater ID="RPFast_Drink" runat="server" OnItemCommand="RPFast_Drink_ItemCommand">
+                <asp:Repeater ID="RPFast_Drink" runat="server" OnItemCommand="RPFast_Drink_ItemCommand" OnItemDataBound="RPFast_Drink_ItemDataBound">
                     <ItemTemplate>
                        <div class="details col-xs-12">
                         <div class="DTimg">
@@ -53,9 +53,7 @@
                             </div>
                             <%--<div class="clearfix"></div>--%>
                             <div class="addbox">
-                               <%-- <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal>
-                                <asp:Button ID="BTminus" runat="server" Text="–"  CssClass="input-number-decrement" CommandName="CNminus"/>
-                                <asp:TextBox ID="ItemNum" runat="server"   Text='<%# Eval("carbaby") %>' CssClass="input-number"></asp:TextBox>--%>
+                              <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal> 
                                 <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
                                 <div class="clearfix"></div>
 
@@ -65,27 +63,15 @@
                              
                             </div> 
                              <div class="radioboxUI"> 
-                                <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
-                                    <asp:ListItem>M</asp:ListItem>
-                                    <asp:ListItem>L</asp:ListItem> 
+                                <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>
                             <div class="radioboxUI"> 
-                                <asp:RadioButtonList ID="RB_DrinkIce" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
-                                    <asp:ListItem>熱飲</asp:ListItem>
-                                    <asp:ListItem>正常</asp:ListItem>
-                                    <asp:ListItem>少冰</asp:ListItem>
-                                    <asp:ListItem>多冰</asp:ListItem>
-                                    <asp:ListItem>去冰</asp:ListItem> 
+                                <asp:RadioButtonList ID="RB_DrinkIce" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>   
                             <div class="radioboxUI"> 
-                                <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" >
-                                <asp:ListItem>全糖</asp:ListItem>
-                                <asp:ListItem>少糖</asp:ListItem>
-                                <asp:ListItem>半糖</asp:ListItem>
-                                <asp:ListItem>微糖</asp:ListItem>
-                                <asp:ListItem>無糖</asp:ListItem> 
+                                <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>
                         </div>

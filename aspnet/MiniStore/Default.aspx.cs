@@ -215,58 +215,90 @@ namespace MiniStore
         {
             Response.Redirect("Buy_Ctrl.aspx?sn=" + Request.QueryString["SN"] + "");
         }
-
+        void bubbleSort(int[] list)
+        {
+            int n = list.Length;
+            int temp;
+            int Flag = 1; //旗標
+            int i;
+            for (i = 1; i <= n - 1 && Flag == 1; i++)
+            {    // 外層迴圈控制比較回數
+                Flag = 0;
+                for (int j = 1; j <= n - i; j++)
+                {  // 內層迴圈控制每回比較次數            
+                    if (list[j] < list[j - 1])
+                    {  // 比較鄰近兩個物件，右邊比左邊小時就互換。	       
+                        temp = list[j];
+                        list[j] = list[j - 1];
+                        list[j - 1] = temp;
+                        Flag = 1;
+                    }
+                }
+            }
+        } 
         protected void RPFast_Drink_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                
-                Literal ItemIDNo = (Literal)e.Item.FindControl("ItemIDNo"); 
-                Button BTminus = (Button)e.Item.FindControl("BTminus");
-                TextBox ItemNum = (TextBox)e.Item.FindControl("ItemNum");
-                if (e.CommandName == "CNminus")
-                {
-                    Main.ParaClear();
-                    Main.ParaAdd("@PID", Main.Cint2(ItemIDNo.Text), System.Data.SqlDbType.Int);
-                    Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
-                    int c = Main.NonQuery("if (select qty from ShoppingCart where Product_ID=@PID and user_id=@UID )=1 " +
-                                          "delete ShoppingCart where  Product_ID=@PID and user_id=@UID " +
-                                          "else Update ShoppingCart set qty=qty-1 where Product_ID=@PID and user_id=@UID  ");
-                    if (c > 0)
-                    {
-                        ItemNum.Text = (Main.Cint2(ItemNum.Text) - 1).ToString();
-                        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "ajaxCarItem()", true); 
-                    }
-                    else
-                    {
-                        //Response.Write("err");
-                    } 
-                }
+
+                Literal ItemIDNo = (Literal)e.Item.FindControl("ItemIDNo");
+                RadioButtonList RB1 = (RadioButtonList)e.Item.FindControl("RB_DrinkSize");
+                RadioButtonList RB2 = (RadioButtonList)e.Item.FindControl("RB_DrinkIce");
+                RadioButtonList RB3 = (RadioButtonList)e.Item.FindControl("RB_DrinkSugar");
 
                 if (e.CommandName == "CNplus")
                 {
-                    Main.ParaClear();
-                    Main.ParaAdd("@PID", Main.Cint2(ItemIDNo.Text), System.Data.SqlDbType.Int);
-                    Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
-                    int c = Main.NonQuery("if not exists ( select '1' from ShoppingCart where Product_ID=@PID and user_id=@UID) " +
-                                          " insert into ShoppingCart (Store_ID,Product_ID,User_ID,qty) values " +
-                                          "((select Store_ID from Product where idno=@PID),@PID,@UID,1) " +
-                                          "else Update ShoppingCart set qty=qty+1 where Product_ID=@PID and user_id=@UID ");
-                    if (c > 0)
+                    if (!string.IsNullOrEmpty(RB1.SelectedValue) && !string.IsNullOrEmpty(RB2.SelectedValue) && !string.IsNullOrEmpty(RB3.SelectedValue))
                     {
-                        ItemNum.Text = (Main.Cint2(ItemNum.Text) + 1).ToString();
-                        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "ajaxCarItem();", true);
-                    }
-                    else
-                    {
-                        //Response.Write("err");
-                    }
-                   // System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('CNplus" + ItemIDNo.Text + "');", true);
+                        Main.ParaClear();
+                        Main.ParaAdd("@PID", Main.Cint2(ItemIDNo.Text), SqlDbType.Int);
+                        Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+                        string SPEC_Group = "";
+                        int[] RBlist = new int[3];
 
+                        RBlist[0] = Main.Cint2(RB1.SelectedValue.ToString());
+                        RBlist[1] = Main.Cint2(RB2.SelectedValue.ToString());
+                        RBlist[2] = Main.Cint2(RB3.SelectedValue.ToString());
+                        bubbleSort(RBlist);
+                        for (int n = 0; n < RBlist.Length; n++)
+                        {
+                            SPEC_Group += "," + RBlist[n].ToString();
+                        }
+                        Main.ParaAdd("@SPEC_Group", SPEC_Group, SqlDbType.NVarChar);
+                        int c = Main.NonQuery("if not exists ( select '1' from ShoppingCart where Product_ID=@PID and user_id=@UID and SPEC_Group=@SPEC_Group) " +
+                                              " insert into ShoppingCart (Store_ID,Product_ID,User_ID,qty,SPEC_Group) values " +
+                                              "((select Store_ID from Product where idno=@PID),@PID,@UID,1,@SPEC_Group) " +
+                                              "else Update ShoppingCart set qty=qty+1 where Product_ID=@PID and user_id=@UID and SPEC_Group=@SPEC_Group ");
+                        if (c > 0)
+                        {
+                            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "ajaxCarItem();", true);
+                        }
+                        else
+                        {
+                            //Response.Write("err");
+                        }
+                        // System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('CNplus" + ItemIDNo.Text + "');", true);
+
+                    }
+                    else {
+                        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇甜度冰塊');", true);
+                    }
                 }
+            }
+        }
+
+        protected void RPFast_Drink_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                RadioButtonList RB_DrinkSize = (RadioButtonList)e.Item.FindControl("RB_DrinkSize");
+                RadioButtonList RB_DrinkIce = (RadioButtonList)e.Item.FindControl("RB_DrinkIce");
+                RadioButtonList RB_DrinkSugar = (RadioButtonList)e.Item.FindControl("RB_DrinkSugar");
+                Main.FillDDP(RB_DrinkSize, "select IDNo,Item from Product_SPEC_Item where SPEC_ID=1 order by Sort", "Item", "IDNo");
+                Main.FillDDP(RB_DrinkIce, "select IDNo,Item from Product_SPEC_Item where SPEC_ID=2 order by Sort", "Item", "IDNo");
+                Main.FillDDP(RB_DrinkSugar, "select IDNo,Item from Product_SPEC_Item where SPEC_ID=3 order by Sort", "Item", "IDNo");
 
             }
-
         }
     }
 }
