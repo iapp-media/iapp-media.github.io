@@ -81,9 +81,9 @@
                             <p class="BoxLeft">付款方式</p>
                         </div>
                     </div>
-                    <div class="col-xs-8 SinCheck apple_checkbox">
-                        <p>面交</p>
-                        <p>銀行轉帳</p>
+                    <div class="col-xs-8 SinCheck">
+                        <%--<p>面交</p>
+                        <p>銀行轉帳</p>--%>
                         <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                         </asp:CheckBoxList>
                     </div>
