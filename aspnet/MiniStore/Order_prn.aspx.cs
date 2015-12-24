@@ -18,6 +18,10 @@ namespace MiniStore
 
             if (!IsPostBack)
             {
+                if (Session["Order_entry"]==null)
+                {
+                    Response.Redirect("Order_history.aspx?SN=" + Request.QueryString["SN"] + "");
+                }
                 SD1.SelectParameters.Clear();
                 SD2.SelectParameters.Clear();
                 SD4.SelectParameters.Clear();
@@ -49,8 +53,8 @@ namespace MiniStore
 
                 L2.Text = " Select  Contact_Name,TEL,Addr from orders  where IDNo=@IDNo";
 
-                L4.Text = " Select Item_ID,sum(qty) qty,SUM(Total) total,(select product_name from Product where IDNo=Item_ID) name " +
-                          "from Order_Content  where Order_ID=@IDNo group by Item_ID";
+                L4.Text = " Select Item_ID,sum(qty) qty,SUM(Total) total,(select product_name from Product where IDNo=Item_ID) name,SPEC_Group " +
+                          "from Order_Content  where Order_ID=@IDNo group by Item_ID,SPEC_Group";
 
                 Main.ParaClear();
                 Main.ParaAdd("@IDNo", Main.Cint2(Session["Order_entry"].ToString()), SqlDbType.Int);
@@ -76,6 +80,22 @@ namespace MiniStore
             SD4.ConnectionString = Main.ConnStr;
             RP4.DataSourceID = SD4.ID;
 
+        }
+        public string ShowName(object PName, object SPECids)
+        {
+            string a = "";
+            if (SPECids.ToString().Length > 0)
+            {
+                DataTable DT = Main.GetDataSetNoNull("Select Item from Product_SPEC_Item Where IDNo in ('" + SPECids.ToString().Substring(1).Replace(",", "','") + "')");
+                if (DT.Rows.Count > 0)
+                {
+                    for (int i = 0; i < DT.Rows.Count; i++)
+                    {
+                        a += "(" + DT.Rows[i]["Item"].ToString() + ")";
+                    }
+                }
+            }
+            return PName.ToString() + a;
         }
 
         protected void BTsend_Click(object sender, EventArgs e)

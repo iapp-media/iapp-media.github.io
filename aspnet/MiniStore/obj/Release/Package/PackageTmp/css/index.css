@@ -11,6 +11,7 @@
         background-size: cover;
         height: 100%;
     }
+
     
     .Mapbox {
         position: fixed;
@@ -1083,9 +1084,13 @@
         line-height: 40px;
         user-select: none;
     }
-    
+.addbox {
+    width:50%;
+    float:left;
+}
     .input-number-decrement,
-    .input-number-increment {
+    .input-number-increment,
+    .addbox .input-number-decrement {
         display: inline-block;
         width: 30%;
         background: #ccc;
@@ -1095,6 +1100,14 @@
         cursor: pointer;
         font-size: 20px;
         float: left;
+    }
+    .addbox .input-number-decrement {
+        width: 50px;
+        float: right;
+        border-radius: 4px;
+         -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -o-border-radius: 4px;
     }
     
     .input-number-decrement:active,
@@ -2467,7 +2480,8 @@
     }
     
     #FastBox .MonBoxL,
-    #FastBox .MonBoxR {
+    #FastBox .MonBoxR,
+    #FastBox .radioboxUI {
         font-size: 18px;
         width: 50%;
         float: left;
@@ -2578,6 +2592,36 @@
     .buyCtrlMoney2 p {
         font-size:12px;
     }
+    #FastBox  .radioboxUI {
+    float:none;
+    width:auto;
+}
+#FastBox .radioboxUI label {
+    margin-right:10px;
+    margin-bottom:10px;
+}
+    /*.MonBoxR1 input {
+        display: none;
+    }
+    
+    .MonBoxR1 label {
+        background: #eee;
+        border-radius: .25em;
+        cursor: pointer;
+        display: block;
+        margin-bottom: .125em;
+        padding: .25em 1em;
+        z-index: 20;
+       	text-align: center;
+       	color:#444;
+       	display:inline-block;
+               margin-right: 9px;
+    margin-bottom: 8px;
+    }
+    .MonBoxR1 input[type="radio"]:checked + label {
+    	background: #aaa;
+    	color:#f0f0f0;
+    }*/
     
     @media only screen and (max-width:767px) {
         .container-fluid {

@@ -33,7 +33,7 @@ namespace MiniStore
                 Main.ParaAdd("@Store_NID", Request.QueryString["SN"], SqlDbType.NVarChar);
                 SID = Main.Scalar("select IDNo from store where Store_NID=@Store_NID");
                 GetCar();
-           
+
             }
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
@@ -48,18 +48,31 @@ namespace MiniStore
             else
                 return "";
         }
-
+        public string ShowName(object PName, object SPECids)
+        {
+            string a = "";
+            if (SPECids.ToString().Length > 0)
+            {
+                DataTable DT = Main.GetDataSetNoNull("Select Item from Product_SPEC_Item Where IDNo in ('" + SPECids.ToString().Substring(1).Replace(",", "','") + "')");
+                if (DT.Rows.Count > 0)
+                {
+                    for (int i = 0; i < DT.Rows.Count; i++)
+                    {
+                        a += "(" + DT.Rows[i]["Item"].ToString() + ")";
+                    }
+                }
+            }
+            return PName.ToString() + a;
+        }
         void GetCar()
         {
             SD1.SelectParameters.Clear();
             SD1.SelectParameters.Add("user_id", Comm.User_ID().ToString());
             SD1.SelectParameters.Add("store_id", SID);
 
-            L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total  " +
+            L.Text = "select a.idno carID, b.idno ItemID,b.Product_Name Name,a.qty AMT,b.Price,a.qty*b.Price as total , SPEC_Group  " +
                 " from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo where a.user_id=@user_id and a.store_id=@store_id ";
-            //Main.WriteLog(SID);
-            //Main.WriteLog(Comm.User_ID().ToString());
-            //Main.WriteLog(L.Text);
+
             SD1.ConnectionString = Main.ConnStr;
             SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
@@ -75,7 +88,7 @@ namespace MiniStore
                   "select sum(a.qty) * b.Price total from ShoppingCart a inner join Product b on a.Product_ID=b.IDNo " +
                   "  where a.user_id=@u_id and a.store_id=@SID  group by  b.IDNo,b.Price ) a ";
             TB_Paysum.Text = Main.Scalar(str);
-
+            LTotal.Text = TB_Paysum.Text;
             DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID =@SID");
             if (DT.Rows.Count > 0)
             {
@@ -199,7 +212,7 @@ namespace MiniStore
             strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
             if (ChBonus.Checked == true)
             {
-                int c = 0; 
+                int c = 0;
                 Main.ParaClear();
                 Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
                 Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
@@ -226,15 +239,15 @@ namespace MiniStore
                     Main.ParaAdd("@Memo", "點數抵扣", SqlDbType.NVarChar);
                     c = Main.NonQuery("Insert into Order_Fee (Order_ID,Order_No,Item_ID,qty,Price,Total,Item_type,Memo) values " +
                                   "(@Order_ID,@Order_No,@Item_ID,@qty,@Price,@Total,@Item_type,@Memo)");
-                  if (c > 0)
-                  {
-                      Main.ParaClear();
-                      Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
-                      Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
-                      Main.ParaAdd("@minusPoint", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), SqlDbType.Int);
-                      Main.NonQuery("update Bonuspoint set Point=Point-@minusPoint where Store_ID=@Store_ID and User_ID=@User_ID");
-                  }
-                } 
+                    if (c > 0)
+                    {
+                        Main.ParaClear();
+                        Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+                        Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
+                        Main.ParaAdd("@minusPoint", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), SqlDbType.Int);
+                        Main.NonQuery("update Bonuspoint set Point=Point-@minusPoint where Store_ID=@Store_ID and User_ID=@User_ID");
+                    }
+                }
             }
 
             if (DL_Payment.SelectedValue.ToString() == "5")
@@ -245,7 +258,9 @@ namespace MiniStore
             }
             else
             {
-                Response.Write("<script>alert('結帳成功');window.open('Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "','_self');</script>");
+                Session["Order_entry"] = strOrderID;
+                System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('結帳成功');window.open('Order_prn.aspx?SN=" + Request.QueryString["SN"] + "','_self');", true);
+ 
             }
             //轉型一直失敗 暫時用跳頁
             //
@@ -264,22 +279,25 @@ namespace MiniStore
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                Literal BTminus = (Literal)e.Item.FindControl("L_BTminus");
-                Literal BTplus = (Literal)e.Item.FindControl("L_BTplus");
-                Label P_IDNo = (Label)e.Item.FindControl("Lb_Item");
-                Literal BTDELE = (Literal)e.Item.FindControl("L_DELE");
-                Label CarBabyID = (Label)e.Item.FindControl("Lb_Carbaby");
 
-                BTminus.Text = "<span class='input-number-decrement' onclick='minus(" + e.Item.ItemIndex + ",2," + CarBabyID.Text + ")'>–</span>";
 
-                //數量有要卡嗎?
-                //plus(商品數量上限,RP1項,動作ADD,CarID)
-                BTplus.Text = "<span class='input-number-increment' onclick='plus(" +
-                    Main.Scalar("select qty from product where idno='" + P_IDNo.Text + "'") + "," + e.Item.ItemIndex + ",1," + CarBabyID.Text + ")'>+ </span>";
+                //舊寫法 -- 
+                //Literal BTminus = (Literal)e.Item.FindControl("L_BTminus");
+                //Literal BTplus = (Literal)e.Item.FindControl("L_BTplus");
+                //Label P_IDNo = (Label)e.Item.FindControl("Lb_Item");
+                //Literal BTDELE = (Literal)e.Item.FindControl("L_DELE");
+                //Label CarBabyID = (Label)e.Item.FindControl("Lb_Carbaby");
 
-                //第幾項,1,carID,Pid (carID&Pid 都對ajax才刪)
-                BTDELE.Text = "<span class='glyphicon glyphicon-remove cancelTransaction' style='cursor: pointer;' aria-hidden='true' " +
-                    " onclick='putDELE(" + e.Item.ItemIndex + ",0," + CarBabyID.Text + "," + P_IDNo.Text + ")'></span>";
+                //BTminus.Text = "<span class='input-number-decrement' onclick='minus(" + e.Item.ItemIndex + ",2," + CarBabyID.Text + ")'>–</span>";
+
+                ////數量有要卡嗎?
+                ////plus(商品數量上限,RP1項,動作ADD,CarID)
+                //BTplus.Text = "<span class='input-number-increment' onclick='plus(" +
+                //    Main.Scalar("select qty from product where idno='" + P_IDNo.Text + "'") + "," + e.Item.ItemIndex + ",1," + CarBabyID.Text + ")'>+ </span>";
+
+                ////第幾項,1,carID,Pid (carID&Pid 都對ajax才刪)
+                //BTDELE.Text = "<span class='glyphicon glyphicon-remove cancelTransaction' style='cursor: pointer;' aria-hidden='true' " +
+                //    " onclick='putDELE(" + e.Item.ItemIndex + ",0," + CarBabyID.Text + "," + P_IDNo.Text + ")'></span>";
 
             }
         }
@@ -287,6 +305,94 @@ namespace MiniStore
         protected void SD1_Selected(object sender, SqlDataSourceStatusEventArgs e)
         {
             LCount.Text = e.AffectedRows.ToString();
+        }
+
+        protected void RP1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Literal LIDNo = (Literal)e.Item.FindControl("LIDNo");
+                Literal LITotal = (Literal)e.Item.FindControl("LITotal");
+                if (e.CommandName == "CNplus")
+                {
+
+                    Main.ParaClear();
+                    Main.ParaAdd("@IDNo", Main.Cint2(LIDNo.Text), SqlDbType.Int);
+                    Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+                    int c = Main.NonQuery("Update ShoppingCart set qty=qty+1 where IDNo=@IDNo and user_id=@UID");
+                    if (c > 0)
+                    {
+                        Main.ParaClear();
+                        Main.ParaAdd("@SNID", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                        Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                        TB_Paysum.Text = Main.Scalar("select sum(a.qty*b.Price) from ( " +
+                                        "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+                                        ") a inner join Product b on a.Product_ID=b.IDNo");
+
+                        LITotal.Text = Main.Scalar(" Select (select Price from Product where IDNo=ShoppingCart.Product_ID)*qty as ItemTotal from ShoppingCart where IDNo=@IDNo");
+                        LTotal.Text = TB_Paysum.Text;
+                    }
+                }
+                if (e.CommandName == "CNminus")
+                {
+
+                    Main.ParaClear();
+                    Main.ParaAdd("@IDNo", Main.Cint2(LIDNo.Text), SqlDbType.Int);
+                    Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+                    int c = Main.NonQuery("if exists(select 1 from ShoppingCart where qty>1 and IDNo=@IDNo) Update ShoppingCart set qty=qty-1 where IDNo=@IDNo and user_id=@UID");
+                    if (c > 0)
+                    {
+                        Main.ParaClear();
+                        Main.ParaAdd("@SNID", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                        Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                        TB_Paysum.Text = Main.Scalar("select sum(a.qty*b.Price) from ( " +
+                                        "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+                                        ") a inner join Product b on a.Product_ID=b.IDNo");
+                        LITotal.Text = Main.Scalar(" Select (select Price from Product where IDNo=ShoppingCart.Product_ID)*qty as ItemTotal from ShoppingCart where IDNo=@IDNo");
+                        LTotal.Text = TB_Paysum.Text;
+                    }
+                }
+                if (e.CommandName == "CNDEL")
+                {
+                    Main.ParaClear();
+                    Main.ParaAdd("@IDNo", Main.Cint2(LIDNo.Text), SqlDbType.Int);
+                    Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), SqlDbType.Int);
+                    int c = Main.NonQuery("Delete ShoppingCart where IDNo=@IDNo and user_id=@UID ");
+                    if (c > 0)
+                    {
+                        Main.ParaClear();
+                        Main.ParaAdd("@SNID", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                        Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                        TB_Paysum.Text = Main.Scalar("select sum(a.qty*b.Price) from ( " +
+                            "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+                            ") a inner join Product b on a.Product_ID=b.IDNo");
+                        LTotal.Text = TB_Paysum.Text;
+                    }
+                }
+            }
+        }
+
+        protected void ChBonus_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBonus.Checked == true)
+            {
+                BonusDiscount.Visible = true;
+                Main.ParaClear();
+                Main.ParaAdd("@SNID", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                LTotal.Text = Main.Scalar("select p1-p2 from (select sum(a.qty*b.Price) p1 from ( " +
+                    "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+                    ") a inner join Product b on a.Product_ID=b.IDNo) t1 ,(Select Discount*(Point/Bpoint) p2 from Bonuspoint a inner join Store_bonus b on a.Store_ID=b.Store_ID where a. Store_ID in (select IDNo from Store where Store_NID=@SNID) and a.User_ID=@UID) t2");
+             }
+            else {
+                BonusDiscount.Visible = false;
+                Main.ParaClear();
+                Main.ParaAdd("@SNID", Request.QueryString["SN"].ToString(), System.Data.SqlDbType.NVarChar);
+                Main.ParaAdd("@UID", Main.Cint2(Comm.User_ID()), System.Data.SqlDbType.Int);
+                LTotal.Text = Main.Scalar("select sum(a.qty*b.Price) from ( " +
+                    "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
+                    ") a inner join Product b on a.Product_ID=b.IDNo");
+            }
         }
     }
 }

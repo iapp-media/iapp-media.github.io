@@ -19,7 +19,7 @@
                                 <img src="<%# ShowImg(Eval("Item_ID")) %>" alt="Alternate Text" class=" imgH" />
                             </div>
                             <div class="col-xs-7 col-sm-9">
-                                <h3><%# Eval("Name") %></h3>
+                                <h3><%# ShowName(Eval("Name"),Eval("SPEC_Group")) %></h3>
                                 <div class="MonBox">
                                     <p>價錢</p>
                                     <span runat="server" id="Dtotal" class="TBC">$<%# Eval("Total","{0:0.####}") %></span>
