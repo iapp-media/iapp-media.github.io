@@ -29,8 +29,8 @@ namespace MiniStore
                     if (SID != "")
                     {
                         Main.ParaAdd("@SID", Main.Cint2(SID), SqlDbType.Int);
-                          ShowData(Main.Scalar("select layout from store_info where store_id=@SID")); 
-                       
+                        ShowData(Main.Scalar("select layout from store_info where store_id=@SID"));
+
                         LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                             " <img class=\"back-top\" src=\"img/cart.png\" /><span/><label id=\"IconCar\">" +
                             Main.Scalar("Select case when COUNT(1) > 99 then '99+' else Convert(varchar,COUNT(1) ) end from ShoppingCart where User_ID='" + Comm.User_ID() + "' and Store_ID in ( select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')") +
@@ -77,7 +77,7 @@ namespace MiniStore
             {
 
 
-                str = "select a.IDNo,Product_Name,Price,b.FilePath,a.qty,isnull(c.qty,0) as carbaby ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK" +
+                str = "select a.IDNo,Product_Name,Price,b.FilePath,a.qty,isnull(c.qty,0) as carbaby ,(Select Count(1) from Product_Like where Product_ID=a.IDNo and User_ID=@MyID) as iLK ,'" + Request.QueryString["SN"] + "' as SN" +
     " from Product a inner join Product_Img b on a.IDNo=b.Product_ID " +
     "  left join ShoppingCart c on c.Product_ID=a.IDNo and c.User_ID=@MyID where b.Num=1 and a.store_id=@SID ";
 
@@ -235,7 +235,7 @@ namespace MiniStore
                     }
                 }
             }
-        } 
+        }
         protected void RPFast_Drink_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -271,7 +271,7 @@ namespace MiniStore
                                               "else Update ShoppingCart set qty=qty+1 where Product_ID=@PID and user_id=@UID and SPEC_Group=@SPEC_Group ");
                         if (c > 0)
                         {
-                            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "ajaxCarItem();", true);
+                            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "ajaxCarItem();alert('已為您加入購物車！謝謝～');", true);
                         }
                         else
                         {
@@ -280,8 +280,14 @@ namespace MiniStore
                         // System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('CNplus" + ItemIDNo.Text + "');", true);
 
                     }
-                    else {
-                        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請選擇甜度冰塊');", true);
+                    else
+                    {
+                        string tmp = "";
+                        if (string.IsNullOrEmpty(RB1.SelectedValue)) { tmp += "，大小"; }
+                        if (string.IsNullOrEmpty(RB2.SelectedValue)) { tmp += "，冰塊"; }
+                        if (string.IsNullOrEmpty(RB3.SelectedValue)) { tmp += "，甜度"; }
+
+                        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請完整選擇" + tmp.Substring(1) + "！');", true);
                     }
                 }
             }

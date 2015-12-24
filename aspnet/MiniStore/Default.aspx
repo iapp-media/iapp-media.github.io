@@ -43,7 +43,7 @@
                     <ItemTemplate>
                        <div class="details col-xs-12">
                         <div class="DTimg">
-                            <a href='Buy_detail.aspx?entry=<%# Eval("IDNo") %>&SN=OfficACC'>
+                            <a href='Buy_detail.aspx?entry=<%# Eval("IDNo") %>&SN=<%# Eval("SN") %>'>
                                 <img class="productSize imgH" src='<%# Eval("FilePath") %>' /></a>
                         </div>
                         <div class="Detailsmid">

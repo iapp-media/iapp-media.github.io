@@ -1527,5 +1527,10 @@ public class CommTool: System.Web.UI.Page
         char[] aa = SS.ToCharArray();
         return aa[num].ToString();
     }
+    public string Bonus_Calculation (int a)
+    {
+        JDB Main = new JDB();
+        return a.ToString();
+    }
 
 }
