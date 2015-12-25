@@ -18,7 +18,7 @@ namespace MiniStore
 
             if (!IsPostBack)
             {
-                if (Session["Order_entry"]==null)
+                if (Session["Order_entry"] == null)
                 {
                     Response.Redirect("Order_history.aspx?SN=" + Request.QueryString["SN"] + "");
                 }

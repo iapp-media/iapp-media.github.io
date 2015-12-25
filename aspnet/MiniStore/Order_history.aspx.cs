@@ -76,16 +76,25 @@ namespace MiniStore
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 Literal LIDNO = (Literal)e.Item.FindControl("LIDNO");
-                if (Main.Scalar("select count(1) from Orders where idno=" + LIDNO.Text + " and Payment_ID='5' and status=1") != "0")
+                if (Main.Scalar("select sum(1) from Orders where idno=" + LIDNO.Text + " and Payment_ID='5' ") == "1")
                 {
-                    Session["OrderID"] = LIDNO.Text;
-                    Response.Redirect("Buy_CtrlR.aspx?SN=" + Request.QueryString["SN"]);
+                    if (Main.Scalar("select count(1) from Orders where idno=" + LIDNO.Text + " and Payment_ID='5' and status=1") != "1")
+                    {
+                        Session["OrderID"] = LIDNO.Text;
+                        Response.Redirect("Buy_CtrlR.aspx?SN=" + Request.QueryString["SN"]);
+                    }
+                    else
+                    {
+                        Session["Order_entry"] = LIDNO.Text;
+                        Response.Redirect("Order_prn.aspx?SN=" + Request.QueryString["SN"]);
+                    }
                 }
                 else
                 {
                     Session["Order_entry"] = LIDNO.Text;
                     Response.Redirect("Order_prn.aspx?SN=" + Request.QueryString["SN"]);
                 }
+                
                  
 
             

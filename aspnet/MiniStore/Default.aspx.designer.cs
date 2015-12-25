@@ -40,6 +40,24 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.Literal LCarLink;
         
         /// <summary>
+        /// SD 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SD;
+        
+        /// <summary>
+        /// LSD 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LSD;
+        
+        /// <summary>
         /// Basic 控制項。
         /// </summary>
         /// <remarks>
@@ -58,31 +76,13 @@ namespace MiniStore {
         protected global::System.Web.UI.WebControls.Literal LData;
         
         /// <summary>
-        /// SD 控制項。
+        /// Fast_drink 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SD;
-        
-        /// <summary>
-        /// Fast 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Fast;
-        
-        /// <summary>
-        /// Layout_fast 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Layout_fast;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Fast_drink;
         
         /// <summary>
         /// UpdatePanel1 控制項。
@@ -110,5 +110,32 @@ namespace MiniStore {
         /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BTFast;
+        
+        /// <summary>
+        /// Fast 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Fast;
+        
+        /// <summary>
+        /// Layout_fast 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Layout_fast;
+        
+        /// <summary>
+        /// Button1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

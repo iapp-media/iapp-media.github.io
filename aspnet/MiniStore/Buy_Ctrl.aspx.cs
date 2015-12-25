@@ -210,54 +210,62 @@ namespace MiniStore
             object OrderID = cmd.ExecuteScalar();
 
             strOrderID = Main.Scalar("select max(idno) from orders where Customer_ID ='" + Comm.User_ID() + "' ");
-            if (ChBonus.Checked == true)
-            {
-                int c = 0;
-                Main.ParaClear();
-                Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
-                Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
-                Main.ParaAdd("@Bpoint_ID", Main.Scalar("select IDNo from Bonuspoint where User_ID=@User_ID and Store_ID=@Store_ID"), SqlDbType.NVarChar);
-                Main.ParaAdd("@Point", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(", "").Replace("點)", "")), SqlDbType.Int);
-                //先抓頁面上的點數扣點 //防範F12之後要想 
-                Main.ParaAdd("@Memo", "購物扣點", SqlDbType.NVarChar);
+            //if (ChBonus.Checked == true)
+            //{
+            //    int c = 0;
+            //    Main.ParaClear();
+            //    Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+            //    Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
+            //    Main.ParaAdd("@Bpoint_ID", Main.Scalar("select IDNo from Bonuspoint where User_ID=@User_ID and Store_ID=@Store_ID"), SqlDbType.NVarChar);
+            //    Main.ParaAdd("@Point", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(", "").Replace("點)", "")), SqlDbType.Int);
+            //    //先抓頁面上的點數扣點 //防範F12之後要想 
+            //    Main.ParaAdd("@Memo", "購物扣點", SqlDbType.NVarChar);
 
-                c = Main.NonQuery("Insert into Bonuspoint_log (Bpoint_ID, Point, Memo, CreatDate) values " +
-                                   "(@Bpoint_ID, @Point, @Memo, getdate())");
+            //    c = Main.NonQuery("Insert into Bonuspoint_log (Bpoint_ID, Point, Memo, CreatDate) values " +
+            //                       "(@Bpoint_ID, @Point, @Memo, getdate())");
 
-                if (c > 0)
-                {
-                    c = 0;
-                    Main.ParaClear();
-                    Main.ParaAdd("@Order_ID", strOrderID, SqlDbType.NVarChar);
-                    Main.ParaAdd("@Order_No", Main.Scalar("select order_no from Orders where idno=@Order_ID"), SqlDbType.NVarChar);
-                    Main.ParaAdd("@Item_ID", Main.Scalar("Select IDNo from Bonuspoint_log order by CreatDate desc"), SqlDbType.NVarChar); //點數 item_ID 對hist記錄IDNO
-                    Main.ParaAdd("@qty", 1, SqlDbType.Int); //點數
-                    //先抓頁面上的點數折扣金額 //防範F12之後要想 
-                    Main.ParaAdd("@Price", Main.Cint2(LBprice.Text), SqlDbType.Int);
-                    Main.ParaAdd("@Total", Main.Cint2(LBprice.Text), SqlDbType.Int);
-                    Main.ParaAdd("@Item_type", "Bonus", SqlDbType.NVarChar);
-                    Main.ParaAdd("@Memo", "點數抵扣", SqlDbType.NVarChar);
-                    c = Main.NonQuery("Insert into Order_Fee (Order_ID,Order_No,Item_ID,qty,Price,Total,Item_type,Memo) values " +
-                                  "(@Order_ID,@Order_No,@Item_ID,@qty,@Price,@Total,@Item_type,@Memo)");
-                    if (c > 0)
-                    {
-                        Main.ParaClear();
-                        Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
-                        Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
-                        Main.ParaAdd("@minusPoint", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), SqlDbType.Int);
-                        Main.NonQuery("update Bonuspoint set Point=Point-@minusPoint where Store_ID=@Store_ID and User_ID=@User_ID");
-                    }
-                }
-            }
+            //    if (c > 0)
+            //    {
+            //        c = 0;
+            //        Main.ParaClear();
+            //        Main.ParaAdd("@Order_ID", strOrderID, SqlDbType.NVarChar);
+            //        Main.ParaAdd("@Order_No", Main.Scalar("select order_no from Orders where idno=@Order_ID"), SqlDbType.NVarChar);
+            //        Main.ParaAdd("@Item_ID", Main.Scalar("Select IDNo from Bonuspoint_log order by CreatDate desc"), SqlDbType.NVarChar); //點數 item_ID 對hist記錄IDNO
+            //        Main.ParaAdd("@qty", 1, SqlDbType.Int); //點數
+            //        //先抓頁面上的點數折扣金額 //防範F12之後要想 
+            //        Main.ParaAdd("@Price", Main.Cint2(LBprice.Text), SqlDbType.Int);
+            //        Main.ParaAdd("@Total", Main.Cint2(LBprice.Text), SqlDbType.Int);
+            //        Main.ParaAdd("@Item_type", "Bonus", SqlDbType.NVarChar);
+            //        Main.ParaAdd("@Memo", "點數抵扣", SqlDbType.NVarChar);
+            //        c = Main.NonQuery("Insert into Order_Fee (Order_ID,Order_No,Item_ID,qty,Price,Total,Item_type,Memo) values " +
+            //                      "(@Order_ID,@Order_No,@Item_ID,@qty,@Price,@Total,@Item_type,@Memo)");
+            //        if (c > 0)
+            //        {
+            //            Main.ParaClear();
+            //            Main.ParaAdd("@User_ID", Comm.User_ID(), SqlDbType.Int);
+            //            Main.ParaAdd("@Store_ID", Main.Cint2(SID), SqlDbType.Int);
+            //            Main.ParaAdd("@minusPoint", Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), SqlDbType.Int);
+            //            Main.NonQuery("update Bonuspoint set Point=Point-@minusPoint where Store_ID=@Store_ID and User_ID=@User_ID");
+            //        }
+            //    }
+            //}
 
             if (DL_Payment.SelectedValue.ToString() == "5")
             {
+                string IsChBonus = "0";
+                if (ChBonus.Checked == true) { IsChBonus = "1"; }
+
+                Session["Bonusval"] = IsChBonus + "," + SID + "," + LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "") + "," + strOrderID + "," + LBprice.Text;
                 Session["Order_Url"] = Comm.URL + "Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "";
                 Session["OrderID"] = strOrderID;
                 Response.Redirect("CreditCard.aspx");
             }
             else
             {
+                if (ChBonus.Checked == true)
+                {
+                    Comm.Bonus_Calculation(Main.Cint2(SID), Main.Cint2(LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "")), Main.Cint2(strOrderID), Main.Cint2(LBprice.Text));
+                }
                 Session["Order_entry"] = strOrderID;
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('結帳成功');window.open('Order_prn.aspx?SN=" + Request.QueryString["SN"] + "','_self');", true);
  

@@ -12,6 +12,7 @@ namespace MiniStore
     public partial class CreditCard_Finish : System.Web.UI.Page
     {
         JDB Main = new JDB();
+        CommTool Comm = new CommTool();
         string str = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -62,8 +63,7 @@ namespace MiniStore
                     }
 
                     if (Session["CreditNo"] != null)
-                    {
-
+                    { 
                         str = "update Credit_Card set MID='" + LMID.Text + "',ONO='" + LONO.Text + "', RC_Creat_Date=getdate(),RC='" + LRC.Text + "',LTD='" + LLTD.Text + "',LTT='" + LLTT.Text + "',RRN='" + LRRN.Text + "',AIR='" + LAIR.Text + "',AN='" + LAN.Text + "',M2='" + LM2.Text + "',M2_chk='" + LM2_chk.Text + "',Status='" + Status + "' where IDNo=" + Session["CreditNo"] + "; ";
                         Main.NonQuery(str);
                         Session.Remove("CreditNo");
@@ -89,11 +89,21 @@ namespace MiniStore
                         //交易成功
                         //Send Email?
                         // Comm.SendMail(Comm.MailFrom, "afh@nlac.narl.org.tw", "動物中心-信用卡交易成功", LONO.Text + "信用卡交易成功<br><br>請至系統檢查");
+                        if (Session["Bonusval"] != null)
+                        {
+                            string[] list = Session["Bonusval"].ToString().Split(',');
+                            if (list[0] == "1")
+                            {
+                                Comm.Bonus_Calculation(Main.Cint2(list[1]), Main.Cint2(list[2]), Main.Cint2(list[3]), Main.Cint2(list[4]));
+                            } 
+                        }
 
                         if (Session["Order_Url"] != null)
                         {
                             string turl = Session["Order_Url"].ToString();
                             Session.Remove("Order_Url");
+                            Session["Order_entry"] = Session["OrderID"];
+                            Session.Remove("OrderID");
                             Response.Redirect(turl);
                         }
                     }

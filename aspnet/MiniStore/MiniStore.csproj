@@ -295,7 +295,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="BuyFont.Master" />
     <Content Include="QRcode.ashx" />
-    <None Include="Properties\PublishProfiles\dd.pubxml" />
+    <None Include="Properties\PublishProfiles\tgg.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
