@@ -97,9 +97,11 @@ namespace MiniStore
                                 Comm.Bonus_Calculation(Main.Cint2(list[1]), Main.Cint2(list[2]), Main.Cint2(list[3]), Main.Cint2(list[4]));
                             } 
                         }
-
+                        
                         if (Session["Order_Url"] != null)
                         {
+
+                            Main.NonQuery("update orders set status='5' where IDNo=" + Session["OrderID"].ToString() + ""); 
                             string turl = Session["Order_Url"].ToString();
                             Session.Remove("Order_Url");
                             Session["Order_entry"] = Session["OrderID"];

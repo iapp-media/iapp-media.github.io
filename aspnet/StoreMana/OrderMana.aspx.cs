@@ -175,15 +175,15 @@ namespace StoreMana.Mini
                 }
 
                 //--付款方式 銀行轉帳
-                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "5") //入帳確認
+                if (Main.Scalar("select status from orders where  Payment_ID in (3,5) and idno='" + Order_Key.Text + "'") == "5") //入帳確認
                 {
                     BT1.Enabled = true;
                 }
-                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "10") //出貨確認
+                if (Main.Scalar("select status from orders where  Payment_ID in (3,5) and idno='" + Order_Key.Text + "'") == "10") //出貨確認
                 {
                     BT3.Enabled = true;
                 }
-                if (Main.Scalar("select status from orders where  Payment_ID=3 and idno='" + Order_Key.Text + "'") == "15") //出貨確認
+                if (Main.Scalar("select status from orders where  Payment_ID in (3,5) and idno='" + Order_Key.Text + "'") == "15") //出貨確認
                 {
                     BT2.Enabled = true;
                 } 
