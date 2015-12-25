@@ -3,12 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main_content" Runat="Server">
+    
     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
-     <asp:Literal ID="LChoose" runat="server" Visible="false"></asp:Literal>
+     <asp:Literal ID="LTitle" runat="server" Visible="false"></asp:Literal>
+     <asp:Literal ID="LColName" runat="server" Visible="false"></asp:Literal>
+
     <asp:Button ID="BTpay" runat="server" Text="付款方式" OnClick="BTpay_Click"   />
     <asp:Button ID="BTDeli" runat="server" Text="運送方式" OnClick="BTDeli_Click"  />
     <asp:Button ID="BTOrder" runat="server" Text="訂單狀態" OnClick="BTOrder_Click"   /> <br />
-      <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="idno" EnableTheming="True" OnRowCommand="GV_RowCommand"   Width="100%"  >
+      <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="idno" EnableTheming="True" OnRowCommand="GV_RowCommand" OnRowDataBound="GV_RowDataBound"   Width="100%"  >
                         <Columns>
                             <asp:ButtonField ButtonType="Button" CommandName="CN" HeaderText="" Text="修改">
                                 <ItemStyle CssClass="gv_row" HorizontalAlign="Center" Width="30px" />
@@ -19,13 +22,13 @@
                        
                             <asp:TemplateField HeaderText="*狀態">
                                 <ItemTemplate>
-                                    <asp:TextBox ID="C3" runat="server" Text='<%# Bind("Status") %>' ></asp:TextBox>
+                                    <asp:TextBox ID="TStatus" runat="server" Text='<%# Bind("Status") %>' ></asp:TextBox>
                                 </ItemTemplate>
                                  
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="*Memo">
                                 <ItemTemplate>
-                                    <asp:TextBox ID="C4" runat="server" Text='<%# Bind("Memo") %>' ></asp:TextBox>
+                                    <asp:TextBox ID="TMemo" runat="server" Text='<%# Bind("Memo") %>' ></asp:TextBox>
                                 </ItemTemplate>
                               
                             </asp:TemplateField>

@@ -172,6 +172,9 @@
                             </li>
                              <li> 
                                 <a href="cate_mana.aspx"><i class="fa fa-plus fa-fw"></i>商品類別管理</a>
+                            </li>  
+                            <li> 
+                                <a href="Set_defS.aspx"><i class="fa fa-plus fa-fw"></i>微店狀態管理</a>
                             </li>
                            <%-- <li>       <li>
                                 <a href="IApp_Add.aspx"><i class="fa fa-plus fa-fw"></i>(channel)新增IAPP</a>
