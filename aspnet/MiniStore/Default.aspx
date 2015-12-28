@@ -55,16 +55,9 @@
                             <div class="MonBoxL">
                                 <span class="TOC"><%# Eval("Price") %></span>
                             </div>
+                            <div class="clearfix"></div>
                             <%--<div class="clearfix"></div>--%>
-                            <div class="addbox">
-                              <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal> 
-                                <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
-                                <div class="clearfix"></div> 
-<%--                                <span class="input-number-decrement" onclick='minus(<%# Eval("IDNo") %>)'>–</span>--%> 
-<%--                                <input id="Num_<%# Eval("IDNo") %>" name="" type="number" value="0"  value='<%# Eval("carbaby") %>'  class="input-number" disabled="disabled" />--%>
-<%--                                <span class="input-number-increment" onclick='plus(<%# Eval("IDNo") %>,9999)'>+ </span>--%>
-                             
-                            </div> 
+                           
                              <div class="radioboxUI"> 
                                 <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
@@ -77,6 +70,15 @@
                                 <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>
+                             <div class="addbox">
+                              <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal> 
+                                <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
+                                <div class="clearfix"></div> 
+<%--                                <span class="input-number-decrement" onclick='minus(<%# Eval("IDNo") %>)'>–</span>--%> 
+<%--                                <input id="Num_<%# Eval("IDNo") %>" name="" type="number" value="0"  value='<%# Eval("carbaby") %>'  class="input-number" disabled="disabled" />--%>
+<%--                                <span class="input-number-increment" onclick='plus(<%# Eval("IDNo") %>,9999)'>+ </span>--%>
+                             
+                            </div> 
                         </div>
                     </div>
                     </ItemTemplate>

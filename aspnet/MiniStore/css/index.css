@@ -1041,12 +1041,12 @@
         display: flex;
         display: -webkit-flex;
         display: -ms-flex;
-        align-items: center;
+        /*align-items: center;
         -webkit-align-items: center;
         -ms-align-items: center;
         justify-content: center;
         -webkit-align-items: center;
-        -ms-align-items: center;
+        -ms-align-items: center;*/
         font-size: 0;
         padding: 15px 12px;
     }
@@ -1086,7 +1086,7 @@
     }
 .addbox {
     width:50%;
-    float:left;
+    float:right;
 }
     .input-number-decrement,
     .input-number-increment,
@@ -2479,14 +2479,17 @@
         margin: 128px 0 55px 0;
     }
     
-    #FastBox .MonBoxL,
     #FastBox .MonBoxR,
     #FastBox .radioboxUI {
         font-size: 18px;
         width: 50%;
         float: left;
     }
-    
+
+        #FastBox .MonBoxL {
+            float:left;
+            margin-bottom:10px;
+        }
     #FastBox .MonBoxR input {
         border: none;
         border-radius: 0;
@@ -2672,7 +2675,7 @@
     }
 
         #FastBox span.TOC {
-            /* font-size: 12px; */
+             font-size: 18px; 
         }
 
     .promana {
