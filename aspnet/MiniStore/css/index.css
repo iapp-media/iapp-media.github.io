@@ -604,14 +604,18 @@
         margin: auto!important;
     }
     
-    .ContentTop img {
+    .backarrow {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 15px;
-        width: 40px;
-        margin: auto;
-        padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 42px;
+    background: url('../img/backarrow.png');
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 0;
+    /*outline: 1px solid #f00;*/
+    height: 43px;
     }
     
     .imgH {
@@ -875,6 +879,9 @@
         height: 81px;
         padding: 0;
     }
+        .container-fluid * {
+            /*outline:1px solid #f00;*/
+        }
     
     .Lgallbar {
         right: 0;
@@ -2665,28 +2672,22 @@
     #FastBox .radioboxUI label:last-child {
         margin:0;
     }
-    /*.MonBoxR1 input {
-        display: none;
+   .iapplogo {
+           width: 85px;
+        height: 100%;
+        background: url('../img/ministorelogo.png');
+            background-size: 100% 60px;
     }
-    
-    .MonBoxR1 label {
-        background: #eee;
-        border-radius: .25em;
-        cursor: pointer;
-        display: block;
-        margin-bottom: .125em;
-        padding: .25em 1em;
-        z-index: 20;
-       	text-align: center;
-       	color:#444;
-       	display:inline-block;
-               margin-right: 9px;
-    margin-bottom: 8px;
-    }
-    .MonBoxR1 input[type="radio"]:checked + label {
-    	background: #aaa;
-    	color:#f0f0f0;
-    }*/
+.scrollable-menu .boxpos .line {
+    display:block;
+    background: url('../img/lineicon.png');
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    width: 79px;
+    height:79px;
+    background-repeat:no-repeat;
+}
     
     @media only screen and (max-width:767px) {
         .container-fluid {
@@ -2788,10 +2789,7 @@
         height: 60px;
     }
 
-    .iapplogo {
-        width: 80px;
-        height: auto;
-    }
+    
 
     .search {
         /* position: absolute; */
