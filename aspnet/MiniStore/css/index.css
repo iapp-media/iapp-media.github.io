@@ -507,6 +507,16 @@
     #FastBox h3 {
         font-size: 18px;
     }
+.fastUI#FastBox h3 {
+    margin:0;
+}
+.fastUI .radioboxUI label {
+    font-size:13px;
+    font-weight: inherit;
+}
+.fastUI .fastUI-1 {
+    margin:10px 0;
+}
     
     .ManaLBG {
         background-color: #ffd5b3 !important;
@@ -747,6 +757,17 @@
     .DTimg {
         width: 25%;
     }
+.fastUI .DTimg {
+    width:88px;
+     height:88px;
+     float:left;
+
+}
+.fastUI .details-1 {
+    width: calc(100% - 88px - 10px);
+   margin-left:10px;
+   float:left;
+}
     
     .CBtitle {
         padding-top: 10px;
@@ -1000,6 +1021,10 @@
         width: 55%;
         margin: 0 5%;
     }
+.fastUI .Detailsmid {
+    width: 100%;
+    margin:0;
+}
     
     .Detailsbot {
         width: 10%;
@@ -1103,6 +1128,11 @@
     width:50%;
     float:right;
 }
+.fastUI .addbox {
+    width:auto;
+    height:62px;
+    margin-top:10px;
+}
     .input-number-decrement,
     .input-number-increment,
     .addbox .input-number-decrement {
@@ -1118,6 +1148,7 @@
     }
     .addbox .input-number-decrement {
         width: 50px;
+        height:100%;
         float: right;
         border-radius: 4px;
          -webkit-border-radius: 4px;
@@ -2485,6 +2516,9 @@
         align-items: center;
         justify-content: center;
     }
+        .product * {
+            /*outline:1px solid #f00;*/
+        }
         .FrontBot button a {
             display:block;
             width:100%;
@@ -2500,20 +2534,28 @@
         width: 50%;
         float: left;
     }
+    
 
         #FastBox .MonBoxL {
             float:left;
             margin-bottom:10px;
         }
+.fastUI#FastBox .MonBoxL {
+    width:100%;
+        margin: 6px 0;
+}
     #FastBox .MonBoxR input {
         border: none;
         border-radius: 0;
     }
     
     #FastBox .Detailsmid {
-        width: 75%;
+        width: calc(100% - 50px);
         margin-right: 0;
+        float:left;
+        margin-top:10px;
     }
+
     
     #FastBox .CBBTN {
         position: fixed;
@@ -2615,9 +2657,12 @@
     width:auto;
 }
 #FastBox .radioboxUI label {
-    margin-right:10px;
+    margin-right:5px;
     margin-bottom:10px;
 }
+    #FastBox .radioboxUI label:last-child {
+        margin:0;
+    }
     /*.MonBoxR1 input {
         display: none;
     }

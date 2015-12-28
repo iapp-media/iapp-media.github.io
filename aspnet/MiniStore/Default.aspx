@@ -41,28 +41,29 @@
 
         <%-- drink fast --%>
         <div class="product" runat="server" id="Fast_drink" visible="false">
-            <div id="FastBox"> 
+            <div id="FastBox" class="fastUI"> 
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate> 
                 <asp:Repeater ID="RPFast_Drink" runat="server" OnItemCommand="RPFast_Drink_ItemCommand" OnItemDataBound="RPFast_Drink_ItemDataBound">
                     <ItemTemplate>
-                       <div class="details col-xs-12">
+                       <div class="fastUI-1 col-xs-12">
                         <div class="DTimg">
                             <a href='Buy_detail.aspx?entry=<%# Eval("IDNo") %>&SN=<%# Eval("SN") %>'>
-                                <img class="productSize imgH" src='<%# Eval("FilePath") %>' /></a>
+                                <img class="imgH" src='<%# Eval("FilePath") %>' /></a>
                         </div>
-                        <div class="Detailsmid">
-                            <h3><%# Eval("Product_Name") %></h3>
-                            <div class="MonBoxL">
-                                <span class="TOC"><%# Eval("Price") %></span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <%--<div class="clearfix"></div>--%>
-                           
-                             <div class="radioboxUI"> 
-                                <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
-                                </asp:RadioButtonList>
-                            </div>
-                            <div class="radioboxUI"> 
+                           <div class="details-1">
+                               <h3><%# Eval("Product_Name") %></h3>
+                               <div class="MonBoxL">
+                                   <span class="TOC"><%# Eval("Price") %></span>
+                               </div>
+                               <div class="radioboxUI">
+                                   <asp:RadioButtonList ID="RB_DrinkSize" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                   </asp:RadioButtonList>
+                               </div>
+                           </div>
+                           <div class="clearfix"></div>
+                           <%--<div class="clearfix"></div>--%>
+                           <div class="Detailsmid">
+                               <div class="radioboxUI"> 
                                 <asp:RadioButtonList ID="RB_DrinkIce" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>   
@@ -70,16 +71,17 @@
                                 <asp:RadioButtonList ID="RB_DrinkSugar" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" > 
                                 </asp:RadioButtonList>
                             </div>
-                             <div class="addbox">
+                             
+                        </div>
+                           <div class="addbox">
                               <asp:Literal ID="ItemIDNo" runat="server" Text='<%# Eval("IDNo") %>' Visible="false"></asp:Literal> 
                                 <asp:Button ID="BTplus" runat="server" Text="+"  CssClass="input-number-decrement" CommandName="CNplus"/>
-                                <div class="clearfix"></div> 
+                           
 <%--                                <span class="input-number-decrement" onclick='minus(<%# Eval("IDNo") %>)'>–</span>--%> 
 <%--                                <input id="Num_<%# Eval("IDNo") %>" name="" type="number" value="0"  value='<%# Eval("carbaby") %>'  class="input-number" disabled="disabled" />--%>
 <%--                                <span class="input-number-increment" onclick='plus(<%# Eval("IDNo") %>,9999)'>+ </span>--%>
                              
                             </div> 
-                        </div>
                     </div>
                     </ItemTemplate>
                 </asp:Repeater></ContentTemplate></asp:UpdatePanel>
