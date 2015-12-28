@@ -151,6 +151,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WriteUrl.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuyFont.Master.cs">
@@ -286,6 +287,13 @@
     </Compile>
     <Compile Include="TT.aspx.designer.cs">
       <DependentUpon>TT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WriteUrl.aspx.cs">
+      <DependentUpon>WriteUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WriteUrl.aspx.designer.cs">
+      <DependentUpon>WriteUrl.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

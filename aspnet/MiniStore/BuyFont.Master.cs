@@ -27,7 +27,8 @@ namespace MiniStore
                         Response.Redirect("Default.aspx?SN=OfficACC");
                     }
                 }
-
+               // Page.ClientScript.RegisterStartupScript(this.GetType(), "writeUrl", "writeUrl()", true);
+          
                 //string jump = "";
                 //if (Comm.User_ID() == -1)
                 //{
@@ -94,6 +95,8 @@ namespace MiniStore
                     }
                 }
             }
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "writeUrl();", true);
+
         }
 
         protected void LBLogout_Click(object sender, EventArgs e)

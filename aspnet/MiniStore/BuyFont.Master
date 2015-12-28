@@ -205,7 +205,21 @@
     <script type="text/javascript" src="js/ga-iappportal.js"></script>
     <!-- Loading -->
     <script>
-        document.write('<style>#loading{display:none}</style>'); 
+        document.write('<style>#loading{display:none}</style>');
+        function writeUrl() {
+            if (document.referrer.match('iapp-media.com') != null) {
+                $.ajax({
+                    type: "POST",
+                    url: "WriteUrl.aspx",
+                    data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL),
+                    cache: false,
+                    success: function (sus) {
+                    },
+                    error: function (err) {
+                    }
+                });
+            } 
+        }
     </script>
 </body>
 </html>

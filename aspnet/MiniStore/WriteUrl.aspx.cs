@@ -18,9 +18,9 @@ namespace MiniStore
                 if (Request["From"] != null && Request["To"] != null)
                 {
                     Main.ParaClear();
-                    Main.ParaAdd("@FromUrl",Request["From"],System.Data.SqlDbType.NVarChar);
-                    Main.ParaAdd("@ToUrl",Request["To"],System.Data.SqlDbType.NVarChar); 
-                    Main.NonQuery("insert into UrlRefer (FromUrl,ToUrl,Date) values (@FromUrl,@ToUrl,getdate())"); 
+                    Main.ParaAdd("@FromUrl", Server.UrlDecode(Request["From"]), System.Data.SqlDbType.NVarChar);
+                    Main.ParaAdd("@ToUrl", Server.UrlDecode(Request["To"]), System.Data.SqlDbType.NVarChar);
+                    Main.NonQuery("insert into UrlRefer (FromUrl,ToUrl,Date) values (@FromUrl,@ToUrl,getdate())");
                 }
             }
         }
