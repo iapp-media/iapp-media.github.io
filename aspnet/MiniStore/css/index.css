@@ -513,6 +513,7 @@
 .fastUI .radioboxUI label {
     font-size:13px;
     font-weight: inherit;
+    color:#888;
 }
 .fastUI .fastUI-1 {
     margin:10px 0;
@@ -2659,6 +2660,7 @@
 #FastBox .radioboxUI label {
     margin-right:5px;
     margin-bottom:10px;
+    
 }
     #FastBox .radioboxUI label:last-child {
         margin:0;
