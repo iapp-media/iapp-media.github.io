@@ -1,5 +1,5 @@
 //抓值電話的值
-var phoneNum = $('#phoneNUM').text().trim();;
+var phoneNum = $('#phoneNUM').text().trim();
 console.log(phoneNum);
 $('#phoneAttr').attr('onclick', "location.href=" + "'tel:" + phoneNum + "'");
 
