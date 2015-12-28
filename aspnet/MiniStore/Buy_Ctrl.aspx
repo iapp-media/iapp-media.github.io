@@ -49,7 +49,9 @@
                                             <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
                                             <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>--%>
                                                 </div>
-                                                <asp:Button ID="BT_DELE" runat="server" Text="" CssClass="glyphicon glyphicon-remove cancelTransaction" CommandName="CNDEL" />
+                                                <div class="glyphicon glyphicon-remove cancelTransaction">
+                                                <asp:Button ID="BT_DELE" runat="server" Text="" CssClass="" CommandName="CNDEL" />
+                                                    </div>
                                                 <%--  <asp:Literal ID="L_DELE" runat="server"></asp:Literal>--%>
                                             </div>
                                         </ItemTemplate>
