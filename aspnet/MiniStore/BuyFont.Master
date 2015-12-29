@@ -57,7 +57,7 @@
             
                 <div class="container-fluid">
                     
-                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                               <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
 
 <%--                            <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/ministorelogo.png" />
