@@ -2112,10 +2112,10 @@ a.iframe-info.cboxElement {
     content: "";
     width: 50%;
     height: 100%;
-    top: 0px;
+    top: 0;
 }
 .SinCheck.apple_checkbox input + label {
-    text-indent:-146px;
+    text-indent:-160%;
 }
 
     
@@ -2680,12 +2680,11 @@ a.iframe-info.cboxElement {
     font-size: 20px;
     color: #838485;
 }
+    .OpenCheckUI .right {
+        font-size: 16px;
+    }
 
-.OpenCheckUI .right span {
-    width: 100%;
-    text-align: right;
-    display: block;
-}
+
 
 .ThreeBTN,
 .ThreeBTN2 {
