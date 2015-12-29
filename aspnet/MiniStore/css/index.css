@@ -368,13 +368,15 @@
     background:url('../img/facebook-02.png');
     margin-right: 0 !important;
 }
-.MsgBox .MsgBox-mail,.MsgBox .MsgBox-line, .MsgBox .MsgBox-fb {
+.MsgBox .MsgBox-mail, .MsgBox .MsgBox-line, .MsgBox .MsgBox-fb {
     width: 70px;
     height: 70px;
-    background-size:100%;
+    background-size: 100%;
     margin-right: 24px;
 }
-
+.MsgBox{
+    width:258px;
+}
     
     .ProLastIn img {
         width: 15px;
