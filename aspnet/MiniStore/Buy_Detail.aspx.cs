@@ -26,7 +26,7 @@ namespace MiniStore
                     if (Main.Scalar("Select 1 from Product where IDNo=@Product_ID") != "")
                     {
                         L_Mail.Text = "<a href=\"mailto:?subject=[iApp微店推薦]pname&amp;body=嗨！我想請你來看看iApp微店的商品。%0D%0A商品名稱：name%0D%0A" + Comm.URL + "Ministore/Buy_Detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "" + "\" title=\"EMail\"> " +
-                                      "  <img src=\"img/mail.png\" alt=\"Alternate Text\" /></a>";
+                                      "  </a>";
                     }
                     else
                     {

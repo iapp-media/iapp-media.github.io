@@ -65,17 +65,17 @@
                             <div class="col-xs-12 AllBGC">
                                 <div class="col-xs-9 col-sm-6 MsgBox">
                                     <div class="row">
-                                        <div class="col-xs-4 ">
+                                        <div class="col-xs-4 MsgBox-mail">
 <%--                                            <a class="btn ymail" href="mailto:?subject=[Yahoo!奇摩購物中心推薦]ASUS Zenfone 5 A500KL (2G/32G) 5吋4G LTE智慧手機&amp;body=嗨！我想請你來看看Yahoo奇摩購物中心的商品。%0D%0A商品名稱：ASUS Zenfone 5 A500KL (2G/32G) 5吋4G LTE智慧手機%0D%0Ahttps://m.tw.buy.yahoo.com/gdsale/gdsale.asp?m=1&amp;gdid=5407788&amp;hpp=yml_item&amp;actcode=fprecmlike" title="EMail"> 
                                                 <img src="img/mail.png" alt="Alternate Text" /></a>--%>
                                             <asp:Literal ID="L_Mail" runat="server"></asp:Literal>
                                             <%--                                        <asp:ImageButton ID="BT_Mail" runat="server" ImageUrl="img/mail.png" CssClass="img-responsive"/>--%>
                                         </div>
-                                        <div class="col-xs-4 ">
-                                            <asp:ImageButton ID="BT_Line" runat="server" ImageUrl="img/line.png" />
+                                        <div class="col-xs-4 MsgBox-line">
+                                            <asp:ImageButton ID="BT_Line" runat="server"  />
                                         </div>
-                                        <div class="col-xs-4 ">
-                                            <asp:ImageButton ID="BT_FB" runat="server" ImageUrl="img/facebook-02.png" OnClick="BT_FB_Click" />
+                                        <div class="col-xs-4 MsgBox-fb">
+                                            <asp:ImageButton ID="BT_FB" runat="server" OnClick="BT_FB_Click" />
                                         </div>
                                     </div>
                                 </div>
