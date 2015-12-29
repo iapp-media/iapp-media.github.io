@@ -44,7 +44,6 @@
     background-color: #f7f7f7;
     overflow: hidden;
     text-align: center;
-    margin-top: 15px;
 }
 
 .preview-container {
@@ -58,6 +57,7 @@
 }
 .selectBTN {
     width:50%;
+        margin: 5px 0 10px 0;
 }
 .selectBTNin {
     font-size: 24px;

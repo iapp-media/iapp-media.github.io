@@ -552,7 +552,7 @@ a:active {
    top:0;
     }
 .toplogo {
-      width: 106px;
+      width: 79px;
        height:100%;
         background: url('../img/ministorelogo.png');
             background-size: 100%;
@@ -3074,7 +3074,7 @@ a.iframe-info.cboxElement {
     .swiper-button-next,.swiper-button-prev {
         display:none;
     }
-    .iapplogo,.toplogo {
+    .iapplogo{
         width:79px;
     }
     
