@@ -7,8 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 
 public partial class cate_mana : System.Web.UI.Page
-{
-    JDB Main = new JDB("Data Source=WIN-EJ8CN160PBQ;Initial Catalog=AppWeb2;user id=sa;password=`1qa~!QA");
+{ 
+    JDB Main = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
     CommTool Comm = new CommTool();
     string str = "";
     protected void Page_Load(object sender, EventArgs e)

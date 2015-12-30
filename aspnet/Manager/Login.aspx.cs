@@ -29,7 +29,7 @@ public partial class Login : System.Web.UI.Page
         {
             Session["ACC"] = ACC.Value;
             Session["OK"] = "OK";
-            Response.Write("<script language=javascript>alert('登入成功');location.href='PageManager.aspx'</script>");
+            Response.Write("<script language=javascript>alert('登入成功');location.href='PageManager.aspx'</script>"); 
         }
         else
         {

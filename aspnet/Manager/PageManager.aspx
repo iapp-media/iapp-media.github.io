@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager.master" AutoEventWireup="true" CodeFile="PageManager.aspx.cs" Inherits="PageManager" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  AutoEventWireup="true" CodeFile="PageManager.aspx.cs" Inherits="PageManager" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Main_content" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h3>頁面資料</h3>
         <asp:Button ID="Btn" runat="server" Text="新增" OnClick="Btn_Click" />
     <asp:GridView ID="GV" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="IDNo" OnRowCommand="GV_RowCommand" OnRowDataBound="GV_RowDataBound">
@@ -25,4 +25,8 @@
     <asp:SqlDataSource ID="SD" runat="server"></asp:SqlDataSource>
 <asp:Literal ID="L" runat="server" Visible="False"></asp:Literal>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+
+
 

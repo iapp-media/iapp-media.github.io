@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager.master.cs" Inherits="Manager" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager_.master.cs" Inherits="Manager" %>
 
 <!DOCTYPE html>
 

@@ -1,14 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager.master" AutoEventWireup="true" CodeFile="IApp_Add.aspx.cs" Inherits="IApp_Add" %>
+﻿<%@ Page Title="" Language="C#"  MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="IApp_Add.aspx.cs" Inherits="IApp_Add" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
-
-    <title>IApp_ADD</title>
-
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Main_content" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
+                       <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">店家管理</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
 
     <div class="row">
         <div class="col-lg-12">
@@ -97,5 +100,14 @@
 
 
 
+
+
+      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 

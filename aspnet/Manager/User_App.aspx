@@ -1,9 +1,18 @@
-﻿<%@ Page Title="" Language="C#" Debug="true" MasterPageFile="~/Manager.master" AutoEventWireup="true" CodeFile="User_App.aspx.cs" Inherits="User_App" %>
+﻿<%@ Page Title="" Language="C#" Debug="true" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="User_App.aspx.cs" Inherits="User_App" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Main_content" runat="Server">
-    <h3>iApp管理</h3>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <div class="side-body">
+        <div class="page-title">
+            <span class="title">iApp管理</span>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="card">
+                    <div class="card-body">
+  
         <asp:Label ID="Label1" runat="server" Text="選擇使用者:"></asp:Label><asp:DropDownList ID="DL_User" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_User_SelectedIndexChanged"></asp:DropDownList>
     <div style="margin:10px 0 0 0;width:100%">
         <asp:GridView ID="GV" runat="server" AutoGenerateColumns="False" DataKeyNames="IDNo" OnRowCommand="GV_RowCommand" OnRowDataBound="GV_RowDataBound" AllowPaging="True" Width="100%">
@@ -27,5 +36,13 @@
     </div>
         <asp:SqlDataSource ID="SD" runat="server"></asp:SqlDataSource>
         <asp:Literal ID="L" runat="server" Visible="False"></asp:Literal>
+    </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+
 

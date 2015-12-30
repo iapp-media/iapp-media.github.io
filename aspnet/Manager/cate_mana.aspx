@@ -1,14 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager.master" AutoEventWireup="true" CodeFile="cate_mana.aspx.cs" Inherits="cate_mana" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="cate_mana.aspx.cs" Inherits="cate_mana" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Main_content" runat="Server">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">商品類別管理</h1>
-            <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
-        </div>
-    </div>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+       <div class="side-body">
+        <div class="page-title">
+            <span class="title">商品類別管理</span>
+                 <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
+        </div> 
 
     <div class="row">
         <div class="col-lg-12">
@@ -19,7 +18,10 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
 
+                            
                         <table border="1" style="width: 100%">
                             <tr>
                                 <td style="width: 100px">
@@ -77,11 +79,13 @@
                                     &nbsp;
                                 </td>
                             </tr>
-                        </table>
+                        </table> </ContentTemplate>
+                        </asp:UpdatePanel>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+           </div>
 </asp:Content>
 
