@@ -31,6 +31,7 @@
     <!-- End for apple -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/checkbox.css"  />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/cropper.css" />
     <link rel="stylesheet" href="css/mobileEditor.css" />
@@ -131,7 +132,7 @@
                                             <p>付款方式</p>
                                         </div>
                                     </div>
-                                    <div class="col-xs-8 right">
+                                    <div class="col-xs-8 right SinCheck apple_checkbox">
                                         <div class="row">
                                             <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                                             </asp:CheckBoxList>
@@ -215,7 +216,7 @@
                                             <p>寄送方式</p>
                                         </div>
                                     </div>
-                                    <div class="col-xs-8 right">
+                                    <div class="col-xs-8 right SinCheck apple_checkbox">
                                         <div class="row">
                                             <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
                                             </asp:CheckBoxList>

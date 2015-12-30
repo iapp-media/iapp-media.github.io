@@ -256,11 +256,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MiniMaster.Master" />
     <Content Include="QRcode.ashx" />
-    <None Include="Properties\PublishProfiles\s15.pubxml" />
     <Content Include="sass\ie.sass" />
     <Content Include="sass\print.sass" />
     <Content Include="sass\screen.sass" />
     <Content Include="sass\slider.sass" />
+    <None Include="Properties\PublishProfiles\asv.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -358,6 +358,25 @@
         width: 100%;
         /* transform: scale(1.3); */
     }
+.MsgBox .MsgBox-mail {
+    background:url('../img/mail.png');
+}
+.MsgBox .MsgBox-line {
+    background:url('../img/line.png');
+}
+.MsgBox .MsgBox-fb {
+    background:url('../img/facebook-02.png');
+    margin-right: 0 !important;
+}
+.MsgBox .MsgBox-mail, .MsgBox .MsgBox-line, .MsgBox .MsgBox-fb {
+    width: 70px;
+    height: 70px;
+    background-size: 100%;
+    margin-right: 24px;
+}
+.MsgBox{
+    width:258px;
+}
     
     .ProLastIn img {
         width: 15px;
@@ -507,6 +526,17 @@
     #FastBox h3 {
         font-size: 18px;
     }
+.fastUI#FastBox h3 {
+    margin:0;
+}
+.fastUI .radioboxUI label {
+    font-size:13px;
+    font-weight: inherit;
+    color:#888;
+}
+.fastUI .fastUI-1 {
+    margin:10px 0;
+}
     
     .ManaLBG {
         background-color: #ffd5b3 !important;
@@ -593,14 +623,18 @@
         margin: auto!important;
     }
     
-    .ContentTop img {
+    .backarrow {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 15px;
-        width: 40px;
-        margin: auto;
-        padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 42px;
+    background: url('../img/backarrow.png');
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 0;
+    /*outline: 1px solid #f00;*/
+    height: 43px;
     }
     
     .imgH {
@@ -747,6 +781,17 @@
     .DTimg {
         width: 25%;
     }
+.fastUI .DTimg {
+    width:88px;
+     height:88px;
+     float:left;
+
+}
+.fastUI .details-1 {
+    width: calc(100% - 88px - 10px);
+   margin-left:10px;
+   float:left;
+}
     
     .CBtitle {
         padding-top: 10px;
@@ -853,6 +898,9 @@
         height: 81px;
         padding: 0;
     }
+        .container-fluid * {
+            /*outline:1px solid #f00;*/
+        }
     
     .Lgallbar {
         right: 0;
@@ -1000,6 +1048,10 @@
         width: 55%;
         margin: 0 5%;
     }
+.fastUI .Detailsmid {
+    width: 100%;
+    margin:0;
+}
     
     .Detailsbot {
         width: 10%;
@@ -1018,9 +1070,24 @@
         font-size: 20px;
         color: #f93;
         width: 10%;
-        padding: 40px 12px;
         text-align: center;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
     }
+        .cancelTransaction input {
+            width:100%;
+            height:100%;
+            background-color:transparent;
+            position:absolute;
+        }
+
     
     .detailsbox h1 {
         text-align: center;
@@ -1041,12 +1108,12 @@
         display: flex;
         display: -webkit-flex;
         display: -ms-flex;
-        align-items: center;
+        /*align-items: center;
         -webkit-align-items: center;
         -ms-align-items: center;
         justify-content: center;
         -webkit-align-items: center;
-        -ms-align-items: center;
+        -ms-align-items: center;*/
         font-size: 0;
         padding: 15px 12px;
     }
@@ -1055,11 +1122,11 @@
         background-color: #fff;
     }
     
-    .details .cancelTransaction input {
+    /*.details .cancelTransaction input {
         border-left: 1px solid #f93;
         font-size: 20px;
         color: #f93;
-    }
+    }*/
     
     .productSize {
         height: 80%!important;
@@ -1086,7 +1153,12 @@
     }
 .addbox {
     width:50%;
-    float:left;
+    float:right;
+}
+.fastUI .addbox {
+    width:auto;
+    height:62px;
+    margin-top:10px;
 }
     .input-number-decrement,
     .input-number-increment,
@@ -1103,6 +1175,7 @@
     }
     .addbox .input-number-decrement {
         width: 50px;
+        height:100%;
         float: right;
         border-radius: 4px;
          -webkit-border-radius: 4px;
@@ -1171,15 +1244,16 @@
     #Buycar span {
         width: 30px;
         height: 30px;
-        background-color: #f00;
+        background-color: rgba(255,0,0,.7);
         border-radius: 50%;
         display: block;
         text-align: center;
         padding: 6px 2px;
         color: #fff;
         position: absolute;
-        top: -23px;
+        top: -15px;
         right: 0;
+        box-shadow: 0px 1.5px 1px #888888;
     }
     
     #Buycar {
@@ -2470,6 +2544,9 @@
         align-items: center;
         justify-content: center;
     }
+        .product * {
+            /*outline:1px solid #f00;*/
+        }
         .FrontBot button a {
             display:block;
             width:100%;
@@ -2479,7 +2556,6 @@
         margin: 128px 0 55px 0;
     }
     
-    #FastBox .MonBoxL,
     #FastBox .MonBoxR,
     #FastBox .radioboxUI {
         font-size: 18px;
@@ -2487,15 +2563,27 @@
         float: left;
     }
     
+
+        #FastBox .MonBoxL {
+            float:left;
+            margin-bottom:10px;
+        }
+.fastUI#FastBox .MonBoxL {
+    width:100%;
+        margin: 6px 0;
+}
     #FastBox .MonBoxR input {
         border: none;
         border-radius: 0;
     }
     
     #FastBox .Detailsmid {
-        width: 75%;
+        width: calc(100% - 50px);
         margin-right: 0;
+        float:left;
+        margin-top:10px;
     }
+
     
     #FastBox .CBBTN {
         position: fixed;
@@ -2597,31 +2685,30 @@
     width:auto;
 }
 #FastBox .radioboxUI label {
-    margin-right:10px;
+    margin-right:5px;
     margin-bottom:10px;
-}
-    /*.MonBoxR1 input {
-        display: none;
-    }
     
-    .MonBoxR1 label {
-        background: #eee;
-        border-radius: .25em;
-        cursor: pointer;
-        display: block;
-        margin-bottom: .125em;
-        padding: .25em 1em;
-        z-index: 20;
-       	text-align: center;
-       	color:#444;
-       	display:inline-block;
-               margin-right: 9px;
-    margin-bottom: 8px;
+}
+    #FastBox .radioboxUI label:last-child {
+        margin:0;
     }
-    .MonBoxR1 input[type="radio"]:checked + label {
-    	background: #aaa;
-    	color:#f0f0f0;
-    }*/
+   .iapplogo {
+           width: 106px;
+        height: 100%;
+        background: url('../img/ministorelogo.png');
+            background-size: 100%;
+            background-repeat:no-repeat;
+    }
+.scrollable-menu .boxpos .line {
+    display:block;
+    background: url('../img/lineicon.png');
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    width: 79px;
+    height:79px;
+    background-repeat:no-repeat;
+}
     
     @media only screen and (max-width:767px) {
         .container-fluid {
@@ -2672,7 +2759,7 @@
     }
 
         #FastBox span.TOC {
-            /* font-size: 12px; */
+             font-size: 18px; 
         }
 
     .promana {
@@ -2723,10 +2810,7 @@
         height: 60px;
     }
 
-    .iapplogo {
-        width: 80px;
-        height: auto;
-    }
+    
 
     .search {
         /* position: absolute; */
@@ -2767,9 +2851,7 @@
             border-radius: 20px;
         }
 
-    .glyphicon-remove:before {
-        margin-top: 9px;
-    }
+ 
 
     .dropdown-menu-right {
         position: absolute;
@@ -2917,6 +2999,9 @@
 
     .swiper-button-next, .swiper-button-prev {
         display: none;
+    }
+    .iapplogo {
+        width:79px;
     }
 }
     

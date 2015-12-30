@@ -57,7 +57,7 @@
             
                 <div class="container-fluid">
                     
-                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                               <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
 
 <%--                            <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/ministorelogo.png" />
@@ -206,19 +206,18 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-        function writeUrl() {
-            if (document.referrer.match('iapp-media.com') != null) {
-                $.ajax({
-                    type: "POST",
-                    url: "WriteUrl.aspx",
-                    data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL),
-                    cache: false,
-                    success: function (sus) {
-                    },
-                    error: function (err) {
-                    }
-                });
-            } 
+        if (document.referrer.match('iapp-media.com') == null) {
+
+            $.ajax({
+                type: "POST",
+                url: "WriteUrl.aspx",
+                data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL),
+                cache: false,
+                success: function (sus) { 
+                },
+                error: function (err) { 
+                }
+            });
         }
     </script>
 </body>

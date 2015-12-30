@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     $(document).ready(function () {
         // window.scrollTo(0, 10);
-        $(".clickslider").click(function () {
+        $("#slider ul li label,.uploadBTN").click(function () {
             $('.preview-container').hide();
             $('.img-container').show();
             $(".upload-img").show();

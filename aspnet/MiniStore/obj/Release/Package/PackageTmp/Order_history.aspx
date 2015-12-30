@@ -4,9 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-xs-12 libor ContentTop">
-        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()">
-
-        <h1 class="col-xs-10">購買記錄</h1>
+        <div class="backarrow" onclick="javascript:history.back()"></div>
+        <h1>購買記錄</h1>
 
     </div>
     <ul class="buydivmove">

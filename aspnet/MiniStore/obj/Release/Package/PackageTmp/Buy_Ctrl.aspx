@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="col-xs-12 libor ContentTop">
-        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
-
+        <div class="backarrow" onclick="javascript:history.back()"></div>
         <h1 class="col-xs-10">購買商品明細</h1>
 
     </div>
@@ -49,7 +48,9 @@
                                             <asp:TextBox ID="Qty" runat="server" CssClass="input-number" Text='<%# Eval("AMT","{0:0.####}") %>'></asp:TextBox>
                                             <asp:Literal ID="L_BTplus" runat="server"></asp:Literal>--%>
                                                 </div>
-                                                <asp:Button ID="BT_DELE" runat="server" Text="" CssClass="glyphicon glyphicon-remove cancelTransaction" CommandName="CNDEL" />
+                                                <div class="glyphicon glyphicon-remove cancelTransaction">
+                                                <asp:Button ID="BT_DELE" runat="server" Text="" CssClass="" CommandName="CNDEL" />
+                                                    </div>
                                                 <%--  <asp:Literal ID="L_DELE" runat="server"></asp:Literal>--%>
                                             </div>
                                         </ItemTemplate>

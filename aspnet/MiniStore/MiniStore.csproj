@@ -147,7 +147,7 @@
     <Content Include="P_MSG.aspx" />
     <Content Include="search_List.aspx" />
     <Content Include="SInfo.aspx" />
-    <Content Include="TT.aspx" />
+    <Content Include="StoreFair.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -281,12 +281,12 @@
     <Compile Include="SInfo.aspx.designer.cs">
       <DependentUpon>SInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TT.aspx.cs">
-      <DependentUpon>TT.aspx</DependentUpon>
+    <Compile Include="StoreFair.aspx.cs">
+      <DependentUpon>StoreFair.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TT.aspx.designer.cs">
-      <DependentUpon>TT.aspx</DependentUpon>
+    <Compile Include="StoreFair.aspx.designer.cs">
+      <DependentUpon>StoreFair.aspx</DependentUpon>
     </Compile>
     <Compile Include="WriteUrl.aspx.cs">
       <DependentUpon>WriteUrl.aspx</DependentUpon>
@@ -303,7 +303,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="BuyFont.Master" />
     <Content Include="QRcode.ashx" />
-    <None Include="Properties\PublishProfiles\tgg.pubxml" />
+    <None Include="Properties\PublishProfiles\cvv.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

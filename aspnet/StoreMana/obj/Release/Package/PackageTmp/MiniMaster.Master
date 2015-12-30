@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/masonry.css"/>
     <link rel="stylesheet" href="css/colorbox.css"/>
     <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/checkbox.css"  />
     <link rel="stylesheet" href="css/index.css"/>
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
@@ -53,20 +54,19 @@
         <!-- 導覽列（共用） -->
         <div class="BGW"></div>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="row">
-                <div class="container-fluid">
-                    <div class="col-xs-4 col-sm-1 col-md-1 navbar-header">
-                        <div class="row">
-                            <a class="navbar-brand" href="default.aspx">
+            
+                <div>
+                    <h3 class="FixTitle">
+                        <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
+                    </h3>
+                </div>
+                <%--<div class="col-xs-4 col-sm-1 col-md-1 navbar-header">--%>
+                <a class="iapplogo" href="default.aspx"></a>
+                <%-- <a class="navbar-brand" href="default.aspx">
                                 <img class="iapplogo" src="img/store-bstage.png" />
-                            </a>
-                             <div>
-                                <h3 class="FixTitle">
-                                     <asp:Literal ID="Store_Name" runat="server"></asp:Literal>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+                            </a>--%>
+                <%-- </div>--%>
+
                     <!-- 主題下拉選單（共用） -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" role="menu">
                         
@@ -96,9 +96,9 @@
                         <span class="glyphicon glyphicon-remove cancel" aria-hidden="true" />
                     </div>
 
-                    <div class="col-xs-2 login-sm">
+                    <%--<div class="col-xs-2 login-sm">
                         <div class="input-group">
-                            <div class="input-group-btn">
+                            <div class="input-group-btn">--%>
                                 <!-- mobile登入／註冊 -->
 
                                 <%--                            <button type="button" id="m-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
@@ -108,12 +108,12 @@
                     <button type="button" id="user-login" class="btn btn-default search2" data-toggle="dropdown" aria-expanded="false">
                         <img class="circle-login" src="img/defaulthead.jpg"/>
                     </button>--%>
-                            </div>
+                    <%--        </div>
                         </div>
-                    </div>
+                    </div>--%>
                     <a href="#" class="menusandwich example1"><span></span></a>
-                </div>
-            </div>
+         
+       
         </nav>
         <!-- 會員資料 -->
         <div class="jumbotron">
@@ -142,8 +142,8 @@
         -->
         </div>
         <!-- 回到頂部 -->
-        <a href="#">
-            <img class="back-top" src="img/top.png" />
+        <a class="back-top" href="#">
+            <%--<img class="back-top" src="img/top.png" />--%>
         </a>
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

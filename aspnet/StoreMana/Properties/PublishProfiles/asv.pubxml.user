@@ -10,23 +10,20 @@
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
   <ItemGroup>
-    <File Include="AA/bootstrap.min.css">
-      <publishTime>11/27/2015 15:34:54</publishTime>
-    </File>
-    <File Include="AA/bootstrap.min.js">
-      <publishTime>11/27/2015 15:34:54</publishTime>
-    </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>12/21/2015 21:48:53</publishTime>
+      <publishTime>12/30/2015 09:29:05</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>12/22/2015 09:33:44</publishTime>
+      <publishTime>12/30/2015 09:29:41</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
       <publishTime>11/27/2015 15:34:54</publishTime>
+    </File>
+    <File Include="css/checkbox.css">
+      <publishTime>12/23/2015 18:12:15</publishTime>
     </File>
     <File Include="css/colorbox.css">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -35,13 +32,13 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>12/08/2015 16:13:23</publishTime>
+      <publishTime>12/29/2015 18:50:03</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>12/01/2015 15:38:15</publishTime>
     </File>
     <File Include="css/mobileEditor.css">
-      <publishTime>11/27/2015 15:34:54</publishTime>
+      <publishTime>12/29/2015 14:37:53</publishTime>
     </File>
     <File Include="css/promptumenu.css">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -185,7 +182,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>12/10/2015 18:41:17</publishTime>
+      <publishTime>12/29/2015 12:04:57</publishTime>
     </File>
     <File Include="js/JIC.js">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -224,7 +221,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>12/04/2015 10:44:58</publishTime>
+      <publishTime>12/29/2015 12:22:02</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>12/03/2015 14:18:42</publishTime>
@@ -239,7 +236,7 @@
       <publishTime>12/03/2015 14:23:54</publishTime>
     </File>
     <File Include="Product_Add.aspx">
-      <publishTime>12/03/2015 14:31:05</publishTime>
+      <publishTime>12/29/2015 13:21:56</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
       <publishTime>12/03/2015 12:24:26</publishTime>
@@ -272,22 +269,16 @@
       <publishTime>12/03/2015 14:36:21</publishTime>
     </File>
     <File Include="Setting_SInfo.aspx">
-      <publishTime>12/03/2015 14:38:04</publishTime>
+      <publishTime>12/29/2015 14:02:16</publishTime>
     </File>
     <File Include="Svim.aspx">
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
-    <File Include="TES.aspx">
-      <publishTime>12/15/2015 14:10:44</publishTime>
-    </File>
-    <File Include="Test.aspx">
-      <publishTime>12/15/2015 14:45:37</publishTime>
-    </File>
     <File Include="ThreeOpen.aspx">
-      <publishTime>12/18/2015 12:11:31</publishTime>
+      <publishTime>12/29/2015 14:23:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/22/2015 09:33:44</publishTime>
+      <publishTime>12/30/2015 09:29:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -42,8 +42,10 @@
     <!--上傳剪裁頁面-->
     <div class="upload-img">
         <div class="top">
-            <img src="img/ministorelogo.png" class="toplogo" align="left" />
-            <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
+            <div class="toplogo"></div>
+            <div class="cancelimgfun"></div>
+            <%--<img src="img/ministorelogo.png" class="toplogo" align="left" />
+            <img src="img/cancel-01.png" class="cancelimgfun" align="right" />--%>
         </div>
         <div class="upload-page">
             <label for="inputImage" class="selectBTN">

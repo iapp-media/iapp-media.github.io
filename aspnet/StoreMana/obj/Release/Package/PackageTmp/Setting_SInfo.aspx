@@ -24,8 +24,8 @@
     <div class="buydivmove">
         <div class="upload-img">
             <div class="top">
-                <img src="img/ministorelogo.png" class="toplogo" align="left" />
-                <img src="img/cancel-01.png" class="cancelimgfun" align="right" />
+                <div class="toplogo"></div>
+                <div class="cancelimgfun"></div>
             </div>
             <div class="upload-page">
                 <label for="inputImage" class="selectBTN">
@@ -68,9 +68,11 @@
                     <div class="col-xs-12">
                         <div class="row Sinfoheadimg">
                             <%--                            <img id="psimg" src="" class="sliderimgH" />--%>
-                            <asp:Image ID="psimg" runat="server" ClientIDMode="Static" />
-                            <label onclick="setCurrent()">
-                                <img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton" />
+                            <div>
+                                <asp:Image ID="psimg" runat="server" ClientIDMode="Static" />
+                            </div>
+                            <label class="uploadBTN" onclick="setCurrent()">
+                                <%--<img src="img/uploadicon.png" alt="..." class="imgsize poscenter clickslider openslider Addbutton" />--%>
                             </label>
                         </div>
                     </div>
@@ -81,9 +83,15 @@
                             <p class="BoxLeft">付款方式</p>
                         </div>
                     </div>
-                    <div class="col-xs-8 SinCheck">
-                        <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                        </asp:CheckBoxList>
+                    <div class="col-xs-8 SinCheck apple_checkbox">
+                        <div class="row">
+                           <%-- <div class="apple_checkbox-1">
+                                <p>面交</p>
+                                <p>銀行轉帳</p>
+                            </div>--%>
+                            <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                            </asp:CheckBoxList>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
@@ -92,9 +100,15 @@
                             <p class="BoxLeft">寄送方式</p>
                         </div>
                     </div>
-                    <div class="col-xs-8 SinCheck">
-                        <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                        </asp:CheckBoxList>
+                    <div class="col-xs-8 SinCheck apple_checkbox">
+                        <div class="row">
+                            <%--<div class="apple_checkbox-1">
+                                <p>面交自取</p>
+                                <p>宅配</p>
+                            </div>--%>
+                            <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                            </asp:CheckBoxList>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">

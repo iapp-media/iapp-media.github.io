@@ -1,0 +1,109 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 20, sass/checkbox.sass */
+.radioboxUI input {
+  display: none;
+}
+/* line 23, sass/checkbox.sass */
+.radioboxUI input[type="radio"]:checked + label {
+  background: #aaa;
+  color: #f0f0f0;
+}
+/* line 26, sass/checkbox.sass */
+.radioboxUI label {
+  background: #eee;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-bottom: 0.125em;
+  padding: 0.25em 1em;
+  z-index: 20;
+  text-align: center;
+  color: #aaa;
+}
+
+/* line 39, sass/checkbox.sass */
+.apple_checkbox input {
+  display: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 43, sass/checkbox.sass */
+.apple_checkbox input:before, .apple_checkbox input:after, .apple_checkbox input *, .apple_checkbox input *:before, .apple_checkbox input *:after, .apple_checkbox input + label {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 45, sass/checkbox.sass */
+.apple_checkbox input::-moz-selection {
+  background: none;
+}
+/* line 47, sass/checkbox.sass */
+.apple_checkbox input:before::-moz-selection, .apple_checkbox input:after::-moz-selection, .apple_checkbox input *::-moz-selection, .apple_checkbox input *:before::-moz-selection, .apple_checkbox input *:after::-moz-selection, .apple_checkbox input + label::-moz-selection {
+  background: none;
+}
+/* line 49, sass/checkbox.sass */
+.apple_checkbox input:before::selection, .apple_checkbox input:after::selection, .apple_checkbox input *::selection, .apple_checkbox input *:before::selection, .apple_checkbox input *:after::selection, .apple_checkbox input + label::selection {
+  background: none;
+}
+/* line 51, sass/checkbox.sass */
+.apple_checkbox input + label {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #f0f0f0;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 64, sass/checkbox.sass */
+.apple_checkbox input + label:after, .apple_checkbox input + label:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+/* line 70, sass/checkbox.sass */
+.apple_checkbox input + label:after {
+  left: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 75, sass/checkbox.sass */
+.apple_checkbox input + label:before {
+  display: none;
+}
+/* line 77, sass/checkbox.sass */
+.apple_checkbox input:checked {
+  width: 100px;
+}
+/* line 79, sass/checkbox.sass */
+.apple_checkbox input:checked + label:after {
+  left: 50%;
+}
+/* line 81, sass/checkbox.sass */
+.apple_checkbox input:checked + label {
+  background: #9FD6AE;
+}

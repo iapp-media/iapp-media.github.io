@@ -1,3 +1,31 @@
+.tinDownOut1 {
+    -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+
+@keyframes tinDownOut1 {
+    0%,
+    10% {
+        transform: rotateZ(0deg);
+        -ms--ms-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+    4%,
+    8% {
+        transform: perspective(200px) rotateZ(5deg);
+        -ms-transform: perspective(200px) rotateZ(5deg);
+        -moz-transform: perspective(200px) rotateZ(5deg);
+        -webkit-transform: perspective(200px) rotateZ(5deg);
+    }
+    2%,
+    6% {
+        transform: perspective(200px) rotateZ(-5deg);
+        -ms-transform: perspective(200px) rotateZ(-5deg);
+        -moz-transform: perspective(200px) rotateZ(-5deg);
+        -webkit-transform: perspective(200px) rotateZ(-5deg);
+    }
+}
 html {
     height: 100%;
 }
@@ -11,6 +39,8 @@ body {
     background-size: cover;
     height: 100%;
 }
+
+
 
 form#form1 {
     height: 100%;
@@ -32,11 +62,7 @@ form#form1 {
     text-align: center;
     color: #ff9933;
     font-size: 22px;
-    position: fixed;
-    left: 0;
-    width: 162px;
-    right: 0;
-    margin: auto;
+    margin: 0;
     line-height: 81px;
 }
 
@@ -127,15 +153,6 @@ a:active {
     color: #aaa;
 }
 
-.SinCheck span {
-    width: 100%;
-    display: block;
-}
-
-.SinCheck input[type="checkbox"] {
-    float: right;
-    border: 1px solid #7d7d7d;
-}
 
 .QMargin {
     margin: 12px 0;
@@ -524,7 +541,36 @@ a:active {
 }
 
 .iapplogo {
+           width: 106px;
+       height:100%;
+        background: url('../img/ministorelogo.png');
+            background-size: 100%;
+            background-repeat:no-repeat;
+            display:block;
+            position: absolute;
+    left: 0;
+   top:0;
+    }
+.toplogo {
+      width: 79px;
+       height:100%;
+        background: url('../img/ministorelogo.png');
+            background-size: 100%;
+            background-repeat:no-repeat;
+            display:block;
+}
+.cancelimgfun {
+       width: 50px;
     height: 100%;
+    background: url('../img/cancel-01.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: 50%;
 }
 
 .status input,
@@ -579,6 +625,19 @@ a:active {
 #slider {
     margin-bottom: 15px;
 }
+    #slider ul li label,.uploadBTN {
+        width: 50px;
+    height: 50px;
+    background:url('../img/uploadicon.png');
+    background-size:100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    }
+
 
 
 /*Contentmid & slider
@@ -1155,6 +1214,8 @@ a.iframe-info.cboxElement {
 .back-top {
     width: 50px;
     height: 50px;
+    background:url('../img/top.png');
+    background-size:100%;
     position: fixed;
     bottom: 13%;
     right: 2%;
@@ -1872,6 +1933,16 @@ a.iframe-info.cboxElement {
 .theme .boxpos a {
     border: none;
 }
+.scrollable-menu .boxpos .line {
+    display:block;
+    background: url('../img/lineicon.png');
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    width: 79px;
+    height:79px;
+    background-repeat:no-repeat;
+}
 
 .portalCreate {
     height: 100%;
@@ -2008,11 +2079,46 @@ a.iframe-info.cboxElement {
     margin: 0;
 }
 
-.insidecare label {
+.insidecare label,
+.SinCheck p {
     color: #838485;
     font-size: 120%;
     font-weight: inherit;
 }
+.SinCheck p {
+    margin:0;
+}
+.apple_checkbox-1 {
+    float:left;
+}
+.apple_checkbox span {
+    float:right;
+}
+ 
+/*.SinCheck *,.SinCheck {
+    outline:1px solid #f00;
+}*/
+
+
+.SinCheck {
+    position:relative;
+}
+.apple_checkbox input:checked + label {
+    background-color:#ff9933;
+}
+.SinCheck.apple_checkbox input + label:after, .apple_checkbox input + label:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+}
+.SinCheck.apple_checkbox input + label {
+    text-indent:-160%;
+}
+
+    
 
 .sendadress input,
 .sendadress textarea {
@@ -2254,6 +2360,7 @@ a.iframe-info.cboxElement {
     height: 30px;
     margin: 25px;
     right: 0;
+    top:0;
 }
 
 .menusandwich span {
@@ -2323,6 +2430,7 @@ a.iframe-info.cboxElement {
     letter-spacing: 0;
     display: inline-block;
     font-size: 15px;
+    box-shadow: 0px 1.5px 1px #888888;
 }
 
 .ListNVa {
@@ -2573,12 +2681,11 @@ a.iframe-info.cboxElement {
     font-size: 20px;
     color: #838485;
 }
+    .OpenCheckUI .right {
+        font-size: 16px;
+    }
 
-.OpenCheckUI .right span {
-    width: 100%;
-    text-align: right;
-    display: block;
-}
+
 
 .ThreeBTN,
 .ThreeBTN2 {
@@ -2729,87 +2836,26 @@ a.iframe-info.cboxElement {
     right: 0;
 }
 
-/*checkbox style*/
-/*.right label {
-    position: relative;
-        margin: .5rem;
-        font-family: Arial, sans-serif;
-        line-height: 135%;
-        cursor: pointer;
+.Sinfoheadimg * {
+    /*outline:1px solid #f00;*/
 }
-.right input:before {
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        content: "";
-        position: absolute;
-        z-index: 1;
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid #f2f2f2;
-    }
-.right input:checked:before {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        height: .8rem;
-        border-color: #009688;
-        border-top-style: none;
-        border-right-style: none;
-    }
-.right input:after {
-        content: "";
-        position: absolute;
-        top: -0.125rem;
-        left: 0;
-        width: 1.1rem;
-        height: 1.1rem;
-        background: #fff;
-        cursor: pointer;
-    }
-.right input {
-        position: relative;
-        top: -0.375rem;
-        margin: 0 1rem 0 0;
-        cursor: pointer;
-    }*/
-    
-
-
-
-
-.tinDownOut1 {
-    -webkit-animation: tinDownOut1 5s both infinite cubic-bezier(.87, -.41, .19, 1.44);
+.Sinfoheadimg > div {
+    width:100%;
+    height:111px;
+    border:1px solid #eee;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
 }
 
 
-@keyframes tinDownOut1 {
-    0%,
-    10% {
-        transform: rotateZ(0deg);
-        -ms--ms-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-    }
-    4%,
-    8% {
-        transform: perspective(200px) rotateZ(5deg);
-        -ms-transform: perspective(200px) rotateZ(5deg);
-        -moz-transform: perspective(200px) rotateZ(5deg);
-        -webkit-transform: perspective(200px) rotateZ(5deg);
-    }
-    2%,
-    6% {
-        transform: perspective(200px) rotateZ(-5deg);
-        -ms-transform: perspective(200px) rotateZ(-5deg);
-        -moz-transform: perspective(200px) rotateZ(-5deg);
-        -webkit-transform: perspective(200px) rotateZ(-5deg);
-    }
-}
+
+
+
+
 
 @media only screen and (max-width:480px) {
+    
     .FixTitle {
         line-height: 60px;
         font-size: 18px;
@@ -2847,10 +2893,7 @@ a.iframe-info.cboxElement {
         min-height: 60px;
         height: 60px;
     }
-    .iapplogo {
-        width: 80px;
-        height: auto;
-    }
+
     .search {
         position: relative;
         top: 11px;
@@ -2919,6 +2962,7 @@ a.iframe-info.cboxElement {
     .container > .navbar-header {
         margin: 0;
     }
+    
     .navbar-header {
         width: 50%;
         position: relative;
@@ -3031,6 +3075,10 @@ a.iframe-info.cboxElement {
     .swiper-button-next,.swiper-button-prev {
         display:none;
     }
+    .iapplogo{
+        width:79px;
+    }
+    
 }
 
 @media only screen and (max-width: 355px) {
