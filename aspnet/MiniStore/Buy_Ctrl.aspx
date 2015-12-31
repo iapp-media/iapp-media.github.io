@@ -7,7 +7,6 @@
     <div class="col-xs-12 libor ContentTop">
         <div class="backarrow" onclick="javascript:history.back()"></div>
         <h1 class="col-xs-10">購買商品明細</h1>
-
     </div>
     <ul class="buydivmove">
         <li class="productcare">

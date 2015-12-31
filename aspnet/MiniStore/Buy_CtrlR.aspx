@@ -5,7 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="col-xs-12 libor ContentTop">
-        <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />
+        <div class="backarrow" onclick="javascript:history.back()"></div>
+        <%--<img src="img/.png" alt="Alternate Text" class="col-xs-2" onclick="javascript:history.back()" />--%>
 
         <h1 class="col-xs-10">購買商品明細</h1>
 
