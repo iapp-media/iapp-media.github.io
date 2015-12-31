@@ -5,7 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="col-xs-12 libor ContentTop">
-    <%--  <a href="Default.aspx"> <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" /></a> --%>
+        <div class="backarrow" onclick="javascript:history.back()"></div>
+    <%--  <a href=""> <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" /></a> --%>
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>
         <h1 class="col-xs-10">問與答</h1> 
     </div>
