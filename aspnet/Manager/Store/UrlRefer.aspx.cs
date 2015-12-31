@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class UrlRefer : System.Web.UI.Page
+public partial class Store_UrlRefer : System.Web.UI.Page
 {
     JDB Main = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2")); 
     string Constr = System.Configuration.ConfigurationManager.AppSettings.Get("Database2");

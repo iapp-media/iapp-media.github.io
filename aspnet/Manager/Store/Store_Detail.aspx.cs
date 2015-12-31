@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Store_Mana : System.Web.UI.Page
+public partial class Store_Store_Detail : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

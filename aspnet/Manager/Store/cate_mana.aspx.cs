@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class cate_mana : System.Web.UI.Page
+public partial class Store_cate_mana : System.Web.UI.Page
 { 
     JDB Main = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("Database2"));
     CommTool Comm = new CommTool();
