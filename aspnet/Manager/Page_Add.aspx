@@ -1,8 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager.master" AutoEventWireup="true" CodeFile="Page_Add.aspx.cs" ValidateRequest="false"  Inherits="Page_Add" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Page_Add.aspx.cs" ValidateRequest="false"  Inherits="Page_Add" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Main_content" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+              <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">頁面資料</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
         <asp:Label ID="Label6" runat="server" Text=" "></asp:Label>
     <table class="form_tb">
         <tr>
@@ -99,5 +107,13 @@
             </td>
         </tr>
     </table>
+                      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+
 
