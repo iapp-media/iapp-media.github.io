@@ -56,6 +56,16 @@ $(document).ready(function() {
         $('.m-profile').hide();
         $('#m-login').show();
     });
+    $('#psimg').on('change','src',function () {
+        alert('123')
+    })
+    
+
+    $('#psimg').on('load', function () {
+        $('.Sinfoheadimg > div').css('height', 'auto')
+        //alert($(this).attr('src'));
+    });
+    
 
     $(document).ready(function () {
         // window.scrollTo(0, 10);
@@ -98,6 +108,7 @@ $(document).ready(function() {
         }); 
     });
 
+
     //頁面ajax
 
     
@@ -110,7 +121,7 @@ $(document).ready(function() {
         var sliderW2 = $('#slider').width();
         var sliderUlWidth = slideCount * sliderW2;
         
-        console.log('slider寬' + sliderW2);
+        //console.log('slider寬' + sliderW2);
         
 
         $('#slider').css({
@@ -181,7 +192,7 @@ $(document).ready(function() {
         $("#Allswiper").each(function () {
             var _Sliderindex = $(this).find('.swiper-slide-active').index(),
                 _SliderJum = $(this).find('.swiper-slide').eq(_Sliderindex).attr('data-src');
-            console.log(_Sliderindex, _SliderJum)
+            //console.log(_Sliderindex, _SliderJum)
             window.location = _SliderJum;
         });
     });
@@ -195,7 +206,7 @@ $(document).ready(function() {
                     var NewSrc = '',
                         NewIndex = $('.swiper-slide-active').index(),
                         NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
-                        console.log(NewSrc, NewIndex)
+                        //console.log(NewSrc, NewIndex)
                         window.location = NewSrc;
                 }
             })

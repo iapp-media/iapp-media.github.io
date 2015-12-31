@@ -19,7 +19,7 @@ namespace MiniStore
             {
                 if (Request.QueryString["SN"] != null)
                 {
-                    LSinfo.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"><img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\"/></a>";
+                    LSinfo.Text = "<a class=\"backarrow\" href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"></a>";
                     Main.ParaClear();
                     Main.ParaAdd("@SNID", Request.QueryString["SN"], SqlDbType.NVarChar);
                     str = " select *,(select Cate_Name from Product_Cate where IDNo=Store_Cate) SCName from Store_info where Store_ID in ( select IDNo from Store where Store_NID=@SNID) ";
