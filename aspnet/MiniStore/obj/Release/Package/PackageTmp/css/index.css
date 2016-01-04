@@ -1587,6 +1587,7 @@
         padding: 9px;
         float:left;
         width:50%;
+        height:43px;
     }
 #Leftwich .SandTitle {
     width:100%;
@@ -2621,7 +2622,6 @@
         width: 100%;
     }
 #SinfoTop {
-    height:229px;
     background-color:#eee;
 }
 .swiper-button-prev {

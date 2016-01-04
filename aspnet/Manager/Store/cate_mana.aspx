@@ -79,7 +79,9 @@
                                     &nbsp;
                                 </td>
                             </tr>
-                        </table> </ContentTemplate>
+                        </table> 
+
+                            </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>
                 </div>

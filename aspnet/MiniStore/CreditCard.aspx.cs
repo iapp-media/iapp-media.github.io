@@ -28,7 +28,8 @@ namespace MiniStore
                         string CreditNo = Main.Scalar("select max(idno) from Credit_Card where Customer_ID='" + Comm.User_ID() + "' and Order_no='" + DT.Rows[0]["Order_No"].ToString() + "' and Status='-99'");
                         //前輩說他們回傳可能會漏 所以此做session確保
                         Session["CreditNo"] = CreditNo;
-                        Form.Action = "https://acqtest.esunbank.com.tw/acq_online/online/sale42.htm";
+                        //Form.Action = "https://acq.esunbank.com.tw/acq_online/online/sale42.htm";  //正式
+                        Form.Action = "https://acqtest.esunbank.com.tw/acq_online/online/sale42.htm"; //測試
                         MID.Value = "8089011126";
                         CID.Value = "";
                         TID.Value = "EC000001";//EC000001(一般交易)、EC000002(分期)

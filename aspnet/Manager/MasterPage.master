@@ -39,24 +39,18 @@
                                 <i class="fa fa-bars icon"></i>
                             </button>
                             <ol class="breadcrumb navbar-breadcrumb">
-                              <%--  <li class="active">Licence</li>--%>
+                              <%--  <li class="active">Licence</li>--%> 
                             </ol>
                             <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                                 <i class="fa fa-th icon"></i>
                             </button>
                         </div>
-                        <ul class="nav navbar-nav navbar-right"> 
-                            <li class="dropdown"><a href="<%= ResolveUrl("~/Setup/Menu_Mana.aspx") %>" class="dropdown-toggle" role="button" aria-expanded="false"> 選單設定</a> </li>
-                               <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
-                                <i class="fa fa-times icon"></i>
-                            </button>
+                        <ul class="nav navbar-nav navbar-right">  
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench">Setting</i></a>
                                 <ul class="dropdown-menu animated fadeInDown">
-                                    <li class="title">Notification <span class="badge pull-right">0</span>
-                                    </li>
-                                    <li class="message">No new notification
-                                    </li>
+                                 <li class="title">  <a href="<%= ResolveUrl("~/Setup/Menu_Mana.aspx") %>"> 選單設定</a>
+                                    </li> 
                                 </ul>
                             </li>
                             <li class="dropdown danger">

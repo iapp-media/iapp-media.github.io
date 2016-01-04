@@ -140,6 +140,12 @@ $(document).ready(function () {
         });
     });
 
+    if ($('#ContentPlaceHolder1_Image1').attr('src') == '') {
+        $('#SinfoTop img').hide();
+    } else {
+        $('#SinfoTop img').show();
+    }
+
     jQuery(document).ready(function ($) {
         var slideCount = $('#slider ul li').length;
         var slideWidth = $('#slider ul li').width();

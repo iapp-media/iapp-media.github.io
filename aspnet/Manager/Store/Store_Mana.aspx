@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="GV" runat="server" CssClass="datatable table table-striped" AutoGenerateColumns="false" AllowPaging="true" AllowSorting="True" PageSize="20" OnRowDataBound="GV_RowDataBound" OnRowCommand="GV_RowCommand">
+                                <asp:GridView ID="GV" runat="server" CssClass="datatable table table-striped" AutoGenerateColumns="false" AllowPaging="true" AllowSorting="True" PageSize="20" OnRowDataBound="GV_RowDataBound" OnRowCommand="GV_RowCommand" DataKeyNames="SInfo_ID">
                                     <Columns>
                                         <asp:BoundField DataField="Store_Name" HeaderText="商店名稱" />
                                         <asp:BoundField DataField="Lv" HeaderText="會員等級" />

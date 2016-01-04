@@ -81,118 +81,112 @@
         <div class="page-title">
             <span class="title">Menu Setting</span>
         </div>
-        
+        <%--<div class="container" style="margin-top: 30px;">--%>
         <div class="row">
             <div class="col-xs-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="col-md-12   panel panel-default">
-                            <asp:UpdatePanel ID="UpdatePanel1" runat="server"><ContentTemplate>
-                            <div class="form-horizontal panel-body"  >
+                            <div class="form-horizontal panel-body">
                                 <div class="col-md-4  panel panel-default" style="border-left: none; border-top: none; border-bottom: hidden;">
-                                    <asp:TreeView ID="View1" runat="server" ImageSet="Simple" NodeIndent="10" ExpandDepth="0" OnSelectedNodeChanged="View1_SelectedNodeChanged">
-                                        <ParentNodeStyle Font-Bold="False" />
-                                        <HoverNodeStyle Font-Underline="True" ForeColor="#DD5555" />
-                                        <SelectedNodeStyle Font-Underline="True" ForeColor="#DD5555" HorizontalPadding="0px"
-                                            VerticalPadding="0px" />
-                                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
-                                            NodeSpacing="0px" VerticalPadding="0px" />
-                                    </asp:TreeView>
-                                    <asp:Literal ID="L" runat="server" Visible="False"></asp:Literal>
-                                    <asp:SqlDataSource ID="SD" runat="server"></asp:SqlDataSource>
+                                    <ul id="tree2">
+                                        <asp:Literal ID="Lmenu" runat="server"></asp:Literal>
+                                        <%-- <li><a onclick="javascript:alert(12);javascript:alert(1222);">TECH </a> 
+                            <ul>
+                                <li onclick="javascript:alert(32);">Company Maintenance </li>
+                                <li> asd
+                                    <ul>
+                                        <li>Reports
+                                            <ul>
+                                                <li>Report1 </li>
+                                                <li><a href="#">Report2</a> </li>
+                                                <li>12345</li>
+                                            </ul>
+                                        </li>
+                                        <li onclick="javascript:alert(2222);">Employee Maint.</li>
+                                    </ul>
+                                </li>
+                                <li>Human Resources</li>
+                            </ul>
+                        </li> --%>
+                                    </ul>
                                 </div>
+                                <%--  </div>
+                        </div>--%>
 
+                                <div class="col-md-8 col-xs-12 ">
+                                    <table class="form-horizontal " id="Table1" style="display: none">
+                                        <tr>
+                                            <td>選單名稱：</td>
+                                            <td>
+                                                <asp:TextBox ID="TName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>選單路徑：</td>
+                                            <td>
+                                                <asp:TextBox ID="TPath" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>排序：</td>
+                                            <td>
+                                                <asp:TextBox ID="TSort" runat="server" CssClass="form-control">0</asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>圖示：</td>
+                                            <td>
+                                                <asp:RadioButtonList ID="RBLPic" runat="server" RepeatColumns="6" RepeatDirection="Horizontal">
+                                                    <asp:ListItem Value="images/ico_001.jpg">&lt;img src='../images/ico_001.jpg' /&gt;</asp:ListItem>
+                                                    <asp:ListItem Value="images/ico_002.jpg">&lt;img src='../images/ico_002.jpg' /&gt;</asp:ListItem>
+                                                    <asp:ListItem Value="images/ico_003.jpg">&lt;img src='../images/ico_003.jpg' /&gt;</asp:ListItem>
+                                                </asp:RadioButtonList>
+                                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                                    點擊更多...
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>開啟框架：</td>
+                                            <td>
+                                                <asp:RadioButtonList ID="RBLtarget" runat="server" RepeatDirection="Horizontal">
+                                                    <asp:ListItem Value="main_TMMana" Selected="True">主要內容區</asp:ListItem>
+                                                    <asp:ListItem Value="left">左側選單區</asp:ListItem>
+                                                    <asp:ListItem Value="_blank">另開新視窗</asp:ListItem>
+                                                    <asp:ListItem Value="_top">取代現有框架</asp:ListItem>
+                                                </asp:RadioButtonList>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>控管：</td>
+                                            <td>
+                                                <%--  <div class="checkbox3 checkbox-inline checkbox-check checkbox-light">--%>
+                                                <asp:CheckBox ID="CB" runat="server" Text="控管" class="checkbox3 checkbox-inline checkbox-check checkbox-light" />&nbsp; 
 
-                                <div class="col-md-8 col-xs-12 " runat="server" id="Panel1" visible="false">
-                                    <div class="sub-title">
-                                        <asp:Label ID="Ltitle" runat="server" Text="Label"></asp:Label></div>
-                                    <div class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">選單名稱:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:TextBox ID="TName" runat="server" CssClass="form-control"></asp:TextBox>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">選單路徑:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:TextBox ID="TPath" runat="server" CssClass="form-control"></asp:TextBox>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">排序:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:TextBox ID="TSort" runat="server" CssClass="form-control"></asp:TextBox>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">圖示:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:RadioButtonList ID="RBLPic" runat="server" RepeatColumns="6" RepeatDirection="Horizontal" CssClass="col-xs-6">
-                                                        <asp:ListItem Value="images/ico_001.jpg">&lt;img src='../images/ico_001.jpg' /&gt;</asp:ListItem>
-                                                        <asp:ListItem Value="images/ico_002.jpg">&lt;img src='../images/ico_002.jpg' /&gt;</asp:ListItem>
-                                                        <asp:ListItem Value="images/ico_003.jpg">&lt;img src='../images/ico_003.jpg' /&gt;</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
-                                                        點擊更多...
-                                                    </button>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">開啟框架:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:RadioButtonList ID="RBLtarget" runat="server" RepeatDirection="Horizontal">
-                                                        <asp:ListItem Value="main_TMMana" Selected="True">主要內容區</asp:ListItem>
-                                                        <asp:ListItem Value="left">左側選單區</asp:ListItem>
-                                                        <asp:ListItem Value="_blank">另開新視窗</asp:ListItem>
-                                                        <asp:ListItem Value="_top">取代現有框架</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label">控管:</label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:Literal ID="Literasl2" runat="server"></asp:Literal>
-                                                    <asp:CheckBox ID="CB" runat="server" CssClass="checkbox3 checkbox-round checkbox-check checkbox-light col-xs-1" Text="控管" />
-                                                    (勾選表示此選單需設定權限才能瀏覽。)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-xs-2 control-label"></label>
-                                            <div class="col-xs-10">
-                                                <label class="control-label" style="font-weight: 100;">
-                                                    <asp:Button ID="BT_ADD" runat="server" Text="新增" CssClass="btn btn-primary" OnClick="BT_ADD_Click" />
-                                                    <asp:Button ID="BT_Update" runat="server" Text="修改" CssClass="btn btn-primary" OnClick="BT_Update_Click" />
-                                                    <asp:Button ID="BT_Del" runat="server" Text="刪除" CssClass="btn btn-primary" OnClick="BT_Del_Click" />
-                                                    <asp:Literal ID="L_IDNo" runat="server"></asp:Literal>
-                                                      <asp:Literal ID="Ref" runat="server"></asp:Literal>
-                                                       
-                                                     </label>
-                                            </div>
-                                        </div>
+ 
+                                         <%-- </div>--%>
+                                (勾選表示此選單需設定權限才能瀏覽。) 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <asp:Button ID="BAdd" runat="server" Text="新增" OnClick="BAdd_Click" />
+                                                <asp:Button ID="BEdit" runat="server" Text="修改" OnClick="BEdit_Click" />
+                                                <asp:Button ID="BDel" runat="server" Text="刪除" OnClick="BDel_Click" />
+                                                <br />
+                                                <asp:TextBox ID="Ref" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="Uid" runat="server"></asp:TextBox>
+                                                <%--                                                <asp:Label ID="Ref" runat="server" Text="Label"></asp:Label>
+                                                <asp:Label ID="Uid" runat="server" Text="Label"></asp:Label>--%>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                                    </div>
-                                    
                                 </div>
                             </div>
                         </div>
-                        </ContentTemplate></asp:UpdatePanel>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -1275,5 +1269,92 @@
     <%--</div>--%>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+    <script type="text/javascript">
+        $.fn.extend({
+            treed: function (o) {
+
+                var openedClass = 'glyphicon-minus-sign';
+                var closedClass = 'glyphicon-plus-sign';
+
+                if (typeof o != 'undefined') {
+                    if (typeof o.openedClass != 'undefined') {
+                        openedClass = o.openedClass;
+                    }
+                    if (typeof o.closedClass != 'undefined') {
+                        closedClass = o.closedClass;
+                    }
+                };
+                //initialize each of the top levels
+                var tree = $(this);
+                tree.addClass("tree");
+                tree.find('li').has("ul").each(function () {
+                    var branch = $(this); //li with children ul
+                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                    branch.addClass('branch');
+                    branch.on('click', function (e) {
+                        if (this == e.target) {
+                            var icon = $(this).children('i:first');
+                            icon.toggleClass(openedClass + " " + closedClass);
+                            $(this).children().children().toggle();
+                        }
+                    })
+                    branch.children().children().toggle();
+                });
+                //fire event from the dynamically added icon
+                tree.find('.branch .indicator').each(function () {
+                    $(this).on('click', function () {
+                        $(this).closest('li').click();
+                    });
+                });
+                //fire event to open branch if the li contains an anchor instead of text
+                tree.find('.branch>a').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+                //fire event to open branch if the li contains a button instead of text
+                tree.find('.branch>button').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+            }
+        });
+        //Initialization of treeviews
+
+        $('#tree1').treed();
+
+        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+
+        document.getElementById("ContentPlaceHolder1_Uid").style.display = "none";
+        document.getElementById("ContentPlaceHolder1_Ref").style.display = "none";
+        function setUid(Uid) {
+            // document.getElementById("ContentPlaceHolder1_Uid").nodeValue = Uid;
+            $("#ContentPlaceHolder1_Uid").val(Uid);
+            showBT()
+        }
+        function setRef(Ref) {
+            // document.getElementById("ContentPlaceHolder1_Ref").nodeValue = Ref;
+            $("#ContentPlaceHolder1_Ref").val(Ref);
+            showBT()
+        }
+
+        function showBT() {
+            document.getElementById("Table1").style.display = "";
+            if ($("#ContentPlaceHolder1_Uid").val() == "0") {
+                document.getElementById("ContentPlaceHolder1_BAdd").style.display = "";
+                document.getElementById("ContentPlaceHolder1_BDel").style.display = "none";
+                document.getElementById("ContentPlaceHolder1_BEdit").style.display = "none";
+            } else {
+                document.getElementById("ContentPlaceHolder1_BDel").style.display = "";
+                document.getElementById("ContentPlaceHolder1_BEdit").style.display = "";
+                document.getElementById("ContentPlaceHolder1_BAdd").style.display = "none";
+            }
+        }
+    </script>
 </asp:Content>
 

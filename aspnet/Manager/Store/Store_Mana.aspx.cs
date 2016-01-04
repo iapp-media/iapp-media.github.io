@@ -13,7 +13,7 @@ public partial class Store_Store_Mana : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            L.Text = " Select b.Store_Name,b.Lv,(select count(1) from Orders where Orders.Store_ID=a.IDNo and Month(Creat_Date)=Month(GETDATE())) as CtOrders," +
+            L.Text = " Select b.IDNo SInfo_ID, b.Store_Name,b.Lv,(select count(1) from Orders where Orders.Store_ID=a.IDNo and Month(Creat_Date)=Month(GETDATE())) as CtOrders," +
                      "       (select count(1) from UrlRefer where UrlRefer.SN=a.Store_NID) as pageview, " +
                      "       (select count(1) from Product where Product.Store_ID=a.IDNo) as CtProduct , " +
                      "       (select Cate_Name from Product_Cate where IDNo=b.Store_Cate ) as Store_Cate " +
@@ -48,9 +48,10 @@ public partial class Store_Store_Mana : System.Web.UI.Page
     }
     protected void GV_RowCommand(object sender, GridViewCommandEventArgs e)
     {
+        int i = int.Parse(e.CommandArgument.ToString());
         if (e.CommandName == "CN")
         {
-            Response.Redirect("Store_Detail.aspx");
+            Response.Redirect("Store_Detail.aspx?entry=" + GV.DataKeys[i][0] + "");
         }
     }
 }

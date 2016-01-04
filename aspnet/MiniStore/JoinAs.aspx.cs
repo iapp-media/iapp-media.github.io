@@ -30,7 +30,7 @@ namespace MiniStore
                 SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
                 if (SID != "")
                 {
-                    Session["Store_ID"] = SID; 
+                    Session["Store_ID"] = SID;
                     //int c = Comm.DeleCoookie("iapp_sid"); //暫時確保 1106
                     //int a = Comm.SaveCookie("iapp_sid", SID, 365);
 
