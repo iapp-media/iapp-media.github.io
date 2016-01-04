@@ -33,7 +33,7 @@
             <div class="Sendbox"> 
                 <p>輸入您的微店店名</p>
                 <asp:TextBox ID="TB_SNAME" runat="server"></asp:TextBox>
-                 <div>
+                 <div class="Sendbox_1">
                     <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="privacy.html">隱私權政策</a>》</strong>
                 </div>
                 <div>
