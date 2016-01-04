@@ -12,6 +12,9 @@ a:hover {
     text-decoration: none;
     color: #ff9932;
 }
+    a:focus {
+        outline:0;
+    }
 
 .navbar {
     min-height: 80px;
