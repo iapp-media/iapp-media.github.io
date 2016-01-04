@@ -75,8 +75,8 @@ namespace AppPortal
 
                         Tile1.Text = "<div class='item'>\n\r" +
                                     "   <div class='imgcenter'>\n\r" +
-                                    "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                    "      <p class=\"tile1\"><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                    "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/store-defaultimg.jpg'/></a></div>\n\r" +
+                                    "      <p class=\"tile1\"><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">三分鐘開微店</a></p>" + "\n\r" +
                                     "   </div>\n\r" +
                                     " </div>\n\r";
 
@@ -99,8 +99,8 @@ namespace AppPortal
 
                         Tile1.Text = "<div class='item'>\n\r" +
                                      "   <div class='imgcenter'>\n\r" +
-                                     "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\"  src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                     "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                     "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\"  src='img/store-defaultimg.jpg'/></a></div>\n\r" +
+                                     "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">三分鐘開微店</a></p>" + "\n\r" +
                                      "   </div>\n\r" +
                                      " </div>\n\r";
 
