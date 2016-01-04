@@ -116,6 +116,7 @@
     <Content Include="img\picture5.jpg" />
     <Content Include="img\picture6.jpg" />
     <Content Include="img\qr-iappmedia.jpg" />
+    <Content Include="img\store-defaultimg.jpg" />
     <Content Include="img\top.png" />
     <Content Include="js\act.js" />
     <Content Include="js\bootstrap.min.js" />

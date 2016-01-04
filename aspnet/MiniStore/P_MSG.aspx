@@ -51,8 +51,7 @@
                 <asp:TextBox ID="tbQuen" runat="server"  Class="form-control" ></asp:TextBox>
                 <div class="fRight" >
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><img src="img/send.png" /></asp:LinkButton>
-<%--                    <asp:ImageButton ID="btsend" runat="server" ImageUrl="img/send.png" OnClick="btsend_Click"   />--%>
-                </div> 
+                 </div> 
             </div>
         </div>
     </div>
