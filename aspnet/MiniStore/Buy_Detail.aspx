@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
+    <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
     <div class="col-xs-12 libor ContentTop">
         <div class="backarrow" onclick="javascript:history.back()"></div>
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>
@@ -50,9 +50,9 @@
                             <div class="col-xs-12 libor CBbot CBarea">
                                 <label for="" class="col-xs-12">產品介紹</label>
                                 <span class="Valuetextarea col-xs-12">
-                                    
-                                        <asp:Literal ID="TB_Description" runat="server"></asp:Literal>
-                                    
+
+                                    <asp:Literal ID="TB_Description" runat="server"></asp:Literal>
+
                                 </span>
                                 <%--    <asp:TextBox ID="TB_Description" runat="server" CssClass="col-xs-12"></asp:TextBox>--%>
                             </div>
@@ -64,19 +64,16 @@
 
                             <div class="col-xs-12 AllBGC">
                                 <div class="col-xs-9 col-sm-6 MsgBox">
-                                    <div class="row">
-                                        <div class="col-xs-4 MsgBox-mail">
-<%--                                            <a class="btn ymail" href="mailto:?subject=[Yahoo!奇摩購物中心推薦]ASUS Zenfone 5 A500KL (2G/32G) 5吋4G LTE智慧手機&amp;body=嗨！我想請你來看看Yahoo奇摩購物中心的商品。%0D%0A商品名稱：ASUS Zenfone 5 A500KL (2G/32G) 5吋4G LTE智慧手機%0D%0Ahttps://m.tw.buy.yahoo.com/gdsale/gdsale.asp?m=1&amp;gdid=5407788&amp;hpp=yml_item&amp;actcode=fprecmlike" title="EMail"> 
-                                                <img src="img/mail.png" alt="Alternate Text" /></a>--%>
-                                            <asp:Literal ID="L_Mail" runat="server"></asp:Literal>
-                                            <%--                                        <asp:ImageButton ID="BT_Mail" runat="server" ImageUrl="img/mail.png" CssClass="img-responsive"/>--%>
-                                        </div>
-                                        <div class="col-xs-4 MsgBox-line">
-                                            <asp:ImageButton ID="BT_Line" runat="server"  />
-                                        </div>
-                                        <div class="col-xs-4 MsgBox-fb">
-                                            <asp:ImageButton ID="BT_FB" runat="server" OnClick="BT_FB_Click" />
-                                        </div>
+                                    <div class="row"> 
+                                        <asp:Literal ID="L_Mail" runat="server"></asp:Literal>
+                                        <a>
+                                            <div class="col-xs-4 MsgBox-line">
+                                            </div>
+                                        </a>
+                                        <a onclick="FBshare()">
+                                            <div class="col-xs-4 MsgBox-fb">
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -86,4 +83,10 @@
             </ul>
         </div>
     </div>
+    <script type="text/javascript">
+        function FBshare() {
+            var u = location.href;
+            window.open('https://www.facebook.com/sharer.php?u=' + u + '', '_blank', width = 400, height = 400);
+        }
+    </script>
 </asp:Content>

@@ -26,7 +26,7 @@ namespace MiniStore
                     if (Main.Scalar("Select 1 from Product where IDNo=@Product_ID") != "")
                     {
                         L_Mail.Text = "<a href=\"mailto:?subject=[iApp微店推薦]pname&amp;body=嗨！我想請你來看看iApp微店的商品。%0D%0A商品名稱：name%0D%0A" + Comm.URL + "Ministore/Buy_Detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "" + "\" title=\"EMail\"> " +
-                                      "  </a>";
+                                      " <div class=\"col-xs-4 MsgBox-mail\"></div>  </a>";
                     }
                     else
                     {
@@ -136,12 +136,6 @@ namespace MiniStore
         }
          
 
-        protected void BT_FB_Click(object sender, ImageClickEventArgs e)
-        {
-            Uri u = Request.UrlReferrer;
-            string aa = "https://www.facebook.com/sharer.php?u=" + u;
-            Response.Write("<script> window.open('" + aa + "', '_blank', width=400,height=400);</script>");
-
-        } 
+       
     }
 }

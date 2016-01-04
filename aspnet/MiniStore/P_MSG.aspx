@@ -3,15 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="col-xs-12 libor ContentTop">
         <div class="backarrow" onclick="javascript:history.back()"></div>
-    <%--  <a href=""> <img src="img/backarrow.png" alt="Alternate Text" class="col-xs-2" /></a> --%>
+
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>
-        <h1 class="col-xs-10">問與答</h1> 
+        <h1 class="col-xs-10">問與答</h1>
     </div>
     <div class="col-xs-12 promana">
-        <div class="row"> 
+        <div class="row">
             <ul>
                 <li class="productcare">
                     <div class="col-xs-12 insidecare FBMargin">
@@ -47,12 +47,12 @@
                 </li>
             </ul>
             <div class="col-xs-12 fixBar">
-                <asp:TextBox ID="tbQuen" runat="server" AutoPostBack="true" Class="form-control" Rows="3"></asp:TextBox>
-                <div class="fRight">
-                    <%--  <img src="img/send.png" alt="Alternate Text" />--%>
-                    <asp:ImageButton ID="btsend" runat="server" ImageUrl="img/send.png" OnClick="btsend_Click" />
-                </div>
-                <%--<asp:Button ID="btsend" runat="server" Text="發送" OnClick="btsend_Click" CssClass="btn btn-warning col-xs-2 sendcareButtom" OnClientClick="fun2()" />--%>
+               
+                <asp:TextBox ID="tbQuen" runat="server"  Class="form-control" ></asp:TextBox>
+                <div class="fRight" >
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><img src="img/send.png" /></asp:LinkButton>
+<%--                    <asp:ImageButton ID="btsend" runat="server" ImageUrl="img/send.png" OnClick="btsend_Click"   />--%>
+                </div> 
             </div>
         </div>
     </div>

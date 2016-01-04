@@ -55,14 +55,17 @@
                     </table>
                 </div>
             </div>
-            
+                            <div>
+                    <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="../ministore/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="../ministore/privacy.html">隱私權政策</a>》</strong>
+                                    </div>
+
             <div class="confirm">
                 <asp:Button ID="Button1" runat="server" Text="儲存" OnClick="regBtn1_Click" CssClass="save-1" />
             </div>
             <div class="close"> 
                 <asp:Button ID="Button2" runat="server" Text="取消" CssClass="cancel-1" OnClientClick="window.open('login.aspx', '_self', '');" />
             </div>
-        </div>
+        </div> 
     </form>
 </body>
 <script src="js/jquery-2.1.4.min.js"></script>
