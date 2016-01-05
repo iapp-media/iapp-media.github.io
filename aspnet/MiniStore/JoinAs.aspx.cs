@@ -13,23 +13,23 @@ namespace MiniStore
         JDB Main = new JDB();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    if (Comm.User_ID() == -1)
-            //    {
-            //        string jump = "";
-            //        jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/JoinAs.aspx") + "&jump=store";
-            //        Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
-            //        return;
-            //    }
-            //    string SID = "";
-            //    SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
-            //    if (SID != "")
-            //    {
-            //        Session["Store_ID"] = SID;
-            //        Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
-            //    }
-            //}
+            if (!IsPostBack)
+            {
+                if (Comm.User_ID() == -1)
+                {
+                    string jump = "";
+                    jump = "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../MiniStore/JoinAs.aspx") + "&jump=store";
+                    Response.Write("<Script>alert('請先登入');window.open('" + jump + "','_self')</Script>");
+                    return;
+                }
+                string SID = "";
+                SID = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
+                if (SID != "")
+                {
+                    Session["Store_ID"] = SID;
+                    Response.Redirect(HttpUtility.UrlDecode(HttpUtility.UrlEncode("../StoreMana/default.aspx")));
+                }
+            }
         }
         protected void BT_SNAME_Click(object sender, EventArgs e)
         {

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="col-xs-12 libor ContentTop">
-        <div class="backarrow" onclick="javascript:history.back()"></div>
+        <%--<div class="backarrow" onclick="javascript:history.back()"></div>--%>
 
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>
         <h1 class="col-xs-10">問與答</h1>
