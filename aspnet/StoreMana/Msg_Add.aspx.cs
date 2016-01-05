@@ -17,20 +17,23 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["entry"] == null)
+                if (Session["Store_ID"] != null)
                 {
-                    Response.Redirect("Msg_Mana.aspx");
-                }
-                Main.ParaClear();
-                Main.ParaAdd("@idno", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int);
+                    if (Request.QueryString["entry"] == null)
+                    {
+                        Response.Redirect("Msg_Mana.aspx");
+                    }
+                    Main.ParaClear();
+                    Main.ParaAdd("@idno", Main.Cint2(Request.QueryString["entry"].ToString()), System.Data.SqlDbType.Int);
 
-                DataTable DT = Main.GetDataSetNoNull("select idno,Question,Ans from product_msg where idno=@idno");
-                if (DT.Rows.Count > 0)
-                {
-                    TB_Qen.Text = DT.Rows[0]["Question"].ToString();
-                    TB_Ans.Text = DT.Rows[0]["Ans"].ToString();
-                }
+                    DataTable DT = Main.GetDataSetNoNull("select idno,Question,Ans from product_msg where idno=@idno");
+                    if (DT.Rows.Count > 0)
+                    {
+                        TB_Qen.Text = DT.Rows[0]["Question"].ToString();
+                        TB_Ans.Text = DT.Rows[0]["Ans"].ToString();
+                    }
 
+                }
             }
         }
 

@@ -38,7 +38,7 @@
                         <asp:Button ID="BT_Search" runat="server" Text="查詢" OnClick="BT_Search_Click" CssClass="btn btn-warning col-xs-12 SBuyCar" />
                     </div>
                     <div class="col-xs-12 libor paynumber padReset ManaLBG">
-                        <asp:Repeater ID="RP1" runat="server" OnItemCommand="RP1_ItemCommand">
+                        <asp:Repeater ID="RP1" runat="server" OnItemCommand="RP1_ItemCommand"  >
                             <HeaderTemplate>
                                 <div class="ProMLtit col-xs-12">
                                     <div class="col-xs-3">&nbsp</div>
@@ -111,10 +111,12 @@
                                     </div>
                                 </div>
                             </ItemTemplate>
-                        </asp:Repeater>
+                           
+                        </asp:Repeater> 
+                                       
                     </div>
                     <asp:Literal ID="L" runat="server" Visible="false"></asp:Literal>
-                    <asp:SqlDataSource ID="SD1" runat="server"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SD1" runat="server"   ></asp:SqlDataSource>
                 </div>
             </div>
         </li>

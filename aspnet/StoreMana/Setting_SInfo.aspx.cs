@@ -17,51 +17,55 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-              //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Session["Store_ID"].ToString() + "'");
-                DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Session["Store_ID"].ToString() + "'");
-                if (DT.Rows.Count > 0)
+                if (Session["Store_ID"] != null)
                 {
-                    //Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
-                    //Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
-                    Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment' and Status in (" + Main.Scalar("select substring(Payment_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
-                    Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery' and Status in (" + Main.Scalar("select substring(Delivery_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
-
-                    if (DT.Rows[0]["Payment"].ToString() != "")
+                    //   TBStoreNID.Text = Main.Scalar("select Store_NID from store where idno='" + Session["Store_ID"].ToString() + "'");
+                    DataTable DT = Main.GetDataSetNoNull("select * from Store_info where Store_ID='" + Session["Store_ID"].ToString() + "'");
+                    if (DT.Rows.Count > 0)
                     {
-                        string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
-                        for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                        //Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment'", "Memo", "Status");
+                        //Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery'", "Memo", "Status");
+                        Main.FillDDP(CB_Payment, "select Status,Memo from def_Status where Col_Name='Payment' and Status in (" + Main.Scalar("select substring(Payment_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
+                        Main.FillDDP(CB_Delivery, "select Status,Memo from def_Status where Col_Name='Delivery' and Status in (" + Main.Scalar("select substring(Delivery_STA,2,99) from Product_Cate where IDNo=" + DT.Rows[0]["Store_Cate"].ToString()) + ") ", "Memo", "Status");
+
+                        if (DT.Rows[0]["Payment"].ToString() != "")
                         {
-                            Comm.GetDDL(CB_Payment, listPayment[i]);
+                            string[] listPayment = DT.Rows[0]["Payment"].ToString().Substring(1).Split(',');
+                            for (int i = 0; i < Main.Cint2(listPayment.Length.ToString()); i++)
+                            {
+                                Comm.GetDDL(CB_Payment, listPayment[i]);
+                            }
                         }
+                        if (DT.Rows[0]["Delivery"].ToString() != "")
+                        {
+                            string[] listDelivery = DT.Rows[0]["Delivery"].ToString().Substring(1).Split(',');
+                            for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
+                            {
+                                Comm.GetDDL(CB_Delivery, listDelivery[i]);
+                            }
+                        }
+
+                        TBName.Text = DT.Rows[0]["Store_Name"].ToString();
+                        TBBankName.Text = DT.Rows[0]["Bank_Name"].ToString();
+                        TBBankNo.Text = DT.Rows[0]["Bank_No"].ToString();
+                        TBACC.Text = DT.Rows[0]["Bank_ACC"].ToString();
+                        TBACName.Text = DT.Rows[0]["Bank_ACName"].ToString();
+                        TBAddr.Text = DT.Rows[0]["Addr"].ToString();
+                        TBTEL.Text = DT.Rows[0]["TEL"].ToString();
+                        TBCEO.Text = DT.Rows[0]["CEOName"].ToString();
+
+                        Comm.GetDDL(DLlayout, DT.Rows[0]["layout"].ToString());
+
+                        strBankName = DT.Rows[0]["Bank_Name"].ToString();
+                        strBankNo = DT.Rows[0]["Bank_No"].ToString();
+                        strACC = DT.Rows[0]["Bank_ACC"].ToString();
+                        strACName = DT.Rows[0]["Bank_ACName"].ToString();
+                        psimg.ImageUrl = Comm.MiStoreUrl + DT.Rows[0]["Simg"].ToString();
+                        TB_DayOff.Text = DT.Rows[0]["DayOff"].ToString();
+                        TB_OPTime.Text = DT.Rows[0]["OPTime"].ToString();
                     }
-                    if (DT.Rows[0]["Delivery"].ToString() != "")
-                    {
-                        string[] listDelivery = DT.Rows[0]["Delivery"].ToString().Substring(1).Split(',');
-                        for (int i = 0; i < Main.Cint2(listDelivery.Length.ToString()); i++)
-                        {
-                            Comm.GetDDL(CB_Delivery, listDelivery[i]);
-                        }
-                    } 
-
-                    TBName.Text = DT.Rows[0]["Store_Name"].ToString();
-                    TBBankName.Text = DT.Rows[0]["Bank_Name"].ToString();
-                    TBBankNo.Text = DT.Rows[0]["Bank_No"].ToString();
-                    TBACC.Text = DT.Rows[0]["Bank_ACC"].ToString();
-                    TBACName.Text = DT.Rows[0]["Bank_ACName"].ToString();
-                    TBAddr.Text = DT.Rows[0]["Addr"].ToString();
-                    TBTEL.Text = DT.Rows[0]["TEL"].ToString();
-                    TBCEO.Text = DT.Rows[0]["CEOName"].ToString();
-
-                    Comm.GetDDL(DLlayout, DT.Rows[0]["layout"].ToString());
-
-                    strBankName = DT.Rows[0]["Bank_Name"].ToString();
-                    strBankNo = DT.Rows[0]["Bank_No"].ToString();
-                    strACC = DT.Rows[0]["Bank_ACC"].ToString();
-                    strACName = DT.Rows[0]["Bank_ACName"].ToString();
-                    psimg.ImageUrl = Comm.MiStoreUrl + DT.Rows[0]["Simg"].ToString();
-                    TB_DayOff.Text = DT.Rows[0]["DayOff"].ToString();
-                    TB_OPTime.Text =  DT.Rows[0]["OPTime"].ToString();
                 }
+
             }
         }
 

@@ -18,14 +18,17 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-                L.Text = "select * ,CONVERT(varchar(10), Creat_Date, 120) AS CD " +
-    ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment " +
-    ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
-    ",( select User_Name from users where IDNo=Customer_ID) User_name " +
-    " from orders where store_ID ='" + Session["Store_ID"].ToString() + "'";
-                SD1.SelectCommand = L.Text;
-                SD1.ConnectionString = Main.ConnStr;
-                RP1.DataSourceID = SD1.ID;
+                if (Session["Store_ID"] != null)
+                {
+                    L.Text = "select * ,CONVERT(varchar(10), Creat_Date, 120) AS CD " +
+        ",(select Memo from def_Status where  Col_Name='Payment' and Status=Payment_ID ) Payment " +
+        ",(Select Memo from def_Status where Title='Order_STA' and status=orders.Status) NSta" +
+        ",( select User_Name from users where IDNo=Customer_ID) User_name " +
+        " from orders where store_ID ='" + Session["Store_ID"].ToString() + "'";
+                    SD1.SelectCommand = L.Text;
+                    SD1.ConnectionString = Main.ConnStr;
+                    RP1.DataSourceID = SD1.ID;
+                }
             }
 
         }

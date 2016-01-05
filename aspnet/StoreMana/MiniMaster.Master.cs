@@ -11,27 +11,30 @@ namespace StoreMana.Mini
     {
         JDB Main =new JDB();
         CommTool Comm = new CommTool();
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            if (Comm.User_ID() == -1)
+            {
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
+            }
+            else
+            {
+                Session["Store_ID"] = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             if (!IsPostBack)
             {
-                if (Comm.User_ID() == -1)
-                {
-                    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
-                }
-                else
-                {
-                    Session["Store_ID"] = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
-                }
+                
 
                 if (Session["Store_ID"] == null)
                 {
                     Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
-
                 }
                 else
-                {
-
+                { 
                     Main.ParaClear();
                     Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);
                     if (Main.Scalar("Select isnull(sum(ckStep),0) from Store_info where store_id=@SID") == "0")
@@ -51,10 +54,10 @@ namespace StoreMana.Mini
 
         protected void LBLogout_Click(object sender, EventArgs e)
         {
-            //if (Comm.DeleCoookie("iapp_sid") == 1)
-            //{
-            //    Response.Write("<Script>window.open('" + "../Login/m-login.aspx?s=1&done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>"); 
-            //} 
+            if (Comm.DeleCoookie("iapp_uid") == 1)
+            {
+                Response.Write("<Script>window.open('" + "../Login/m-login.aspx?done=" + HttpUtility.UrlEncode("../StoreMana/default.aspx") + "&jump=store','_self')</Script>");
+            }
         }
     }
 }

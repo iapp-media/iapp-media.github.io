@@ -18,7 +18,10 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                 getdate(); 
+                if (Session["Store_ID"] != null)
+                {
+                    getdate();
+                }
             }
         }
 

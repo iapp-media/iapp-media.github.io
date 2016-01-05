@@ -19,16 +19,19 @@ namespace StoreMana.Mini
         {
             if (!IsPostBack)
             {
-                Main.ParaClear();
-                Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
-                str = "select * from Product_Cate where store_id=@SID  union all " +
-                      " select * from Product_Cate where ref in ( " +
-                      " select Store_Cate from Store_info where Store_ID=@SID)";
+                if (Session["Store_ID"] != null)
+                {
+                    Main.ParaClear();
+                    Main.ParaAdd("@SID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
+                    str = "select * from Product_Cate where store_id=@SID  union all " +
+                          " select * from Product_Cate where ref in ( " +
+                          " select Store_Cate from Store_info where Store_ID=@SID)";
 
-                Main.FillDDP(DL_Cate, str, "Cate_Name", "IDNO");
+                    Main.FillDDP(DL_Cate, str, "Cate_Name", "IDNO");
 
-                Getentry();
-                loadImg();
+                    Getentry();
+                    loadImg();
+                }
             }
         }
         void loadImg()

@@ -11,7 +11,7 @@ namespace MiniStore
     {
         JDB Main = new JDB();
         CommTool Comm = new CommTool();
-
+        string str = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -39,38 +39,52 @@ namespace MiniStore
                     ",(select top 1 FilePath from Product_Img where Product_ID in ( select top 1 Item_ID from Order_Content where Order_Content.Order_ID=a.IDNo ) ) FilePath from Orders a " +
                          "inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status " +
                 " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 and a.Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')";
-
-                SD1.SelectCommand = L.Text;
                 SD1.ConnectionString = Main.ConnStr;
+                SD1.SelectCommand = L.Text;
                 RP1.DataSourceID = SD1.ID;
+                ShowNoData(L.Text);
             }
+          
         }
 
         protected void BT_Search_Click(object sender, EventArgs e)
-        { 
+        {
 
-            L.Text = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT " +
+            str = "Select IDNo,Order_No,CONVERT(varchar(12),Creat_Date, 111) CDate,b.Memo,Total_AMT " +
                 ",(select top 1 FilePath from Product_Img where Product_ID in ( select top 1 Item_ID from Order_Content where Order_Content.Order_ID=a.IDNo ) ) FilePath from Orders a " +
                  "inner join (select Memo,Status from def_Status where Title='Order_STA') b on a.Status=b.Status " +
             " Where a.Customer_ID='" + Comm.User_ID() + "'  and DATEDIFF(MONTH,a.Creat_Date,getdate()) < 3 and a.Store_ID in (select IDNo from Store where Store_NID='" + Request.QueryString["SN"] + "')";
             
             if (DLDate.SelectedValue != null)
             {
-                L.Text += " and DATEDIFF(MONTH,a.Creat_Date,getdate()) " + DLDate.SelectedValue + "3";
+                str += " and DATEDIFF(MONTH,a.Creat_Date,getdate()) " + DLDate.SelectedValue + "3";
             }
-            if (DL_Payment.SelectedValue != "")
+            if (DL_Payment.SelectedValue.ToString() != "")
             {
-                L.Text += " and Payment_ID='" + DL_Payment.SelectedValue + "'";
+                str += " and Payment_ID='" + DL_Payment.SelectedValue + "'";
             }
             if (TB_Search.Text != "")
             {
-                L.Text += " and Product_Name like '%" + TB_Search.Text + "'%";
+                str += " and IDNo in (Select distinct a.Order_ID from Order_Content a inner join product b on a.Item_ID=b.IDNo where b.Product_Name like '%" + TB_Search.Text + "%') ";
+               // L.Text += " and Product_Name like '%" + TB_Search.Text + "%'";
             }
-            SD1.SelectCommand = L.Text;
+            L.Text = str;
             SD1.ConnectionString = Main.ConnStr;
+            SD1.SelectCommand = L.Text;
             RP1.DataSourceID = SD1.ID;
+            ShowNoData(L.Text);
         }
-
+        void ShowNoData(string aa) {
+            System.Data.DataTable DT = Main.GetDataSetNoNull(aa);
+            if (DT.Rows.Count > 0)
+            { 
+             
+            }
+            else {
+                Response.Write("<script>alert('查無資料')</script>");
+                 
+            }
+        }
         protected void RP1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -100,6 +114,9 @@ namespace MiniStore
             
             }
         }
+         
+
+         
         //public string ShowDetail(object IDNO)
         //{
         //    if (IDNO.ToString().Length > 0)

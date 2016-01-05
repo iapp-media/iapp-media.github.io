@@ -15,12 +15,14 @@ namespace StoreMana
         protected void Page_Load(object sender, EventArgs e)
         {
              if (!IsPostBack)
-            {
-                Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Session["Store_ID"].ToString() + "' ", "name", "IDNO"); ;
-                L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday "+
-                         ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
-                         " from product_msg a where a.Product_ID in (select IDNo from Product where store_id='" + Session["Store_ID"].ToString() + "') order by CreatDate DESC";
-
+             {
+                 if (Session["Store_ID"] != null)
+                 {
+                     Main.FillDDP(DL_Pname, " select IDNO,(Product_No+'-'+Product_Name) name from Product  where Store_ID='" + Session["Store_ID"].ToString() + "' ", "name", "IDNO"); ;
+                     L.Text = "Select a.idno,Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday " +
+                              ",isnull((CONVERT(nvarchar, DATEDIFF(DAY,RDate,getdate()))+'天前'),'') reday  ,(select top 1 FilePath from Product_Img b  where b.Product_ID=a.Product_ID) FilePath" +
+                              " from product_msg a where a.Product_ID in (select IDNo from Product where store_id='" + Session["Store_ID"].ToString() + "') order by CreatDate DESC";
+                 }
             }
 
             SD1.SelectCommand = L.Text;

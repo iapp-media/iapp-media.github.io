@@ -33,17 +33,17 @@ namespace MiniStore
                         Response.Redirect("Default.aspx?SN='" + Request.QueryString["SN"] + "'");
                     }
 
-                    if (Comm.User_ID() != -1)
-                    {
-                        Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int); 
-                    }
-                    else
-                    {
-                        Main.ParaAdd("@Cust_ID", Main.Cint2("2"), SqlDbType.Int);
-                    }
+                    //if (Comm.User_ID() != -1)
+                    //{
+                    //    Main.ParaAdd("@Cust_ID", Main.Cint2(Comm.User_ID().ToString()), SqlDbType.Int); 
+                    //}
+                    //else
+                    //{
+                    //    Main.ParaAdd("@Cust_ID", Main.Cint2("2"), SqlDbType.Int);
+                    //}
 
-                      Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
-                                  " ( @Product_ID, @Cust_ID, getdate())");
+                    //  Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
+                    //              " ( @Product_ID, @Cust_ID, getdate())");
                       L_Back.Text = "<a class=\"backarrow\" href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"></a> ";
 
                     LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +

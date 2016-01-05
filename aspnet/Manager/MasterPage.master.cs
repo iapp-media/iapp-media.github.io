@@ -16,6 +16,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         if (!IsPostBack)
         {
+            if (Session["ACC"] == null) { Response.Redirect("Login.aspx"); }
             GetMenu();
         }
 

@@ -18,17 +18,16 @@ namespace MiniStore
 
                 if (Request.QueryString["SN"] == null)
                 {
-                    Response.Redirect("Default.aspx?SN=OfficACC");
+                    Response.Redirect("StoreFair.aspx?t=10");
                 }
                 else
                 {
                     if (Main.Scalar("select 1 from store where Store_NID='" + Request.QueryString["SN"] + "'") != "1")
                     {
-                        Response.Redirect("Default.aspx?SN=OfficACC");
+                        Response.Redirect("StoreFair.aspx?t=10");
                     }
                 }
-               // Page.ClientScript.RegisterStartupScript(this.GetType(), "writeUrl", "writeUrl()", true);
-          
+               
                 //string jump = "";
                 //if (Comm.User_ID() == -1)
                 //{

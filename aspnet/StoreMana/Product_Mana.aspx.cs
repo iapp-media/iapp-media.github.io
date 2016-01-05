@@ -17,22 +17,25 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Main.ParaClear();
-                Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.Int);
+                if (Session["Store_ID"] != null)
+                {
+                    Main.ParaClear();
+                    Main.ParaAdd("@SID", Session["Store_ID"].ToString(), System.Data.SqlDbType.Int);
 
-                str = "select * from Product_Cate where store_id=@SID  union all " +
-                      " select * from Product_Cate where ref in ( " +
-                      " select Store_Cate from Store_info where Store_ID=@SID)";
+                    str = "select * from Product_Cate where store_id=@SID  union all " +
+                          " select * from Product_Cate where ref in ( " +
+                          " select Store_Cate from Store_info where Store_ID=@SID)";
 
-                Main.FillDDP(DL, str, "Cate_Name", "IDNO");
+                    Main.FillDDP(DL, str, "Cate_Name", "IDNO");
 
 
-                L.Text = " Select a.IDNo,a.Product_Name,Replace(Convert(varchar(20),CONVERT(money,Price),1),'.00','') Price,CONVERT(varchar(12), a.Creat_Date, 111) AS CDate ,b.FilePath " +
-                        " From product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 " +
-                        " where Tmp_IDNo > 0 AND  STORE_ID='" + Session["Store_ID"].ToString() + "' ";
-                SD1.SelectCommand = L.Text;
-                SD1.ConnectionString = Main.ConnStr;
-                RP1.DataSourceID = SD1.ID;
+                    L.Text = " Select a.IDNo,a.Product_Name,Replace(Convert(varchar(20),CONVERT(money,Price),1),'.00','') Price,CONVERT(varchar(12), a.Creat_Date, 111) AS CDate ,b.FilePath " +
+                            " From product a inner join Product_Img b on a.IDNo=b.Product_ID and b.Num=1 " +
+                            " where Tmp_IDNo > 0 AND  STORE_ID='" + Session["Store_ID"].ToString() + "' ";
+                    SD1.SelectCommand = L.Text;
+                    SD1.ConnectionString = Main.ConnStr;
+                    RP1.DataSourceID = SD1.ID;
+                }
             }
         }
 

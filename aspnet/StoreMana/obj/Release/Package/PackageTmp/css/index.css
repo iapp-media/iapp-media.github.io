@@ -2841,11 +2841,14 @@ a.iframe-info.cboxElement {
 }
 .Sinfoheadimg > div {
     width:100%;
-    height:111px;
+    height:427px;
     border:1px solid #eee;
     border-radius:8px;
     -webkit-border-radius:8px;
     -moz-border-radius:8px;
+}
+#slider ul {
+   width:400%;
 }
 
 
@@ -2853,9 +2856,10 @@ a.iframe-info.cboxElement {
 
 
 
-
 @media only screen and (max-width:480px) {
-    
+    .Sinfoheadimg > div {
+        height:217px;
+    }
     .FixTitle {
         line-height: 60px;
         font-size: 18px;

@@ -16,12 +16,15 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                SD1.SelectParameters.Clear();
-                SD1.SelectParameters.Add("Store_ID", Session["Store_ID"].ToString());
-                L1.Text = "select * from Store_User where store_id=@Store_ID";
-                SD1.SelectCommand = L1.Text;
-                SD1.ConnectionString = Main.ConnStr;
-                RP1.DataSourceID = SD1.ID;
+                if (Session["Store_ID"] != null)
+                {
+                    SD1.SelectParameters.Clear();
+                    SD1.SelectParameters.Add("Store_ID", Session["Store_ID"].ToString());
+                    L1.Text = "select * from Store_User where store_id=@Store_ID";
+                    SD1.SelectCommand = L1.Text;
+                    SD1.ConnectionString = Main.ConnStr;
+                    RP1.DataSourceID = SD1.ID;
+                }
             }
             
         }

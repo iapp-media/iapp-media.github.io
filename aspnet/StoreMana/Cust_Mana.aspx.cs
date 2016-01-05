@@ -16,7 +16,10 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Dataload();
+                if (Session["Store_ID"] != null)
+                {
+                    Dataload();
+                }
             }
         } 
         protected void BT_Search_Click(object sender, EventArgs e)

@@ -16,17 +16,20 @@ namespace StoreMana
         {
             if (!IsPostBack)
             {
-                Main.ParaClear();
-                Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
-
-                if (Main.Scalar("select 1 from Store_Bonus where Store_ID=@Store_ID") != "")
+                if (Session["Store_ID"] != null)
                 {
-                    DataTable DT = Main.GetDataSetNoNull("select * from Store_Bonus");
-                    if (DT.Rows.Count > 0)
+                    Main.ParaClear();
+                    Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), SqlDbType.Int);
+
+                    if (Main.Scalar("select 1 from Store_Bonus where Store_ID=@Store_ID") != "")
                     {
-                        if ( DT.Rows[0]["Isable"].ToString()  =="1") { ISBonus.Checked = true;   } else { ISBonus.Checked = false; }
-                        TBPoint.Text = DT.Rows[0]["Bpoint"].ToString();
-                        TBPrice.Text = DT.Rows[0]["Discount"].ToString();
+                        DataTable DT = Main.GetDataSetNoNull("select * from Store_Bonus");
+                        if (DT.Rows.Count > 0)
+                        {
+                            if (DT.Rows[0]["Isable"].ToString() == "1") { ISBonus.Checked = true; } else { ISBonus.Checked = false; }
+                            TBPoint.Text = DT.Rows[0]["Bpoint"].ToString();
+                            TBPrice.Text = DT.Rows[0]["Discount"].ToString();
+                        }
                     }
                 }
             }
