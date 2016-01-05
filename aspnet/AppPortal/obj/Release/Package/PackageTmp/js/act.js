@@ -311,10 +311,14 @@ function starit(obj) {
 function toggleMy() {
     if (getValue("fn") == "my") { window.open("portal.aspx", "_self"); } else { window.open("portal.aspx?fn=my", "_self"); }
 }
+
 //function clickMin() {
 //    if (getValue("t") == "10") {
-//        $('.tile1 a').text('開微店');
-//        $('.PortalCreat .navbar-btn2 span.changtext:contains(微創作)').text('開微店');
+//        var getstore_img = $('#maker_url').attr('src');
+//        console.log(getstore_img)
+//        $('#maker_url').attr('src', 'img/store-defaultimg.jpg');
+//    } else {
+//        $('#maker_url').attr('src', getstore_img);
 //    }
 //}
 //clickMin();

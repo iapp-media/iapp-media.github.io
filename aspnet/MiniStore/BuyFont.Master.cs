@@ -72,7 +72,7 @@ namespace MiniStore
                     {
                         // 已登入(管理者)
                         L_MyStore.Text = "  <li><a href=\"http://www.iapp-media.com/StoreMana/\">我的微店後台 <span>(" + Main.Scalar("select Store_Name from Store_info where Store_ID in (select IDNo from Store where User_ID=" + Comm.User_ID() + ")") + ")</span></a></li>" +
-                                         "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
+                                         "  <li><a href=\"http://www.iapp-media.com/MiniStore/StoreFair.aspx?t=10\">微店市集</a></li> " +
                                          "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                         lilogout.Visible = true;
                     }
@@ -89,7 +89,7 @@ namespace MiniStore
                         }
                         //<li><a href=\"JoinAs.aspx\">打造行動微店</a></li>
                         L_MyStore.Text += "  <li class=\"disabled\">加入行動分店</li>" +
-                              "  <li><a href=\"http://www.iapp-media.com/portal/portal.aspx?t=10\">微店市集</a></li> " +
+                              "  <li><a href=\"http://www.iapp-media.com/MiniStore/StoreFair.aspx?t=10\">微店市集</a></li> " +
                               "  <li><a href='../Login/me/m-profile.aspx?done=" + HttpUtility.UrlEncode("../../MiniStore/default.aspx?SN=" + Request.QueryString["SN"]) + "'> 個人檔案</a></li> ";
                         lilogout.Visible = true;
                     }

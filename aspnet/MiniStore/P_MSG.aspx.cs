@@ -22,7 +22,7 @@ namespace MiniStore
                     Response.Redirect("Default.aspx");
                 }
                 ProductTitle();
-                L_Back.Text = "<a href=\"Buy_detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "\"> <img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
+                L_Back.Text = "<a  class=\"backarrow\" href=\"Buy_detail.aspx?entry=" + Request.QueryString["entry"] + "&SN=" + Request.QueryString["SN"] + "\"></a> ";
                 L.Text = "select Question,isnull(Ans,'尚未回覆') Ans,(CONVERT(nvarchar, DATEDIFF(DAY,CreatDate,getdate()))+'天前') agoday from product_msg where product_id='" + Request.QueryString["entry"] + "' order by CreatDate DESC ";
             }
 

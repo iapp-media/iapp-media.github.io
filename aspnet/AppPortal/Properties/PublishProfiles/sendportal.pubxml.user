@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AppPortal.dll">
-      <publishTime>12/11/2015 21:25:29</publishTime>
+      <publishTime>01/05/2016 09:23:37</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>12/11/2015 21:21:12</publishTime>
+      <publishTime>01/05/2016 09:19:22</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -41,7 +41,7 @@
       <publishTime>11/27/2015 15:34:50</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>12/08/2015 09:58:20</publishTime>
+      <publishTime>01/04/2016 10:52:07</publishTime>
     </File>
     <File Include="css/login.css">
       <publishTime>11/27/2015 15:34:50</publishTime>
@@ -199,11 +199,14 @@
     <File Include="img/qr-iappmedia.jpg">
       <publishTime>11/27/2015 15:34:50</publishTime>
     </File>
+    <File Include="img/store-defaultimg.jpg">
+      <publishTime>01/04/2016 15:11:19</publishTime>
+    </File>
     <File Include="img/top.png">
       <publishTime>11/27/2015 15:34:50</publishTime>
     </File>
     <File Include="js/act.js">
-      <publishTime>12/10/2015 18:36:11</publishTime>
+      <publishTime>01/04/2016 17:48:04</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
       <publishTime>11/27/2015 15:34:50</publishTime>
@@ -245,10 +248,10 @@
       <publishTime>12/07/2015 13:42:16</publishTime>
     </File>
     <File Include="mprev.aspx">
-      <publishTime>11/27/2015 15:34:50</publishTime>
+      <publishTime>12/14/2015 15:56:29</publishTime>
     </File>
     <File Include="portal.aspx">
-      <publishTime>12/11/2015 12:11:15</publishTime>
+      <publishTime>01/04/2016 11:08:22</publishTime>
     </File>
     <File Include="search_List.aspx">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -257,7 +260,7 @@
       <publishTime>11/27/2015 15:34:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/11/2015 21:25:29</publishTime>
+      <publishTime>01/05/2016 09:56:39</publishTime>
     </File>
   </ItemGroup>
 </Project>

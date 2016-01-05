@@ -83,6 +83,19 @@ function ajaxCarItem() {
     });
 }
 
+//if (document.referrer.match('iapp-media.com') == null) {
+$.ajax({
+    type: "POST",
+    url: "WriteUrl.aspx",
+    data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL) + "&SN=" + getValue('SN'),
+    cache: false,
+    success: function (sus) {
+    },
+    error: function (err) {
+    }
+});
+//}
+
 function getValue(varname) {
     var url = window.location.href;
     try {

@@ -9,7 +9,8 @@
     <link href="img/favicon.ico" rel="shortcut icon" />
     <meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
     <meta name="keywords" content="iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
-    <title>iApp Platform</title>
+    <title>微店市集</title>
+    <link href="img/iAppStore.ico" rel="shortcut icon" />
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
     <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
@@ -21,9 +22,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/colorbox.css">
     <!-- 依照不同瀏覽器加上前綴字 -->
-    <%--<script src="js/prefixfree.min.js"></script>--%>
-    <link rel="stylesheet" href="css/masonry.css">
-    <link rel="stylesheet" href="css/index.css">
+    <%--<script src="js/prefixfree.min.js"></script>--%> 
+    <link href="css/portal/masonry.css" rel="stylesheet" />
+    <link href="css/portal/index.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
     <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
     <!--[if lt IE 9]>
@@ -177,11 +178,11 @@
 
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
-    <script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
-    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
-    <script type="text/javascript" src="js/act.js"></script>
-    <script type="text/javascript" src="js/velocity.min.js"></script>
+    <script type="text/javascript" src="js/Portal/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="js/Portal/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="js/Portal/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="js/Portal/act.js"></script>
+    <script type="text/javascript" src="js/Portal/velocity.min.js"></script>
 
    
     <asp:Literal ID="JSS" runat="server"></asp:Literal>

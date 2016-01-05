@@ -206,19 +206,8 @@
     <!-- Loading -->
     <script>
         document.write('<style>#loading{display:none}</style>');
-        if (document.referrer.match('iapp-media.com') == null) {
-
-            $.ajax({
-                type: "POST",
-                url: "WriteUrl.aspx",
-                data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL),
-                cache: false,
-                success: function (sus) { 
-                },
-                error: function (err) { 
-                }
-            });
-        }
+         
     </script>
+    <script src="js/act.js"></script>
 </body>
 </html>

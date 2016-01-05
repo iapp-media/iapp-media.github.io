@@ -44,7 +44,7 @@ namespace MiniStore
 
                       Main.NonQuery("	Insert product_click(Product_ID, Cust_ID, Creat_Date) values " +
                                   " ( @Product_ID, @Cust_ID, getdate())");
-                    L_Back.Text = "<a href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"><img src=\"img/backarrow.png\" alt=\"Alternate Text\" class=\"col-xs-2\" /></a> ";
+                      L_Back.Text = "<a class=\"backarrow\" href=\"Default.aspx?SN=" + Request.QueryString["SN"] + "\"></a> ";
 
                     LCarLink.Text = " <a id=\"Buycar\"  href=\"Buy_Ctrl.aspx?SN=" + Request.QueryString["SN"] + "\">" +
                         " <img class=\"back-top\" src=\"img/cart.png\" /><span/>" +

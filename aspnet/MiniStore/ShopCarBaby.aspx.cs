@@ -77,7 +77,7 @@ namespace StoreMana
 "select qty,Product_ID from ShoppingCart where Store_ID  in( select IDNo from Store where Store_NID=@SNID)  and User_ID=@UID " +
 ") a inner join Product b on a.Product_ID=b.IDNo"));
 
-                            Main.WriteLog("price=" + c.ToString() + "");
+                            //Main.WriteLog("price=" + c.ToString() + "");
                             Response.Write(c);
                         }
 

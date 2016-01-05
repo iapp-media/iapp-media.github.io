@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Literal ID="LCarLink" runat="server"></asp:Literal>
     <div class="col-xs-12 libor ContentTop">
-        <div class="backarrow" onclick="javascript:history.back()"></div>
+        <%--<div class="backarrow" onclick="javascript:history.back()"></div>--%>
         <asp:Literal ID="L_Back" runat="server"></asp:Literal>
         <h1 class="col-xs-10">
             <asp:Literal ID="TB_Name" runat="server"></asp:Literal></h1>

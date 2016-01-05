@@ -72,6 +72,8 @@
     <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\checkbox.css" />
     <Content Include="css\frontpage.css" />
+    <Content Include="css\portal\index.css" />
+    <Content Include="css\portal\masonry.css" />
     <Content Include="css\promptumenu.css" />
     <Content Include="css\swiper.min.css" />
     <Content Include="Default.aspx" />
@@ -83,8 +85,6 @@
     <Content Include="FastShop.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FrontPage.aspx" />
-    <Content Include="img\000000102601.jpg" />
-    <Content Include="img\000000102901.jpg" />
     <Content Include="img\114.png" />
     <Content Include="img\2531170_203204624000_2.jpg" />
     <Content Include="img\6RMhx.gif" />
@@ -97,7 +97,10 @@
     <Content Include="img\cloth.jpg" />
     <Content Include="img\codee.jpg" />
     <Content Include="img\defaulthead.jpg" />
+    <Content Include="img\defaulthead.png" />
+    <Content Include="img\defaultimg.jpg" />
     <Content Include="img\facebook-02.png" />
+    <Content Include="img\iapplogo.png" />
     <Content Include="img\iAppStore.ico" />
     <Content Include="img\img-1.jpg" />
     <Content Include="img\img-1.png" />
@@ -119,6 +122,7 @@
     <Content Include="img\qr-iappmedia.jpg" />
     <Content Include="img\send.png" />
     <Content Include="img\setting.png" />
+    <Content Include="img\store-defaultimg.jpg" />
     <Content Include="img\top.png" />
     <Content Include="img\uploadicon.png" />
     <Content Include="img\user_store.png" />
@@ -141,12 +145,18 @@
     <Content Include="js\jquery.touchSwipe.min.js" />
     <Content Include="js\jquery.ui.touch-punch.min.js" />
     <Content Include="js\main.js" />
+    <Content Include="js\Portal\act.js" />
+    <Content Include="js\Portal\jquery.colorbox-min.js" />
+    <Content Include="js\Portal\jquery.infinitescroll.min.js" />
+    <Content Include="js\Portal\jquery.masonry.min.js" />
+    <Content Include="js\Portal\velocity.min.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="Order_history.aspx" />
     <Content Include="Order_prn.aspx" />
     <Content Include="privacy.html" />
     <Content Include="P_MSG.aspx" />
     <Content Include="search_List.aspx" />
+    <Content Include="ShopCarBaby.aspx" />
     <Content Include="SInfo.aspx" />
     <Content Include="StoreFair.aspx" />
     <Content Include="terms.html" />
@@ -276,6 +286,13 @@
     <Compile Include="search_List.aspx.designer.cs">
       <DependentUpon>search_List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ShopCarBaby.aspx.cs">
+      <DependentUpon>ShopCarBaby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopCarBaby.aspx.designer.cs">
+      <DependentUpon>ShopCarBaby.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SInfo.aspx.cs">
       <DependentUpon>SInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +306,9 @@
     </Compile>
     <Compile Include="StoreFair.aspx.designer.cs">
       <DependentUpon>StoreFair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserIcon.ashx.cs">
+      <DependentUpon>UserIcon.ashx</DependentUpon>
     </Compile>
     <Compile Include="WriteUrl.aspx.cs">
       <DependentUpon>WriteUrl.aspx</DependentUpon>
@@ -306,6 +326,7 @@
     <Content Include="BuyFont.Master" />
     <Content Include="QRcode.ashx" />
     <None Include="Properties\PublishProfiles\cvv.pubxml" />
+    <Content Include="UserIcon.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

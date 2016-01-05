@@ -26,7 +26,7 @@
                 <div>
                     <table>
                         <tr>
-                            <td style="width: 50px">姓名:</td>
+                            <td>姓名:</td>
                             <td>
                                 <asp:TextBox ID="User_Name" runat="server" CssClass="tsty"></asp:TextBox>
                             </td>
@@ -35,7 +35,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 50px">帳號</td>
+                            <td>帳號</td>
                             <td>
                                 <asp:TextBox ID="Email" runat="server" placeholder="Email" CssClass="tsty"></asp:TextBox>
                             </td>
@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 50px">密碼</td>
+                            <td>密碼</td>
                             <td>
                                 <asp:TextBox ID="Pw" runat="server" TextMode="Password" CssClass="tsty"></asp:TextBox>
                             </td>
@@ -55,14 +55,17 @@
                     </table>
                 </div>
             </div>
-            
+            <div class="Sendbox_1">
+                <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="../ministore/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="../ministore/privacy.html">隱私權政策</a>》</strong>
+            </div>
+
             <div class="confirm">
                 <asp:Button ID="Button1" runat="server" Text="儲存" OnClick="regBtn1_Click" CssClass="save-1" />
             </div>
             <div class="close"> 
                 <asp:Button ID="Button2" runat="server" Text="取消" CssClass="cancel-1" OnClientClick="window.open('login.aspx', '_self', '');" />
             </div>
-        </div>
+        </div> 
     </form>
 </body>
 <script src="js/jquery-2.1.4.min.js"></script>

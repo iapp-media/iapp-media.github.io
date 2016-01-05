@@ -11,7 +11,7 @@ namespace MiniStore
 {
     public partial class StoreFair : System.Web.UI.Page
     {
-        JDB Main = new JDB();
+        JDB Main = new JDB(System.Configuration.ConfigurationManager.AppSettings.Get("DBAP1"));
         CommTool Comm = new CommTool();
         string str = "";
         string url = "http://www.iapp-media.com/";
@@ -75,8 +75,8 @@ namespace MiniStore
 
                         Tile1.Text = "<div class='item'>\n\r" +
                                     "   <div class='imgcenter'>\n\r" +
-                                    "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                    "      <p class=\"tile1\"><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                    "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/store-defaultimg.jpg'/></a></div>\n\r" +
+                                    "      <p class=\"tile1\"><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">三分鐘開微店</a></p>" + "\n\r" +
                                     "   </div>\n\r" +
                                     " </div>\n\r";
 
@@ -85,7 +85,7 @@ namespace MiniStore
                     {
                         Tile1.Text = "<div class='item'>\n\r" +
                                     "   <div class='imgcenter'>\n\r" +
-                                    "      <div><a href=\"../" + Tm + "/Default.aspx\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                    "      <div><a href=\"../" + Tm + "/Default.aspx\"><img class=\"item-pic\" id=\"maker_url\" src='img/defaultimg.jpg'/></a></div>\n\r" +
                                     "      <p class=\"tile1\"><a href=\"../" + Tm + "/Default.aspx\">微創作</a></p>" + "\n\r" +
                                     "   </div>\n\r" +
                                     " </div>\n\r";
@@ -99,8 +99,8 @@ namespace MiniStore
 
                         Tile1.Text = "<div class='item'>\n\r" +
                                      "   <div class='imgcenter'>\n\r" +
-                                     "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
-                                     "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">開微店</a></p>" + "\n\r" +
+                                     "      <div><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\"><img class=\"item-pic\"  src='img/store-defaultimg.jpg'/></a></div>\n\r" +
+                                     "   <p class='tile1'><a href=\"../Ministore/JoinAs.aspx\" target=\"_blank\">三分鐘開微店</a></p>" + "\n\r" +
                                      "   </div>\n\r" +
                                      " </div>\n\r";
 
@@ -109,7 +109,7 @@ namespace MiniStore
                     {
                         Tile1.Text = "<div class='item'>\n\r" +
                                      "   <div class='imgcenter'>\n\r" +
-                                     "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" src='img/defaultimg.jpg'/></a></div>\n\r" +
+                                     "      <div><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\"><img class=\"item-pic\" id=\"maker_url\" src='img/defaultimg.jpg'/></a></div>\n\r" +
                                      "   <p class='tile1'><a href=\"../" + Tm + "/Apps/me/capp.aspx?i=" + DefaultAppId + "\">微創作</a></p>" + "\n\r" +
                                      "   </div>\n\r" +
                                      " </div>\n\r";
@@ -475,6 +475,7 @@ namespace MiniStore
                 Response.Redirect("portal.aspx?fn=fv");
             }
         }
+
 
 
     }
