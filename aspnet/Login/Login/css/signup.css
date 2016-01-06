@@ -51,12 +51,14 @@ a{text-decoration:none; color:#ff9933;}
         width:90%;
     }
     .input tr td:nth-child(3) {
-        /*outline:1px solid #00f;*/
-          width: 120px;
-    height: 25px;
-    line-height: 25px;
-    position: absolute;
-    right: -130px;
+        width: 99px;
+        height: 25px;
+        line-height: 25px;
+        position: absolute;
+        right: -99px;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding-left: 5px;
     }
 .input table{
 	color: #7d7d7d;
