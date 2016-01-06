@@ -18,13 +18,15 @@ namespace MiniStore
 
                 if (Request.QueryString["SN"] == null)
                 {
-                    Response.Redirect("StoreFair.aspx?t=10");
+                    Response.Redirect("Default.aspx?SN=OfficACC");
+                    //Response.Redirect("StoreFair.aspx?t=10");
                 }
                 else
                 {
                     if (Main.Scalar("select 1 from store where Store_NID='" + Request.QueryString["SN"] + "'") != "1")
                     {
-                        Response.Redirect("StoreFair.aspx?t=10");
+                        Response.Redirect("Default.aspx?SN=OfficACC");
+                        //Response.Redirect("StoreFair.aspx?t=10");
                     }
                 }
                
