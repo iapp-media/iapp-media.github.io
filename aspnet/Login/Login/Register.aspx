@@ -35,7 +35,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>帳號</td>
+                            <td>帳號:</td>
                             <td>
                                 <asp:TextBox ID="Email" runat="server" placeholder="Email" CssClass="tsty"></asp:TextBox>
                             </td>
@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>密碼</td>
+                            <td>密碼:</td>
                             <td>
                                 <asp:TextBox ID="Pw" runat="server" TextMode="Password" CssClass="tsty"></asp:TextBox>
                             </td>

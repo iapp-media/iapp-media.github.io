@@ -37,29 +37,33 @@ a{text-decoration:none; color:#ff9933;}
         outline:1px solid #000;
     }*/
 .input {
-    width:469px;
+    width:459px;
     /*outline:4px solid #000;*/
     margin:40px auto;
     position:relative;
 }
+    .input tr {
+        position:relative;
+    }
     .input tr td:nth-child(1) {
         /*outline:1px solid #f00;*/
         width:10%;
     }
-    .input tr td:nth-child(2) {
-        /*outline:1px solid #0f0;*/
-        width:90%;
-    }
-    .input tr td:nth-child(3) {
-        width: 99px;
-        height: 25px;
-        line-height: 25px;
-        position: absolute;
-        right: -99px;
-        font-size: 12px;
-        box-sizing: border-box;
-        padding-left: 5px;
-    }
+        .input tr td:nth-child(2) {
+            margin: 15px 0;
+            display: block;
+        }
+        .input tr td:nth-child(3) {
+            width: 99px;
+            height: 25px;
+            line-height: 25px;
+            position: absolute;
+            right: -99px;
+            font-size: 12px;
+            box-sizing: border-box;
+            padding-left: 5px;
+            margin-top: -37px;
+        }
 .input table{
 	color: #7d7d7d;
 	
