@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="container-fluid">
                     <a class="iapplogo" href="portal.aspx">
-                        <img src="img/iapplogo.png" alt="">
+                        <img src="img/ministorelogo.png" alt="">
                     </a>
 
                     <!-- 會員資料選單（PC） -->

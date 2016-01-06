@@ -37,7 +37,7 @@ a{text-decoration:none; color:#ff9933;}
         outline:1px solid #000;
     }*/
 .input {
-    width:500px;
+    width:469px;
     /*outline:4px solid #000;*/
     margin:40px auto;
     position:relative;
@@ -79,21 +79,28 @@ a{text-decoration:none; color:#ff9933;}
     height:25px;
     display:table-cell;
     vertical-align:middle;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 .tb5 {
-	border:2px solid #456879;
-	border-radius:10px;
-	height: 22px;
-	width: 200px;
+    border: 2px solid #456879;
+    border-radius: 10px;
+    height: 22px;
+    width: 200px;
 }
-		.confirm{
-		    position: absolute;
-		    top: 55%;left: 53%; 
-		}
+
+.confirm {
+    position: absolute;
+    top: 81%;
+    left: 50%;
+}
+
 .close {
     position: absolute;
-    top: 55%;
-    left: 42%;
+    top: 81%;
+    left: 50%;
+    margin-left: -79px;
 }
 .clearfix {
    clear:both;
