@@ -67,7 +67,7 @@
                                 </h3>
                             </div>--%>
                      
-                    <!-- 左邊logo List -->
+                    <!-- 右邊logo List -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" id="Rightwich" role="menu">
                         <li class="SandTitle">熱分享</li>
                         <li class="boxpos">
@@ -76,7 +76,7 @@
                         <asp:Literal ID="LSinfo" runat="server"></asp:Literal>
                        
                     </ul>
-                    <!-- 右邊三明治 List -->
+                    <!-- 左邊三明治 List -->
                     <ul class="dropdown-menu dropdown-menu-right theme scrollable-menu" id="Leftwich" role="menu">
                         <li class="SandTitle">iApp微店</li>
 <%--                        <li><a href="JoinAs.aspx">打造自己的微店</a></li>
