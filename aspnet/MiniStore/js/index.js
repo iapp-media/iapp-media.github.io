@@ -236,8 +236,6 @@ $(document).ready(function () {
         var slider_li_width = $('.swiper-slide').width();
 
         // slider控制 左右
-        
-
         function moveRight() {
             $('.swiper-wrapper').animate({
                 left: -slider_li_width
@@ -269,11 +267,13 @@ $(document).ready(function () {
             
         };
 
+        // 灰色子選單右邊按鈕
         $('.swiper-button-next').click(function () {
             moveRight();
             alert('你抓到' + Nowindex + '個');
         });
-       
+
+        // 灰色子選單左邊按鈕
         $('.swiper-button-prev').click(function () {
             moveLeft();
             alert('你抓到' + Nowindex + '個');
