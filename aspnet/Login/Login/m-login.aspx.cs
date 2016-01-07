@@ -91,6 +91,11 @@ namespace Login
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
+            if (CB.Checked == false)
+            {
+                  ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script>alert('請閱讀並同意Iapp合約')</script>");
+                  return;
+            }
             Main.ParaClear();
             Main.ParaAdd("@Account", Email.Text, System.Data.SqlDbType.NVarChar);
             Main.ParaAdd("@Pw", Pw.Text, System.Data.SqlDbType.NVarChar);

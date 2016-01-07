@@ -15,7 +15,7 @@ namespace MiniStore
         {
             if (!IsPostBack)
             {
-                if (Request["From"] != null && Request["To"] != null)
+                if (Request["From"] != null && Request["To"] != null && Request["Os"] != null)
                 {
                     Main.ParaClear();
                     Main.ParaAdd("@FromUrl", Server.UrlDecode(Request["From"]), System.Data.SqlDbType.NVarChar);
@@ -23,7 +23,8 @@ namespace MiniStore
                     Main.ParaAdd("@SN", Request["SN"], System.Data.SqlDbType.NVarChar);
                     Main.ParaAdd("@IP", Request.UserHostAddress, System.Data.SqlDbType.NVarChar);
                     Main.ParaAdd("@Cust_ID", Comm.User_ID(), System.Data.SqlDbType.Int);
-                    Main.NonQuery("insert into UrlRefer (FromUrl,ToUrl,Date,SN,IP,Cust_ID) values (@FromUrl,@ToUrl,getdate(),@SN,@IP,@Cust_ID)");
+                    Main.ParaAdd("@Outside", Main.Cint2(Request["Os"]), System.Data.SqlDbType.Int);
+                    Main.NonQuery("insert into UrlRefer (FromUrl,ToUrl,Date,SN,IP,Cust_ID,Outside) values (@FromUrl,@ToUrl,getdate(),@SN,@IP,@Cust_ID,@Outside)");
                 }
             }
         }

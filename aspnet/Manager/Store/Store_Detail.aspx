@@ -156,6 +156,23 @@
                                     </label>
                                 </div>
                             </div>
+                               <div class="form-group">
+                                <label for="inputEmail3" class="col-xs-2 control-label">備註:</label>
+                                <div class="col-xs-10">
+                                    <label class="control-label" style="font-weight: 100;width:100%" >
+                                        <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine"  CssClass="form-control" Width="60%" Height="200px" ></asp:TextBox>
+                                    </label>
+                                </div>
+                            </div>
+                               <div class="form-group">
+                                <label for="inputEmail3" class="col-xs-2 control-label">附件:</label>
+                                <div class="col-xs-10"> 
+                                    <asp:FileUpload ID="FU" runat="server" />
+                                    <asp:Button ID="BTFile" runat="server" Text="上傳" CssClass="btn btn-primary" OnClick="BTFile_Click"   />
+                                        <asp:CheckBoxList ID="Filelist" runat="server"></asp:CheckBoxList> 
+                                    
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-xs-2">
                                     <asp:Button ID="BT_info" runat="server" Text="修改" CssClass="btn btn-primary col-xs-11"  OnClick="BT_info_Click"/> 

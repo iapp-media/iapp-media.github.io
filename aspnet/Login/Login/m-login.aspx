@@ -97,7 +97,7 @@
                     <asp:TextBox ID="Pw" placeholder="密碼" runat="server" TextMode="Password" CssClass="password"></asp:TextBox>
                 </div>
                 <div class="Sendbox_1">
-                    <input type="checkbox" ><strong>我同意 IApp微店《<a target="_blank"  href="#">服務條款</a>》及《<a target="_blank"  href="#">隱私權政策</a>》</strong>
+                    <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="policies/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="policies/privacy.html">隱私權政策</a>》</strong>
                 </div>
                 <div class="register-back">
                     <a href=""><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>

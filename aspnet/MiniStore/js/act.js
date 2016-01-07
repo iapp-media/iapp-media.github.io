@@ -82,19 +82,20 @@ function ajaxCarItem() {
         }
     });
 }
-
-//if (document.referrer.match('iapp-media.com') == null) {
+var outside = "1";
+if (document.referrer.match('iapp-media.com') == null) { outside = "0"; }
+ 
 $.ajax({
     type: "POST",
     url: "WriteUrl.aspx",
-    data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL) + "&SN=" + getValue('SN'),
+    data: "From=" + encodeURI(document.referrer) + "&To=" + encodeURI(document.URL) + "&SN=" + getValue('SN') + "&Os=" + outside,
     cache: false,
     success: function (sus) {
     },
     error: function (err) {
     }
 });
-//}
+ 
 
 function getValue(varname) {
     var url = window.location.href;

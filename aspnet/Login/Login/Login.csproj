@@ -160,6 +160,8 @@
     <Content Include="PClogin\img\web-transpage-img.jpg" />
     <Content Include="PClogin\index.html" />
     <Content Include="PClogin\login.aspx" />
+    <Content Include="policies\privacy.html" />
+    <Content Include="policies\terms.html" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="ME\img\Thumbs.db" />

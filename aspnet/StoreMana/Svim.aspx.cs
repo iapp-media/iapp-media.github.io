@@ -108,7 +108,10 @@ namespace StoreMana
                     string FullPath = Comm.MiStorePath + "\\Itempic\\" + Folder + "\\" + FileName + ".jpg";
                     if (File.Exists(FullPath) == true)
                         File.Delete(FullPath);
-
+                    if (System.IO.Directory.Exists(Comm.MiStorePath + "\\Itempic\\") == false)
+                    {
+                        System.IO.Directory.CreateDirectory(Comm.MiStorePath + "Itempic\\" + Folder + "\\");
+                    }
                     try
                     {
                         byte[] buf = Convert.FromBase64String(Request["t"]);

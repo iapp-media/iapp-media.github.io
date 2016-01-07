@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Text;
+using System.IO;
 
 public partial class Store_Store_Detail : System.Web.UI.Page
 {
@@ -238,6 +239,33 @@ public partial class Store_Store_Detail : System.Web.UI.Page
         else {
             System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('費率格式有誤');", true);
             return;
+        }
+    }
+    protected void BTFile_Click(object sender, EventArgs e)
+    {
+        if (FU.HasFile)
+        {
+            string FileName = FU.FileName.Replace(",", "");
+            string TimeString = Comm.GetDateString(DateTime.Now);
+            string FilePath = Path.Combine(Comm.FilePath, TimeString + Path.GetExtension(FU.FileName));
+
+            if (File.Exists(FilePath))
+            {
+                int x = 1;
+                do
+                {
+                    FilePath = Path.Combine(Comm.FilePath, TimeString + "-" + x.ToString() + Path.GetExtension(FU.FileName));
+                    x++;
+                } while (File.Exists(FilePath));
+            }
+
+            FU.SaveAs(FilePath);
+           // Main.NonQuery("");
+            ListItem Li = new ListItem();
+            Li.Text = "<a href=\"../GetFile.aspx?file=" + FilePath + "\" target=\"_blank\">" + FileName + "</a>";
+            Li.Value = FilePath + "," + FileName;
+            Filelist.Items.Add(Li);
+          
         }
     }
 }
