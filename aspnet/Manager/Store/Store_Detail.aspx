@@ -160,7 +160,7 @@
                                 <label for="inputEmail3" class="col-xs-2 control-label">備註:</label>
                                 <div class="col-xs-10">
                                     <label class="control-label" style="font-weight: 100;width:100%" >
-                                        <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine"  CssClass="form-control" Width="60%" Height="200px" ></asp:TextBox>
+                                        <asp:TextBox ID="TB_InfoMemo" runat="server" TextMode="MultiLine"  CssClass="form-control" Width="60%" Height="200px" ></asp:TextBox>
                                     </label>
                                 </div>
                             </div>
@@ -169,7 +169,8 @@
                                 <div class="col-xs-10"> 
                                     <asp:FileUpload ID="FU" runat="server" />
                                     <asp:Button ID="BTFile" runat="server" Text="上傳" CssClass="btn btn-primary" OnClick="BTFile_Click"   />
-                                        <asp:CheckBoxList ID="Filelist" runat="server"></asp:CheckBoxList> 
+                                    <asp:Button ID="BTFileDEL" runat="server" Text="刪除檔案" CssClass="btn btn-primary" OnClick="BTFileDEL_Click"   />  
+                                      <asp:CheckBoxList ID="Filelist" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:CheckBoxList> 
                                     
                                 </div>
                             </div>

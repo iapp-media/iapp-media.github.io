@@ -23,8 +23,24 @@ public partial class Store_Store_Detail : System.Web.UI.Page
             Main.FillDDP(DL_Lv, "select Status,Memo from def_Status where Col_Name='lv' ", "Memo", "Status");
             Main.FillDDP(DL_View, "select Status,Memo from def_Status where Col_Name='layout' ", "Memo", "Status");
             BT_info.Attributes.Add("onclick", "if(confirm('確定要修改嗎？')){return true;}else{return false;}");
+            BTFileDEL.Attributes.Add("onclick", "if(confirm('確定要刪除嗎？')){return true;}else{return false;}");
             BT_save.Attributes.Add("onclick", "if(confirm('確定要修改費率嗎？')){return true;}else{return false;}");
             DataIN();
+            filein();
+        }
+    }
+    void filein() {
+        DataTable DT = Main.GetDataSetNoNull("Select '<a href=\"../Files/' + FilePath + '\" target=\"_blank\">'+FileName+'</a>' as name,IDNo from Files where Table_ID='" + Request.QueryString["entry"] + "'");
+        if (DT.Rows.Count > 0)
+        { 
+            Filelist.Items.Clear();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                ListItem Li = new ListItem();
+                Li.Text = DT.Rows[i]["name"].ToString();
+                Li.Value = DT.Rows[i]["IDNo"].ToString();
+                Filelist.Items.Add(Li);
+            }
         }
     }
     void DataIN()
@@ -43,6 +59,7 @@ public partial class Store_Store_Detail : System.Web.UI.Page
             L_scate_id.Text = Rw["Store_Cate"].ToString();
             L_view_id.Text = Rw["layoutID"].ToString();
             L_lv_id.Text = Rw["Lv"].ToString();
+            TB_InfoMemo.Text = Rw["Memo"].ToString();
             DataTable sDT = new DataTable();
             if (Rw["Delivery"].ToString() != "")
             {
@@ -217,7 +234,10 @@ public partial class Store_Store_Detail : System.Web.UI.Page
 
             Main.NonQuery("update store_info set ckStep=ckStep " + str2 + " where idno=@Sinfo_ID");
         }
-
+        Main.ParaClear();
+        Main.ParaAdd("@Memo", TB_InfoMemo.Text, SqlDbType.NVarChar);
+        Main.ParaAdd("@Sinfo_ID", Main.Cint2(Request.QueryString["entry"].ToString()), SqlDbType.Int);
+        Main.NonQuery("update store_info set Memo=@Memo   where idno=@Sinfo_ID");
         DataIN();
 
     }
@@ -246,7 +266,7 @@ public partial class Store_Store_Detail : System.Web.UI.Page
         if (FU.HasFile)
         {
             string FileName = FU.FileName.Replace(",", "");
-            string TimeString = Comm.GetDateString(DateTime.Now);
+            string TimeString = Comm.GetDateString(DateTime.Now); 
             string FilePath = Path.Combine(Comm.FilePath, TimeString + Path.GetExtension(FU.FileName));
 
             if (File.Exists(FilePath))
@@ -260,12 +280,35 @@ public partial class Store_Store_Detail : System.Web.UI.Page
             }
 
             FU.SaveAs(FilePath);
-           // Main.NonQuery("");
-            ListItem Li = new ListItem();
-            Li.Text = "<a href=\"../GetFile.aspx?file=" + FilePath + "\" target=\"_blank\">" + FileName + "</a>";
-            Li.Value = FilePath + "," + FileName;
-            Filelist.Items.Add(Li);
+            Main.ParaClear();
+            Main.ParaAdd("@Table_ID", Comm.Cint2(Request.QueryString["entry"]), SqlDbType.Int);
+            Main.ParaAdd("@FileName", FileName, SqlDbType.NVarChar);
+            Main.ParaAdd("@FilePath", TimeString + Path.GetExtension(FU.FileName), SqlDbType.NVarChar);
+            Main.NonQuery("Insert into Files (Table_ID,FileName,FilePath) values (@Table_ID,@FileName,@FilePath);");
+
+            filein();
           
         }
+    }
+    protected void BTFileDEL_Click(object sender, EventArgs e)
+    {
+        if (Filelist.SelectedValue == "")
+        {
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('請勾選檔案');", true);
+            return;
+        }
+
+        for (int i = 0; i < Filelist.Items.Count; i++)
+        {
+            if (Filelist.Items[i].Selected == true)
+            {
+                string FilePath = Path.Combine(Comm.FilePath + Main.Scalar("select FilePath from Files where IDNo='" + Filelist.Items[i].Value + "'"));
+                if (File.Exists(FilePath) == true)
+                    File.Delete(FilePath); 
+
+                Main.NonQuery("delete Files where IDNo='" + Filelist.Items[i].Value + "'"); 
+            }
+        } 
+        System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('刪除成功');window.open('" + Request.UrlReferrer + "','_self');", true); 
     }
 }
