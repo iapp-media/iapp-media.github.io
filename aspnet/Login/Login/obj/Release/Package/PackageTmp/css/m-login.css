@@ -405,3 +405,16 @@ border-radius: 5px;
     border-radius: 99px;
     border: 2px solid #ff9933;
 }
+
+.Sendbox_1 {
+    margin:15px 0;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+}

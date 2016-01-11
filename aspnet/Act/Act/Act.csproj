@@ -66,6 +66,7 @@
     <Content Include="Good.aspx" />
     <Content Include="jquery-2.1.4.min.js" />
     <Content Include="Like.aspx" />
+    <Content Include="SendSMS.aspx" />
     <Content Include="Share.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -99,6 +100,13 @@
       <DependentUpon>Like.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendSMS.aspx.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendSMS.aspx.designer.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Share.aspx.cs">
       <DependentUpon>Share.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,7 +116,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\App_Act_150819.pubxml" />
+    <None Include="Properties\PublishProfiles\actt.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

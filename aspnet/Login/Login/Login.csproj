@@ -120,6 +120,7 @@
     <Content Include="js\exif.js" />
     <Content Include="js\JIC.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\m-login.js" />
     <Content Include="Login.aspx" />
     <Content Include="m-login.aspx" />

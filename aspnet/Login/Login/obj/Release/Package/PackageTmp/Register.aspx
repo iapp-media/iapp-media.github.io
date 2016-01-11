@@ -15,6 +15,7 @@
 
 <body>
     <form id="form2" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="content">
             <!-- title -->
             <div class="title">
@@ -24,8 +25,25 @@
             <!-- 註冊input位置 -->
             <div class="input">
                 <div>
-                    <table>
+                    <table> 
                         <tr>
+                            <td>帳號:</td>
+                            <td>
+                                <asp:TextBox ID="Email" runat="server" placeholder="Email" CssClass="tsty"></asp:TextBox>
+                            </td>
+                            <td>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>密碼:</td>
+                            <td>
+                                <asp:TextBox ID="Pw" runat="server" TextMode="Password" CssClass="tsty"></asp:TextBox>
+                            </td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr><tr>
                             <td>姓名:</td>
                             <td>
                                 <asp:TextBox ID="User_Name" runat="server" CssClass="tsty"></asp:TextBox>
@@ -35,28 +53,27 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>帳號</td>
+                            <td>手機號碼:</td>
                             <td>
-                                <asp:TextBox ID="Email" runat="server" placeholder="Email" CssClass="tsty"></asp:TextBox>
+                                <asp:TextBox ID="PhoneNum" runat="server" CssClass="tsty"  placeholder="請輸入手機號碼"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="請輸入Email格式" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                            </td>
+                             </td>
                         </tr>
                         <tr>
-                            <td>密碼</td>
+                            <td>簡訊認證碼:</td>
                             <td>
-                                <asp:TextBox ID="Pw" runat="server" TextMode="Password" CssClass="tsty"></asp:TextBox>
+                                <asp:TextBox ID="apcode" runat="server" CssClass="tsty"></asp:TextBox>
                             </td>
-                            <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <td> 
+                                   <input type="button" id="sendsms" name="sendsms" value="發送簡訊認證碼" onclick="sendsms_onclick();"> 
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="Sendbox_1">
-                <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="../ministore/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="../ministore/privacy.html">隱私權政策</a>》</strong>
+                <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="policies/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="policies/privacy.html">隱私權政策</a>》</strong>
             </div>
 
             <div class="confirm">
@@ -68,8 +85,24 @@
         </div> 
     </form>
 </body>
+ 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script>
+    function sendsms_onclick() { 
+        $.ajax({
+            type: "POST",
+            url: 'http://220.132.67.201:88/Act/SendSms.aspx',
+            data: 'S=' + document.getElementById('PhoneNum').value + '',
+            cache: false,
+            success: function (msg) {
+                if (msg == "err") { return false; }
+                alert('驗證碼:' + msg + '');
+            },
+            error: function (msg) {
+                alert('發送失敗');
+            }
+        });
+    }
 </script>
 
 </html>

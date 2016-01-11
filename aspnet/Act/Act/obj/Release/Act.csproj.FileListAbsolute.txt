@@ -6,3 +6,11 @@ D:\Root\AppWeb\Act\Act\bin\JustyLibrary.pdb
 D:\Root\AppWeb\Act\Act\obj\Release\Act.csprojResolveAssemblyReference.cache
 D:\Root\AppWeb\Act\Act\obj\Release\Act.dll
 D:\Root\AppWeb\Act\Act\obj\Release\Act.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\Act.dll
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\Act.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\JustyLibrary.dll
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\ThoughtWorks.QRCode.dll
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\JustyLibrary.pdb
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Release\Act.csprojResolveAssemblyReference.cache
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Release\Act.dll
+C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Release\Act.pdb

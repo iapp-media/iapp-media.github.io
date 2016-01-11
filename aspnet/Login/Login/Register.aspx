@@ -15,6 +15,7 @@
 
 <body>
     <form id="form2" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="content">
             <!-- title -->
             <div class="title">
@@ -24,16 +25,7 @@
             <!-- 註冊input位置 -->
             <div class="input">
                 <div>
-                    <table>
-                        <tr>
-                            <td>姓名:</td>
-                            <td>
-                                <asp:TextBox ID="User_Name" runat="server" CssClass="tsty"></asp:TextBox>
-                            </td>
-                            <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="User_Name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </td>
-                        </tr>
+                    <table> 
                         <tr>
                             <td>帳號:</td>
                             <td>
@@ -50,6 +42,31 @@
                             </td>
                             <td>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Pw" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr><tr>
+                            <td>姓名:</td>
+                            <td>
+                                <asp:TextBox ID="User_Name" runat="server" CssClass="tsty"></asp:TextBox>
+                            </td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="User_Name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手機號碼:</td>
+                            <td>
+                                <asp:TextBox ID="PhoneNum" runat="server" CssClass="tsty"  placeholder="請輸入手機號碼"></asp:TextBox>
+                            </td>
+                            <td>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>簡訊認證碼:</td>
+                            <td>
+                                <asp:TextBox ID="apcode" runat="server" CssClass="tsty"></asp:TextBox>
+                            </td>
+                            <td> 
+                                   <input type="button" id="sendsms" name="sendsms" value="發送簡訊認證碼" onclick="sendsms_onclick();"> 
                             </td>
                         </tr>
                     </table>
@@ -68,8 +85,24 @@
         </div> 
     </form>
 </body>
+ 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script>
+    function sendsms_onclick() { 
+        $.ajax({
+            type: "POST",
+            url: 'http://220.132.67.201:88/Act/SendSms.aspx',
+            data: 'n=' + document.getElementById('PhoneNum').value + '',
+            cache: false,
+            success: function (msg) {
+                if (msg == "err") { return false; }
+                alert('驗證碼:' + msg + '');
+            },
+            error: function (msg) {
+                alert('發送失敗');
+            }
+        });
+    }
 </script>
 
 </html>

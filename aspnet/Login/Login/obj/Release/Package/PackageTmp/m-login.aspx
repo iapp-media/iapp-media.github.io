@@ -96,6 +96,9 @@
                     <asp:TextBox ID="Email" runat="server" placeholder="email" CssClass="admin"></asp:TextBox>
                     <asp:TextBox ID="Pw" placeholder="密碼" runat="server" TextMode="Password" CssClass="password"></asp:TextBox>
                 </div>
+                <div class="Sendbox_1">
+                    <asp:CheckBox ID="CB" runat="server" /><strong>我同意 IApp微店《<a target="_blank" id="TosLink" href="policies/terms.html">服務條款</a>》及《<a target="_blank" id="PrivacyLink" href="policies/privacy.html">隱私權政策</a>》</strong>
+                </div>
                 <div class="register-back">
                     <a href=""><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
                 </div>
