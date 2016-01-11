@@ -73,7 +73,7 @@
                         <li>微後台</li>
                         <asp:Literal ID="LGoMini" runat="server"></asp:Literal>
                         <li><a href="Product_Mana.aspx"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>商品管理</a></li>
-                        <li><a href="Cust_Mana.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
+                        <li runat="server" id="licustmana" visible="false"><a href="Cust_Mana.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>客戶管理</a></li>
                         <li><a href="OrderMana.aspx"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>訂單管理</a></li>
                         <li><a href="Msg_Mana.aspx"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>訊息管理</a></li>
                         <li><a href="setting.aspx"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>設定</a></li>

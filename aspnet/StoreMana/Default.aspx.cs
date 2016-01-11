@@ -19,6 +19,11 @@ namespace StoreMana
             {
                 if (Session["Store_ID"] != null)
                 {
+                    if (Main.Scalar("Select 1 from Store_info where Store_ID='" + Session["Store_ID"] + "' and lv in ('1','9')") == "1")
+                    {
+                        divcustmana.Visible = true;
+                    }
+
                     string num = "", num2 = "";
                     Main.ParaClear();
                     Main.ParaAdd("@Store_ID", Main.Cint2(Session["Store_ID"].ToString()), System.Data.SqlDbType.Int);

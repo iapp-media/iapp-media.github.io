@@ -1,0 +1,363 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+     background: url('../img/web-transpage-img.jpg') no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      
+}
+
+a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffbb66;
+}
+
+.login-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    max-width: 700px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.iapplogo {
+    width: 80px;
+    height: auto;
+}
+
+.login-mobile p {
+    font-size: 18px;
+    color: #ff9933;
+}
+
+#show-upload p {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #ff9933;
+    margin-bottom: 0px;
+}
+    .top .glyphicon-remove {
+            color: #fff;
+    font-size: 30px;
+    right: 15px;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 45px;
+    width: 45px;
+    line-height: 43px;
+    text-align: center;
+   
+    border: 2px solid #fff;
+    border-radius: 50%;
+        
+    }
+
+.content {
+    height: calc(100% - 113px);
+    min-height: 300px;
+    padding: 5% 5% 5% 5%;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.content .login {
+    margin: 5px 0 5px 0;
+}
+
+.login-mobile .fb {
+    margin-top: 5%;
+}
+
+.login-mobile .fb p {
+    text-align: left;
+    font-size: 18px;
+    color: #ff9933;
+}
+
+.login-mobile .fb-img {
+    width: 100%;
+}
+
+.login-mobile .login p {
+    text-align: left;
+    font-size: 18px;
+    color: #ff9933;
+}
+
+.login-mobile .login-input {
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.logo-file {
+        width: 109px;
+    height: 136px;
+    margin: 0 auto;
+    position: relative;
+}
+    .logo-file img {
+        width:100%;
+    }
+    .logo-file label {
+            text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+
+.login-mobile .name {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 8px;
+}
+
+.login-mobile .tel {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 8px;
+}
+
+.login-mobile .repasswd {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 8px;
+}
+
+.login-mobile .ckpasswd {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 8px;
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ff9933;
+    margin-bottom: 10px;
+}
+
+.login-mobile .send {
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff9933;
+}
+
+.glyphicon-ok {
+    position: relative;
+    top: 12%;
+    left: 12%;
+    font-size: 35px;
+    color: #ff9933;
+}
+
+.login-mobile .login-back {
+    display: inline-block;
+    margin-left: calc(45% - 50px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff9933;
+}
+
+.login-back .glyphicon-remove {
+    top: 7px;
+    left: 6px;
+    font-size: 35px;
+    color: #ff9933;
+}
+
+.glyphicon-arrow-left {
+    top: 12%;
+    left: 12%;
+    font-size: 35px;
+    color: #ff9933;
+}
+
+.glyphicon:active {
+    color: #ffbb66;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-right: 5%;
+    background-color: #ff9933;
+    text-align: right;
+}
+
+.footer p {
+    display: inline;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.join {
+    position: relative;
+    padding: 5px 10px 5px 10px;
+    display: inline;
+    width: 100px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.join:hover {
+    background: #ffbb66;
+}
+
+.join:hover a {
+    color: #fff;
+}
+
+.join p {
+    color: #ff9933;
+    font-size: 18px;
+    font-weight: bold;
+    top: 10%;
+    left: 15%;
+    padding-left: 0%;
+}
+
+.register-mobile {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.register-mobile p {
+    font-size: 18px;
+    color: #ff9933;
+}
+
+.register-mobile .navbar {
+    background-color: #ff9933;
+}
+
+.register-mobile .content {
+    min-height: 75%;
+    background-color: #fff;
+    top: 60px;
+    left: 0px;
+}
+
+.register-mobile .register-input {
+    top: 20%;
+    left: 5%;
+    font-size: 15px;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.register-mobile .login p {
+    text-align: left;
+    font-size: 18px;
+    color: #ff9933;
+}
+
+.register-mobile .name {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom: 0px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 8px;
+}
+
+.register-mobile .admin {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom: 0px;
+    padding: 8px;
+}
+
+.register-mobile .password {
+    display: block;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid #7b7b7b;
+    border-style: #7b7b7b;
+    border-radius: 0px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 8px;
+}
+
+.register-mobile .send {
+    display: inline-block;
+    margin-left: calc( 50% - 100px);
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    border: 2px solid #ff9933;
+}
+
+.register-mobile .register-back {
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    border: 2px solid #ff9933;
+}

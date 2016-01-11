@@ -20,8 +20,13 @@ namespace StoreMana.Mini
             else
             {
                 Session["Store_ID"] = Main.Scalar("select idno from Store where User_ID='" + Comm.User_ID() + "'");
+                if (Main.Scalar("Select 1 from Store_info where Store_ID='" + Session["Store_ID"] + "' and lv in ('1','9')") == "1")
+                {
+                    licustmana.Visible = true;
+                }
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
            

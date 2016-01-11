@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>01/07/2016 13:59:00</publishTime>
+      <publishTime>01/11/2016 14:52:45</publishTime>
     </File>
     <File Include="bin/StoreMana.dll">
-      <publishTime>01/07/2016 14:09:49</publishTime>
+      <publishTime>01/11/2016 15:41:57</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -32,7 +32,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>12/31/2015 15:57:49</publishTime>
+      <publishTime>01/11/2016 14:39:12</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>12/01/2015 15:38:15</publishTime>
@@ -59,7 +59,7 @@
       <publishTime>12/03/2015 14:14:57</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>12/03/2015 16:02:02</publishTime>
+      <publishTime>01/11/2016 15:41:29</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -221,7 +221,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="MiniMaster.Master">
-      <publishTime>12/29/2015 12:22:02</publishTime>
+      <publishTime>01/11/2016 15:40:41</publishTime>
     </File>
     <File Include="Msg_Add.aspx">
       <publishTime>12/03/2015 14:18:42</publishTime>
@@ -239,7 +239,7 @@
       <publishTime>12/29/2015 13:21:56</publishTime>
     </File>
     <File Include="Product_Mana.aspx">
-      <publishTime>12/03/2015 12:24:26</publishTime>
+      <publishTime>01/11/2016 14:31:48</publishTime>
     </File>
     <File Include="QRcode.ashx">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -278,7 +278,7 @@
       <publishTime>12/31/2015 15:58:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/07/2016 14:09:50</publishTime>
+      <publishTime>01/11/2016 15:41:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

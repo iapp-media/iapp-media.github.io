@@ -7,7 +7,7 @@
             <a href="Product_Mana.aspx" class="btn btn-warning col-xs-12 sendcareButtomeEnd">
                 <img src="img/Product.png" alt="Alternate Text" class="Menuicon" />商品管理<asp:Literal ID="PCount" runat="server"></asp:Literal></a>
         </div> 
-         <div class="col-xs-12 libor status CBbot CBBTN">
+         <div class="col-xs-12 libor status CBbot CBBTN" runat="server" id="divcustmana">
             <a href="Cust_Mana.aspx" class="btn btn-warning col-xs-12 sendcareButtomeEnd">
                 <img src="img/Client.png" alt="Alternate Text" class="Menuicon" />客戶管理<asp:Literal ID="CCount" runat="server"></asp:Literal></a>
         </div>

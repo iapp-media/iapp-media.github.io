@@ -155,6 +155,40 @@
     <Content Include="Order_prn.aspx" />
     <Content Include="policies\privacy.html" />
     <Content Include="policies\terms.html" />
+    <Content Include="profile\ME\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="profile\ME\img\web-transpage-img.jpg" />
+    <Content Include="profile\ME\css\action.css" />
+    <Content Include="profile\ME\css\bootstrap.min.css" />
+    <Content Include="profile\ME\css\cropper.css" />
+    <Content Include="profile\ME\css\index.css" />
+    <Content Include="profile\ME\css\m-Profile.css" />
+    <Content Include="profile\ME\css\mobileEditor.css" />
+    <Content Include="profile\ME\css\processBar.css" />
+    <Content Include="profile\ME\css\reset.css" />
+    <Content Include="profile\ME\css\slide.css" />
+    <Content Include="profile\ME\img\114.png" />
+    <Content Include="profile\ME\img\ajax-loader.gif" />
+    <Content Include="profile\ME\img\bg.jpg" />
+    <Content Include="profile\ME\img\cancel-1.png" />
+    <Content Include="profile\ME\img\cancel-2.png" />
+    <Content Include="profile\ME\img\default-icon.png" />
+    <Content Include="profile\ME\img\dot1.png" />
+    <Content Include="profile\ME\img\dot2.png" />
+    <Content Include="profile\ME\img\iapplogo.png" />
+    <Content Include="profile\ME\img\lastpg-word.png" />
+    <Content Include="profile\ME\img\logo.png" />
+    <Content Include="profile\ME\img\status.gif" />
+    <Content Include="profile\ME\img\upload.gif" />
+    <Content Include="profile\ME\img\uploadicon.png" />
+    <Content Include="profile\ME\js\base.js" />
+    <Content Include="profile\ME\js\cropper.js" />
+    <Content Include="profile\ME\js\index.js" />
+    <Content Include="profile\ME\js\JIC.js" />
+    <Content Include="profile\ME\js\jquery.min.js" />
+    <Content Include="profile\ME\js\mobileEditor.js" />
+    <Content Include="profile\ME\js\touch.js" />
+    <Content Include="profile\ME\js\zepto.min.js" />
+    <Content Include="profile\ME\m-Profile.aspx" />
     <Content Include="P_MSG.aspx" />
     <Content Include="search_List.aspx" />
     <Content Include="ShopCarBaby.aspx" />
@@ -271,6 +305,16 @@
     <Compile Include="Order_prn.aspx.designer.cs">
       <DependentUpon>Order_prn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="profile\ME\m-Profile.aspx.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\ME\m-Profile.aspx.designer.cs">
+      <DependentUpon>m-Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile\UserIcon.ashx.cs">
+      <DependentUpon>UserIcon.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="P_MSG.aspx.cs">
       <DependentUpon>P_MSG.aspx</DependentUpon>
@@ -325,6 +369,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="BuyFont.Master" />
     <Content Include="QRcode.ashx" />
+    <Content Include="profile\ME\img\Thumbs.db" />
+    <Content Include="profile\UserIcon.ashx" />
+    <Content Include="profile\ME\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="profile\ME\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="profile\ME\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="profile\ME\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\cvv.pubxml" />
     <Content Include="UserIcon.ashx" />
     <None Include="Web.Debug.config">

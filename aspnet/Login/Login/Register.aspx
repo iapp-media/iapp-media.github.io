@@ -66,7 +66,7 @@
                                 <asp:TextBox ID="apcode" runat="server" CssClass="tsty"></asp:TextBox>
                             </td>
                             <td> 
-                                   <input type="button" id="sendsms" name="sendsms" value="發送簡訊認證碼" onclick="sendsms_onclick();"> 
+                                   <input type="button" id="sendsms" name="sendsms" value="發送簡訊認證碼" onclick="sendsms_onclick();"/> 
                             </td>
                         </tr>
                     </table>

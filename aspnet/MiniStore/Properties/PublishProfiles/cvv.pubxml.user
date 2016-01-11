@@ -11,16 +11,16 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>01/05/2016 09:19:22</publishTime>
+      <publishTime>01/11/2016 14:52:45</publishTime>
     </File>
     <File Include="bin/MiniStore.dll">
-      <publishTime>01/05/2016 16:25:02</publishTime>
+      <publishTime>01/11/2016 15:26:33</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
     </File>
     <File Include="BuyFont.Master">
-      <publishTime>01/05/2016 09:18:21</publishTime>
+      <publishTime>01/06/2016 14:54:13</publishTime>
     </File>
     <File Include="Buy_Add.aspx">
       <publishTime>12/14/2015 15:56:30</publishTime>
@@ -59,7 +59,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="css/index.css">
-      <publishTime>01/05/2016 10:44:51</publishTime>
+      <publishTime>01/06/2016 10:39:33</publishTime>
     </File>
     <File Include="css/masonry.css">
       <publishTime>12/08/2015 00:00:28</publishTime>
@@ -80,7 +80,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>12/28/2015 16:03:01</publishTime>
+      <publishTime>01/06/2016 10:30:23</publishTime>
     </File>
     <File Include="FastShop.aspx">
       <publishTime>11/27/2015 15:34:53</publishTime>
@@ -242,7 +242,7 @@
       <publishTime>01/04/2016 16:07:38</publishTime>
     </File>
     <File Include="js/act.js">
-      <publishTime>01/05/2016 09:17:57</publishTime>
+      <publishTime>01/07/2016 15:00:03</publishTime>
     </File>
     <File Include="js/bootstrap-datetimepicker.js">
       <publishTime>11/30/2015 11:36:10</publishTime>
@@ -257,7 +257,7 @@
       <publishTime>11/27/2015 15:34:54</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>12/31/2015 16:06:11</publishTime>
+      <publishTime>01/06/2016 14:59:26</publishTime>
     </File>
     <File Include="js/jquery-1.8.0.min.js">
       <publishTime>11/27/2015 15:34:54</publishTime>
@@ -313,8 +313,182 @@
     <File Include="Order_prn.aspx">
       <publishTime>12/28/2015 18:47:32</publishTime>
     </File>
+    <File Include="policies/privacy.html">
+      <publishTime>01/04/2016 14:29:55</publishTime>
+    </File>
+    <File Include="policies/terms.html">
+      <publishTime>01/04/2016 14:29:55</publishTime>
+    </File>
     <File Include="privacy.html">
       <publishTime>01/04/2016 14:29:55</publishTime>
+    </File>
+    <File Include="profile/css/button.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/css/profile.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/css/reset.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/img/box-fblogin.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/button-sprite-1.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/button-sprite-2.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/defaulthead.jpg">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/fb.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/iapplogo.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/img-1-1.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/img-1.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/ministorelogo2.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/uploadicon.png">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/img/web-transpage-img.jpg">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/ME/css/action.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/bootstrap.min.css">
+      <publishTime>01/11/2016 15:18:38</publishTime>
+    </File>
+    <File Include="profile/ME/css/cropper.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/index.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/m-Profile.css">
+      <publishTime>01/11/2016 15:11:10</publishTime>
+    </File>
+    <File Include="profile/ME/css/mobileEditor.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/processBar.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/reset.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/css/slide.css">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/27/2015 15:34:53</publishTime>
+    </File>
+    <File Include="profile/ME/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/27/2015 15:34:53</publishTime>
+    </File>
+    <File Include="profile/ME/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/27/2015 15:34:53</publishTime>
+    </File>
+    <File Include="profile/ME/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/27/2015 15:34:53</publishTime>
+    </File>
+    <File Include="profile/ME/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/27/2015 15:34:53</publishTime>
+    </File>
+    <File Include="profile/ME/img/114.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/ajax-loader.gif">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/bg.jpg">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/cancel-1.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/cancel-2.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/default-icon.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/dot1.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/dot2.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/iapplogo.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/lastpg-word.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/logo.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/status.gif">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/Thumbs.db">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/upload.gif">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/uploadicon.png">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/img/web-transpage-img.jpg">
+      <publishTime>12/14/2015 10:23:16</publishTime>
+    </File>
+    <File Include="profile/ME/js/base.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/cropper.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/index.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/JIC.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/jquery.min.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/mobileEditor.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/touch.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/js/zepto.min.js">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/ME/m-Profile.aspx">
+      <publishTime>01/11/2016 15:28:19</publishTime>
+    </File>
+    <File Include="profile/ME/TEST.html">
+      <publishTime>12/14/2015 10:23:15</publishTime>
+    </File>
+    <File Include="profile/Profile.aspx">
+      <publishTime>01/11/2016 14:22:20</publishTime>
+    </File>
+    <File Include="profile/UserIcon.ashx">
+      <publishTime>01/11/2016 14:55:30</publishTime>
     </File>
     <File Include="P_MSG.aspx">
       <publishTime>01/05/2016 10:43:30</publishTime>
@@ -332,7 +506,7 @@
       <publishTime>12/31/2015 15:55:25</publishTime>
     </File>
     <File Include="StoreFair.aspx">
-      <publishTime>01/05/2016 10:38:12</publishTime>
+      <publishTime>01/06/2016 14:50:59</publishTime>
     </File>
     <File Include="terms.html">
       <publishTime>01/04/2016 14:29:55</publishTime>
@@ -341,7 +515,7 @@
       <publishTime>01/05/2016 09:48:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2016 16:25:03</publishTime>
+      <publishTime>01/11/2016 15:28:25</publishTime>
     </File>
     <File Include="WriteUrl.aspx">
       <publishTime>12/28/2015 10:02:49</publishTime>
