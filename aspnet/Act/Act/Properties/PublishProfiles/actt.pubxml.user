@@ -11,10 +11,10 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Act.dll">
-      <publishTime>01/11/2016 11:30:44</publishTime>
+      <publishTime>01/11/2016 13:59:35</publishTime>
     </File>
     <File Include="bin/JustyLibrary.dll">
-      <publishTime>01/11/2016 10:11:33</publishTime>
+      <publishTime>01/11/2016 13:48:43</publishTime>
     </File>
     <File Include="bin/ThoughtWorks.QRCode.dll">
       <publishTime>11/27/2015 15:34:51</publishTime>
@@ -41,7 +41,7 @@
       <publishTime>11/27/2015 15:34:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/11/2016 11:30:44</publishTime>
+      <publishTime>01/11/2016 13:59:36</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -92,7 +92,7 @@
                     <asp:SqlDataSource ID="SD1" runat="server" OnSelected="SD1_Selected"></asp:SqlDataSource>
                 </div>
                 <div class="ProMaBOX col-xs-12 Nodate" runat="server" visible="false" id="PNodate">
-                    <div class="SHead col-xs-3">
+                    <%--<div class="SHead col-xs-3">
                         <img src="img/2531170_203204624000_2.jpg" alt="Alternate Text" />
                     </div>
                     <div class="ProMain col-xs-8">
@@ -111,7 +111,8 @@
                         <div class="row">
                             <img src="img/arrow.png" alt="Alternate Text" />
                         </div>
-                    </div>
+                    </div>--%>
+                    <h3>您尚未新增商品</h3>
                 </div>
             </div>
         </div>
