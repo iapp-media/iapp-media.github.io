@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Act.dll">
+      <publishTime>01/12/2016 09:08:20</publishTime>
+    </File>
+    <File Include="bin/JustyLibrary.dll">
+      <publishTime>01/11/2016 16:55:49</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>11/27/2015 15:34:51</publishTime>
+    </File>
+    <File Include="Click.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Favor.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Good.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Like.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Share.aspx">
+      <publishTime>11/27/2015 15:34:50</publishTime>
+    </File>
+    <File Include="Store/SendSMS.aspx">
+      <publishTime>01/11/2016 17:46:53</publishTime>
+    </File>
+    <File Include="Store/Unionpay.aspx">
+      <publishTime>01/11/2016 17:55:09</publishTime>
+    </File>
+    <File Include="Store/Unionpay_Finish.aspx">
+      <publishTime>01/12/2016 09:01:30</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/12/2016 09:08:20</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

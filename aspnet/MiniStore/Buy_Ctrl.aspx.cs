@@ -254,11 +254,21 @@ namespace MiniStore
             {
                 string IsChBonus = "0";
                 if (ChBonus.Checked == true) { IsChBonus = "1"; }
-
+                //Bonusval 沒用到?
                 Session["Bonusval"] = IsChBonus + "," + SID + "," + LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "") + "," + strOrderID + "," + LBprice.Text;
                 Session["Order_Url"] = Comm.URL + "Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "";
                 Session["OrderID"] = strOrderID;
                 Response.Redirect("CreditCard.aspx");
+            }
+            else if (DL_Payment.SelectedValue.ToString() == "7")
+            {
+                string IsChBonus = "0";
+                if (ChBonus.Checked == true) { IsChBonus = "1"; }
+                //Bonusval 沒用到?
+                Session["Bonusval"] = IsChBonus + "," + SID + "," + LBpoint.Text.Replace("折價點數抵扣(-", "").Replace("點)", "") + "," + strOrderID + "," + LBprice.Text;
+                Session["Order_Url"] = Comm.URL + "Order_prn.aspx?entry=" + strOrderID + "&SN=" + Request.QueryString["SN"] + "";
+                Session["OrderID"] = strOrderID;
+                Response.Redirect(Comm.URL.Replace("Ministore", "Act") + "Store/Unionpay.aspx");
             }
             else
             {
@@ -268,7 +278,7 @@ namespace MiniStore
                 }
                 Session["Order_entry"] = strOrderID;
                 System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "String", "alert('結帳成功');window.open('Order_prn.aspx?SN=" + Request.QueryString["SN"] + "','_self');", true);
- 
+
             }
             //轉型一直失敗 暫時用跳頁
             //
