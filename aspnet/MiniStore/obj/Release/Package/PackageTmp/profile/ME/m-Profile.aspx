@@ -191,6 +191,7 @@
         </script>
         <script>
             function sendsms_onclick() {
+                alert(document.getElementById('mtel').value);
                 $.ajax({
                     type: "POST",
                     url: 'http://220.132.67.201:88/Act/SendSms.aspx',
@@ -198,7 +199,7 @@
                     cache: false,
                     success: function (msg) {
                         if (msg == "err") { return false; }
-                        alert('驗證碼:' + msg + '');
+                        alert('' + msg + '');
                     },
                     error: function (msg) {
                         alert('發送失敗');

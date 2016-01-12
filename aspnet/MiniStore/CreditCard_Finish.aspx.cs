@@ -108,10 +108,7 @@ namespace MiniStore
                             Session.Remove("OrderID");
                             Response.Redirect(turl);
                         }
-                    }
-
-
-                    
+                    } 
 
                    // this.ClientScript.RegisterStartupScript(this.GetType, "key", "alert('" + Status + "');top.location.href='" + FromURL + "'", true);
                 }

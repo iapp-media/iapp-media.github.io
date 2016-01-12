@@ -14,5 +14,3 @@ C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\JustyLibrary.pdb
 C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Debug\Act.csprojResolveAssemblyReference.cache
 C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Debug\Act.dll
 C:\GitHub\iapp-media.github.io\aspnet\Act\Act\obj\Debug\Act.pdb
-C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\Act.dll.CodeAnalysisLog.xml
-C:\GitHub\iapp-media.github.io\aspnet\Act\Act\bin\Act.dll.lastcodeanalysissucceeded

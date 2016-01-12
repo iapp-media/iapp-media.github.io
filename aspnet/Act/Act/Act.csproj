@@ -64,10 +64,11 @@
     <Content Include="Click.aspx" />
     <Content Include="Favor.aspx" />
     <Content Include="Good.aspx" />
-    <Content Include="jquery-2.1.4.min.js" />
     <Content Include="Like.aspx" />
-    <Content Include="SendSMS.aspx" />
     <Content Include="Share.aspx" />
+    <Content Include="Store\SendSMS.aspx" />
+    <Content Include="Store\Unionpay.aspx" />
+    <Content Include="Store\Unionpay_Finish.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,19 +101,33 @@
       <DependentUpon>Like.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendSMS.aspx.cs">
-      <DependentUpon>SendSMS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SendSMS.aspx.designer.cs">
-      <DependentUpon>SendSMS.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Share.aspx.cs">
       <DependentUpon>Share.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Share.aspx.designer.cs">
       <DependentUpon>Share.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\SendSMS.aspx.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\SendSMS.aspx.designer.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Unionpay.aspx.cs">
+      <DependentUpon>Unionpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\Unionpay.aspx.designer.cs">
+      <DependentUpon>Unionpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Unionpay_Finish.aspx.cs">
+      <DependentUpon>Unionpay_Finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\Unionpay_Finish.aspx.designer.cs">
+      <DependentUpon>Unionpay_Finish.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

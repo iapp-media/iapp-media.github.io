@@ -199,7 +199,7 @@
                     cache: false,
                     success: function (msg) {
                         if (msg == "err") { return false; }
-                        alert('驗證碼:' + msg + '');
+                        alert('' + msg + '');
                     },
                     error: function (msg) {
                         alert('發送失敗');

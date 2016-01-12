@@ -7,9 +7,18 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace Act {
+namespace Act.Store {
     
     
-    public partial class SendSMS {
+    public partial class Unionpay_Finish {
+        
+        /// <summary>
+        /// form1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     }
 }
