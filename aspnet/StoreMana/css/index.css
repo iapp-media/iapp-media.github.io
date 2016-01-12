@@ -1960,8 +1960,7 @@ a.iframe-info.cboxElement {
     height: 100%;
 }
 
-.theme li:nth-child(1),
-.theme li:nth-child(9) {
+.theme_title {
     background-color: #ff9933;
     margin: 0;
     padding: 0;
