@@ -26,8 +26,8 @@ namespace Act.Store
                 //        string CreditNo = Main.Scalar("select max(idno) from Credit_Card where Customer_ID='" + Comm.User_ID() + "' and Order_no='" + DT.Rows[0]["Order_No"].ToString() + "' and Status='-99'");
                         string CreditNo = "";
                         Session["CreditNo"] = CreditNo; 
-                        // Form.Action = "https://acq.esunbank.com.tw/acq_online/online/sale61.htm";  //正式
-                        Form.Action = "https://acqtest.esunbank.com.tw/acq_online/online/sale61.htm"; //測試 
+                        //Form.Action = "https://acq.esunbank.com.tw/acq_online/online/sale61.htm";  //正式
+                         Form.Action = "https://acqtest.esunbank.com.tw/acq_online/online/sale61.htm"; //測試 
                         //特店代碼
                         MID.Value = "8089011126";
                         //子特店代號
@@ -35,7 +35,7 @@ namespace Act.Store
                         //訂單編號
                         ONO.Value = CreditNo.PadLeft(20, '0'); //.PadLeft(20, '0')不可重複，不可包含【_】字元，且英數限用大寫 length 20。
                         //交易金額   
-                        TA.Value = "10";
+                        TA.Value = "9";
                         //TA.Value = DT.Rows[0]["Total_AMT"].ToString();
                         //交易類別 01 消費 04 退貨 31 取消(限消費當日23:00 前交易) 00 查詢
                         TT.Value = "01";

@@ -223,7 +223,7 @@ $(document).ready(function () {
 
         //抓取slider li 個數
         var slider_cou = $('#Allswiper .swiper-slide').length;
-        var Nowindex = 1;
+        var Nowindex = 0;
         var lastindex = $('#Allswiper .swiper-slide:last').index();
         //console.log('總共幾個' + slider_cou, lastindex);
 
@@ -236,47 +236,68 @@ $(document).ready(function () {
         var slider_li_width = $('.swiper-slide').width();
 
         // slider控制 左右
-        function moveRight() {
-            $('.swiper-wrapper').animate({
-                left: -slider_li_width
-            }, 200, function () {
-                $('.swiper-wrapper .swiper-slide:first-child').appendTo('.swiper-wrapper');
-                $('.swiper-wrapper').css('left', '');
-            });
-            if (Nowindex <= slider_cou - 1) {
-                Nowindex++;
-            } else if (Nowindex = slider_cou - 1) {
-                Nowindex = 1;
-            }
+        //function moveRight() {
+        //    $('.swiper-wrapper').animate({
+        //        left: -slider_li_width
+        //    }, 200, function () {
+        //        $('.swiper-wrapper .swiper-slide:first-child').appendTo('.swiper-wrapper');
+        //        $('.swiper-wrapper').css('left', '');
+        //    });
+        //    if (Nowindex <= slider_cou - 1) {
+        //        Nowindex++;
+        //    } else if (Nowindex = slider_cou - 1) {
+        //        Nowindex = 1;
+        //    }
             
+        //};
+        function moveRight() {
+            if (Nowindex < slider_cou - 1) {
+                Nowindex++;
+            }
+            $('.swiper-wrapper').animate({
+                left: -slider_li_width * Nowindex
+            }, 200);
+            console.log(Nowindex);
         };
 
-        function moveLeft() {
-            $('.swiper-wrapper').animate({
-                left: +slider_li_width
-            }, 200, function () {
-                $('.swiper-wrapper .swiper-slide:last-child').prependTo('.swiper-wrapper');
-                $('.swiper-wrapper').css('left', '');
-            });
+        //function moveLeft() {
+        //    $('.swiper-wrapper').animate({
+        //        left: +slider_li_width
+        //    }, 200, function () {
+        //        $('.swiper-wrapper .swiper-slide:last-child').prependTo('.swiper-wrapper');
+        //        $('.swiper-wrapper').css('left', '');
+        //    });
             
-            if (Nowindex > 0 && Nowindex == 1) {
-                Nowindex = slider_cou;
-            }else {
+        //    if (Nowindex > 0 && Nowindex == 1) {
+        //        Nowindex = slider_cou;
+        //    }else {
+        //        Nowindex--;
+        //    }
+            
+        //};
+        function moveLeft() {
+            if (Nowindex > 0) {
                 Nowindex--;
             }
+            $('.swiper-wrapper').animate({
+                left: slider_li_width - slider_li_width * (Nowindex + 1)
+            },200);
+            console.log(Nowindex, slider_li_width)
+
             
+
         };
 
         // 灰色子選單右邊按鈕
         $('.swiper-button-next').click(function () {
             moveRight();
-            alert('你抓到' + Nowindex + '個');
+            //alert('你抓到' + Nowindex + '個');
         });
 
         // 灰色子選單左邊按鈕
         $('.swiper-button-prev').click(function () {
             moveLeft();
-            alert('你抓到' + Nowindex + '個');
+            //alert('你抓到' + Nowindex + '個');
         });
 
     } else {

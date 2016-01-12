@@ -19,6 +19,7 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <asp:Literal ID="L_Cate" runat="server"></asp:Literal>
+                <div class="swiper-slide" data-src="Default.aspx?SN=OfficACC&amp;C=3005" style="width: 700px;">男裝服飾</div>
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
