@@ -59,6 +59,14 @@
 
         <div class="col-xs-12 insidecare">
             <div class="row">
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">商店名稱</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBName" Font-Names="TBName" runat="server" CssClass="form-control magclose" onkeyup="words_deal(12)"></asp:TextBox>
+                </div>
                 <div class="col-xs-12 libor paynumber PadLib ProGrayC">
                     <div class="col-xs-12">
                         <div class="row">
@@ -77,44 +85,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC">
+                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">
-                            <p class="BoxLeft">付款方式</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-8 SinCheck apple_checkbox">
-                        <div class="row">
-                           <%-- <div class="apple_checkbox-1">
-                                <p>面交</p>
-                                <p>銀行轉帳</p>
-                            </div>--%>
-                            <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                            </asp:CheckBoxList>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">寄送方式</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-8 SinCheck apple_checkbox">
-                        <div class="row">
-                            <%--<div class="apple_checkbox-1">
-                                <p>面交自取</p>
-                                <p>宅配</p>
-                            </div>--%>
-                            <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
-                            </asp:CheckBoxList>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">選購情境</p>
+                            <p class="BoxLeft">選購介面</p>
                         </div>
                     </div>
                     <asp:DropDownList ID="DLlayout" runat="server" CssClass="form-control">
@@ -122,55 +96,7 @@
                         <asp:ListItem Value="5">fast 快速場景</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <%--                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">店家帳號</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBStoreNID" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>--%>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">銀行名稱</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBBankName" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">銀行代碼</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBBankNo" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">受款帳號</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBACC" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">受款戶名</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBACName" runat="server" CssClass="form-control magclose"></asp:TextBox>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <p class="BoxLeft">商店名稱</p>
-                        </div>
-                    </div>
-                    <asp:TextBox ID="TBName" Font-Names="TBName" runat="server" CssClass="form-control magclose" onkeyup="words_deal(12)"></asp:TextBox>
-                </div>
-                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                 <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
                     <div class="col-xs-4">
                         <div class="row">
                             <p class="BoxLeft">聯絡人</p>
@@ -210,6 +136,77 @@
                         </div>
                     </div>
                     <asp:TextBox ID="TB_OPTime" runat="server" CssClass="form-control magclose" TextMode="MultiLine"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">付款方式</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 SinCheck apple_checkbox">
+                        <div class="row">
+                            <asp:CheckBoxList ID="CB_Payment" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                            </asp:CheckBoxList>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">寄送方式</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 SinCheck apple_checkbox">
+                        <div class="row">
+                            <%--<div class="apple_checkbox-1">
+                                <p>面交自取</p>
+                                <p>宅配</p>
+                            </div>--%>
+                            <asp:CheckBoxList ID="CB_Delivery" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="1">
+                            </asp:CheckBoxList>
+                        </div>
+                    </div>
+                </div>
+               
+                <%--                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">店家帳號</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBStoreNID" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                </div>--%>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">銀行名稱</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBBankName" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">銀行代碼</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBBankNo" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">受款帳號</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBACC" runat="server" CssClass="form-control magclose"></asp:TextBox>
+                </div>
+                <div class="col-xs-12 libor paynumber PadLib ProGrayC BorTop">
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <p class="BoxLeft">受款戶名</p>
+                        </div>
+                    </div>
+                    <asp:TextBox ID="TBACName" runat="server" CssClass="form-control magclose"></asp:TextBox>
                 </div>
                 <div class="col-xs-12 libor status CBbot CBBTN">
                     <asp:Button ID="BT_Save" runat="server" Text="儲存" CssClass="btn btn-warning col-xs-12 sendcareButtom" OnClick="BT_Save_Click" />
