@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Web.Security;
 namespace Act.Store
 {
     public partial class Unionpay_Finish : System.Web.UI.Page

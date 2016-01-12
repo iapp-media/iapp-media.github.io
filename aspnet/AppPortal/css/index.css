@@ -28,12 +28,17 @@ a:hover {
 }
 
 .back-top {
-    width: auto;
-    height: auto;
+    width: 38px;
+    height: 38px;
     position: fixed;
     bottom: 2%;
     right: 2%;
     z-index: 90;
+    background:url('../img/top.png');
+    background-size:100%;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
 }
 
 .tem {
@@ -42,10 +47,14 @@ a:hover {
 
 .iapplogo {
     width:100px;
-    height:auto;
+    height:80px;
+    background:url('../img/iapplogo.png');
+    background-size:100%;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
     display:block;
     float:left;
-    height:80px;
 }
     .iapplogo img {
         width:100%;
@@ -958,7 +967,7 @@ a:hover {
     }
     .iapplogo {
         width: 80px;
-        height: auto;
+        height:60px;
     }
     .search-sm {
         display: inline-block;

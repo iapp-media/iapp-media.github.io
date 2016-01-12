@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="container-fluid">
                     <a class="iapplogo" href="portal.aspx">
-                        <img src="img/iapplogo.png" alt="">
+                        <%--<img src="img/iapplogo.png" alt="">--%>
                     </a>
 
                     <!-- 會員資料選單（PC） -->
@@ -154,8 +154,9 @@
         </asp:Panel>
     </div>
     <!-- 回到頂部 -->
-    <a href="#">
-        <img class="back-top" src="img/top.png" /></a>
+    <a class="back-top" href="#">
+        <%--<img  src="img/top.png" />--%>
+    </a>
         <!-- 瀑布流 -->
         <div id="container">
             <asp:Literal ID="Tile1" runat="server"></asp:Literal>
