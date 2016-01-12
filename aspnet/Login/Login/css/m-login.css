@@ -67,6 +67,9 @@ a:hover {
     z-index:999;
     -webkit-animation:BGdisno 1s 4s both cubic-bezier(.87,-.41,.19,1.44);
 }
+
+
+
 .Storelogo,
 .Logohouse {
     width:200px;
@@ -79,22 +82,28 @@ a:hover {
 }
 .Storelogo {
     -webkit-animation:logomove 1s 3s both cubic-bezier(.87,-.41,.19,1.44);
+    background:url('../img/img-1.png');
+     background-size:100%;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
 }
 .Logohouse {
     width:40px !important;
     height:40px;
+    background:url('../img/img-1-1.png');
+     background-size:100%;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
     margin-left: 29px;
     margin-top: -102px;
     -webkit-animation:tinDownOut1 2s both infinite cubic-bezier(.87,-.41,.19,1.44);
 }
-    .Storelogo img {
-        width:100%;
-    }
-
 
 .login-mobile {
     position: fixed;
-    /*background-color: #ff9933;*/
+    background-color: #ff9933;
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -111,8 +120,15 @@ a:hover {
 }
 
 .navbar {
-    background-color: #ff9933;
+    
     margin-bottom: 0px;
+    background:url('../img/iapplogo.png');
+    background-size:80px 61px;
+    height:64px;
+    background-position:left;
+    background-repeat:no-repeat;
+    background-color: #ff9933;
+    
 }
 
 .content {
@@ -149,6 +165,16 @@ a:hover {
     /*position: absolute;*/
     
     width: 100%;
+}
+.content_fb {
+    background:url('../img/fb.png');
+    background-size:100%;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
+    width: 100%;
+    height: 68px;
+    display: block;
 }
 
 /*.login-mobile {

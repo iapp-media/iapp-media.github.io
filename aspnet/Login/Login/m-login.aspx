@@ -36,23 +36,23 @@
           <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="LoginAni">
             <div class="Storelogo">
-                <img src="img/img-1.png" alt="Alternate Text" />
+                <%--<img src="img/img-1.png" alt="Alternate Text" />--%>
             </div>
-          
-                <img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />
+            <div class="Logohouse"></div>
+                <%--<img src="img/img-1-1.png" alt="Alternate Text" class="Logohouse" />--%>
            
         </div>
         <!-- mobile會員登入畫面 -->
         <div class="login-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/iapplogo.png">
+                <%--<img class="iapplogo" src="img/iapplogo.png">--%>
             </div>
             <div class="content">
                 <div class="fb">
                     <p>FaceBook登入</p>
                     <div class="bar"></div>
-                    <a href="#" onclick="startup()">
-                        <img class="fb-img" src="img/fb.png"></a>
+                    <a class="content_fb" href="#" onclick="startup()">
+                        <%--<img  src="img/fb.png">--%></a>
                 </div>
                 <div class="login">
                     <p>會員帳號登入</p>
@@ -84,7 +84,7 @@
         <!-- mobile會員註冊畫面 -->
         <div class="register-mobile">
             <div class="navbar">
-                <img class="iapplogo" src="img/iapplogo.png">
+                <%--<img class="iapplogo" src="img/iapplogo.png">--%>
             </div>
             <div class="content">
                 <div class="login">
