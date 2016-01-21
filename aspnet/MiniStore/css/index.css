@@ -637,6 +637,9 @@
     height: 43px;
     cursor:pointer;
     }
+        .backarrow:active {
+            opacity:.5;
+        }
     
     .imgH {
         width: 100%;

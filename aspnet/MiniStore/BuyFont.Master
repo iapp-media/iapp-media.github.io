@@ -46,7 +46,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body ontouchstart="">
     <form id="form1" runat="server">
         <!-- facebook(必須寫在最上面) & parse init -->
  
@@ -209,5 +209,5 @@
          
     </script>
     <script src="js/act.js"></script>
-</body>
+</bod>
 </html>
