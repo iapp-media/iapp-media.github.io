@@ -37,10 +37,9 @@ a{text-decoration:none; color:#ff9933;}
         outline:1px solid #000;
     }*/
 .input {
-    width:459px;
-    /*outline:4px solid #000;*/
-    margin:40px auto;
-    position:relative;
+    width: 385px;
+    margin: 20px auto;
+    position: relative;
 }
     .input tr {
         position:relative;
