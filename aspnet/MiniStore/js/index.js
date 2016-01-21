@@ -152,7 +152,7 @@ $(document).ready(function () {
         var slideHeight = $('#slider ul li').height();
         var sliderUlWidth = slideCount * slideWidth;
         var screenW = $('#slider').width();
-        console.log(screenW);
+        //console.log(screenW);
 
         //$('#slider').css({
         //    width: screenW,
@@ -312,21 +312,28 @@ $(document).ready(function () {
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev'
         });
-        $("#Allswiper").swipe({
-            //Generic swipe handler for all directions
-            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                $(this).each(function (e) {
-                    if ($('.swiper-slide').hasClass('swiper-slide-active')) {
-                        var NewSrc = '',
-                            NewIndex = $('.swiper-slide-active').index(),
-                            NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
-                        console.log(NewSrc, "抓到第" + (NewIndex + 1) + "個選單")
-                    }
-                    window.location = NewSrc;
-                })
-            },
-            threshold: 0
-        });
+       
+        // 選單內子選項少於2就不滑動
+        var $this_length = $('.swiper-wrapper > div').length;
+        if ($this_length <= 1) {
+            $("#Allswiper").unbind();
+        } else {
+            $("#Allswiper").swipe({
+                //Generic swipe handler for all directions
+                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                    $(this).each(function (e) {
+                        if ($('.swiper-slide').hasClass('swiper-slide-active')) {
+                            var NewSrc = '',
+                                NewIndex = $('.swiper-slide-active').index(),
+                                NewSrc = $('.swiper-slide').eq(NewIndex).attr('data-src');
+                            console.log(NewSrc, "抓到第" + (NewIndex + 1) + "個選單")
+                        }
+                        window.location = NewSrc;
+                    })
+                },
+                threshold: 0
+            });
+        }
 
     }
 
