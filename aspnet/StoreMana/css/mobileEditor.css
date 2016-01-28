@@ -58,6 +58,7 @@
 .selectBTN {
     width:50%;
         margin: 5px 0 10px 0;
+        font-weight:inherit;
 }
 .selectBTNin {
     font-size: 24px;
@@ -73,8 +74,12 @@
     padding-bottom: 3px;
 }
 
-.selectBTNin:active {
+.selectBTNin:active,
+.rotate-btn:active,
+.cut:active,
+.compress:active {
     background: #ffbb66;
+    color: #fff;
 }
 
 .rotate {

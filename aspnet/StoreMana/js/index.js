@@ -1,5 +1,4 @@
 //觸發
-
 $(document).ready(function() {
     $("#user-login").click(function() {
         $(".m-profile").animate({
@@ -60,13 +59,12 @@ $(document).ready(function() {
         alert('123')
     })
     
-
+    //封面照片更新css高度換成自動
     $('#psimg').on('load', function () {
         $('.Sinfoheadimg > div').css('height', 'auto')
-        //alert($(this).attr('src'));
     });
     
-
+    //slider
     $(document).ready(function () {
         // window.scrollTo(0, 10);
         $("#slider ul li label,.uploadBTN").click(function () {
@@ -108,11 +106,6 @@ $(document).ready(function() {
         }); 
     });
 
-
-    //頁面ajax
-
-    
-
     //products slider
     jQuery(document).ready(function ($) {
         var slideCount = $('#slider ul li').length;
@@ -120,41 +113,31 @@ $(document).ready(function() {
         var slideHeight = $('#slider ul li').height();
         var sliderW2 = $('#slider').width();
         var sliderUlWidth = slideCount * sliderW2;
+        var x = 0;
         
-        //console.log('slider寬' + sliderW2);
-        
-
-        $('#slider').css({
-            width: sliderW2
-        });
-
-        $('#slider ul').css({
-            width: sliderW2 * slideCount,
-            marginLeft: -slideWidth
-        });
-        $('#slider ul li').css({
-            width: sliderW2
-        });
-
-        //$('#slider ul li:last-child').prependTo('#slider ul');
-
         function moveLeft() {
+            if (x > 0) {
+                x--;
+            } else {
+                x = 3;
+            }
             $('#slider ul').animate({
-                left: +slideWidth
-            }, 200, function () {
-                $('#slider ul li:last-child').prependTo('#slider ul');
-                $('#slider ul').css('left', '');
+                left: -slideWidth * x
             });
+            console.log(x)
         };
 
         function moveRight() {
+            if (x <= slideCount - 2) {
+                x++;
+            } else {
+                x = 0;
+            }
             $('#slider ul').animate({
-                left: -slideWidth
-            }, 200, function () {
-                $('#slider ul li:first-child').appendTo('#slider ul');
-                $('#slider ul').css('left', '');
+                left: -slideWidth * x
             });
         };
+        
 
         $('.control_prev').click(function () {
             moveLeft();
@@ -165,8 +148,6 @@ $(document).ready(function() {
         });
 
     });
-
-   
 
     $('.openslider').on('click', function () {
         $('.productDIV').fadeIn();
@@ -183,9 +164,6 @@ $(document).ready(function() {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
     });
-
-   
-
 
     // gray bar PC
     $('.swiper-button-next,.swiper-button-prev').click(function () {
@@ -213,11 +191,8 @@ $(document).ready(function() {
         },
         threshold: 0
     });
-    
-    
-
+   
     //瀑布流
-
     var $container = $('#container');
 
     $container.imagesLoaded(function() {

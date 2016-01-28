@@ -56,6 +56,7 @@
                 <div class="upload-img">
                     <div class="top">
                         <img src="img/ministorelogo.png" class="toplogo" align="left" />
+                        <div class="cancelimgfun"></div>
                     </div>
                     <div class="upload-page">
                         <label for="inputImage" class="selectBTN">
@@ -432,7 +433,6 @@
                     default:
                 }
 
-                
                 $('div[id^="Step"]:visible').each(function () {
                     var stepindex = $(this).index();
                     console.log(stepindex);
