@@ -161,10 +161,10 @@ $(document).ready(function () {
         console.log(ul_width);
         
         $('#slider ul li').css({
-            width: ul_width
+            width: screenW
         })
 
-        function moveLeft() {
+        function slider_moveLeft() {
             if (x > 0) {
                 x--;
             } else if (slideCount == 1) {
@@ -173,28 +173,28 @@ $(document).ready(function () {
                 x = slideCount - 1;
             }
             $('#slider ul').animate({
-                left: -ul_width * x
+                left: -screenW * x
             });
             console.log(x)
         };
 
-        function moveRight() {
+        function slider_moveRight() {
             if (x <= slideCount - 2) {
                 x++;
             } else {
                 x = 0;
             }
             $('#slider ul').animate({
-                left: -ul_width * x
+                left: -screenW * x
             });
         };
 
         $('.control_prev').click(function () {
-            moveLeft();
+            slider_moveLeft();
         });
 
         $('.control_next').click(function () {
-            moveRight();
+            slider_moveRight();
         });
 
     });

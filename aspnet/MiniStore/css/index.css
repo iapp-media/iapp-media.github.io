@@ -663,7 +663,6 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        transition:.3s cubic-bezier(0.12, 0.41, 0.46, 0.83);
     }
     
     #slider ul li {
@@ -2815,7 +2814,6 @@
         /* outline:1px solid #f00; */
         height: 60px;
     }
-
     #slider ul li {
         width: 100%;
         /* height: 217px; */
