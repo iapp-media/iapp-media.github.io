@@ -2855,7 +2855,7 @@ a.iframe-info.cboxElement {
 
 #slider ul {
     width: 400%;
-    transition: .3step-end linear;
+    transition:left .3s linear;
 }
 
 #slider .PicClick {

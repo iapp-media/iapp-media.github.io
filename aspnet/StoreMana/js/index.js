@@ -137,6 +137,7 @@ $(document).ready(function() {
                 left: -slideWidth * x
             });
         };
+
         
 
         $('.control_prev').click(function () {

@@ -562,24 +562,28 @@
                     var slideHeight = $('#slider ul li').height();
                     var sliderUlWidth = slideCount * slideWidth;
                     var sliderW2 = $('#slider').width();
-
-                    $('#slider ul li:last-child').prependTo('#slider ul');
+                    var x = 0;
 
                     function moveLeft() {
+                        if (x > 0) {
+                            x--;
+                        } else {
+                            x = 3;
+                        }
                         $('#slider ul').animate({
-                            left: +slideWidth
-                        }, 200, function () {
-                            $('#slider ul li:last-child').prependTo('#slider ul');
-                            $('#slider ul').css('left', '');
+                            left: -slideWidth * x
                         });
+                        console.log(x)
                     };
 
                     function moveRight() {
+                        if (x <= slideCount - 2) {
+                            x++;
+                        } else {
+                            x = 0;
+                        }
                         $('#slider ul').animate({
-                            left: -slideWidth
-                        }, 200, function () {
-                            $('#slider ul li:first-child').appendTo('#slider ul');
-                            $('#slider ul').css('left', '');
+                            left: -slideWidth * x
                         });
                     };
 
